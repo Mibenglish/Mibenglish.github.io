@@ -11,7 +11,7 @@
 
     <style>
         :root {
-            --bg-page: #F8FAF9;
+            --bg-page: #F4F7F6;
             --bg-card: #FFFFFF;
             --primary: #0D4F3C;
             --primary-light: #1A7A5E;
@@ -19,28 +19,25 @@
             --accent: #B8F4D8;
             --text-main: #1A2F26;
             --text-sub: #5C7A6E;
-            --border: #E2EDE8;
-            --radius: 12px;
-            --shadow-sm: 0 1px 3px rgba(13, 79, 60, 0.06);
-            --shadow: 0 4px 16px rgba(13, 79, 60, 0.08);
+            --border: #D6E5E0;
+            --radius: 10px;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
         body {
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background: var(--bg-page);
             color: var(--text-main);
             line-height: 1.5;
             min-height: 100vh;
-            -webkit-font-smoothing: antialiased;
         }
 
-        /* Header */
+        /* === HEADER === */
         header {
             background: white;
             border-bottom: 1px solid var(--border);
-            padding: 0.85rem 1rem;
+            padding: 1rem;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -55,118 +52,86 @@
         }
 
         .brand-logo {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 800;
             color: var(--primary);
             text-decoration: none;
-            letter-spacing: -0.5px;
         }
         .brand-logo span { color: var(--secondary); }
 
-        .header-stats {
-            display: none; /* Hidden di mobile default */
-            align-items: center;
-            gap: 1.5rem;
-            font-size: 0.85rem;
-        }
-
-        .stat-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--text-sub);
-        }
-        .stat-item strong { color: var(--primary); }
-
-        /* Navigation Tabs */
+        /* === NAVIGASI TABS === */
         .nav-tabs {
             background: white;
             border-bottom: 1px solid var(--border);
             overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none; /* Firefox */
+            white-space: nowrap;
+            scrollbar-width: none;
         }
-        .nav-tabs::-webkit-scrollbar { display: none; } /* Chrome */
+        .nav-tabs::-webkit-scrollbar { display: none; }
 
         .nav-tabs-inner {
             max-width: 1000px;
             margin: 0 auto;
+            padding: 0.75rem 0.5rem;
             display: flex;
-            padding: 0.6rem 0.75rem;
             gap: 6px;
         }
 
         .tab-btn {
-            flex-shrink: 0;
-            padding: 0.5rem 1rem;
-            background: transparent;
-            border: 1px solid var(--border);
+            padding: 0.6rem 1.2rem;
+            background: var(--bg-page);
+            border: none;
             border-radius: 50px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 600;
             color: var(--text-sub);
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.2s;
         }
 
-        .tab-btn:hover { border-color: var(--secondary); color: var(--primary); }
-        .tab-btn.active { background: var(--primary); border-color: var(--primary); color: white; }
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+        }
 
-        /* Main Content */
+        /* === KONTEN UTAMA === */
         main {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 1rem 0.75rem 3rem;
+            padding: 1rem;
         }
 
         /* Season Header */
         .season-header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: white;
-            padding: 1.25rem 1.25rem;
+            padding: 1.5rem;
             border-radius: var(--radius);
-            margin-bottom: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .season-header::before {
-            content: "";
-            position: absolute;
-            top: -50%; right: -20%;
-            width: 200px; height: 200px;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            pointer-events: none;
+            margin-bottom: 1.25rem;
         }
 
         .season-header h1 {
-            font-size: 1.1rem;
-            margin-bottom: 0.25rem;
-            position: relative;
-            line-height: 1.3;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
         }
 
         .season-header p {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             opacity: 0.9;
-            position: relative;
-            line-height: 1.4;
+            margin-bottom: 0.5rem;
         }
-
+        
         .season-meta {
-            display: flex;
-            gap: 1rem;
-            margin-top: 0.75rem;
-            font-size: 0.75rem;
-            opacity: 0.9;
+            font-size: 0.8rem;
+            opacity: 0.8;
         }
 
-        /* Controls Bar */
+        /* Controls */
         .controls-bar {
             display: flex;
-            flex-direction: column; /* Stack vertikal di mobile */
+            flex-direction: column;
             gap: 0.75rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
         }
 
         .search-box {
@@ -176,264 +141,239 @@
 
         .search-box input {
             width: 100%;
-            padding: 0.7rem 1rem 0.7rem 2.5rem;
+            padding: 0.9rem 1rem 0.9rem 2.8rem;
             border: 1px solid var(--border);
             border-radius: 8px;
-            font-size: 0.9rem;
+            font-size: 16px; /* Mencegah zoom di iOS */
             background: white;
         }
-        
-        .search-box input:focus {
-            outline: none;
-            border-color: var(--secondary);
-        }
+        .search-box input:focus { outline: none; border-color: var(--secondary); }
 
         .search-box svg {
             position: absolute;
-            left: 0.85rem;
+            left: 1rem;
             top: 50%;
             transform: translateY(-50%);
-            color: var(--text-sub);
-            width: 16px;
-            height: 16px;
+            opacity: 0.5;
         }
 
         .per-page-select {
             display: flex;
             align-items: center;
-            justify-content: flex-end; /* Pindah ke kanan atau kiri? kita buat flex-end */
-            gap: 8px;
-        }
-
-        .per-page-select label {
-            font-size: 0.8rem;
-            color: var(--text-sub);
+            justify-content: space-between; /* Di mobile di pojok kanan kiri */
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
         }
 
         .per-page-select select {
-            padding: 0.5rem 0.75rem;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 0.85rem;
-            background: white;
+            border: none;
+            background: transparent;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary);
             cursor: pointer;
         }
 
-        /* Episode Grid - Mobile First (1 Kolom) */
+        /* === DAFTAR EPISODE === */
+        /* Mobile: 1 Kolom Penuh agar nyaman */
         .episode-grid {
             display: grid;
-            grid-template-columns: 1fr; /* Default 1 kolom untuk mobile */
-            gap: 10px;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
         }
 
         .ep-card {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
             background: white;
             border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 0.75rem 1rem;
+            border-radius: var(--radius);
+            padding: 1rem 1.25rem;
             text-decoration: none;
             color: inherit;
-            transition: all 0.2s ease;
+            transition: transform 0.1s, box-shadow 0.2s;
+            gap: 1rem;
+            min-height: 70px; /* Tinggi minimum biar gampang ditekan */
         }
 
         .ep-card:active {
-            background: #f5f5f5;
-            transform: scale(0.99);
+            transform: scale(0.98);
+            background: #fcfcfc;
         }
 
         .ep-num {
             flex-shrink: 0;
-            width: 36px;
-            height: 36px;
+            width: 44px;
+            height: 44px;
             background: var(--bg-page);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 800;
-            font-size: 0.85rem;
+            font-size: 1rem;
             color: var(--primary);
         }
 
         .ep-info {
             flex: 1;
-            min-width: 0; /* Penting agar flex item bisa shrink */
+            min-width: 0;
             overflow: hidden;
         }
 
         .ep-title {
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: var(--text-main);
-            /* Izinkan 2 baris di mobile, sisanya titik-titik */
+            margin-bottom: 2px;
+            white-space: normal; /* Izinkan turun baris di mobile */
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 2; /* Maksimal 2 baris */
             -webkit-box-orient: vertical;
             overflow: hidden;
-            line-height: 1.35;
+            line-height: 1.4;
         }
 
         .ep-theme {
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             color: var(--text-sub);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            margin-top: 2px;
         }
 
-        .ep-arrow {
-            display: none; /* Sembunyikan panah di mobile untuk hemat space */
-        }
+        /* Ikon panah di hidden di mobile untuk space */
+        .ep-arrow { display: none; }
 
-        /* Pagination - Compact Mobile Style */
+        /* Pagination */
         .pagination {
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 4px;
-            margin-top: 1.5rem;
+            gap: 8px;
+            margin-top: 2rem;
             flex-wrap: wrap;
         }
 
         .page-btn {
-            min-width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            min-width: 44px; /* Ukuran tap friendly */
+            height: 44px;
             background: white;
             border: 1px solid var(--border);
-            border-radius: 6px;
-            font-size: 0.85rem;
+            border-radius: 8px;
             font-weight: 600;
-            color: var(--text-sub);
             cursor: pointer;
         }
-
-        .page-btn.active {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: white;
-        }
-        
+        .page-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
         .page-btn:disabled { opacity: 0.3; cursor: default; }
-
-        .page-dots { padding: 0 4px; color: var(--text-sub); font-size: 0.8rem; }
+        
+        .page-dots { padding: 0 5px; align-self: center; }
 
         .page-info {
-            font-size: 0.8rem;
-            color: var(--text-sub);
             text-align: center;
-            margin-top: 0.75rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-sub);
         }
 
-        /* Footer */
+        /* === FOOTER === */
         footer {
             background: white;
             border-top: 1px solid var(--border);
-            padding: 2rem 1rem 1.5rem;
-            margin-top: 2rem;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
         }
-        .footer-inner { max-width: 1000px; margin: 0 auto; text-align: center; }
 
+        .footer-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Quick Links Wajib */
         .footer-links {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 8px 16px;
-            margin-bottom: 1.5rem;
+            flex-direction: column; /* Stack vertikal di mobile */
+            gap: 0.75rem;
+            margin-bottom: 2rem;
             padding-bottom: 1.5rem;
             border-bottom: 1px solid var(--border);
         }
-        .footer-links a {
-            font-size: 0.8rem;
-            color: var(--text-sub);
-            text-decoration: none;
-        }
-        .footer-links a:hover { color: var(--primary); text-decoration: underline; }
 
-        .socials { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 1rem; }
+        .footer-links a {
+            text-decoration: none;
+            color: var(--text-sub);
+            font-size: 0.95rem; /* Ukuran lebih besar biar enak tap */
+            font-weight: 500;
+            padding: 0.5rem; /* Area tap lebih luas */
+        }
+        
+        .footer-links a:hover { color: var(--primary); }
+
+        .socials { margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
         .social-btn {
-            padding: 6px 14px;
+            padding: 8px 16px;
             background: var(--bg-page);
             border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--text-main);
             text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.85rem;
         }
         .social-btn:hover { background: var(--primary); color: white; }
 
-        .copyright { font-size: 0.7rem; color: #999; margin-top: 1rem; }
+        .copyright { font-size: 0.8rem; color: #888; }
 
-        /* ==========================================
-           RESPONSIVE UNTUK TABLET & DESKTOP
-           ========================================== */
-        @media (min-width: 480px) {
-            /* Kontrol jadi sejajar */
+        /* === RESPONSIVE TABLET/DESKTOP === */
+        @media (min-width: 600px) {
+            .nav-tabs-inner { padding: 0.75rem 1rem; gap: 8px; }
+            
             .controls-bar {
                 flex-direction: row;
                 align-items: center;
             }
-            .search-box { width: auto; flex: 1; }
+            .search-box { flex: 1; }
             
-            /* Grid jadi 2 kolom */
+            /* Grid 2 kolom di tablet */
             .episode-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
+                gap: 1rem;
             }
             
-            .ep-card { padding: 1rem 1.25rem; gap: 1rem; }
-            .ep-num { width: 40px; height: 40px; font-size: 0.9rem; }
-            .ep-title { font-size: 0.95rem; }
+            .footer-links {
+                flex-direction: row; /* Horizontal di desktop */
+                justify-content: center;
+                gap: 1.5rem;
+            }
         }
 
-        @media (min-width: 768px) {
-            /* Header stats muncul */
-            .header-stats { display: flex; }
-            
-            /* Navigasi lebih longgar */
-            .nav-tabs-inner { padding: 0.75rem 1rem; gap: 8px; }
-            .tab-btn { font-size: 0.85rem; padding: 0.6rem 1.2rem; }
-            
-            /* Season header lebih besar */
-            .season-header { padding: 1.5rem 2rem; }
-            .season-header h1 { font-size: 1.3rem; }
-            .season-header p { font-size: 0.9rem; }
-            
-            /* Grid jadi 3 kolom */
+        @media (min-width: 900px) {
+            /* Grid 3 kolom di desktop */
             .episode-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
-
-            /* Panah muncul lagi */
+            
+            .ep-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+                border-color: var(--secondary);
+            }
+            
             .ep-arrow {
-                display: flex;
-                flex-shrink: 0;
-                width: 28px; height: 28px;
+                display: flex; /* Muncul di desktop */
+                width: 32px; height: 32px;
                 background: var(--bg-page);
                 border-radius: 50%;
                 align-items: center;
                 justify-content: center;
                 color: var(--text-sub);
-                font-size: 0.8rem;
+                font-size: 1rem;
             }
             .ep-card:hover .ep-arrow {
                 background: var(--primary);
                 color: white;
             }
-        }
-
-        /* Empty State */
-        .empty-state {
-            text-align: center;
-            padding: 2rem 1rem;
-            color: var(--text-sub);
-            grid-column: 1 / -1;
         }
     </style>
 </head>
@@ -442,10 +382,6 @@
     <header>
         <div class="header-inner">
             <a href="https://mibenglish.github.io/index.html" class="brand-logo">mib<span>english</span></a>
-            <div class="header-stats">
-                <div class="stat-item"><strong>1000</strong> Episode</div>
-                <div class="stat-item"><strong>10</strong> Musim</div>
-            </div>
         </div>
     </header>
 
@@ -456,22 +392,20 @@
     <main>
         <div class="season-header">
             <h1 id="seasonTitle">Memuat...</h1>
-            <p id="seasonDesc">Silakan pilih musim pembelajaran.</p>
-            <div class="season-meta">
-                <span id="episodeRange">-</span>
-            </div>
+            <p id="seasonDesc">Silakan pilih musim.</p>
+            <div class="season-meta" id="episodeRange">-</div>
         </div>
 
         <div class="controls-bar">
             <div class="search-box">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="11" cy="11" r="8"></circle>
                     <path d="m21 21-4.35-4.35"></path>
                 </svg>
-                <input type="text" id="searchInput" placeholder="Cari nomor atau judul episode...">
+                <input type="text" id="searchInput" placeholder="Cari judul atau nomor episode...">
             </div>
             <div class="per-page-select">
-                <label>Tampil:</label>
+                <span style="font-size:0.9rem; color:var(--text-sub)">Tampil:</span>
                 <select id="perPageSelect">
                     <option value="30">30</option>
                     <option value="50" selected>50</option>
@@ -487,19 +421,22 @@
 
     <footer>
         <div class="footer-inner">
+            <!-- QUICK LINKS WAJIB -->
             <div class="footer-links">
                 <a href="https://mibenglish.github.io/index.html">Beranda</a>
-                <a href="https://mibenglish.github.io/about.html">About</a>
-                <a href="https://mibenglish.github.io/privacy.html">Privacy</a>
-                <a href="https://mibenglish.github.io/terms.html">Terms</a>
-                <a href="https://mibenglish.github.io/contact.html">Contact</a>
+                <a href="https://mibenglish.github.io/about.html">About Us</a>
+                <a href="https://mibenglish.github.io/privacy.html">Privacy Policy</a>
+                <a href="https://mibenglish.github.io/terms.html">Terms of Service</a>
+                <a href="https://mibenglish.github.io/disclaimer.html">Disclaimer</a>
+                <a href="https://mibenglish.github.io/about.html">Contact</a>
             </div>
+
             <div class="socials">
-                <a href="https://youtube.com/@mibenglish" target="_blank" class="social-btn">YouTube</a>
-                <a href="https://tiktok.com/@mibenglish" target="_blank" class="social-btn">TikTok</a>
-                <a href="https://instagram.com/@mibenglish" target="_blank" class="social-btn">Instagram</a>
+                <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener" class="social-btn">YouTube</a>
+                <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener" class="social-btn">TikTok</a>
+                <a href="https://instagram.com/@mibenglish" target="_blank" rel="noopener" class="social-btn">Instagram</a>
             </div>
-            <p class="copyright">&copy; 2025 mibenglish.</p>
+            <p class="copyright">&copy; 2023 mibenglish.</p>
         </div>
     </footer>
 
@@ -521,35 +458,23 @@ const seasons = [
     { title: "Musim 10: The Polymath", desc: "Penyempurnaan akhir.", themes: [{ name: "Perfection", count: 30 }, { name: "Linguistics", count: 30 }, { name: "Thought Lead", count: 20 }, { name: "Final", count: 20 }] }
 ];
 
-// ===== DATA JUDUL (EDIT DI SINI) =====
+// Data Judul (Isi sesuai kebutuhan)
 const episodeTitles = {
     1: "Pengenalan: Cara Otak Mempelajari Bahasa",
-    2  : "Phonemes: Dasar Bunyi"
-    3  : "Phonemes: Bunyi Konsonan"
-    4  : "Phonemes: Gabung Bunyi"
-    5  : "Intonation: Naik Turun Nada"
-    6  : "Phonemes: Stress & Ritme"
-    7  : "Phonemes: Minimal Pairs"
-    8  : "Phonemes: Connected Speech"
-    9  : "Phonemes: Latihan Kelancaran"
-    10 : "Phonemes: Final Practice"
     100: "Milestone: Review 100 Episode Pertama",
     500: "Mid-Curriculum: Dari Dasar ke Menengah",
     1000: "Grand Finale: Dari Learner menjadi Master"
 };
 
-// State
 let currentSeason = 0;
 let currentPage = 1;
 let perPage = 50;
 let searchQuery = '';
 let allEpisodes = [];
 
-// Functions
 function buildEpisodeArray(seasonIndex) {
     const episodes = [];
     let epNum = 1;
-    
     for (let s = 0; s < seasons.length; s++) {
         const season = seasons[s];
         for (const theme of season.themes) {
@@ -573,7 +498,6 @@ function selectSeason(index) {
     currentPage = 1;
     searchQuery = '';
     document.getElementById('searchInput').value = '';
-    
     document.querySelectorAll('.tab-btn').forEach((b, i) => b.classList.toggle('active', i === index));
     
     const season = seasons[index];
@@ -603,7 +527,7 @@ function renderEpisodes() {
     const grid = document.getElementById('episodeGrid');
     
     if (pageEpisodes.length === 0) {
-        grid.innerHTML = `<div class="empty-state">Tidak ada episode ditemukan untuk "<b>${searchQuery}</b>"</div>`;
+        grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:2rem; color:var(--text-sub);">Tidak ada hasil untuk "${searchQuery}"</div>`;
     } else {
         grid.innerHTML = pageEpisodes.map(ep => `
             <a href="${LINK_PREFIX}${ep.num}${LINK_SUFFIX}" class="ep-card">
@@ -618,7 +542,6 @@ function renderEpisodes() {
     }
     
     renderPagination(totalPages, filtered.length);
-    
     const info = filtered.length > 0 ? `Menampilkan ${start + 1}-${Math.min(start + perPage, filtered.length)} dari ${filtered.length}` : '';
     document.getElementById('pageInfo').textContent = info;
 }
@@ -629,7 +552,6 @@ function renderPagination(totalPages) {
     
     let html = `<button class="page-btn" onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>←</button>`;
     
-    // Logic simple pagination for mobile
     let pages = [];
     if (totalPages <= 5) {
         pages = Array.from({length: totalPages}, (_, i) => i + 1);
