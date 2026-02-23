@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pelajari Phonemes dan persiapan otak untuk bahasa Inggris. Module 9 mibenglish dengan metode imajinatif dan game interaktif.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mibenglish.com/ep9-phonemes-brain-prep">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ep 9. Phonemes & Brain Prep - mibenglish">
+    <meta property="og:description" content="Pelajari Phonemes dan persiapan otak untuk bahasa Inggris dengan metode imajinatif.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mibenglish.com/ep9-phonemes-brain-prep">
+    <meta property="og:site_name" content="mibenglish">
+    
+    <title>Ep 9. Phonemes & Brain Prep: Module 9 - mibenglish</title>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Ep 9. Phonemes & Brain Prep: Module 9",
+        "description": "Pelajari Phonemes dan persiapan otak untuk bahasa Inggris dengan metode imajinatif dan game interaktif.",
+        "author": {
+            "@type": "Person",
+            "name": "bangmik"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "mibenglish",
+            "url": "https://mibenglish.com"
+        },
+        "datePublished": "2025-01-15",
+        "dateModified": "2025-01-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://mibenglish.com/ep9-phonemes-brain-prep"
+        }
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+            --bg-deep: #0f1f17;
+            --bg-card: #1a2f23;
+            --bg-elevated: #243b2d;
+            --fg-primary: #e8f0eb;
+            --fg-secondary: #a3bfae;
+            --fg-muted: #6b8c7a;
+            --accent-gold: #d4a855;
+            --accent-warm: #c47d3e;
+            --accent-sage: #7cb08a;
+            --border-subtle: #2d4a3a;
+            --glow-soft: rgba(124, 176, 138, 0.15);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background: var(--bg-deep);
+            color: var(--fg-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        /* Background atmosphere */
+        .forest-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse 80% 60% at 20% 10%, rgba(124, 176, 138, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 80% at 80% 90%, rgba(212, 168, 85, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse 100% 100% at 50% 50%, var(--bg-deep) 0%, #0a1510 100%);
+        }
+        
+        /* Floating particles */
+        .particle {
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            background: var(--accent-sage);
+            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none;
+            animation: floatParticle 12s infinite ease-in-out;
+        }
+        
+        @keyframes floatParticle {
+            0%, 100% { opacity: 0; transform: translateY(100vh) scale(0.5); }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% { opacity: 0; transform: translateY(-20vh) scale(1); }
+        }
+        
+        /* Staggered entrance */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            .particle {
+                animation: none;
+                display: none;
+            }
+        }
+        
+        /* Cards */
+        .content-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 60px var(--glow-soft);
+        }
+        
+        /* Phoneme card game */
+        .phoneme-card {
+            background: linear-gradient(145deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+            border: 2px solid var(--border-subtle);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .phoneme-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 40%, rgba(124, 176, 138, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .phoneme-card:hover::before {
+            opacity: 1;
+        }
+        
+        .phoneme-card:hover {
+            border-color: var(--accent-sage);
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(124, 176, 138, 0.2);
+        }
+        
+        .phoneme-card.correct {
+            border-color: var(--accent-gold);
+            background: linear-gradient(145deg, rgba(212, 168, 85, 0.15) 0%, var(--bg-card) 100%);
+            animation: pulse-correct 0.5s ease;
+        }
+        
+        .phoneme-card.wrong {
+            border-color: #c45c5c;
+            animation: shake 0.4s ease;
+        }
+        
+        @keyframes pulse-correct {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-8px); }
+            40%, 80% { transform: translateX(8px); }
+        }
+        
+        /* Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-sage) 0%, #5a9a6a 100%);
+            color: var(--bg-deep);
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.2) 100%);
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+        
+        .btn-primary:hover::after {
+            opacity: 1;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(124, 176, 138, 0.35);
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        .btn-primary:focus-visible {
+            outline: 3px solid var(--accent-gold);
+            outline-offset: 2px;
+        }
+        
+        /* Ad placeholder */
+        .ad-slot {
+            background: linear-gradient(145deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+            border: 1px dashed var(--border-subtle);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--fg-muted);
+            font-size: 14px;
+            min-height: 90px;
+        }
+        
+        /* Imagination box */
+        .imagination-box {
+            background: linear-gradient(180deg, rgba(124, 176, 138, 0.08) 0%, transparent 100%);
+            border-left: 4px solid var(--accent-sage);
+            border-radius: 0 12px 12px 0;
+            padding: 24px;
+            position: relative;
+        }
+        
+        .imagination-box::before {
+            content: 'Imajinasi';
+            position: absolute;
+            top: -12px;
+            left: 16px;
+            background: var(--bg-card);
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent-sage);
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Progress bar */
+        .progress-track {
+            background: var(--bg-elevated);
+            border-radius: 20px;
+            height: 8px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(90deg, var(--accent-sage) 0%, var(--accent-gold) 100%);
+            height: 100%;
+            border-radius: 20px;
+            transition: width 0.5s ease;
+        }
+        
+        /* Sound wave animation */
+        .sound-wave {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            height: 24px;
+        }
+        
+        .sound-wave span {
+            width: 4px;
+            background: var(--accent-sage);
+            border-radius: 2px;
+            animation: wave 1s ease-in-out infinite;
+        }
+        
+        .sound-wave span:nth-child(1) { animation-delay: 0s; height: 8px; }
+        .sound-wave span:nth-child(2) { animation-delay: 0.1s; height: 16px; }
+        .sound-wave span:nth-child(3) { animation-delay: 0.2s; height: 24px; }
+        .sound-wave span:nth-child(4) { animation-delay: 0.3s; height: 16px; }
+        .sound-wave span:nth-child(5) { animation-delay: 0.4s; height: 8px; }
+        
+        @keyframes wave {
+            0%, 100% { transform: scaleY(0.5); }
+            50% { transform: scaleY(1); }
+        }
+        
+        /* English term highlight */
+        .term {
+            background: rgba(212, 168, 85, 0.15);
+            color: var(--accent-gold);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        
+        /* Navigation */
+        nav a {
+            transition: color 0.2s ease;
+        }
+        
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+        
+        nav a:focus-visible {
+            outline: 2px solid var(--accent-sage);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--bg-deep);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-subtle);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--fg-muted);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background -->
+    <div class="forest-bg" aria-hidden="true"></div>
+    
+    <!-- Floating particles -->
+    <div id="particles" aria-hidden="true"></div>
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0f1f17]/80 border-b border-[#2d4a3a]">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="https://mibenglish.com" class="flex items-center gap-3 group" aria-label="Kembali ke beranda mibenglish">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-[#7cb08a] to-[#5a9a6a] flex items-center justify-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f1f17" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <span class="text-xl font-bold tracking-tight" style="font-family: 'Playfair Display', serif; color: var(--fg-primary);">mibenglish</span>
+            </a>
+            <nav class="flex items-center gap-6">
+                <a href="https://mibenglish.com/modules" class="text-sm font-medium text-[#a3bfae] hover:text-[#d4a855]">Modul</a>
+                <a href="https://mibenglish.com/about" class="text-sm font-medium text-[#a3bfae] hover:text-[#d4a855]">Tentang</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="max-w-5xl mx-auto px-4 py-8 md:py-12">
+        <!-- Hero Section -->
+        <section class="mb-12 reveal">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="px-3 py-1 bg-[#243b2d] text-[#7cb08a] text-sm font-semibold rounded-full">Module 9</span>
+                <div class="sound-wave">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+            <h1 class="text-3xl md:text-5xl lg:text-6xl mb-6" style="color: var(--fg-primary);">
+                Phonemes & Brain Prep
+            </h1>
+            <p class="text-lg md:text-xl max-w-2xl" style="color: var(--fg-secondary);">
+                Membuka pintu masuk suara bahasa Inggris ke dalam pikiranmu. 
+                Kali ini kita akan belajar tentang <span class="term">phonemes</span> dan bagaimana otak mempersiapkan diri untuk bahasa baru.
+            </p>
+        </section>
+        
+        <!-- Ad Slot 1 -->
+        <aside class="mb-10 reveal" aria-label="Iklan" style="display:none">
+            <div class="ad-slot">
+                <span>Slot Iklan Google AdSense - 728x90</span>
+            </div>
+        </aside>
+        
+        <!-- Article Content -->
+        <article>
+            <!-- Section: Akar Masalah -->
+            <section class="mb-12 reveal">
+                <h2 class="text-2xl md:text-3xl mb-6" style="color: var(--fg-primary);">
+                    Mengapa Kita Sulit Membedakan Suara Bahasa Inggris?
+                </h2>
+                
+                <div class="imagination-box mb-6">
+                    <p class="text-base md:text-lg" style="color: var(--fg-secondary);">
+                        Bayangkan kamu baru saja tiba di sebuah hutan yang belum pernah kamu kunjungi. 
+                        Awalnya, semua suara terdengar sama: gemerisik daun, kicauan burung, aliran air. 
+                        Tapi setelah beberapa hari, telingamu mulai membedakan: <em>"Oh, itu suara burung beda dengan yang tadi."</em>
+                    </p>
+                </div>
+                
+                <p class="mb-4" style="color: var(--fg-secondary);">
+                    Itulah yang terjadi dengan otak kita saat mendengar bahasa baru. 
+                    Otak kita sudah terbiasa dengan <span class="term">phonemes</span> (bunyi terkecil) bahasa Indonesia sejak lahir. 
+                    Ketika mendengar bahasa Inggris, otak seperti bingung: <em>"Bunyi apa ini? Tidak ada dalam kamus suaraku!"</em>
+                </p>
+                
+                <div class="content-card p-6 mb-6">
+                    <h3 class="text-xl mb-4" style="color: var(--accent-gold);">Apa Itu Phonemes?</h3>
+                    <p class="mb-4" style="color: var(--fg-secondary);">
+                        <span class="term">Phonemes</span> adalah unit bunyi terkecil dalam bahasa yang bisa membedakan arti. 
+                        Bukan huruf, tapi <strong>suara</strong>. Contoh sederhana:
+                    </p>
+                    <ul class="space-y-3 ml-4">
+                        <li style="color: var(--fg-secondary);">
+                            <span style="color: var(--accent-sage);">/p/</span> dan <span style="color: var(--accent-sage);">/b/</span> - 
+                            Coba ucapkan "pat" dan "bat". Beda satu suara, beda arti.
+                        </li>
+                        <li style="color: var(--fg-secondary);">
+                            <span style="color: var(--accent-sage);">/ship/</span> dan <span style="color: var(--accent-sage);">/sheep/</span> - 
+                            Perbedaan vokal panjang dan pendek.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Section: Brain Preparation -->
+            <section class="mb-12 reveal">
+                <h2 class="text-2xl md:text-3xl mb-6" style="color: var(--fg-primary);">
+                    Mempersiapkan Otak untuk Bahasa Baru
+                </h2>
+                
+                <p class="mb-4" style="color: var(--fg-secondary);">
+                    Kabar baiknya: otak manusia sangat fleksibel. Para ilmuwan menyebut ini <span class="term">neuroplasticity</span>. 
+                    Artinya, otak bisa berubah dan menyesuaikan diri dengan hal baru sepanjang hidup kita.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div class="content-card p-6">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#7cb08a]/20 to-transparent flex items-center justify-center mb-4">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7cb08a" stroke-width="2">
+                                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--fg-primary);">Tahap Exposure</h3>
+                        <p style="color: var(--fg-secondary);">
+                            Mendengarkan bahasa Inggris sesering mungkin tanpa perlu memahami semua. 
+                            Biarkan otak merekam pola suara.
+                        </p>
+                    </div>
+                    
+                    <div class="content-card p-6">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#d4a855]/20 to-transparent flex items-center justify-center mb-4">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4a855" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2" style="color: var(--fg-primary);">Tahap Active Listening</h3>
+                        <p style="color: var(--fg-secondary);">
+                            Mulai memperhatikan perbedaan bunyi. 
+                            Fokus pada <span class="term">minimal pairs</span> (kata yang beda satu bunyi).
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="imagination-box">
+                    <p style="color: var(--fg-secondary);">
+                        Bayangkan otakmu seperti tanah kebun. 
+                        Awalnya, tanah itu keras dan belum pernah ditanami sayuran jenis tertentu. 
+                        Tapi setelah diolah dan diberi pupuk (latihan teratur), tanah itu menjadi subur. 
+                        Begitulah otakmu dengan <span class="term">phonemes</span> bahasa Inggris!
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Ad Slot 2 -->
+            <aside class="mb-10 reveal" aria-label="Iklan" style="display:none">
+                <div class="ad-slot">
+                    <span>Slot Iklan Google AdSense - 336x280</span>
+                </div>
+            </aside>
+            
+            <!-- Section: Common Phonemes -->
+            <section class="mb-12 reveal">
+                <h2 class="text-2xl md:text-3xl mb-6" style="color: var(--fg-primary);">
+                    Phonemes yang Sering Membingungkan
+                </h2>
+                
+                <p class="mb-6" style="color: var(--fg-secondary);">
+                    Berikut beberapa pasangan <span class="term">phonemes</span> yang sering tertukar oleh penutur Indonesia:
+                </p>
+                
+                <div class="space-y-4">
+                    <div class="content-card p-5 flex flex-col md:flex-row md:items-center gap-4">
+                        <div class="flex-1">
+                            <span class="text-2xl font-bold" style="color: var(--accent-gold);">TH</span>
+                            <span class="mx-3" style="color: var(--fg-muted);">vs</span>
+                            <span class="text-2xl font-bold" style="color: var(--fg-muted);">T / D / S</span>
+                        </div>
+                        <div class="flex-1">
+                            <p style="color: var(--fg-secondary);">
+                                <span class="term">think</span> bukan "tink", 
+                                <span class="term">this</span> bukan "dis"
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card p-5 flex flex-col md:flex-row md:items-center gap-4">
+                        <div class="flex-1">
+                            <span class="text-2xl font-bold" style="color: var(--accent-gold);">V</span>
+                            <span class="mx-3" style="color: var(--fg-muted);">vs</span>
+                            <span class="text-2xl font-bold" style="color: var(--fg-muted);">F</span>
+                        </div>
+                        <div class="flex-1">
+                            <p style="color: var(--fg-secondary);">
+                                <span class="term">vine</span> vs <span class="term">fine</span> - 
+                                V bergeta, F hanya hembusan
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card p-5 flex flex-col md:flex-row md:items-center gap-4">
+                        <div class="flex-1">
+                            <span class="text-2xl font-bold" style="color: var(--accent-gold);">SCHWA</span>
+                            <span class="mx-3" style="color: var(--fg-muted);">=</span>
+                            <span class="text-2xl font-bold" style="color: var(--fg-muted);">/ə/</span>
+                        </div>
+                        <div class="flex-1">
+                            <p style="color: var(--fg-secondary);">
+                                Bunyi paling umum dalam bahasa Inggris! 
+                                Seperti "a" dalam kata "about"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Section: Tips -->
+            <section class="mb-12 reveal">
+                <h2 class="text-2xl md:text-3xl mb-6" style="color: var(--fg-primary);">
+                    Tips Melatih Telinga dan Otak
+                </h2>
+                
+                <div class="grid gap-4">
+                    <div class="content-card p-6 flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#7cb08a]/20 flex items-center justify-center text-[#7cb08a] font-bold">1</span>
+                        <div>
+                            <h3 class="font-semibold mb-2" style="color: var(--fg-primary);">Dengarkan Tanpa Tekanan</h3>
+                            <p style="color: var(--fg-secondary);">
+                                Putar podcast atau lagu bahasa Inggris saat melakukan aktivitas lain. 
+                                Tidak perlu memahami, cukup biarkan telinga terbiasa.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card p-6 flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#7cb08a]/20 flex items-center justify-center text-[#7cb08a] font-bold">2</span>
+                        <div>
+                            <h3 class="font-semibold mb-2" style="color: var(--fg-primary);">Ucapkan dengan Berlebihan</h3>
+                            <p style="color: var(--fg-secondary);">
+                                Saat berlatih, ucapkan bunyi dengan sangat jelas dan berlebihan. 
+                                Ini membantu otot mulut dan otak mengingat posisi yang benar.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card p-6 flex items-start gap-4">
+                        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[#7cb08a]/20 flex items-center justify-center text-[#7cb08a] font-bold">3</span>
+                        <div>
+                            <h3 class="font-semibold mb-2" style="color: var(--fg-primary);">Rekam dan Bandingkan</h3>
+                            <p style="color: var(--fg-secondary);">
+                                Rekam suaramu mengucapkan kata, lalu bandingkan dengan penutur asli. 
+                                Dengarkan perbedaannya tanpa menghakimi diri sendiri.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Ad Slot 3 -->
+            <aside class="mb-10 reveal" aria-label="Iklan" style="display:none">
+                <div class="ad-slot">
+                    <span>Slot Iklan Google AdSense - 300x250</span>
+                </div>
+            </aside>
+        </article>
+        
+        <!-- Interactive Game Section -->
+        <section class="mb-12 reveal" id="game-section">
+            <h2 class="text-2xl md:text-3xl mb-4" style="color: var(--fg-primary);">
+                Quest: Tebak Phonemes
+            </h2>
+            <p class="mb-6" style="color: var(--fg-secondary);">
+                Ayo uji pemahamanmu! Pilih jawaban yang benar untuk setiap pertanyaan tentang <span class="term">phonemes</span>.
+            </p>
+            
+            <!-- Game Stats -->
+            <div class="flex flex-wrap items-center gap-4 mb-6">
+                <div class="flex items-center gap-2">
+                    <span style="color: var(--fg-muted);">Skor:</span>
+                    <span id="score" class="text-xl font-bold" style="color: var(--accent-gold);">0</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span style="color: var(--fg-muted);">Pertanyaan:</span>
+                    <span id="question-num" style="color: var(--fg-secondary);">1</span>
+                    <span style="color: var(--fg-muted);">/</span>
+                    <span id="total-questions" style="color: var(--fg-secondary);">5</span>
+                </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="progress-track mb-8">
+                <div id="progress-bar" class="progress-fill" style="width: 0%;"></div>
+            </div>
+            
+            <!-- Question Area -->
+            <div id="question-area" class="content-card p-6 md:p-8 mb-6">
+                <p id="question-text" class="text-lg md:text-xl mb-6" style="color: var(--fg-primary);">
+                    <!-- Question will be inserted here -->
+                </p>
+                <div id="options-container" class="grid grid-cols-2 gap-4">
+                    <!-- Options will be inserted here -->
+                </div>
+            </div>
+            
+            <!-- Feedback Area -->
+            <div id="feedback-area" class="hidden mb-6 p-4 rounded-lg" role="alert">
+                <p id="feedback-text" class="font-semibold"></p>
+            </div>
+            
+            <!-- Game Controls -->
+            <div class="flex flex-wrap gap-4">
+                <button id="next-btn" class="btn-primary hidden" aria-label="Pertanyaan berikutnya">
+                    Pertanyaan Berikutnya
+                </button>
+                <button id="restart-btn" class="btn-primary hidden" aria-label="Main lagi">
+                    Main Lagi
+                </button>
+            </div>
+            
+            <!-- Game Complete Screen -->
+            <div id="game-complete" class="hidden content-card p-8 text-center">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-[#7cb08a] to-[#5a9a6a] flex items-center justify-center">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0f1f17" stroke-width="2.5">
+                        <polyline points="20,6 9,17 4,12"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl mb-4" style="color: var(--fg-primary);">Quest Selesai!</h3>
+                <p class="text-lg mb-2" style="color: var(--fg-secondary);">Skor Akhir:</p>
+                <p id="final-score" class="text-4xl font-bold mb-6" style="color: var(--accent-gold);">0</p>
+                <p id="score-message" class="mb-6" style="color: var(--fg-secondary);"></p>
+            </div>
+        </section>
+        
+        <!-- Ad Slot 4 -->
+        <aside class="mb-10 reveal" aria-label="Iklan" style="display:none">
+            <div class="ad-slot">
+                <span>Slot Iklan Google AdSense - 336x280</span>
+            </div>
+        </aside>
+        
+        <!-- Navigation Footer -->
+        <section class="reveal">
+            <div class="content-card p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <a href="https://mibenglish.com/ep8" class="flex items-center gap-2 text-[#a3bfae] hover:text-[#d4a855] transition-colors">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15,18 9,12 15,6"/>
+                    </svg>
+                    Episode Sebelumnya
+                </a>
+                <a href="https://mibenglish.com" class="px-6 py-3 bg-[#243b2d] rounded-lg text-[#e8f0eb] font-semibold hover:bg-[#2d4a3a] transition-colors">
+                    Kembali ke mibenglish
+                </a>
+                <a href="https://mibenglish.com/ep10" class="flex items-center gap-2 text-[#a3bfae] hover:text-[#d4a855] transition-colors">
+                    Episode Berikutnya
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="border-t border-[#2d4a3a] mt-16">
+        <div class="max-w-5xl mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-[#7cb08a] to-[#5a9a6a] flex items-center justify-center">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f1f17" stroke-width="2.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold" style="font-family: 'Playfair Display', serif; color: var(--fg-primary);">mibenglish</span>
+                </div>
+                <p class="text-sm text-center md:text-right" style="color: var(--fg-muted);">
+                    Dibuat oleh <span style="color: var(--accent-sage);">bangmik</span> dengan tujuan membantu pembelajaran bahasa Inggris untuk semua.
+                </p>
+            </div>
+            <div class="mt-6 pt-6 border-t border-[#2d4a3a] text-center">
+                <p class="text-sm" style="color: var(--fg-muted);">
+                    2025 mibenglish. Semua konten tersedia untuk pembelajaran.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Ad Slot 5 -->
+        <div class="max-w-5xl mx-auto px-4 pb-8">
+            <div class="ad-slot" style="display:none">
+                <span>Slot Iklan Google AdSense - 728x90</span>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Initialize particles
+        (function initParticles() {
+            const container = document.getElementById('particles');
+            if (!container) return;
+            
+            const particleCount = 15;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 12 + 's';
+                particle.style.animationDuration = (10 + Math.random() * 8) + 's';
+                container.appendChild(particle);
+            }
+        })();
+        
+        // Scroll reveal
+        (function initScrollReveal() {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReducedMotion) {
+                document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+                return;
+            }
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        })();
+        
+        // Game Data
+        const gameQuestions = [
+            {
+                question: 'Apa yang dimaksud dengan "phonemes"?',
+                options: [
+                    'Huruf-huruf dalam alphabet',
+                    'Unit bunyi terkecil yang membedakan arti',
+                    'Kata-kata dalam bahasa Inggris',
+                    'Aturan tata bahasa'
+                ],
+                correct: 1,
+                explanation: 'Phonemes adalah unit bunyi terkecil dalam bahasa yang bisa membedakan arti, bukan huruf!'
+            },
+            {
+                question: 'Mana pasangan yang merupakan "minimal pairs"?',
+                options: [
+                    'cat dan dog',
+                    'pat dan bat',
+                    'run dan running',
+                    'big dan large'
+                ],
+                correct: 1,
+                explanation: 'Minimal pairs adalah kata yang berbeda hanya satu bunyi, seperti "pat" dan "bat".'
+            },
+            {
+                question: 'Bunyi apa yang sering tertukar oleh penutur Indonesia dalam kata "think"?',
+                options: [
+                    'Ditukar dengan bunyi "t"',
+                    'Ditukar dengan bunyi "s"',
+                    'Ditukar dengan bunyi "f"',
+                    'Semua benar'
+                ],
+                correct: 3,
+                explanation: 'Bunyi TH sering ditukar dengan T, S, atau D oleh penutur Indonesia.'
+            },
+            {
+                question: 'Apa itu "schwa" (/ə/)?',
+                options: [
+                    'Bunyi yang keras dan jelas',
+                    'Bunyi paling umum dalam bahasa Inggris',
+                    'Jenis konsonan',
+                    'Bunyi hanya untuk kata benda'
+                ],
+                correct: 1,
+                explanation: 'Schwa adalah bunyi vokal lemah yang paling sering muncul dalam bahasa Inggris!'
+            },
+            {
+                question: 'Konsep apa yang menjelaskan kemampuan otak beradaptasi dengan bahasa baru?',
+                options: [
+                    'Neuroplasticity',
+                    'Phonology',
+                    'Grammar',
+                    'Syntax'
+                ],
+                correct: 0,
+                explanation: 'Neuroplasticity adalah kemampuan otak untuk berubah dan beradaptasi dengan hal baru.'
+            }
+        ];
+        
+        // Game State
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+        
+        // DOM Elements
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const feedbackArea = document.getElementById('feedback-area');
+        const feedbackText = document.getElementById('feedback-text');
+        const nextBtn = document.getElementById('next-btn');
+        const restartBtn = document.getElementById('restart-btn');
+        const scoreDisplay = document.getElementById('score');
+        const questionNum = document.getElementById('question-num');
+        const progressBar = document.getElementById('progress-bar');
+        const gameComplete = document.getElementById('game-complete');
+        const questionArea = document.getElementById('question-area');
+        const finalScore = document.getElementById('final-score');
+        const scoreMessage = document.getElementById('score-message');
+        const totalQuestions = document.getElementById('total-questions');
+        
+        // Initialize game
+        function initGame() {
+            currentQuestion = 0;
+            score = 0;
+            answered = false;
+            scoreDisplay.textContent = '0';
+            questionNum.textContent = '1';
+            progressBar.style.width = '0%';
+            gameComplete.classList.add('hidden');
+            questionArea.classList.remove('hidden');
+            feedbackArea.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+            restartBtn.classList.add('hidden');
+            loadQuestion();
+        }
+        
+        function loadQuestion() {
+            if (currentQuestion >= gameQuestions.length) {
+                showGameComplete();
+                return;
+            }
+            
+            answered = false;
+            const q = gameQuestions[currentQuestion];
+            questionText.textContent = q.question;
+            
+            optionsContainer.innerHTML = '';
+            q.options.forEach((option, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'phoneme-card p-4 text-left';
+                btn.innerHTML = `<span class="text-base md:text-lg" style="color: var(--fg-primary);">${option}</span>`;
+                btn.setAttribute('aria-label', `Pilihan ${index + 1}: ${option}`);
+                btn.addEventListener('click', () => selectAnswer(index, btn));
+                optionsContainer.appendChild(btn);
+            });
+            
+            feedbackArea.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+            questionNum.textContent = currentQuestion + 1;
+            progressBar.style.width = ((currentQuestion) / gameQuestions.length * 100) + '%';
+        }
+        
+        function selectAnswer(index, btn) {
+            if (answered) return;
+            answered = true;
+            
+            const q = gameQuestions[currentQuestion];
+            const cards = optionsContainer.querySelectorAll('.phoneme-card');
+            
+            if (index === q.correct) {
+                score++;
+                scoreDisplay.textContent = score;
+                btn.classList.add('correct');
+                feedbackArea.style.background = 'rgba(124, 176, 138, 0.15)';
+                feedbackArea.style.borderLeft = '4px solid #7cb08a';
+                feedbackText.style.color = '#7cb08a';
+                feedbackText.textContent = 'Benar! ' + q.explanation;
+            } else {
+                btn.classList.add('wrong');
+                cards[q.correct].classList.add('correct');
+                feedbackArea.style.background = 'rgba(196, 92, 92, 0.15)';
+                feedbackArea.style.borderLeft = '4px solid #c45c5c';
+                feedbackText.style.color = '#c45c5c';
+                feedbackText.textContent = 'Salah. ' + q.explanation;
+            }
+            
+            feedbackArea.classList.remove('hidden');
+            
+            if (currentQuestion < gameQuestions.length - 1) {
+                nextBtn.classList.remove('hidden');
+            } else {
+                setTimeout(showGameComplete, 1500);
+            }
+        }
+        
+        function showGameComplete() {
+            questionArea.classList.add('hidden');
+            feedbackArea.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+            gameComplete.classList.remove('hidden');
+            restartBtn.classList.remove('hidden');
+            finalScore.textContent = score + ' / ' + gameQuestions.length;
+            progressBar.style.width = '100%';
+            
+            const percentage = (score / gameQuestions.length) * 100;
+            if (percentage === 100) {
+                scoreMessage.textContent = 'Luar biasa! Kamu menguasai phonemes dengan sempurna!';
+            } else if (percentage >= 80) {
+                scoreMessage.textContent = 'Bagus sekali! Pemahamanmu tentang phonemes sudah sangat baik.';
+            } else if (percentage >= 60) {
+                scoreMessage.textContent = 'Cukup baik! Terus berlatih untuk meningkatkan pemahamanmu.';
+            } else {
+                scoreMessage.textContent = 'Jangan menyerah! Baca kembali materinya dan coba lagi.';
+            }
+        }
+        
+        nextBtn.addEventListener('click', () => {
+            currentQuestion++;
+            loadQuestion();
+        });
+        
+        restartBtn.addEventListener('click', initGame);
+        
+        // Start game
+        totalQuestions.textContent = gameQuestions.length;
+        initGame();
+    </script>
+</body>
+</html>
