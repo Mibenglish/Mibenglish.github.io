@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pelajari The Verb To Be dalam Bahasa Inggris dengan metode Existence Equation yang mudah dipahami pemula. Ep 11 mibenglish.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mibenglish.com/ep11-verb-to-be-existence-equation">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ep 11. The Verb 'To Be': Existence Equation | mibenglish">
+    <meta property="og:description" content="Pelajari The Verb To Be dengan metode unik Existence Equation. Mudah untuk pemula!">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mibenglish.com/ep11-verb-to-be-existence-equation">
+    <meta property="og:site_name" content="mibenglish">
+    <meta property="og:locale" content="id_ID">
+    
+    <title>Ep 11. The Verb 'To Be': Existence Equation | mibenglish</title>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Ep 11. The Verb 'To Be': Existence Equation",
+        "description": "Pelajari The Verb To Be dalam Bahasa Inggris dengan metode Existence Equation yang mudah dipahami pemula.",
+        "author": {
+            "@type": "Person",
+            "name": "bangmik"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "mibenglish",
+            "url": "https://mibenglish.com"
+        },
+        "datePublished": "2025-01-15",
+        "dateModified": "2025-01-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://mibenglish.com/ep11-verb-to-be-existence-equation"
+        }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            900: '#0d1f17',
+                            800: '#1a3a2f',
+                            700: '#2d5a47',
+                            600: '#3d7a5f',
+                            500: '#4a9970',
+                            400: '#6bb38d',
+                            300: '#8fbc8f',
+                            200: '#b8d4b8',
+                            100: '#e0f0e0'
+                        },
+                        bark: {
+                            700: '#3d2914',
+                            600: '#5c3d1e',
+                            500: '#7a5128'
+                        },
+                        amber: {
+                            400: '#d4a574',
+                            500: '#c4915e',
+                            600: '#a87848'
+                        },
+                        cream: '#faf8f0',
+                        moss: '#2a4a3a'
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Source Sans 3', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :root {
+            --bg: #0d1f17;
+            --bg-light: #faf8f0;
+            --fg: #1a1a1a;
+            --fg-light: #f0f0f0;
+            --muted: #5a6a5a;
+            --accent: #d4a574;
+            --accent-hover: #c4915e;
+            --forest-deep: #1a3a2f;
+            --forest-mid: #2d5a47;
+            --forest-light: #4a9970;
+            --border: #3d5a4a;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background: var(--bg);
+            color: var(--fg-light);
+            overflow-x: hidden;
+        }
+        
+        /* Animated Background */
+        .forest-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .forest-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse at 20% 80%, rgba(45, 90, 71, 0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(74, 153, 112, 0.2) 0%, transparent 40%),
+                radial-gradient(ellipse at 50% 50%, rgba(26, 58, 47, 0.6) 0%, transparent 70%);
+        }
+        
+        .floating-leaf {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: rgba(107, 179, 141, 0.3);
+            border-radius: 50% 0 50% 0;
+            animation: floatLeaf 20s infinite ease-in-out;
+            pointer-events: none;
+        }
+        
+        @keyframes floatLeaf {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% {
+                transform: translateY(-10vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Entrance Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        
+        /* Typography */
+        .display-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Cards */
+        .lesson-card {
+            background: linear-gradient(145deg, rgba(26, 58, 47, 0.8), rgba(13, 31, 23, 0.9));
+            border: 1px solid rgba(74, 153, 112, 0.2);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .lesson-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 60px rgba(74, 153, 112, 0.1);
+            border-color: rgba(74, 153, 112, 0.4);
+        }
+        
+        /* Example Box */
+        .example-box {
+            background: rgba(45, 90, 71, 0.3);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 12px 12px 0;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .english-text {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .indonesian-text {
+            color: rgba(240, 240, 240, 0.7);
+            font-size: 0.95em;
+        }
+        
+        /* Interactive Elements */
+        .verb-highlight {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.3), rgba(212, 165, 116, 0.1));
+            border-radius: 6px;
+            color: var(--accent);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .verb-highlight:hover {
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.5), rgba(212, 165, 116, 0.3));
+            transform: scale(1.05);
+            border-color: var(--accent);
+        }
+        
+        /* Buttons */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+            color: #1a1a1a;
+            font-weight: 600;
+            padding: 0.875rem 2rem;
+            border-radius: 12px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        .btn-primary:focus-visible {
+            outline: 3px solid var(--forest-light);
+            outline-offset: 2px;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--fg-light);
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            border: 2px solid rgba(74, 153, 112, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(74, 153, 112, 0.2);
+            border-color: var(--forest-light);
+        }
+        
+        /* Quest Game */
+        .quest-container {
+            background: linear-gradient(180deg, rgba(26, 58, 47, 0.9), rgba(13, 31, 23, 0.95));
+            border: 2px solid rgba(74, 153, 112, 0.3);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .quest-option {
+            background: rgba(45, 90, 71, 0.4);
+            border: 2px solid rgba(74, 153, 112, 0.2);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            width: 100%;
+            color: var(--fg-light);
+            font-size: 1rem;
+        }
+        
+        .quest-option:hover:not(:disabled) {
+            background: rgba(74, 153, 112, 0.3);
+            border-color: var(--forest-light);
+            transform: translateX(8px);
+        }
+        
+        .quest-option:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        .quest-option.correct {
+            background: rgba(74, 153, 112, 0.5) !important;
+            border-color: #4ade80 !important;
+        }
+        
+        .quest-option.incorrect {
+            background: rgba(180, 70, 70, 0.4) !important;
+            border-color: #f87171 !important;
+        }
+        
+        .quest-option:disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: rgba(45, 90, 71, 0.5);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--forest-light), var(--accent));
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        
+        /* Ad Placeholder */
+        .ad-placeholder {
+            background: linear-gradient(135deg, rgba(45, 90, 71, 0.3), rgba(26, 58, 47, 0.4));
+            border: 2px dashed rgba(74, 153, 112, 0.3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(160, 180, 160, 0.6);
+            font-size: 0.875rem;
+        }
+        
+        /* Navigation */
+        .nav-link {
+            color: rgba(240, 240, 240, 0.8);
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--forest-mid);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--forest-light);
+        }
+        
+        /* Formula Display */
+        .formula-box {
+            background: linear-gradient(135deg, rgba(212, 165, 116, 0.15), rgba(212, 165, 116, 0.05));
+            border: 2px solid rgba(212, 165, 116, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .formula-part {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0 0.25rem;
+            border-radius: 8px;
+        }
+        
+        .formula-subject {
+            background: rgba(74, 153, 112, 0.4);
+            color: #6bb38d;
+        }
+        
+        .formula-verb {
+            background: rgba(212, 165, 116, 0.4);
+            color: var(--accent);
+        }
+        
+        .formula-complement {
+            background: rgba(143, 188, 143, 0.4);
+            color: #8fbc8f;
+        }
+        
+        /* Mascot */
+        .mascot-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .mascot-speech {
+            position: absolute;
+            background: rgba(45, 90, 71, 0.95);
+            border: 1px solid rgba(74, 153, 112, 0.5);
+            border-radius: 12px;
+            padding: 1rem;
+            font-size: 0.9rem;
+            max-width: 200px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .mascot-container:hover .mascot-speech {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .animate-pulse-slow {
+            animation: pulse 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="forest-bg" id="forestBg" aria-hidden="true"></div>
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-forest-900/80 backdrop-blur-md border-b border-forest-700/50">
+        <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="https://mibenglish.com" class="flex items-center gap-2" aria-label="Kembali ke beranda mibenglish">
+                <svg class="w-8 h-8 text-forest-400" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <path d="M16 2L4 10v12l12 8 12-8V10L16 2z" stroke="currentColor" stroke-width="2" fill="rgba(74,153,112,0.2)"/>
+                    <path d="M16 8l-6 4v8l6 4 6-4v-8l-6-4z" fill="currentColor" opacity="0.6"/>
+                </svg>
+                <span class="display-font text-xl font-bold text-cream">mibenglish</span>
+            </a>
+            
+            <div class="flex items-center gap-6">
+                <a href="https://mibenglish.com" class="nav-link text-sm font-medium hidden sm:block">Beranda</a>
+                <a href="#materi" class="nav-link text-sm font-medium hidden sm:block">Materi</a>
+                <a href="#quest" class="nav-link text-sm font-medium hidden sm:block">Quest</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="min-h-[70vh] flex items-center justify-center px-4 py-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="reveal">
+                    <span class="inline-block px-4 py-2 bg-forest-700/50 rounded-full text-forest-300 text-sm font-medium mb-6">
+                        Episode 11
+                    </span>
+                </div>
+                
+                <h1 class="reveal reveal-delay-1 display-font text-4xl sm:text-5xl md:text-6xl font-bold text-cream leading-tight mb-6">
+                    The Verb "To Be":<br>
+                    <span class="text-amber-400">Existence Equation</span>
+                </h1>
+                
+                <p class="reveal reveal-delay-2 text-lg sm:text-xl text-forest-200 max-w-2xl mx-auto mb-8 leading-relaxed">
+                    Temukan rahasia di balik kata paling fundamental dalam Bahasa Inggris. 
+                    Pelajari cara sederhana memahami "to be" seperti rumus matematika.
+                </p>
+                
+                <div class="reveal reveal-delay-3 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#materi" class="btn-primary">
+                        Mulai Belajar
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </a>
+                    <a href="#quest" class="btn-secondary">
+                        Langsung ke Quest
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ad Slot 1 -->
+        <div class="max-w-4xl mx-auto px-4 mb-8">
+            <div class="ad-placeholder h-24 sm:h-28" style="display:none">
+                <span>Slot Iklan - AdSense</span>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <article id="materi" class="max-w-4xl mx-auto px-4 pb-16">
+            <!-- Introduction -->
+            <section class="mb-12">
+                <div class="lesson-card p-6 sm:p-8 reveal">
+                    <h2 class="display-font text-2xl sm:text-3xl font-bold text-cream mb-6">
+                        Mengapa "To Be" Menjadi Masalah?
+                    </h2>
+                    
+                    <div class="prose prose-lg text-forest-100 space-y-4">
+                        <p>
+                            Banyak pelajar pemula kesulitan memahami <span class="verb-highlight">to be</span>. 
+                            Kenapa? Karena dalam Bahasa Indonesia, kita tidak punya kata yang setara persis dengan to be.
+                        </p>
+                        
+                        <p>
+                            Coba pikirkan: kalau kita mau bilang "Saya guru" dalam Bahasa Indonesia, 
+                            kita tidak perlu kata tambahan apa pun. Tapi dalam <span class="english-text">English</span>, 
+                            kita harus menyisipkan kata khusus.
+                        </p>
+                        
+                        <div class="example-box">
+                            <p class="english-text">I am a teacher.</p>
+                            <p class="indonesian-text">Saya (adalah) seorang guru.</p>
+                        </div>
+                        
+                        <p>
+                            Lihat? Kata "am" itu muncul tanpa padanan langsung di Bahasa Indonesia. 
+                            Inilah yang sering membingungkan.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Core Concept -->
+            <section class="mb-12">
+                <div class="lesson-card p-6 sm:p-8 reveal">
+                    <h2 class="display-font text-2xl sm:text-3xl font-bold text-cream mb-6">
+                        Existence Equation: Rumus Keberadaan
+                    </h2>
+                    
+                    <p class="text-forest-100 mb-6">
+                        Bayangkan <span class="verb-highlight">to be</span> sebagai tanda sama dengan (=) dalam matematika. 
+                        Fungsinya menghubungkan "siapa" dengan "apa" atau "bagaimana".
+                    </p>
+                    
+                    <div class="formula-box mb-8">
+                        <span class="formula-part formula-subject">SUBJEK</span>
+                        <span class="text-amber-400 mx-2">+</span>
+                        <span class="formula-part formula-verb">TO BE</span>
+                        <span class="text-amber-400 mx-2">=</span>
+                        <span class="formula-part formula-complement">KETERANGAN</span>
+                    </div>
+                    
+                    <p class="text-forest-100 mb-4">
+                        Ini yang saya sebut <strong class="text-amber-400">Existence Equation</strong> — 
+                        rumus untuk menyatakan keberadaan atau identitas sesuatu.
+                    </p>
+                    
+                    <div class="example-box">
+                        <p class="mb-2"><strong>Contoh:</strong></p>
+                        <p class="english-text">She <span class="verb-highlight">is</span> happy.</p>
+                        <p class="indonesian-text">Dia (perempuan) = bahagia.</p>
+                        <p class="text-forest-300 text-sm mt-2">Subjek (She) + To Be (is) = Keterangan (happy)</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Ad Slot 2 -->
+            <div class="ad-placeholder h-24 sm:h-28 mb-12" style="display:none">
+                <span>Slot Iklan - AdSense</span>
+            </div>
+            
+            <!-- Three Forms -->
+            <section class="mb-12">
+                <div class="lesson-card p-6 sm:p-8 reveal">
+                    <h2 class="display-font text-2xl sm:text-3xl font-bold text-cream mb-6">
+                        Tiga Wujud To Be di Present Tense
+                    </h2>
+                    
+                    <p class="text-forest-100 mb-6">
+                        Dalam <span class="english-text">Simple Present Tense</span> (waktu sekarang), 
+                        to be memiliki tiga bentuk utama. Masing-masing punya "tugas" berbeda.
+                    </p>
+                    
+                    <div class="grid gap-6">
+                        <!-- AM -->
+                        <div class="bg-forest-800/50 rounded-xl p-5 border border-forest-600/30 hover:border-amber-400/50 transition-colors">
+                            <div class="flex items-center gap-4 mb-3">
+                                <span class="verb-highlight text-xl">am</span>
+                                <span class="text-forest-300 text-sm">untuk subjek "I" (saya)</span>
+                            </div>
+                            <div class="example-box">
+                                <p class="english-text">I am a student.</p>
+                                <p class="indonesian-text">Saya seorang pelajar.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- IS -->
+                        <div class="bg-forest-800/50 rounded-xl p-5 border border-forest-600/30 hover:border-amber-400/50 transition-colors">
+                            <div class="flex items-center gap-4 mb-3">
+                                <span class="verb-highlight text-xl">is</span>
+                                <span class="text-forest-300 text-sm">untuk subjek tunggal: he, she, it</span>
+                            </div>
+                            <div class="example-box">
+                                <p class="english-text">He is tall.</p>
+                                <p class="indonesian-text">Dia (laki-laki) tinggi.</p>
+                                <p class="english-text mt-2">The cat is cute.</p>
+                                <p class="indonesian-text">Kucing itu lucu.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- ARE -->
+                        <div class="bg-forest-800/50 rounded-xl p-5 border border-forest-600/30 hover:border-amber-400/50 transition-colors">
+                            <div class="flex items-center gap-4 mb-3">
+                                <span class="verb-highlight text-xl">are</span>
+                                <span class="text-forest-300 text-sm">untuk subjek jamak: you, we, they</span>
+                            </div>
+                            <div class="example-box">
+                                <p class="english-text">We are friends.</p>
+                                <p class="indonesian-text">Kita adalah teman.</p>
+                                <p class="english-text mt-2">You are kind.</p>
+                                <p class="indonesian-text">Kamu baik hati.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Memory Trick -->
+            <section class="mb-12">
+                <div class="lesson-card p-6 sm:p-8 reveal">
+                    <h2 class="display-font text-2xl sm:text-3xl font-bold text-cream mb-6">
+                        Cara Mengingat: Teknik "Peta Keluarga"
+                    </h2>
+                    
+                    <p class="text-forest-100 mb-6">
+                        Bayangkan to be seperti keluarga yang tinggal di rumah berbeda:
+                    </p>
+                    
+                    <div class="grid sm:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-forest-700/30 rounded-xl p-4 text-center border border-forest-500/30">
+                            <div class="text-3xl mb-2">👤</div>
+                            <p class="verb-highlight mb-1">AM</p>
+                            <p class="text-sm text-forest-300">Rumah "I"<br>Satu orang saja</p>
+                        </div>
+                        
+                        <div class="bg-forest-700/30 rounded-xl p-4 text-center border border-forest-500/30">
+                            <div class="text-3xl mb-2">🏠</div>
+                            <p class="verb-highlight mb-1">IS</p>
+                            <p class="text-sm text-forest-300">Rumah Tunggal<br>He, She, It</p>
+                        </div>
+                        
+                        <div class="bg-forest-700/30 rounded-xl p-4 text-center border border-forest-500/30">
+                            <div class="text-3xl mb-2">👥</div>
+                            <p class="verb-highlight mb-1">ARE</p>
+                            <p class="text-sm text-forest-300">Rumah Jamak<br>You, We, They</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-forest-100">
+                        Setiap kali bingung, tanyakan pada diri sendiri: <em class="text-amber-400">"Subjeknya satu atau banyak? Siapa subjeknya?"</em>
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Ad Slot 3 -->
+            <div class="ad-placeholder h-24 sm:h-28 mb-12" style="display:none">
+                <span>Slot Iklan - AdSense</span>
+            </div>
+            
+            <!-- Negative & Question -->
+            <section class="mb-12">
+                <div class="lesson-card p-6 sm:p-8 reveal">
+                    <h2 class="display-font text-2xl sm:text-3xl font-bold text-cream mb-6">
+                        Negatif dan Pertanyaan
+                    </h2>
+                    
+                    <h3 class="text-xl font-semibold text-amber-400 mb-4">Kalimat Negatif</h3>
+                    <p class="text-forest-100 mb-4">
+                        Untuk membuat kalimat negatif, tambahkan <span class="verb-highlight">not</span> setelah to be.
+                    </p>
+                    
+                    <div class="example-box mb-6">
+                        <p class="english-text">I am <span class="text-red-400">not</span> tired.</p>
+                        <p class="indonesian-text">Saya tidak lelah.</p>
+                        <p class="english-text mt-2">She is <span class="text-red-400">not</span> here.</p>
+                        <p class="indonesian-text">Dia tidak di sini.</p>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-amber-400 mb-4">Kalimat Tanya</h3>
+                    <p class="text-forest-100 mb-4">
+                        Untuk bertanya, <span class="verb-highlight">pindahkan to be ke depan</span>.
+                    </p>
+                    
+                    <div class="example-box">
+                        <p class="english-text"><span class="text-green-400">Is</span> he your brother?</p>
+                        <p class="indonesian_text">Apakah dia saudara laki-lakimu?</p>
+                        <p class="english-text mt-2"><span class="text-green-400">Are</span> you happy?</p>
+                        <p class="indonesian-text">Apakah kamu bahagia?</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Quick Summary -->
+            <section class="mb-12">
+                <div class="lesson-card p-6 sm:p-8 reveal border-amber-400/30">
+                    <h2 class="display-font text-2xl sm:text-3xl font-bold text-cream mb-6">
+                        Ringkasan Cepat
+                    </h2>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="border-b border-forest-600/50">
+                                    <th class="py-3 px-4 text-amber-400 font-semibold">Subjek</th>
+                                    <th class="py-3 px-4 text-amber-400 font-semibold">To Be</th>
+                                    <th class="py-3 px-4 text-amber-400 font-semibold">Contoh</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-forest-100">
+                                <tr class="border-b border-forest-700/30">
+                                    <td class="py-3 px-4">I</td>
+                                    <td class="py-3 px-4"><span class="verb-highlight">am</span></td>
+                                    <td class="py-3 px-4">I am ready.</td>
+                                </tr>
+                                <tr class="border-b border-forest-700/30">
+                                    <td class="py-3 px-4">He / She / It</td>
+                                    <td class="py-3 px-4"><span class="verb-highlight">is</span></td>
+                                    <td class="py-3 px-4">She is kind.</td>
+                                </tr>
+                                <tr class="border-b border-forest-700/30">
+                                    <td class="py-3 px-4">You / We / They</td>
+                                    <td class="py-3 px-4"><span class="verb-highlight">are</span></td>
+                                    <td class="py-3 px-4">They are late.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </article>
+        
+        <!-- Quest Section -->
+        <section id="quest" class="max-w-4xl mx-auto px-4 pb-16">
+            <div class="quest-container reveal">
+                <div class="bg-forest-700/50 p-6 border-b border-forest-600/30">
+                    <h2 class="display-font text-2xl sm:text-3xl font-bold text-cream mb-2">
+                        Quest: To Be Challenge
+                    </h2>
+                    <p class="text-forest-200">Uji pemahamanmu dengan 8 pertanyaan interaktif!</p>
+                    
+                    <div class="mt-4">
+                        <div class="flex justify-between text-sm text-forest-300 mb-2">
+                            <span>Progress</span>
+                            <span id="progressText">0/8</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="p-6 sm:p-8" id="questContent">
+                    <!-- Questions will be rendered here -->
+                </div>
+                
+                <div class="p-6 border-t border-forest-600/30 hidden" id="questResult">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4" id="resultEmoji">🌲</div>
+                        <h3 class="display-font text-2xl font-bold text-cream mb-2" id="resultTitle">Quest Selesai!</h3>
+                        <p class="text-forest-200 mb-4" id="resultText">Skor Anda: 0/8</p>
+                        <button class="btn-primary" onclick="restartQuest()" aria-label="Ulangi Quest">
+                            Coba Lagi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ad Slot 4 -->
+        <div class="max-w-4xl mx-auto px-4 mb-12">
+            <div class="ad-placeholder h-24 sm:h-28" style="display:none">
+                <span>Slot Iklan - AdSense</span>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <section class="max-w-4xl mx-auto px-4 pb-16">
+            <div class="flex flex-col sm:flex-row gap-4 justify-between items-center">
+                <a href="https://mibenglish.com/ep10" class="btn-secondary w-full sm:w-auto text-center">
+                    <span class="flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                        Episode Sebelumnya
+                    </span>
+                </a>
+                <a href="https://mibenglish.com" class="btn-primary w-full sm:w-auto justify-center">
+                    Kembali ke Beranda
+                </a>
+                <a href="https://mibenglish.com/ep12" class="btn-secondary w-full sm:w-auto text-center">
+                    <span class="flex items-center justify-center gap-2">
+                        Episode Berikutnya
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-forest-900/80 border-t border-forest-700/50 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="display-font text-2xl font-bold text-cream mb-2">mibenglish</p>
+            <p class="text-forest-300 text-sm mb-4">
+                Belajar Bahasa Inggris dengan Cara yang Berbeda
+            </p>
+            <p class="text-forest-400 text-xs">
+                &copy; 2025 mibenglish. Dibuat oleh bangmik. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    
+    <!-- Ad Slot 5 (Sticky Bottom - Mobile) -->
+    <div class="fixed bottom-0 left-0 right-0 sm:hidden z-40 bg-forest-900/95 border-t border-forest-700/50 p-2">
+        <div class="ad-placeholder h-16" style="display:none">
+            <span>Slot Iklan - AdSense</span>
+        </div>
+    </div>
+    
+    <script>
+        // Initialize data first
+        const questData = [
+            {
+                question: "Lengkapi: I ___ a student.",
+                options: ["am", "is", "are", "be"],
+                correct: 0,
+                explanation: "'I' selalu menggunakan 'am'."
+            },
+            {
+                question: "Lengkapi: She ___ my sister.",
+                options: ["am", "is", "are", "be"],
+                correct: 1,
+                explanation: "'She' (subjek tunggal) menggunakan 'is'."
+            },
+            {
+                question: "Lengkapi: They ___ happy.",
+                options: ["am", "is", "are", "be"],
+                correct: 2,
+                explanation: "'They' (subjek jamak) menggunakan 'are'."
+            },
+            {
+                question: "Mana yang benar?",
+                options: ["You is kind.", "You am kind.", "You are kind.", "You be kind."],
+                correct: 2,
+                explanation: "'You' menggunakan 'are'."
+            },
+            {
+                question: "Kalimat negatif dari 'He is tired' adalah...",
+                options: ["He not is tired.", "He is no tired.", "He is not tired.", "He are not tired."],
+                correct: 2,
+                explanation: "Tambahkan 'not' setelah 'is'."
+            },
+            {
+                question: "Ubah ke kalimat tanya: 'She is a doctor'",
+                options: ["Is she a doctor?", "She is a doctor?", "A doctor is she?", "Does she is a doctor?"],
+                correct: 0,
+                explanation: "Pindahkan 'is' ke depan untuk bertanya."
+            },
+            {
+                question: "Lengkapi: The cat ___ cute.",
+                options: ["am", "is", "are", "be"],
+                correct: 1,
+                explanation: "'The cat' = 'it', menggunakan 'is'."
+            },
+            {
+                question: "Lengkapi: We ___ friends.",
+                options: ["am", "is", "are", "be"],
+                correct: 2,
+                explanation: "'We' (subjek jamak) menggunakan 'are'."
+            }
+        ];
+        
+        // State variables
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+        
+        // DOM Elements
+        const questContent = document.getElementById('questContent');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const questResult = document.getElementById('questResult');
+        
+        // Create floating leaves
+        function createLeaves() {
+            const bg = document.getElementById('forestBg');
+            if (!bg) return;
+            
+            const leafCount = window.innerWidth < 768 ? 10 : 20;
+            
+            for (let i = 0; i < leafCount; i++) {
+                const leaf = document.createElement('div');
+                leaf.className = 'floating-leaf';
+                leaf.style.left = Math.random() * 100 + '%';
+                leaf.style.animationDelay = Math.random() * 20 + 's';
+                leaf.style.animationDuration = (15 + Math.random() * 15) + 's';
+                bg.appendChild(leaf);
+            }
+        }
+        
+        // Scroll reveal
+        function initScrollReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            reveals.forEach(el => observer.observe(el));
+        }
+        
+        // Render quest question
+        function renderQuestion() {
+            if (!questContent) return;
+            
+            if (currentQuestion >= questData.length) {
+                showResult();
+                return;
+            }
+            
+            const q = questData[currentQuestion];
+            answered = false;
+            
+            questContent.innerHTML = `
+                <div class="mb-6">
+                    <span class="text-forest-400 text-sm">Pertanyaan ${currentQuestion + 1} dari ${questData.length}</span>
+                    <h3 class="text-xl sm:text-2xl font-semibold text-cream mt-2">${q.question}</h3>
+                </div>
+                <div class="space-y-3" role="group" aria-label="Pilihan jawaban">
+                    ${q.options.map((opt, i) => `
+                        <button 
+                            class="quest-option" 
+                            data-index="${i}"
+                            onclick="checkAnswer(${i})"
+                            aria-label="Pilihan ${i + 1}: ${opt}"
+                        >
+                            <span class="inline-block w-8 h-8 rounded-full bg-forest-600/50 text-center leading-8 mr-3 text-sm font-medium">
+                                ${String.fromCharCode(65 + i)}
+                            </span>
+                            ${opt}
+                        </button>
+                    `).join('')}
+                </div>
+                <div id="feedback" class="mt-6 hidden">
+                    <div class="p-4 rounded-xl bg-forest-700/30 border border-forest-500/30">
+                        <p id="feedbackText" class="text-forest-100"></p>
+                    </div>
+                    <button class="btn-primary mt-4" onclick="nextQuestion()">
+                        ${currentQuestion < questData.length - 1 ? 'Pertanyaan Berikutnya' : 'Lihat Hasil'}
+                    </button>
+                </div>
+            `;
+            
+            updateProgress();
+        }
+        
+        // Check answer
+        function checkAnswer(selectedIndex) {
+            if (answered) return;
+            answered = true;
+            
+            const q = questData[currentQuestion];
+            const buttons = questContent.querySelectorAll('.quest-option');
+            const feedback = document.getElementById('feedback');
+            const feedbackText = document.getElementById('feedbackText');
+            
+            buttons.forEach((btn, i) => {
+                btn.disabled = true;
+                if (i === q.correct) {
+                    btn.classList.add('correct');
+                } else if (i === selectedIndex) {
+                    btn.classList.add('incorrect');
+                }
+            });
+            
+            if (selectedIndex === q.correct) {
+                score++;
+                feedbackText.innerHTML = `<span class="text-green-400 font-semibold">Benar!</span> ${q.explanation}`;
+            } else {
+                feedbackText.innerHTML = `<span class="text-red-400 font-semibold">Salah.</span> ${q.explanation}`;
+            }
+            
+            feedback.classList.remove('hidden');
+        }
+        
+        // Next question
+        function nextQuestion() {
+            currentQuestion++;
+            renderQuestion();
+        }
+        
+        // Update progress
+        function updateProgress() {
+            const progress = (currentQuestion / questData.length) * 100;
+            if (progressFill) {
+                progressFill.style.width = progress + '%';
+            }
+            if (progressText) {
+                progressText.textContent = `${currentQuestion}/${questData.length}`;
+            }
+        }
+        
+        // Show result
+        function showResult() {
+            if (!questContent || !questResult) return;
+            
+            questContent.classList.add('hidden');
+            questResult.classList.remove('hidden');
+            
+            const resultText = document.getElementById('resultText');
+            const resultTitle = document.getElementById('resultTitle');
+            const resultEmoji = document.getElementById('resultEmoji');
+            
+            if (resultText) {
+                resultText.textContent = `Skor Anda: ${score}/${questData.length}`;
+            }
+            
+            const percentage = (score / questData.length) * 100;
+            
+            if (percentage === 100) {
+                if (resultEmoji) resultEmoji.textContent = '🌳';
+                if (resultTitle) resultTitle.textContent = 'Sempurna! Anda Master To Be!';
+            } else if (percentage >= 75) {
+                if (resultEmoji) resultEmoji.textContent = '🌲';
+                if (resultTitle) resultTitle.textContent = 'Luar Biasa! Pemahaman Sangat Baik!';
+            } else if (percentage >= 50) {
+                if (resultEmoji) resultEmoji.textContent = '🌿';
+                if (resultTitle) resultTitle.textContent = 'Bagus! Terus Berlatih!';
+            } else {
+                if (resultEmoji) resultEmoji.textContent = '🌱';
+                if (resultTitle) resultTitle.textContent = 'Jangan Menyerah! Coba Lagi!';
+            }
+            
+            if (progressFill) {
+                progressFill.style.width = '100%';
+            }
+            if (progressText) {
+                progressText.textContent = `${questData.length}/${questData.length}`;
+            }
+        }
+        
+        // Restart quest
+        function restartQuest() {
+            currentQuestion = 0;
+            score = 0;
+            answered = false;
+            
+            if (questResult) questResult.classList.add('hidden');
+            if (questContent) questContent.classList.remove('hidden');
+            
+            renderQuestion();
+        }
+        
+        // Smooth scroll for anchor links
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
+        
+        // Verb highlight interaction
+        function initVerbInteraction() {
+            document.querySelectorAll('.verb-highlight').forEach(el => {
+                el.addEventListener('click', function() {
+                    this.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+                });
+            });
+        }
+        
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', function() {
+            createLeaves();
+            initScrollReveal();
+            renderQuestion();
+            initSmoothScroll();
+            initVerbInteraction();
+        });
+        
+        // Reduced motion check
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.floating-leaf').forEach(leaf => {
+                leaf.style.animation = 'none';
+            });
+        }
+    </script>
+</body>
+</html>
