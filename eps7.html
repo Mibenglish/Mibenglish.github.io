@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pelajari Phonemes dan persiapan otak untuk bahasa Inggris. Module 7 membantu pemula memahami suara dasar bahasa dengan metode imajinatif.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mibenglish.com/ep7-phonemes-brain-prep">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ep 7. Phonemes & Brain Prep - mibenglish">
+    <meta property="og:description" content="Module 7: Pelajari fonem bahasa Inggris dan cara otak memproses suara untuk pembelajaran efektif.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mibenglish.com/ep7-phonemes-brain-prep">
+    <meta property="og:site_name" content="mibenglish">
+    
+    <title>Ep 7. Phonemes & Brain Prep: Module 7 - mibenglish</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            900: '#0a1810',
+                            800: '#0f251a',
+                            700: '#163323',
+                            600: '#1e4a32',
+                            500: '#2d6a4f',
+                            400: '#40916c',
+                            300: '#74c69d',
+                            200: '#b7e4c7',
+                            100: '#d8f3dc'
+                        },
+                        accent: {
+                            gold: '#d4a574',
+                            amber: '#e9c46a',
+                            warm: '#f4a261'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Cormorant Garamond', 'serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :root {
+            --bg: #0a1810;
+            --bg-card: #0f251a;
+            --fg: #d8f3dc;
+            --fg-muted: #95d5b2;
+            --accent: #d4a574;
+            --accent-bright: #e9c46a;
+            --border: #1e4a32;
+            --glow: rgba(116, 198, 157, 0.3);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        /* Background atmosphere */
+        .bg-atmosphere {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse 80% 50% at 20% 20%, rgba(45, 106, 79, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse 60% 40% at 80% 80%, rgba(116, 198, 157, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse 40% 30% at 50% 50%, rgba(212, 165, 116, 0.08) 0%, transparent 50%),
+                var(--bg);
+        }
+        
+        /* Floating particles */
+        .particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: rgba(116, 198, 157, 0.4);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+        }
+        
+        /* Typography */
+        .font-display {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* Reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        
+        /* Brain wave visualization */
+        .brain-wave {
+            position: relative;
+            height: 120px;
+            overflow: hidden;
+        }
+        
+        .wave-line {
+            position: absolute;
+            width: 200%;
+            height: 2px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                var(--accent) 25%, 
+                var(--accent-bright) 50%, 
+                var(--accent) 75%, 
+                transparent 100%);
+            animation: waveMove 3s linear infinite;
+            opacity: 0.6;
+        }
+        
+        @keyframes waveMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .wave-line:nth-child(2) { top: 25%; animation-delay: -0.5s; opacity: 0.5; }
+        .wave-line:nth-child(3) { top: 50%; animation-delay: -1s; opacity: 0.4; }
+        .wave-line:nth-child(4) { top: 75%; animation-delay: -1.5s; opacity: 0.3; }
+        
+        /* Phoneme card */
+        .phoneme-card {
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(30, 74, 50, 0.5) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .phoneme-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(116, 198, 157, 0.15);
+        }
+        
+        .phoneme-card:active {
+            transform: translateY(-2px);
+        }
+        
+        /* Game button */
+        .game-btn {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-bright) 100%);
+            color: var(--bg);
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .game-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .game-btn:hover::before {
+            opacity: 1;
+        }
+        
+        .game-btn span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .game-btn:focus-visible {
+            outline: 2px solid var(--accent-bright);
+            outline-offset: 3px;
+        }
+        
+        /* Match game */
+        .match-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .match-card:hover {
+            border-color: var(--accent);
+        }
+        
+        .match-card.selected {
+            border-color: var(--accent-bright);
+            background: rgba(212, 165, 116, 0.1);
+        }
+        
+        .match-card.correct {
+            border-color: #40916c;
+            background: rgba(64, 145, 108, 0.2);
+            animation: pulse 0.5s ease;
+        }
+        
+        .match-card.wrong {
+            border-color: #e76f51;
+            background: rgba(231, 111, 81, 0.2);
+            animation: shake 0.3s ease;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        
+        /* Ad placeholder */
+        .ad-slot {
+            background: linear-gradient(135deg, rgba(30, 74, 50, 0.3) 0%, rgba(15, 37, 26, 0.5) 100%);
+            border: 1px dashed var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            color: var(--fg-muted);
+            font-size: 0.875rem;
+        }
+        
+        /* Focus styles */
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid var(--accent-bright);
+            outline-offset: 3px;
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+        
+        /* Reading progress */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-bright));
+            z-index: 1000;
+            transition: width 0.1s ease;
+        }
+        
+        /* Section divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 3rem 0;
+        }
+    </style>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Ep 7. Phonemes & Brain Prep: Module 7",
+        "description": "Pelajari Phonemes dan persiapan otak untuk bahasa Inggris. Module 7 membantu pemula memahami suara dasar bahasa dengan metode imajinatif.",
+        "author": {
+            "@type": "Person",
+            "name": "bangmik"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "mibenglish",
+            "url": "https://mibenglish.com"
+        },
+        "datePublished": "2025-01-15",
+        "dateModified": "2025-01-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://mibenglish.com/ep7-phonemes-brain-prep"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+    
+    <!-- Background Atmosphere -->
+    <div class="bg-atmosphere"></div>
+    
+    <!-- Floating Particles Container -->
+    <div id="particles"></div>
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-forest-900/80 border-b border-forest-700">
+        <nav class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="https://mibenglish.com" class="font-display text-2xl md:text-3xl font-bold text-accent-gold hover:text-accent-amber transition-colors" aria-label="Kembali ke beranda mibenglish">
+                mibenglish
+            </a>
+            <div class="flex items-center gap-4">
+                <span class="text-forest-300 text-sm font-medium hidden sm:block">Module 7</span>
+                <a href="https://mibenglish.com" class="text-forest-300 hover:text-accent-gold transition-colors text-sm flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                    Kembali
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="max-w-5xl mx-auto px-4 py-8 md:py-12">
+        <!-- Hero Section -->
+        <article>
+            <header class="mb-12 md:mb-16">
+                <div class="reveal">
+                    <span class="inline-block px-4 py-1 bg-forest-700/50 text-forest-300 rounded-full text-sm mb-4 border border-forest-600">
+                        Episode 7
+                    </span>
+                </div>
+                <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 reveal reveal-delay-1 leading-tight">
+                    Phonemes & Brain Prep
+                    <span class="block text-accent-gold text-2xl md:text-3xl mt-2 font-normal">Module 7</span>
+                </h1>
+                <p class="text-lg md:text-xl text-forest-200 max-w-3xl reveal reveal-delay-2">
+                    Membuka pintu dunia suara bahasa Inggris dan menyiapkan otak Anda menerima pola baru.
+                </p>
+            </header>
+            
+            <!-- Brain Wave Visualization -->
+            <div class="brain-wave mb-12 reveal reveal-delay-3">
+                <div class="wave-line"></div>
+                <div class="wave-line"></div>
+                <div class="wave-line"></div>
+                <div class="wave-line"></div>
+            </div>
+            
+            <!-- Ad Slot 1 -->
+            <div class="ad-slot mb-12 reveal" aria-label="Ruang iklan" style="display:none">
+                <p>Slot Iklan Google AdSense</p>
+            </div>
+            
+            <!-- Introduction Section -->
+            <section class="mb-12" aria-labelledby="intro-heading">
+                <h2 id="intro-heading" class="font-display text-2xl md:text-3xl font-bold mb-6 text-accent-gold reveal">
+                    Mengapa Kita Sering Kesulitan Mendengar?
+                </h2>
+                
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-forest-100 mb-6 reveal">
+                        Pernahkah Anda bertanya, <em>"Mengapa kata-kata bahasa Inggris terdengar seperti menyatu semua?"</em> Atau mungkin, <em>"Kenapa saya sulit membedakan 'ship' dan 'sheep'?"</em>
+                    </p>
+                    
+                    <p class="text-forest-100 mb-6 reveal">
+                        Jawabannya bukan karena Anda kurang pintar. Jawabannya terletak pada sesuatu yang sangat kecil namun sangat berkuasa: <strong class="text-accent-gold">Phoneme</strong> atau dalam bahasa Indonesia kita sebut <strong class="text-accent-gold">Fonem</strong>.
+                    </p>
+                    
+                    <div class="bg-forest-800/50 border border-forest-600 rounded-2xl p-6 md:p-8 mb-8 reveal">
+                        <p class="text-forest-200 italic text-lg">
+                            "Bayangkan fonem seperti warna dasar dalam lukisan. Dengan hanya beberapa warna utama, seniman bisa menciptakan jutaan kombinasi. Demikian juga dengan fonem dalam bahasa."
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="section-divider"></div>
+            
+            <!-- What is Phoneme Section -->
+            <section class="mb-12" aria-labelledby="phoneme-heading">
+                <h2 id="phoneme-heading" class="font-display text-2xl md:text-3xl font-bold mb-6 text-accent-gold reveal">
+                    Apa Itu Phoneme?
+                </h2>
+                
+                <p class="text-forest-100 mb-8 reveal">
+                    <strong>Phoneme</strong> adalah satuan suara terkecil dalam bahasa yang dapat membedakan arti. Sederhananya, fonem adalah "atom" dari suara bahasa.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="phoneme-card reveal" role="button" tabindex="0" onclick="playPhonemeExample(0)" onkeypress="handleKeyPress(event, 0)">
+                        <div class="text-4xl md:text-5xl font-display font-bold text-accent-gold mb-3">/p/ vs /b/</div>
+                        <p class="text-forest-200"><strong>pat</strong> (tepuk) vs <strong>bat</strong> (kelelawar)</p>
+                        <p class="text-forest-400 text-sm mt-2">Klik untuk mendengar perbedaan</p>
+                    </div>
+                    
+                    <div class="phoneme-card reveal reveal-delay-1" role="button" tabindex="0" onclick="playPhonemeExample(1)" onkeypress="handleKeyPress(event, 1)">
+                        <div class="text-4xl md:text-5xl font-display font-bold text-accent-gold mb-3">/i:/ vs /ɪ/</div>
+                        <p class="text-forest-200"><strong>sheep</strong> (domba) vs <strong>ship</strong> (kapal)</p>
+                        <p class="text-forest-400 text-sm mt-2">Klik untuk mendengar perbedaan</p>
+                    </div>
+                </div>
+                
+                <div class="bg-forest-800/30 border-l-4 border-accent-gold p-6 rounded-r-xl reveal">
+                    <h3 class="font-display text-xl font-bold mb-3 text-forest-100">Mengapa Ini Penting?</h3>
+                    <p class="text-forest-200">
+                        Bahasa Indonesia memiliki sekitar <strong>30+ fonem</strong>. Bahasa Inggris memiliki <strong>44 fonem</strong>. Perbedaan ini yang membuat telinga kita "bingung" saat mendengar bahasa Inggris.
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Ad Slot 2 -->
+            <div class="ad-slot mb-12 reveal" aria-label="Ruang iklan" style="display:none">
+                <p>Slot Iklan Google AdSense</p>
+            </div>
+            
+            <!-- Brain Prep Section -->
+            <section class="mb-12" aria-labelledby="brain-heading">
+                <h2 id="brain-heading" class="font-display text-2xl md:text-3xl font-bold mb-6 text-accent-gold reveal">
+                    Menyiapkan Otak untuk Bahasa Baru
+                </h2>
+                
+                <p class="text-forest-100 mb-8 reveal">
+                    Otak kita luar biasa. Ia bisa membentuk jalur baru (neural pathways) ketika kita belajar sesuatu yang baru. Tapi, otak juga "malas" — ia akan memilih jalan yang sudah familiar.
+                </p>
+                
+                <div class="space-y-6 mb-8">
+                    <div class="flex gap-4 items-start reveal">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-accent-gold/20 flex items-center justify-center text-accent-gold font-bold">1</div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2 text-forest-100">Tahap Pengenalan (Exposure)</h3>
+                            <p class="text-forest-200">Otak mulai mengenali pola suara baru. Seperti bertemu orang asing — masih terasa aneh, tapi mulai familiar.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start reveal">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-accent-gold/20 flex items-center justify-center text-accent-gold font-bold">2</div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2 text-forest-100">Tahap Asosiasi (Association)</h3>
+                            <p class="text-forest-200">Otak mulai menghubungkan suara dengan makna. Seperti mengingat nama orang baru yang sering Anda temui.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4 items-start reveal">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-accent-gold/20 flex items-center justify-center text-accent-gold font-bold">3</div>
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2 text-forest-100">Tahap Otomatisasi (Automation)</h3>
+                            <p class="text-forest-200">Suara sudah tidak asing lagi. Otak memproses tanpa usaha sadar. Seperti mendengar bahasa Indonesia.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Brain Visualization -->
+                <div class="bg-forest-800/50 border border-forest-600 rounded-2xl p-6 md:p-8 reveal">
+                    <h3 class="font-display text-xl font-bold mb-4 text-center text-accent-gold">Visualisasi Proses Otak</h3>
+                    <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
+                        <div class="text-center p-4">
+                            <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-forest-700 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-forest-400"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg>
+                            </div>
+                            <p class="text-sm text-forest-300">Mendengar</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-forest-500 rotate-90 md:rotate-0"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        <div class="text-center p-4">
+                            <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-forest-600 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-forest-300"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                            </div>
+                            <p class="text-sm text-forest-300">Memproses</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-forest-500 rotate-90 md:rotate-0"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        <div class="text-center p-4">
+                            <div class="w-16 h-16 mx-auto mb-2 rounded-full bg-accent-gold/30 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-gold"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+                            </div>
+                            <p class="text-sm text-accent-gold">Memahami</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="section-divider"></div>
+            
+            <!-- Root Problem Section -->
+            <section class="mb-12" aria-labelledby="problem-heading">
+                <h2 id="problem-heading" class="font-display text-2xl md:text-3xl font-bold mb-6 text-accent-gold reveal">
+                    Dari Akar Masalah ke Solusi
+                </h2>
+                
+                <p class="text-forest-100 mb-6 reveal">
+                    Banyak pelajar fokus pada hafalan kosakata tanpa memahami sistem suara. Ini seperti mencoba membangun rumah tanpa memahami bahan dasarnya.
+                </p>
+                
+                <div class="space-y-4 mb-8">
+                    <div class="bg-forest-800/50 border border-forest-600 rounded-xl p-5 reveal">
+                        <h3 class="font-semibold text-accent-warm mb-2">Akar Masalah</h3>
+                        <p class="text-forest-200">Tidak adanya "peta suara" dalam otak untuk bahasa Inggris. Otak mencoba memetakan suara bahasa Inggris ke pola bahasa Indonesia yang sudah ada.</p>
+                    </div>
+                    
+                    <div class="text-center reveal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-forest-500 mx-auto"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+                    </div>
+                    
+                    <div class="bg-accent-gold/10 border border-accent-gold/30 rounded-xl p-5 reveal">
+                        <h3 class="font-semibold text-accent-gold mb-2">Solusinya</h3>
+                        <p class="text-forest-100">Bangun peta suara baru dengan eksposur bertahap. Mulai dari fonem yang mirip dengan bahasa Indonesia, lalu perlahan tambah yang baru.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Ad Slot 3 -->
+            <div class="ad-slot mb-12 reveal" aria-label="Ruang iklan" style="display:none">
+                <p>Slot Iklan Google AdSense</p>
+            </div>
+            
+            <!-- Interactive Game Section -->
+            <section class="mb-12" aria-labelledby="game-heading">
+                <h2 id="game-heading" class="font-display text-2xl md:text-3xl font-bold mb-4 text-accent-gold reveal">
+                    Quest: Mencocokkan Fonem
+                </h2>
+                <p class="text-forest-200 mb-8 reveal">
+                    Latih kemampuan Anda mengenali fonem. Cocokkan kata dengan fonem yang benar!
+                </p>
+                
+                <div id="gameContainer" class="bg-forest-800/50 border border-forest-600 rounded-2xl p-6 md:p-8 reveal">
+                    <!-- Game Stats -->
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="text-forest-300">
+                            Skor: <span id="score" class="text-accent-gold font-bold">0</span>
+                        </div>
+                        <div class="text-forest-300">
+                            Level: <span id="level" class="text-accent-gold font-bold">1</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Game Target -->
+                    <div class="text-center mb-8">
+                        <p class="text-forest-300 mb-2">Temukan kata dengan fonem:</p>
+                        <div id="targetPhoneme" class="text-5xl md:text-6xl font-display font-bold text-accent-gold">/æ/</div>
+                        <p id="phonemeHint" class="text-forest-400 text-sm mt-2">seperti 'a' dalam "cat"</p>
+                    </div>
+                    
+                    <!-- Game Grid -->
+                    <div id="gameGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                        <!-- Cards will be generated by JS -->
+                    </div>
+                    
+                    <!-- Game Controls -->
+                    <div class="flex justify-center gap-4">
+                        <button onclick="startNewRound()" class="game-btn">
+                            <span>Kata Baru</span>
+                        </button>
+                        <button onclick="resetGame()" class="px-6 py-3 border border-forest-600 text-forest-300 rounded-full hover:border-accent-gold hover:text-accent-gold transition-colors">
+                            Reset
+                        </button>
+                    </div>
+                    
+                    <!-- Feedback -->
+                    <div id="feedback" class="text-center mt-6 text-lg font-medium"></div>
+                </div>
+            </section>
+            
+            <!-- Ad Slot 4 -->
+            <div class="ad-slot mb-12 reveal" aria-label="Ruang iklan" style="display:none">
+                <p>Slot Iklan Google AdSense</p>
+            </div>
+            
+            <!-- Tips Section -->
+            <section class="mb-12" aria-labelledby="tips-heading">
+                <h2 id="tips-heading" class="font-display text-2xl md:text-3xl font-bold mb-6 text-accent-gold reveal">
+                    Tips Praktis Minggu Ini
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-forest-800/50 border border-forest-600 rounded-xl p-6 reveal">
+                        <div class="w-12 h-12 rounded-full bg-forest-700 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-gold"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2 text-forest-100">Dengarkan 10 Menit</h3>
+                        <p class="text-forest-300 text-sm">Setiap hari, dengarkan audio bahasa Inggris. Fokus pada bunyi, bukan arti.</p>
+                    </div>
+                    
+                    <div class="bg-forest-800/50 border border-forest-600 rounded-xl p-6 reveal reveal-delay-1">
+                        <div class="w-12 h-12 rounded-full bg-forest-700 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-gold"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2 text-forest-100">Tulis Fonetik</h3>
+                        <p class="text-forest-300 text-sm">Coba tulis 5 kata baru dalam bentuk fonetik. Gunakan kamus online untuk membantu.</p>
+                    </div>
+                    
+                    <div class="bg-forest-800/50 border border-forest-600 rounded-xl p-6 reveal reveal-delay-2">
+                        <div class="w-12 h-12 rounded-full bg-forest-700 flex items-center justify-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-gold"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2 text-forest-100">Cermin Mimik</h3>
+                        <p class="text-forest-300 text-sm">Berdiri di depan cermin. Ucapkan fonem sambil memperhatikan posisi mulut Anda.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Closing -->
+            <section class="text-center py-12 reveal">
+                <p class="text-forest-300 mb-4">Lanjut ke episode berikutnya untuk mempelajari lebih dalam.</p>
+                <a href="https://mibenglish.com" class="inline-flex items-center gap-2 text-accent-gold hover:text-accent-amber transition-colors font-medium">
+                    Kembali ke Pusat Pembelajaran
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </a>
+            </section>
+        </article>
+    </main>
+    
+    <!-- Ad Slot 5 (Footer) -->
+    <div class="max-w-5xl mx-auto px-4 mb-8">
+        <div class="ad-slot reveal" aria-label="Ruang iklan" style="display:none">
+            <p>Slot Iklan Google AdSense</p>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="border-t border-forest-700 py-8 mt-8">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <p class="font-display text-2xl font-bold text-accent-gold mb-2">mibenglish</p>
+            <p class="text-forest-400 text-sm">Belajar Bahasa Inggris dengan Metode yang Menggembirakan</p>
+            <p class="text-forest-500 text-sm mt-4">2025 mibenglish. Dibuat oleh bangmik.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Initialize variables first
+        let score = 0;
+        let level = 1;
+        let currentRound = null;
+        
+        // Game data
+        const gameData = [
+            { phoneme: '/æ/', hint: "seperti 'a' dalam \"cat\"", words: ['cat', 'bed', 'hat', 'sit'], correct: 0 },
+            { phoneme: '/ɪ/', hint: "seperti 'i' pendek dalam \"sit\"", words: ['sit', 'seat', 'hat', 'cat'], correct: 0 },
+            { phoneme: '/i:/', hint: "seperti 'i' panjang dalam \"sheep\"", words: ['ship', 'seat', 'cat', 'bed'], correct: 1 },
+            { phoneme: '/e/', hint: "seperti 'e' dalam \"bed\"", words: ['cat', 'bad', 'bed', 'bird'], correct: 2 },
+            { phoneme: '/ʌ/', hint: "seperti 'u' dalam \"cup\"", words: ['cat', 'cup', 'cop', 'cap'], correct: 1 },
+            { phoneme: '/ɒ/', hint: "seperti 'o' dalam \"hot\"", words: ['hat', 'hot', 'hut', 'hurt'], correct: 1 },
+            { phoneme: '/u:/', hint: "seperti 'oo' dalam \"moon\"", words: ['moon', 'monk', 'man', 'men'], correct: 0 },
+            { phoneme: '/ɑ:/', hint: "seperti 'a' panjang dalam \"car\"", words: ['cat', 'car', 'cup', 'cure'], correct: 1 }
+        ];
+        
+        // DOM Elements - initialized after document loads
+        let scoreEl = null;
+        let levelEl = null;
+        let targetPhonemeEl = null;
+        let phonemeHintEl = null;
+        let gameGridEl = null;
+        let feedbackEl = null;
+        let progressBar = null;
+        
+        // Check reduced motion preference
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        
+        // Initialize DOM elements after page load
+        function initDOMElements() {
+            scoreEl = document.getElementById('score');
+            levelEl = document.getElementById('level');
+            targetPhonemeEl = document.getElementById('targetPhoneme');
+            phonemeHintEl = document.getElementById('phonemeHint');
+            gameGridEl = document.getElementById('gameGrid');
+            feedbackEl = document.getElementById('feedback');
+            progressBar = document.getElementById('progressBar');
+        }
+        
+        // Start new round
+        function startNewRound() {
+            const randomIndex = Math.floor(Math.random() * gameData.length);
+            currentRound = { ...gameData[randomIndex] };
+            
+            if (targetPhonemeEl) targetPhonemeEl.textContent = currentRound.phoneme;
+            if (phonemeHintEl) phonemeHintEl.textContent = currentRound.hint;
+            if (feedbackEl) feedbackEl.textContent = '';
+            
+            renderGameCards();
+        }
+        
+        // Render game cards
+        function renderGameCards() {
+            if (!gameGridEl || !currentRound) return;
+            
+            gameGridEl.innerHTML = '';
+            
+            currentRound.words.forEach((word, index) => {
+                const card = document.createElement('button');
+                card.className = 'match-card';
+                card.setAttribute('role', 'button');
+                card.setAttribute('tabindex', '0');
+                card.innerHTML = `<span class="text-xl font-medium">${word}</span>`;
+                card.setAttribute('aria-label', `Kata: ${word}`);
+                
+                card.addEventListener('click', () => handleCardClick(index));
+                card.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        handleCardClick(index);
+                    }
+                });
+                
+                gameGridEl.appendChild(card);
+            });
+        }
+        
+        // Handle card click
+        function handleCardClick(index) {
+            if (!currentRound) return;
+            
+            const cards = document.querySelectorAll('.match-card');
+            const clickedCard = cards[index];
+            
+            // Reset all cards
+            cards.forEach(card => {
+                card.classList.remove('selected', 'correct', 'wrong');
+            });
+            
+            if (index === currentRound.correct) {
+                clickedCard.classList.add('correct');
+                score += 10;
+                if (scoreEl) scoreEl.textContent = score;
+                if (feedbackEl) {
+                    feedbackEl.textContent = 'Benar! Excellent!';
+                    feedbackEl.style.color = '#74c69d';
+                }
+                
+                // Level up every 50 points
+                const newLevel = Math.floor(score / 50) + 1;
+                if (newLevel > level) {
+                    level = newLevel;
+                    if (levelEl) levelEl.textContent = level;
+                }
+            } else {
+                clickedCard.classList.add('wrong');
+                if (feedbackEl) {
+                    feedbackEl.textContent = 'Coba lagi! Perhatikan fonemnya.';
+                    feedbackEl.style.color = '#e76f51';
+                }
+            }
+        }
+        
+        // Reset game
+        function resetGame() {
+            score = 0;
+            level = 1;
+            if (scoreEl) scoreEl.textContent = score;
+            if (levelEl) levelEl.textContent = level;
+            startNewRound();
+        }
+        
+        // Phoneme example interaction
+        function playPhonemeExample(index) {
+            const examples = [
+                { phoneme: '/p/ vs /b/', words: ['pat', 'bat'] },
+                { phoneme: '/i:/ vs /ɪ/', words: ['sheep', 'ship'] }
+            ];
+            
+            const example = examples[index];
+            if (example) {
+                alert(`Contoh pengucapan:\n\n${example.phoneme}\n\n${example.words[0]} [pʰæt] - udara keluar kuat pada 'p'\n${example.words[1]} [bæt] - getar pita suara pada 'b'`);
+            }
+        }
+        
+        function handleKeyPress(event, index) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                playPhonemeExample(index);
+            }
+        }
+        
+        // Floating particles
+        function createParticles() {
+            if (prefersReducedMotion) return;
+            
+            const container = document.getElementById('particles');
+            if (!container) return;
+            
+            const particleCount = 15;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (Math.random() * 20 + 15) + 's';
+                particle.style.animationDelay = (Math.random() * 10) + 's';
+                particle.style.animation = `float ${Math.random() * 20 + 15}s linear infinite`;
+                particle.style.animationDelay = `${Math.random() * 10}s`;
+                
+                // Varied sizes
+                const size = Math.random() * 4 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                container.appendChild(particle);
+            }
+        }
+        
+        // Scroll reveal
+        function initScrollReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            reveals.forEach(el => observer.observe(el));
+        }
+        
+        // Reading progress
+        function updateProgress() {
+            if (!progressBar) return;
+            
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = Math.min(Math.max((scrollTop / docHeight) * 100, 0), 100);
+            progressBar.style.width = progress + '%';
+        }
+        
+        // Initialize everything after DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize DOM elements first
+            initDOMElements();
+            
+            // Then initialize features
+            createParticles();
+            initScrollReveal();
+            startNewRound();
+            
+            // Progress bar
+            window.addEventListener('scroll', updateProgress, { passive: true });
+            updateProgress();
+        });
+    </script>
+</body>
+</html>
