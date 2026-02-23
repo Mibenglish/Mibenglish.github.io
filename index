@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mibenglish - 1000 Langkah Mahir Bahasa Inggris</title>
+    
+    <meta name="description" content="Metode belajar bahasa Inggris menyenangkan seperti jalan-jalan di hutan. 1000 episode lengkap dari dasar hingga mahir.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mibenglish.github.io/" />
+
+    <style>
+        :root {
+            --bg-page: #F8FAF9;
+            --bg-card: #FFFFFF;
+            --primary: #0D4F3C;
+            --primary-light: #1A7A5E;
+            --secondary: #2D9B6A;
+            --accent: #B8F4D8;
+            --text-main: #1A2F26;
+            --text-sub: #5C7A6E;
+            --border: #E2EDE8;
+            --radius: 12px;
+            --shadow-sm: 0 1px 3px rgba(13, 79, 60, 0.06);
+            --shadow: 0 4px 16px rgba(13, 79, 60, 0.08);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .brand-logo {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .brand-logo span { color: var(--secondary); }
+
+        .header-stats {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-sub);
+        }
+
+        .stat-item strong {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            background: white;
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-tabs-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            padding: 0.75rem 1rem;
+            gap: 8px;
+        }
+
+        .tab-btn {
+            flex-shrink: 0;
+            padding: 0.6rem 1.2rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-sub);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--secondary);
+            color: var(--primary);
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem 3rem;
+        }
+
+        /* Season Header */
+        .season-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 1.75rem 2rem;
+            border-radius: var(--radius);
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .season-header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .season-header h1 {
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+            position: relative;
+        }
+
+        .season-header p {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            position: relative;
+        }
+
+        .season-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .season-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Controls Bar */
+        .controls-bar {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 200px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.75rem;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            background: white;
+            transition: all 0.2s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(45, 155, 106, 0.1);
+        }
+
+        .search-box svg {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-sub);
+            pointer-events: none;
+        }
+
+        .per-page-select {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .per-page-select label {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+
+        .per-page-select select {
+            padding: 0.6rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            background: white;
+            cursor: pointer;
+        }
+
+        /* Episode Grid */
+        .episode-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+        }
+
+        .ep-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem 1.25rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .ep-card:hover {
+            border-color: var(--secondary);
+            box-shadow: var(--shadow);
+            transform: translateY(-2px);
+        }
+
+        .ep-num {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            background: var(--bg-page);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: var(--primary);
+            transition: all 0.2s;
+        }
+
+        .ep-card:hover .ep-num {
+            background: var(--accent);
+        }
+
+        .ep-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .ep-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .ep-theme {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+        }
+
+        .ep-arrow {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: var(--bg-page);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-sub);
+            font-size: 0.75rem;
+            transition: all 0.2s;
+        }
+
+        .ep-card:hover .ep-arrow {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .page-btn {
+            min-width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-sub);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .page-btn:hover:not(:disabled) {
+            border-color: var(--secondary);
+            color: var(--primary);
+        }
+
+        .page-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .page-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .page-dots {
+            padding: 0 8px;
+            color: var(--text-sub);
+        }
+
+        .page-info {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-sub);
+        }
+
+        .empty-state svg {
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Footer */
+        footer {
+            background: white;
+            border-top: 1px solid var(--border);
+            padding: 2.5rem 1rem 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .footer-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .footer-links a {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--primary); }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .social-btn {
+            padding: 8px 16px;
+            background: var(--bg-page);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-main);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .social-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #999;
+            margin-top: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header-stats { display: none; }
+            .season-header { padding: 1.25rem 1.5rem; }
+            .season-header h1 { font-size: 1.2rem; }
+            .season-meta { flex-direction: column; gap: 0.5rem; }
+            .episode-grid { grid-template-columns: 1fr; }
+            .controls-bar { flex-direction: column; }
+            .per-page-select { justify-content: flex-end; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <a href="https://mibenglish.github.io/" class="brand-logo">mib<span>english</span></a>
+            <div class="header-stats">
+                <div class="stat-item">
+                    <strong>1000</strong> Episode
+                </div>
+                <div class="stat-item">
+                    <strong>10</strong> Musim
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-tabs">
+        <div class="nav-tabs-inner" id="navTabs">
+            <!-- JS mengisi -->
+        </div>
+    </nav>
+
+    <main>
+        <div id="seasonHeader" class="season-header">
+            <h1 id="seasonTitle">Memuat...</h1>
+            <p id="seasonDesc">Silakan pilih musim.</p>
+            <div class="season-meta">
+                <span id="episodeRange">Episode 1 - 100</span>
+            </div>
+        </div>
+
+        <div class="controls-bar">
+            <div class="search-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Cari episode...">
+            </div>
+            <div class="per-page-select">
+                <label>Tampilkan:</label>
+                <select id="perPageSelect">
+                    <option value="30">30</option>
+                    <option value="50" selected>50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="episodeGrid" class="episode-grid">
+            <!-- JS mengisi -->
+        </div>
+
+        <div id="pagination" class="pagination">
+            <!-- JS mengisi -->
+        </div>
+
+        <div id="pageInfo" class="page-info"></div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="https://mibenglish.github.io/index.html">Beranda</a>
+                <a href="https://mibenglish.github.io/about.html">About Us</a>
+                <a href="https://mibenglish.github.io/privacy.html">Privacy Policy</a>
+                <a href="https://mibenglish.github.io/terms.html">Terms of Service</a>
+                <a href="https://mibenglish.github.io/disclaimer.html">Disclaimer</a>
+                <a href="https://mibenglish.github.io/contact.html">Contact</a>
+            </div>
+            <div class="socials">
+                <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener" class="social-btn">YouTube</a>
+                <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener" class="social-btn">TikTok</a>
+                <a href="https://instagram.com/@mibenglish" target="_blank" rel="noopener" class="social-btn">Instagram</a>
+                <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener" class="social-btn">Facebook</a>
+            </div>
+            <p class="copyright">&copy; 2023 mibenglish. Created by bangmik.</p>
+        </div>
+    </footer>
+
+<script>
+// ===== KONFIGURASI =====
+const LINK_PREFIX = "https://mibenglish.github.io/eps";
+const LINK_SUFFIX = ".html";
+
+// ===== DATA KURIKULUM =====
+const seasons = [
+    {
+        title: "Musim 1: Awal Kebangkitan",
+        desc: "Fondasi otak dan kosakata dasar untuk komunikasi sederhana.",
+        themes: [
+            { name: "The Cognitive Reset", count: 10 },
+            { name: "The Survival Kit", count: 20 },
+            { name: "Present Reality & Syntax", count: 30 },
+            { name: "Functional Communication", count: 40 }
+        ]
+    },
+    {
+        title: "Musim 2: Arsitek Kata",
+        desc: "Struktur kalimat dan logika waktu (tenses).",
+        themes: [
+            { name: "The Time Continuum", count: 20 },
+            { name: "Syntactic Expansion", count: 30 },
+            { name: "Descriptive Capabilities", count: 30 },
+            { name: "Practical Application", count: 20 }
+        ]
+    },
+    {
+        title: "Musim 3: Konektor",
+        desc: "Kalimat kompleks dan sopan santun sosial.",
+        themes: [
+            { name: "Perfect Tenses", count: 30 },
+            { name: "Conjunctions & Linkers", count: 30 },
+            { name: "Modals of Nuance", count: 20 },
+            { name: "Social Dynamics", count: 20 }
+        ]
+    },
+    {
+        title: "Musim 4: The Analyst",
+        desc: "Analisa informasi, berpikir kritis, komunikasi profesional.",
+        themes: [
+            { name: "Passive Construction", count: 30 },
+            { name: "Complex Conditionals", count: 30 },
+            { name: "Reported Speech", count: 20 },
+            { name: "Professional Intro", count: 20 }
+        ]
+    },
+    {
+        title: "Musim 5: The Diplomat",
+        desc: "Soft skills, negosiasi, dan ekspresi idiomatik.",
+        themes: [
+            { name: "Corporate Communication", count: 30 },
+            { name: "Idioms & Phrasals", count: 30 },
+            { name: "Advanced Listening", count: 20 },
+            { name: "Persuasion", count: 20 }
+        ]
+    },
+    {
+        title: "Musim 6: The Academic",
+        desc: "Tingkat akademik: menulis esai, debat, dan analisa.",
+        themes: [
+            { name: "Advanced Grammar", count: 30 },
+            { name: "Writing Mastery", count: 30 },
+            { name: "Critical Reading", count: 20 },
+            { name: "Debate", count: 20 }
+        ]
+    },
+    {
+        title: "Musim 7: The Executive",
+        desc: "Bahasa untuk pemimpin: strategi bisnis dan kepemimpinan.",
+        themes: [
+            { name: "Leadership Language", count: 30 },
+            { name: "Strategy & Negotiation", count: 30 },
+            { name: "Crisis Management", count: 20 },
+            { name: "Executive Presence", count: 20 }
+        ]
+    },
+    {
+        title: "Musim 8: The Specialist",
+        desc: "Bahasa teknis: Kedokteran, Teknik, IT, dan Kreatif.",
+        themes: [
+            { name: "STEM English", count: 20 },
+            { name: "Medical & Health", count: 20 },
+            { name: "Tech & IT", count: 20 },
+            { name: "Creative Industry", count: 40 }
+        ]
+    },
+    {
+        title: "Musim 9: The Globalist",
+        desc: "Kecerdasan budaya global, humor, dan networking.",
+        themes: [
+            { name: "Cultural Nuance", count: 30 },
+            { name: "Literary Devices", count: 30 },
+            { name: "Networking Mastery", count: 20 },
+            { name: "Storytelling", count: 20 }
+        ]
+    },
+    {
+        title: "Musim 10: The Polymath",
+        desc: "Tahap penyempurnaan: filologi dan legacy.",
+        themes: [
+            { name: "Perfectionist Grammar", count: 30 },
+            { name: "Linguistics for Leaders", count: 30 },
+            { name: "Thought Leadership", count: 20 },
+            { name: "The Final Steps", count: 20 }
+        ]
+    }
+];
+
+// =====================================================
+// ARRAY EPISODE - SIAP DIISI JUDUL ASLI
+// =====================================================
+// Format: episodeTitles[nomorEpisode] = "Judul Episode";
+// Contoh: episodeTitles[1] = "Pengenalan: Cara Otak Mempelajari Bahasa";
+// Episode yang tidak ada di array akan tampil sebagai "Episode X"
+
+const episodeTitles = {
+    // Contoh beberapa judul (hapus dan ganti dengan judul asli)
+    1: "Pengenalan: Cara Otak Mempelajari Bahasa",
+    2: "Phonemes: Suara Dasar Bahasa Inggris",
+    3: "Vowel Sounds: Huruf Vokal Pendek",
+    100: "Milestone: Review 100 Episode Pertama",
+    500: "Mid-Curriculum: Dari Dasar ke Menengah",
+    1000: "Grand Finale: Dari Learner menjadi Master"
+    // ... tambah judul sesuai kebutuhan
+};
+// =====================================================
+
+// State
+let currentSeason = 0;
+let currentPage = 1;
+let perPage = 50;
+let searchQuery = '';
+let allEpisodes = [];
+
+// Build episode array untuk season tertentu
+function buildEpisodeArray(seasonIndex) {
+    const episodes = [];
+    let epNum = 1;
+    
+    for (let s = 0; s < seasons.length; s++) {
+        const season = seasons[s];
+        for (const theme of season.themes) {
+            for (let i = 0; i < theme.count; i++) {
+                const episode = {
+                    num: epNum,
+                    title: episodeTitles[epNum] || `Episode ${epNum}`,
+                    theme: theme.name,
+                    season: s
+                };
+                
+                if (s === seasonIndex) {
+                    episodes.push(episode);
+                }
+                epNum++;
+            }
+        }
+    }
+    
+    return episodes;
+}
+
+// Get theme for episode number
+function getEpisodeTheme(epNum) {
+    let current = 1;
+    for (const season of seasons) {
+        for (const theme of season.themes) {
+            if (epNum < current + theme.count) {
+                return theme.name;
+            }
+            current += theme.count;
+        }
+    }
+    return "";
+}
+
+// DOM Elements
+const navTabs = document.getElementById('navTabs');
+const seasonTitle = document.getElementById('seasonTitle');
+const seasonDesc = document.getElementById('seasonDesc');
+const episodeRange = document.getElementById('episodeRange');
+const episodeGrid = document.getElementById('episodeGrid');
+const pagination = document.getElementById('pagination');
+const pageInfo = document.getElementById('pageInfo');
+const searchInput = document.getElementById('searchInput');
+const perPageSelect = document.getElementById('perPageSelect');
+
+// Render Navigation Tabs
+seasons.forEach((s, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
+    btn.textContent = s.title.split(':')[0];
+    btn.onclick = () => selectSeason(i);
+    navTabs.appendChild(btn);
+});
+
+// Select Season
+function selectSeason(index) {
+    currentSeason = index;
+    currentPage = 1;
+    searchQuery = '';
+    searchInput.value = '';
+    
+    // Update tabs
+    document.querySelectorAll('.tab-btn').forEach((b, i) => {
+        b.classList.toggle('active', i === index);
+    });
+    
+    // Update header
+    const season = seasons[index];
+    seasonTitle.textContent = season.title;
+    seasonDesc.textContent = season.desc;
+    
+    // Build episodes
+    allEpisodes = buildEpisodeArray(index);
+    
+    // Calculate episode range
+    let startEp = 1;
+    for (let i = 0; i < index; i++) {
+        for (const t of seasons[i].themes) {
+            startEp += t.count;
+        }
+    }
+    const endEp = startEp + allEpisodes.length - 1;
+    episodeRange.textContent = `Episode ${startEp} - ${endEp}`;
+    
+    renderEpisodes();
+}
+
+// Render Episodes
+function renderEpisodes() {
+    const filtered = searchQuery
+        ? allEpisodes.filter(ep => 
+            ep.title.toLowerCase().includes(searchQuery) ||
+            ep.num.toString().includes(searchQuery) ||
+            ep.theme.toLowerCase().includes(searchQuery)
+          )
+        : allEpisodes;
+    
+    const totalPages = Math.ceil(filtered.length / perPage);
+    if (currentPage > totalPages) currentPage = Math.max(1, totalPages);
+    
+    const start = (currentPage - 1) * perPage;
+    const pageEpisodes = filtered.slice(start, start + perPage);
+    
+    // Render grid
+    if (pageEpisodes.length === 0) {
+        episodeGrid.innerHTML = `
+            <div class="empty-state" style="grid-column: 1/-1;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <p>Tidak ada episode yang ditemukan.</p>
+            </div>
+        `;
+    } else {
+        episodeGrid.innerHTML = pageEpisodes.map(ep => `
+            <a href="${LINK_PREFIX}${ep.num}${LINK_SUFFIX}" class="ep-card">
+                <div class="ep-num">${ep.num}</div>
+                <div class="ep-info">
+                    <div class="ep-title">${ep.title}</div>
+                    <div class="ep-theme">${ep.theme}</div>
+                </div>
+                <div class="ep-arrow">→</div>
+            </a>
+        `).join('');
+    }
+    
+    // Render pagination
+    renderPagination(totalPages, filtered.length);
+    
+    // Page info
+    if (filtered.length > 0) {
+        pageInfo.textContent = `Menampilkan ${start + 1}-${Math.min(start + perPage, filtered.length)} dari ${filtered.length} episode`;
+    } else {
+        pageInfo.textContent = '';
+    }
+}
+
+// Render Pagination
+function renderPagination(totalPages, totalItems) {
+    if (totalPages <= 1) {
+        pagination.innerHTML = '';
+        return;
+    }
+    
+    let html = '';
+    
+    // Prev button
+    html += `<button class="page-btn" onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>←</button>`;
+    
+    // Page numbers
+    const maxVisible = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisible - 1);
+    
+    if (endPage - startPage < maxVisible - 1) {
+        startPage = Math.max(1, endPage - maxVisible + 1);
+    }
+    
+    if (startPage > 1) {
+        html += `<button class="page-btn" onclick="goToPage(1)">1</button>`;
+        if (startPage > 2) html += `<span class="page-dots">...</span>`;
+    }
+    
+    for (let i = startPage; i <= endPage; i++) {
+        html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">${i}</button>`;
+    }
+    
+    if (endPage < totalPages) {
+        if (endPage < totalPages - 1) html += `<span class="page-dots">...</span>`;
+        html += `<button class="page-btn" onclick="goToPage(${totalPages})">${totalPages}</button>`;
+    }
+    
+    // Next button
+    html += `<button class="page-btn" onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>→</button>`;
+    
+    pagination.innerHTML = html;
+}
+
+// Go to page
+function goToPage(page) {
+    currentPage = page;
+    renderEpisodes();
+    document.getElementById('seasonHeader').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Search handler
+let searchTimeout;
+searchInput.addEventListener('input', (e) => {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        currentPage = 1;
+        renderEpisodes();
+    }, 300);
+});
+
+// Per page handler
+perPageSelect.addEventListener('change', (e) => {
+    perPage = parseInt(e.target.value);
+    currentPage = 1;
+    renderEpisodes();
+});
+
+// Initialize
+selectSeason(0);
+</script>
+
+</body>
+</html>
