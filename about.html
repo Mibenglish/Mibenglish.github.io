@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tentang mibenglish - Platform pembelajaran bahasa Inggris yang menyenangkan dan mudah dipahami untuk semua kalangan.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mibenglish.com/about">
+    
+    <meta property="og:title" content="About Us - mibenglish">
+    <meta property="og:description" content="Tentang mibenglish - Platform pembelajaran bahasa Inggris yang menyenangkan.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mibenglish.com/about">
+    <meta property="og:site_name" content="mibenglish">
+    
+    <title>About Us - mibenglish</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Us",
+        "description": "Tentang mibenglish - Platform pembelajaran bahasa Inggris yang menyenangkan dan mudah dipahami.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "mibenglish",
+            "url": "https://mibenglish.com",
+            "logo": "https://mibenglish.com/logo.png",
+            "sameAs": [
+                "https://youtube.com/@mibenglish",
+                "https://tiktok.com/@mibenglish",
+                "https://instagram.com/mibenglish",
+                "https://facebook.com/mibenglish"
+            ]
+        },
+        "author": {
+            "@type": "Person",
+            "name": "bangmik"
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --bg: #0a1f0d;
+            --bg-light: #122615;
+            --bg-card: rgba(18, 38, 21, 0.9);
+            --fg: #e8f5e9;
+            --fg-muted: #a5d6a7;
+            --accent: #4caf50;
+            --accent-light: #81c784;
+            --accent-dark: #2e7d32;
+            --border: rgba(76, 175, 80, 0.25);
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        
+        h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.3; }
+        
+        .bg-pattern {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse 100% 60% at 10% 0%, rgba(46, 125, 50, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse 80% 50% at 90% 100%, rgba(76, 175, 80, 0.08) 0%, transparent 50%),
+                linear-gradient(180deg, var(--bg) 0%, var(--bg-light) 100%);
+        }
+        
+        .nav-container {
+            background: rgba(10, 31, 13, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .nav-link {
+            color: var(--fg-muted);
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-light);
+            background: rgba(76, 175, 80, 0.1);
+        }
+        
+        .nav-link:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        .content-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+        }
+        
+        .section-title {
+            color: var(--accent-light);
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .policy-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .policy-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+        }
+        
+        .policy-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+        
+        .highlight-box {
+            background: rgba(76, 175, 80, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 24px 16px;
+            background: var(--bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-light);
+            font-family: 'Fraunces', serif;
+        }
+        
+        .stat-label {
+            color: var(--fg-muted);
+            font-size: 14px;
+            margin-top: 4px;
+        }
+        
+        .value-card {
+            padding: 24px;
+            background: var(--bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            height: 100%;
+        }
+        
+        .value-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 32px;
+            padding-bottom: 32px;
+            border-left: 2px solid var(--border);
+        }
+        
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+            padding-bottom: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 3px solid var(--bg);
+        }
+        
+        .timeline-year {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(76, 175, 80, 0.15);
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-light);
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: var(--accent-light);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        
+        .footer-social {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--fg-muted);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .footer-social:hover {
+            background: rgba(76, 175, 80, 0.15);
+            border-color: var(--accent);
+            color: var(--fg);
+            text-decoration: none;
+        }
+        
+        .footer-social:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(76, 175, 80, 0.15);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--accent-light);
+            font-weight: 500;
+        }
+        
+        @media (max-width: 640px) {
+            body { font-size: 15px; }
+            .section-title { font-size: 1.5rem; }
+            .stat-number { font-size: 2rem; }
+        }
+        
+        @media print {
+            .nav-container, footer { display: none; }
+            body { background: white; color: black; }
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            * { transition: none !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    
+    <header class="nav-container sticky top-0 z-50">
+        <nav class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between flex-wrap gap-4">
+            <a href="https://mibenglish.com" class="flex items-center gap-3" aria-label="Kembali ke beranda mibenglish">
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <span class="text-xl font-bold" style="font-family: 'Fraunces', serif; color: var(--accent-light);">mibenglish</span>
+            </a>
+            
+            <div class="flex items-center gap-2 text-sm">
+                <a href="https://mibenglish.com" class="nav-link">Beranda</a>
+                <a href="https://mibenglish.com/about" class="nav-link" style="background: rgba(76, 175, 80, 0.15); color: var(--accent-light);">About</a>
+                <a href="https://mibenglish.com/contact" class="nav-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        <article>
+            
+            <!-- Hero Section -->
+            <header class="text-center mb-12">
+                <span class="hero-badge mb-4 inline-block">Tentang Kami</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold mb-6" style="color: var(--fg);">
+                    Belajar Bahasa Inggris<br>
+                    <span style="color: var(--accent-light);">dengan Cara Menyenangkan</span>
+                </h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto" style="color: var(--fg-muted);">
+                    mibenglish adalah platform pembelajaran bahasa Inggris yang dirancang untuk semua kalangan, dari pemula hingga tingkat menengah.
+                </p>
+            </header>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                <div class="stat-box">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Materi Pembelajaran</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Pengguna Aktif</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Konten Gratis</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Akses Tanpa Batas</div>
+                </div>
+            </div>
+            
+            <!-- Mission Section -->
+            <section class="content-card p-6 md:p-10 mb-8">
+                <h2 class="section-title">Misi Kami</h2>
+                <p class="text-lg mb-6">
+                    Kami percaya bahwa <strong style="color: var(--accent-light);">setiap orang berhak mendapatkan pendidikan berkualitas</strong>, termasuk dalam mempelajari bahasa Inggris. mibenglish hadir untuk menjembatani kesenjangan antara kebutuhan belajar dan ketersediaan sumber daya yang mudah diakses.
+                </p>
+                <div class="highlight-box">
+                    <p style="margin: 0; font-size: 18px;">
+                        <strong>Misi utama kami:</strong> Menyediakan materi pembelajaran bahasa Inggris yang berkualitas, mudah dipahami, dan dapat diakses oleh siapa saja, kapan saja, tanpa hambatan ekonomi.
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Story Section -->
+            <section class="content-card p-6 md:p-10 mb-8">
+                <h2 class="section-title">Cerita Kami</h2>
+                <p class="mb-4">
+                    mibenglish didirikan oleh <strong>bangmik</strong> dengan satu tujuan sederhana: membantu orang Indonesia belajar bahasa Inggris tanpa harus merasa kewalahan atau takut.
+                </p>
+                <p class="mb-4">
+                    Berawal dari pengalaman pribadi bahwa banyak materi bahasa Inggris yang tersedia terlalu rumit atau tidak sesuai dengan kebutuhan pembelajar Indonesia, kami memutuskan untuk membuat platform yang berbeda.
+                </p>
+                <p>
+                    Setiap materi di mibenglish dirancang dengan pendekatan yang <strong style="color: var(--accent-light);">sederhana, praktis, dan langsung dapat diterapkan</strong> dalam kehidupan sehari-hari.
+                </p>
+            </section>
+            
+            <!-- Timeline -->
+            <section class="content-card p-6 md:p-10 mb-8">
+                <h2 class="section-title">Perjalanan Kami</h2>
+                
+                <div class="mt-8">
+                    <div class="timeline-item">
+                        <span class="timeline-year">2023</span>
+                        <h3 class="font-bold text-lg mb-2">Awal Mula</h3>
+                        <p style="color: var(--fg-muted);">mibenglish diluncurkan sebagai blog sederhana dengan beberapa materi dasar bahasa Inggris.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <span class="timeline-year">2023</span>
+                        <h3 class="font-bold text-lg mb-2">Pengembangan Konten</h3>
+                        <p style="color: var(--fg-muted);">Mulai memproduksi konten video dan membuka akun media sosial untuk menjangkau lebih banyak pembelajar.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <span class="timeline-year">2024</span>
+                        <h3 class="font-bold text-lg mb-2">Pertumbuhan Pesat</h3>
+                        <p style="color: var(--fg-muted);">Mencapai milestone 10.000 pengguna aktif dan terus berkembang dengan materi yang lebih beragam.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <span class="timeline-year">2024</span>
+                        <h3 class="font-bold text-lg mb-2">Inovasi Berkelanjutan</h3>
+                        <p style="color: var(--fg-muted);">Meluncurkan fitur kuis interaktif dan sistem pembelajaran yang lebih terstruktur.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Values Section -->
+            <section class="content-card p-6 md:p-10 mb-8">
+                <h2 class="section-title">Nilai-Nilai Kami</h2>
+                <p class="mb-6">Kami berkomitmen untuk menjalankan platform ini dengan nilai-nilai berikut:</p>
+                
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Aksesibilitas</h3>
+                        <p style="color: var(--fg-muted);">Pendidikan harus dapat diakses oleh semua orang, tanpa hambatan ekonomi atau geografis.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                                <line x1="15" y1="9" x2="15.01" y2="9"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Kemudahan</h3>
+                        <p style="color: var(--fg-muted);">Materi disajikan dengan bahasa yang sederhana dan mudah dipahami oleh siapa saja.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Kualitas</h3>
+                        <p style="color: var(--fg-muted);">Kami berkomitmen menyajikan konten yang akurat, relevan, dan terus diperbarui.</p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Komunitas</h3>
+                        <p style="color: var(--fg-muted);">Membangun komunitas pembelajar yang saling mendukung dan berbagi pengetahuan.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- What We Offer -->
+            <section class="content-card p-6 md:p-10 mb-8">
+                <h2 class="section-title">Apa yang Kami Tawarkan</h2>
+                
+                <ul class="policy-list">
+                    <li><strong>Materi Terstruktur:</strong> Pelajaran disusun dari tingkat dasar hingga menengah dengan progression yang jelas.</li>
+                    <li><strong>Kosakata Praktis:</strong> Fokus pada kosakata yang sering digunakan dalam kehidupan sehari-hari.</li>
+                    <li><strong>Tata Bahasa Sederhana:</strong> Penjelasan aturan bahasa dengan cara yang mudah dipahami.</li>
+                    <li><strong>Kuis Interaktif:</strong> Uji pemahaman dengan kuis yang menyenangkan dan informatif.</li>
+                    <li><strong>Konten Video:</strong> Materi dalam format video yang dapat diakses melalui YouTube.</li>
+                    <li><strong>Tips & Trik:</strong> Cara cepat menguasai bahasa Inggris dengan efektif.</li>
+                </ul>
+            </section>
+            
+            <!-- Our Approach -->
+            <section class="content-card p-6 md:p-10 mb-8">
+                <h2 class="section-title">Pendekatan Kami</h2>
+                
+                <div class="highlight-box">
+                    <p style="margin: 0; font-size: 18px;">
+                        Kami menggunakan pendekatan <strong style="color: var(--accent-light);">"Learning by Doing"</strong> di mana pembelajar didorong untuk langsung praktik menggunakan bahasa Inggris dalam konteks nyata.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-4 mt-6">
+                    <div class="stat-box">
+                        <h3 class="font-bold mb-2" style="color: var(--accent-light);">Dengar</h3>
+                        <p style="color: var(--fg-muted); font-size: 14px;">Pelajari pengucapan yang benar</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3 class="font-bold mb-2" style="color: var(--accent-light);">Pahami</h3>
+                        <p style="color: var(--fg-muted); font-size: 14px;">Kuasai makna dan konteks</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3 class="font-bold mb-2" style="color: var(--accent-light);">Praktik</h3>
+                        <p style="color: var(--fg-muted); font-size: 14px;">Gunakan dalam percakapan nyata</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Founder Section -->
+            <section class="content-card p-6 md:p-10 mb-8">
+                <h2 class="section-title">Pendiri</h2>
+                
+                <div class="flex flex-col md:flex-row gap-6 items-center md:items-start">
+                    <div class="w-32 h-32 rounded-2xl flex-shrink-0 flex items-center justify-center" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">bangmik</h3>
+                        <p class="mb-4" style="color: var(--accent-light);">Founder & Content Creator</p>
+                        <p class="mb-4">
+                            Seorang penggiat pendidikan dengan passion dalam membuat pembelajaran bahasa Inggris menjadi lebih mudah dan menyenangkan untuk semua orang Indonesia.
+                        </p>
+                        <p style="color: var(--fg-muted);">
+                            "Saya percaya bahwa bahasa tidak boleh menjadi penghalang untuk meraih kesuksesan. mibenglish adalah cara saya untuk membantu lebih banyak orang menguasai bahasa Inggris."
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CTA Section -->
+            <section class="content-card p-6 md:p-10 mb-8 text-center">
+                <h2 class="section-title text-center">Bergabunglah dengan Kami</h2>
+                <p class="mb-6 max-w-2xl mx-auto">
+                    Mulai perjalanan belajar bahasa Inggris Anda bersama mibenglish. Akses semua materi gratis dan bergabung dengan komunitas pembelajar kami.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://mibenglish.com/materi" class="inline-block px-8 py-4 font-bold rounded-xl" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); color: white;">
+                        Mulai Belajar
+                    </a>
+                    <a href="https://mibenglish.com/contact" class="inline-block px-8 py-4 font-bold rounded-xl" style="background: var(--bg); border: 2px solid var(--border); color: var(--fg);">
+                        Hubungi Kami
+                    </a>
+                </div>
+            </section>
+            
+        </article>
+    </main>
+    
+    <!-- Footer -->
+    <footer style="background: var(--bg-light); border-top: 1px solid var(--border);">
+        <div class="max-w-5xl mx-auto px-4 py-12">
+            
+            <!-- Brand -->
+            <div class="text-center mb-8">
+                <p class="text-3xl font-bold mb-2" style="font-family: 'Fraunces', serif; color: var(--accent-light);">mibenglish</p>
+                <p style="color: var(--fg-muted);">Belajar Bahasa Inggris dengan Cara Menyenangkan</p>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener" class="footer-social" aria-label="Ikuti kami di YouTube">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    <span>YouTube</span>
+                </a>
+                
+                <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener" class="footer-social" aria-label="Ikuti kami di TikTok">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    </svg>
+                    <span>TikTok</span>
+                </a>
+                
+                <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener" class="footer-social" aria-label="Ikuti kami di Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                    </svg>
+                    <span>Instagram</span>
+                </a>
+                
+                <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener" class="footer-social" aria-label="Ikuti kami di Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    <span>Facebook</span>
+                </a>
+            </div>
+            
+            <p class="text-center text-sm mb-6" style="color: var(--fg-muted);">
+                Ikuti kami di YouTube, TikTok, Instagram, dan Facebook untuk update materi terbaru.
+            </p>
+            
+            <!-- Quick Links -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8 text-sm">
+                <a href="https://mibenglish.com" class="nav-link">Beranda</a>
+                <a href="https://mibenglish.com/privacy-policy" class="nav-link">Privacy Policy</a>
+                <a href="https://mibenglish.com/terms" class="nav-link">Terms of Service</a>
+                <a href="https://mibenglish.com/disclaimer" class="nav-link">Disclaimer</a>
+                <a href="https://mibenglish.com/contact" class="nav-link">Contact</a>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="text-center pt-8" style="border-top: 1px solid var(--border);">
+                <p style="color: var(--fg-muted);">
+                    &copy; 2024 mibenglish. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
