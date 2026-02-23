@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pelajari Basic Logic & Existence dalam Bahasa Inggris dengan metode imajinatif. Modul 2 untuk pemula yang ingin memahami konsep keberadaan.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mibenglish.com/ep12-basic-logic-existence-module2">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ep 12. Basic Logic & Existence: Module 2 | mibenglish">
+    <meta property="og:description" content="Pelajari Basic Logic & Existence dalam Bahasa Inggris dengan metode imajinatif untuk pemula.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mibenglish.com/ep12-basic-logic-existence-module2">
+    <meta property="og:site_name" content="mibenglish">
+    
+    <title>Ep 12. Basic Logic & Existence: Module 2 | mibenglish</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Ep 12. Basic Logic & Existence: Module 2",
+        "description": "Pelajari Basic Logic & Existence dalam Bahasa Inggris dengan metode imajinatif. Modul 2 untuk pemula yang ingin memahami konsep keberadaan.",
+        "author": {
+            "@type": "Person",
+            "name": "bangmik"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "mibenglish",
+            "url": "https://mibenglish.com"
+        },
+        "datePublished": "2025-01-15",
+        "dateModified": "2025-01-15",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://mibenglish.com/ep12-basic-logic-existence-module2"
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --bg-deep: #0a1f14;
+            --bg-main: #0f2a1c;
+            --bg-card: #162f22;
+            --fg: #e8f5e9;
+            --fg-muted: #a8d5ba;
+            --accent: #4ade80;
+            --accent-glow: #22c55e;
+            --border: #2d5a3f;
+            --highlight: #86efac;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-deep);
+            color: var(--fg);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        /* Background Canvas */
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        /* Floating Particles Container */
+        .particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+            opacity: 0;
+            animation: floatUp 15s infinite ease-out;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Content wrapper */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(180deg, var(--bg-deep) 0%, transparent 100%);
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled {
+            background: rgba(10, 31, 20, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .brand {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--fg-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--accent);
+        }
+        
+        /* Header */
+        header {
+            padding: 8rem 1.5rem 4rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .episode-badge {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            animation: fadeSlideDown 0.8s ease forwards;
+            opacity: 0;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            color: var(--fg);
+            margin-bottom: 1rem;
+            animation: fadeSlideDown 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+        
+        .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: var(--fg-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            animation: fadeSlideDown 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+        
+        .meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+            color: var(--fg-muted);
+            animation: fadeSlideDown 0.8s ease 0.6s forwards;
+            opacity: 0;
+        }
+        
+        .meta-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        @keyframes fadeSlideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Main Content */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+        
+        article {
+            background: var(--bg-card);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        section {
+            padding: 2.5rem;
+            border-bottom: 1px solid var(--border);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+        
+        h2 {
+            font-size: 1.75rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        h2 .icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(74, 222, 128, 0.15);
+            border-radius: 8px;
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            color: var(--highlight);
+            margin: 2rem 0 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.25rem;
+            color: var(--fg);
+        }
+        
+        .highlight-box {
+            background: rgba(74, 222, 128, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+        
+        .term {
+            display: inline-block;
+            background: rgba(134, 239, 172, 0.15);
+            color: var(--highlight);
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .example-box {
+            background: var(--bg-main);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border);
+        }
+        
+        .example-box .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+        
+        .example-box code {
+            display: block;
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.1rem;
+            color: var(--fg);
+            font-style: italic;
+        }
+        
+        .example-box .translation {
+            color: var(--fg-muted);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Comparison Table */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--bg-main);
+            border-radius: 12px;
+            padding: 1.25rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        
+        .comparison-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .comparison-card .title {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .comparison-card .content {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.15rem;
+        }
+        
+        /* Progress Indicator */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--accent);
+            z-index: 200;
+            transition: width 0.1s ease;
+        }
+        
+        /* Ad Placeholder */
+        .ad-slot {
+            background: linear-gradient(135deg, rgba(74, 222, 128, 0.05) 0%, rgba(74, 222, 128, 0.02) 100%);
+            border: 1px dashed var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            color: var(--fg-muted);
+            font-size: 0.85rem;
+        }
+        
+        /* Game Section */
+        .game-section {
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(22, 47, 34, 0.8) 100%);
+            border-radius: 20px;
+            border: 1px solid var(--accent);
+            padding: 2.5rem;
+            margin-top: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .game-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(74, 222, 128, 0.05) 0%, transparent 50%);
+            animation: rotateGlow 20s linear infinite;
+        }
+        
+        @keyframes rotateGlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .game-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .game-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .game-header h2 {
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .game-score {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .score-item {
+            text-align: center;
+        }
+        
+        .score-item .value {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .score-item .label {
+            font-size: 0.75rem;
+            color: var(--fg-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .quiz-container {
+            background: var(--bg-main);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+        }
+        
+        .question-text {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--fg);
+        }
+        
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        @media (max-width: 500px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .option-btn {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            color: var(--fg);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            font-family: 'DM Sans', sans-serif;
+        }
+        
+        .option-btn:hover:not(:disabled) {
+            border-color: var(--accent);
+            background: rgba(74, 222, 128, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .option-btn:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        .option-btn.correct {
+            border-color: var(--accent);
+            background: rgba(74, 222, 128, 0.2);
+            color: var(--highlight);
+        }
+        
+        .option-btn.wrong {
+            border-color: #ef4444;
+            background: rgba(239, 68, 68, 0.1);
+            color: #fca5a5;
+        }
+        
+        .option-btn:disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        
+        .feedback-text {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+        
+        .feedback-text.correct {
+            background: rgba(74, 222, 128, 0.1);
+            color: var(--accent);
+        }
+        
+        .feedback-text.wrong {
+            background: rgba(239, 68, 68, 0.1);
+            color: #fca5a5;
+        }
+        
+        .next-btn {
+            display: block;
+            margin: 1.5rem auto 0;
+            padding: 0.875rem 2rem;
+            background: var(--accent);
+            color: var(--bg-deep);
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+        }
+        
+        .next-btn:hover {
+            background: var(--highlight);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(74, 222, 128, 0.3);
+        }
+        
+        .game-complete {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .game-complete h3 {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .final-score {
+            font-family: 'Crimson Pro', serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin: 1rem 0;
+        }
+        
+        .restart-btn {
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'DM Sans', sans-serif;
+        }
+        
+        .restart-btn:hover {
+            background: var(--accent);
+            color: var(--bg-deep);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--bg-main);
+            border-top: 1px solid var(--border);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .footer-brand {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+        
+        .footer-tagline {
+            color: var(--fg-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--fg-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--fg-muted);
+            font-size: 0.8rem;
+        }
+        
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .particle {
+                display: none;
+            }
+        }
+        
+        /* Mobile Adjustments */
+        @media (max-width: 640px) {
+            section {
+                padding: 1.75rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
+            }
+            
+            .game-section {
+                padding: 1.5rem;
+            }
+            
+            .quiz-container {
+                padding: 1.25rem;
+            }
+            
+            .meta-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Reading Progress -->
+    <div class="reading-progress" id="progress" style="width: 0%"></div>
+    
+    <!-- Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Particles -->
+    <div class="particles-container" id="particles"></div>
+    
+    <div class="content-wrapper">
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="nav-inner">
+                <a href="https://mibenglish.com" class="brand">mibenglish</a>
+                <a href="https://mibenglish.com" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Kembali ke Beranda
+                </a>
+            </div>
+        </nav>
+        
+        <!-- Header -->
+        <header>
+            <span class="episode-badge">Episode 12 - Module 2</span>
+            <h1>Basic Logic & Existence</h1>
+            <p class="subtitle">Memahami konsep keberadaan dan logika dasar dalam Bahasa Inggris melalui pendekatan imajinatif</p>
+            <div class="meta-info">
+                <span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                    </svg>
+                    15 menit baca
+                </span>
+                <span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    oleh bangmik
+                </span>
+                <span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                    15 Januari 2025
+                </span>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main>
+            <article>
+                <!-- Section 1: Introduction -->
+                <section id="intro">
+                    <h2>
+                        <span class="icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+                            </svg>
+                        </span>
+                        Mengapa Kita Belajar Ini?
+                    </h2>
+                    
+                    <p>Pernahkah kamu berpikir, bagaimana cara menjelaskan bahwa <em>sesuatu itu ada</em>? Atau bagaimana mengatakan bahwa <em>seseorang itu tidak ada</em>? Dalam Bahasa Inggris, konsep ini disebut <span class="term">Existence</span> atau keberadaan.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Pikirkan ini:</strong> Kamu berdiri di tengah hutan. Di sekitarmu ada pohon, ada burung, ada udara. Tapi bagaimana kamu mengatakan semua itu dalam Bahasa Inggris? Itulah yang akan kita pelajari.</p>
+                    </div>
+                    
+                    <p>Modul ini dirancang untuk membantumu memahami logika dasar di balik kalimat-kalimat sederhana tentang keberadaan. Kita akan mulai dari akar masalah: <strong>mengapa ini sering membingungkan?</strong></p>
+                </section>
+                
+                <!-- Ad Slot 1 -->
+                <div class="ad-slot" style="display:none">
+                    <p>Slot Iklan - Google AdSense</p>
+                    <p style="font-size: 0.75rem; color: var(--fg-muted);">Placeholder untuk iklan responsif</p>
+                </div>
+                
+                <!-- Section 2: Root Problem -->
+                <section id="root">
+                    <h2>
+                        <span class="icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </span>
+                        Akar Masalah: Terjemahan Harfiah
+                    </h2>
+                    
+                    <p>Banyak pembelajar pemula membuat kesalahan karena menerjemahkan kata per kata dari Bahasa Indonesia. Lihat contoh berikut:</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card">
+                            <div class="title">Salah (Terjemahan Harfiah)</div>
+                            <div class="content">"There have a tree"</div>
+                        </div>
+                        <div class="comparison-card">
+                            <div class="title">Benar</div>
+                            <div class="content">"There is a tree"</div>
+                        </div>
+                    </div>
+                    
+                    <h3>Mengapa Terjadi Kesalahan?</h3>
+                    
+                    <p>Dalam Bahasa Indonesia, kita mengatakan <em>"Di sana ada pohon"</em>. Otak kita mencoba menerjemahkan "ada" menjadi "have" karena "ada" sering diasosiasikan dengan kepemilikan.</p>
+                    
+                    <div class="example-box">
+                        <div class="label">Kunci Pemahaman</div>
+                        <code>"There is" = "Ada" (menyatakan keberadaan)</code>
+                        <p class="translation">Bukan kepemilikan, bukan kepunyaan, tapi keberadaan.</p>
+                    </div>
+                    
+                    <p>Inilah mengapa kita perlu memahami <span class="term">Basic Logic</span> — logika dasar tentang bagaimana Bahasa Inggris melihat dunia.</p>
+                </section>
+                
+                <!-- Section 3: There Is / There Are -->
+                <section id="there-is">
+                    <h2>
+                        <span class="icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </span>
+                        Konsep "There Is" dan "There Are"
+                    </h2>
+                    
+                    <p>Mari kita bangun pemahaman dengan imajinasi. Bayangkan kamu adalah seorang pemandu wisata yang sedang menunjukkan pemandangan kepada turis.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Aturan Emas:</strong> <span class="term">There is</span> untuk satu benda. <span class="term">There are</span> untuk banyak benda.</p>
+                    </div>
+                    
+                    <h3>Contoh dengan "There Is"</h3>
+                    
+                    <div class="example-box">
+                        <div class="label">Singular (Tunggal)</div>
+                        <code>There is a bird on the branch.</code>
+                        <p class="translation">Ada seekor burung di dahan.</p>
+                    </div>
+                    
+                    <div class="example-box">
+                        <div class="label">Singular (Tunggal)</div>
+                        <code>There is water in the glass.</code>
+                        <p class="translation">Ada air di dalam gelas.</p>
+                    </div>
+                    
+                    <h3>Contoh dengan "There Are"</h3>
+                    
+                    <div class="example-box">
+                        <div class="label">Plural (Jamak)</div>
+                        <code>There are many stars in the sky.</code>
+                        <p class="translation">Ada banyak bintang di langit.</p>
+                    </div>
+                    
+                    <div class="example-box">
+                        <div class="label">Plural (Jamak)</div>
+                        <code>There are three books on the table.</code>
+                        <p class="translation">Ada tiga buku di atas meja.</p>
+                    </div>
+                </section>
+                
+                <!-- Ad Slot 2 -->
+                <div class="ad-slot" style="display:none">
+                    <p>Slot Iklan - Google AdSense</p>
+                    <p style="font-size: 0.75rem; color: var(--fg-muted);">Placeholder untuk iklan responsif</p>
+                </div>
+                
+                <!-- Section 4: Negative Form -->
+                <section id="negative">
+                    <h2>
+                        <span class="icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
+                            </svg>
+                        </span>
+                        Menyatakan Ketidakberadaan
+                    </h2>
+                    
+                    <p>Sekarang, bagaimana jika kita ingin mengatakan bahwa sesuatu <em>tidak ada</em>? Logikanya sederhana: tambahkan "not" setelah "is" atau "are".</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card">
+                            <div class="title">Positif</div>
+                            <div class="content">There is a solution.</div>
+                        </div>
+                        <div class="comparison-card">
+                            <div class="title">Negatif</div>
+                            <div class="content">There is not a solution.</div>
+                        </div>
+                    </div>
+                    
+                    <h3>Bentuk Singkat (Contraction)</h3>
+                    
+                    <p>Dalam percakapan sehari-hari, penutur asli sering menggunakan bentuk singkat:</p>
+                    
+                    <div class="example-box">
+                        <div class="label">Contraction</div>
+                        <code>There isn't any milk in the fridge.</code>
+                        <p class="translation">Tidak ada susu di kulkas.</p>
+                    </div>
+                    
+                    <div class="example-box">
+                        <div class="label">Contraction</div>
+                        <code>There aren't enough chairs.</code>
+                        <p class="translation">Tidak ada cukup kursi.</p>
+                    </div>
+                </section>
+                
+                <!-- Section 5: Questions -->
+                <section id="questions">
+                    <h2>
+                        <span class="icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><point cx="12" cy="17"/>
+                            </svg>
+                        </span>
+                        Mengajukan Pertanyaan
+                    </h2>
+                    
+                    <p>Logika pertanyaan dalam Bahasa Inggris membalik urutan kata. Untuk kalimat keberadaan, kita memindahkan "there" ke belakang "is" atau "are".</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Formula:</strong> Is/Are + there + subjek?</p>
+                    </div>
+                    
+                    <div class="example-box">
+                        <div class="label">Pertanyaan</div>
+                        <code>Is there a bathroom here?</code>
+                        <p class="translation">Apakah ada kamar mandi di sini?</p>
+                    </div>
+                    
+                    <div class="example-box">
+                        <div class="label">Pertanyaan</div>
+                        <code>Are there any questions?</code>
+                        <p class="translation">Apakah ada pertanyaan?</p>
+                    </div>
+                    
+                    <h3>Jawaban Singkat</h3>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card">
+                            <div class="title">Ya</div>
+                            <div class="content">Yes, there is. / Yes, there are.</div>
+                        </div>
+                        <div class="comparison-card">
+                            <div class="title">Tidak</div>
+                            <div class="content">No, there isn't. / No, there aren't.</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Ad Slot 3 -->
+                <div class="ad-slot" style="display:none">
+                    <p>Slot Iklan - Google AdSense</p>
+                    <p style="font-size: 0.75rem; color: var(--fg-muted);">Placeholder untuk iklan responsif</p>
+                </div>
+                
+                <!-- Section 6: Existence Verbs -->
+                <section id="existence-verbs">
+                    <h2>
+                        <span class="icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                        </span>
+                        Kata Kerja Keberadaan Lainnya
+                    </h2>
+                    
+                    <p>Selain "there is/are", ada kata kerja lain yang menyatakan keberadaan. Mari kita eksplorasi:</p>
+                    
+                    <h3>Exist</h3>
+                    <div class="example-box">
+                        <div class="label">Formal</div>
+                        <code>Life exists on Earth.</code>
+                        <p class="translation">Kehidupan ada di Bumi.</p>
+                    </div>
+                    
+                    <h3>Appear / Seem</h3>
+                    <div class="example-box">
+                        <div class="label">Kemunculan</div>
+                        <code>A solution appears impossible.</code>
+                        <p class="translation">Solusi tampak mustahil.</p>
+                    </div>
+                    
+                    <h3>Remain / Stay</h3>
+                    <div class="example-box">
+                        <div class="label">Keberlangsungan</div>
+                        <code>Only three students remain.</code>
+                        <p class="translation">Hanya tersisa tiga siswa.</p>
+                    </div>
+                </section>
+            </article>
+            
+            <!-- Interactive Game Section -->
+            <div class="game-section" id="game-section">
+                <div class="game-content">
+                    <div class="game-header">
+                        <h2>
+                            <span class="icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/>
+                                </svg>
+                            </span>
+                            Quest: Uji Pemahaman
+                        </h2>
+                        <p style="color: var(--fg-muted);">Jawab pertanyaan berikut untuk menguji pemahamanmu</p>
+                    </div>
+                    
+                    <div class="game-score">
+                        <div class="score-item">
+                            <div class="value" id="current-score">0</div>
+                            <div class="label">Skor</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="value" id="current-question">1</div>
+                            <div class="label">dari 5</div>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-container" id="quiz-container">
+                        <!-- Quiz content will be rendered here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ad Slot 4 -->
+            <div class="ad-slot" style="display:none">
+                <p>Slot Iklan - Google AdSense</p>
+                <p style="font-size: 0.75rem; color: var(--fg-muted);">Placeholder untuk iklan responsif</p>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="footer-brand">mibenglish</div>
+            <p class="footer-tagline">Belajar Bahasa Inggris dengan Cara yang Menyenangkan</p>
+            <div class="footer-links">
+                <a href="https://mibenglish.com">Beranda</a>
+                <a href="https://mibenglish.com/episodes">Semua Episode</a>
+                <a href="https://mibenglish.com/about">Tentang Kami</a>
+                <a href="https://mibenglish.com/contact">Kontak</a>
+            </div>
+            <p class="copyright">2025 mibenglish. Dibuat oleh bangmik. Seluruh hak cipta dilindungi.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Initialize variables first
+        const quizData = [
+            {
+                question: 'Bagaimana cara yang benar untuk mengatakan "Ada kucing di taman"?',
+                options: [
+                    'There have a cat in the garden',
+                    'There is a cat in the garden',
+                    'There are a cat in the garden',
+                    'A cat is there in garden'
+                ],
+                correct: 1,
+                explanation: '"There is" digunakan untuk satu benda (singular). "Cat" adalah benda tunggal.'
+            },
+            {
+                question: 'Pilih kalimat yang BENAR untuk menyatakan "Ada banyak bunga di lapangan"',
+                options: [
+                    'There is many flowers in the field',
+                    'There have many flowers in the field',
+                    'There are many flowers in the field',
+                    'Many flowers is there in the field'
+                ],
+                correct: 2,
+                explanation: '"There are" digunakan untuk benda jamak (plural). "Flowers" adalah benda jamak.'
+            },
+            {
+                question: 'Bagaimana bentuk negatif dari "There is a problem"?',
+                options: [
+                    'There no is a problem',
+                    'There is no a problem',
+                    'There isn\'t a problem',
+                    'There not is a problem'
+                ],
+                correct: 2,
+                explanation: 'Untuk membuat negatif, tambahkan "not" setelah "is". Bentuk singkatnya adalah "isn\'t".'
+            },
+            {
+                question: 'Pertanyaan yang benar untuk "Apakah ada restoran di dekat sini?"',
+                options: [
+                    'There is a restaurant near here?',
+                    'Is there a restaurant near here?',
+                    'Does there a restaurant near here?',
+                    'Are there a restaurant near here?'
+                ],
+                correct: 1,
+                explanation: 'Untuk bertanya, balik urutan: "Is there" + subjek. "Restaurant" adalah singular, jadi gunakan "Is".'
+            },
+            {
+                question: 'Kalimat mana yang menggunakan "there are" dengan benar?',
+                options: [
+                    'There are a book on the table',
+                    'There are water in the glass',
+                    'There are three birds on the tree',
+                    'There are a student in the class'
+                ],
+                correct: 2,
+                explanation: '"There are" harus diikuti oleh benda jamak. "Three birds" adalah jamak, yang lainnya singular.'
+            }
+        ];
+        
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+        
+        // DOM elements - get after DOM is ready
+        let quizContainer = null;
+        let scoreDisplay = null;
+        let questionDisplay = null;
+        
+        // Background Canvas Animation
+        function initBackgroundCanvas() {
+            const canvas = document.getElementById('bg-canvas');
+            if (!canvas) return;
+            
+            const ctx = canvas.getContext('2d');
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            let animationId = null;
+            
+            canvas.width = width;
+            canvas.height = height;
+            
+            const particles = [];
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    radius: Math.max(1, Math.random() * 2),
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    alpha: Math.random() * 0.5 + 0.1
+                });
+            }
+            
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                
+                // Draw gradient background
+                const gradient = ctx.createRadialGradient(
+                    width * 0.5, height * 0.5, 0,
+                    width * 0.5, height * 0.5, Math.max(width, height) * 0.8
+                );
+                gradient.addColorStop(0, '#0f2a1c');
+                gradient.addColorStop(0.5, '#0a1f14');
+                gradient.addColorStop(1, '#061210');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, width, height);
+                
+                // Draw particles
+                particles.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    
+                    if (p.x < 0) p.x = width;
+                    if (p.x > width) p.x = 0;
+                    if (p.y < 0) p.y = height;
+                    if (p.y > height) p.y = 0;
+                    
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(74, 222, 128, ${p.alpha})`;
+                    ctx.fill();
+                });
+                
+                // Draw connections
+                particles.forEach((p1, i) => {
+                    particles.slice(i + 1).forEach(p2 => {
+                        const dx = p1.x - p2.x;
+                        const dy = p1.y - p2.y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (dist < 150) {
+                            ctx.beginPath();
+                            ctx.moveTo(p1.x, p1.y);
+                            ctx.lineTo(p2.x, p2.y);
+                            ctx.strokeStyle = `rgba(74, 222, 128, ${0.1 * (1 - dist / 150)})`;
+                            ctx.stroke();
+                        }
+                    });
+                });
+                
+                animationId = requestAnimationFrame(animate);
+            }
+            
+            // Check for reduced motion preference
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (!prefersReducedMotion) {
+                animate();
+            }
+            
+            window.addEventListener('resize', () => {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = width;
+                canvas.height = height;
+            });
+        }
+        
+        // Create floating particles
+        function createFloatingParticles() {
+            const container = document.getElementById('particles');
+            if (!container) return;
+            
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReducedMotion) return;
+            
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+        
+        // Navigation scroll effect
+        function initNavigation() {
+            const navbar = document.getElementById('navbar');
+            if (!navbar) return;
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        }
+        
+        // Reading progress
+        function initReadingProgress() {
+            const progress = document.getElementById('progress');
+            if (!progress) return;
+            
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrollPercent = Math.min(100, (scrollTop / docHeight) * 100);
+                progress.style.width = scrollPercent + '%';
+            });
+        }
+        
+        // Section reveal on scroll
+        function initSectionReveal() {
+            const sections = document.querySelectorAll('section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            sections.forEach(section => observer.observe(section));
+        }
+        
+        // Quiz functionality
+        function renderQuiz() {
+            if (!quizContainer) return;
+            
+            const q = quizData[currentQuestion];
+            
+            quizContainer.innerHTML = `
+                <p class="question-text">${q.question}</p>
+                <div class="options-grid">
+                    ${q.options.map((opt, idx) => `
+                        <button class="option-btn" data-index="${idx}" aria-label="Opsi ${idx + 1}: ${opt}">
+                            ${opt}
+                        </button>
+                    `).join('')}
+                </div>
+                <div class="feedback-text" id="feedback" style="display: none;"></div>
+            `;
+            
+            // Add event listeners to options
+            const optionBtns = quizContainer.querySelectorAll('.option-btn');
+            optionBtns.forEach(btn => {
+                btn.addEventListener('click', () => handleAnswer(parseInt(btn.dataset.index)));
+            });
+            
+            answered = false;
+        }
+        
+        function handleAnswer(selectedIndex) {
+            if (answered) return;
+            answered = true;
+            
+            const q = quizData[currentQuestion];
+            const optionBtns = quizContainer.querySelectorAll('.option-btn');
+            const feedback = document.getElementById('feedback');
+            
+            optionBtns.forEach((btn, idx) => {
+                btn.disabled = true;
+                if (idx === q.correct) {
+                    btn.classList.add('correct');
+                } else if (idx === selectedIndex) {
+                    btn.classList.add('wrong');
+                }
+            });
+            
+            if (selectedIndex === q.correct) {
+                score += 20;
+                if (scoreDisplay) scoreDisplay.textContent = score;
+                feedback.textContent = 'Benar! ' + q.explanation;
+                feedback.className = 'feedback-text correct';
+            } else {
+                feedback.textContent = 'Kurang tepat. ' + q.explanation;
+                feedback.className = 'feedback-text wrong';
+            }
+            
+            feedback.style.display = 'block';
+            
+            // Show next button
+            setTimeout(() => {
+                if (currentQuestion < quizData.length - 1) {
+                    const nextBtn = document.createElement('button');
+                    nextBtn.className = 'next-btn';
+                    nextBtn.textContent = 'Pertanyaan Selanjutnya';
+                    nextBtn.addEventListener('click', nextQuestion);
+                    feedback.appendChild(nextBtn);
+                } else {
+                    showResults();
+                }
+            }, 500);
+        }
+        
+        function nextQuestion() {
+            currentQuestion++;
+            if (questionDisplay) questionDisplay.textContent = currentQuestion + 1;
+            renderQuiz();
+        }
+        
+        function showResults() {
+            if (!quizContainer) return;
+            
+            let message = '';
+            if (score === 100) {
+                message = 'Sempurna! Kamu menguasai materi ini dengan sangat baik!';
+            } else if (score >= 60) {
+                message = 'Bagus! Pemahamanmu sudah baik, terus berlatih!';
+            } else {
+                message = 'Jangan menyerah! Coba baca ulang materi dan coba lagi.';
+            }
+            
+            quizContainer.innerHTML = `
+                <div class="game-complete">
+                    <h3>Quest Selesai!</h3>
+                    <p style="color: var(--fg-muted); margin-bottom: 1rem;">Skor Akhir</p>
+                    <div class="final-score">${score}</div>
+                    <p style="color: var(--fg-muted); margin-bottom: 2rem;">${message}</p>
+                    <button class="restart-btn" id="restart-btn">Ulangi Quest</button>
+                </div>
+            `;
+            
+            document.getElementById('restart-btn').addEventListener('click', restartQuiz);
+        }
+        
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            if (scoreDisplay) scoreDisplay.textContent = score;
+            if (questionDisplay) questionDisplay.textContent = 1;
+            renderQuiz();
+        }
+        
+        // Initialize everything when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            // Now get DOM elements
+            quizContainer = document.getElementById('quiz-container');
+            scoreDisplay = document.getElementById('current-score');
+            questionDisplay = document.getElementById('current-question');
+            
+            // Initialize all features
+            initBackgroundCanvas();
+            createFloatingParticles();
+            initNavigation();
+            initReadingProgress();
+            initSectionReveal();
+            
+            // Render initial quiz
+            renderQuiz();
+        });
+    </script>
+</body>
+</html>
