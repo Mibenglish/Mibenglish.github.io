@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pelajari Basic Logic & Existence Module 4 dengan metode mudah dipahami. Tingkatkan pemahaman logika dasar melalui pembelajaran interaktif.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mibenglish.com/ep14-basic-logic-existence-module4">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ep 14. Basic Logic & Existence: Module 4 - mibenglish">
+    <meta property="og:description" content="Pelajari Basic Logic & Existence Module 4 dengan metode mudah dipahami. Tingkatkan pemahaman logika dasar.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mibenglish.com/ep14-basic-logic-existence-module4">
+    <meta property="og:site_name" content="mibenglish">
+    <meta property="og:locale" content="id_ID">
+    
+    <title>Ep 14. Basic Logic & Existence: Module 4 - mibenglish</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            900: '#0d1f17',
+                            800: '#1a3a2f',
+                            700: '#2d4a3e',
+                            600: '#4a7c59',
+                            500: '#5d9c6a',
+                            400: '#7cb68a',
+                            300: '#a8d4a8',
+                            200: '#d4e8d4',
+                            100: '#f0f7f0'
+                        },
+                        bark: '#2d3a2e',
+                        moss: '#8fbc8f',
+                        cream: '#f5f2e8',
+                        gold: '#c4a35a',
+                        amber: '#d4a574'
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Source Sans 3', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :root {
+            --bg: #f5f2e8;
+            --bg-dark: #0d1f17;
+            --fg: #2d3a2e;
+            --fg-light: #f5f2e8;
+            --muted: #5a6b5c;
+            --accent: #c4a35a;
+            --accent-hover: #d4b56a;
+            --card: #ffffff;
+            --card-dark: #1a3a2f;
+            --border: #d4e8d4;
+            --forest-deep: #1a3a2f;
+            --forest-mid: #4a7c59;
+            --forest-light: #7cb68a;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Background Pattern */
+        .forest-bg {
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(74, 124, 89, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(196, 163, 90, 0.1) 0%, transparent 40%),
+                radial-gradient(ellipse at 50% 100%, rgba(26, 58, 47, 0.1) 0%, transparent 50%),
+                linear-gradient(180deg, #f5f2e8 0%, #e8f0e8 50%, #f0f7f0 100%);
+        }
+        
+        /* Floating Particles */
+        .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: radial-gradient(circle, rgba(196, 163, 90, 0.6) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float-particle 15s infinite ease-in-out;
+        }
+        
+        @keyframes float-particle {
+            0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.8; }
+            50% { transform: translateY(-100px) translateX(30px) rotate(180deg); opacity: 0.6; }
+            90% { opacity: 0.4; }
+        }
+        
+        /* Hero Entrance */
+        .hero-content {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: hero-enter 1s ease-out forwards;
+        }
+        
+        .hero-content:nth-child(2) { animation-delay: 0.15s; }
+        .hero-content:nth-child(3) { animation-delay: 0.3s; }
+        .hero-content:nth-child(4) { animation-delay: 0.45s; }
+        
+        @keyframes hero-enter {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Card Hover */
+        .logic-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .logic-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(26, 58, 47, 0.15);
+        }
+        
+        /* Button States */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--forest-mid) 0%, var(--forest-deep) 100%);
+            color: var(--fg-light);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--accent) 0%, #d4a574 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .btn-primary:hover::before {
+            opacity: 1;
+        }
+        
+        .btn-primary span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .btn-primary:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        /* Game Styles */
+        .truth-btn {
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+        
+        .truth-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        .truth-btn:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        .truth-btn.selected {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(196, 163, 90, 0.3);
+        }
+        
+        .truth-btn.correct {
+            background: #4a7c59 !important;
+            color: white;
+        }
+        
+        .truth-btn.incorrect {
+            background: #a65a5a !important;
+            color: white;
+        }
+        
+        /* Progress Bar */
+        .progress-fill {
+            transition: width 0.5s ease-out;
+        }
+        
+        /* Ad Placeholder */
+        .ad-placeholder {
+            background: linear-gradient(135deg, rgba(74, 124, 89, 0.08) 0%, rgba(196, 163, 90, 0.05) 100%);
+            border: 2px dashed rgba(74, 124, 89, 0.3);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            font-size: 0.875rem;
+            min-height: 100px;
+        }
+        
+        /* Nav Link Hover */
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Section Divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--border) 20%, var(--accent) 50%, var(--border) 80%, transparent 100%);
+        }
+        
+        /* Schema Org Script */
+        .schema-org {
+            display: none;
+        }
+    </style>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Ep 14. Basic Logic & Existence: Module 4",
+        "description": "Pelajari Basic Logic & Existence Module 4 dengan metode mudah dipahami. Tingkatkan pemahaman logika dasar melalui pembelajaran interaktif.",
+        "author": {
+            "@type": "Person",
+            "name": "bangmik"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "mibenglish",
+            "url": "https://mibenglish.com"
+        },
+        "datePublished": "2025-01-14",
+        "dateModified": "2025-01-14",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://mibenglish.com/ep14-basic-logic-existence-module4"
+        }
+    }
+    </script>
+</head>
+<body class="forest-bg min-h-screen">
+    <!-- Floating Particles Container -->
+    <div id="particles" class="fixed inset-0 pointer-events-none z-0" aria-hidden="true"></div>
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-cream/90 border-b border-forest-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+            <a href="https://mibenglish.com" class="font-display text-2xl sm:text-3xl font-bold text-forest-800 hover:text-forest-600 transition-colors" aria-label="Kembali ke beranda mibenglish">
+                mibenglish
+            </a>
+            <nav aria-label="Navigasi utama">
+                <ul class="flex items-center gap-4 sm:gap-6 text-sm sm:text-base">
+                    <li>
+                        <a href="#materi" class="nav-link text-forest-700 hover:text-forest-900 font-medium">
+                            Materi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#game" class="nav-link text-forest-700 hover:text-forest-900 font-medium">
+                            Game
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://mibenglish.com" class="btn-primary px-4 py-2 rounded-lg font-medium text-sm">
+                            <span>Beranda</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-12 sm:pt-20 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="hero-content">
+                    <span class="inline-block px-4 py-1.5 bg-forest-600/10 text-forest-700 rounded-full text-sm font-medium mb-6">
+                        Episode 14 - Module 4
+                    </span>
+                </div>
+                
+                <h1 class="hero-content font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-forest-900 leading-tight mb-6">
+                    Basic Logic & Existence
+                </h1>
+                
+                <p class="hero-content text-lg sm:text-xl text-forest-700 max-w-2xl mx-auto mb-8 leading-relaxed">
+                    Memahami dasar-dasar <em class="text-forest-900 font-medium">logical thinking</em> dan konsep <em class="text-forest-900 font-medium">existence</em> dengan cara yang menyenangkan dan mudah dicerna.
+                </p>
+                
+                <div class="hero-content flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#materi" class="btn-primary px-8 py-3.5 rounded-xl font-semibold text-base">
+                        <span>Mulai Belajar</span>
+                    </a>
+                    <a href="#game" class="px-8 py-3.5 rounded-xl font-semibold text-base border-2 border-forest-600 text-forest-700 hover:bg-forest-600 hover:text-white transition-all">
+                        Main Game
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Decorative Elements -->
+            <div class="absolute top-20 left-10 w-32 h-32 bg-forest-400/10 rounded-full blur-3xl" aria-hidden="true"></div>
+            <div class="absolute bottom-10 right-10 w-40 h-40 bg-gold/10 rounded-full blur-3xl" aria-hidden="true"></div>
+        </section>
+        
+        <!-- Ad Slot 1 -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 mb-12">
+            <div class="ad-placeholder h-24 sm:h-28" style="display:none">
+                <span>Slot Iklan - 728x90</span>
+            </div>
+        </div>
+        
+        <!-- Introduction Section -->
+        <section id="materi" class="py-12 sm:py-16 px-4 sm:px-6">
+            <div class="max-w-4xl mx-auto">
+                <article class="reveal">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-forest-900 mb-6">
+                        Mengapa Kita Perlu Memahami Logic?
+                    </h2>
+                    
+                    <div class="prose prose-lg max-w-none">
+                        <p class="text-forest-700 text-base sm:text-lg leading-relaxed mb-6">
+                            Pernahkah kamu merasa bingung saat harus membuat keputusan? Atau kesulitan menjelaskan pendapatmu kepada orang lain? Semua itu berkaitan dengan kemampuan <strong class="text-forest-900">logical thinking</strong> atau berpikir logis.
+                        </p>
+                        
+                        <p class="text-forest-700 text-base sm:text-lg leading-relaxed mb-6">
+                            <strong class="text-forest-900">Logic</strong> bukan sekadar pelajaran matematika atau filsafat yang rumit. Logic adalah alat bantu pikiran untuk mengatur informasi, menarik kesimpulan yang tepat, dan memahami dunia dengan lebih jelas.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <div class="section-divider max-w-4xl mx-auto"></div>
+        
+        <!-- Core Content -->
+        <section class="py-12 sm:py-16 px-4 sm:px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="reveal">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-forest-900 mb-8">
+                        Apa Itu Basic Logic?
+                    </h2>
+                </div>
+                
+                <div class="grid gap-6 sm:gap-8">
+                    <!-- Card 1 -->
+                    <div class="reveal logic-card bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-forest-100">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-forest-100 rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-forest-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-display text-xl sm:text-2xl font-bold text-forest-900 mb-3">
+                                    Statement (Pernyataan)
+                                </h3>
+                                <p class="text-forest-700 leading-relaxed mb-4">
+                                    <strong>Statement</strong> adalah kalimat yang bisa dinilai benar atau salah. Contohnya: "Matahari terbit dari timur" adalah sebuah <em>statement</em> yang benar. Sedangkan "Air mengalir ke atas" adalah <em>statement</em> yang salah.
+                                </p>
+                                <div class="bg-forest-50 rounded-xl p-4 border-l-4 border-forest-500">
+                                    <p class="text-sm text-forest-800">
+                                        <strong>Catatan:</strong> Kalimat tanya dan perintah bukan <em>statement</em> karena tidak bisa dinilai benar atau salah.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="reveal logic-card bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-forest-100">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-display text-xl sm:text-2xl font-bold text-forest-900 mb-3">
+                                    Logical Connectives (Penghubung Logis)
+                                </h3>
+                                <p class="text-forest-700 leading-relaxed mb-4">
+                                    Untuk menggabungkan beberapa <em>statement</em>, kita menggunakan <strong>logical connectives</strong>. Ada empat jenis utama:
+                                </p>
+                                <ul class="space-y-3 text-forest-700">
+                                    <li class="flex items-start gap-2">
+                                        <span class="inline-block w-2 h-2 bg-forest-500 rounded-full mt-2 flex-shrink-0"></span>
+                                        <span><strong class="text-forest-900">AND</strong> - Kedua pernyataan harus benar</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="inline-block w-2 h-2 bg-forest-500 rounded-full mt-2 flex-shrink-0"></span>
+                                        <span><strong class="text-forest-900">OR</strong> - Salah satu pernyataan harus benar</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="inline-block w-2 h-2 bg-forest-500 rounded-full mt-2 flex-shrink-0"></span>
+                                        <span><strong class="text-forest-900">NOT</strong> - Membalik nilai kebenaran</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="inline-block w-2 h-2 bg-forest-500 rounded-full mt-2 flex-shrink-0"></span>
+                                        <span><strong class="text-forest-900">IF...THEN</strong> - Implikasi atau akibat</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ad Slot 2 -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 mb-12">
+            <div class="ad-placeholder h-24 sm:h-28" style="display:none">
+                <span>Slot Iklan - 728x90</span>
+            </div>
+        </div>
+        
+        <!-- Existence Section -->
+        <section class="py-12 sm:py-16 px-4 sm:px-6 bg-forest-800 text-forest-100">
+            <div class="max-w-4xl mx-auto">
+                <div class="reveal">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-forest-100 mb-6">
+                        Konsep Existence dalam Logic
+                    </h2>
+                    <p class="text-forest-200 text-base sm:text-lg leading-relaxed mb-8">
+                        Dalam <strong class="text-white">logic</strong>, konsep <strong class="text-white">existence</strong> membantu kita menjawab pertanyaan tentang keberadaan sesuatu. Ini sangat penting dalam berpikir kritis.
+                    </p>
+                </div>
+                
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="reveal bg-forest-700/50 backdrop-blur rounded-2xl p-6 border border-forest-600/30">
+                        <h3 class="font-display text-xl font-bold text-gold mb-4">
+                            Existential Quantifier
+                        </h3>
+                        <p class="text-forest-200 leading-relaxed mb-4">
+                            Simbol: <span class="inline-block px-3 py-1 bg-forest-600/50 rounded font-mono text-white">∃</span> (dibaca: "ada" atau "terdapat")
+                        </p>
+                        <p class="text-forest-300 text-sm leading-relaxed">
+                            Contoh: "∃x (x adalah hewan yang bisa terbang)" artinya "Ada setidaknya satu hewan yang bisa terbang."
+                        </p>
+                    </div>
+                    
+                    <div class="reveal bg-forest-700/50 backdrop-blur rounded-2xl p-6 border border-forest-600/30">
+                        <h3 class="font-display text-xl font-bold text-gold mb-4">
+                            Universal Quantifier
+                        </h3>
+                        <p class="text-forest-200 leading-relaxed mb-4">
+                            Simbol: <span class="inline-block px-3 py-1 bg-forest-600/50 rounded font-mono text-white">∀</span> (dibaca: "untuk semua" atau "setiap")
+                        </p>
+                        <p class="text-forest-300 text-sm leading-relaxed">
+                            Contoh: "∀x (x adalah manusia → x bisa belajar)" artinya "Setiap manusia bisa belajar."
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="reveal mt-8 bg-gold/10 rounded-2xl p-6 border border-gold/30">
+                    <h3 class="font-display text-xl font-bold text-gold mb-4">
+                        Imajinasi: Bayangkan Sebuah Dunia
+                    </h3>
+                    <p class="text-forest-200 leading-relaxed">
+                        Coba bayangkan sebuah dunia di mana <em>statement</em> "Semua burung bisa terbang" adalah benar. Di dunia itu, tidak ada penguin, tidak ada burung unta, tidak ada ayam. Begitulah cara <strong class="text-white">logic</strong> membantu kita memahami konsekuensi dari sebuah pernyataan.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Practical Example -->
+        <section class="py-12 sm:py-16 px-4 sm:px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="reveal">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-forest-900 mb-6">
+                        Contoh Praktis Sehari-hari
+                    </h2>
+                </div>
+                
+                <div class="reveal bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-forest-100">
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 pb-6 border-b border-forest-100">
+                            <span class="flex-shrink-0 w-8 h-8 bg-forest-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                            <div>
+                                <p class="text-forest-800 font-medium mb-2">"Jika hujan turun, maka tanah menjadi basah."</p>
+                                <p class="text-forest-600 text-sm">Ini adalah contoh <strong>IF...THEN</strong> statement. Jika kondisi pertama benar (hujan), maka kondisi kedua juga benar (tanah basah).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 pb-6 border-b border-forest-100">
+                            <span class="flex-shrink-0 w-8 h-8 bg-forest-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                            <div>
+                                <p class="text-forest-800 font-medium mb-2">"Ada siswa yang rajin membaca."</p>
+                                <p class="text-forest-600 text-sm">Ini menggunakan <strong>existential quantifier</strong> (∃). Cukup ada satu siswa yang rajin membaca untuk membuat pernyataan ini benar.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <span class="flex-shrink-0 w-8 h-8 bg-forest-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                            <div>
+                                <p class="text-forest-800 font-medium mb-2">"Semua manusia adalah makhluk sosial."</p>
+                                <p class="text-forest-600 text-sm">Ini menggunakan <strong>universal quantifier</strong> (∀). Pernyataan ini berlaku untuk setiap manusia tanpa terkecuali.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ad Slot 3 -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 mb-12">
+            <div class="ad-placeholder h-24 sm:h-28">
+                <span>Slot Iklan - 728x90</span>
+            </div>
+        </div>
+        
+        <!-- Interactive Game Section -->
+        <section id="game" class="py-12 sm:py-16 px-4 sm:px-6 bg-gradient-to-b from-forest-50 to-cream">
+            <div class="max-w-4xl mx-auto">
+                <div class="reveal text-center mb-10">
+                    <span class="inline-block px-4 py-1.5 bg-gold/20 text-forest-800 rounded-full text-sm font-medium mb-4">
+                        Quest Interaktif
+                    </span>
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-forest-900 mb-4">
+                        Truth Quest: Uji Pemahamanmu
+                    </h2>
+                    <p class="text-forest-700 max-w-2xl mx-auto">
+                        Tentukan apakah pernyataan berikut <strong>TRUE</strong> (benar) atau <strong>FALSE</strong> (salah) berdasarkan pengetahuan logika yang baru kamu pelajari.
+                    </p>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="reveal mb-8">
+                    <div class="flex justify-between text-sm text-forest-600 mb-2">
+                        <span>Progres</span>
+                        <span id="progressText">0/5</span>
+                    </div>
+                    <div class="h-3 bg-forest-200 rounded-full overflow-hidden">
+                        <div id="progressBar" class="progress-fill h-full bg-gradient-to-r from-forest-500 to-forest-600 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                
+                <!-- Game Container -->
+                <div id="gameContainer" class="reveal bg-white rounded-2xl shadow-lg border border-forest-100 overflow-hidden">
+                    <!-- Question will be rendered here -->
+                </div>
+                
+                <!-- Result Container -->
+                <div id="resultContainer" class="reveal hidden text-center py-12">
+                    <div class="inline-block p-6 bg-white rounded-2xl shadow-lg border border-forest-100">
+                        <div id="resultIcon" class="w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center"></div>
+                        <h3 id="resultTitle" class="font-display text-2xl font-bold text-forest-900 mb-2"></h3>
+                        <p id="resultText" class="text-forest-700 mb-6"></p>
+                        <button id="restartBtn" class="btn-primary px-8 py-3 rounded-xl font-semibold">
+                            <span>Main Lagi</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ad Slot 4 -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 my-12">
+            <div class="ad-placeholder h-24 sm:h-28" style="display:none">
+                <span>Slot Iklan - 728x90</span>
+            </div>
+        </div>
+        
+        <!-- Summary Section -->
+        <section class="py-12 sm:py-16 px-4 sm:px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="reveal">
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-forest-900 mb-6">
+                        Ringkasan Pembelajaran
+                    </h2>
+                </div>
+                
+                <div class="reveal grid sm:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-forest-100 text-center">
+                        <div class="w-16 h-16 bg-forest-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="font-display text-2xl font-bold text-forest-700">01</span>
+                        </div>
+                        <h3 class="font-display text-lg font-bold text-forest-900 mb-2">Statement</h3>
+                        <p class="text-forest-600 text-sm">Kalimat yang bisa dinilai benar atau salah</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-forest-100 text-center">
+                        <div class="w-16 h-16 bg-forest-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="font-display text-2xl font-bold text-forest-700">02</span>
+                        </div>
+                        <h3 class="font-display text-lg font-bold text-forest-900 mb-2">Connectives</h3>
+                        <p class="text-forest-600 text-sm">Penghubung logis: AND, OR, NOT, IF...THEN</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-forest-100 text-center">
+                        <div class="w-16 h-16 bg-forest-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="font-display text-2xl font-bold text-forest-700">03</span>
+                        </div>
+                        <h3 class="font-display text-lg font-bold text-forest-900 mb-2">Quantifiers</h3>
+                        <p class="text-forest-600 text-sm">Existential (∃) dan Universal (∀)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ad Slot 5 -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 mb-12">
+            <div class="ad-placeholder h-24 sm:h-28" style="display:none">
+                <span>Slot Iklan - 728x90</span>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-forest-900 text-forest-200 py-12 px-4 sm:px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <a href="https://mibenglish.com" class="font-display text-3xl font-bold text-white hover:text-forest-300 transition-colors">
+                    mibenglish
+                </a>
+                <p class="mt-2 text-forest-400">Belajar Bahasa Inggris dengan Cara Menyenangkan</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-8 text-sm">
+                <a href="https://mibenglish.com" class="hover:text-white transition-colors">Beranda</a>
+                <a href="https://mibenglish.com/episodes" class="hover:text-white transition-colors">Semua Episode</a>
+                <a href="https://mibenglish.com/about" class="hover:text-white transition-colors">Tentang Kami</a>
+                <a href="https://mibenglish.com/contact" class="hover:text-white transition-colors">Kontak</a>
+            </div>
+            
+            <div class="section-divider mb-8"></div>
+            
+            <p class="text-center text-forest-400 text-sm">
+                &copy; 2025 mibenglish oleh bangmik. Seluruh hak cipta dilindungi.
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // Initialize particles
+        function initParticles() {
+            const container = document.getElementById('particles');
+            if (!container) return;
+            
+            const particleCount = 15;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                
+                // Vary size
+                const size = 4 + Math.random() * 8;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                
+                container.appendChild(particle);
+            }
+        }
+        
+        // Scroll reveal
+        function initScrollReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            reveals.forEach(el => observer.observe(el));
+        }
+        
+        // Game Data
+        const gameQuestions = [
+            {
+                question: '"Semua kucing adalah mamalia." Pernyataan ini menggunakan quantifier apa?',
+                options: ['Existential (∃)', 'Universal (∀)'],
+                correct: 1,
+                explanation: 'Kata "semua" menunjukkan universal quantifier (∀) karena berlaku untuk setiap kucing.'
+            },
+            {
+                question: '"Ada siswa yang tidak mengerjakan PR." Ini adalah contoh statement yang menggunakan...',
+                options: ['Universal Quantifier', 'Existential Quantifier'],
+                correct: 1,
+                explanation: 'Kata "ada" menunjukkan existential quantifier (∃) karena cukup ada satu siswa saja.'
+            },
+            {
+                question: 'Jika "P AND Q" adalah TRUE, maka...',
+                options: ['Kedua P dan Q harus TRUE', 'Salah satu P atau Q TRUE'],
+                correct: 0,
+                explanation: 'Operator AND membutuhkan kedua statement bernilai TRUE agar hasilnya TRUE.'
+            },
+            {
+                question: 'Statement "Jika hari ini Senin, maka besok adalah Selasa" adalah...',
+                options: ['TRUE', 'FALSE'],
+                correct: 0,
+                explanation: 'Ini adalah IF...THEN statement yang logis. Setelah Senin selalu Selasa.'
+            },
+            {
+                question: 'NOT(TRUE AND FALSE) menghasilkan nilai...',
+                options: ['TRUE', 'FALSE'],
+                correct: 0,
+                explanation: 'TRUE AND FALSE = FALSE. NOT(FALSE) = TRUE.'
+            }
+        ];
+        
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+        
+        // Initialize Game
+        function initGame() {
+            currentQuestion = 0;
+            score = 0;
+            answered = false;
+            
+            const resultContainer = document.getElementById('resultContainer');
+            const gameContainer = document.getElementById('gameContainer');
+            
+            if (resultContainer) resultContainer.classList.add('hidden');
+            if (gameContainer) gameContainer.classList.remove('hidden');
+            
+            renderQuestion();
+            updateProgress();
+        }
+        
+        function renderQuestion() {
+            const container = document.getElementById('gameContainer');
+            if (!container) return;
+            
+            const q = gameQuestions[currentQuestion];
+            
+            container.innerHTML = `
+                <div class="p-6 sm:p-8">
+                    <div class="flex items-center gap-2 text-sm text-forest-600 mb-4">
+                        <span>Soal</span>
+                        <span class="font-bold text-forest-800">${currentQuestion + 1}</span>
+                        <span>dari</span>
+                        <span class="font-bold text-forest-800">${gameQuestions.length}</span>
+                    </div>
+                    
+                    <h3 class="font-display text-xl sm:text-2xl font-bold text-forest-900 mb-6 leading-relaxed">
+                        ${q.question}
+                    </h3>
+                    
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        ${q.options.map((opt, i) => `
+                            <button 
+                                class="truth-btn w-full p-4 sm:p-5 text-left rounded-xl border-2 border-forest-200 bg-forest-50 hover:bg-forest-100 hover:border-forest-300 transition-all font-medium text-forest-800"
+                                onclick="selectAnswer(${i})"
+                                aria-label="Pilihan ${i + 1}: ${opt}"
+                            >
+                                <span class="flex items-center gap-3">
+                                    <span class="w-8 h-8 rounded-full bg-white border-2 border-forest-300 flex items-center justify-center text-sm font-bold text-forest-600">
+                                        ${String.fromCharCode(65 + i)}
+                                    </span>
+                                    ${opt}
+                                </span>
+                            </button>
+                        `).join('')}
+                    </div>
+                    
+                    <div id="feedback" class="mt-6 hidden">
+                        <div class="p-4 rounded-xl border-l-4" id="feedbackContent"></div>
+                    </div>
+                    
+                    <div id="nextBtnContainer" class="mt-6 hidden">
+                        <button 
+                            onclick="nextQuestion()"
+                            class="btn-primary w-full sm:w-auto px-8 py-3 rounded-xl font-semibold"
+                        >
+                            <span>${currentQuestion < gameQuestions.length - 1 ? 'Soal Berikutnya' : 'Lihat Hasil'}</span>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+        
+        function selectAnswer(index) {
+            if (answered) return;
+            answered = true;
+            
+            const q = gameQuestions[currentQuestion];
+            const buttons = document.querySelectorAll('.truth-btn');
+            const feedback = document.getElementById('feedback');
+            const feedbackContent = document.getElementById('feedbackContent');
+            const nextBtnContainer = document.getElementById('nextBtnContainer');
+            
+            buttons.forEach((btn, i) => {
+                if (i === q.correct) {
+                    btn.classList.add('correct');
+                } else if (i === index && i !== q.correct) {
+                    btn.classList.add('incorrect');
+                }
+            });
+            
+            if (index === q.correct) {
+                score++;
+                feedbackContent.className = 'p-4 rounded-xl border-l-4 bg-forest-50 border-forest-500';
+                feedbackContent.innerHTML = `
+                    <p class="font-bold text-forest-800 mb-1">Benar!</p>
+                    <p class="text-forest-700 text-sm">${q.explanation}</p>
+                `;
+            } else {
+                feedbackContent.className = 'p-4 rounded-xl border-l-4 bg-red-50 border-red-400';
+                feedbackContent.innerHTML = `
+                    <p class="font-bold text-red-800 mb-1">Kurang Tepat</p>
+                    <p class="text-red-700 text-sm">${q.explanation}</p>
+                `;
+            }
+            
+            feedback.classList.remove('hidden');
+            nextBtnContainer.classList.remove('hidden');
+        }
+        
+        function nextQuestion() {
+            currentQuestion++;
+            answered = false;
+            
+            if (currentQuestion >= gameQuestions.length) {
+                showResult();
+            } else {
+                renderQuestion();
+                updateProgress();
+            }
+        }
+        
+        function updateProgress() {
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            const percentage = (currentQuestion / gameQuestions.length) * 100;
+            
+            if (progressBar) progressBar.style.width = percentage + '%';
+            if (progressText) progressText.textContent = `${currentQuestion}/${gameQuestions.length}`;
+        }
+        
+        function showResult() {
+            const gameContainer = document.getElementById('gameContainer');
+            const resultContainer = document.getElementById('resultContainer');
+            const resultIcon = document.getElementById('resultIcon');
+            const resultTitle = document.getElementById('resultTitle');
+            const resultText = document.getElementById('resultText');
+            
+            if (gameContainer) gameContainer.classList.add('hidden');
+            if (resultContainer) resultContainer.classList.remove('hidden');
+            
+            const percentage = (score / gameQuestions.length) * 100;
+            
+            if (percentage >= 80) {
+                resultIcon.className = 'w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center bg-forest-100';
+                resultIcon.innerHTML = '<svg class="w-10 h-10 text-forest-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
+                resultTitle.textContent = 'Luar Biasa!';
+                resultText.textContent = `Kamu mendapat ${score} dari ${gameQuestions.length}. Pemahaman logikamu sudah sangat baik!`;
+            } else if (percentage >= 60) {
+                resultIcon.className = 'w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center bg-gold/20';
+                resultIcon.innerHTML = '<svg class="w-10 h-10 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
+                resultTitle.textContent = 'Bagus!';
+                resultText.textContent = `Kamu mendapat ${score} dari ${gameQuestions.length}. Terus berlatih untuk hasil lebih baik!`;
+            } else {
+                resultIcon.className = 'w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center bg-amber/20';
+                resultIcon.innerHTML = '<svg class="w-10 h-10 text-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>';
+                resultTitle.textContent = 'Terus Belajar!';
+                resultText.textContent = `Kamu mendapat ${score} dari ${gameQuestions.length}. Baca kembali materinya dan coba lagi!`;
+            }
+            
+            // Update progress to 100%
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            if (progressBar) progressBar.style.width = '100%';
+            if (progressText) progressText.textContent = `${gameQuestions.length}/${gameQuestions.length}`;
+        }
+        
+        // Initialize everything when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            initParticles();
+            initScrollReveal();
+            initGame();
+            
+            // Restart button
+            const restartBtn = document.getElementById('restartBtn');
+            if (restartBtn) {
+                restartBtn.addEventListener('click', initGame);
+            }
+        });
+    </script>
+</body>
+</html>
