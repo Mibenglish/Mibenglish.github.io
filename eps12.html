@@ -3,34 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pelajari Basic Logic & Existence dalam Bahasa Inggris dengan metode imajinatif. Modul 2 untuk pemula yang ingin memahami konsep keberadaan.">
+    <meta name="description" content="Pelajari konsep Symbol & Meaning dalam Basic Logic. Pahami perbedaan kata dan benda, representasi mental, dan konsep sebelum bahasa.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://mibenglish.com/ep12-basic-logic-existence-module2">
+    <link rel="canonical" href="https://mibenglish.com/eps12-basic-logic-existence">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Ep 12. Basic Logic & Existence: Module 2 | mibenglish">
-    <meta property="og:description" content="Pelajari Basic Logic & Existence dalam Bahasa Inggris dengan metode imajinatif untuk pemula.">
+    <meta property="og:title" content="Eps 12 - Basic Logic & Existence | mibenglish">
+    <meta property="og:description" content="Pelajari konsep Symbol & Meaning: Apa itu simbol, perbedaan kata dan benda, representasi mental.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://mibenglish.com/ep12-basic-logic-existence-module2">
+    <meta property="og:url" content="https://mibenglish.com/eps12-basic-logic-existence">
     <meta property="og:site_name" content="mibenglish">
+    <meta property="og:locale" content="id_ID">
     
-    <title>Ep 12. Basic Logic & Existence: Module 2 | mibenglish</title>
+    <title>Eps 12 - Basic Logic & Existence (Module 1) | mibenglish</title>
     
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CDN -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            950: '#0A1F17',
+                            900: '#0D3B2E',
+                            800: '#1A4D3E',
+                            700: '#2D5A4A',
+                            600: '#3D7A5F',
+                            500: '#4A7C6F',
+                            400: '#6B9B85',
+                            300: '#8FB8A4',
+                            200: '#B8D4C8',
+                            100: '#E8F3EE'
+                        },
+                        earth: {
+                            gold: '#C4A35A',
+                            amber: '#D4B76A',
+                            cream: '#F5F2E8',
+                            warm: '#FAF8F3'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['DM Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
     
-    <!-- Schema.org Article -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Ep 12. Basic Logic & Existence: Module 2",
-        "description": "Pelajari Basic Logic & Existence dalam Bahasa Inggris dengan metode imajinatif. Modul 2 untuk pemula yang ingin memahami konsep keberadaan.",
+        "headline": "Eps 12 - Basic Logic & Existence (Module 1)",
+        "description": "Pelajari konsep Symbol & Meaning dalam Basic Logic. Pahami perbedaan kata dan benda, representasi mental, dan konsep sebelum bahasa.",
         "author": {
             "@type": "Person",
             "name": "bangmik"
@@ -40,31 +73,30 @@
             "name": "mibenglish",
             "url": "https://mibenglish.com"
         },
-        "datePublished": "2025-01-15",
-        "dateModified": "2025-01-15",
+        "datePublished": "2024-01-15",
+        "dateModified": "2024-01-20",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://mibenglish.com/ep12-basic-logic-existence-module2"
+            "@id": "https://mibenglish.com/eps12-basic-logic-existence"
         }
     }
     </script>
     
     <style>
         :root {
-            --bg-deep: #0a1f14;
-            --bg-main: #0f2a1c;
-            --bg-card: #162f22;
-            --fg: #e8f5e9;
-            --fg-muted: #a8d5ba;
-            --accent: #4ade80;
-            --accent-glow: #22c55e;
-            --border: #2d5a3f;
-            --highlight: #86efac;
+            --bg: #FAF8F3;
+            --bg-dark: #0D3B2E;
+            --fg: #1A2F23;
+            --fg-light: #E8F3EE;
+            --accent: #C4A35A;
+            --accent-hover: #D4B76A;
+            --card: #FFFFFF;
+            --card-dark: #1A4D3E;
+            --border: #B8D4C8;
+            --muted: #6B9B85;
         }
         
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
         
@@ -72,1216 +104,852 @@
             scroll-behavior: smooth;
         }
         
-        body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--bg-deep);
-            color: var(--fg);
-            line-height: 1.8;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3 {
-            font-family: 'Crimson Pro', serif;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-        
-        /* Background Canvas */
-        #bg-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-        
-        /* Floating Particles Container */
-        .particles-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-            overflow: hidden;
-        }
-        
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: var(--accent);
-            border-radius: 50%;
-            opacity: 0;
-            animation: floatUp 15s infinite ease-out;
-        }
-        
-        @keyframes floatUp {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.6;
-            }
-            90% {
-                opacity: 0.3;
-            }
-            100% {
-                transform: translateY(-100px) rotate(360deg);
-                opacity: 0;
-            }
-        }
-        
-        /* Content wrapper */
-        .content-wrapper {
-            position: relative;
-            z-index: 10;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            padding: 1rem 1.5rem;
-            background: linear-gradient(180deg, var(--bg-deep) 0%, transparent 100%);
-            transition: all 0.3s ease;
-        }
-        
-        nav.scrolled {
-            background: rgba(10, 31, 20, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .nav-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .brand {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-        
-        .back-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--fg-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-        
-        .back-link:hover {
-            color: var(--accent);
-        }
-        
-        /* Header */
-        header {
-            padding: 8rem 1.5rem 4rem;
-            text-align: center;
-            position: relative;
-        }
-        
-        .episode-badge {
-            display: inline-block;
-            padding: 0.5rem 1.25rem;
-            background: rgba(74, 222, 128, 0.1);
-            border: 1px solid var(--border);
-            border-radius: 50px;
-            font-size: 0.85rem;
-            color: var(--accent);
-            margin-bottom: 1.5rem;
-            animation: fadeSlideDown 0.8s ease forwards;
-            opacity: 0;
-        }
-        
-        h1 {
-            font-size: clamp(2rem, 6vw, 3.5rem);
-            color: var(--fg);
-            margin-bottom: 1rem;
-            animation: fadeSlideDown 0.8s ease 0.2s forwards;
-            opacity: 0;
-        }
-        
-        .subtitle {
-            font-size: clamp(1rem, 2.5vw, 1.25rem);
-            color: var(--fg-muted);
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            animation: fadeSlideDown 0.8s ease 0.4s forwards;
-            opacity: 0;
-        }
-        
-        .meta-info {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            font-size: 0.85rem;
-            color: var(--fg-muted);
-            animation: fadeSlideDown 0.8s ease 0.6s forwards;
-            opacity: 0;
-        }
-        
-        .meta-info span {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        @keyframes fadeSlideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Main Content */
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1.5rem 4rem;
-        }
-        
-        article {
-            background: var(--bg-card);
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-        
-        section {
-            padding: 2.5rem;
-            border-bottom: 1px solid var(--border);
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-        
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        section:last-child {
-            border-bottom: none;
-        }
-        
-        h2 {
-            font-size: 1.75rem;
-            color: var(--accent);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        
-        h2 .icon {
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(74, 222, 128, 0.15);
-            border-radius: 8px;
-        }
-        
-        h3 {
-            font-size: 1.25rem;
-            color: var(--highlight);
-            margin: 2rem 0 1rem;
-        }
-        
-        p {
-            margin-bottom: 1.25rem;
-            color: var(--fg);
-        }
-        
-        .highlight-box {
-            background: rgba(74, 222, 128, 0.08);
-            border-left: 4px solid var(--accent);
-            padding: 1.25rem 1.5rem;
-            border-radius: 0 12px 12px 0;
-            margin: 1.5rem 0;
-        }
-        
-        .highlight-box p {
-            margin-bottom: 0;
-        }
-        
-        .term {
-            display: inline-block;
-            background: rgba(134, 239, 172, 0.15);
-            color: var(--highlight);
-            padding: 0.15rem 0.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-        
-        .example-box {
-            background: var(--bg-main);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border: 1px solid var(--border);
-        }
-        
-        .example-box .label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--accent);
-            margin-bottom: 0.75rem;
-        }
-        
-        .example-box code {
-            display: block;
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.1rem;
-            color: var(--fg);
-            font-style: italic;
-        }
-        
-        .example-box .translation {
-            color: var(--fg-muted);
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }
-        
-        /* Comparison Table */
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        
-        .comparison-card {
-            background: var(--bg-main);
-            border-radius: 12px;
-            padding: 1.25rem;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-        
-        .comparison-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-        }
-        
-        .comparison-card .title {
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .comparison-card .content {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.15rem;
-        }
-        
-        /* Progress Indicator */
-        .reading-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: var(--accent);
-            z-index: 200;
-            transition: width 0.1s ease;
-        }
-        
-        /* Ad Placeholder */
-        .ad-slot {
-            background: linear-gradient(135deg, rgba(74, 222, 128, 0.05) 0%, rgba(74, 222, 128, 0.02) 100%);
-            border: 1px dashed var(--border);
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-            margin: 2rem 0;
-            color: var(--fg-muted);
-            font-size: 0.85rem;
-        }
-        
-        /* Game Section */
-        .game-section {
-            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(22, 47, 34, 0.8) 100%);
-            border-radius: 20px;
-            border: 1px solid var(--accent);
-            padding: 2.5rem;
-            margin-top: 3rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .game-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(74, 222, 128, 0.05) 0%, transparent 50%);
-            animation: rotateGlow 20s linear infinite;
-        }
-        
-        @keyframes rotateGlow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        .game-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .game-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .game-header h2 {
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-        
-        .game-score {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .score-item {
-            text-align: center;
-        }
-        
-        .score-item .value {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent);
-        }
-        
-        .score-item .label {
-            font-size: 0.75rem;
-            color: var(--fg-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .quiz-container {
-            background: var(--bg-main);
-            border-radius: 16px;
-            padding: 2rem;
-            border: 1px solid var(--border);
-        }
-        
-        .question-text {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.25rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: var(--fg);
-        }
-        
-        .options-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
-        
-        @media (max-width: 500px) {
-            .options-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .option-btn {
-            background: var(--bg-card);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            padding: 1rem 1.5rem;
-            color: var(--fg);
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: left;
-            font-family: 'DM Sans', sans-serif;
-        }
-        
-        .option-btn:hover:not(:disabled) {
-            border-color: var(--accent);
-            background: rgba(74, 222, 128, 0.1);
-            transform: translateY(-2px);
-        }
-        
-        .option-btn:focus-visible {
-            outline: 2px solid var(--accent);
-            outline-offset: 2px;
-        }
-        
-        .option-btn.correct {
-            border-color: var(--accent);
-            background: rgba(74, 222, 128, 0.2);
-            color: var(--highlight);
-        }
-        
-        .option-btn.wrong {
-            border-color: #ef4444;
-            background: rgba(239, 68, 68, 0.1);
-            color: #fca5a5;
-        }
-        
-        .option-btn:disabled {
-            cursor: not-allowed;
-            opacity: 0.7;
-        }
-        
-        .feedback-text {
-            text-align: center;
-            margin-top: 1.5rem;
-            padding: 1rem;
-            border-radius: 10px;
-            font-weight: 500;
-        }
-        
-        .feedback-text.correct {
-            background: rgba(74, 222, 128, 0.1);
-            color: var(--accent);
-        }
-        
-        .feedback-text.wrong {
-            background: rgba(239, 68, 68, 0.1);
-            color: #fca5a5;
-        }
-        
-        .next-btn {
-            display: block;
-            margin: 1.5rem auto 0;
-            padding: 0.875rem 2rem;
-            background: var(--accent);
-            color: var(--bg-deep);
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'DM Sans', sans-serif;
-        }
-        
-        .next-btn:hover {
-            background: var(--highlight);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(74, 222, 128, 0.3);
-        }
-        
-        .game-complete {
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .game-complete h3 {
-            color: var(--accent);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .final-score {
-            font-family: 'Crimson Pro', serif;
-            font-size: 4rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin: 1rem 0;
-        }
-        
-        .restart-btn {
-            padding: 1rem 2.5rem;
-            background: transparent;
-            color: var(--accent);
-            border: 2px solid var(--accent);
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'DM Sans', sans-serif;
-        }
-        
-        .restart-btn:hover {
-            background: var(--accent);
-            color: var(--bg-deep);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--bg-main);
-            border-top: 1px solid var(--border);
-            padding: 3rem 1.5rem;
-            text-align: center;
-            position: relative;
-            z-index: 10;
-        }
-        
-        .footer-brand {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-        }
-        
-        .footer-tagline {
-            color: var(--fg-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            color: var(--fg-muted);
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--accent);
-        }
-        
-        .copyright {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-            color: var(--fg-muted);
-            font-size: 0.8rem;
-        }
-        
-        /* Reduced Motion */
         @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
             *, *::before, *::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
             }
-            .particle {
-                display: none;
+        }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            overflow-x: hidden;
+        }
+        
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: radial-gradient(circle, rgba(196, 163, 90, 0.6) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-30px) rotate(180deg); opacity: 0.8; }
+        }
+        
+        /* Entrance animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        
+        /* Hero gradient */
+        .hero-gradient {
+            background: linear-gradient(135deg, 
+                #0D3B2E 0%, 
+                #1A4D3E 40%, 
+                #2D5A4A 70%,
+                #3D7A5F 100%);
+        }
+        
+        /* Glow effect */
+        .glow-accent {
+            box-shadow: 0 0 60px rgba(196, 163, 90, 0.3),
+                        0 0 120px rgba(196, 163, 90, 0.1);
+        }
+        
+        /* Card hover */
+        .concept-card {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.4s ease;
+        }
+        
+        .concept-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(13, 59, 46, 0.15);
+        }
+        
+        /* Button styles */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent) 0%, #D4B76A 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(196, 163, 90, 0.4);
+        }
+        
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+        
+        .btn-primary:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 3px;
+        }
+        
+        /* Quest game */
+        .symbol-item {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+        
+        .symbol-item:hover {
+            transform: scale(1.05);
+            background: #E8F3EE;
+        }
+        
+        .symbol-item.selected {
+            border-color: #C4A35A !important;
+            background: rgba(196, 163, 90, 0.1);
+        }
+        
+        .symbol-item.correct {
+            border-color: #4A7C6F !important;
+            background: rgba(74, 124, 111, 0.15);
+        }
+        
+        .symbol-item.incorrect {
+            border-color: #C75A5A !important;
+            background: rgba(199, 90, 90, 0.1);
+            animation: shake 0.5s ease;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-5px); }
+            40%, 80% { transform: translateX(5px); }
+        }
+        
+        /* Progress bar */
+        .progress-fill {
+            transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        /* Tree decoration */
+        .tree-bg {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 L65 40 L55 40 L70 70 L45 70 L45 90 L55 90 L55 70 L30 70 L45 40 L35 40 Z' fill='%231A4D3E' opacity='0.05'/%3E%3C/svg%3E");
+            background-size: 120px;
+            background-position: center;
+        }
+        
+        /* Ad placeholder */
+        .ad-placeholder {
+            background: linear-gradient(135deg, #E8F3EE 0%, #B8D4C8 100%);
+            border: 2px dashed #6B9B85;
+        }
+        
+        /* Scroll indicator */
+        .scroll-indicator {
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        
+        /* Leaf animation */
+        .leaf {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            opacity: 0.4;
+            animation: leafFall linear infinite;
+        }
+        
+        @keyframes leafFall {
+            0% {
+                transform: translateY(-20px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.4;
+            }
+            90% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
             }
         }
         
-        /* Mobile Adjustments */
-        @media (max-width: 640px) {
-            section {
-                padding: 1.75rem;
-            }
-            
-            h2 {
-                font-size: 1.4rem;
-            }
-            
-            .game-section {
-                padding: 1.5rem;
-            }
-            
-            .quiz-container {
-                padding: 1.25rem;
-            }
-            
-            .meta-info {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
+        /* Section divider */
+        .divider-leaf {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .divider-leaf::before,
+        .divider-leaf::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #B8D4C8, transparent);
         }
     </style>
 </head>
 <body>
-    <!-- Reading Progress -->
-    <div class="reading-progress" id="progress" style="width: 0%"></div>
-    
-    <!-- Background Canvas -->
-    <canvas id="bg-canvas"></canvas>
-    
-    <!-- Particles -->
-    <div class="particles-container" id="particles"></div>
-    
-    <div class="content-wrapper">
-        <!-- Navigation -->
-        <nav id="navbar">
-            <div class="nav-inner">
-                <a href="https://mibenglish.com" class="brand">mibenglish</a>
-                <a href="https://mibenglish.com" class="back-link">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M19 12H5M12 19l-7-7 7-7"/>
-                    </svg>
-                    Kembali ke Beranda
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-earth-cream/90 backdrop-blur-md border-b border-forest-200">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="https://mibenglish.com" class="flex items-center gap-2 group" aria-label="Kembali ke mibenglish">
+                <svg class="w-8 h-8 text-forest-700 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                <span class="font-display font-semibold text-forest-900 text-lg">mibenglish</span>
+            </a>
+            <span class="text-sm text-forest-600 font-medium hidden sm:block">Episode 12</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+        <!-- Floating particles container -->
+        <div id="particles" class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+        
+        <!-- Falling leaves -->
+        <div id="leaves" class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true"></div>
+        
+        <!-- Decorative circles -->
+        <div class="absolute top-20 right-10 w-64 h-64 rounded-full bg-forest-600/20 blur-3xl" aria-hidden="true"></div>
+        <div class="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-earth-gold/10 blur-3xl" aria-hidden="true"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <div class="reveal">
+                <span class="inline-block px-4 py-1.5 bg-earth-gold/20 text-earth-gold rounded-full text-sm font-medium mb-6 tracking-wide">
+                    MODULE 1
+                </span>
+            </div>
+            
+            <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-forest-100 mb-6 leading-tight reveal reveal-delay-1">
+                Basic Logic &<br>
+                <span class="text-earth-gold">Existence</span>
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-forest-200 mb-8 max-w-2xl mx-auto reveal reveal-delay-2">
+                Memahami fondasi berpikir logis melalui konsep <em>Symbol & Meaning</em> — jembatan antara dunia nyata dan dunia pikiran.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center reveal reveal-delay-3">
+                <a href="#content" class="btn-primary px-8 py-4 rounded-xl text-forest-950 font-semibold text-lg">
+                    Mulai Belajar
+                </a>
+                <a href="#game" class="px-8 py-4 rounded-xl border-2 border-forest-400 text-forest-100 font-semibold text-lg hover:bg-forest-800/50 transition-colors">
+                    Langsung ke Game
                 </a>
             </div>
-        </nav>
-        
-        <!-- Header -->
-        <header>
-            <span class="episode-badge">Episode 12 - Module 2</span>
-            <h1>Basic Logic & Existence</h1>
-            <p class="subtitle">Memahami konsep keberadaan dan logika dasar dalam Bahasa Inggris melalui pendekatan imajinatif</p>
-            <div class="meta-info">
-                <span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-                    </svg>
-                    15 menit baca
-                </span>
-                <span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-                    </svg>
-                    oleh bangmik
-                </span>
-                <span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-                    </svg>
-                    15 Januari 2025
-                </span>
+            
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator reveal reveal-delay-4">
+                <svg class="w-6 h-10 text-forest-400" fill="none" stroke="currentColor" viewBox="0 0 24 40" aria-hidden="true">
+                    <rect x="1" y="1" width="22" height="38" rx="11" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="3" fill="currentColor" class="animate-pulse"/>
+                </svg>
             </div>
-        </header>
-        
+        </div>
+    </header>
+
+    <main>
+        <!-- Ad Slot 1 -->
+        <aside class="max-w-4xl mx-auto px-4 py-6" aria-label="Iklan">
+            <div class="ad-placeholder rounded-xl h-24 flex items-center justify-center text-forest-600 text-sm">
+                Advertisement Slot 1 — Google AdSense Placeholder
+            </div>
+        </aside>
+
         <!-- Main Content -->
-        <main>
-            <article>
-                <!-- Section 1: Introduction -->
-                <section id="intro">
-                    <h2>
-                        <span class="icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
-                            </svg>
-                        </span>
-                        Mengapa Kita Belajar Ini?
+        <article id="content" class="max-w-4xl mx-auto px-4 py-12">
+            <!-- Introduction -->
+            <section class="mb-16">
+                <header class="mb-8">
+                    <span class="text-earth-gold font-medium tracking-wider text-sm">PEMBUKA</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-forest-900 mt-2">
+                        Mengapa Kita Perlu Memahami Simbol?
                     </h2>
-                    
-                    <p>Pernahkah kamu berpikir, bagaimana cara menjelaskan bahwa <em>sesuatu itu ada</em>? Atau bagaimana mengatakan bahwa <em>seseorang itu tidak ada</em>? Dalam Bahasa Inggris, konsep ini disebut <span class="term">Existence</span> atau keberadaan.</p>
-                    
-                    <div class="highlight-box">
-                        <p><strong>Pikirkan ini:</strong> Kamu berdiri di tengah hutan. Di sekitarmu ada pohon, ada burung, ada udara. Tapi bagaimana kamu mengatakan semua itu dalam Bahasa Inggris? Itulah yang akan kita pelajari.</p>
-                    </div>
-                    
-                    <p>Modul ini dirancang untuk membantumu memahami logika dasar di balik kalimat-kalimat sederhana tentang keberadaan. Kita akan mulai dari akar masalah: <strong>mengapa ini sering membingungkan?</strong></p>
-                </section>
+                </header>
                 
-                <!-- Ad Slot 1 -->
-                <div class="ad-slot" style="display:none">
-                    <p>Slot Iklan - Google AdSense</p>
-                    <p style="font-size: 0.75rem; color: var(--fg-muted);">Placeholder untuk iklan responsif</p>
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-lg text-forest-800 leading-relaxed mb-6 reveal">
+                        Setiap hari, kita menggunakan kata-kata. Kita berbicara, menulis, membaca. Tapi pernahkah kamu bertanya: <strong class="text-forest-900">apakah kata itu sendiri?</strong> Apakah kata "apel" yang kamu ucapkan sama dengan buah apel yang bisa kamu makan?
+                    </p>
+                    
+                    <p class="text-lg text-forest-800 leading-relaxed mb-6 reveal reveal-delay-1">
+                        Pertanyaan sederhana ini membuka pintu menuju pemahaman yang sangat dalam tentang bagaimana pikiran manusia bekerja. Di episode ini, kita akan menjelajahi dunia <em>symbol</em> (simbol) dan <em>meaning</em> (makna) — dua konsep fundamental yang menjadi dasar semua bahasa dan logika.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Divider -->
+            <div class="divider-leaf text-forest-400 my-12 reveal" aria-hidden="true">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
+                </svg>
+            </div>
+
+            <!-- Section 1: Apa Itu Simbol -->
+            <section class="mb-16">
+                <header class="mb-8">
+                    <span class="text-earth-gold font-medium tracking-wider text-sm">BAGIAN 1</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-forest-900 mt-2">
+                        Apa Itu Simbol?
+                    </h2>
+                </header>
+                
+                <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-forest-100 mb-8 reveal">
+                    <p class="text-lg text-forest-800 leading-relaxed mb-6">
+                        <strong class="text-forest-900">Simbol</strong> (<em>symbol</em>) adalah tanda yang mewakili sesuatu yang lain. Tanda ini bisa berupa kata, gambar, suara, atau gerakan. Yang penting, simbol BUKANlah benda yang diwakilinya.
+                    </p>
+                    
+                    <div class="bg-earth-cream rounded-xl p-6 border-l-4 border-earth-gold">
+                        <p class="text-forest-800 font-medium mb-2">Bayangkan ini:</p>
+                        <p class="text-forest-700">
+                            Kamu melihat kata "<span class="text-forest-900 font-semibold">KUCING</span>" di atas kertas. Kata itu adalah simbol. Kamu tidak bisa mengelus-elus kata itu. Kata itu tidak berbulu, tidak bersuara, tidak bernafas. Tapi ketika kamu membacanya, dalam pikiranmu muncul gambaran seekor kucing yang lucu.
+                        </p>
+                    </div>
                 </div>
                 
-                <!-- Section 2: Root Problem -->
-                <section id="root">
-                    <h2>
-                        <span class="icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                <!-- Concept Cards -->
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="concept-card bg-gradient-to-br from-forest-50 to-forest-100 rounded-2xl p-6 border border-forest-200 reveal reveal-delay-1">
+                        <div class="w-12 h-12 rounded-xl bg-forest-600 flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
                             </svg>
-                        </span>
-                        Akar Masalah: Terjemahan Harfiah
-                    </h2>
-                    
-                    <p>Banyak pembelajar pemula membuat kesalahan karena menerjemahkan kata per kata dari Bahasa Indonesia. Lihat contoh berikut:</p>
-                    
-                    <div class="comparison-grid">
-                        <div class="comparison-card">
-                            <div class="title">Salah (Terjemahan Harfiah)</div>
-                            <div class="content">"There have a tree"</div>
                         </div>
-                        <div class="comparison-card">
-                            <div class="title">Benar</div>
-                            <div class="content">"There is a tree"</div>
-                        </div>
+                        <h3 class="font-display text-xl font-bold text-forest-900 mb-2">Kata sebagai Simbol</h3>
+                        <p class="text-forest-700">
+                            Kata adalah simbol suara atau tulisan. Kata "meja" bukanlah meja sungguhan. Kata itu hanya mewakili konsep meja dalam pikiran kita.
+                        </p>
                     </div>
                     
-                    <h3>Mengapa Terjadi Kesalahan?</h3>
-                    
-                    <p>Dalam Bahasa Indonesia, kita mengatakan <em>"Di sana ada pohon"</em>. Otak kita mencoba menerjemahkan "ada" menjadi "have" karena "ada" sering diasosiasikan dengan kepemilikan.</p>
-                    
-                    <div class="example-box">
-                        <div class="label">Kunci Pemahaman</div>
-                        <code>"There is" = "Ada" (menyatakan keberadaan)</code>
-                        <p class="translation">Bukan kepemilikan, bukan kepunyaan, tapi keberadaan.</p>
-                    </div>
-                    
-                    <p>Inilah mengapa kita perlu memahami <span class="term">Basic Logic</span> — logika dasar tentang bagaimana Bahasa Inggris melihat dunia.</p>
-                </section>
-                
-                <!-- Section 3: There Is / There Are -->
-                <section id="there-is">
-                    <h2>
-                        <span class="icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    <div class="concept-card bg-gradient-to-br from-earth-gold/10 to-earth-amber/20 rounded-2xl p-6 border border-earth-gold/30 reveal reveal-delay-2">
+                        <div class="w-12 h-12 rounded-xl bg-earth-gold flex items-center justify-center mb-4">
+                            <svg class="w-6 h-6 text-forest-950" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                             </svg>
-                        </span>
-                        Konsep "There Is" dan "There Are"
-                    </h2>
-                    
-                    <p>Mari kita bangun pemahaman dengan imajinasi. Bayangkan kamu adalah seorang pemandu wisata yang sedang menunjukkan pemandangan kepada turis.</p>
-                    
-                    <div class="highlight-box">
-                        <p><strong>Aturan Emas:</strong> <span class="term">There is</span> untuk satu benda. <span class="term">There are</span> untuk banyak benda.</p>
-                    </div>
-                    
-                    <h3>Contoh dengan "There Is"</h3>
-                    
-                    <div class="example-box">
-                        <div class="label">Singular (Tunggal)</div>
-                        <code>There is a bird on the branch.</code>
-                        <p class="translation">Ada seekor burung di dahan.</p>
-                    </div>
-                    
-                    <div class="example-box">
-                        <div class="label">Singular (Tunggal)</div>
-                        <code>There is water in the glass.</code>
-                        <p class="translation">Ada air di dalam gelas.</p>
-                    </div>
-                    
-                    <h3>Contoh dengan "There Are"</h3>
-                    
-                    <div class="example-box">
-                        <div class="label">Plural (Jamak)</div>
-                        <code>There are many stars in the sky.</code>
-                        <p class="translation">Ada banyak bintang di langit.</p>
-                    </div>
-                    
-                    <div class="example-box">
-                        <div class="label">Plural (Jamak)</div>
-                        <code>There are three books on the table.</code>
-                        <p class="translation">Ada tiga buku di atas meja.</p>
-                    </div>
-                </section>
-                
-                <!-- Ad Slot 2 -->
-                <div class="ad-slot" style="display:none">
-                    <p>Slot Iklan - Google AdSense</p>
-                    <p style="font-size: 0.75rem; color: var(--fg-muted);">Placeholder untuk iklan responsif</p>
-                </div>
-                
-                <!-- Section 4: Negative Form -->
-                <section id="negative">
-                    <h2>
-                        <span class="icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
-                            </svg>
-                        </span>
-                        Menyatakan Ketidakberadaan
-                    </h2>
-                    
-                    <p>Sekarang, bagaimana jika kita ingin mengatakan bahwa sesuatu <em>tidak ada</em>? Logikanya sederhana: tambahkan "not" setelah "is" atau "are".</p>
-                    
-                    <div class="comparison-grid">
-                        <div class="comparison-card">
-                            <div class="title">Positif</div>
-                            <div class="content">There is a solution.</div>
                         </div>
-                        <div class="comparison-card">
-                            <div class="title">Negatif</div>
-                            <div class="content">There is not a solution.</div>
-                        </div>
-                    </div>
-                    
-                    <h3>Bentuk Singkat (Contraction)</h3>
-                    
-                    <p>Dalam percakapan sehari-hari, penutur asli sering menggunakan bentuk singkat:</p>
-                    
-                    <div class="example-box">
-                        <div class="label">Contraction</div>
-                        <code>There isn't any milk in the fridge.</code>
-                        <p class="translation">Tidak ada susu di kulkas.</p>
-                    </div>
-                    
-                    <div class="example-box">
-                        <div class="label">Contraction</div>
-                        <code>There aren't enough chairs.</code>
-                        <p class="translation">Tidak ada cukup kursi.</p>
-                    </div>
-                </section>
-                
-                <!-- Section 5: Questions -->
-                <section id="questions">
-                    <h2>
-                        <span class="icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><point cx="12" cy="17"/>
-                            </svg>
-                        </span>
-                        Mengajukan Pertanyaan
-                    </h2>
-                    
-                    <p>Logika pertanyaan dalam Bahasa Inggris membalik urutan kata. Untuk kalimat keberadaan, kita memindahkan "there" ke belakang "is" atau "are".</p>
-                    
-                    <div class="highlight-box">
-                        <p><strong>Formula:</strong> Is/Are + there + subjek?</p>
-                    </div>
-                    
-                    <div class="example-box">
-                        <div class="label">Pertanyaan</div>
-                        <code>Is there a bathroom here?</code>
-                        <p class="translation">Apakah ada kamar mandi di sini?</p>
-                    </div>
-                    
-                    <div class="example-box">
-                        <div class="label">Pertanyaan</div>
-                        <code>Are there any questions?</code>
-                        <p class="translation">Apakah ada pertanyaan?</p>
-                    </div>
-                    
-                    <h3>Jawaban Singkat</h3>
-                    
-                    <div class="comparison-grid">
-                        <div class="comparison-card">
-                            <div class="title">Ya</div>
-                            <div class="content">Yes, there is. / Yes, there are.</div>
-                        </div>
-                        <div class="comparison-card">
-                            <div class="title">Tidak</div>
-                            <div class="content">No, there isn't. / No, there aren't.</div>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- Ad Slot 3 -->
-                <div class="ad-slot" style="display:none">
-                    <p>Slot Iklan - Google AdSense</p>
-                    <p style="font-size: 0.75rem; color: var(--fg-muted);">Placeholder untuk iklan responsif</p>
-                </div>
-                
-                <!-- Section 6: Existence Verbs -->
-                <section id="existence-verbs">
-                    <h2>
-                        <span class="icon">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                            </svg>
-                        </span>
-                        Kata Kerja Keberadaan Lainnya
-                    </h2>
-                    
-                    <p>Selain "there is/are", ada kata kerja lain yang menyatakan keberadaan. Mari kita eksplorasi:</p>
-                    
-                    <h3>Exist</h3>
-                    <div class="example-box">
-                        <div class="label">Formal</div>
-                        <code>Life exists on Earth.</code>
-                        <p class="translation">Kehidupan ada di Bumi.</p>
-                    </div>
-                    
-                    <h3>Appear / Seem</h3>
-                    <div class="example-box">
-                        <div class="label">Kemunculan</div>
-                        <code>A solution appears impossible.</code>
-                        <p class="translation">Solusi tampak mustahil.</p>
-                    </div>
-                    
-                    <h3>Remain / Stay</h3>
-                    <div class="example-box">
-                        <div class="label">Keberlangsungan</div>
-                        <code>Only three students remain.</code>
-                        <p class="translation">Hanya tersisa tiga siswa.</p>
-                    </div>
-                </section>
-            </article>
-            
-            <!-- Interactive Game Section -->
-            <div class="game-section" id="game-section">
-                <div class="game-content">
-                    <div class="game-header">
-                        <h2>
-                            <span class="icon">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/>
-                                </svg>
-                            </span>
-                            Quest: Uji Pemahaman
-                        </h2>
-                        <p style="color: var(--fg-muted);">Jawab pertanyaan berikut untuk menguji pemahamanmu</p>
-                    </div>
-                    
-                    <div class="game-score">
-                        <div class="score-item">
-                            <div class="value" id="current-score">0</div>
-                            <div class="label">Skor</div>
-                        </div>
-                        <div class="score-item">
-                            <div class="value" id="current-question">1</div>
-                            <div class="label">dari 5</div>
-                        </div>
-                    </div>
-                    
-                    <div class="quiz-container" id="quiz-container">
-                        <!-- Quiz content will be rendered here -->
+                        <h3 class="font-display text-xl font-bold text-forest-900 mb-2">Kekuatan Simbol</h3>
+                        <p class="text-forest-700">
+                            Dengan simbol, kita bisa membicarakan hal yang tidak ada di depan mata. Kita bisa membicarasi masa lalu, masa depan, bahkan hal yang tidak nyata seperti "keadilan" atau "cinta".
+                        </p>
                     </div>
                 </div>
+            </section>
+
+            <!-- Ad Slot 2 -->
+            <aside class="my-12" aria-label="Iklan">
+                <div class="ad-placeholder rounded-xl h-24 flex items-center justify-center text-forest-600 text-sm">
+                    Advertisement Slot 2 — Google AdSense Placeholder
+                </div>
+            </aside>
+
+            <!-- Section 2: Kata vs Benda -->
+            <section class="mb-16">
+                <header class="mb-8">
+                    <span class="text-earth-gold font-medium tracking-wider text-sm">BAGIAN 2</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-forest-900 mt-2">
+                        Kata Bukan Benda
+                    </h2>
+                </header>
+                
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-lg text-forest-800 leading-relaxed mb-6 reveal">
+                        Ini adalah perbedaan paling fundamental yang harus dipahami: <strong class="text-forest-900">kata (word) dan benda (thing) adalah dua hal yang berbeda</strong>. Kebingungan antara keduanya adalah sumber banyak kesalahan berpikir.
+                    </p>
+                </div>
+                
+                <!-- Comparison Table -->
+                <div class="bg-white rounded-2xl shadow-lg border border-forest-100 overflow-hidden mb-8 reveal">
+                    <div class="grid grid-cols-3 bg-forest-700 text-forest-100">
+                        <div class="p-4 font-semibold text-center">Aspek</div>
+                        <div class="p-4 font-semibold text-center">Kata (Word)</div>
+                        <div class="p-4 font-semibold text-center">Benda (Thing)</div>
+                    </div>
+                    <div class="divide-y divide-forest-100">
+                        <div class="grid grid-cols-3">
+                            <div class="p-4 text-forest-600 font-medium">Sifat</div>
+                            <div class="p-4 text-forest-800">Abstrak, simbolis</div>
+                            <div class="p-4 text-forest-800">Nyata, konkret</div>
+                        </div>
+                        <div class="grid grid-cols-3">
+                            <div class="p-4 text-forest-600 font-medium">Dapat disentuh?</div>
+                            <div class="p-4 text-forest-800">Tidak</div>
+                            <div class="p-4 text-forest-800">Ya</div>
+                        </div>
+                        <div class="grid grid-cols-3">
+                            <div class="p-4 text-forest-600 font-medium">Ada di mana?</div>
+                            <div class="p-4 text-forest-800">Dalam pikiran & bahasa</div>
+                            <div class="p-4 text-forest-800">Di dunia fisik</div>
+                        </div>
+                        <div class="grid grid-cols-3">
+                            <div class="p-4 text-forest-600 font-medium">Contoh</div>
+                            <div class="p-4 text-forest-800">"Pohon" (kata)</div>
+                            <div class="p-4 text-forest-800">Pohon sungguhan</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-forest-900 rounded-2xl p-6 sm:p-8 text-forest-100 reveal reveal-delay-1">
+                    <h3 class="font-display text-xl font-bold text-earth-gold mb-4">Pikirkan Ini</h3>
+                    <p class="text-forest-200 leading-relaxed">
+                        Jika kamu mengucapkan kata "bomb" (bom) dengan keras, apakah akan ada ledakan? Tentu tidak. Karena kata "bomb" bukanlah bom sungguhan. Kata itu tidak memiliki kekuatan untuk meledak. Tapi kata itu memiliki kekuatan lain: kekuatan untuk membuat orang membayangkan ledakan, merasa takut, atau mengingat pengalaman traumatis.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 3: Representasi Mental -->
+            <section class="mb-16">
+                <header class="mb-8">
+                    <span class="text-earth-gold font-medium tracking-wider text-sm">BAGIAN 3</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-forest-900 mt-2">
+                        Representasi Mental
+                    </h2>
+                </header>
+                
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-lg text-forest-800 leading-relaxed mb-6 reveal">
+                        <strong class="text-forest-900">Representasi mental</strong> (<em>mental representation</em>) adalah gambaran atau konsep yang terbentuk dalam pikiran kita ketika kita berpikir tentang sesuatu. Ini adalah "jembatan" antara simbol dan benda nyata.
+                    </p>
+                </div>
+                
+                <!-- Flow Diagram -->
+                <div class="bg-gradient-to-r from-forest-50 via-earth-cream to-forest-50 rounded-2xl p-6 sm:p-8 mb-8 reveal">
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+                        <div class="text-center">
+                            <div class="w-20 h-20 rounded-full bg-forest-600 flex items-center justify-center mx-auto mb-2">
+                                <span class="text-2xl font-bold text-white">A</span>
+                            </div>
+                            <p class="text-forest-800 font-medium">Benda Nyata</p>
+                            <p class="text-forest-600 text-sm">(Thing)</p>
+                        </div>
+                        
+                        <svg class="w-8 h-8 text-earth-gold rotate-90 sm:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                        
+                        <div class="text-center">
+                            <div class="w-20 h-20 rounded-full bg-earth-gold flex items-center justify-center mx-auto mb-2">
+                                <span class="text-2xl font-bold text-forest-950">B</span>
+                            </div>
+                            <p class="text-forest-800 font-medium">Representasi Mental</p>
+                            <p class="text-forest-600 text-sm">(Mental Image)</p>
+                        </div>
+                        
+                        <svg class="w-8 h-8 text-earth-gold rotate-90 sm:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                        
+                        <div class="text-center">
+                            <div class="w-20 h-20 rounded-full bg-forest-800 flex items-center justify-center mx-auto mb-2">
+                                <span class="text-2xl font-bold text-white">C</span>
+                            </div>
+                            <p class="text-forest-800 font-medium">Simbol/Kata</p>
+                            <p class="text-forest-600 text-sm">(Word/Symbol)</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-center text-forest-700 mt-6 text-sm">
+                        Ketika kita melihat benda nyata, otak kita membuat representasi mental. Kemudian kita menemukan kata untuk mewakili representasi itu.
+                    </p>
+                </div>
+                
+                <div class="grid sm:grid-cols-3 gap-4 reveal reveal-delay-1">
+                    <div class="bg-white rounded-xl p-5 border border-forest-200 text-center">
+                        <div class="text-3xl mb-2" aria-hidden="true">
+                            <svg class="w-10 h-10 mx-auto text-forest-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                        </div>
+                        <p class="text-forest-800 font-medium">Mata Melihat</p>
+                        <p class="text-forest-600 text-sm">Objek fisik</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-5 border border-forest-200 text-center">
+                        <div class="text-3xl mb-2" aria-hidden="true">
+                            <svg class="w-10 h-10 mx-auto text-earth-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <p class="text-forest-800 font-medium">Otak Memproses</p>
+                        <p class="text-forest-600 text-sm">Membuat gambaran</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-5 border border-forest-200 text-center">
+                        <div class="text-3xl mb-2" aria-hidden="true">
+                            <svg class="w-10 h-10 mx-auto text-forest-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                        </div>
+                        <p class="text-forest-800 font-medium">Mulut Berbicara</p>
+                        <p class="text-forest-600 text-sm">Menggunakan kata</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ad Slot 3 -->
+            <aside class="my-12" aria-label="Iklan">
+                <div class="ad-placeholder rounded-xl h-24 flex items-center justify-center text-forest-600 text-sm">
+                    Advertisement Slot 3 — Google AdSense Placeholder
+                </div>
+            </aside>
+
+            <!-- Section 4: Konsep Sebelum Bahasa -->
+            <section class="mb-16">
+                <header class="mb-8">
+                    <span class="text-earth-gold font-medium tracking-wider text-sm">BAGIAN 4</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-forest-900 mt-2">
+                        Konsep Sebelum Bahasa
+                    </h2>
+                </header>
+                
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-lg text-forest-800 leading-relaxed mb-6 reveal">
+                        Pertanyaan menarik: <strong class="text-forest-900">Apakah kita bisa memiliki konsep tanpa bahasa?</strong> Jawabannya: YA! Bayangkan bayi yang belum bisa berbicara. Bayi itu bisa mengenali wajah ibunya, tahu ketika dia lapar, dan memahami bahwa menangis akan membuat datang pertolongan.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-forest-800 to-forest-900 rounded-2xl p-6 sm:p-8 text-forest-100 reveal">
+                    <h3 class="font-display text-xl font-bold text-earth-gold mb-4">Eksperimen Pikiran</h3>
+                    <p class="text-forest-200 leading-relaxed mb-4">
+                        Cobalah untuk membayangkan sesuatu yang TIDAK memiliki nama dalam bahasa apapun. Sulit, bukan? Tapi ini bukan berarti konsep tanpa bahasa tidak mungkin ada.
+                    </p>
+                    <p class="text-forest-200 leading-relaxed">
+                        Seekor anjing tidak memiliki bahasa seperti manusia. Tapi anjing itu tahu mana tuanannya, mana makanannya, mana bahaya. Anjing itu memiliki konsep — representasi mental — tentang dunianya.
+                    </p>
+                </div>
+                
+                <!-- Key Points -->
+                <div class="mt-8 space-y-4">
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-forest-100 reveal reveal-delay-1">
+                        <div class="w-8 h-8 rounded-full bg-forest-100 flex items-center justify-center flex-shrink-0">
+                            <span class="text-forest-700 font-bold">1</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-forest-900">Konsep ada lebih dulu</h4>
+                            <p class="text-forest-700 text-sm">Sebelum manusia menciptakan kata "pisang", konsep tentang buah kuning yang manis itu sudah ada dalam pengalaman manusia.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-forest-100 reveal reveal-delay-2">
+                        <div class="w-8 h-8 rounded-full bg-forest-100 flex items-center justify-center flex-shrink-0">
+                            <span class="text-forest-700 font-bold">2</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-forest-900">Bahasa adalah label</h4>
+                            <p class="text-forest-700 text-sm">Kata-kata adalah label yang kita tempelkan pada konsep-konsep yang sudah ada. Label ini membantu kita berkomunikasi.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-forest-100 reveal reveal-delay-3">
+                        <div class="w-8 h-8 rounded-full bg-forest-100 flex items-center justify-center flex-shrink-0">
+                            <span class="text-forest-700 font-bold">3</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-forest-900">Bahasa memperluas konsep</h4>
+                            <p class="text-forest-700 text-sm">Setelah kita memiliki bahasa, kita bisa menciptakan konsep baru yang lebih kompleks dan abstrak.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Summary -->
+            <section class="mb-16">
+                <header class="mb-8">
+                    <span class="text-earth-gold font-medium tracking-wider text-sm">RINGKASAN</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-forest-900 mt-2">
+                        Poin-Poin Penting
+                    </h2>
+                </header>
+                
+                <div class="bg-earth-cream rounded-2xl p-6 sm:p-8 border-2 border-earth-gold/30">
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-forest-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <span class="text-forest-800"><strong class="text-forest-900">Simbol</strong> adalah tanda yang mewakili sesuatu yang lain, bukan benda itu sendiri.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-forest-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <span class="text-forest-800"><strong class="text-forest-900">Kata ≠ Benda</strong> — kata adalah simbol, benda adalah realitas fisik.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-forest-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <span class="text-forest-800"><strong class="text-forest-900">Representasi mental</strong> adalah jembatan antara simbol dan realitas.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-forest-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <span class="text-forest-800"><strong class="text-forest-900">Konsep ada sebelum bahasa</strong> — bahasa memberi label pada konsep yang sudah ada.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <!-- Interactive Game Section -->
+        <section id="game" class="bg-forest-900 py-16 sm:py-24 relative overflow-hidden">
+            <!-- Background decoration -->
+            <div class="absolute inset-0 opacity-10" aria-hidden="true">
+                <div class="absolute top-10 left-10 w-40 h-40 rounded-full bg-earth-gold blur-3xl"></div>
+                <div class="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-forest-400 blur-3xl"></div>
             </div>
             
-            <!-- Ad Slot 4 -->
-            <div class="ad-slot" style="display:none">
-                <p>Slot Iklan - Google AdSense</p>
-                <p style="font-size: 0.75rem; color: var(--fg-muted);">Placeholder untuk iklan responsif</p>
+            <div class="max-w-4xl mx-auto px-4 relative z-10">
+                <header class="text-center mb-12">
+                    <span class="text-earth-gold font-medium tracking-wider text-sm">INTERAKTIF</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-forest-100 mt-2">
+                        Quest: Simbol & Makna
+                    </h2>
+                    <p class="text-forest-300 mt-4 max-w-xl mx-auto">
+                        Uji pemahamanmu! Cocokkan setiap simbol dengan jenis dan maknanya yang benar.
+                    </p>
+                </header>
+                
+                <!-- Game Container -->
+                <div class="bg-forest-800/50 backdrop-blur rounded-2xl p-6 sm:p-8 border border-forest-700">
+                    <!-- Progress -->
+                    <div class="mb-6">
+                        <div class="flex justify-between text-sm text-forest-300 mb-2">
+                            <span>Progress</span>
+                            <span id="progressText">0/5</span>
+                        </div>
+                        <div class="h-2 bg-forest-700 rounded-full overflow-hidden">
+                            <div id="progressBar" class="progress-fill h-full bg-gradient-to-r from-earth-gold to-earth-amber rounded-full" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Question Area -->
+                    <div id="questionArea" class="mb-8">
+                        <p class="text-forest-200 text-center mb-4">Klik "Mulai Quest" untuk memulai</p>
+                    </div>
+                    
+                    <!-- Answer Options -->
+                    <div id="answersArea" class="grid grid-cols-2 gap-3 mb-6">
+                        <!-- Will be populated by JS -->
+                    </div>
+                    
+                    <!-- Feedback -->
+                    <div id="feedback" class="text-center py-4 rounded-xl mb-6 hidden">
+                        <!-- Feedback will appear here -->
+                    </div>
+                    
+                    <!-- Controls -->
+                    <div class="flex justify-center gap-4">
+                        <button id="startBtn" class="btn-primary px-8 py-3 rounded-xl text-forest-950 font-semibold" aria-label="Mulai game">
+                            Mulai Quest
+                        </button>
+                        <button id="nextBtn" class="px-8 py-3 rounded-xl bg-forest-700 text-forest-100 font-semibold hover:bg-forest-600 transition-colors hidden" aria-label="Soal berikutnya">
+                            Soal Berikutnya
+                        </button>
+                        <button id="restartBtn" class="btn-primary px-8 py-3 rounded-xl text-forest-950 font-semibold hidden" aria-label="Main lagi">
+                            Main Lagi
+                        </button>
+                    </div>
+                    
+                    <!-- Score Display -->
+                    <div id="scoreDisplay" class="text-center mt-6 hidden">
+                        <p class="text-forest-300">Skor Akhir</p>
+                        <p id="finalScore" class="font-display text-4xl font-bold text-earth-gold"></p>
+                    </div>
+                </div>
             </div>
-        </main>
-        
-        <!-- Footer -->
-        <footer>
-            <div class="footer-brand">mibenglish</div>
-            <p class="footer-tagline">Belajar Bahasa Inggris dengan Cara yang Menyenangkan</p>
-            <div class="footer-links">
-                <a href="https://mibenglish.com">Beranda</a>
-                <a href="https://mibenglish.com/episodes">Semua Episode</a>
-                <a href="https://mibenglish.com/about">Tentang Kami</a>
-                <a href="https://mibenglish.com/contact">Kontak</a>
+        </section>
+
+        <!-- Ad Slot 4 -->
+        <aside class="max-w-4xl mx-auto px-4 py-6" aria-label="Iklan">
+            <div class="ad-placeholder rounded-xl h-24 flex items-center justify-center text-forest-600 text-sm">
+                Advertisement Slot 4 — Google AdSense Placeholder
             </div>
-            <p class="copyright">2025 mibenglish. Dibuat oleh bangmik. Seluruh hak cipta dilindungi.</p>
-        </footer>
-    </div>
-    
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-forest-950 text-forest-300 py-12">
+        <div class="max-w-4xl mx-auto px-4">
+            <!-- Brand -->
+            <div class="text-center mb-8">
+                <span class="font-display text-4xl sm:text-5xl font-bold text-forest-100">mibenglish</span>
+                <p class="text-forest-400 mt-2">Belajar Bahasa dengan Cara yang Menyenangkan</p>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="flex justify-center gap-6 mb-8" aria-label="Navigasi footer">
+                <a href="https://mibenglish.com" class="text-forest-300 hover:text-earth-gold transition-colors">Beranda</a>
+                <a href="https://mibenglish.com/episodes" class="text-forest-300 hover:text-earth-gold transition-colors">Semua Episode</a>
+                <a href="https://mibenglish.com/about" class="text-forest-300 hover:text-earth-gold transition-colors">Tentang</a>
+            </nav>
+            
+            <!-- Ad Slot 5 -->
+            <div class="ad-placeholder rounded-xl h-20 flex items-center justify-center text-forest-500 text-sm mb-8">
+                Advertisement Slot 5 — Google AdSense Placeholder
+            </div>
+            
+            <!-- Copyright -->
+            <div class="text-center text-forest-500 text-sm border-t border-forest-800 pt-6">
+                <p>&copy; 2024 mibenglish oleh bangmik. Hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
         // Initialize variables first
-        const quizData = [
-            {
-                question: 'Bagaimana cara yang benar untuk mengatakan "Ada kucing di taman"?',
-                options: [
-                    'There have a cat in the garden',
-                    'There is a cat in the garden',
-                    'There are a cat in the garden',
-                    'A cat is there in garden'
-                ],
-                correct: 1,
-                explanation: '"There is" digunakan untuk satu benda (singular). "Cat" adalah benda tunggal.'
-            },
-            {
-                question: 'Pilih kalimat yang BENAR untuk menyatakan "Ada banyak bunga di lapangan"',
-                options: [
-                    'There is many flowers in the field',
-                    'There have many flowers in the field',
-                    'There are many flowers in the field',
-                    'Many flowers is there in the field'
-                ],
-                correct: 2,
-                explanation: '"There are" digunakan untuk benda jamak (plural). "Flowers" adalah benda jamak.'
-            },
-            {
-                question: 'Bagaimana bentuk negatif dari "There is a problem"?',
-                options: [
-                    'There no is a problem',
-                    'There is no a problem',
-                    'There isn\'t a problem',
-                    'There not is a problem'
-                ],
-                correct: 2,
-                explanation: 'Untuk membuat negatif, tambahkan "not" setelah "is". Bentuk singkatnya adalah "isn\'t".'
-            },
-            {
-                question: 'Pertanyaan yang benar untuk "Apakah ada restoran di dekat sini?"',
-                options: [
-                    'There is a restaurant near here?',
-                    'Is there a restaurant near here?',
-                    'Does there a restaurant near here?',
-                    'Are there a restaurant near here?'
-                ],
-                correct: 1,
-                explanation: 'Untuk bertanya, balik urutan: "Is there" + subjek. "Restaurant" adalah singular, jadi gunakan "Is".'
-            },
-            {
-                question: 'Kalimat mana yang menggunakan "there are" dengan benar?',
-                options: [
-                    'There are a book on the table',
-                    'There are water in the glass',
-                    'There are three birds on the tree',
-                    'There are a student in the class'
-                ],
-                correct: 2,
-                explanation: '"There are" harus diikuti oleh benda jamak. "Three birds" adalah jamak, yang lainnya singular.'
-            }
-        ];
+        const particlesContainer = document.getElementById('particles');
+        const leavesContainer = document.getElementById('leaves');
+        const questionArea = document.getElementById('questionArea');
+        const answersArea = document.getElementById('answersArea');
+        const feedback = document.getElementById('feedback');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const startBtn = document.getElementById('startBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const restartBtn = document.getElementById('restartBtn');
+        const scoreDisplay = document.getElementById('scoreDisplay');
+        const finalScore = document.getElementById('finalScore');
         
+        // Game state
         let currentQuestion = 0;
         let score = 0;
         let answered = false;
         
-        // DOM elements - get after DOM is ready
-        let quizContainer = null;
-        let scoreDisplay = null;
-        let questionDisplay = null;
+        // Quest data
+        const questData = [
+            {
+                symbol: '"RUMAH"',
+                question: 'Apa yang dimaksud dengan kata "RUMAH"?',
+                options: [
+                    { text: 'Bangunan fisik untuk tinggal', correct: false },
+                    { text: 'Simbol yang mewakili konsep tempat tinggal', correct: true },
+                    { text: 'Gambar rumah di kertas', correct: false },
+                    { text: 'Suara yang keluar dari mulut', correct: false }
+                ],
+                explanation: 'Kata "RUMAH" adalah simbol. Kata ini mewakili konsep tempat tinggal dalam pikiran kita, bukan bangunan fisiknya.'
+            },
+            {
+                symbol: 'Kata "apel"',
+                question: 'Kata "apel" dan buah apel yang bisa dimakan adalah...',
+                options: [
+                    { text: 'Hal yang sama', correct: false },
+                    { text: 'Dua hal berbeda', correct: true },
+                    { text: 'Saling terkait tapi berbeda', correct: false },
+                    { text: 'Tidak ada hubungannya', correct: false }
+                ],
+                explanation: 'Kata "apel" adalah simbol, sedangkan buah apel adalah benda nyata. Mereka terkait tapi merupakan dua hal yang berbeda.'
+            },
+            {
+                symbol: 'Representasi Mental',
+                question: 'Representasi mental terbentuk ketika...',
+                options: [
+                    { text: 'Kita menulis kata', correct: false },
+                    { text: 'Kita berbicara', correct: false },
+                    { text: 'Otak memproses pengalaman indera', correct: true },
+                    { text: 'Kita mendengar suara', correct: false }
+                ],
+                explanation: 'Representasi mental terbentuk ketika otak memproses informasi dari indera kita dan membuat gambaran mental.'
+            },
+            {
+                symbol: 'Bayi & Bahasa',
+                question: 'Mengapa bayi bisa mengenali ibunya tanpa bisa berbicara?',
+                options: [
+                    { text: 'Karena bayi sudah punya bahasa', correct: false },
+                    { text: 'Karena konsep ada sebelum bahasa', correct: true },
+                    { text: 'Karena bayi tidak perlu bahasa', correct: false },
+                    { text: 'Karena itu naluri saja', correct: false }
+                ],
+                explanation: 'Bayi memiliki konsep tentang wajah ibunya tanpa perlu bahasa. Ini membuktikan bahwa konsep bisa ada sebelum bahasa.'
+            },
+            {
+                symbol: 'Fungsi Bahasa',
+                question: 'Apa fungsi utama bahasa dalam hubungannya dengan konsep?',
+                options: [
+                    { text: 'Menciptakan konsep baru', correct: false },
+                    { text: 'Memberi label pada konsep yang sudah ada', correct: true },
+                    { text: 'Menggantikan konsep', correct: false },
+                    { text: 'Menghapus konsep lama', correct: false }
+                ],
+                explanation: 'Bahasa memberi label pada konsep yang sudah ada, memudahkan kita untuk berkomunikasi dan berbagi pengalaman.'
+            }
+        ];
         
-        // Background Canvas Animation
-        function initBackgroundCanvas() {
-            const canvas = document.getElementById('bg-canvas');
-            if (!canvas) return;
-            
-            const ctx = canvas.getContext('2d');
-            let width = window.innerWidth;
-            let height = window.innerHeight;
-            let animationId = null;
-            
-            canvas.width = width;
-            canvas.height = height;
-            
-            const particles = [];
-            const particleCount = 50;
-            
-            for (let i = 0; i < particleCount; i++) {
-                particles.push({
-                    x: Math.random() * width,
-                    y: Math.random() * height,
-                    radius: Math.max(1, Math.random() * 2),
-                    vx: (Math.random() - 0.5) * 0.5,
-                    vy: (Math.random() - 0.5) * 0.5,
-                    alpha: Math.random() * 0.5 + 0.1
-                });
-            }
-            
-            function animate() {
-                ctx.clearRect(0, 0, width, height);
-                
-                // Draw gradient background
-                const gradient = ctx.createRadialGradient(
-                    width * 0.5, height * 0.5, 0,
-                    width * 0.5, height * 0.5, Math.max(width, height) * 0.8
-                );
-                gradient.addColorStop(0, '#0f2a1c');
-                gradient.addColorStop(0.5, '#0a1f14');
-                gradient.addColorStop(1, '#061210');
-                ctx.fillStyle = gradient;
-                ctx.fillRect(0, 0, width, height);
-                
-                // Draw particles
-                particles.forEach(p => {
-                    p.x += p.vx;
-                    p.y += p.vy;
-                    
-                    if (p.x < 0) p.x = width;
-                    if (p.x > width) p.x = 0;
-                    if (p.y < 0) p.y = height;
-                    if (p.y > height) p.y = 0;
-                    
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(74, 222, 128, ${p.alpha})`;
-                    ctx.fill();
-                });
-                
-                // Draw connections
-                particles.forEach((p1, i) => {
-                    particles.slice(i + 1).forEach(p2 => {
-                        const dx = p1.x - p2.x;
-                        const dy = p1.y - p2.y;
-                        const dist = Math.sqrt(dx * dx + dy * dy);
-                        
-                        if (dist < 150) {
-                            ctx.beginPath();
-                            ctx.moveTo(p1.x, p1.y);
-                            ctx.lineTo(p2.x, p2.y);
-                            ctx.strokeStyle = `rgba(74, 222, 128, ${0.1 * (1 - dist / 150)})`;
-                            ctx.stroke();
-                        }
-                    });
-                });
-                
-                animationId = requestAnimationFrame(animate);
-            }
-            
-            // Check for reduced motion preference
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (!prefersReducedMotion) {
-                animate();
-            }
-            
-            window.addEventListener('resize', () => {
-                width = window.innerWidth;
-                height = window.innerHeight;
-                canvas.width = width;
-                canvas.height = height;
-            });
-        }
+        // Reduced motion check
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         
-        // Create floating particles
-        function createFloatingParticles() {
-            const container = document.getElementById('particles');
-            if (!container) return;
-            
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        // Create particles
+        function createParticles() {
             if (prefersReducedMotion) return;
             
-            for (let i = 0; i < 15; i++) {
+            for (let i = 0; i < 20; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 15 + 's';
-                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-                container.appendChild(particle);
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.animationDuration = (5 + Math.random() * 5) + 's';
+                particlesContainer.appendChild(particle);
             }
         }
         
-        // Navigation scroll effect
-        function initNavigation() {
-            const navbar = document.getElementById('navbar');
-            if (!navbar) return;
+        // Create falling leaves
+        function createLeaves() {
+            if (prefersReducedMotion) return;
             
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
+            for (let i = 0; i < 8; i++) {
+                const leaf = document.createElement('div');
+                leaf.className = 'leaf';
+                leaf.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor" class="text-forest-400"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>`;
+                leaf.style.left = Math.random() * 100 + '%';
+                leaf.style.animationDuration = (10 + Math.random() * 10) + 's';
+                leaf.style.animationDelay = Math.random() * 10 + 's';
+                leavesContainer.appendChild(leaf);
+            }
         }
         
-        // Reading progress
-        function initReadingProgress() {
-            const progress = document.getElementById('progress');
-            if (!progress) return;
-            
-            window.addEventListener('scroll', () => {
-                const scrollTop = window.scrollY;
-                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-                const scrollPercent = Math.min(100, (scrollTop / docHeight) * 100);
-                progress.style.width = scrollPercent + '%';
-            });
-        }
-        
-        // Section reveal on scroll
-        function initSectionReveal() {
-            const sections = document.querySelectorAll('section');
+        // Scroll reveal
+        function initScrollReveal() {
+            const reveals = document.querySelectorAll('.reveal');
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -1294,134 +962,131 @@
                 rootMargin: '0px 0px -50px 0px'
             });
             
-            sections.forEach(section => observer.observe(section));
+            reveals.forEach(el => observer.observe(el));
         }
         
-        // Quiz functionality
-        function renderQuiz() {
-            if (!quizContainer) return;
+        // Game functions
+        function startGame() {
+            currentQuestion = 0;
+            score = 0;
+            answered = false;
+            startBtn.classList.add('hidden');
+            restartBtn.classList.add('hidden');
+            scoreDisplay.classList.add('hidden');
+            showQuestion();
+        }
+        
+        function showQuestion() {
+            answered = false;
+            const q = questData[currentQuestion];
             
-            const q = quizData[currentQuestion];
-            
-            quizContainer.innerHTML = `
-                <p class="question-text">${q.question}</p>
-                <div class="options-grid">
-                    ${q.options.map((opt, idx) => `
-                        <button class="option-btn" data-index="${idx}" aria-label="Opsi ${idx + 1}: ${opt}">
-                            ${opt}
-                        </button>
-                    `).join('')}
+            questionArea.innerHTML = `
+                <div class="bg-forest-700/50 rounded-xl p-4 text-center mb-4">
+                    <span class="text-earth-gold font-medium text-sm">Simbol:</span>
+                    <p class="font-display text-2xl text-forest-100 mt-1">${q.symbol}</p>
                 </div>
-                <div class="feedback-text" id="feedback" style="display: none;"></div>
+                <p class="text-forest-100 text-lg text-center">${q.question}</p>
             `;
             
-            // Add event listeners to options
-            const optionBtns = quizContainer.querySelectorAll('.option-btn');
-            optionBtns.forEach(btn => {
-                btn.addEventListener('click', () => handleAnswer(parseInt(btn.dataset.index)));
+            answersArea.innerHTML = '';
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'symbol-item p-4 rounded-xl border-2 border-forest-600 text-forest-100 text-left transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-earth-gold';
+                btn.innerHTML = `<span class="text-sm text-forest-400">${String.fromCharCode(65 + idx)}.</span> ${opt.text}`;
+                btn.setAttribute('data-index', idx);
+                btn.setAttribute('data-correct', opt.correct);
+                btn.setAttribute('aria-label', `Pilihan ${String.fromCharCode(65 + idx)}: ${opt.text}`);
+                btn.addEventListener('click', () => handleAnswer(btn, idx, opt.correct));
+                answersArea.appendChild(btn);
             });
             
-            answered = false;
+            feedback.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+            updateProgress();
         }
         
-        function handleAnswer(selectedIndex) {
+        function handleAnswer(btn, idx, isCorrect) {
             if (answered) return;
             answered = true;
             
-            const q = quizData[currentQuestion];
-            const optionBtns = quizContainer.querySelectorAll('.option-btn');
-            const feedback = document.getElementById('feedback');
-            
-            optionBtns.forEach((btn, idx) => {
-                btn.disabled = true;
-                if (idx === q.correct) {
-                    btn.classList.add('correct');
-                } else if (idx === selectedIndex) {
-                    btn.classList.add('wrong');
+            const buttons = answersArea.querySelectorAll('button');
+            buttons.forEach(b => {
+                if (b.getAttribute('data-correct') === 'true') {
+                    b.classList.add('correct');
                 }
             });
             
-            if (selectedIndex === q.correct) {
-                score += 20;
-                if (scoreDisplay) scoreDisplay.textContent = score;
-                feedback.textContent = 'Benar! ' + q.explanation;
-                feedback.className = 'feedback-text correct';
+            if (isCorrect) {
+                btn.classList.add('correct');
+                score++;
+                feedback.innerHTML = `<p class="text-forest-100 font-medium">Benar!</p><p class="text-forest-300 text-sm mt-1">${questData[currentQuestion].explanation}</p>`;
+                feedback.className = 'text-center py-4 rounded-xl bg-forest-600/50';
             } else {
-                feedback.textContent = 'Kurang tepat. ' + q.explanation;
-                feedback.className = 'feedback-text wrong';
+                btn.classList.add('incorrect');
+                feedback.innerHTML = `<p class="text-forest-100 font-medium">Kurang tepat</p><p class="text-forest-300 text-sm mt-1">${questData[currentQuestion].explanation}</p>`;
+                feedback.className = 'text-center py-4 rounded-xl bg-red-900/30';
             }
             
-            feedback.style.display = 'block';
+            feedback.classList.remove('hidden');
             
-            // Show next button
-            setTimeout(() => {
-                if (currentQuestion < quizData.length - 1) {
-                    const nextBtn = document.createElement('button');
-                    nextBtn.className = 'next-btn';
-                    nextBtn.textContent = 'Pertanyaan Selanjutnya';
-                    nextBtn.addEventListener('click', nextQuestion);
-                    feedback.appendChild(nextBtn);
-                } else {
-                    showResults();
-                }
-            }, 500);
+            if (currentQuestion < questData.length - 1) {
+                nextBtn.classList.remove('hidden');
+            } else {
+                setTimeout(showResults, 1500);
+            }
         }
         
         function nextQuestion() {
             currentQuestion++;
-            if (questionDisplay) questionDisplay.textContent = currentQuestion + 1;
-            renderQuiz();
+            showQuestion();
         }
         
         function showResults() {
-            if (!quizContainer) return;
-            
-            let message = '';
-            if (score === 100) {
-                message = 'Sempurna! Kamu menguasai materi ini dengan sangat baik!';
-            } else if (score >= 60) {
-                message = 'Bagus! Pemahamanmu sudah baik, terus berlatih!';
-            } else {
-                message = 'Jangan menyerah! Coba baca ulang materi dan coba lagi.';
-            }
-            
-            quizContainer.innerHTML = `
-                <div class="game-complete">
-                    <h3>Quest Selesai!</h3>
-                    <p style="color: var(--fg-muted); margin-bottom: 1rem;">Skor Akhir</p>
-                    <div class="final-score">${score}</div>
-                    <p style="color: var(--fg-muted); margin-bottom: 2rem;">${message}</p>
-                    <button class="restart-btn" id="restart-btn">Ulangi Quest</button>
+            questionArea.innerHTML = `
+                <div class="text-center py-8">
+                    <p class="text-forest-200 text-lg mb-2">Quest Selesai!</p>
+                    <p class="text-forest-300">Kamu menjawab ${score} dari ${questData.length} soal dengan benar.</p>
                 </div>
             `;
+            answersArea.innerHTML = '';
+            feedback.classList.add('hidden');
+            nextBtn.classList.add('hidden');
             
-            document.getElementById('restart-btn').addEventListener('click', restartQuiz);
+            finalScore.textContent = `${score}/${questData.length}`;
+            scoreDisplay.classList.remove('hidden');
+            restartBtn.classList.remove('hidden');
         }
         
-        function restartQuiz() {
-            currentQuestion = 0;
-            score = 0;
-            if (scoreDisplay) scoreDisplay.textContent = score;
-            if (questionDisplay) questionDisplay.textContent = 1;
-            renderQuiz();
+        function updateProgress() {
+            const percent = (currentQuestion / questData.length) * 100;
+            progressBar.style.width = percent + '%';
+            progressText.textContent = `${currentQuestion + 1}/${questData.length}`;
         }
         
-        // Initialize everything when DOM is ready
+        // Event listeners
+        startBtn.addEventListener('click', startGame);
+        nextBtn.addEventListener('click', nextQuestion);
+        restartBtn.addEventListener('click', startGame);
+        
+        // Keyboard navigation for game
+        document.addEventListener('keydown', (e) => {
+            if (answered) return;
+            
+            const key = e.key.toUpperCase();
+            if (['A', 'B', 'C', 'D'].includes(key)) {
+                const idx = key.charCodeAt(0) - 65;
+                const btn = answersArea.querySelector(`button[data-index="${idx}"]`);
+                if (btn) {
+                    btn.click();
+                }
+            }
+        });
+        
+        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            // Now get DOM elements
-            quizContainer = document.getElementById('quiz-container');
-            scoreDisplay = document.getElementById('current-score');
-            questionDisplay = document.getElementById('current-question');
-            
-            // Initialize all features
-            initBackgroundCanvas();
-            createFloatingParticles();
-            initNavigation();
-            initReadingProgress();
-            initSectionReveal();
-            
-            // Render initial quiz
-            renderQuiz();
+            createParticles();
+            createLeaves();
+            initScrollReveal();
         });
     </script>
 </body>
