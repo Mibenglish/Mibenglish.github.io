@@ -41,405 +41,446 @@
         :root {
             --bg: #0a1f0d;
             --bg-light: #122615;
-            --bg-card: rgba(18, 38, 21, 0.85);
+            --bg-card: rgba(18, 38, 21, 0.9);
             --fg: #e8f5e9;
             --fg-muted: #a5d6a7;
             --accent: #4caf50;
             --accent-light: #81c784;
             --accent-dark: #2e7d32;
-            --border: rgba(76, 175, 80, 0.25);
-            --glow: rgba(76, 175, 80, 0.15);
+            --border: rgba(76, 175, 80, 0.2);
         }
         
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
         
         body {
             font-family: 'DM Sans', sans-serif;
             background: var(--bg);
             color: var(--fg);
-            line-height: 1.8;
+            line-height: 1.7;
             font-size: 16px;
+            min-height: 100vh;
             overflow-x: hidden;
         }
         
-        h1, h2, h3 { font-family: 'Fraunces', serif; line-height: 1.3; }
+        h1, h2, h3 {
+            font-family: 'Fraunces', serif;
+            line-height: 1.25;
+        }
         
-        /* Animated Background */
+        /* Simplified Background */
         .bg-pattern {
             position: fixed;
             inset: 0;
             z-index: -1;
             background: 
-                radial-gradient(ellipse 100% 60% at 10% 0%, rgba(46, 125, 50, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse 80% 50% at 90% 100%, rgba(76, 175, 80, 0.08) 0%, transparent 50%),
-                linear-gradient(180deg, var(--bg) 0%, var(--bg-light) 100%);
+                radial-gradient(ellipse 120% 80% at 20% -20%, rgba(46, 125, 50, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse 100% 60% at 80% 110%, rgba(76, 175, 80, 0.1) 0%, transparent 50%),
+                var(--bg);
         }
         
-        .bg-pattern::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234caf50' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            animation: patternMove 30s linear infinite;
-        }
-        
-        @keyframes patternMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(60px, 60px); }
-        }
-        
-        /* Floating Orbs */
-        .orb {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
-            pointer-events: none;
-            z-index: -1;
-        }
-        
-        .orb-1 {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, var(--accent-dark) 0%, transparent 70%);
-            top: -100px;
-            left: -100px;
-            animation: float1 20s ease-in-out infinite;
-        }
-        
-        .orb-2 {
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
-            bottom: -50px;
-            right: -50px;
-            animation: float2 25s ease-in-out infinite;
-        }
-        
-        @keyframes float1 {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(50px, 30px) scale(1.1); }
-            66% { transform: translate(-30px, 50px) scale(0.9); }
-        }
-        
-        @keyframes float2 {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(-40px, -40px) scale(1.15); }
-        }
-        
-        /* Nav */
+        /* Navigation */
         .nav-container {
-            background: rgba(10, 31, 13, 0.95);
-            backdrop-filter: blur(12px);
+            background: rgba(10, 31, 13, 0.98);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+        }
+        
+        .logo-text {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-light);
+        }
+        
+        /* Desktop Nav Links */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
         
         .nav-link {
             color: var(--fg-muted);
-            padding: 8px 16px;
+            padding: 8px 14px;
             border-radius: 8px;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             font-weight: 500;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .nav-link::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-            opacity: 0;
-            transition: opacity 0.25s;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background 0.2s ease, color 0.2s ease;
         }
         
         .nav-link:hover {
-            color: var(--fg);
-            transform: translateY(-2px);
-        }
-        
-        .nav-link:hover::before {
-            opacity: 0.15;
+            background: rgba(76, 175, 80, 0.12);
+            color: var(--accent-light);
         }
         
         .nav-link.active {
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            background: var(--accent);
             color: white;
-            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
         }
         
-        .nav-link:focus-visible {
+        /* Mobile Menu Button */
+        .menu-btn {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+            transition: background 0.2s ease;
+        }
+        
+        .menu-btn:hover {
+            background: rgba(76, 175, 80, 0.1);
+        }
+        
+        .menu-btn:focus-visible {
             outline: 2px solid var(--accent);
             outline-offset: 2px;
+        }
+        
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .menu-icon span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--fg-muted);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-btn.open .menu-icon span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .menu-btn.open .menu-icon span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .menu-btn.open .menu-icon span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(10, 31, 13, 0.99);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            padding: 8px 16px 16px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        
+        .mobile-menu.open {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .mobile-menu .nav-link {
+            display: block;
+            padding: 14px 16px;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+        
+        /* Main Content */
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 24px 16px 40px;
+        }
+        
+        /* Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 32px;
+            animation: fadeInUp 0.5s ease;
+        }
+        
+        .page-title {
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-weight: 800;
+            color: var(--fg);
+            margin-bottom: 8px;
+        }
+        
+        .page-subtitle {
+            font-size: clamp(1rem, 3vw, 1.125rem);
+            color: var(--fg-muted);
+            margin-bottom: 16px;
+        }
+        
+        .update-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--fg-muted);
         }
         
         /* Content Card */
         .content-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 20px;
-            backdrop-filter: blur(12px);
-            box-shadow: 
-                0 4px 24px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 24px 20px;
+            animation: fadeInUp 0.5s ease 0.1s both;
         }
         
         /* Policy Section */
         .policy-section {
-            padding: 28px 0;
+            padding: 24px 0;
             border-bottom: 1px solid var(--border);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .policy-section.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .policy-section:first-child {
+            padding-top: 0;
         }
         
-        .policy-section:last-child { border-bottom: none; }
+        .policy-section:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
         
         .section-title {
-            color: var(--accent-light);
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            margin-bottom: 16px;
+            color: var(--accent-light);
+            margin-bottom: 12px;
             padding-bottom: 8px;
             border-bottom: 2px solid var(--accent);
             display: inline-block;
-            position: relative;
         }
         
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-light);
-            transition: width 0.4s ease;
-        }
-        
-        .policy-section:hover .section-title::after {
-            width: 100%;
+        .policy-section p {
+            color: var(--fg);
+            margin-bottom: 12px;
         }
         
         /* Policy List */
         .policy-list {
             list-style: none;
-            padding-left: 0;
+            margin: 12px 0;
         }
         
         .policy-list li {
             position: relative;
-            padding-left: 28px;
-            margin-bottom: 12px;
-            transition: all 0.25s ease;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            color: var(--fg);
         }
         
         .policy-list li::before {
             content: '';
             position: absolute;
             left: 0;
-            top: 10px;
-            width: 8px;
-            height: 8px;
+            top: 9px;
+            width: 6px;
+            height: 6px;
             background: var(--accent);
             border-radius: 50%;
-            box-shadow: 0 0 12px var(--glow);
-            transition: all 0.25s ease;
-        }
-        
-        .policy-list li:hover {
-            padding-left: 32px;
-            color: var(--fg);
-        }
-        
-        .policy-list li:hover::before {
-            transform: scale(1.3);
-            box-shadow: 0 0 20px var(--accent);
         }
         
         /* Highlight Box */
         .highlight-box {
-            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(46, 125, 50, 0.05) 100%);
-            border-left: 4px solid var(--accent);
-            padding: 20px 24px;
-            border-radius: 0 16px 16px 0;
-            margin: 20px 0;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
+            background: rgba(76, 175, 80, 0.08);
+            border-left: 3px solid var(--accent);
+            padding: 14px 16px;
+            border-radius: 0 10px 10px 0;
+            margin: 16px 0;
         }
         
-        .highlight-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--accent-light), var(--accent));
-            box-shadow: 0 0 20px var(--accent);
-        }
-        
-        .highlight-box:hover {
-            transform: translateX(4px);
-            box-shadow: -4px 0 20px rgba(76, 175, 80, 0.2);
+        .highlight-box p {
+            margin: 0;
         }
         
         /* Warning Box */
         .warning-box {
-            background: linear-gradient(135deg, rgba(255, 183, 77, 0.1) 0%, rgba(255, 152, 0, 0.05) 100%);
-            border-left: 4px solid #ffb74d;
-            padding: 20px 24px;
-            border-radius: 0 16px 16px 0;
-            margin: 20px 0;
-            position: relative;
-            transition: all 0.3s ease;
+            background: rgba(255, 183, 77, 0.08);
+            border-left: 3px solid #ffb74d;
+            padding: 14px 16px;
+            border-radius: 0 10px 10px 0;
+            margin: 16px 0;
         }
         
-        .warning-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, #ffb74d, #ff9800);
-            box-shadow: 0 0 20px rgba(255, 183, 77, 0.5);
-        }
-        
-        .warning-box:hover {
-            transform: translateX(4px);
-            box-shadow: -4px 0 20px rgba(255, 183, 77, 0.2);
-        }
-        
-        /* Update Badge */
-        .update-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 20px;
-            background: linear-gradient(135deg, rgba(76, 175, 80, 0.15) 0%, rgba(46, 125, 50, 0.1) 100%);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            font-size: 14px;
-            color: var(--fg-muted);
-            transition: all 0.3s ease;
-        }
-        
-        .update-badge:hover {
-            border-color: var(--accent);
-            box-shadow: 0 0 20px rgba(76, 175, 80, 0.2);
-        }
-        
-        .update-badge svg {
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+        .warning-box p {
+            margin: 0;
         }
         
         /* Links */
         a {
             color: var(--accent-light);
             text-decoration: none;
-            transition: all 0.25s ease;
-            position: relative;
-        }
-        
-        a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--accent-light);
-            transition: width 0.3s ease;
+            transition: color 0.2s ease;
         }
         
         a:hover {
             color: var(--accent);
         }
         
-        a:hover::after {
-            width: 100%;
+        a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+            border-radius: 4px;
         }
         
-        /* Footer Social */
-        .footer-social {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 20px;
+        /* Footer */
+        .footer {
             background: var(--bg-light);
-            border: 1px solid var(--border);
-            border-radius: 12px;
+            border-top: 1px solid var(--border);
+            padding: 32px 16px;
+        }
+        
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-brand {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        
+        .footer-logo {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-light);
+            margin-bottom: 4px;
+        }
+        
+        .footer-tagline {
+            font-size: 14px;
             color: var(--fg-muted);
+        }
+        
+        /* Social Links */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--fg-muted);
+            font-size: 14px;
             font-weight: 500;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
+            text-decoration: none;
+            transition: all 0.2s ease;
         }
         
-        .footer-social::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .footer-social:hover {
+        .social-link:hover {
+            background: rgba(76, 175, 80, 0.1);
             border-color: var(--accent);
             color: var(--fg);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(76, 175, 80, 0.25);
         }
         
-        .footer-social:hover::before {
-            opacity: 0.1;
-        }
-        
-        .footer-social:focus-visible {
+        .social-link:focus-visible {
             outline: 2px solid var(--accent);
             outline-offset: 2px;
         }
         
-        .footer-social svg {
-            position: relative;
-            z-index: 1;
-            transition: transform 0.3s ease;
-        }
-        
-        .footer-social:hover svg {
-            transform: scale(1.15);
-        }
-        
-        .footer-social span {
-            position: relative;
-            z-index: 1;
+        .footer-note {
+            text-align: center;
+            font-size: 13px;
+            color: var(--fg-muted);
+            margin-bottom: 20px;
         }
         
         /* Footer Links */
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4px;
+            margin-bottom: 20px;
+        }
+        
         .footer-link {
             color: var(--fg-muted);
-            padding: 8px 16px;
-            border-radius: 8px;
-            transition: all 0.25s ease;
-            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s ease;
         }
         
         .footer-link:hover {
-            color: var(--accent-light);
             background: rgba(76, 175, 80, 0.1);
+            color: var(--accent-light);
         }
         
         .footer-link:focus-visible {
@@ -447,42 +488,27 @@
             outline-offset: 2px;
         }
         
-        /* Header Animation */
-        .header-content {
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: slideDown 0.6s ease forwards;
+        .footer-link.active {
+            background: rgba(76, 175, 80, 0.15);
+            color: var(--accent-light);
         }
         
-        @keyframes slideDown {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Content Card Animation */
-        .content-card {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: slideUp 0.8s ease 0.3s forwards;
-        }
-        
-        @keyframes slideUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .footer-copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--fg-muted);
         }
         
         /* Scroll to Top */
         .scroll-top {
             position: fixed;
-            bottom: 24px;
-            right: 24px;
+            bottom: 20px;
+            right: 16px;
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            background: var(--accent);
             border: none;
             border-radius: 12px;
             color: white;
@@ -492,21 +518,20 @@
             justify-content: center;
             opacity: 0;
             visibility: hidden;
-            transform: translateY(20px);
-            transition: all 0.3s ease;
-            z-index: 100;
-            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
+            transform: scale(0.8);
+            transition: all 0.25s ease;
+            z-index: 90;
+            box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
         }
         
         .scroll-top.visible {
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
+            transform: scale(1);
         }
         
         .scroll-top:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(76, 175, 80, 0.5);
+            background: var(--accent-light);
         }
         
         .scroll-top:focus-visible {
@@ -514,381 +539,405 @@
             outline-offset: 2px;
         }
         
-        /* Mobile Nav Toggle */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--fg-muted);
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 8px;
-            transition: all 0.25s ease;
-        }
-        
-        .mobile-menu-btn:hover {
-            background: rgba(76, 175, 80, 0.1);
-            color: var(--accent-light);
-        }
-        
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: flex;
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
             }
-            
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
             .nav-links {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(10, 31, 13, 0.98);
-                backdrop-filter: blur(12px);
-                border-bottom: 1px solid var(--border);
-                padding: 16px;
-                flex-direction: column;
-                gap: 8px;
                 display: none;
             }
             
-            .nav-links.open {
+            .menu-btn {
                 display: flex;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .nav-content {
+                height: 56px;
+            }
+            
+            .logo-icon {
+                width: 32px;
+                height: 32px;
+            }
+            
+            .logo-text {
+                font-size: 1.125rem;
             }
         }
         
-        @media (max-width: 640px) {
-            body { font-size: 15px; }
-            .section-title { font-size: 1.25rem; }
-            .content-card { border-radius: 16px; }
+        @media (max-width: 480px) {
+            body {
+                font-size: 15px;
+            }
+            
+            .main-content {
+                padding: 20px 12px 32px;
+            }
+            
+            .content-card {
+                padding: 20px 16px;
+                border-radius: 12px;
+            }
+            
+            .policy-section {
+                padding: 20px 0;
+            }
+            
+            .section-title {
+                font-size: 1.125rem;
+            }
+            
+            .social-links {
+                gap: 6px;
+            }
+            
+            .social-link {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+            
+            .footer-links {
+                gap: 2px;
+            }
+            
+            .footer-link {
+                padding: 6px 10px;
+                font-size: 13px;
+            }
         }
         
-        @media print {
-            .nav-container, footer, .scroll-top, .orb { display: none; }
-            body { background: white; color: black; }
-            .bg-pattern { background: white; }
-        }
-        
+        /* Reduced Motion */
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
+            *,
+            *::before,
+            *::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
+            }
+            
+            html {
+                scroll-behavior: auto;
+            }
+        }
+        
+        /* Print */
+        @media print {
+            .nav-container,
+            .footer,
+            .scroll-top,
+            .bg-pattern {
+                display: none !important;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .content-card {
+                background: white;
+                border: 1px solid #ddd;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Background Elements -->
     <div class="bg-pattern" aria-hidden="true"></div>
-    <div class="orb orb-1" aria-hidden="true"></div>
-    <div class="orb orb-2" aria-hidden="true"></div>
     
     <!-- Navigation -->
-    <header class="nav-container sticky top-0 z-50">
-        <nav class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between flex-wrap gap-4 relative">
-            <a href="https://mibenglish.github.io/index.html" class="flex items-center gap-3" aria-label="Kembali ke beranda mibenglish">
-                <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                        <path d="M2 17l10 5 10-5"/>
-                        <path d="M2 12l10 5 10-5"/>
-                    </svg>
-                </div>
-                <span class="text-xl font-bold" style="font-family: 'Fraunces', serif; color: var(--accent-light);">mibenglish</span>
-            </a>
-            
-            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="6" x2="21" y2="6"/>
-                    <line x1="3" y1="12" x2="21" y2="12"/>
-                    <line x1="3" y1="18" x2="21" y2="18"/>
-                </svg>
-            </button>
-            
-            <div class="nav-links flex items-center gap-2 text-sm">
-                <a href="https://mibenglish.github.io/index.html" class="nav-link">Beranda</a>
-                <a href="https://mibenglish.github.io/about.html" class="nav-link">About</a>
-                <a href="https://mibenglish.github.io/disclaimer.html" class="nav-link active">Disclaimer</a>
-                <a href="https://mibenglish.github.io/privacy.html" class="nav-link">Privacy</a>
+    <header class="nav-container">
+        <div class="nav-inner">
+            <div class="nav-content">
+                <a href="https://mibenglish.github.io/index.html" class="logo-link" aria-label="mibenglish - Beranda">
+                    <div class="logo-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">mibenglish</span>
+                </a>
+                
+                <nav class="nav-links" aria-label="Menu utama">
+                    <a href="https://mibenglish.github.io/index.html" class="nav-link">Beranda</a>
+                    <a href="https://mibenglish.github.io/about.html" class="nav-link">About</a>
+                    <a href="https://mibenglish.github.io/disclaimer.html" class="nav-link active" aria-current="page">Disclaimer</a>
+                    <a href="https://mibenglish.github.io/privacy.html" class="nav-link">Privacy</a>
+                </nav>
+                
+                <button class="menu-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <div class="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
             </div>
-        </nav>
+            
+            <nav id="mobile-menu" class="mobile-menu" aria-label="Menu mobile">
+                <a href="https://mibenglish.github.io/index.html" class="nav-link">Beranda</a>
+                <a href="https://mibenglish.github.io/about.html" class="nav-link">About Us</a>
+                <a href="https://mibenglish.github.io/privacy.html" class="nav-link">Privacy Policy</a>
+                <a href="https://mibenglish.github.io/terms.html" class="nav-link">Terms of Service</a>
+                <a href="https://mibenglish.github.io/disclaimer.html" class="nav-link active" aria-current="page">Disclaimer</a>
+                <a href="https://mibenglish.github.io/about.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
     </header>
     
     <!-- Main Content -->
-    <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
-        <article>
-            <header class="text-center mb-12 header-content">
-                <h1 class="text-3xl md:text-4xl font-extrabold mb-4" style="color: var(--fg);">Disclaimer</h1>
-                <p class="text-lg mb-6" style="color: var(--fg-muted);">Penafian dan Batasan Tanggung Jawab</p>
-                <span class="update-badge">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"/>
-                        <polyline points="12 6 12 12 16 14"/>
-                    </svg>
-                    Terakhir diperbarui: 20 Januari 2024
-                </span>
-            </header>
+    <main class="main-content">
+        <header class="page-header">
+            <h1 class="page-title">Disclaimer</h1>
+            <p class="page-subtitle">Penafian dan Batasan Tanggung Jawab</p>
+            <span class="update-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                Terakhir diperbarui: 20 Januari 2024
+            </span>
+        </header>
+        
+        <article class="content-card">
             
-            <div class="content-card p-6 md:p-10">
-                
-                <section class="policy-section">
-                    <h2 class="section-title">Pemberitahuan Umum</h2>
-                    <p>
-                        Informasi yang terdapat di website <strong>mibenglish</strong> hanya untuk tujuan informasi dan edukasi umum. mibenglish tidak menjamin keakuratan, kelengkapan, atau kegunaan informasi ini.
-                    </p>
-                    <div class="highlight-box">
-                        <p style="margin: 0;">
-                            Dengan menggunakan website ini, Anda menyetujui bahwa semua informasi disediakan "sebagaimana adanya" tanpa jaminan apapun.
-                        </p>
-                    </div>
-                </section>
-                
-                <section class="policy-section">
-                    <h2 class="section-title">Konten Edukasi</h2>
-                    <p>
-                        Konten di mibenglish, termasuk materi pembelajaran bahasa Inggris, tata bahasa, kosakata, dan kuis interaktif, disediakan untuk tujuan edukasi. Kami berusaha untuk memastikan konten yang akurat, namun:
-                    </p>
-                    <ul class="policy-list">
-                        <li>Kesalahan atau ketidakakuratan dapat terjadi</li>
-                        <li>Materi mungkin tidak mencerminkan standar kurikulum resmi tertentu</li>
-                        <li>Hasil pembelajaran dapat bervariasi untuk setiap individu</li>
-                        <li>Konten mungkin diperbarui atau diubah tanpa pemberitahuan sebelumnya</li>
-                    </ul>
-                </section>
-                
-                <section class="policy-section">
-                    <h2 class="section-title">Bukan Nasihat Profesional</h2>
-                    <p>
-                        Konten di website ini tidak dimaksudkan sebagai pengganti:
-                    </p>
-                    <ul class="policy-list">
-                        <li>Nasihat profesional dari guru atau pengajar bahasa Inggris bersertifikat</li>
-                        <li>Program pendidikan formal di lembaga pendidikan</li>
-                        <li>Konsultasi dengan ahli linguistik atau pendidikan</li>
-                        <li>Persiapan ujian resmi (IELTS, TOEFL, dll) tanpa bimbingan tambahan</li>
-                    </ul>
-                    <div class="warning-box">
-                        <p style="margin: 0;">
-                            <strong>Peringatan:</strong> Untuk kebutuhan pendidikan formal atau persiapan ujian resmi, silakan konsultasikan dengan lembaga pendidikan atau pengajar profesional.
-                        </p>
-                    </div>
-                </section>
-                
-                <section class="policy-section">
-                    <h2 class="section-title">Tautan Eksternal</h2>
-                    <p>
-                        Website kami mungkin berisi tautan ke website pihak ketiga. Tautan-tautan ini disediakan untuk kenyamanan Anda. Kami tidak memiliki kontrol atas konten website tersebut dan tidak bertanggung jawab atas:
-                    </p>
-                    <ul class="policy-list">
-                        <li>Konten, kebijakan privasi, atau praktik website pihak ketiga</li>
-                        <li>Kerugian atau kerusakan yang timbul dari penggunaan website eksternal</li>
-                        <li>Keamanan atau keandalan layanan pihak ketiga</li>
-                    </ul>
-                </section>
-                
-                <section class="policy-section">
-                    <h2 class="section-title">Iklan dan Sponsor</h2>
-                    <p>
-                        mibenglish menampilkan iklan melalui Google AdSense dan mungkin memiliki konten sponsor. Kami ingin mengklarifikasi bahwa:
-                    </p>
-                    <ul class="policy-list">
-                        <li>Iklan ditampilkan oleh pihak ketiga dan tidak mencerminkan dukungan kami</li>
-                        <li>Kami tidak bertanggung jawab atas produk atau layanan yang diiklankan</li>
-                        <li>Transaksi dengan pengiklan adalah antara Anda dan pengiklan</li>
-                        <li>Kami menerima komisi dari beberapa tautan afiliasi tanpa biaya tambahan untuk Anda</li>
-                    </ul>
-                </section>
-                
-                <section class="policy-section">
-                    <h2 class="section-title">Ketersediaan Layanan</h2>
-                    <p>
-                        Kami tidak menjamin bahwa website akan selalu tersedia tanpa gangguan. Layanan dapat mengalami:
-                    </p>
-                    <ul class="policy-list">
-                        <li>Pemeliharaan terjadwal atau tidak terjadwal</li>
-                        <li>Gangguan teknis atau server</li>
-                        <li>Pembaruan sistem yang memerlukan waktu henti</li>
-                        <li>Penghentian fitur tertentu tanpa pemberitahuan</li>
-                    </ul>
-                </section>
-                
-                <section class="policy-section">
-                    <h2 class="section-title">Batasan Tanggung Jawab</h2>
-                    <p>
-                        Dalam keadaan apapun, mibenglish tidak bertanggung jawab atas:
-                    </p>
-                    <ul class="policy-list">
-                        <li>Kerugian langsung, tidak langsung, insidental, atau konsekuensial</li>
-                        <li>Kehilangan data, keuntungan, atau peluang</li>
-                        <li>Kerugian yang timbul dari penggunaan atau ketidakmampuan menggunakan layanan</li>
-                        <li>Tindakan pengguna berdasarkan informasi dari website kami</li>
-                        <li>Virus atau komponen berbahaya lainnya dari website kami</li>
-                    </ul>
-                </section>
-                
-                <section class="policy-section">
-                    <h2 class="section-title">Kesalahan dan Pembaruan</h2>
-                    <p>
-                        Meskipun kami berusaha untuk menyajikan informasi yang akurat, kesalahan dapat terjadi. Jika Anda menemukan kesalahan dalam konten kami, mohon hubungi kami di:
-                    </p>
-                    <div class="highlight-box">
-                        <p style="margin: 0;">
-                            <strong>Email:</strong> <a href="mailto:contact@mibenglish.com">contact@mibenglish.com</a>
-                        </p>
-                    </div>
-                    <p class="mt-4">
-                        Kami berhak untuk memperbarui, mengubah, atau menghapus konten kapan saja tanpa pemberitahuan sebelumnya.
-                    </p>
-                </section>
-                
-                <section class="policy-section">
-                    <h2 class="section-title">Persetujuan Pengguna</h2>
-                    <p>
-                        Dengan menggunakan website mibenglish, Anda menyatakan bahwa Anda telah membaca, memahami, dan menyetujui penafian ini. Jika Anda tidak setuju dengan bagian apapun dari disclaimer ini, mohon untuk tidak menggunakan layanan kami.
-                    </p>
-                </section>
-                
-                <section class="policy-section">
-                    <h2 class="section-title">Perubahan Disclaimer</h2>
-                    <p>
-                        Kami dapat memperbarui disclaimer ini dari waktu ke waktu. Perubahan akan diposting di halaman ini dengan tanggal pembaruan terbaru. Penggunaan berkelanjutan atas layanan kami setelah perubahan merupakan penerimaan atas disclaimer yang direvisi.
-                    </p>
-                </section>
-                
-                <section class="policy-section">
-                    <h2 class="section-title">Hubungi Kami</h2>
-                    <p>Jika Anda memiliki pertanyaan tentang disclaimer ini, silakan hubungi:</p>
-                    <div class="highlight-box mt-4">
-                        <p style="margin: 0 0 8px 0;"><strong>mibenglish</strong></p>
-                        <p style="margin: 0 0 8px 0;"><strong>Email:</strong> <a href="mailto:contact@mibenglish.com">contact@mibenglish.com</a></p>
-                        <p style="margin: 0;"><strong>Website:</strong> <a href="https://mibenglish.github.io">mibenglish.github.io</a></p>
-                    </div>
-                </section>
-                
-            </div>
+            <section class="policy-section">
+                <h2 class="section-title">Pemberitahuan Umum</h2>
+                <p>
+                    Informasi yang terdapat di website <strong>mibenglish</strong> hanya untuk tujuan informasi dan edukasi umum. mibenglish tidak menjamin keakuratan, kelengkapan, atau kegunaan informasi ini.
+                </p>
+                <div class="highlight-box">
+                    <p>Dengan menggunakan website ini, Anda menyetujui bahwa semua informasi disediakan "sebagaimana adanya" tanpa jaminan apapun.</p>
+                </div>
+            </section>
+            
+            <section class="policy-section">
+                <h2 class="section-title">Konten Edukasi</h2>
+                <p>
+                    Konten di mibenglish, termasuk materi pembelajaran bahasa Inggris, tata bahasa, kosakata, dan kuis interaktif, disediakan untuk tujuan edukasi. Kami berusaha untuk memastikan konten yang akurat, namun:
+                </p>
+                <ul class="policy-list">
+                    <li>Kesalahan atau ketidakakuratan dapat terjadi</li>
+                    <li>Materi mungkin tidak mencerminkan standar kurikulum resmi tertentu</li>
+                    <li>Hasil pembelajaran dapat bervariasi untuk setiap individu</li>
+                    <li>Konten mungkin diperbarui atau diubah tanpa pemberitahuan sebelumnya</li>
+                </ul>
+            </section>
+            
+            <section class="policy-section">
+                <h2 class="section-title">Bukan Nasihat Profesional</h2>
+                <p>Konten di website ini tidak dimaksudkan sebagai pengganti:</p>
+                <ul class="policy-list">
+                    <li>Nasihat profesional dari guru atau pengajar bahasa Inggris bersertifikat</li>
+                    <li>Program pendidikan formal di lembaga pendidikan</li>
+                    <li>Konsultasi dengan ahli linguistik atau pendidikan</li>
+                    <li>Persiapan ujian resmi (IELTS, TOEFL, dll) tanpa bimbingan tambahan</li>
+                </ul>
+                <div class="warning-box">
+                    <p><strong>Peringatan:</strong> Untuk kebutuhan pendidikan formal atau persiapan ujian resmi, silakan konsultasikan dengan lembaga pendidikan atau pengajar profesional.</p>
+                </div>
+            </section>
+            
+            <section class="policy-section">
+                <h2 class="section-title">Tautan Eksternal</h2>
+                <p>
+                    Website kami mungkin berisi tautan ke website pihak ketiga. Tautan-tautan ini disediakan untuk kenyamanan Anda. Kami tidak memiliki kontrol atas konten website tersebut dan tidak bertanggung jawab atas:
+                </p>
+                <ul class="policy-list">
+                    <li>Konten, kebijakan privasi, atau praktik website pihak ketiga</li>
+                    <li>Kerugian atau kerusakan yang timbul dari penggunaan website eksternal</li>
+                    <li>Keamanan atau keandalan layanan pihak ketiga</li>
+                </ul>
+            </section>
+            
+            <section class="policy-section">
+                <h2 class="section-title">Iklan dan Sponsor</h2>
+                <p>
+                    mibenglish menampilkan iklan melalui Google AdSense dan mungkin memiliki konten sponsor. Kami ingin mengklarifikasi bahwa:
+                </p>
+                <ul class="policy-list">
+                    <li>Iklan ditampilkan oleh pihak ketiga dan tidak mencerminkan dukungan kami</li>
+                    <li>Kami tidak bertanggung jawab atas produk atau layanan yang diiklankan</li>
+                    <li>Transaksi dengan pengiklan adalah antara Anda dan pengiklan</li>
+                    <li>Kami menerima komisi dari beberapa tautan afiliasi tanpa biaya tambahan untuk Anda</li>
+                </ul>
+            </section>
+            
+            <section class="policy-section">
+                <h2 class="section-title">Ketersediaan Layanan</h2>
+                <p>Kami tidak menjamin bahwa website akan selalu tersedia tanpa gangguan. Layanan dapat mengalami:</p>
+                <ul class="policy-list">
+                    <li>Pemeliharaan terjadwal atau tidak terjadwal</li>
+                    <li>Gangguan teknis atau server</li>
+                    <li>Pembaruan sistem yang memerlukan waktu henti</li>
+                    <li>Penghentian fitur tertentu tanpa pemberitahuan</li>
+                </ul>
+            </section>
+            
+            <section class="policy-section">
+                <h2 class="section-title">Batasan Tanggung Jawab</h2>
+                <p>Dalam keadaan apapun, mibenglish tidak bertanggung jawab atas:</p>
+                <ul class="policy-list">
+                    <li>Kerugian langsung, tidak langsung, insidental, atau konsekuensial</li>
+                    <li>Kehilangan data, keuntungan, atau peluang</li>
+                    <li>Kerugian yang timbul dari penggunaan atau ketidakmampuan menggunakan layanan</li>
+                    <li>Tindakan pengguna berdasarkan informasi dari website kami</li>
+                    <li>Virus atau komponen berbahaya lainnya dari website kami</li>
+                </ul>
+            </section>
+            
+            <section class="policy-section">
+                <h2 class="section-title">Kesalahan dan Pembaruan</h2>
+                <p>
+                    Meskipun kami berusaha untuk menyajikan informasi yang akurat, kesalahan dapat terjadi. Jika Anda menemukan kesalahan dalam konten kami, mohon hubungi kami di:
+                </p>
+                <div class="highlight-box">
+                    <p><strong>Email:</strong> <a href="mailto:contact@mibenglish.com">contact@mibenglish.com</a></p>
+                </div>
+                <p>Kami berhak untuk memperbarui, mengubah, atau menghapus konten kapan saja tanpa pemberitahuan sebelumnya.</p>
+            </section>
+            
+            <section class="policy-section">
+                <h2 class="section-title">Persetujuan Pengguna</h2>
+                <p>
+                    Dengan menggunakan website mibenglish, Anda menyatakan bahwa Anda telah membaca, memahami, dan menyetujui penafian ini. Jika Anda tidak setuju dengan bagian apapun dari disclaimer ini, mohon untuk tidak menggunakan layanan kami.
+                </p>
+            </section>
+            
+            <section class="policy-section">
+                <h2 class="section-title">Perubahan Disclaimer</h2>
+                <p>
+                    Kami dapat memperbarui disclaimer ini dari waktu ke waktu. Perubahan akan diposting di halaman ini dengan tanggal pembaruan terbaru. Penggunaan berkelanjutan atas layanan kami setelah perubahan merupakan penerimaan atas disclaimer yang direvisi.
+                </p>
+            </section>
+            
+            <section class="policy-section">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p>Jika Anda memiliki pertanyaan tentang disclaimer ini, silakan hubungi:</p>
+                <div class="highlight-box">
+                    <p style="margin-bottom: 6px;"><strong>mibenglish</strong></p>
+                    <p style="margin-bottom: 4px;"><strong>Email:</strong> <a href="mailto:contact@mibenglish.com">contact@mibenglish.com</a></p>
+                    <p style="margin: 0;"><strong>Website:</strong> <a href="https://mibenglish.github.io">mibenglish.github.io</a></p>
+                </div>
+            </section>
+            
         </article>
     </main>
     
     <!-- Footer -->
-    <footer style="background: var(--bg-light); border-top: 1px solid var(--border);">
-        <div class="max-w-5xl mx-auto px-4 py-12">
-            
-            <!-- Brand -->
-            <div class="text-center mb-8">
-                <p class="text-3xl font-bold mb-2" style="font-family: 'Fraunces', serif; color: var(--accent-light);">mibenglish</p>
-                <p style="color: var(--fg-muted);">Belajar Bahasa Inggris dengan Cara Menyenangkan</p>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <p class="footer-logo">mibenglish</p>
+                <p class="footer-tagline">Belajar Bahasa Inggris dengan Cara Menyenangkan</p>
             </div>
             
-            <!-- Social Links -->
-            <div class="flex flex-wrap justify-center gap-3 mb-8">
-                <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener" class="footer-social" aria-label="Ikuti kami di YouTube">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <div class="social-links">
+                <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener" class="social-link" aria-label="YouTube">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
                     <span>YouTube</span>
                 </a>
-                
-                <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener" class="footer-social" aria-label="Ikuti kami di TikTok">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                     </svg>
                     <span>TikTok</span>
                 </a>
-                
-                <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener" class="footer-social" aria-label="Ikuti kami di Instagram">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                     </svg>
                     <span>Instagram</span>
                 </a>
-                
-                <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener" class="footer-social" aria-label="Ikuti kami di Facebook">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
                     <span>Facebook</span>
                 </a>
             </div>
             
-            <p class="text-center text-sm mb-6" style="color: var(--fg-muted);">
-                Ikuti kami di YouTube, TikTok, Instagram, dan Facebook untuk update materi terbaru.
-            </p>
+            <p class="footer-note">Ikuti kami di media sosial untuk update materi terbaru.</p>
             
-            <!-- Quick Links (Fixed Order) -->
-            <div class="flex flex-wrap justify-center gap-2 mb-8 text-sm">
+            <nav class="footer-links" aria-label="Footer links">
                 <a href="https://mibenglish.github.io/index.html" class="footer-link">Beranda</a>
                 <a href="https://mibenglish.github.io/about.html" class="footer-link">About Us</a>
                 <a href="https://mibenglish.github.io/privacy.html" class="footer-link">Privacy Policy</a>
                 <a href="https://mibenglish.github.io/terms.html" class="footer-link">Terms of Service</a>
-                <a href="https://mibenglish.github.io/disclaimer.html" class="footer-link" style="background: rgba(76, 175, 80, 0.15); color: var(--accent-light);">Disclaimer</a>
+                <a href="https://mibenglish.github.io/disclaimer.html" class="footer-link active" aria-current="page">Disclaimer</a>
                 <a href="https://mibenglish.github.io/about.html" class="footer-link">Contact</a>
-            </div>
+            </nav>
             
-            <!-- Copyright -->
-            <div class="text-center pt-8" style="border-top: 1px solid var(--border);">
-                <p style="color: var(--fg-muted);">
-                    &copy; 2024 mibenglish. All rights reserved.
-                </p>
-            </div>
+            <p class="footer-copyright">&copy; 2024 mibenglish. All rights reserved.</p>
         </div>
     </footer>
     
     <!-- Scroll to Top Button -->
-    <button class="scroll-top" aria-label="Scroll to top">
+    <button class="scroll-top" aria-label="Kembali ke atas">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="18 15 12 9 6 15"/>
         </svg>
     </button>
     
     <script>
-        // Initialize elements after DOM is ready
         document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const navLinks = document.querySelector('.nav-links');
+            // Elements
+            const menuBtn = document.querySelector('.menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const scrollTopBtn = document.querySelector('.scroll-top');
             
-            if (mobileMenuBtn && navLinks) {
-                mobileMenuBtn.addEventListener('click', function() {
-                    const isOpen = navLinks.classList.toggle('open');
-                    mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+            // Mobile Menu Toggle
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', function() {
+                    const isOpen = mobileMenu.classList.toggle('open');
+                    menuBtn.classList.toggle('open');
+                    menuBtn.setAttribute('aria-expanded', isOpen);
+                    menuBtn.setAttribute('aria-label', isOpen ? 'Tutup menu' : 'Buka menu');
+                });
+                
+                // Close menu when clicking a link
+                mobileMenu.querySelectorAll('.nav-link').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.remove('open');
+                        menuBtn.classList.remove('open');
+                        menuBtn.setAttribute('aria-expanded', 'false');
+                    });
                 });
             }
             
-            // Scroll reveal for policy sections
-            const sections = document.querySelectorAll('.policy-section');
-            
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px 0px -50px 0px',
-                threshold: 0.1
-            };
-            
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry, index) {
-                    if (entry.isIntersecting) {
-                        // Stagger the animation
-                        setTimeout(function() {
-                            entry.target.classList.add('visible');
-                        }, index * 50);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-            
-            sections.forEach(function(section) {
-                observer.observe(section);
-            });
-            
-            // Scroll to top button
-            const scrollTopBtn = document.querySelector('.scroll-top');
-            
+            // Scroll to Top Button
             if (scrollTopBtn) {
+                let lastScrollY = 0;
+                
                 window.addEventListener('scroll', function() {
-                    if (window.scrollY > 400) {
+                    const currentScrollY = window.scrollY;
+                    
+                    if (currentScrollY > 300) {
                         scrollTopBtn.classList.add('visible');
                     } else {
                         scrollTopBtn.classList.remove('visible');
                     }
-                });
+                    
+                    lastScrollY = currentScrollY;
+                }, { passive: true });
                 
                 scrollTopBtn.addEventListener('click', function() {
                     window.scrollTo({
@@ -898,21 +947,14 @@
                 });
             }
             
-            // Smooth scroll for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-                anchor.addEventListener('click', function(e) {
-                    const targetId = this.getAttribute('href');
-                    if (targetId && targetId !== '#') {
-                        e.preventDefault();
-                        const target = document.querySelector(targetId);
-                        if (target) {
-                            target.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'start'
-                            });
-                        }
-                    }
-                });
+            // Close mobile menu on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) {
+                    mobileMenu.classList.remove('open');
+                    menuBtn.classList.remove('open');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                    menuBtn.focus();
+                }
             });
         });
     </script>
