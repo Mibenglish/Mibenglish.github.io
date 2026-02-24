@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pelajari cara menyiapkan otak untuk belajar bahasa Inggris dari nol. Metode ilmiah yang mudah dipahami untuk pemula.">
+    <meta name="description" content="Episode 1: The Science of Zero - Pelajari dasar Neuro-Linguistic Calibration dengan metode mudah dan interaktif untuk pemula.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://mibenglish.com/episodes/ep1-science-of-zero">
+    <link rel="canonical" href="https://mibenglish.github.io/episode1-science-of-zero.html">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Ep 1. The Science of Zero: Brain Preparation - mibenglish">
-    <meta property="og:description" content="Pelajari cara menyiapkan otak untuk belajar bahasa Inggris dari nol dengan metode ilmiah yang mudah.">
+    <meta property="og:title" content="Episode 1: The Science of Zero - mibenglish">
+    <meta property="og:description" content="Pelajari dasar Neuro-Linguistic Calibration dengan metode mudah dan interaktif untuk pemula.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://mibenglish.com/episodes/ep1-science-of-zero">
+    <meta property="og:url" content="https://mibenglish.github.io/episode1-science-of-zero.html">
     <meta property="og:site_name" content="mibenglish">
     
-    <title>Ep 1. The Science of Zero: Brain Preparation - mibenglish</title>
+    <title>Episode 1: The Science of Zero - mibenglish</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,28 +29,19 @@
                 extend: {
                     colors: {
                         forest: {
-                            950: '#071512',
-                            900: '#0d2818',
-                            800: '#163d26',
-                            700: '#1f5234',
-                            600: '#2d5a47',
-                            500: '#3a7a5a',
-                            400: '#5a9e78',
-                            300: '#8fbc9f',
-                            200: '#b8d4be',
-                            100: '#e0f0e3',
-                            50: '#f0faf2'
+                            900: '#0d1f17',
+                            800: '#1a3a2e',
+                            700: '#2d5a47',
+                            600: '#3d7a5f',
+                            500: '#4a9f7a',
+                            400: '#6bc49d',
+                            300: '#8fbc8f',
+                            200: '#b8e0c8',
+                            100: '#e8f5ec'
                         },
-                        amber: {
-                            400: '#d4a418',
-                            500: '#b8941a',
-                            600: '#9a7d15'
-                        },
-                        cream: {
-                            50: '#fefdf8',
-                            100: '#faf8f0',
-                            200: '#f5f2e0'
-                        }
+                        ivory: '#f5f2eb',
+                        amber: '#c9a227',
+                        amberLight: '#e6c54b'
                     }
                 }
             }
@@ -59,14 +50,15 @@
     
     <style>
         :root {
-            --bg: #071512;
-            --bg-card: #0d2818;
-            --fg: #f0faf2;
-            --fg-muted: #b8d4be;
-            --accent: #d4a418;
-            --accent-hover: #e8b820;
-            --border: #1f5234;
-            --glow: rgba(212, 164, 24, 0.3);
+            --bg: #0d1f17;
+            --bg-light: #1a3a2e;
+            --fg: #f5f2eb;
+            --fg-muted: #b8c4bc;
+            --accent: #c9a227;
+            --accent-hover: #e6c54b;
+            --card: #1a3a2e;
+            --border: #2d5a47;
+            --forest-500: #4a9f7a;
         }
         
         * {
@@ -89,71 +81,76 @@
         }
         
         body {
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Inter', sans-serif;
             background: var(--bg);
             color: var(--fg);
+            line-height: 1.7;
             overflow-x: hidden;
         }
         
-        h1, h2, h3 {
-            font-family: 'Libre Baskerville', serif;
+        h1, h2, h3, h4 {
+            font-family: 'Crimson Pro', serif;
         }
         
-        /* Floating particles */
-        .particle {
+        /* Animated Background */
+        .bg-pattern {
             position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             pointer-events: none;
-            border-radius: 50%;
-            opacity: 0;
             z-index: 0;
+            opacity: 0.4;
         }
         
-        @keyframes float-particle {
-            0% {
-                transform: translateY(100vh) scale(0);
-                opacity: 0;
+        .floating-leaf {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(ellipse at center, rgba(107, 196, 157, 0.3) 0%, transparent 70%);
+            border-radius: 50% 0 50% 50%;
+            animation: floatLeaf 15s infinite ease-in-out;
+        }
+        
+        @keyframes floatLeaf {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.3;
             }
-            10% {
+            25% {
+                transform: translateY(-30px) rotate(90deg);
                 opacity: 0.6;
             }
-            90% {
-                opacity: 0.6;
+            50% {
+                transform: translateY(-15px) rotate(180deg);
+                opacity: 0.4;
             }
-            100% {
-                transform: translateY(-100px) scale(1);
-                opacity: 0;
-            }
-        }
-        
-        /* Hero gradient animation */
-        .hero-gradient {
-            background: 
-                radial-gradient(ellipse at 20% 80%, rgba(45, 90, 71, 0.4) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 20%, rgba(31, 82, 52, 0.3) 0%, transparent 40%),
-                radial-gradient(ellipse at 50% 50%, rgba(13, 40, 24, 0.8) 0%, transparent 70%),
-                linear-gradient(180deg, #071512 0%, #0d2818 50%, #163d26 100%);
-            background-size: 100% 100%;
-            animation: gradient-shift 15s ease infinite alternate;
-        }
-        
-        @keyframes gradient-shift {
-            0% {
-                background-position: 0% 0%, 100% 100%, 50% 50%, 0% 0%;
-            }
-            100% {
-                background-position: 100% 100%, 0% 0%, 50% 50%, 0% 0%;
+            75% {
+                transform: translateY(-40px) rotate(270deg);
+                opacity: 0.5;
             }
         }
         
-        /* Entrance animations */
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--forest-500));
+            z-index: 1000;
+            transition: width 0.1s linear;
+        }
+        
+        /* Reveal Animation */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
-                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
         
-        .reveal.visible {
+        .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
@@ -163,29 +160,26 @@
         .reveal-delay-3 { transition-delay: 0.3s; }
         .reveal-delay-4 { transition-delay: 0.4s; }
         
-        /* Card hover effects */
+        /* Card Hover Effects */
         .content-card {
-            background: linear-gradient(145deg, rgba(13, 40, 24, 0.9), rgba(22, 61, 38, 0.7));
-            border: 1px solid rgba(31, 82, 52, 0.5);
-            backdrop-filter: blur(10px);
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                        box-shadow 0.4s ease,
-                        border-color 0.4s ease;
+            background: linear-gradient(145deg, var(--card), rgba(26, 58, 46, 0.8));
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
         
         .content-card:hover {
-            transform: translateY(-4px) scale(1.01);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(212, 164, 24, 0.1);
-            border-color: rgba(212, 164, 24, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 60px rgba(74, 159, 122, 0.1);
+            border-color: var(--forest-500);
         }
         
-        /* Button styles */
+        /* Buttons */
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent) 0%, #9a7d15 100%);
-            color: #071512;
-            font-weight: 700;
-            padding: 1rem 2rem;
-            border-radius: 0.5rem;
+            background: linear-gradient(135deg, var(--accent), #d4af37);
+            color: var(--bg);
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 8px;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -208,98 +202,175 @@
         
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(212, 164, 24, 0.4);
+            box-shadow: 0 8px 25px rgba(201, 162, 39, 0.4);
         }
         
         .btn-primary:focus-visible {
-            outline: 3px solid var(--accent);
+            outline: 2px solid var(--accent);
             outline-offset: 3px;
         }
         
-        /* Game card flip */
-        .game-card {
-            perspective: 1000px;
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--forest-500);
+            color: var(--forest-500);
+            padding: 10px 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--forest-500);
+            color: var(--fg);
+        }
+        
+        .btn-secondary:focus-visible {
+            outline: 2px solid var(--forest-500);
+            outline-offset: 3px;
+        }
+        
+        /* Quiz Game Styles */
+        .quiz-option {
+            background: rgba(45, 90, 71, 0.5);
+            border: 2px solid var(--border);
+            padding: 16px 20px;
+            border-radius: 12px;
             cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            width: 100%;
         }
         
-        .game-card-inner {
+        .quiz-option:hover {
+            background: rgba(74, 159, 122, 0.3);
+            border-color: var(--forest-500);
+            transform: translateX(8px);
+        }
+        
+        .quiz-option:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        .quiz-option.correct {
+            background: rgba(74, 159, 122, 0.5);
+            border-color: var(--forest-500);
+            animation: pulse-correct 0.5s ease;
+        }
+        
+        .quiz-option.wrong {
+            background: rgba(180, 60, 60, 0.5);
+            border-color: #b43c3c;
+            animation: shake 0.5s ease;
+        }
+        
+        @keyframes pulse-correct {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+        
+        /* Pulse Animation for Important Elements */
+        .pulse-glow {
+            animation: pulseGlow 2s infinite ease-in-out;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(201, 162, 39, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(201, 162, 39, 0.6);
+            }
+        }
+        
+        /* Hero Gradient */
+        .hero-gradient {
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(74, 159, 122, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(201, 162, 39, 0.1) 0%, transparent 50%),
+                linear-gradient(180deg, var(--bg) 0%, var(--bg-light) 100%);
+        }
+        
+        /* Section Divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 60px 0;
+        }
+        
+        /* Glowing Text */
+        .text-glow {
+            text-shadow: 0 0 30px rgba(201, 162, 39, 0.5);
+        }
+        
+        /* Navigation */
+        .nav-link {
             position: relative;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            transform-style: preserve-3d;
+            padding: 8px 0;
         }
         
-        .game-card.flipped .game-card-inner {
-            transform: rotateY(180deg);
-        }
-        
-        .game-card-front, .game-card-back {
+        .nav-link::after {
+            content: '';
             position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
             width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 0.75rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
         }
         
-        .game-card-front {
-            background: linear-gradient(135deg, #1f5234, #2d5a47);
-            border: 2px solid #3a7a5a;
-        }
-        
-        .game-card-back {
-            background: linear-gradient(135deg, #d4a418, #b8941a);
-            color: #071512;
-            transform: rotateY(180deg);
-        }
-        
-        /* Progress bar */
-        .progress-bar {
-            background: rgba(31, 82, 52, 0.3);
-            height: 8px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #d4a418, #e8b820);
-            border-radius: 4px;
-            transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        
-        /* Ad placeholder */
-        .ad-placeholder {
-            background: linear-gradient(135deg, rgba(31, 82, 52, 0.2), rgba(45, 90, 71, 0.1));
-            border: 2px dashed rgba(31, 82, 52, 0.5);
-            border-radius: 0.5rem;
+        /* Ad Placeholder */
+        .ad-slot {
+            background: linear-gradient(135deg, rgba(45, 90, 71, 0.3), rgba(26, 58, 46, 0.5));
+            border: 1px dashed var(--border);
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--fg-muted);
-            font-size: 0.875rem;
+            font-size: 14px;
         }
         
-        /* Decorative elements */
-        .leaf-decoration {
-            position: absolute;
-            opacity: 0.1;
-            pointer-events: none;
+        /* Pronunciation Practice */
+        .sound-wave {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            height: 30px;
         }
         
-        /* Focus styles */
-        a:focus-visible, button:focus-visible {
-            outline: 3px solid var(--accent);
-            outline-offset: 3px;
+        .sound-bar {
+            width: 4px;
+            background: var(--forest-500);
+            border-radius: 2px;
+            animation: soundWave 1s infinite ease-in-out;
+        }
+        
+        .sound-bar:nth-child(1) { animation-delay: 0s; height: 10px; }
+        .sound-bar:nth-child(2) { animation-delay: 0.1s; height: 20px; }
+        .sound-bar:nth-child(3) { animation-delay: 0.2s; height: 15px; }
+        .sound-bar:nth-child(4) { animation-delay: 0.3s; height: 25px; }
+        .sound-bar:nth-child(5) { animation-delay: 0.4s; height: 12px; }
+        
+        @keyframes soundWave {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.5); }
         }
         
         /* Scrollbar */
         ::-webkit-scrollbar {
-            width: 10px;
+            width: 8px;
         }
         
         ::-webkit-scrollbar-track {
@@ -308,11 +379,11 @@
         
         ::-webkit-scrollbar-thumb {
             background: var(--border);
-            border-radius: 5px;
+            border-radius: 4px;
         }
         
         ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent);
+            background: var(--forest-500);
         }
     </style>
     
@@ -321,8 +392,8 @@
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Ep 1. The Science of Zero: Brain Preparation",
-        "description": "Pelajari cara menyiapkan otak untuk belajar bahasa Inggris dari nol. Metode ilmiah yang mudah dipahami untuk pemula.",
+        "headline": "Episode 1: The Science of Zero - Neuro-Linguistic Calibration",
+        "description": "Pelajari dasar Neuro-Linguistic Calibration dengan metode mudah dan interaktif untuk pemula bahasa Inggris.",
         "author": {
             "@type": "Person",
             "name": "bangmik"
@@ -330,787 +401,957 @@
         "publisher": {
             "@type": "Organization",
             "name": "mibenglish",
-            "url": "https://mibenglish.com"
+            "url": "https://mibenglish.github.io"
         },
-        "datePublished": "2024-01-15",
-        "dateModified": "2024-01-20",
+        "datePublished": "2025-01-15",
+        "dateModified": "2025-01-15",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://mibenglish.com/episodes/ep1-science-of-zero"
+            "@id": "https://mibenglish.github.io/episode1-science-of-zero.html"
         }
     }
     </script>
 </head>
 <body>
-    <!-- Floating Particles Container -->
-    <div id="particles-container" aria-hidden="true"></div>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar" style="width: 0%"></div>
     
-    <!-- Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-forest-950/90 backdrop-blur-md border-b border-forest-700/50">
-        <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between" role="navigation" aria-label="Navigasi utama">
-            <a href="https://mibenglish.com" class="flex items-center gap-2 group" aria-label="Kembali ke beranda mibenglish">
-                <svg class="w-8 h-8 text-amber-400 transition-transform group-hover:scale-110" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 2L4 10V22L16 30L28 22V10L16 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                    <path d="M16 10L10 14V22L16 26L22 22V14L16 10Z" fill="currentColor"/>
-                </svg>
-                <span class="text-xl font-bold text-forest-100">mibenglish</span>
+    <!-- Animated Background -->
+    <div class="bg-pattern" id="bgPattern" aria-hidden="true"></div>
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-forest-900/90 border-b border-forest-700">
+        <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="https://mibenglish.github.io/index.html" class="flex items-center gap-3 group" aria-label="Kembali ke Beranda mibenglish">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-forest-500 to-forest-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <span class="font-bold text-ivory">M</span>
+                </div>
+                <span class="text-xl font-bold text-ivory">mibenglish</span>
             </a>
             
-            <div class="hidden md:flex items-center gap-6">
-                <a href="https://mibenglish.com" class="text-forest-300 hover:text-amber-400 transition-colors font-semibold">Beranda</a>
-                <a href="https://mibenglish.com/episodes" class="text-forest-300 hover:text-amber-400 transition-colors font-semibold">Episode</a>
-                <a href="https://mibenglish.com/about" class="text-forest-300 hover:text-amber-400 transition-colors font-semibold">Tentang</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="https://mibenglish.github.io/index.html" class="nav-link text-ivory/80 hover:text-ivory transition-colors">Beranda</a>
+                <a href="#main-content" class="nav-link text-ivory/80 hover:text-ivory transition-colors">Materi</a>
+                <a href="#quest-game" class="nav-link text-ivory/80 hover:text-ivory transition-colors">Game</a>
+                <a href="https://mibenglish.github.io/about.html" class="nav-link text-ivory/80 hover:text-ivory transition-colors">Tentang</a>
             </div>
             
-            <button id="mobile-menu-btn" class="md:hidden p-2 text-forest-300 hover:text-amber-400 transition-colors" aria-label="Buka menu navigasi" aria-expanded="false">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <button id="mobileMenuBtn" class="md:hidden p-2 text-ivory" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
                 </svg>
             </button>
         </nav>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-forest-900/95 backdrop-blur-md border-t border-forest-700/50">
+        <div id="mobileMenu" class="hidden md:hidden bg-forest-800 border-t border-forest-700">
             <div class="px-4 py-4 flex flex-col gap-4">
-                <a href="https://mibenglish.com" class="text-forest-300 hover:text-amber-400 transition-colors font-semibold py-2">Beranda</a>
-                <a href="https://mibenglish.com/episodes" class="text-forest-300 hover:text-amber-400 transition-colors font-semibold py-2">Episode</a>
-                <a href="https://mibenglish.com/about" class="text-forest-300 hover:text-amber-400 transition-colors font-semibold py-2">Tentang</a>
+                <a href="https://mibenglish.github.io/index.html" class="text-ivory/80 hover:text-ivory py-2">Beranda</a>
+                <a href="#main-content" class="text-ivory/80 hover:text-ivory py-2">Materi</a>
+                <a href="#quest-game" class="text-ivory/80 hover:text-ivory py-2">Game</a>
+                <a href="https://mibenglish.github.io/about.html" class="text-ivory/80 hover:text-ivory py-2">Tentang</a>
             </div>
         </div>
     </header>
     
     <main id="main-content">
         <!-- Hero Section -->
-        <section class="hero-gradient min-h-screen flex items-center relative pt-20">
-            <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-                <svg class="leaf-decoration w-64 h-64 -top-20 -right-20" viewBox="0 0 100 100">
-                    <path d="M50 5C25 25 5 50 5 80C5 95 20 95 50 80C80 95 95 95 95 80C95 50 75 25 50 5Z" fill="currentColor" class="text-forest-600"/>
-                </svg>
-                <svg class="leaf-decoration w-48 h-48 bottom-20 -left-10" viewBox="0 0 100 100">
-                    <path d="M50 5C25 25 5 50 5 80C5 95 20 95 50 80C80 95 95 95 95 80C95 50 75 25 50 5Z" fill="currentColor" class="text-forest-700"/>
-                </svg>
-            </div>
-            
-            <div class="max-w-6xl mx-auto px-4 py-16 relative z-10">
+        <section class="hero-gradient min-h-[70vh] flex items-center relative overflow-hidden">
+            <div class="max-w-6xl mx-auto px-4 py-20 relative z-10">
                 <div class="reveal">
-                    <span class="inline-block px-4 py-2 bg-forest-700/50 border border-forest-600 rounded-full text-forest-300 text-sm font-semibold mb-6">
+                    <span class="inline-block px-4 py-2 bg-forest-700/50 border border-forest-500 rounded-full text-sm text-forest-300 mb-6">
                         Episode 1 dari Seri Pembelajaran
                     </span>
                 </div>
                 
-                <h1 class="reveal reveal-delay-1 text-4xl md:text-5xl lg:text-6xl font-bold text-forest-50 mb-4 leading-tight">
+                <h1 class="reveal reveal-delay-1 text-4xl md:text-5xl lg:text-6xl font-bold text-ivory mb-6 leading-tight">
                     The Science of Zero:<br>
-                    <span class="text-amber-400">Brain Preparation</span>
+                    <span class="text-amber text-glow">Neuro-Linguistic Calibration</span>
                 </h1>
                 
-                <p class="reveal reveal-delay-2 text-lg md:text-xl text-forest-300 max-w-2xl mb-8 leading-relaxed">
-                    Menyiapkan fondasi mental untuk belajar bahasa Inggris dari titik nol. 
-                    Memahami cara kerja otak adalah langkah pertama menuju penguasaan bahasa.
+                <p class="reveal reveal-delay-2 text-lg md:text-xl text-ivory/70 max-w-2xl mb-8 leading-relaxed">
+                    Memulai perjalanan belajar bahasa Inggris dari titik nol. Bukan sekadar menghafal kata, 
+                    tapi memahami bagaimana otak memproses bahasa baru secara alami.
                 </p>
                 
-                <div class="reveal reveal-delay-3 flex flex-wrap gap-4 mb-12">
-                    <a href="#materi" class="btn-primary inline-flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                <div class="reveal reveal-delay-3 flex flex-wrap gap-4">
+                    <a href="#learning-section" class="btn-primary inline-flex items-center gap-2">
                         Mulai Belajar
-                    </a>
-                    <a href="#game" class="inline-flex items-center gap-2 px-6 py-3 border-2 border-forest-500 text-forest-200 rounded-lg hover:bg-forest-800/50 hover:border-amber-400 transition-all font-semibold">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
+                    </a>
+                    <a href="#quest-game" class="btn-secondary inline-flex items-center gap-2">
                         Langsung ke Game
                     </a>
                 </div>
                 
-                <!-- Reading Progress -->
-                <div class="reveal reveal-delay-4 bg-forest-800/50 rounded-xl p-4 max-w-md border border-forest-700/50">
-                    <div class="flex items-center justify-between mb-2">
-                        <span class="text-forest-300 text-sm font-semibold">Estimasi Waktu Baca</span>
-                        <span class="text-amber-400 font-bold">8 menit</span>
+                <div class="reveal reveal-delay-4 mt-12 flex items-center gap-6 text-sm text-ivory/50">
+                    <div class="flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                        <span>15 menit baca</span>
                     </div>
-                    <div class="progress-bar">
-                        <div id="reading-progress" class="progress-fill" style="width: 0%"></div>
+                    <div class="flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span>10.2K pembaca</span>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Scroll indicator -->
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-                <svg class="w-6 h-6 text-forest-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-                </svg>
             </div>
         </section>
         
         <!-- Ad Slot 1 -->
-        <div class="max-w-4xl mx-auto px-4 py-6">
-            <div class="ad-placeholder h-24 md:h-28">
-                <span>Slot Iklan 1 - Google AdSense</span>
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="ad-slot h-24">
+                <span>Slot Iklan - 728x90</span>
             </div>
         </div>
         
-        <!-- Main Content -->
-        <article id="materi" class="max-w-4xl mx-auto px-4 py-12">
-            <!-- Section: Pendahuluan -->
-            <section class="reveal mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-forest-50 mb-6 flex items-center gap-3">
-                    <span class="w-10 h-10 bg-amber-400/20 rounded-lg flex items-center justify-center">
-                        <span class="text-amber-400 font-bold">01</span>
-                    </span>
-                    Mengapa Harus Dari Nol?
-                </h2>
-                
-                <div class="content-card rounded-2xl p-6 md:p-8">
-                    <p class="text-forest-200 leading-relaxed mb-4">
-                        Banyak orang merasa kesulitan belajar bahasa Inggris karena mereka melewatkan satu tahap penting: 
-                        <strong class="text-amber-400">menyiapkan otak</strong>. Seperti membangun rumah, kita membutuhkan fondasi yang kuat sebelum memasang atap.
-                    </p>
-                    <p class="text-forest-200 leading-relaxed mb-4">
-                        Dalam bahasa Inggris, istilah <em class="text-forest-100">"zero"</em> berarti <strong class="text-forest-100">nol</strong>. 
-                        Ini bukan berarti kita tidak tahu apa-apa, melainkan kita membuka ruang kosong untuk menerima pengetahuan baru tanpa beban kesalahan masa lalu.
-                    </p>
-                    <p class="text-forest-200 leading-relaxed">
-                        Bayangkan otak Anda seperti spons bersih yang siap menyerap air. 
-                        Jika spons sudah kotor dan penuh, sulit untuk menyerap lebih banyak. 
-                        Kita perlu "membersihkan" dan "membuka" pikiran terlebih dahulu.
-                    </p>
-                </div>
-            </section>
-            
-            <!-- Section: Cara Kerja Otak -->
-            <section class="reveal mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-forest-50 mb-6 flex items-center gap-3">
-                    <span class="w-10 h-10 bg-amber-400/20 rounded-lg flex items-center justify-center">
-                        <span class="text-amber-400 font-bold">02</span>
-                    </span>
-                    Cara Otak Mempelajari Bahasa
-                </h2>
-                
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="content-card rounded-2xl p-6">
-                        <div class="w-12 h-12 bg-forest-600/50 rounded-xl flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-forest-50 mb-3">Neuroplasticity</h3>
-                        <p class="text-forest-300 text-sm leading-relaxed mb-3">
-                            <em class="text-forest-100">Neuroplasticity</em> adalah kemampuan otak untuk berubah dan membentuk koneksi baru.
+        <!-- Introduction Section -->
+        <section id="learning-section" class="py-16 relative">
+            <div class="max-w-4xl mx-auto px-4">
+                <article>
+                    <header class="reveal mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-ivory mb-4">
+                            Mengapa Mulai dari Nol?
+                        </h2>
+                        <div class="w-20 h-1 bg-gradient-to-r from-amber to-forest-500 rounded-full"></div>
+                    </header>
+                    
+                    <div class="reveal reveal-delay-1 content-card rounded-2xl p-6 md:p-8 mb-8">
+                        <h3 class="text-xl font-semibold text-amber mb-4">Apa itu Zero State?</h3>
+                        <p class="text-ivory/80 mb-4">
+                            Bayangkan kamu berdiri di pintu gerbang sebuah hutan yang belum pernah kamu jelajahi. 
+                            Kamu tidak tahu apa yang ada di dalam, tapi kamu punya peta dan kompas. 
+                            Dalam konteks belajar bahasa, <strong class="text-forest-300">Zero State</strong> 
+                            adalah kondisi di mana kamu membuka diri untuk menerima informasi baru tanpa prasangka.
                         </p>
-                        <p class="text-forest-300 text-sm leading-relaxed">
-                            Dalam Bahasa Indonesia: <strong class="text-forest-100">Plastisitas Saraf</strong>. 
-                            Otak kita bisa "dibentuk ulang" seperti lilin ketika kita belajar hal baru. Semakin sering kita berlatih, koneksi sarafnya semakin kuat.
+                        <p class="text-ivory/80">
+                            Ini bukan berarti kamu "kosong" atau "bodoh". Justru, ini adalah posisi strategis 
+                            di mana otak kamu siap menerima pola baru tanpa terhambat oleh kebiasaan lama.
                         </p>
                     </div>
                     
-                    <div class="content-card rounded-2xl p-6">
-                        <div class="w-12 h-12 bg-forest-600/50 rounded-xl flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-forest-50 mb-3">Repetition</h3>
-                        <p class="text-forest-300 text-sm leading-relaxed mb-3">
-                            <em class="text-forest-100">Repetition</em> berarti pengulangan. Ini adalah kunci utama dalam belajar.
+                    <div class="reveal reveal-delay-2 content-card rounded-2xl p-6 md:p-8 mb-8">
+                        <h3 class="text-xl font-semibold text-amber mb-4">Neuro-Linguistic Calibration</h3>
+                        <p class="text-ivory/80 mb-4">
+                            Istilah ini terdengar rumit, tapi konsepnya sederhana. Mari kita pecah:
                         </p>
-                        <p class="text-forest-300 text-sm leading-relaxed">
-                            Dalam Bahasa Indonesia: <strong class="text-forest-100">Pengulangan</strong>. 
-                            Setiap kali kita mengulang kata atau frasa, jalur saraf di otak menjadi lebih jelas. Seperti jalan setapak yang semakin rata karena sering dilalui.
+                        <ul class="space-y-3 text-ivory/80">
+                            <li class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-forest-600 flex items-center justify-center text-xs text-ivory mt-0.5 flex-shrink-0">1</span>
+                                <span><strong class="text-forest-300">Neuro</strong> = Berkaitan dengan saraf dan otak. Cara otak memproses informasi.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-forest-600 flex items-center justify-center text-xs text-ivory mt-0.5 flex-shrink-0">2</span>
+                                <span><strong class="text-forest-300">Linguistic</strong> = Bahasa. Sistem simbol dan suara yang kita gunakan untuk berkomunikasi.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-forest-600 flex items-center justify-center text-xs text-ivory mt-0.5 flex-shrink-0">3</span>
+                                <span><strong class="text-forest-300">Calibration</strong> = Penyesuaian. Proses menyesuaikan diri dengan standar tertentu.</span>
+                            </li>
+                        </ul>
+                        <p class="text-ivory/80 mt-4">
+                            Jadi, <strong class="text-amber">Neuro-Linguistic Calibration</strong> adalah proses menyesuaikan 
+                            cara otak kamu memproses dan memahami bahasa baru.
                         </p>
                     </div>
+                </article>
+            </div>
+        </section>
+        
+        <!-- Interactive Illustration -->
+        <section class="py-12 bg-forest-800/30">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="reveal content-card rounded-2xl p-6 md:p-8">
+                    <h3 class="text-xl font-semibold text-amber mb-6 text-center">Ilustrasi: Proses Kalibrasi Otak</h3>
                     
-                    <div class="content-card rounded-2xl p-6">
-                        <div class="w-12 h-12 bg-forest-600/50 rounded-xl flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                            </svg>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center p-4 rounded-xl bg-forest-800/50 border border-forest-600 hover:border-forest-400 transition-colors group">
+                            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-forest-500 to-forest-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-ivory">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 16v-4M12 8h.01"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-ivory mb-2">Input</h4>
+                            <p class="text-sm text-ivory/60">Mendengar atau membaca bahasa baru untuk pertama kali</p>
                         </div>
-                        <h3 class="text-xl font-bold text-forest-50 mb-3">Visual Learning</h3>
-                        <p class="text-forest-300 text-sm leading-relaxed mb-3">
-                            <em class="text-forest-100">Visual Learning</em> adalah cara belajar dengan melihat gambar atau diagram.
-                        </p>
-                        <p class="text-forest-300 text-sm leading-relaxed">
-                            Dalam Bahasa Indonesia: <strong class="text-forest-100">Belajar Visual</strong>. 
-                            Otak memproses gambar 60.000 kali lebih cepat daripada teks. Gunakan gambar untuk membantu mengingat kosakata baru.
-                        </p>
-                    </div>
-                    
-                    <div class="content-card rounded-2xl p-6">
-                        <div class="w-12 h-12 bg-forest-600/50 rounded-xl flex items-center justify-center mb-4">
-                            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                            </svg>
+                        
+                        <div class="text-center p-4 rounded-xl bg-forest-800/50 border border-forest-600 hover:border-forest-400 transition-colors group">
+                            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-amber to-amberLight flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-forest-900">
+                                    <path d="M12 2a10 10 0 1 0 10 10"/>
+                                    <path d="M12 12V6"/>
+                                    <path d="M12 12l4 2"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-ivory mb-2">Process</h4>
+                            <p class="text-sm text-ivory/60">Otak menganalisis pola dan mencocokkan dengan pengetahuan yang ada</p>
                         </div>
-                        <h3 class="text-xl font-bold text-forest-50 mb-3">Emotional Connection</h3>
-                        <p class="text-forest-300 text-sm leading-relaxed mb-3">
-                            <em class="text-forest-100">Emotional Connection</em> adalah hubungan antara emosi dan memori.
-                        </p>
-                        <p class="text-forest-300 text-sm leading-relaxed">
-                            Dalam Bahasa Indonesia: <strong class="text-forest-100">Koneksi Emosional</strong>. 
-                            Kita lebih mudah mengingat sesuatu yang memiliki makna personal. Kaitkan kata baru dengan pengalaman hidup Anda.
-                        </p>
+                        
+                        <div class="text-center p-4 rounded-xl bg-forest-800/50 border border-forest-600 hover:border-forest-400 transition-colors group">
+                            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-forest-400 to-forest-600 flex items-center justify-center group-hover:scale-110 transition-transform pulse-glow">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-ivory">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22,4 12,14.01 9,11.01"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-semibold text-ivory mb-2">Output</h4>
+                            <p class="text-sm text-ivory/60">Pemahaman baru terbentuk dan siap digunakan</p>
+                        </div>
                     </div>
-                </div>
-            </section>
-            
-            <!-- Ad Slot 2 -->
-            <div class="reveal mb-16">
-                <div class="ad-placeholder h-24 md:h-28">
-                    <span>Slot Iklan 2 - Google AdSense</span>
                 </div>
             </div>
-            
-            <!-- Section: Langkah Persiapan -->
-            <section class="reveal mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-forest-50 mb-6 flex items-center gap-3">
-                    <span class="w-10 h-10 bg-amber-400/20 rounded-lg flex items-center justify-center">
-                        <span class="text-amber-400 font-bold">03</span>
-                    </span>
-                    Lima Langkah Menyiapkan Otak
-                </h2>
-                
-                <div class="space-y-4">
-                    <div class="content-card rounded-2xl p-6 group cursor-pointer" data-step="1">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-amber-400 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                                <span class="text-forest-950 font-bold text-lg">1</span>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-forest-50 mb-2">Bersihkan Pikiran <span class="text-forest-400 text-sm font-normal">/ Clear Your Mind</span></h3>
-                                <p class="text-forest-300 text-sm leading-relaxed">
-                                    Luangkan 5 menit sebelum belajar untuk menenangkan diri. Tarik napas dalam-dalam. 
-                                    Buang pikiran negatif seperti "Saya tidak bisa" atau "Bahasa Inggris sulit". 
-                                    Pikiran yang tenang menyerap informasi lebih baik.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="content-card rounded-2xl p-6 group cursor-pointer" data-step="2">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-amber-400 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                                <span class="text-forest-950 font-bold text-lg">2</span>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-forest-50 mb-2">Tetapkan Tujuan Kecil <span class="text-forest-400 text-sm font-normal">/ Set Small Goals</span></h3>
-                                <p class="text-forest-300 text-sm leading-relaxed">
-                                    Jangan langsung ingin lancar. Mulai dari target yang mudah: "Hari ini saya akan menghafal 3 kata baru." 
-                                    Pencapaian kecil membangun kepercayaan diri secara bertahap.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="content-card rounded-2xl p-6 group cursor-pointer" data-step="3">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-amber-400 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                                <span class="text-forest-950 font-bold text-lg">3</span>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-forest-50 mb-2">Ciptakan Lingkungan Tepat <span class="text-forest-400 text-sm font-normal">/ Create Right Environment</span></h3>
-                                <p class="text-forest-300 text-sm leading-relaxed">
-                                    Pilih tempat yang nyaman dan bebas gangguan. Siapkan air minum. 
-                                    Matikan notifikasi yang tidak perlu. Lingkungan yang kondusif membantu fokus lebih lama.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="content-card rounded-2xl p-6 group cursor-pointer" data-step="4">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-amber-400 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                                <span class="text-forest-950 font-bold text-lg">4</span>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-forest-50 mb-2">Terima Kesalahan <span class="text-forest-400 text-sm font-normal">/ Accept Mistakes</span></h3>
-                                <p class="text-forest-300 text-sm leading-relaxed">
-                                    Kesalahan adalah bagian dari proses belajar. Jangan takut salah mengucapkan kata. 
-                                    Setiap kesalahan adalah peluang untuk memperbaiki. Anak-anak belajar berjalan dengan jatuh berkali-kali.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="content-card rounded-2xl p-6 group cursor-pointer" data-step="5">
-                        <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 bg-amber-400 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                                <span class="text-forest-950 font-bold text-lg">5</span>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-forest-50 mb-2">Rayakan Kemajuan <span class="text-forest-400 text-sm font-normal">/ Celebrate Progress</span></h3>
-                                <p class="text-forest-300 text-sm leading-relaxed">
-                                    Berikan reward untuk diri sendiri setelah mencapai target. Bisa dengan istirahat sejenak, 
-                                    makan cemilan favorit, atau sekadar tersenyum bangga. Otak akan mengaitkan belajar dengan hal menyenangkan.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+        </section>
+        
+        <!-- Ad Slot 2 -->
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="ad-slot h-64 md:h-24">
+                <span>Slot Iklan - Responsive</span>
+            </div>
+        </div>
+        
+        <!-- Core Content -->
+        <section class="py-16">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="reveal mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-ivory mb-4">
+                        Membangun Fondasi yang Kuat
+                    </h2>
+                    <p class="text-ivory/70">Pahami akar masalah sebelum belajar teknik lanjutan</p>
                 </div>
-            </section>
-            
-            <!-- Section: Ilustrasi Praktis -->
-            <section class="reveal mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-forest-50 mb-6 flex items-center gap-3">
-                    <span class="w-10 h-10 bg-amber-400/20 rounded-lg flex items-center justify-center">
-                        <span class="text-amber-400 font-bold">04</span>
-                    </span>
-                    Ilustrasi Praktis dalam Kehidupan
-                </h2>
                 
-                <div class="content-card rounded-2xl p-6 md:p-8">
-                    <p class="text-forest-200 leading-relaxed mb-6">
-                        Mari kita lihat contoh nyata bagaimana mempersiapkan otak untuk menerima bahasa baru:
-                    </p>
-                    
-                    <div class="bg-forest-800/50 rounded-xl p-6 mb-6 border-l-4 border-amber-400">
-                        <p class="text-forest-200 leading-relaxed mb-4">
-                            <strong class="text-forest-50">Contoh Situasi:</strong> Ahmad ingin belajar bahasa Inggris untuk bekerja di perusahaan internasional. 
-                            Ia memiliki keterbatasan waktu karena bekerja penuh waktu.
-                        </p>
-                        <p class="text-forest-300 text-sm leading-relaxed">
-                            Alih-alih langsung menghafal grammar, Ahmad memulai dengan mendengarkan podcast bahasa Inggris 15 menit sebelum tidur. 
-                            Ia tidak memaksa diri memahami semua kata, hanya membiasakan telinga dengan bunyi bahasa Inggris. 
-                            Ini disebut <em class="text-forest-100">passive listening</em> atau mendengarkan pasif.
-                        </p>
+                <div class="space-y-8">
+                    <div class="reveal reveal-delay-1 content-card rounded-2xl p-6 md:p-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-forest-500 to-forest-700 flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl font-bold text-ivory">1</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-amber mb-3">Masalah Keterlambatan Pemahaman</h3>
+                                <p class="text-ivory/80 mb-4">
+                                    Banyak pembelajar mengalami jeda antara mendengar dan memahami. 
+                                    Fenomena ini disebut <strong class="text-forest-300">Processing Latency</strong> 
+                                    (Latensi Pemrosesan).
+                                </p>
+                                <div class="bg-forest-900/50 rounded-xl p-4 border-l-4 border-amber">
+                                    <p class="text-sm text-ivory/70 italic">
+                                        "Kamu mendengar kata 'apple', tapi butuh 2-3 detik sebelum 
+                                        bayangan buah apel muncul di pikiran. Jeda ini adalah jeda 
+                                        penerjemahan, bukan pemahaman langsung."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
-                    <p class="text-forest-200 leading-relaxed mb-4">
-                        Dalam perdagangan yang halal, kita mengenal istilah <em class="text-forest-100">transparency</em> atau transparansi. 
-                        Prinsip ini berlaku juga dalam belajar: jujur pada diri sendiri tentang kemampuan yang dimiliki, 
-                        lalu bangun dari sana dengan langkah-langkah yang jelas dan terukur.
-                    </p>
+                    <div class="reveal reveal-delay-2 content-card rounded-2xl p-6 md:p-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-forest-500 to-forest-700 flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl font-bold text-ivory">2</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-amber mb-3">Solusi: Direct Association</h3>
+                                <p class="text-ivory/80 mb-4">
+                                    Alih-alih menerjemahkan, kita melatih otak untuk mengasosiasikan 
+                                    kata langsung dengan konsep atau gambar. Inilah yang disebut 
+                                    <strong class="text-forest-300">Direct Association</strong> (Asosiasi Langsung).
+                                </p>
+                                <div class="grid md:grid-cols-2 gap-4 mt-4">
+                                    <div class="bg-forest-800/50 rounded-xl p-4 text-center">
+                                        <p class="text-red-400 line-through mb-2">Cara Lama</p>
+                                        <p class="text-ivory/70">apple → apel → gambar buah</p>
+                                    </div>
+                                    <div class="bg-forest-600/30 rounded-xl p-4 text-center border border-forest-500">
+                                        <p class="text-forest-300 mb-2">Cara Baru</p>
+                                        <p class="text-ivory/70">apple → gambar buah</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <p class="text-forest-200 leading-relaxed">
-                        Seperti seorang pedagang yang membuat <em class="text-forest-100">agreement</em> (perjanjian) yang jelas dengan pembeli, 
-                        buatlah perjanjian dengan diri sendiri: "Saya akan belajar 15 menit setiap hari tanpa alasan." 
-                        Konsistensi lebih penting daripada durasi yang panjang.
-                    </p>
-                </div>
-            </section>
-            
-            <!-- Ad Slot 3 -->
-            <div class="reveal mb-16">
-                <div class="ad-placeholder h-24 md:h-28">
-                    <span>Slot Iklan 3 - Google AdSense</span>
+                    <div class="reveal reveal-delay-3 content-card rounded-2xl p-6 md:p-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-forest-500 to-forest-700 flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl font-bold text-ivory">3</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-amber mb-3">Praktik dalam Kehidupan Halal</h3>
+                                <p class="text-ivory/80 mb-4">
+                                    Contoh pembelajaran harus sesuai dengan nilai-nilai yang baik. 
+                                    Berikut contoh asosiasi langsung dengan konteks transaksi halal:
+                                </p>
+                                <div class="grid gap-3">
+                                    <div class="flex items-center gap-3 p-3 bg-forest-800/50 rounded-lg">
+                                        <span class="text-amber font-medium">seller</span>
+                                        <span class="text-ivory/50">→</span>
+                                        <span class="text-ivory/80">seseorang yang menjual dengan akad jual-beli yang sah</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 bg-forest-800/50 rounded-lg">
+                                        <span class="text-amber font-medium">buyer</span>
+                                        <span class="text-ivory/50">→</span>
+                                        <span class="text-ivory/80">pembeli yang memiliki hak penuh atas barang</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 p-3 bg-forest-800/50 rounded-lg">
+                                        <span class="text-amber font-medium">fair trade</span>
+                                        <span class="text-ivory/50">→</span>
+                                        <span class="text-ivory/80">perdagangan adil tanpa eksploitasi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Game Section -->
-            <section id="game" class="reveal mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-forest-50 mb-2 flex items-center gap-3">
-                    <span class="w-10 h-10 bg-amber-400/20 rounded-lg flex items-center justify-center">
-                        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </section>
+        
+        <!-- Pronunciation Practice -->
+        <section class="py-16 bg-forest-800/30">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="reveal mb-8">
+                    <h2 class="text-3xl font-bold text-ivory mb-4">Latihan Pengucapan</h2>
+                    <p class="text-ivory/70">Dengarkan dan ulangi untuk melatih kalibrasi auditori</p>
+                </div>
+                
+                <div class="reveal reveal-delay-1 grid md:grid-cols-2 gap-4">
+                    <div class="content-card rounded-xl p-5 cursor-pointer hover:bg-forest-700/50 transition-colors" onclick="playSound('zero')" role="button" tabindex="0" aria-label="Dengarkan kata zero">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-2xl font-bold text-amber">zero</span>
+                            <div class="sound-wave" id="wave-zero">
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                            </div>
+                        </div>
+                        <p class="text-ivory/60">/ˈzɪərəʊ/ - nol, titik awal</p>
+                    </div>
+                    
+                    <div class="content-card rounded-xl p-5 cursor-pointer hover:bg-forest-700/50 transition-colors" onclick="playSound('brain')" role="button" tabindex="0" aria-label="Dengarkan kata brain">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-2xl font-bold text-amber">brain</span>
+                            <div class="sound-wave" id="wave-brain">
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                            </div>
+                        </div>
+                        <p class="text-ivory/60">/breɪn/ - otak</p>
+                    </div>
+                    
+                    <div class="content-card rounded-xl p-5 cursor-pointer hover:bg-forest-700/50 transition-colors" onclick="playSound('learn')" role="button" tabindex="0" aria-label="Dengarkan kata learn">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-2xl font-bold text-amber">learn</span>
+                            <div class="sound-wave" id="wave-learn">
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                            </div>
+                        </div>
+                        <p class="text-ivory/60">/lɜːn/ - belajar</p>
+                    </div>
+                    
+                    <div class="content-card rounded-xl p-5 cursor-pointer hover:bg-forest-700/50 transition-colors" onclick="playSound('calibrate')" role="button" tabindex="0" aria-label="Dengarkan kata calibrate">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-2xl font-bold text-amber">calibrate</span>
+                            <div class="sound-wave" id="wave-calibrate">
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                                <div class="sound-bar"></div>
+                            </div>
+                        </div>
+                        <p class="text-ivory/60">/ˈkælɪbreɪt/ - menyesuaikan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ad Slot 3 -->
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="ad-slot h-24">
+                <span>Slot Iklan - 728x90</span>
+            </div>
+        </div>
+        
+        <!-- Quest Game Section -->
+        <section id="quest-game" class="py-16">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="reveal mb-8">
+                    <span class="inline-block px-3 py-1 bg-amber/20 text-amber rounded-full text-sm mb-4">Interactive Quest</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-ivory mb-4">
+                        Uji Pemahamanmu
+                    </h2>
+                    <p class="text-ivory/70">Jawab pertanyaan berikut untuk mengukur sejauh mana kamu memahami materi ini</p>
+                </div>
+                
+                <div class="reveal reveal-delay-1 content-card rounded-2xl p-6 md:p-8" id="quizContainer">
+                    <div id="quizProgress" class="mb-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm text-ivory/60">Pertanyaan <span id="currentQ">1</span> dari <span id="totalQ">5</span></span>
+                            <span class="text-sm text-amber" id="scoreDisplay">Skor: 0</span>
+                        </div>
+                        <div class="h-2 bg-forest-700 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-forest-500 to-amber transition-all duration-500" id="quizProgressBar" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    
+                    <div id="questionArea">
+                        <!-- Question will be rendered here -->
+                    </div>
+                    
+                    <div id="feedbackArea" class="hidden mt-6 p-4 rounded-xl">
+                        <!-- Feedback will be shown here -->
+                    </div>
+                </div>
+                
+                <!-- Game Results -->
+                <div id="gameResults" class="hidden reveal content-card rounded-2xl p-8 text-center">
+                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-forest-500 to-amber flex items-center justify-center">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-forest-900">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                         </svg>
-                    </span>
-                    Quest: Memory Challenge
-                </h2>
-                <p class="text-forest-400 mb-6">Uji ingatan Anda dengan mencocokkan istilah Bahasa Inggris dengan artinya!</p>
-                
-                <div class="content-card rounded-2xl p-6 md:p-8">
-                    <div class="flex items-center justify-between mb-6">
-                        <div>
-                            <span class="text-forest-400 text-sm">Skor Anda</span>
-                            <p id="game-score" class="text-2xl font-bold text-amber-400">0</p>
-                        </div>
-                        <div>
-                            <span class="text-forest-400 text-sm">Pasangan Ditemukan</span>
-                            <p id="pairs-found" class="text-2xl font-bold text-forest-50">0/6</p>
-                        </div>
-                        <button id="reset-game" class="px-4 py-2 bg-forest-700 hover:bg-forest-600 text-forest-200 rounded-lg transition-colors font-semibold text-sm">
-                            Mulai Ulang
-                        </button>
                     </div>
-                    
-                    <div id="game-board" class="grid grid-cols-3 md:grid-cols-4 gap-3 mb-6">
-                        <!-- Game cards will be generated by JS -->
+                    <h3 class="text-2xl font-bold text-ivory mb-2">Quest Selesai!</h3>
+                    <p class="text-ivory/70 mb-4" id="finalScoreText">Kamu menjawab 0 dari 5 dengan benar</p>
+                    <div id="performanceMessage" class="text-forest-300 mb-6"></div>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <button onclick="restartQuiz()" class="btn-primary">Coba Lagi</button>
+                        <a href="#next-episode" class="btn-secondary">Episode Berikutnya</a>
                     </div>
-                    
-                    <div id="game-message" class="text-center py-4 hidden">
-                        <p class="text-xl font-bold text-amber-400 mb-2">Selamat!</p>
-                        <p class="text-forest-300">Anda berhasil menemukan semua pasangan. Otak Anda siap untuk episode berikutnya!</p>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Ad Slot 4 -->
-            <div class="reveal mb-16">
-                <div class="ad-placeholder h-24 md:h-28">
-                    <span>Slot Iklan 4 - Google AdSense</span>
                 </div>
             </div>
-            
-            <!-- Next Episode Teaser -->
-            <section class="reveal mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-forest-50 mb-6">Episode Selanjutnya</h2>
+        </section>
+        
+        <!-- Vocabulary Builder Game -->
+        <section class="py-16 bg-forest-800/30">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="reveal mb-8">
+                    <h2 class="text-3xl font-bold text-ivory mb-4">Pencocokan Kosakata</h2>
+                    <p class="text-ivory/70">Pasangkan kata Inggris dengan makna yang benar</p>
+                </div>
                 
-                <div class="content-card rounded-2xl p-6 md:p-8 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-40 h-40 bg-amber-400/10 rounded-full blur-3xl"></div>
+                <div class="reveal reveal-delay-1" id="matchingGame">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-sm text-ivory/60 uppercase tracking-wide mb-4">Kata Inggris</h4>
+                            <div id="englishWords" class="space-y-3">
+                                <!-- English words will be rendered here -->
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-sm text-ivory/60 uppercase tracking-wide mb-4">Makna</h4>
+                            <div id="indonesianMeanings" class="space-y-3">
+                                <!-- Indonesian meanings will be rendered here -->
+                            </div>
+                        </div>
+                    </div>
                     
-                    <span class="inline-block px-3 py-1 bg-forest-700 rounded-full text-forest-300 text-sm font-semibold mb-4">
-                        Episode 2
-                    </span>
+                    <div class="mt-6 flex items-center justify-between">
+                        <span class="text-sm text-ivory/60">Pasangan benar: <span id="matchCount" class="text-amber">0</span>/5</span>
+                        <button onclick="resetMatching()" class="btn-secondary text-sm py-2 px-4">Acak Ulang</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ad Slot 4 -->
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <div class="ad-slot h-24">
+                <span>Slot Iklan - 728x90</span>
+            </div>
+        </div>
+        
+        <!-- Next Episode Teaser -->
+        <section id="next-episode" class="py-16">
+            <div class="max-w-4xl mx-auto px-4">
+                <div class="reveal content-card rounded-2xl p-8 md:p-12 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-forest-500/20 to-transparent rounded-bl-full"></div>
                     
-                    <h3 class="text-xl md:text-2xl font-bold text-forest-50 mb-3">
-                        Phonemes Unleashed: Vowel Sounds
-                    </h3>
+                    <span class="inline-block px-3 py-1 bg-forest-700 text-forest-300 rounded-full text-sm mb-6">Coming Next</span>
                     
-                    <p class="text-forest-300 leading-relaxed mb-6">
-                        Setelah menyiapkan otak, saatnya mempelajari bunyi dasar dalam bahasa Inggris. 
-                        Vowel sounds atau bunyi vokal adalah fondasi pengucapan yang benar. 
+                    <h2 class="text-2xl md:text-3xl font-bold text-ivory mb-4">
+                        Episode 2: Phonemic Awareness I<br>
+                        <span class="text-amber">The Vowel Spectrum</span>
+                    </h2>
+                    
+                    <p class="text-ivory/70 mb-6 max-w-2xl">
+                        Pelajari seni menghasilkan bunyi vokal dengan tepat. Dari A hingga U, 
+                        setiap huruf memiliki spektrum warna suara yang unik.
                     </p>
                     
-                    <a href="https://mibenglish.com/episodes/ep2-phonemes-vowel" 
-                       class="btn-primary inline-flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                        Lanjut ke Episode 2
-                    </a>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://mibenglish.github.io/episode2-phonemic-awareness.html" class="btn-primary inline-flex items-center gap-2">
+                            Lihat Episode Berikutnya
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-            </section>
-        </article>
+            </div>
+        </section>
         
         <!-- Ad Slot 5 -->
-        <div class="max-w-4xl mx-auto px-4 py-6 mb-12">
-            <div class="ad-placeholder h-24 md:h-28">
-                <span>Slot Iklan 5 - Google AdSense</span>
+        <div class="max-w-6xl mx-auto px-4 py-6 mb-8">
+            <div class="ad-slot h-24">
+                <span>Slot Iklan - 728x90</span>
             </div>
         </div>
     </main>
     
     <!-- Footer -->
-    <footer class="bg-forest-950 border-t border-forest-800">
+    <footer class="bg-forest-900 border-t border-forest-700">
         <div class="max-w-6xl mx-auto px-4 py-12">
-            <div class="grid md:grid-cols-3 gap-8 mb-8">
-                <!-- Brand -->
-                <div>
-                    <div class="flex items-center gap-2 mb-4">
-                        <svg class="w-8 h-8 text-amber-400" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 2L4 10V22L16 30L28 22V10L16 2Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                            <path d="M16 10L10 14V22L16 26L22 22V14L16 10Z" fill="currentColor"/>
-                        </svg>
-                        <span class="text-2xl font-bold text-forest-50">mibenglish</span>
+            <!-- Brand -->
+            <div class="text-center mb-8">
+                <a href="https://mibenglish.github.io/index.html" class="inline-flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-forest-500 to-forest-700 flex items-center justify-center">
+                        <span class="font-bold text-ivory">M</span>
                     </div>
-                    <p class="text-forest-400 text-sm leading-relaxed">
-                        Platform pembelajaran bahasa Inggris untuk pemula. 
-                        Belajar dari nol dengan metode ilmiah yang mudah dipahami.
-                    </p>
-                </div>
-                
-                <!-- Navigation -->
-                <div>
-                    <h3 class="text-forest-50 font-bold mb-4">Navigasi</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="https://mibenglish.com" class="text-forest-400 hover:text-amber-400 transition-colors text-sm">
-                                Beranda
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://mibenglish.com/episodes" class="text-forest-400 hover:text-amber-400 transition-colors text-sm">
-                                Semua Episode
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://mibenglish.com/about" class="text-forest-400 hover:text-amber-400 transition-colors text-sm">
-                                Tentang Kami
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://mibenglish.com/contact" class="text-forest-400 hover:text-amber-400 transition-colors text-sm">
-                                Hubungi
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Social Media -->
-                <div>
-                    <h3 class="text-forest-50 font-bold mb-4">Ikuti Kami</h3>
-                    <p class="text-forest-400 text-sm mb-4">
-                        Ikuti kami di YouTube, TikTok, Instagram, dan Facebook untuk update materi terbaru.
-                    </p>
-                    <div class="flex gap-3">
-                        <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener" 
-                           class="w-10 h-10 bg-forest-800 hover:bg-amber-400 rounded-lg flex items-center justify-center transition-colors group"
-                           aria-label="Ikuti kami di YouTube">
-                            <svg class="w-5 h-5 text-forest-400 group-hover:text-forest-950" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                            </svg>
-                        </a>
-                        <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener" 
-                           class="w-10 h-10 bg-forest-800 hover:bg-amber-400 rounded-lg flex items-center justify-center transition-colors group"
-                           aria-label="Ikuti kami di TikTok">
-                            <svg class="w-5 h-5 text-forest-400 group-hover:text-forest-950" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                            </svg>
-                        </a>
-                        <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener" 
-                           class="w-10 h-10 bg-forest-800 hover:bg-amber-400 rounded-lg flex items-center justify-center transition-colors group"
-                           aria-label="Ikuti kami di Instagram">
-                            <svg class="w-5 h-5 text-forest-400 group-hover:text-forest-950" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-                            </svg>
-                        </a>
-                        <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener" 
-                           class="w-10 h-10 bg-forest-800 hover:bg-amber-400 rounded-lg flex items-center justify-center transition-colors group"
-                           aria-label="Ikuti kami di Facebook">
-                            <svg class="w-5 h-5 text-forest-400 group-hover:text-forest-950" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+                    <span class="text-2xl font-bold text-ivory">mibenglish</span>
+                </a>
+                <p class="text-ivory/60 text-sm">Mastering International Bridge - English Learning Platform</p>
             </div>
             
-            <div class="border-t border-forest-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-                <p class="text-forest-500 text-sm">
-                    &copy; 2024 mibenglish. Dibuat dengan dedikasi oleh bangmik.
-                </p>
-                <p class="text-forest-600 text-xs">
-                    Materi pembelajaran gratis untuk semua.
+            <!-- Social Links -->
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="https://www.youtube.com/@mibenglish" target="_blank" rel="noopener" aria-label="YouTube mibenglish" class="w-10 h-10 rounded-full bg-forest-800 flex items-center justify-center text-ivory/70 hover:text-amber hover:bg-forest-700 transition-colors">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+                <a href="https://www.tiktok.com/@mibenglish" target="_blank" rel="noopener" aria-label="TikTok mibenglish" class="w-10 h-10 rounded-full bg-forest-800 flex items-center justify-center text-ivory/70 hover:text-amber hover:bg-forest-700 transition-colors">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/mibenglish" target="_blank" rel="noopener" aria-label="Instagram mibenglish" class="w-10 h-10 rounded-full bg-forest-800 flex items-center justify-center text-ivory/70 hover:text-amber hover:bg-forest-700 transition-colors">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/mibenglish" target="_blank" rel="noopener" aria-label="Facebook mibenglish" class="w-10 h-10 rounded-full bg-forest-800 flex items-center justify-center text-ivory/70 hover:text-amber hover:bg-forest-700 transition-colors">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <!-- Call to Action -->
+            <p class="text-center text-ivory/60 text-sm mb-8">
+                Ikuti kami di YouTube, TikTok, Instagram, dan Facebook untuk update materi terbaru.
+            </p>
+            
+            <!-- Quick Links -->
+            <nav class="border-t border-forest-700 pt-8">
+                <h3 class="text-center text-sm text-ivory/50 uppercase tracking-wide mb-4">Quick Links</h3>
+                <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+                    <li><a href="https://mibenglish.github.io/index.html" class="text-ivory/70 hover:text-amber transition-colors">Beranda</a></li>
+                    <li><a href="https://mibenglish.github.io/about.html" class="text-ivory/70 hover:text-amber transition-colors">About Us</a></li>
+                    <li><a href="https://mibenglish.github.io/privacy.html" class="text-ivory/70 hover:text-amber transition-colors">Privacy Policy</a></li>
+                    <li><a href="https://mibenglish.github.io/terms.html" class="text-ivory/70 hover:text-amber transition-colors">Terms of Service</a></li>
+                    <li><a href="https://mibenglish.github.io/disclaimer.html" class="text-ivory/70 hover:text-amber transition-colors">Disclaimer</a></li>
+                    <li><a href="https://mibenglish.github.io/contact.html" class="text-ivory/70 hover:text-amber transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Copyright -->
+            <div class="text-center mt-8 pt-8 border-t border-forest-700">
+                <p class="text-ivory/50 text-sm">
+                    &copy; 2025 mibenglish. All rights reserved.
                 </p>
             </div>
         </div>
     </footer>
     
+    <!-- Scripts -->
     <script>
-        // Initialize variables first
-        const gameData = [
-            { id: 1, term: 'Neuroplasticity', match: 'Plastisitas Saraf' },
-            { id: 2, term: 'Repetition', match: 'Pengulangan' },
-            { id: 3, term: 'Visual Learning', match: 'Belajar Visual' },
-            { id: 4, term: 'Zero', match: 'Nol' },
-            { id: 5, term: 'Brain', match: 'Otak' },
-            { id: 6, term: 'Memory', match: 'Ingatan' }
+        // Initialize data before any function calls
+        const quizQuestions = [
+            {
+                question: "Apa yang dimaksud dengan 'Zero State' dalam konteks pembelajaran bahasa?",
+                options: [
+                    "Kondisi otak yang kosong tanpa pengetahuan",
+                    "Posisi strategis di mana otak siap menerima pola baru tanpa prasangka",
+                    "Kondisi di mana seseorang tidak bisa belajar",
+                    "Tahap akhir dalam proses pembelajaran"
+                ],
+                correct: 1,
+                explanation: "Zero State adalah kondisi di mana kita membuka diri untuk menerima informasi baru tanpa terhambat kebiasaan lama."
+            },
+            {
+                question: "Apa istilah untuk jeda antara mendengar dan memahami kata?",
+                options: [
+                    "Processing Speed",
+                    "Direct Association",
+                    "Processing Latency",
+                    "Neuro Calibration"
+                ],
+                correct: 2,
+                explanation: "Processing Latency adalah fenomena jeda waktu yang terjadi saat otak menerjemahkan kata sebelum memahaminya."
+            },
+            {
+                question: "Metode apa yang diajarkan untuk mengurangi jeda penerjemahan?",
+                options: [
+                    "Menghafal lebih banyak kosakata",
+                    "Direct Association - mengasosiasikan kata langsung dengan konsep",
+                    "Menerjemahkan setiap kata ke bahasa Indonesia",
+                    "Membaca kamus setiap hari"
+                ],
+                correct: 1,
+                explanation: "Direct Association melatih otak untuk mengasosiasikan kata langsung dengan gambar/konsep, melewati tahap penerjemahan."
+            },
+            {
+                question: "Dalam konteks transaksi halal, apa makna 'fair trade'?",
+                options: [
+                    "Perdagangan dengan harga termurah",
+                    "Perdagangan adil tanpa eksploitasi",
+                    "Perdagangan dengan sistem riba",
+                    "Perdagangan untuk keuntungan sepihak"
+                ],
+                correct: 1,
+                explanation: "Fair trade adalah konsep perdagangan yang adil, tanpa eksploitasi, dan menguntungkan kedua belah pihak."
+            },
+            {
+                question: "Apa arti dari 'Calibration' dalam 'Neuro-Linguistic Calibration'?",
+                options: [
+                    "Pengukuran tingkat kecerdasan",
+                    "Proses menyesuaikan cara otak memproses bahasa baru",
+                    "Pengecekan kesehatan saraf",
+                    "Pengaturan volume suara"
+                ],
+                correct: 1,
+                explanation: "Calibration adalah proses penyesuaian - dalam konteks ini, menyesuaikan cara otak memproses dan memahami bahasa baru."
+            }
         ];
         
-        let flippedCards = [];
-        let matchedPairs = 0;
+        const matchingData = [
+            { english: "neuro", indonesian: "berkaitan dengan saraf dan otak" },
+            { english: "linguistic", "indonesian": "berkaitan dengan bahasa" },
+            { english: "calibration", indonesian: "proses penyesuaian" },
+            { english: "association", indonesian: "hubungan atau kaitan" },
+            { english: "process", indonesian: "proses atau mengolah" }
+        ];
+        
+        // Game state variables - initialized before use
+        let currentQuestion = 0;
         let score = 0;
-        let canFlip = true;
+        let selectedEnglish = null;
+        let matchCount = 0;
+        let matchedPairs = [];
         
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', function() {
-                const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                this.setAttribute('aria-expanded', !isExpanded);
-                mobileMenu.classList.toggle('hidden');
-            });
+        // Generate floating background elements
+        function generateBackground() {
+            const bgPattern = document.getElementById('bgPattern');
+            if (!bgPattern) return;
+            
+            for (let i = 0; i < 20; i++) {
+                const leaf = document.createElement('div');
+                leaf.className = 'floating-leaf';
+                leaf.style.left = Math.random() * 100 + '%';
+                leaf.style.top = Math.random() * 100 + '%';
+                leaf.style.animationDelay = Math.random() * 15 + 's';
+                leaf.style.transform = `scale(${0.5 + Math.random() * 1.5})`;
+                bgPattern.appendChild(leaf);
+            }
         }
         
-        // Scroll reveal with IntersectionObserver
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-        
-        const revealObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+        // Scroll reveal animation
+        function initScrollReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
             });
-        }, observerOptions);
+            
+            reveals.forEach(el => observer.observe(el));
+        }
         
-        document.querySelectorAll('.reveal').forEach(function(el) {
-            revealObserver.observe(el);
-        });
-        
-        // Reading progress
-        const progressBar = document.getElementById('reading-progress');
-        
-        window.addEventListener('scroll', function() {
+        // Progress bar
+        function updateProgressBar() {
             const scrollTop = window.scrollY;
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = Math.min((scrollTop / docHeight) * 100, 100);
-            
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            const progressBar = document.getElementById('progressBar');
             if (progressBar) {
                 progressBar.style.width = progress + '%';
             }
-        });
-        
-        // Floating particles
-        const particlesContainer = document.getElementById('particles-container');
-        const particleColors = ['#3a7a5a', '#5a9e78', '#d4a418', '#8fbc9f'];
-        
-        function createParticle() {
-            if (!particlesContainer) return;
-            
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            
-            const size = Math.max(4, Math.random() * 8 + 4);
-            const colorIndex = Math.floor(Math.random() * particleColors.length);
-            const color = particleColors[colorIndex];
-            
-            particle.style.width = size + 'px';
-            particle.style.height = size + 'px';
-            particle.style.background = color;
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDuration = Math.max(10, Math.random() * 10 + 15) + 's';
-            particle.style.animationDelay = Math.random() * 5 + 's';
-            particle.style.animation = 'float-particle ' + (Math.random() * 10 + 15) + 's linear forwards';
-            
-            particlesContainer.appendChild(particle);
-            
-            setTimeout(function() {
-                if (particle.parentNode) {
-                    particle.remove();
-                }
-            }, 25000);
         }
         
-        // Check for reduced motion preference
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        // Mobile menu
+        function initMobileMenu() {
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+                    menuBtn.setAttribute('aria-expanded', !isExpanded);
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        }
         
-        if (!prefersReducedMotion) {
-            // Create initial particles
-            for (let i = 0; i < 15; i++) {
-                setTimeout(createParticle, i * 200);
+        // Sound simulation
+        function playSound(word) {
+            const wave = document.getElementById('wave-' + word);
+            if (wave) {
+                wave.querySelectorAll('.sound-bar').forEach((bar, i) => {
+                    bar.style.animation = 'none';
+                    void bar.offsetWidth;
+                    bar.style.animation = `soundWave 0.5s ease ${i * 0.1}s`;
+                });
             }
             
-            // Continue creating particles
-            setInterval(createParticle, 2000);
+            // In real implementation, this would play actual audio
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(word);
+                utterance.rate = 0.8;
+                utterance.lang = 'en-US';
+                speechSynthesis.speak(utterance);
+            }
         }
         
-        // Memory Game
-        const gameBoard = document.getElementById('game-board');
-        const scoreDisplay = document.getElementById('game-score');
-        const pairsDisplay = document.getElementById('pairs-found');
-        const gameMessage = document.getElementById('game-message');
-        const resetButton = document.getElementById('reset-game');
+        // Quiz functionality
+        function renderQuestion() {
+            const questionArea = document.getElementById('questionArea');
+            const q = quizQuestions[currentQuestion];
+            
+            if (!questionArea || !q) return;
+            
+            questionArea.innerHTML = `
+                <h3 class="text-xl font-semibold text-ivory mb-6">${q.question}</h3>
+                <div class="space-y-3">
+                    ${q.options.map((opt, i) => `
+                        <button class="quiz-option" onclick="checkAnswer(${i})" aria-label="Jawaban: ${opt}">
+                            <span class="text-ivory/80">${opt}</span>
+                        </button>
+                    `).join('')}
+                </div>
+            `;
+            
+            updateQuizUI();
+        }
         
+        function updateQuizUI() {
+            const currentQEl = document.getElementById('currentQ');
+            const totalQEl = document.getElementById('totalQ');
+            const scoreEl = document.getElementById('scoreDisplay');
+            const progressBar = document.getElementById('quizProgressBar');
+            
+            if (currentQEl) currentQEl.textContent = currentQuestion + 1;
+            if (totalQEl) totalQEl.textContent = quizQuestions.length;
+            if (scoreEl) scoreEl.textContent = `Skor: ${score}`;
+            if (progressBar) progressBar.style.width = ((currentQuestion + 1) / quizQuestions.length * 100) + '%';
+        }
+        
+        function checkAnswer(selected) {
+            const q = quizQuestions[currentQuestion];
+            const feedbackArea = document.getElementById('feedbackArea');
+            const options = document.querySelectorAll('.quiz-option');
+            
+            if (!q || !feedbackArea) return;
+            
+            options.forEach((opt, i) => {
+                opt.disabled = true;
+                if (i === q.correct) {
+                    opt.classList.add('correct');
+                } else if (i === selected && selected !== q.correct) {
+                    opt.classList.add('wrong');
+                }
+            });
+            
+            const isCorrect = selected === q.correct;
+            if (isCorrect) score++;
+            
+            feedbackArea.classList.remove('hidden');
+            feedbackArea.className = `mt-6 p-4 rounded-xl ${isCorrect ? 'bg-forest-600/30 border border-forest-500' : 'bg-red-900/30 border border-red-700'}`;
+            feedbackArea.innerHTML = `
+                <p class="font-semibold ${isCorrect ? 'text-forest-300' : 'text-red-400'} mb-2">
+                    ${isCorrect ? 'Benar!' : 'Kurang tepat'}
+                </p>
+                <p class="text-ivory/70 text-sm">${q.explanation}</p>
+            `;
+            
+            setTimeout(() => {
+                currentQuestion++;
+                if (currentQuestion < quizQuestions.length) {
+                    feedbackArea.classList.add('hidden');
+                    renderQuestion();
+                } else {
+                    showResults();
+                }
+            }, 2000);
+        }
+        
+        function showResults() {
+            const quizContainer = document.getElementById('quizContainer');
+            const results = document.getElementById('gameResults');
+            const finalScoreText = document.getElementById('finalScoreText');
+            const performanceMessage = document.getElementById('performanceMessage');
+            
+            if (quizContainer) quizContainer.classList.add('hidden');
+            if (results) results.classList.remove('hidden');
+            if (finalScoreText) finalScoreText.textContent = `Kamu menjawab ${score} dari ${quizQuestions.length} dengan benar`;
+            
+            if (performanceMessage) {
+                const percentage = score / quizQuestions.length;
+                let message = '';
+                if (percentage === 1) {
+                    message = 'Luar biasa! Kamu sudah menguasai konsep dasar dengan sempurna.';
+                } else if (percentage >= 0.8) {
+                    message = 'Bagus sekali! Pemahaman kamu sudah sangat baik.';
+                } else if (percentage >= 0.6) {
+                    message = 'Cukup baik! Coba baca ulang materi untuk memperdalam pemahaman.';
+                } else {
+                    message = 'Jangan menyerah! Baca ulang materi dan coba lagi.';
+                }
+                performanceMessage.textContent = message;
+            }
+        }
+        
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            const quizContainer = document.getElementById('quizContainer');
+            const results = document.getElementById('gameResults');
+            const feedbackArea = document.getElementById('feedbackArea');
+            
+            if (quizContainer) quizContainer.classList.remove('hidden');
+            if (results) results.classList.add('hidden');
+            if (feedbackArea) feedbackArea.classList.add('hidden');
+            renderQuestion();
+        }
+        
+        // Matching Game
         function shuffleArray(array) {
-            const shuffled = array.slice();
+            const shuffled = [...array];
             for (let i = shuffled.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
-                const temp = shuffled[i];
-                shuffled[i] = shuffled[j];
-                shuffled[j] = temp;
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
             }
             return shuffled;
         }
         
-        function initGame() {
-            if (!gameBoard) return;
+        function renderMatchingGame() {
+            const englishContainer = document.getElementById('englishWords');
+            const indonesianContainer = document.getElementById('indonesianMeanings');
             
-            gameBoard.innerHTML = '';
-            flippedCards = [];
-            matchedPairs = 0;
-            score = 0;
-            canFlip = true;
+            if (!englishContainer || !indonesianContainer) return;
             
-            if (scoreDisplay) scoreDisplay.textContent = '0';
-            if (pairsDisplay) pairsDisplay.textContent = '0/6';
-            if (gameMessage) gameMessage.classList.add('hidden');
+            const shuffledIndonesian = shuffleArray(matchingData);
             
-            // Create card pairs
-            const cards = [];
-            gameData.forEach(function(item) {
-                cards.push({ type: 'term', content: item.term, matchId: item.id });
-                cards.push({ type: 'match', content: item.match, matchId: item.id });
+            englishContainer.innerHTML = matchingData.map((item, i) => `
+                <button class="w-full p-4 rounded-xl bg-forest-800/50 border-2 border-forest-600 text-left hover:border-amber transition-colors ${matchedPairs.includes(i) ? 'border-forest-400 bg-forest-600/30' : ''}" 
+                        data-index="${i}" 
+                        onclick="selectEnglish(${i})"
+                        ${matchedPairs.includes(i) ? 'disabled' : ''}>
+                    <span class="text-lg font-medium text-amber">${item.english}</span>
+                </button>
+            `).join('');
+            
+            indonesianContainer.innerHTML = shuffledIndonesian.map((item, i) => `
+                <button class="w-full p-4 rounded-xl bg-forest-800/50 border-2 border-forest-600 text-left hover:border-amber transition-colors" 
+                        data-meaning="${item.indonesian}" 
+                        onclick="selectIndonesian('${item.indonesian}')"
+                        ${matchedPairs.includes(matchingData.findIndex(m => m.indonesian === item.indonesian)) ? 'disabled class="opacity-50"' : ''}>
+                    <span class="text-ivory/80">${item.indonesian}</span>
+                </button>
+            `).join('');
+        }
+        
+        function selectEnglish(index) {
+            selectedEnglish = index;
+            const buttons = document.querySelectorAll('#englishWords button');
+            buttons.forEach((btn, i) => {
+                if (i === index) {
+                    btn.classList.add('border-amber', 'bg-forest-700/50');
+                } else if (!matchedPairs.includes(i)) {
+                    btn.classList.remove('border-amber', 'bg-forest-700/50');
+                }
             });
+        }
+        
+        function selectIndonesian(meaning) {
+            if (selectedEnglish === null) return;
             
-            const shuffledCards = shuffleArray(cards);
+            const correctMeaning = matchingData[selectedEnglish].indonesian;
+            const matchCountEl = document.getElementById('matchCount');
             
-            shuffledCards.forEach(function(card, index) {
-                const cardElement = document.createElement('div');
-                cardElement.classList.add('game-card', 'h-20', 'md:h-24');
-                cardElement.dataset.matchId = card.matchId;
-                cardElement.dataset.type = card.type;
-                cardElement.dataset.index = index;
-                
-                cardElement.innerHTML = '<div class="game-card-inner">' +
-                    '<div class="game-card-front"><span class="text-forest-300 text-xs">?</span></div>' +
-                    '<div class="game-card-back"><span class="text-xs md:text-sm text-center px-1">' + card.content + '</span></div>' +
-                '</div>';
-                
-                cardElement.addEventListener('click', function() {
-                    handleCardClick(this);
-                });
-                
-                cardElement.setAttribute('tabindex', '0');
-                cardElement.setAttribute('role', 'button');
-                cardElement.setAttribute('aria-label', 'Kartu memori');
-                
-                cardElement.addEventListener('keydown', function(e) {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        handleCardClick(this);
+            if (meaning === correctMeaning) {
+                matchedPairs.push(selectedEnglish);
+                matchCount++;
+                if (matchCountEl) matchCountEl.textContent = matchCount;
+            }
+            
+            selectedEnglish = null;
+            renderMatchingGame();
+        }
+        
+        function resetMatching() {
+            selectedEnglish = null;
+            matchCount = 0;
+            matchedPairs = [];
+            const matchCountEl = document.getElementById('matchCount');
+            if (matchCountEl) matchCountEl.textContent = '0';
+            renderMatchingGame();
+        }
+        
+        // Smooth scroll with header offset
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
                     }
                 });
-                
-                gameBoard.appendChild(cardElement);
             });
         }
         
-        function handleCardClick(card) {
-            if (!canFlip) return;
-            if (card.classList.contains('flipped')) return;
-            if (flippedCards.length >= 2) return;
+        // Initialize everything after DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            generateBackground();
+            initScrollReveal();
+            initMobileMenu();
+            initSmoothScroll();
+            renderQuestion();
+            renderMatchingGame();
             
-            card.classList.add('flipped');
-            flippedCards.push(card);
-            
-            if (flippedCards.length === 2) {
-                canFlip = false;
-                checkMatch();
-            }
-        }
-        
-        function checkMatch() {
-            const card1 = flippedCards[0];
-            const card2 = flippedCards[1];
-            
-            const matchId1 = card1.dataset.matchId;
-            const matchId2 = card2.dataset.matchId;
-            const type1 = card1.dataset.type;
-            const type2 = card2.dataset.type;
-            
-            if (matchId1 === matchId2 && type1 !== type2) {
-                // Match found
-                score += 10;
-                matchedPairs++;
-                
-                if (scoreDisplay) scoreDisplay.textContent = score;
-                if (pairsDisplay) pairsDisplay.textContent = matchedPairs + '/6';
-                
-                flippedCards = [];
-                canFlip = true;
-                
-                if (matchedPairs === 6) {
-                    if (gameMessage) gameMessage.classList.remove('hidden');
-                }
-            } else {
-                // No match
-                score = Math.max(0, score - 2);
-                if (scoreDisplay) scoreDisplay.textContent = score;
-                
-                setTimeout(function() {
-                    card1.classList.remove('flipped');
-                    card2.classList.remove('flipped');
-                    flippedCards = [];
-                    canFlip = true;
-                }, 1000);
-            }
-        }
-        
-        if (resetButton) {
-            resetButton.addEventListener('click', initGame);
-        }
-        
-        // Initialize game on load
-        initGame();
+            window.addEventListener('scroll', updateProgressBar);
+            updateProgressBar();
+        });
     </script>
 </body>
 </html>
-
