@@ -63,12 +63,19 @@
             box-sizing: border-box;
         }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: var(--forest-white);
             color: var(--text-dark);
             line-height: 1.8;
             font-size: 16px;
+            overflow-x: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         /* Header Styles */
@@ -85,12 +92,12 @@
         .header-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.75rem;
         }
         
         .brand {
@@ -100,20 +107,21 @@
         }
         
         .brand-logo {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             background: var(--forest-accent);
-            border-radius: 12px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: var(--forest-dark);
+            flex-shrink: 0;
         }
         
         .brand-name {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 700;
             letter-spacing: -0.5px;
         }
@@ -121,9 +129,10 @@
         nav ul {
             list-style: none;
             display: flex;
-            gap: 1.5rem;
+            gap: 0.75rem 1.25rem;
             align-items: center;
             flex-wrap: wrap;
+            justify-content: center;
         }
         
         nav a {
@@ -131,7 +140,8 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
-            padding: 0.5rem 0;
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
         }
         
         nav a:hover {
@@ -142,16 +152,16 @@
         main {
             max-width: 900px;
             margin: 0 auto;
-            padding: 2rem 1.5rem;
+            padding: 1.25rem 1rem;
         }
         
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--forest-pale) 0%, var(--forest-light) 100%);
-            border-radius: 20px;
-            padding: 3rem 2rem;
+            border-radius: 16px;
+            padding: 2rem 1.25rem;
             text-align: center;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             border: 2px solid var(--border);
         }
         
@@ -159,95 +169,115 @@
             display: inline-block;
             background: var(--forest-primary);
             color: white;
-            padding: 0.5rem 1.5rem;
+            padding: 0.4rem 1.25rem;
             border-radius: 25px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
         }
         
         .hero h1 {
-            font-size: 2rem;
+            font-size: 1.75rem;
             color: var(--forest-dark);
             margin-bottom: 0.5rem;
             line-height: 1.3;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .hero .subtitle {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             color: var(--forest-primary);
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
         }
         
         .level-indicator {
-            display: inline-flex;
+            display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            gap: 0.5rem;
+            justify-content: center;
+            gap: 0.35rem;
             background: white;
-            padding: 0.5rem 1.25rem;
+            padding: 0.5rem 1rem;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
             border: 1px solid var(--border);
+            margin: 0 auto;
+            max-width: 100%;
+            line-height: 1.5;
+        }
+        
+        .level-indicator strong {
+            color: var(--forest-dark);
         }
         
         .focus-tags {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 0.75rem;
-            margin-top: 1.5rem;
+            gap: 0.5rem;
+            margin-top: 1.25rem;
         }
         
         .focus-tag {
             background: var(--forest-secondary);
             color: white;
-            padding: 0.4rem 1rem;
+            padding: 0.35rem 0.85rem;
             border-radius: 15px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 500;
+            white-space: nowrap;
         }
         
         /* Article Styles */
         article {
             background: white;
-            border-radius: 16px;
-            padding: 2rem;
+            border-radius: 12px;
+            padding: 1.25rem;
             box-shadow: 0 4px 20px rgba(26, 58, 47, 0.08);
             border: 1px solid var(--border);
         }
         
         section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
         
         h2 {
             color: var(--forest-dark);
-            font-size: 1.6rem;
-            margin-bottom: 1.25rem;
-            padding-bottom: 0.75rem;
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
             border-bottom: 3px solid var(--forest-accent);
+            line-height: 1.4;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         h3 {
             color: var(--forest-primary);
-            font-size: 1.25rem;
-            margin: 1.5rem 0 1rem;
+            font-size: 1.15rem;
+            margin: 1.25rem 0 0.85rem;
+            line-height: 1.4;
         }
         
         p {
             margin-bottom: 1rem;
             text-align: left;
+            line-height: 1.85;
         }
         
         /* Info Box */
         .info-box {
             background: var(--forest-pale);
             border-left: 4px solid var(--forest-secondary);
-            padding: 1.25rem 1.5rem;
-            border-radius: 0 12px 12px 0;
-            margin: 1.5rem 0;
+            padding: 1rem 1.15rem;
+            border-radius: 0 10px 10px 0;
+            margin: 1.25rem 0;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
         
         .info-box.english-term {
@@ -264,27 +294,41 @@
             color: var(--forest-primary);
             display: block;
             margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        .info-box p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
         }
         
         /* Illustration Box */
         .illustration-box {
             background: linear-gradient(135deg, var(--forest-white) 0%, var(--forest-pale) 100%);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin: 1.25rem 0;
             text-align: center;
             border: 2px dashed var(--forest-accent);
         }
         
         .illustration-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
         }
         
         .illustration-title {
             font-weight: 600;
             color: var(--forest-primary);
             margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .illustration-box p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 0;
         }
         
         /* Steps List */
@@ -297,8 +341,9 @@
         .steps-list li {
             counter-increment: step-counter;
             position: relative;
-            padding-left: 3.5rem;
+            padding-left: 3.25rem;
             margin-bottom: 1.25rem;
+            line-height: 1.7;
         }
         
         .steps-list li::before {
@@ -306,8 +351,8 @@
             position: absolute;
             left: 0;
             top: 0;
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 2.25rem;
+            height: 2.25rem;
             background: var(--forest-secondary);
             color: white;
             border-radius: 50%;
@@ -315,6 +360,12 @@
             align-items: center;
             justify-content: center;
             font-weight: 700;
+            font-size: 0.9rem;
+        }
+        
+        .steps-list li strong {
+            display: block;
+            margin-bottom: 0.25rem;
         }
         
         /* English Terms Highlight */
@@ -331,83 +382,98 @@
         .ad-placeholder {
             background: linear-gradient(135deg, #f5f5f5 0%, #ebebeb 100%);
             border: 2px dashed #ccc;
-            border-radius: 12px;
-            padding: 2rem;
+            border-radius: 10px;
+            padding: 1.5rem 1rem;
             text-align: center;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             color: #888;
         }
         
         .ad-placeholder .ad-label {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+        
+        .ad-placeholder p {
+            margin-bottom: 0;
         }
         
         /* Interactive Game Section */
         .game-section {
             background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-primary) 100%);
-            border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2.5rem 0;
+            border-radius: 16px;
+            padding: 1.5rem 1.25rem;
+            margin: 2rem 0;
             color: white;
         }
         
         .game-section h2 {
             color: var(--forest-light);
             border-bottom-color: var(--forest-accent);
+            font-size: 1.25rem;
+        }
+        
+        .game-section p {
+            font-size: 0.95rem;
         }
         
         .quest-card {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1.25rem;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .quest-title {
             display: flex;
-            align-items: center;
-            gap: 0.75rem;
+            align-items: flex-start;
+            gap: 0.6rem;
             font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
+            font-size: 1rem;
+            margin-bottom: 0.85rem;
+            line-height: 1.4;
         }
         
         .quest-icon {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
+            flex-shrink: 0;
         }
         
         .interactive-quiz {
             background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
+            border-radius: 10px;
+            padding: 1.15rem;
             color: var(--text-dark);
         }
         
         .quiz-question {
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.85rem;
             color: var(--forest-dark);
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
         
         .quiz-options {
             display: grid;
-            gap: 0.75rem;
+            gap: 0.6rem;
         }
         
         .quiz-option {
             display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem;
+            align-items: flex-start;
+            gap: 0.6rem;
+            padding: 0.85rem;
             background: var(--forest-pale);
             border: 2px solid var(--border);
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
         
         .quiz-option:hover {
@@ -426,11 +492,12 @@
         }
         
         .quiz-radio {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             border: 2px solid var(--forest-secondary);
             border-radius: 50%;
             flex-shrink: 0;
+            margin-top: 0.15rem;
         }
         
         .quiz-option.selected .quiz-radio {
@@ -438,10 +505,12 @@
         }
         
         .quiz-feedback {
-            margin-top: 1rem;
-            padding: 1rem;
+            margin-top: 0.85rem;
+            padding: 0.85rem;
             border-radius: 8px;
             display: none;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
         
         .quiz-feedback.show {
@@ -460,27 +529,38 @@
         
         .matching-game {
             background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
+            border-radius: 10px;
+            padding: 1.15rem;
             color: var(--text-dark);
+        }
+        
+        .matching-game p {
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
         }
         
         .matching-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.6rem;
+            margin-top: 0.85rem;
         }
         
         .matching-item {
             background: var(--forest-pale);
             border: 2px solid var(--border);
-            border-radius: 10px;
-            padding: 1rem;
+            border-radius: 8px;
+            padding: 0.75rem 0.5rem;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
             font-weight: 500;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .matching-item:hover {
@@ -499,11 +579,21 @@
             border-color: var(--forest-secondary);
         }
         
+        .matching-item.incorrect {
+            background: #f8d7da;
+            border-color: #dc3545;
+        }
+        
         .game-progress {
             background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
+            border-radius: 8px;
             padding: 1rem;
-            margin-top: 1.5rem;
+            margin-top: 1.25rem;
+        }
+        
+        .game-progress p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
         }
         
         .progress-bar {
@@ -524,35 +614,43 @@
         /* Next Episode Preview */
         .next-episode {
             background: linear-gradient(135deg, var(--forest-secondary) 0%, var(--forest-accent) 100%);
-            border-radius: 20px;
-            padding: 2rem;
+            border-radius: 16px;
+            padding: 1.5rem 1.25rem;
             text-align: center;
             color: white;
-            margin: 2.5rem 0;
+            margin: 2rem 0;
         }
         
         .next-episode h2 {
             color: white;
             border-bottom-color: rgba(255, 255, 255, 0.3);
-            margin-bottom: 1rem;
+            margin-bottom: 0.85rem;
+            font-size: 1.25rem;
         }
         
         .next-ep-title {
-            font-size: 1.4rem;
+            font-size: 1.15rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .next-episode p {
+            font-size: 0.95rem;
         }
         
         .next-ep-btn {
             display: inline-block;
             background: white;
             color: var(--forest-dark);
-            padding: 1rem 2.5rem;
+            padding: 0.85rem 2rem;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
         }
         
         .next-ep-btn:hover {
@@ -564,8 +662,8 @@
         footer {
             background: var(--bg-light);
             border-top: 1px solid var(--border);
-            padding: 3rem 1.5rem 1.5rem;
-            margin-top: 3rem;
+            padding: 2rem 1rem 1.5rem;
+            margin-top: 2rem;
         }
         
         .footer-container {
@@ -575,34 +673,35 @@
         
         .footer-brand {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         
         .footer-brand .brand-name {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: var(--forest-dark);
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
         
         .footer-brand .tagline {
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
         
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.25rem;
-            margin-bottom: 1.5rem;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
         }
         
         .social-links a {
-            width: 48px;
-            height: 48px;
+            width: 42px;
+            height: 42px;
             background: var(--forest-primary);
             color: white;
-            border-radius: 12px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -616,29 +715,31 @@
         }
         
         .social-links svg {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             fill: currentColor;
         }
         
         .follow-text {
             text-align: center;
             color: var(--text-muted);
-            margin-bottom: 2rem;
-            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+            padding: 0 0.5rem;
+            line-height: 1.5;
         }
         
         .quick-links {
             text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
             border-bottom: 1px solid var(--border);
         }
         
         .quick-links h3 {
             color: var(--forest-dark);
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+            margin-bottom: 0.85rem;
+            font-size: 1rem;
         }
         
         .quick-links ul {
@@ -646,7 +747,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem 2rem;
+            gap: 0.5rem 1rem;
         }
         
         .quick-links a {
@@ -654,6 +755,7 @@
             text-decoration: none;
             transition: color 0.3s ease;
             font-weight: 500;
+            font-size: 0.9rem;
         }
         
         .quick-links a:hover {
@@ -663,18 +765,272 @@
         .copyright {
             text-align: center;
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
         
-        /* Responsive Design */
-        @media (max-width: 768px) {
+        /* ==========================================
+           RESPONSIVE BREAKPOINTS
+           ========================================== */
+        
+        /* Extra Small Devices (phones, 320px and up) */
+        @media (max-width: 359px) {
+            body {
+                font-size: 14px;
+            }
+            
             .header-container {
-                flex-direction: column;
-                text-align: center;
+                padding: 0 0.75rem;
+            }
+            
+            .brand-logo {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+            
+            .brand-name {
+                font-size: 1.25rem;
             }
             
             nav ul {
-                justify-content: center;
+                gap: 0.5rem 0.75rem;
+            }
+            
+            nav a {
+                font-size: 0.8rem;
+            }
+            
+            main {
+                padding: 1rem 0.75rem;
+            }
+            
+            .hero {
+                padding: 1.5rem 1rem;
+                border-radius: 12px;
+            }
+            
+            .hero h1 {
+                font-size: 1.35rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 0.95rem;
+            }
+            
+            .episode-badge {
+                font-size: 0.75rem;
+                padding: 0.35rem 1rem;
+            }
+            
+            .level-indicator {
+                font-size: 0.75rem;
+                padding: 0.4rem 0.85rem;
+            }
+            
+            .focus-tag {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.7rem;
+            }
+            
+            article {
+                padding: 1rem;
+                border-radius: 10px;
+            }
+            
+            h2 {
+                font-size: 1.15rem;
+            }
+            
+            h3 {
+                font-size: 1rem;
+            }
+            
+            p {
+                font-size: 0.9rem;
+                line-height: 1.75;
+            }
+            
+            .info-box {
+                padding: 0.85rem;
+                border-left-width: 3px;
+            }
+            
+            .info-box p {
+                font-size: 0.85rem;
+            }
+            
+            .term-label {
+                font-size: 0.85rem;
+            }
+            
+            .illustration-box {
+                padding: 1rem;
+            }
+            
+            .illustration-icon {
+                font-size: 2rem;
+            }
+            
+            .illustration-title {
+                font-size: 0.9rem;
+            }
+            
+            .illustration-box p {
+                font-size: 0.8rem;
+            }
+            
+            .steps-list li {
+                padding-left: 2.75rem;
+            }
+            
+            .steps-list li::before {
+                width: 2rem;
+                height: 2rem;
+                font-size: 0.85rem;
+            }
+            
+            .game-section {
+                padding: 1.25rem 1rem;
+                border-radius: 12px;
+            }
+            
+            .game-section h2 {
+                font-size: 1.1rem;
+            }
+            
+            .quest-card {
+                padding: 1rem;
+            }
+            
+            .interactive-quiz {
+                padding: 1rem;
+            }
+            
+            .quiz-question {
+                font-size: 0.85rem;
+            }
+            
+            .quiz-option {
+                padding: 0.75rem;
+                font-size: 0.8rem;
+            }
+            
+            .matching-grid {
+                gap: 0.5rem;
+            }
+            
+            .matching-item {
+                font-size: 0.7rem;
+                padding: 0.6rem 0.4rem;
+                min-height: 45px;
+            }
+            
+            .next-episode {
+                padding: 1.25rem 1rem;
+                border-radius: 12px;
+            }
+            
+            .next-ep-title {
+                font-size: 1rem;
+            }
+            
+            .next-ep-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.85rem;
+            }
+            
+            footer {
+                padding: 1.5rem 0.75rem 1rem;
+            }
+            
+            .footer-brand .brand-name {
+                font-size: 1.25rem;
+            }
+            
+            .footer-brand .tagline {
+                font-size: 0.8rem;
+            }
+            
+            .social-links a {
+                width: 38px;
+                height: 38px;
+            }
+            
+            .social-links svg {
+                width: 20px;
+                height: 20px;
+            }
+            
+            .quick-links ul {
+                gap: 0.4rem 0.75rem;
+            }
+            
+            .quick-links a {
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Small Devices (phones, 360px to 480px) */
+        @media (min-width: 360px) and (max-width: 480px) {
+            .header-container {
+                padding: 0 1rem;
+            }
+            
+            main {
+                padding: 1.25rem 1rem;
+            }
+            
+            .hero {
+                padding: 1.75rem 1.25rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            
+            article {
+                padding: 1.15rem;
+            }
+            
+            h2 {
+                font-size: 1.25rem;
+            }
+            
+            .matching-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
+            
+            .matching-item {
+                font-size: 0.75rem;
+            }
+            
+            .game-section {
+                padding: 1.5rem 1.15rem;
+            }
+            
+            .next-episode {
+                padding: 1.5rem 1.15rem;
+            }
+        }
+        
+        /* Medium Small Devices (landscape phones, 481px to 767px) */
+        @media (min-width: 481px) and (max-width: 767px) {
+            .header-container {
+                flex-direction: row;
+                padding: 0 1.25rem;
+            }
+            
+            .brand-name {
+                font-size: 1.6rem;
+            }
+            
+            nav a {
+                font-size: 0.9rem;
+            }
+            
+            main {
+                padding: 1.5rem 1.25rem;
             }
             
             .hero {
@@ -682,7 +1038,11 @@
             }
             
             .hero h1 {
-                font-size: 1.6rem;
+                font-size: 1.7rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.15rem;
             }
             
             article {
@@ -690,31 +1050,323 @@
             }
             
             h2 {
-                font-size: 1.4rem;
+                font-size: 1.35rem;
             }
             
-            .game-section {
-                padding: 1.5rem;
+            h3 {
+                font-size: 1.15rem;
             }
             
             .matching-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+            
+            .matching-item {
+                font-size: 0.85rem;
+                padding: 0.85rem;
+            }
+            
+            .game-section {
+                padding: 2rem;
+            }
+            
+            .next-episode {
+                padding: 2rem;
             }
         }
         
-        @media (max-width: 480px) {
+        /* Tablets (768px and up) */
+        @media (min-width: 768px) {
+            .header-container {
+                flex-direction: row;
+                padding: 0 1.5rem;
+            }
+            
+            .brand-logo {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+            
             .brand-name {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                gap: 1.5rem;
+            }
+            
+            nav a {
+                font-size: 1rem;
+                padding: 0.5rem 0;
+            }
+            
+            main {
+                padding: 2rem 1.5rem;
+            }
+            
+            .hero {
+                padding: 3rem 2rem;
+                border-radius: 20px;
+                margin-bottom: 2.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .episode-badge {
+                font-size: 0.9rem;
+                padding: 0.5rem 1.5rem;
+            }
+            
+            .level-indicator {
+                font-size: 0.9rem;
+                padding: 0.5rem 1.25rem;
             }
             
             .focus-tags {
-                flex-direction: column;
-                align-items: center;
+                gap: 0.75rem;
+                margin-top: 1.5rem;
+            }
+            
+            .focus-tag {
+                font-size: 0.85rem;
+                padding: 0.4rem 1rem;
+            }
+            
+            article {
+                padding: 2rem;
+                border-radius: 16px;
+            }
+            
+            section {
+                margin-bottom: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+                margin-bottom: 1.25rem;
+                padding-bottom: 0.75rem;
+            }
+            
+            h3 {
+                font-size: 1.25rem;
+                margin: 1.5rem 0 1rem;
+            }
+            
+            p {
+                font-size: 16px;
+                margin-bottom: 1rem;
+            }
+            
+            .info-box {
+                padding: 1.25rem 1.5rem;
+                border-radius: 0 12px 12px 0;
+                margin: 1.5rem 0;
+            }
+            
+            .info-box p {
+                font-size: 1rem;
+            }
+            
+            .term-label {
+                font-size: 1rem;
+            }
+            
+            .illustration-box {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+            
+            .illustration-icon {
+                font-size: 3rem;
+            }
+            
+            .illustration-title {
+                font-size: 1rem;
+            }
+            
+            .steps-list li {
+                padding-left: 3.5rem;
+            }
+            
+            .steps-list li::before {
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1rem;
+            }
+            
+            .game-section {
+                padding: 2.5rem;
+                border-radius: 20px;
+                margin: 2.5rem 0;
+            }
+            
+            .game-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .quest-card {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+            
+            .quest-title {
+                font-size: 1.1rem;
+            }
+            
+            .interactive-quiz {
+                padding: 1.5rem;
+                border-radius: 12px;
+            }
+            
+            .quiz-question {
+                font-size: 1rem;
+            }
+            
+            .quiz-option {
+                padding: 1rem;
+                font-size: 0.95rem;
+            }
+            
+            .matching-game {
+                padding: 1.5rem;
+            }
+            
+            .matching-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 1rem;
+            }
+            
+            .matching-item {
+                font-size: 0.9rem;
+                padding: 1rem;
+                min-height: auto;
+            }
+            
+            .next-episode {
+                padding: 2rem;
+                border-radius: 20px;
+                margin: 2.5rem 0;
+            }
+            
+            .next-episode h2 {
+                font-size: 1.4rem;
+            }
+            
+            .next-ep-title {
+                font-size: 1.4rem;
+            }
+            
+            .next-ep-btn {
+                padding: 1rem 2.5rem;
+                font-size: 1rem;
+            }
+            
+            footer {
+                padding: 3rem 1.5rem 1.5rem;
+                margin-top: 3rem;
+            }
+            
+            .footer-brand {
+                margin-bottom: 2rem;
+            }
+            
+            .footer-brand .brand-name {
+                font-size: 2rem;
+            }
+            
+            .footer-brand .tagline {
+                font-size: 1rem;
+            }
+            
+            .social-links {
+                gap: 1.25rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .social-links a {
+                width: 48px;
+                height: 48px;
+                border-radius: 12px;
+            }
+            
+            .social-links svg {
+                width: 24px;
+                height: 24px;
+            }
+            
+            .follow-text {
+                font-size: 0.95rem;
+                margin-bottom: 2rem;
+            }
+            
+            .quick-links {
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+            }
+            
+            .quick-links h3 {
+                font-size: 1.1rem;
+                margin-bottom: 1rem;
             }
             
             .quick-links ul {
-                flex-direction: column;
-                gap: 0.75rem;
+                gap: 1rem 2rem;
+            }
+            
+            .quick-links a {
+                font-size: 1rem;
+            }
+            
+            .copyright {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Desktops (1024px and up) */
+        @media (min-width: 1024px) {
+            .header-container {
+                padding: 0 2rem;
+            }
+            
+            main {
+                padding: 2.5rem 2rem;
+            }
+            
+            .hero {
+                padding: 3.5rem 2.5rem;
+            }
+            
+            article {
+                padding: 2.5rem;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            header, footer, .ad-placeholder, .game-section, .next-episode {
+                display: none;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            article {
+                box-shadow: none;
+                border: none;
+            }
+            
+            .info-box {
+                border: 1px solid #ccc;
             }
         }
     </style>
@@ -1087,7 +1739,7 @@
                 <h2>Episode Selanjutnya</h2>
                 <p class="next-ep-title">Ep 2: English Vowel System<br>Short & Long Sound Recognition</p>
                 <p>Pada episode berikutnya, kita akan mempelajari sistem vokal bahasa Inggris, termasuk perbedaan antara bunyi vokal pendek (short vowels) dan vokal panjang (long vowels). Pengetahuan ini sangat penting untuk pengucapan yang akurat!</p>
-                <a href="https://season1/eps2.html" class="next-ep-btn">Lanjut ke Episode 2 →</a>
+                <a href="https;//mibenglish.github.io/season1/eps2.html" class="next-ep-btn">Lanjut ke Episode 2 →</a>
             </section>
         </article>
     </main>
