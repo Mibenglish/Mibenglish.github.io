@@ -3,388 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pelajari Vowel Sounds dalam bahasa Inggris dengan metode mudah dan interaktif. Episode 2 dari mibenglish untuk pemula.">
+    <meta name="description" content="Pelajari Phonemic Awareness dan Vowel Spectrum dalam bahasa Indonesia. Pahami suara vokal dengan metode imajinatif dan interaktif.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://mibenglish.com/ep2-phonemes-vowel-sounds">
+    <link rel="canonical" href="https://mibenglish.github.io/episode-2-phonemic-awareness-vowel-spectrum.html">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Ep 2. Phonemes Unleashed: Vowel Sounds - mibenglish">
-    <meta property="og:description" content="Pelajari Vowel Sounds dalam bahasa Inggris dengan metode mudah dan interaktif.">
+    <meta property="og:title" content="Episode 2: Phonemic Awareness I – The Vowel Spectrum | mibenglish">
+    <meta property="og:description" content="Pelajari Phonemic Awareness dan Vowel Spectrum dengan metode imajinatif dan interaktif.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://mibenglish.com/ep2-phonemes-vowel-sounds">
+    <meta property="og:url" content="https://mibenglish.github.io/episode-2-phonemic-awareness-vowel-spectrum.html">
     <meta property="og:site_name" content="mibenglish">
     
-    <title>Ep 2. Phonemes Unleashed: Vowel Sounds - mibenglish</title>
+    <title>Episode 2: Phonemic Awareness I – The Vowel Spectrum | mibenglish</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        forest: {
-                            900: '#0a1f14',
-                            800: '#0d2919',
-                            700: '#1a4d2e',
-                            600: '#2d6a4f',
-                            500: '#40916c',
-                            400: '#52b788',
-                            300: '#74c69d',
-                        },
-                        moss: '#3a5a40',
-                        amber: '#d4a373',
-                        cream: '#f5f1e8',
-                        bark: '#bc6c25',
-                    }
-                }
-            }
-        }
-    </script>
     
-    <style>
-        :root {
-            --bg: #0a1f14;
-            --bg-card: #122a1c;
-            --fg: #f5f1e8;
-            --muted: #a3b8a3;
-            --accent: #d4a373;
-            --accent-bright: #e9c46a;
-            --border: #2d6a4f;
-            --glow: rgba(82, 183, 136, 0.3);
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Source Sans 3', sans-serif;
-            background: var(--bg);
-            color: var(--fg);
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3 {
-            font-family: 'Fraunces', serif;
-        }
-        
-        /* Background atmosphere */
-        .forest-bg {
-            position: fixed;
-            inset: 0;
-            z-index: -1;
-            background: 
-                radial-gradient(ellipse 80% 50% at 20% 20%, rgba(45, 106, 79, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 40% at 80% 80%, rgba(212, 163, 115, 0.1) 0%, transparent 50%),
-                linear-gradient(180deg, #0a1f14 0%, #0d2919 50%, #122a1c 100%);
-        }
-        
-        /* Floating particles */
-        .particle {
-            position: fixed;
-            width: 4px;
-            height: 4px;
-            background: radial-gradient(circle, rgba(116, 198, 157, 0.8) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            animation: float-up 15s infinite ease-in-out;
-            z-index: 0;
-        }
-        
-        @keyframes float-up {
-            0%, 100% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-10vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-        
-        /* Reveal animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-            .reveal {
-                opacity: 1;
-                transform: none;
-                transition: none;
-            }
-            .particle {
-                display: none;
-            }
-        }
-        
-        /* Vowel cards */
-        .vowel-card {
-            background: linear-gradient(145deg, rgba(26, 77, 46, 0.6) 0%, rgba(18, 42, 28, 0.8) 100%);
-            border: 1px solid rgba(45, 106, 79, 0.4);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .vowel-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 50% 0%, rgba(82, 183, 136, 0.2) 0%, transparent 60%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .vowel-card:hover::before {
-            opacity: 1;
-        }
-        
-        .vowel-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px var(--glow);
-        }
-        
-        .vowel-symbol {
-            font-family: 'Fraunces', serif;
-            font-size: 4rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Game buttons */
-        .game-btn {
-            background: linear-gradient(135deg, rgba(45, 106, 79, 0.8) 0%, rgba(26, 77, 46, 0.9) 100%);
-            border: 2px solid var(--border);
-            color: var(--fg);
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .game-btn::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);
-            opacity: 0;
-            transition: opacity 0.2s ease;
-        }
-        
-        .game-btn:hover::after {
-            opacity: 1;
-        }
-        
-        .game-btn:hover {
-            transform: scale(1.02);
-            border-color: var(--accent);
-        }
-        
-        .game-btn:active {
-            transform: scale(0.98);
-        }
-        
-        .game-btn:focus-visible {
-            outline: 3px solid var(--accent);
-            outline-offset: 2px;
-        }
-        
-        .game-btn.correct {
-            background: linear-gradient(135deg, rgba(64, 145, 108, 0.9) 0%, rgba(45, 106, 79, 0.95) 100%);
-            border-color: #52b788;
-            animation: pulse-correct 0.5s ease;
-        }
-        
-        .game-btn.wrong {
-            background: linear-gradient(135deg, rgba(120, 50, 50, 0.9) 0%, rgba(80, 30, 30, 0.95) 100%);
-            border-color: #bc6c25;
-            animation: shake 0.4s ease;
-        }
-        
-        @keyframes pulse-correct {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-8px); }
-            75% { transform: translateX(8px); }
-        }
-        
-        /* Progress bar */
-        .progress-track {
-            background: rgba(45, 106, 79, 0.3);
-            height: 8px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent) 0%, var(--accent-bright) 100%);
-            border-radius: 4px;
-            transition: width 0.5s ease;
-        }
-        
-        /* Ad placeholder */
-        .ad-slot {
-            background: linear-gradient(145deg, rgba(26, 77, 46, 0.3) 0%, rgba(18, 42, 28, 0.4) 100%);
-            border: 1px dashed rgba(45, 106, 79, 0.5);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--muted);
-            font-size: 0.875rem;
-        }
-        
-        /* Brand header */
-        .brand-text {
-            font-family: 'Fraunces', serif;
-            font-weight: 900;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, var(--forest-400) 0%, var(--accent) 50%, var(--forest-400) 100%);
-            background-size: 200% 100%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shimmer 4s ease infinite;
-        }
-        
-        @keyframes shimmer {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        /* Navigation links */
-        .nav-link {
-            position: relative;
-            color: var(--muted);
-            transition: color 0.2s ease;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.2s ease;
-        }
-        
-        .nav-link:hover {
-            color: var(--fg);
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        /* Social icons */
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            background: rgba(45, 106, 79, 0.3);
-            border: 1px solid rgba(45, 106, 79, 0.4);
-            color: var(--muted);
-            transition: all 0.2s ease;
-        }
-        
-        .social-icon:hover {
-            background: rgba(45, 106, 79, 0.5);
-            border-color: var(--accent);
-            color: var(--fg);
-            transform: translateY(-2px);
-        }
-        
-        /* Sound wave animation */
-        .sound-wave {
-            display: flex;
-            align-items: center;
-            gap: 3px;
-            height: 24px;
-        }
-        
-        .wave-bar {
-            width: 4px;
-            background: var(--accent);
-            border-radius: 2px;
-            animation: wave 1s ease-in-out infinite;
-        }
-        
-        .wave-bar:nth-child(1) { animation-delay: 0s; }
-        .wave-bar:nth-child(2) { animation-delay: 0.1s; }
-        .wave-bar:nth-child(3) { animation-delay: 0.2s; }
-        .wave-bar:nth-child(4) { animation-delay: 0.3s; }
-        .wave-bar:nth-child(5) { animation-delay: 0.4s; }
-        
-        @keyframes wave {
-            0%, 100% { height: 8px; }
-            50% { height: 24px; }
-        }
-        
-        /* Example sentence highlight */
-        .highlight-vowel {
-            color: var(--accent);
-            font-weight: 600;
-            text-decoration: underline;
-            text-decoration-color: rgba(212, 163, 115, 0.4);
-            text-underline-offset: 4px;
-        }
-        
-        /* Next episode card */
-        .next-ep-card {
-            background: linear-gradient(145deg, rgba(212, 163, 115, 0.15) 0%, rgba(45, 106, 79, 0.2) 100%);
-            border: 1px solid rgba(212, 163, 115, 0.3);
-        }
-        
-        .next-ep-card:hover {
-            border-color: var(--accent);
-            box-shadow: 0 0 30px rgba(212, 163, 115, 0.2);
-        }
-    </style>
-    
-    <!-- Schema.org JSON-LD -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Ep 2. Phonemes Unleashed: Vowel Sounds",
-        "description": "Pelajari Vowel Sounds dalam bahasa Inggris dengan metode mudah dan interaktif. Episode 2 dari mibenglish untuk pemula.",
+        "headline": "Episode 2: Phonemic Awareness I – The Vowel Spectrum",
+        "description": "Pelajari Phonemic Awareness dan Vowel Spectrum dalam bahasa Indonesia dengan metode imajinatif dan interaktif.",
         "author": {
             "@type": "Person",
             "name": "bangmik"
@@ -392,809 +38,1062 @@
         "publisher": {
             "@type": "Organization",
             "name": "mibenglish",
-            "url": "https://mibenglish.com"
+            "url": "https://mibenglish.github.io"
         },
-        "datePublished": "2024-01-15",
-        "dateModified": "2024-01-20",
+        "datePublished": "2025-01-15",
+        "dateModified": "2025-01-15",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://mibenglish.com/ep2-phonemes-vowel-sounds"
+            "@id": "https://mibenglish.github.io/episode-2-phonemic-awareness-vowel-spectrum.html"
         }
     }
     </script>
+    
+    <style>
+        :root {
+            --bg: #0a1a12;
+            --bg-light: #0f251a;
+            --bg-card: #132a1e;
+            --fg: #e8f5e9;
+            --fg-muted: #a3c4ab;
+            --accent: #4ade80;
+            --accent-warm: #fbbf24;
+            --accent-glow: #22c55e;
+            --border: #1e4030;
+            --border-light: #2d5a42;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Crimson Pro', serif;
+        }
+        
+        /* Background Pattern */
+        .forest-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(34, 197, 94, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(74, 222, 128, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(251, 191, 36, 0.03) 0%, transparent 60%),
+                linear-gradient(180deg, var(--bg) 0%, var(--bg-light) 100%);
+        }
+        
+        .forest-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 15 L30 12 L25 15 Z' fill='%231e4030' fill-opacity='0.3'/%3E%3C/svg%3E");
+            opacity: 0.4;
+        }
+        
+        /* Floating particles */
+        .particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 0;
+        }
+        
+        /* Entrance Animations */
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeSlideRight {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        .animate-entrance {
+            opacity: 0;
+            animation: fadeSlideUp 0.8s ease-out forwards;
+        }
+        
+        .animate-delay-1 { animation-delay: 0.1s; }
+        .animate-delay-2 { animation-delay: 0.2s; }
+        .animate-delay-3 { animation-delay: 0.3s; }
+        .animate-delay-4 { animation-delay: 0.4s; }
+        .animate-delay-5 { animation-delay: 0.5s; }
+        
+        /* Vowel Spectrum Visual */
+        .vowel-spectrum {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            position: relative;
+        }
+        
+        .vowel-orb {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+        }
+        
+        .vowel-orb::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, transparent, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+            animation: spin 8s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .vowel-orb:hover::before {
+            opacity: 1;
+        }
+        
+        .vowel-orb:hover {
+            transform: scale(1.15) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(74, 222, 128, 0.3);
+        }
+        
+        .vowel-orb.active {
+            background: linear-gradient(135deg, var(--accent), var(--accent-glow));
+            color: var(--bg);
+            border-color: var(--accent);
+        }
+        
+        .vowel-orb span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Content Cards */
+        .content-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+        }
+        
+        /* Interactive Diagram */
+        .mouth-diagram {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+            position: relative;
+        }
+        
+        .mouth-svg {
+            width: 100%;
+            height: auto;
+        }
+        
+        .tongue-position {
+            fill: #e57373;
+            transition: all 0.5s ease;
+        }
+        
+        .mouth-svg:hover .tongue-position {
+            fill: #ef5350;
+        }
+        
+        /* Game Section */
+        .game-container {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            margin-top: 40px;
+        }
+        
+        .sound-btn {
+            padding: 16px 24px;
+            background: var(--bg-light);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            color: var(--fg);
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .sound-btn:hover {
+            background: var(--border);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        .sound-btn.correct {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            border-color: #22c55e;
+            animation: pulse 0.5s ease;
+        }
+        
+        .sound-btn.wrong {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            border-color: #ef4444;
+            animation: shake 0.5s ease;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        
+        /* Progress Bar */
+        .progress-track {
+            height: 8px;
+            background: var(--bg);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        
+        /* Navigation Pills */
+        .nav-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            color: var(--fg);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .nav-pill:hover {
+            background: var(--accent);
+            color: var(--bg);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(74, 222, 128, 0.2);
+        }
+        
+        /* Example Box */
+        .example-box {
+            background: linear-gradient(135deg, rgba(74, 222, 128, 0.1), rgba(251, 191, 36, 0.05));
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 16px 0;
+        }
+        
+        /* Ad Placeholder */
+        .ad-slot {
+            background: var(--bg-light);
+            border: 2px dashed var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            color: var(--fg-muted);
+            font-size: 0.875rem;
+        }
+        
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* Focus States */
+        button:focus-visible,
+        a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 640px) {
+            .vowel-orb {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .game-container {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Background -->
     <div class="forest-bg" aria-hidden="true"></div>
     
-    <!-- Particles -->
+    <!-- Particles Container -->
     <div id="particles" aria-hidden="true"></div>
     
     <!-- Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-forest-900/80 border-b border-forest-700/50">
-        <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="https://mibenglish.com" class="brand-text text-2xl md:text-3xl" aria-label="Kembali ke beranda mibenglish">
-                mibenglish
+    <header class="sticky top-0 z-50 backdrop-blur-lg bg-[var(--bg)]/80 border-b border-[var(--border)]">
+        <nav class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="https://mibenglish.github.io/index.html" class="flex items-center gap-3" aria-label="Kembali ke Beranda mibenglish">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--accent)] to-[var(--accent-glow)] flex items-center justify-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--bg)]">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <span class="font-bold text-lg tracking-tight">mibenglish</span>
             </a>
             
-            <div class="flex items-center gap-6">
-                <a href="https://mibenglish.com" class="nav-link text-sm md:text-base hidden sm:block">
+            <div class="flex items-center gap-4">
+                <span class="hidden sm:inline-block px-3 py-1 bg-[var(--bg-card)] border border-[var(--border)] rounded-full text-sm text-[var(--fg-muted)]">
+                    Episode 2
+                </span>
+                <a href="https://mibenglish.github.io/index.html" class="nav-pill text-sm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    </svg>
                     Beranda
                 </a>
-                <a href="https://mibenglish.com/episodes" class="nav-link text-sm md:text-base hidden sm:block">
-                    Daftar Episode
-                </a>
-                
-                <!-- Mobile menu button -->
-                <button id="mobileMenuBtn" class="sm:hidden p-2 rounded-lg bg-forest-700/50" aria-label="Menu navigasi">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
             </div>
         </nav>
-        
-        <!-- Mobile menu -->
-        <div id="mobileMenu" class="hidden sm:hidden px-4 pb-4 border-t border-forest-700/50">
-            <a href="https://mibenglish.com" class="block py-3 text-cream/80 hover:text-cream">Beranda</a>
-            <a href="https://mibenglish.com/episodes" class="block py-3 text-cream/80 hover:text-cream">Daftar Episode</a>
-        </div>
     </header>
     
-    <main class="relative z-10">
-        <!-- Hero Section -->
-        <section class="max-w-6xl mx-auto px-4 pt-12 pb-16">
-            <div class="reveal">
-                <p class="text-amber font-medium mb-4 tracking-wide">EPISODE 2</p>
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                    Phonemes Unleashed:<br>
-                    <span class="text-forest-400">Vowel Sounds</span>
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 py-8">
+        <!-- Article -->
+        <article itemscope itemtype="https://schema.org/Article">
+            <!-- Header Section -->
+            <header class="mb-12">
+                <div class="animate-entrance">
+                    <span class="inline-block px-4 py-2 bg-[var(--accent)]/10 border border-[var(--accent)]/30 rounded-full text-sm text-[var(--accent)] font-medium mb-4">
+                        Series: English Phonics Fundamentals
+                    </span>
+                </div>
+                
+                <h1 class="animate-entrance animate-delay-1 text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6" itemprop="headline">
+                    Episode 2: Phonemic Awareness I
+                    <span class="block text-[var(--accent)]">The Vowel Spectrum</span>
                 </h1>
-                <p class="text-lg md:text-xl text-cream/70 max-w-2xl leading-relaxed">
-                    Temukan rahasia di balik huruf vokal bahasa Inggris. Pelajari cara mengucapkan dengan benar dan bedakan bunyi yang sering tertukar.
+                
+                <p class="animate-entrance animate-delay-2 text-xl text-[var(--fg-muted)] max-w-3xl" itemprop="description">
+                    Memahami spektrum suara vokal sebagai fondasi utama dalam menguasai pengucapan bahasa Inggris.
                 </p>
-            </div>
+                
+                <div class="animate-entrance animate-delay-3 flex flex-wrap gap-4 mt-6 text-sm text-[var(--fg-muted)]">
+                    <span class="flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                        15 menit baca
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span itemprop="author">bangmik</span>
+                    </span>
+                </div>
+            </header>
             
-            <div class="flex items-center gap-4 mt-8 reveal" style="transition-delay: 0.1s;">
-                <div class="flex items-center gap-2 text-cream/60 text-sm">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
-                    <span>15 menit baca</span>
-                </div>
-                <div class="flex items-center gap-2 text-cream/60 text-sm">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 20V10"></path>
-                        <path d="M18 20V4"></path>
-                        <path d="M6 20v-4"></path>
-                    </svg>
-                    <span>Tingkat: Pemula</span>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Ad Slot 1 -->
-        <section class="max-w-6xl mx-auto px-4 mb-12">
-            <div class="ad-slot h-24 md:h-28 reveal" style="transition-delay: 0.2s;">
-                Slot Iklan - Google AdSense
-            </div>
-        </section>
-        
-        <!-- Introduction -->
-        <article class="max-w-4xl mx-auto px-4">
-            <section class="mb-16 reveal">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-forest-300">
-                    Mengapa Vowel Sounds Penting?
-                </h2>
+            <!-- Ad Slot 1 -->
+            <aside class="ad-slot mb-8 animate-entrance animate-delay-4" aria-label="Ruang Iklan">
+                Slot Iklan - 336x280
+            </aside>
+            
+            <!-- Section 1: Introduction -->
+            <section class="content-card animate-entrance animate-delay-4" aria-labelledby="intro-heading">
+                <h2 id="intro-heading" class="text-2xl font-bold mb-4">Mengapa Vokal Menjadi Akar Masalah?</h2>
                 
-                <p class="text-cream/80 leading-relaxed mb-6">
-                    Bayangkan Anda sedang membeli buah di pasar. Anda ingin membeli <strong class="text-amber">"apple"</strong> (apel), tetapi karena pengucapan vokal yang kurang tepat, penjual mengira Anda berkata <strong class="text-amber">"epple"</strong> dan bingung. Situasi sederhana ini menunjukkan betapa pentingnya menguasai <em>vowel sounds</em> atau bunyi vokal dalam bahasa Inggris.
+                <p class="text-[var(--fg-muted)] mb-4">
+                    Bayangkan Anda berada di pasar tradisional. Seorang penjual berkata <strong class="text-[var(--fg)]">"sip"</strong> dengan nada singkat. Apakah dia bermaksud mengatakan <em>"sip"</em> (minum sedikit), <em>"sep"</em> (tidak bermakna), atau mungkin <em>"sap"</em> (getah pohon)?
                 </p>
                 
-                <p class="text-cream/80 leading-relaxed mb-6">
-                    Dalam bahasa Indonesia, huruf vokal A, I, U, E, O memiliki bunyi yang konsisten. Namun dalam bahasa Inggris, satu huruf vokal bisa memiliki beberapa cara pengucapan berbeda! Inilah yang sering membuat pemula kebingungan.
+                <p class="text-[var(--fg-muted)] mb-4">
+                    Perbedaan satu suara vokal bisa mengubah seluruh makna. Inilah mengapa <strong class="text-[var(--accent)]">Phonemic Awareness</strong> (kesadaran fonemik) menjadi keterampilan pertama yang harus dikuasai.
                 </p>
                 
-                <div class="bg-forest-800/50 border border-forest-600/50 rounded-xl p-6 mt-8">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-full bg-forest-600/50 flex items-center justify-center flex-shrink-0">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="12" y1="16" x2="12" y2="12"></line>
-                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-lg mb-2">Tahukah Anda?</h3>
-                            <p class="text-cream/70">
-                                Bahasa Inggris memiliki sekitar 20 bunyi vokal berbeda, padahal hanya ada 5 huruf vokal (a, e, i, o, u). Bandingkan dengan bahasa Indonesia yang hanya memiliki 5 bunyi vokal sesuai jumlah hurufnya!
-                            </p>
-                        </div>
-                    </div>
+                <div class="example-box">
+                    <p class="font-medium text-[var(--fg)]">Fonem (Phoneme)</p>
+                    <p class="text-[var(--fg-muted)] text-sm">
+                        Unit terkecil dari suara dalam bahasa yang membedakan makna. Dalam bahasa Inggris, terdapat sekitar 44 fonem, dan 20 di antaranya adalah suara vokal.
+                    </p>
                 </div>
             </section>
             
-            <!-- Main Content: Short Vowels -->
-            <section class="mb-16 reveal">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-forest-300">
-                    Memahami Short Vowels
-                </h2>
+            <!-- Section 2: Vowel Spectrum Visualization -->
+            <section class="content-card animate-entrance animate-delay-5" aria-labelledby="spectrum-heading">
+                <h2 id="spectrum-heading" class="text-2xl font-bold mb-4">Peta Suara Vokal: The Vowel Spectrum</h2>
                 
-                <p class="text-cream/80 leading-relaxed mb-8">
-                    <strong>Short vowels</strong> atau vokal pendek adalah bunyi vokal yang diucapkan dengan singkat. Mari kita pelajari satu per satu dengan contoh kata yang mudah diingat.
+                <p class="text-[var(--fg-muted)] mb-6">
+                    Mari kita bayangkan suara vokal seperti peta. Setiap vokal memiliki "lokasi" berdasarkan posisi lidah. Klik setiap vokal untuk mendengar dan memahami posisinya.
                 </p>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- /æ/ sound -->
-                    <div class="vowel-card rounded-2xl p-6 reveal" style="transition-delay: 0.1s;">
-                        <div class="vowel-symbol mb-2">/æ/</div>
-                        <p class="text-cream/60 text-sm mb-4">Seperti "a" dalam kata "cat"</p>
-                        <div class="space-y-2">
-                            <p class="text-cream/90">
-                                <span class="highlight-vowel">a</span>pple - apel
-                            </p>
-                            <p class="text-cream/90">
-                                c<span class="highlight-vowel">a</span>t - kucing
-                            </p>
-                            <p class="text-cream/90">
-                                m<span class="highlight-vowel">a</span>p - peta
-                            </p>
+                <!-- Interactive Vowel Spectrum -->
+                <div class="vowel-spectrum" role="group" aria-label="Interaktif Spektrum Vokal">
+                    <button class="vowel-orb" data-vowel="iː" data-example="see, tea, me" data-desc="Lidah tinggi di depan, seperti senyum lebar" aria-label="Vokal i panjang">
+                        <span>/iː/</span>
+                    </button>
+                    <button class="vowel-orb" data-vowel="ɪ" data-example="sit, bit, hit" data-desc="Lidah sedikit lebih rendah dari /iː/" aria-label="Vokal i pendek">
+                        <span>/ɪ/</span>
+                    </button>
+                    <button class="vowel-orb" data-vowel="e" data-example="bed, red, pen" data-desc="Lidah di posisi tengah-depan" aria-label="Vokal e">
+                        <span>/e/</span>
+                    </button>
+                    <button class="vowel-orb" data-vowel="æ" data-example="cat, bad, man" data-desc="Lidah rendah di depan, mulut terbuka lebar" aria-label="Vokal ae">
+                        <span>/æ/</span>
+                    </button>
+                    <button class="vowel-orb" data-vowel="ɑː" data-example="car, far, star" data-desc="Lidah rendah di belakang, mulut terbuka" aria-label="Vokal a panjang">
+                        <span>/ɑː/</span>
+                    </button>
+                    <button class="vowel-orb" data-vowel="ʌ" data-example="cup, but, sun" data-desc="Lidah di posisi tengah, santai" aria-label="Vokal u terbalik">
+                        <span>/ʌ/</span>
+                    </button>
+                    <button class="vowel-orb" data-vowel="uː" data-example="food, too, blue" data-desc="Lidah tinggi di belakang, bibir membulat" aria-label="Vokal u panjang">
+                        <span>/uː/</span>
+                    </button>
+                    <button class="vowel-orb" data-vowel="ə" data-example="about, teacher, banana" data-desc="Suara netral, lidah santai di tengah" aria-label="Schwa">
+                        <span>/ə/</span>
+                    </button>
+                </div>
+                
+                <!-- Info Panel -->
+                <div id="vowel-info" class="mt-6 p-6 bg-[var(--bg)] rounded-xl border border-[var(--border)] text-center" aria-live="polite">
+                    <p class="text-[var(--fg-muted)]">Klik salah satu vokal di atas untuk melihat detail</p>
+                </div>
+            </section>
+            
+            <!-- Section 3: Understanding Through Imagination -->
+            <section class="content-card" aria-labelledby="imagination-heading">
+                <h2 id="imagination-heading" class="text-2xl font-bold mb-4">Bayangkan dengan Lidah Anda</h2>
+                
+                <p class="text-[var(--fg-muted)] mb-6">
+                    Mari gunakan imajinasi. Bayangkan lidah Anda adalah seekor siput kecil yang berjalan di dalam mulut. Posisi siput ini menentukan suara yang dihasilkan.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="p-5 bg-[var(--bg)] rounded-xl border border-[var(--border)]">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">🎯</span>
+                            <h3 class="font-bold text-lg">Posisi Tinggi (High)</h3>
                         </div>
-                        <div class="mt-4 pt-4 border-t border-forest-600/50">
-                            <p class="text-sm text-cream/60">
-                                Cara mengucapkan: Buka mulut lebar seperti senyum, lidah di posisi rendah.
-                            </p>
-                        </div>
+                        <p class="text-[var(--fg-muted)] text-sm mb-2">
+                            Siput mendekati langit-langit mulut. Suara terasa "sempit" dan "tegang".
+                        </p>
+                        <p class="text-[var(--accent)] font-medium">Contoh: /iː/ dalam "see", /uː/ dalam "food"</p>
                     </div>
                     
-                    <!-- /e/ sound -->
-                    <div class="vowel-card rounded-2xl p-6 reveal" style="transition-delay: 0.15s;">
-                        <div class="vowel-symbol mb-2">/e/</div>
-                        <p class="text-cream/60 text-sm mb-4">Seperti "e" dalam kata "bed"</p>
-                        <div class="space-y-2">
-                            <p class="text-cream/90">
-                                b<span class="highlight-vowel">e</span>d - tempat tidur
-                            </p>
-                            <p class="text-cream/90">
-                                r<span class="highlight-vowel">e</span>d - merah
-                            </p>
-                            <p class="text-cream/90">
-                                p<span class="highlight-vowel">e</span>n - pena
-                            </p>
+                    <div class="p-5 bg-[var(--bg)] rounded-xl border border-[var(--border)]">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">🏔️</span>
+                            <h3 class="font-bold text-lg">Posisi Rendah (Low)</h3>
                         </div>
-                        <div class="mt-4 pt-4 border-t border-forest-600/50">
-                            <p class="text-sm text-cream/60">
-                                Cara mengucapkan: Mulut sedikit terbuka, seperti saat ingin berkata "eh" dengan singkat.
-                            </p>
-                        </div>
+                        <p class="text-[var(--fg-muted)] text-sm mb-2">
+                            Siput turun ke bawah, rahang lebih terbuka. Suara terasa "lapang".
+                        </p>
+                        <p class="text-[var(--accent)] font-medium">Contoh: /æ/ dalam "cat", /ɑː/ dalam "car"</p>
                     </div>
                     
-                    <!-- /ɪ/ sound -->
-                    <div class="vowel-card rounded-2xl p-6 reveal" style="transition-delay: 0.2s;">
-                        <div class="vowel-symbol mb-2">/ɪ/</div>
-                        <p class="text-cream/60 text-sm mb-4">Seperti "i" dalam kata "sit"</p>
-                        <div class="space-y-2">
-                            <p class="text-cream/90">
-                                s<span class="highlight-vowel">i</span>t - duduk
-                            </p>
-                            <p class="text-cream/90">
-                                b<span class="highlight-vowel">i</span>t - sedikit
-                            </p>
-                            <p class="text-cream/90">
-                                f<span class="highlight-vowel">i</span>sh - ikan
-                            </p>
+                    <div class="p-5 bg-[var(--bg)] rounded-xl border border-[var(--border)]">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">➡️</span>
+                            <h3 class="font-bold text-lg">Posisi Depan (Front)</h3>
                         </div>
-                        <div class="mt-4 pt-4 border-t border-forest-600/50">
-                            <p class="text-sm text-cream/60">
-                                Cara mengucapkan: Mulut sedikit terbuka, bunyi "i" yang santai, tidak terlalu tajam.
-                            </p>
-                        </div>
+                        <p class="text-[var(--fg-muted)] text-sm mb-2">
+                            Siput bergerak ke arah gigi depan. Bibir cenderung melebar.
+                        </p>
+                        <p class="text-[var(--accent)] font-medium">Contoh: /iː/, /ɪ/, /e/, /æ/</p>
                     </div>
                     
-                    <!-- /ɒ/ sound -->
-                    <div class="vowel-card rounded-2xl p-6 reveal" style="transition-delay: 0.25s;">
-                        <div class="vowel-symbol mb-2">/ɒ/</div>
-                        <p class="text-cream/60 text-sm mb-4">Seperti "o" dalam kata "hot"</p>
-                        <div class="space-y-2">
-                            <p class="text-cream/90">
-                                h<span class="highlight-vowel">o</span>t - panas
-                            </p>
-                            <p class="text-cream/90">
-                                d<span class="highlight-vowel">o</span>g - anjing
-                            </p>
-                            <p class="text-cream/90">
-                                sh<span class="highlight-vowel">o</span>p - toko
-                            </p>
+                    <div class="p-5 bg-[var(--bg)] rounded-xl border border-[var(--border)]">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="text-2xl">⬅️</span>
+                            <h3 class="font-bold text-lg">Posisi Belakang (Back)</h3>
                         </div>
-                        <div class="mt-4 pt-4 border-t border-forest-600/50">
-                            <p class="text-sm text-cream/60">
-                                Cara mengucapkan: Bibir membentuk lingkaran kecil, seperti hendak meniup lilin.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- /ʌ/ sound -->
-                    <div class="vowel-card rounded-2xl p-6 reveal" style="transition-delay: 0.3s;">
-                        <div class="vowel-symbol mb-2">/ʌ/</div>
-                        <p class="text-cream/60 text-sm mb-4">Seperti "u" dalam kata "cup"</p>
-                        <div class="space-y-2">
-                            <p class="text-cream/90">
-                                c<span class="highlight-vowel">u</span>p - cangkir
-                            </p>
-                            <p class="text-cream/90">
-                                b<span class="highlight-vowel">u</span>s - bis
-                            </p>
-                            <p class="text-cream/90">
-                                l<span class="highlight-vowel">u</span>ck - keberuntungan
-                            </p>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-forest-600/50">
-                            <p class="text-sm text-cream/60">
-                                Cara mengucapkan: Bunyi antara "a" dan "e", mulut sedikit terbuka dengan santai.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- /ʊ/ sound -->
-                    <div class="vowel-card rounded-2xl p-6 reveal" style="transition-delay: 0.35s;">
-                        <div class="vowel-symbol mb-2">/ʊ/</div>
-                        <p class="text-cream/60 text-sm mb-4">Seperti "u" dalam kata "put"</p>
-                        <div class="space-y-2">
-                            <p class="text-cream/90">
-                                p<span class="highlight-vowel">u</span>t - meletakkan
-                            </p>
-                            <p class="text-cream/90">
-                                b<span class="highlight-vowel">oo</span>k - buku
-                            </p>
-                            <p class="text-cream/90">
-                                f<span class="highlight-vowel">oo</span>t - kaki
-                            </p>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-forest-600/50">
-                            <p class="text-sm text-cream/60">
-                                Cara mengucapkan: Bibir sedikit bulat, bunyi "u" yang pendek dan santai.
-                            </p>
-                        </div>
+                        <p class="text-[var(--fg-muted)] text-sm mb-2">
+                            Siput bergerak ke arah tenggorokan. Bibir cenderung membulat.
+                        </p>
+                        <p class="text-[var(--accent)] font-medium">Contoh: /uː/, /ɑː/, /ɔː/</p>
                     </div>
                 </div>
             </section>
             
             <!-- Ad Slot 2 -->
-            <section class="mb-16">
-                <div class="ad-slot h-24 md:h-28 reveal">
-                    Slot Iklan - Google AdSense
-                </div>
-            </section>
+            <aside class="ad-slot my-8" aria-label="Ruang Iklan">
+                Slot Iklan - 728x90
+            </aside>
             
-            <!-- Long Vowels -->
-            <section class="mb-16 reveal">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-forest-300">
-                    Memahami Long Vowels
-                </h2>
+            <!-- Section 4: Common Problems -->
+            <section class="content-card" aria-labelledby="problems-heading">
+                <h2 id="problems-heading" class="text-2xl font-bold mb-4">Mengapa Sering Terjadi Kesalahan?</h2>
                 
-                <p class="text-cream/80 leading-relaxed mb-8">
-                    <strong>Long vowels</strong> atau vokal panjang diucapkan lebih lama dibandingkan short vowels. Dalam transkripsi fonetik, vokal panjang ditandai dengan simbol titik dua <strong class="text-amber">(:)</strong> setelah simbol vokal.
-                </p>
-                
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- /i:/ sound -->
-                    <div class="vowel-card rounded-2xl p-6 reveal" style="transition-delay: 0.1s;">
-                        <div class="vowel-symbol mb-2">/i:/</div>
-                        <p class="text-cream/60 text-sm mb-4">Seperti "ee" dalam kata "see"</p>
-                        <div class="space-y-2">
-                            <p class="text-cream/90">
-                                s<span class="highlight-vowel">ee</span> - melihat
-                            </p>
-                            <p class="text-cream/90">
-                                tr<span class="highlight-vowel">ee</span> - pohon
-                            </p>
-                            <p class="text-cream/90">
-                                t<span class="highlight-vowel">ea</span> - teh
-                            </p>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-forest-600/50">
-                            <p class="text-sm text-cream/60">
-                                Bunyi "i" yang panjang dan jelas, seperti senyum lebar.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- /ɑ:/ sound -->
-                    <div class="vowel-card rounded-2xl p-6 reveal" style="transition-delay: 0.15s;">
-                        <div class="vowel-symbol mb-2">/ɑ:/</div>
-                        <p class="text-cream/60 text-sm mb-4">Seperti "a" dalam kata "car"</p>
-                        <div class="space-y-2">
-                            <p class="text-cream/90">
-                                c<span class="highlight-vowel">a</span>r - mobil
-                            </p>
-                            <p class="text-cream/90">
-                                j<span class="highlight-vowel">a</span>r - toples
-                            </p>
-                            <p class="text-cream/90">
-                                st<span class="highlight-vowel">a</span>r - bintang
-                            </p>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-forest-600/50">
-                            <p class="text-sm text-cream/60">
-                                Buka mulut lebar, bunyi "a" yang dalam dan panjang.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- /ɔ:/ sound -->
-                    <div class="vowel-card rounded-2xl p-6 reveal" style="transition-delay: 0.2s;">
-                        <div class="vowel-symbol mb-2">/ɔ:/</div>
-                        <p class="text-cream/60 text-sm mb-4">Seperti "or" dalam kata "door"</p>
-                        <div class="space-y-2">
-                            <p class="text-cream/90">
-                                d<span class="highlight-vowel">oo</span>r - pintu
-                            </p>
-                            <p class="text-cream/90">
-                                f<span class="highlight-vowel">or</span> - untuk
-                            </p>
-                            <p class="text-cream/90">
-                                m<span class="highlight-vowel">or</span>e - lebih
-                            </p>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-forest-600/50">
-                            <p class="text-sm text-cream/60">
-                                Bibir membentuk lingkaran, bunyi "o" yang bulat dan panjang.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- /u:/ sound -->
-                    <div class="vowel-card rounded-2xl p-6 reveal" style="transition-delay: 0.25s;">
-                        <div class="vowel-symbol mb-2">/u:/</div>
-                        <p class="text-cream/60 text-sm mb-4">Seperti "oo" dalam kata "moon"</p>
-                        <div class="space-y-2">
-                            <p class="text-cream/90">
-                                m<span class="highlight-vowel">oo</span>n - bulan
-                            </p>
-                            <p class="text-cream/90">
-                                f<span class="highlight-vowel">oo</span>d - makanan
-                            </p>
-                            <p class="text-cream/90">
-                                sch<span class="highlight-vowel">oo</span>l - sekolah
-                            </p>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-forest-600/50">
-                            <p class="text-sm text-cream/60">
-                                Bibir maju dan membentuk lingkaran, bunyi "u" yang panjang.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- /ɜ:/ sound -->
-                    <div class="vowel-card rounded-2xl p-6 reveal" style="transition-delay: 0.3s;">
-                        <div class="vowel-symbol mb-2">/ɜ:/</div>
-                        <p class="text-cream/60 text-sm mb-4">Seperti "ir" dalam kata "bird"</p>
-                        <div class="space-y-2">
-                            <p class="text-cream/90">
-                                b<span class="highlight-vowel">ir</span>d - burung
-                            </p>
-                            <p class="text-cream/90">
-                                w<span class="highlight-vowel">or</span>d - kata
-                            </p>
-                            <p class="text-cream/90">
-                                t<span class="highlight-vowel">ur</span>n - berbalik
-                            </p>
-                        </div>
-                        <div class="mt-4 pt-4 border-t border-forest-600/50">
-                            <p class="text-sm text-cream/60">
-                                Lidah di posisi tengah, bunyi antara "e" dan "a" yang panjang.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Common Mistakes -->
-            <section class="mb-16 reveal">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6 text-forest-300">
-                    Kesalahan Umum yang Perlu Dihindari
-                </h2>
-                
-                <p class="text-cream/80 leading-relaxed mb-8">
-                    Banyak pelajar Indonesia sering tertukar antara short vowels dan long vowels. Berikut beberapa pasangan yang sering membingungkan:
+                <p class="text-[var(--fg-muted)] mb-4">
+                    Banyak pelajar Indonesia kesulitan membedakan vokal bahasa Inggris karena sistem vokal bahasa Indonesia lebih sederhana. Mari kita pahami akar masalahnya.
                 </p>
                 
                 <div class="space-y-4">
-                    <div class="bg-forest-800/40 border border-forest-600/40 rounded-xl p-6 flex flex-col md:flex-row md:items-center gap-4">
-                        <div class="flex-1">
-                            <div class="flex items-center gap-3 mb-2">
-                                <span class="text-amber font-bold text-lg">/ɪ/</span>
-                                <span class="text-cream/60">vs</span>
-                                <span class="text-forest-300 font-bold text-lg">/i:/</span>
-                            </div>
-                            <p class="text-cream/70">
-                                <strong class="text-cream">ship</strong> (kapal) vs <strong class="text-cream">sheep</strong> (domba) - Perbedaan kecil tapi sangat penting dalam komunikasi!
-                            </p>
-                        </div>
-                        <div class="sound-wave" aria-label="Ilustrasi gelombang suara">
-                            <div class="wave-bar"></div>
-                            <div class="wave-bar"></div>
-                            <div class="wave-bar"></div>
-                            <div class="wave-bar"></div>
-                            <div class="wave-bar"></div>
-                        </div>
+                    <div class="p-4 bg-[var(--bg)] rounded-lg border-l-4 border-[var(--accent-warm)]">
+                        <h3 class="font-semibold mb-2">Masalah 1: Menganggap Semua Vokal Sama</h3>
+                        <p class="text-[var(--fg-muted)] text-sm">
+                            Dalam bahasa Indonesia, "i" selalu terdengar sama. Dalam bahasa Inggris, <strong class="text-[var(--fg)]">"sit" /sɪt/</strong> dan <strong class="text-[var(--fg)]">"seat" /siːt/</strong> adalah dua kata berbeda dengan makna berbeda.
+                        </p>
                     </div>
                     
-                    <div class="bg-forest-800/40 border border-forest-600/40 rounded-xl p-6 flex flex-col md:flex-row md:items-center gap-4">
-                        <div class="flex-1">
-                            <div class="flex items-center gap-3 mb-2">
-                                <span class="text-amber font-bold text-lg">/æ/</span>
-                                <span class="text-cream/60">vs</span>
-                                <span class="text-forest-300 font-bold text-lg">/e/</span>
-                            </div>
-                            <p class="text-cream/70">
-                                <strong class="text-cream">man</strong> (pria) vs <strong class="text-cream">men</strong> (beberapa pria) - Satu huruf, bunyi berbeda, arti berbeda!
-                            </p>
-                        </div>
+                    <div class="p-4 bg-[var(--bg)] rounded-lg border-l-4 border-[var(--accent-warm)]">
+                        <h3 class="font-semibold mb-2">Masalah 2: Schwa /ə/ yang Terabaikan</h3>
+                        <p class="text-[var(--fg-muted)] text-sm">
+                            Schwa adalah suara vokal paling umum dalam bahasa Inggris, tapi sering diabaikan. Kata <strong class="text-[var(--fg)]">"about" /əˈbaʊt/</strong> dimulai dengan schwa, bukan "a" yang jelas.
+                        </p>
                     </div>
                     
-                    <div class="bg-forest-800/40 border border-forest-600/40 rounded-xl p-6 flex flex-col md:flex-row md:items-center gap-4">
-                        <div class="flex-1">
-                            <div class="flex items-center gap-3 mb-2">
-                                <span class="text-amber font-bold text-lg">/ʌ/</span>
-                                <span class="text-cream/60">vs</span>
-                                <span class="text-forest-300 font-bold text-lg">/u:/</span>
-                            </div>
-                            <p class="text-cream/70">
-                                <strong class="text-cream">cup</strong> (cangkir) vs <strong class="text-cream">coop</strong> (kandang ayam) - Hati-hati dengan konteks pembicaraan!
-                            </p>
-                        </div>
+                    <div class="p-4 bg-[var(--bg)] rounded-lg border-l-4 border-[var(--accent-warm)]">
+                        <h3 class="font-semibold mb-2">Masalah 3: Diftong vs Vokal Murni</h3>
+                        <p class="text-[var(--fg-muted)] text-sm">
+                            Dalam bahasa Indonesia, kita sering mengucapkan vokal sebagai diftong (dua suara bergeser). Bahasa Inggris membedakan vokal murni dan diftong dengan ketat.
+                        </p>
                     </div>
                 </div>
             </section>
             
-            <!-- Ad Slot 3 -->
-            <section class="mb-16">
-                <div class="ad-slot h-24 md:h-28 reveal">
-                    Slot Iklan - Google AdSense
-                </div>
-            </section>
-        </article>
-        
-        <!-- Interactive Game Section -->
-        <section class="max-w-4xl mx-auto px-4 mb-16 reveal">
-            <div class="bg-forest-800/60 border border-forest-600/50 rounded-3xl p-8 md:p-12">
-                <div class="text-center mb-8">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-forest-300">
-                        Latihan Interaktif: Tebak Vowel Sound
-                    </h2>
-                    <p class="text-cream/70">
-                        Uji pemahaman Anda! Pilih vowel sound yang tepat untuk setiap kata.
-                    </p>
+            <!-- Section 5: Practical Examples -->
+            <section class="content-card" aria-labelledby="examples-heading">
+                <h2 id="examples-heading" class="text-2xl font-bold mb-4">Contoh Praktis dalam Kehidupan Sehari-hari</h2>
+                
+                <p class="text-[var(--fg-muted)] mb-6">
+                    Berikut contoh nyata bagaimana perbedaan vokal penting dalam transaksi dan komunikasi sehari-hari.
+                </p>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="border-b border-[var(--border)]">
+                                <th class="py-3 px-4 font-semibold">Pasangan Kata</th>
+                                <th class="py-3 px-4 font-semibold">Vokal</th>
+                                <th class="py-3 px-4 font-semibold">Perbedaan Makna</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-[var(--fg-muted)]">
+                            <tr class="border-b border-[var(--border)]">
+                                <td class="py-3 px-4">
+                                    <span class="text-[var(--fg)] font-medium">ship</span> vs <span class="text-[var(--fg)] font-medium">sheep</span>
+                                </td>
+                                <td class="py-3 px-4">/ɪ/ vs /iː/</td>
+                                <td class="py-3 px-4">Kapal vs Domba</td>
+                            </tr>
+                            <tr class="border-b border-[var(--border)]">
+                                <td class="py-3 px-4">
+                                    <span class="text-[var(--fg)] font-medium">cup</span> vs <span class="text-[var(--fg)] font-medium">cap</span>
+                                </td>
+                                <td class="py-3 px-4">/ʌ/ vs /æ/</td>
+                                <td class="py-3 px-4">Cangkir vs Topi</td>
+                            </tr>
+                            <tr class="border-b border-[var(--border)]">
+                                <td class="py-3 px-4">
+                                    <span class="text-[var(--fg)] font-medium">bed</span> vs <span class="text-[var(--fg)] font-medium">bad</span>
+                                </td>
+                                <td class="py-3 px-4">/e/ vs /æ/</td>
+                                <td class="py-3 px-4">Tempat tidur vs Buruk</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">
+                                    <span class="text-[var(--fg)] font-medium">full</span> vs <span class="text-[var(--fg)] font-medium">fool</span>
+                                </td>
+                                <td class="py-3 px-4">/ʊ/ vs /uː/</td>
+                                <td class="py-3 px-4">Penuh vs Orang bodoh</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 
-                <!-- Game Progress -->
-                <div class="mb-8">
+                <div class="example-box mt-6">
+                    <p class="font-medium text-[var(--fg)]">Contoh Transaksi Halal</p>
+                    <p class="text-[var(--fg-muted)] text-sm mt-2">
+                        Saat bertransaksi, ucapkan harga dengan jelas. "Three hundred" /θriː ˈhʌndrəd/ bukan "tree hundred". Kesalahan vokal bisa mengakibatkan kesalahpahaman dalam akad jual beli.
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Interactive Game Section -->
+            <section class="game-container" aria-labelledby="game-heading">
+                <h2 id="game-heading" class="text-2xl font-bold mb-2">Quest: Uji Phonemic Awareness</h2>
+                <p class="text-[var(--fg-muted)] mb-6">
+                    Dengarkan suara dan pilih vokal yang tepat. Selesaikan 10 soal untuk menguji pemahaman Anda.
+                </p>
+                
+                <!-- Progress -->
+                <div class="mb-6">
                     <div class="flex justify-between text-sm mb-2">
-                        <span class="text-cream/60">Progress</span>
-                        <span id="progressText" class="text-amber font-medium">0/10</span>
+                        <span>Progress</span>
+                        <span id="progress-text">0/10</span>
                     </div>
                     <div class="progress-track">
-                        <div id="progressBar" class="progress-fill" style="width: 0%"></div>
+                        <div id="progress-bar" class="progress-fill" style="width: 0%"></div>
                     </div>
                 </div>
                 
                 <!-- Game Area -->
-                <div id="gameArea">
+                <div id="game-area">
                     <div class="text-center mb-8">
-                        <p class="text-cream/60 mb-2">Kata:</p>
-                        <p id="currentWord" class="text-4xl md:text-5xl font-bold text-amber mb-4">cat</p>
-                        <p id="wordHint" class="text-cream/70">kucing</p>
+                        <p class="text-lg text-[var(--fg-muted)] mb-2">Kata yang diucapkan:</p>
+                        <p id="word-display" class="text-3xl font-bold text-[var(--accent)]">Klik Mulai</p>
+                        <p id="hint-display" class="text-[var(--fg-muted)] text-sm mt-2"></p>
                     </div>
                     
-                    <div id="optionsContainer" class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-                        <!-- Options will be generated by JS -->
+                    <div id="options-container" class="flex flex-wrap justify-center gap-3 mb-6">
+                        <!-- Options will be generated dynamically -->
                     </div>
                     
-                    <div id="feedback" class="text-center py-4 hidden">
-                        <p id="feedbackText" class="text-lg font-medium"></p>
+                    <div class="text-center">
+                        <button id="start-btn" class="sound-btn bg-[var(--accent)] text-[var(--bg)] border-[var(--accent)]">
+                            Mulai Quest
+                        </button>
                     </div>
                 </div>
                 
-                <!-- Game Complete -->
-                <div id="gameComplete" class="hidden text-center py-8">
-                    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-forest-600/50 flex items-center justify-center">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-amber">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2">Latihan Selesai!</h3>
-                    <p id="finalScore" class="text-cream/70 mb-6">Skor Anda: 0/10</p>
-                    <button id="restartBtn" class="game-btn">
-                        Ulangi Latihan
+                <!-- Results -->
+                <div id="results-area" class="hidden text-center">
+                    <p class="text-4xl mb-4">Skor Anda</p>
+                    <p id="final-score" class="text-6xl font-bold text-[var(--accent)] mb-4">0/10</p>
+                    <p id="score-message" class="text-[var(--fg-muted)] mb-6"></p>
+                    <button id="restart-btn" class="sound-btn bg-[var(--accent)] text-[var(--bg)] border-[var(--accent)]">
+                        Coba Lagi
                     </button>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Ad Slot 4 -->
-        <section class="max-w-4xl mx-auto px-4 mb-16">
-            <div class="ad-slot h-24 md:h-28 reveal">
-                Slot Iklan - Google AdSense
-            </div>
-        </section>
-        
-        <!-- Next Episode -->
-        <section class="max-w-4xl mx-auto px-4 mb-16 reveal">
-            <a href="https://mibenglish.com/ep3-phonemes-brain-prep" class="block next-ep-card rounded-2xl p-8 transition-all duration-300">
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div>
-                        <p class="text-amber font-medium mb-2">EPISODE SELANJUTNYA</p>
-                        <h3 class="text-xl md:text-2xl font-bold mb-2">
-                            Phonemes & Brain Prep: Module 3
-                        </h3>
-                        <p class="text-cream/60">
-                            Persiapkan otak Anda untuk menyerap fonem dengan lebih efektif. Pelajari teknik visualisasi dan asosiasi bunyi.
+            </section>
+            
+            <!-- Ad Slot 3 -->
+            <aside class="ad-slot my-8" aria-label="Ruang Iklan">
+                Slot Iklan - 300x250
+            </aside>
+            
+            <!-- Next Episode Teaser -->
+            <section class="content-card" aria-labelledby="next-heading">
+                <h2 id="next-heading" class="text-2xl font-bold mb-4">Episode Selanjutnya</h2>
+                
+                <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+                    <div class="flex-1">
+                        <p class="text-[var(--accent)] font-semibold mb-2">Episode 3</p>
+                        <h3 class="text-xl font-bold mb-2">Phonemic Awareness II – Consonant Mechanics</h3>
+                        <p class="text-[var(--fg-muted)]">
+                            Pelajari bagaimana konsonan bekerja: dari letak artikulasi hingga cara pengucapan. Temukan rahasia di balik suara-suara yang sering membingungkan.
                         </p>
                     </div>
-                    <div class="flex items-center gap-2 text-amber">
-                        <span class="font-medium">Lanjutkan</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
+                    
+                    <a href="#" class="nav-pill whitespace-nowrap">
+                        <span>Nantikan Episode 3</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
-                    </div>
+                    </a>
                 </div>
-            </a>
-        </section>
+            </section>
+            
+            <!-- Ad Slot 4 -->
+            <aside class="ad-slot my-8" aria-label="Ruang Iklan">
+                Slot Iklan - 336x280
+            </aside>
+        </article>
     </main>
     
-    <!-- Footer -->
-    <footer class="relative z-10 border-t border-forest-700/50 bg-forest-900/80 backdrop-blur-sm">
-        <div class="max-w-6xl mx-auto px-4 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div>
-                    <p class="brand-text text-2xl mb-4">mibenglish</p>
-                    <p class="text-cream/60 text-sm leading-relaxed">
-                        Platform pembelajaran bahasa Inggris untuk pemula dengan metode bertahap dan interaktif.
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4 text-cream">Navigasi</h4>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="https://mibenglish.com" class="text-cream/60 hover:text-cream transition-colors">
-                                Beranda
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://mibenglish.com/episodes" class="text-cream/60 hover:text-cream transition-colors">
-                                Daftar Episode
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://mibenglish.com/about" class="text-cream/60 hover:text-cream transition-colors">
-                                Tentang Kami
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4 text-cream">Ikuti Kami</h4>
-                    <p class="text-cream/60 text-sm mb-4">
-                        Ikuti kami di YouTube, TikTok, Instagram, dan Facebook untuk update materi terbaru.
-                    </p>
-                    <div class="flex gap-3">
-                        <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube mibenglish">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                            </svg>
-                        </a>
-                        <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok mibenglish">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                            </svg>
-                        </a>
-                        <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram mibenglish">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                        <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook mibenglish">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+    <!-- Footer (FIXED TEMPLATE) -->
+    <footer class="bg-[var(--bg-light)] border-t border-[var(--border)] mt-16">
+        <div class="max-w-5xl mx-auto px-4 py-12">
+            <!-- Brand -->
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold mb-2">mibenglish</h2>
+                <p class="text-[var(--fg-muted)]">Belajar Bahasa Inggris dengan Metode yang Tepat</p>
             </div>
             
-            <!-- Ad Slot 5 -->
-            <div class="ad-slot h-20 mb-8">
-                Slot Iklan - Google AdSense
+            <!-- Social Links -->
+            <div class="flex justify-center gap-4 mb-6">
+                <a href="https://www.youtube.com/@mibenglish" target="_blank" rel="noopener" aria-label="YouTube mibenglish" class="w-10 h-10 rounded-full bg-[var(--bg-card)] border border-[var(--border)] flex items-center justify-center hover:bg-[var(--accent)] hover:border-[var(--accent)] hover:text-[var(--bg)] transition-all">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+                
+                <a href="https://www.tiktok.com/@mibenglish" target="_blank" rel="noopener" aria-label="TikTok mibenglish" class="w-10 h-10 rounded-full bg-[var(--bg-card)] border border-[var(--border)] flex items-center justify-center hover:bg-[var(--accent)] hover:border-[var(--accent)] hover:text-[var(--bg)] transition-all">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                    </svg>
+                </a>
+                
+                <a href="https://www.instagram.com/mibenglish" target="_blank" rel="noopener" aria-label="Instagram mibenglish" class="w-10 h-10 rounded-full bg-[var(--bg-card)] border border-[var(--border)] flex items-center justify-center hover:bg-[var(--accent)] hover:border-[var(--accent)] hover:text-[var(--bg)] transition-all">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                
+                <a href="https://www.facebook.com/mibenglish" target="_blank" rel="noopener" aria-label="Facebook mibenglish" class="w-10 h-10 rounded-full bg-[var(--bg-card)] border border-[var(--border)] flex items-center justify-center hover:bg-[var(--accent)] hover:border-[var(--accent)] hover:text-[var(--bg)] transition-all">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
             </div>
             
-            <div class="border-t border-forest-700/50 pt-8 text-center">
-                <p class="text-cream/50 text-sm">
-                    &copy; 2024 mibenglish. Dibuat oleh bangmik. Semua hak dilindungi.
-                </p>
-            </div>
+            <!-- Follow Invitation -->
+            <p class="text-center text-[var(--fg-muted)] mb-8">
+                Ikuti kami di YouTube, TikTok, Instagram, dan Facebook untuk update materi terbaru.
+            </p>
+            
+            <!-- Quick Links -->
+            <nav aria-label="Quick Links" class="mb-8">
+                <h3 class="text-center font-semibold mb-4">Quick Links</h3>
+                <ul class="flex flex-wrap justify-center gap-4 text-sm">
+                    <li><a href="https://mibenglish.github.io/index.html" class="text-[var(--fg-muted)] hover:text-[var(--accent)] transition-colors">Beranda</a></li>
+                    <li><a href="https://mibenglish.github.io/about.html" class="text-[var(--fg-muted)] hover:text-[var(--accent)] transition-colors">About Us</a></li>
+                    <li><a href="https://mibenglish.github.io/privacy.html" class="text-[var(--fg-muted)] hover:text-[var(--accent)] transition-colors">Privacy Policy</a></li>
+                    <li><a href="https://mibenglish.github.io/terms.html" class="text-[var(--fg-muted)] hover:text-[var(--accent)] transition-colors">Terms of Service</a></li>
+                    <li><a href="https://mibenglish.github.io/disclaimer.html" class="text-[var(--fg-muted)] hover:text-[var(--accent)] transition-colors">Disclaimer</a></li>
+                    <li><a href="https://mibenglish.github.io/contact.html" class="text-[var(--fg-muted)] hover:text-[var(--accent)] transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Copyright -->
+            <p class="text-center text-sm text-[var(--fg-muted)]">
+                &copy; 2025 mibenglish. All rights reserved.
+            </p>
         </div>
     </footer>
     
+    <!-- Smooth Scroll Script -->
     <script>
-        // Initialize particles
+        // Header offset for smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+    
+    <!-- Main Interactive Script -->
+    <script>
+        // Data initialization
+        const gameData = [
+            { word: "SIT", vowel: "/ɪ/", hint: "Duduk", options: ["/iː/", "/ɪ/", "/e/", "/æ/"] },
+            { word: "SEE", vowel: "/iː/", hint: "Melihat", options: ["/iː/", "/ɪ/", "/uː/", "/ʌ/"] },
+            { word: "CAT", vowel: "/æ/", hint: "Kucing", options: ["/e/", "/æ/", "/ʌ/", "/ɑː/"] },
+            { word: "CAR", vowel: "/ɑː/", hint: "Mobil", options: ["/æ/", "/ʌ/", "/ɑː/", "/ə/"] },
+            { word: "CUP", vowel: "/ʌ/", hint: "Cangkir", options: ["/ʌ/", "/æ/", "/uː/", "/ə/"] },
+            { word: "FOOD", vowel: "/uː/", hint: "Makanan", options: ["/ʊ/", "/uː/", "/ʌ/", "/ə/"] },
+            { word: "BED", vowel: "/e/", hint: "Tempat tidur", options: ["/e/", "/æ/", "/ɪ/", "/iː/"] },
+            { word: "ABOUT", vowel: "/ə/", hint: "Tentang (kata awal)", options: ["/ʌ/", "/æ/", "/ə/", "/ɑː/"] },
+            { word: "HIT", vowel: "/ɪ/", hint: "Memukul", options: ["/iː/", "/ɪ/", "/e/", "/æ/"] },
+            { word: "TOO", vowel: "/uː/", hint: "Juga", options: ["/uː/", "/ʊ/", "/ʌ/", "/ə/"] }
+        ];
+        
+        const vowelData = {
+            "/iː/": { example: "see, tea, me", desc: "Lidah tinggi di depan, seperti senyum lebar" },
+            "/ɪ/": { example: "sit, bit, hit", desc: "Lidah sedikit lebih rendah dari /iː/" },
+            "/e/": { example: "bed, red, pen", desc: "Lidah di posisi tengah-depan" },
+            "/æ/": { example: "cat, bad, man", desc: "Lidah rendah di depan, mulut terbuka lebar" },
+            "/ɑː/": { example: "car, far, star", desc: "Lidah rendah di belakang, mulut terbuka" },
+            "/ʌ/": { example: "cup, but, sun", desc: "Lidah di posisi tengah, santai" },
+            "/uː/": { example: "food, too, blue", desc: "Lidah tinggi di belakang, bibir membulat" },
+            "/ə/": { example: "about, teacher, banana", desc: "Suara netral, lidah santai di tengah" }
+        };
+        
+        // Game state
+        let currentQuestion = 0;
+        let score = 0;
+        let gameStarted = false;
+        
+        // DOM Elements
+        const wordDisplay = document.getElementById('word-display');
+        const hintDisplay = document.getElementById('hint-display');
+        const optionsContainer = document.getElementById('options-container');
+        const startBtn = document.getElementById('start-btn');
+        const restartBtn = document.getElementById('restart-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+        const resultsArea = document.getElementById('results-area');
+        const gameArea = document.getElementById('game-area');
+        const finalScore = document.getElementById('final-score');
+        const scoreMessage = document.getElementById('score-message');
+        const vowelInfo = document.getElementById('vowel-info');
+        
+        // Vowel Orb Interaction
+        const vowelOrbs = document.querySelectorAll('.vowel-orb');
+        vowelOrbs.forEach(orb => {
+            orb.addEventListener('click', function() {
+                const vowel = this.dataset.vowel;
+                const data = vowelData[vowel];
+                
+                vowelOrbs.forEach(o => o.classList.remove('active'));
+                this.classList.add('active');
+                
+                vowelInfo.innerHTML = `
+                    <p class="text-3xl font-bold text-[var(--accent)] mb-2">${vowel}</p>
+                    <p class="text-lg mb-2">${data.desc}</p>
+                    <p class="text-[var(--fg-muted)]">Contoh kata: <span class="text-[var(--fg)]">${data.example}</span></p>
+                `;
+            });
+        });
+        
+        // Game Functions
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+        
+        function displayQuestion() {
+            const question = gameData[currentQuestion];
+            wordDisplay.textContent = question.word;
+            hintDisplay.textContent = `Petunjuk: ${question.hint}`;
+            
+            const shuffledOptions = shuffleArray(question.options);
+            optionsContainer.innerHTML = '';
+            
+            shuffledOptions.forEach(option => {
+                const btn = document.createElement('button');
+                btn.className = 'sound-btn';
+                btn.textContent = option;
+                btn.addEventListener('click', () => checkAnswer(option, btn));
+                optionsContainer.appendChild(btn);
+            });
+        }
+        
+        function checkAnswer(selected, btn) {
+            const correct = gameData[currentQuestion].vowel;
+            const allBtns = optionsContainer.querySelectorAll('.sound-btn');
+            
+            allBtns.forEach(b => b.disabled = true);
+            
+            if (selected === correct) {
+                btn.classList.add('correct');
+                score++;
+            } else {
+                btn.classList.add('wrong');
+                // Highlight correct answer
+                allBtns.forEach(b => {
+                    if (b.textContent === correct) {
+                        b.classList.add('correct');
+                    }
+                });
+            }
+            
+            currentQuestion++;
+            updateProgress();
+            
+            setTimeout(() => {
+                if (currentQuestion < gameData.length) {
+                    displayQuestion();
+                } else {
+                    showResults();
+                }
+            }, 1000);
+        }
+        
+        function updateProgress() {
+            const percent = (currentQuestion / gameData.length) * 100;
+            progressBar.style.width = `${percent}%`;
+            progressText.textContent = `${currentQuestion}/${gameData.length}`;
+        }
+        
+        function showResults() {
+            gameArea.classList.add('hidden');
+            resultsArea.classList.remove('hidden');
+            finalScore.textContent = `${score}/${gameData.length}`;
+            
+            let message = '';
+            if (score === 10) {
+                message = 'Sempurna! Anda telah menguasai Vowel Spectrum!';
+            } else if (score >= 7) {
+                message = 'Bagus sekali! Pemahaman Anda sudah baik.';
+            } else if (score >= 5) {
+                message = 'Cukup baik. Terus berlatih untuk meningkatkan kemampuan.';
+            } else {
+                message = 'Jangan menyerah! Ulangi materi dan coba lagi.';
+            }
+            scoreMessage.textContent = message;
+        }
+        
+        function resetGame() {
+            currentQuestion = 0;
+            score = 0;
+            gameStarted = false;
+            updateProgress();
+            resultsArea.classList.add('hidden');
+            gameArea.classList.remove('hidden');
+            startBtn.style.display = 'inline-flex';
+            wordDisplay.textContent = 'Klik Mulai';
+            hintDisplay.textContent = '';
+            optionsContainer.innerHTML = '';
+        }
+        
+        // Event Listeners
+        startBtn.addEventListener('click', () => {
+            gameStarted = true;
+            startBtn.style.display = 'none';
+            currentQuestion = 0;
+            score = 0;
+            updateProgress();
+            displayQuestion();
+        });
+        
+        restartBtn.addEventListener('click', resetGame);
+        
+        // Floating Particles
         function createParticles() {
             const container = document.getElementById('particles');
-            if (!container) return;
-            
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            if (prefersReducedMotion) return;
-            
             const particleCount = 20;
             
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 15 + 's';
-                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-                particle.style.width = (3 + Math.random() * 4) + 'px';
-                particle.style.height = particle.style.width;
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.animation = `float ${5 + Math.random() * 10}s ease-in-out infinite`;
+                particle.style.opacity = 0.2 + Math.random() * 0.3;
                 container.appendChild(particle);
             }
         }
         
-        // Scroll reveal
-        function initScrollReveal() {
-            const reveals = document.querySelectorAll('.reveal');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.classList.add('visible');
-                        }, index * 50);
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
             });
-            
-            reveals.forEach(el => observer.observe(el));
-        }
+        }, observerOptions);
         
-        // Mobile menu
-        function initMobileMenu() {
-            const btn = document.getElementById('mobileMenuBtn');
-            const menu = document.getElementById('mobileMenu');
-            
-            if (!btn || !menu) return;
-            
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-            });
-        }
-        
-        // Game data
-        const gameData = [
-            { word: 'cat', hint: 'kucing', answer: '/æ/', options: ['/æ/', '/e/', '/ɪ/', '/ʌ/'] },
-            { word: 'bed', hint: 'tempat tidur', answer: '/e/', options: ['/e/', '/æ/', '/ɪ/', '/ɒ/'] },
-            { word: 'sit', hint: 'duduk', answer: '/ɪ/', options: ['/ɪ/', '/i:/', '/e/', '/æ/'] },
-            { word: 'hot', hint: 'panas', answer: '/ɒ/', options: ['/ɒ/', '/ɔ:/', '/ʌ/', '/ɑ:/'] },
-            { word: 'cup', hint: 'cangkir', answer: '/ʌ/', options: ['/ʌ/', '/ʊ/', '/u:/', '/ɒ/'] },
-            { word: 'tree', hint: 'pohon', answer: '/i:/', options: ['/i:/', '/ɪ/', '/e/', '/æ/'] },
-            { word: 'car', hint: 'mobil', answer: '/ɑ:/', options: ['/ɑ:/', '/æ/', '/ʌ/', '/ɒ/'] },
-            { word: 'door', hint: 'pintu', answer: '/ɔ:/', options: ['/ɔ:/', '/ɒ/', '/ʊ/', '/u:/'] },
-            { word: 'moon', hint: 'bulan', answer: '/u:/', options: ['/u:/', '/ʊ/', '/ʌ/', '/ɔ:/'] },
-            { word: 'bird', hint: 'burung', answer: '/ɜ:/', options: ['/ɜ:/', '/ɪ/', '/e/', '/ʌ/'] }
-        ];
-        
-        let currentQuestion = 0;
-        let score = 0;
-        
-        // Initialize game
-        function initGame() {
-            currentQuestion = 0;
-            score = 0;
-            updateProgress();
-            showQuestion();
-            
-            document.getElementById('gameArea').classList.remove('hidden');
-            document.getElementById('gameComplete').classList.add('hidden');
-        }
-        
-        function updateProgress() {
-            const progress = (currentQuestion / gameData.length) * 100;
-            const progressBar = document.getElementById('progressBar');
-            const progressText = document.getElementById('progressText');
-            
-            if (progressBar) progressBar.style.width = progress + '%';
-            if (progressText) progressText.textContent = currentQuestion + '/' + gameData.length;
-        }
-        
-        function showQuestion() {
-            if (currentQuestion >= gameData.length) {
-                showComplete();
-                return;
-            }
-            
-            const data = gameData[currentQuestion];
-            const wordEl = document.getElementById('currentWord');
-            const hintEl = document.getElementById('wordHint');
-            const optionsContainer = document.getElementById('optionsContainer');
-            const feedback = document.getElementById('feedback');
-            
-            if (wordEl) wordEl.textContent = data.word;
-            if (hintEl) hintEl.textContent = data.hint;
-            if (feedback) feedback.classList.add('hidden');
-            
-            if (optionsContainer) {
-                optionsContainer.innerHTML = '';
-                const shuffledOptions = [...data.options].sort(() => Math.random() - 0.5);
-                
-                shuffledOptions.forEach(option => {
-                    const btn = document.createElement('button');
-                    btn.className = 'game-btn text-lg';
-                    btn.textContent = option;
-                    btn.addEventListener('click', () => checkAnswer(option, data.answer, btn));
-                    optionsContainer.appendChild(btn);
-                });
-            }
-        }
-        
-        function checkAnswer(selected, correct, btn) {
-            const feedback = document.getElementById('feedback');
-            const feedbackText = document.getElementById('feedbackText');
-            const allBtns = document.querySelectorAll('#optionsContainer .game-btn');
-            
-            allBtns.forEach(b => b.disabled = true);
-            
-            if (selected === correct) {
-                score++;
-                btn.classList.add('correct');
-                if (feedbackText) feedbackText.textContent = 'Benar! Excellent!';
-                if (feedbackText) feedbackText.className = 'text-lg font-medium text-forest-300';
-            } else {
-                btn.classList.add('wrong');
-                if (feedbackText) feedbackText.textContent = 'Kurang tepat. Jawaban: ' + correct;
-                if (feedbackText) feedbackText.className = 'text-lg font-medium text-bark';
-            }
-            
-            if (feedback) feedback.classList.remove('hidden');
-            
-            setTimeout(() => {
-                currentQuestion++;
-                updateProgress();
-                showQuestion();
-            }, 1500);
-        }
-        
-        function showComplete() {
-            document.getElementById('gameArea').classList.add('hidden');
-            document.getElementById('gameComplete').classList.remove('hidden');
-            
-            const finalScore = document.getElementById('finalScore');
-            if (finalScore) finalScore.textContent = 'Skor Anda: ' + score + '/' + gameData.length;
-        }
-        
-        // Restart button
-        function initRestartBtn() {
-            const btn = document.getElementById('restartBtn');
-            if (btn) {
-                btn.addEventListener('click', initGame);
-            }
-        }
-        
-        // Initialize all
+        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             createParticles();
-            initScrollReveal();
-            initMobileMenu();
-            initGame();
-            initRestartBtn();
+            
+            // Observe content cards
+            document.querySelectorAll('.content-card, .game-container').forEach((card, index) => {
+                if (!card.classList.contains('animate-entrance')) {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(30px)';
+                    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                    observer.observe(card);
+                }
+            });
         });
+        
+        // Check reduced motion preference
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.particle').forEach(p => p.remove());
+        }
     </script>
 </body>
 </html>
