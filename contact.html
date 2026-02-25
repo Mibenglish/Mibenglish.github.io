@@ -8,7 +8,7 @@
     <meta property="og:title" content="mibenglish - Belajar Bahasa Inggris">
     <meta property="og:description" content="Platform pembelajaran bahasa Inggris yang efektif dan menyenangkan.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mibenglish.github.io/contact.html">
+    <meta property="og:url" content="https://mibenglish.com/contact.html">
     <meta property="og:site_name" content="mibenglish">
     
     <title>mibenglish - Hubungi Kami</title>
@@ -34,9 +34,15 @@
             --success: #22c55e;
         }
         
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
         
         body {
             font-family: 'DM Sans', sans-serif;
@@ -45,9 +51,14 @@
             line-height: 1.7;
             font-size: 16px;
             overflow-x: hidden;
+            min-height: 100vh;
+            padding-bottom: 0;
         }
         
-        h1, h2, h3 { font-family: 'Fraunces', serif; line-height: 1.2; }
+        h1, h2, h3 {
+            font-family: 'Fraunces', serif;
+            line-height: 1.2;
+        }
         
         /* Animated Background */
         .bg-scene {
@@ -55,6 +66,7 @@
             inset: 0;
             z-index: -1;
             overflow: hidden;
+            pointer-events: none;
         }
         
         .bg-gradient {
@@ -121,10 +133,13 @@
         
         /* Navigation */
         .nav-container {
-            background: rgba(10, 26, 15, 0.9);
+            background: rgba(10, 26, 15, 0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
             transition: all 0.3s ease;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         
         .nav-container.scrolled {
@@ -139,6 +154,7 @@
             font-weight: 500;
             position: relative;
             overflow: hidden;
+            display: inline-block;
         }
         
         .nav-link::before {
@@ -164,6 +180,13 @@
             outline-offset: 2px;
         }
         
+        /* Main Content Wrapper */
+        .main-wrapper {
+            position: relative;
+            z-index: 1;
+            padding-bottom: 40px;
+        }
+        
         /* Cards */
         .content-card {
             background: var(--bg-card);
@@ -179,7 +202,9 @@
         }
         
         /* Form Styles */
-        .form-group { margin-bottom: 24px; }
+        .form-group {
+            margin-bottom: 24px;
+        }
         
         .form-label {
             display: block;
@@ -321,7 +346,7 @@
         }
         
         /* Social Buttons */
-        .footer-social {
+        .social-btn {
             display: inline-flex;
             align-items: center;
             gap: 10px;
@@ -332,9 +357,10 @@
             color: var(--fg-muted);
             font-weight: 500;
             transition: all 0.3s ease;
+            text-decoration: none;
         }
         
-        .footer-social:hover {
+        .social-btn:hover {
             background: rgba(34, 197, 94, 0.15);
             border-color: var(--accent);
             color: var(--fg);
@@ -343,7 +369,7 @@
             box-shadow: 0 8px 20px rgba(34, 197, 94, 0.2);
         }
         
-        .footer-social:focus-visible {
+        .social-btn:focus-visible {
             outline: 2px solid var(--accent);
             outline-offset: 2px;
         }
@@ -395,6 +421,92 @@
             }
         }
         
+        /* AdSense Placeholder Styles */
+        .ad-placeholder {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, rgba(21, 128, 61, 0.05) 100%);
+            border: 2px dashed rgba(34, 197, 94, 0.3);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ad-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(34, 197, 94, 0.02) 10px,
+                rgba(34, 197, 94, 0.02) 20px
+            );
+        }
+        
+        .ad-placeholder:hover {
+            border-color: rgba(34, 197, 94, 0.5);
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.12) 0%, rgba(21, 128, 61, 0.08) 100%);
+        }
+        
+        .ad-placeholder-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 12px;
+            opacity: 0.6;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .ad-placeholder-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--fg-muted);
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .ad-placeholder-size {
+            font-size: 12px;
+            color: var(--fg-muted);
+            opacity: 0.7;
+            margin-top: 4px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Ad Sizes */
+        .ad-leaderboard {
+            min-height: 90px;
+            padding: 20px;
+        }
+        
+        .ad-rectangle {
+            min-height: 250px;
+            padding: 30px 20px;
+        }
+        
+        .ad-sidebar {
+            min-height: 300px;
+            padding: 30px 20px;
+        }
+        
+        .ad-mobile-banner {
+            min-height: 100px;
+            padding: 15px;
+        }
+        
+        .ad-in-article {
+            min-height: 200px;
+            padding: 25px 20px;
+        }
+        
         /* Entrance Animations */
         .reveal {
             opacity: 0;
@@ -430,18 +542,78 @@
         footer {
             background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg) 100%);
             border-top: 1px solid var(--border);
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Mobile Bottom Ad */
+        .mobile-ad-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(10, 26, 15, 0.98);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid var(--border);
+            display: none;
+        }
+        
+        body.has-mobile-ad {
+            padding-bottom: 120px;
+        }
+        
+        body.has-mobile-ad .mobile-ad-container {
+            display: block;
         }
         
         /* Responsive */
+        @media (max-width: 1024px) {
+            .sidebar-column {
+                order: 2;
+            }
+            
+            .main-column {
+                order: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .ad-sidebar {
+                min-height: 200px;
+            }
+        }
+        
         @media (max-width: 640px) {
-            body { font-size: 15px; }
-            .content-card:hover { transform: none; }
-            .contact-info-item:hover { transform: none; }
+            body { 
+                font-size: 15px; 
+            }
+            .content-card:hover { 
+                transform: none; 
+            }
+            .contact-info-item:hover { 
+                transform: none; 
+            }
+            .ad-sidebar { 
+                min-height: 180px; 
+            }
+            .mobile-ad-container {
+                display: block;
+            }
+            body {
+                padding-bottom: 130px;
+            }
         }
         
         @media print {
-            .nav-container, footer, .bg-scene { display: none; }
-            body { background: white; color: black; }
+            .nav-container, footer, .bg-scene, .ad-placeholder, .mobile-ad-container { 
+                display: none; 
+            }
+            body { 
+                background: white; 
+                color: black; 
+                padding-bottom: 0;
+            }
         }
         
         @media (prefers-reduced-motion: reduce) {
@@ -465,9 +637,9 @@
     </div>
     
     <!-- Header -->
-    <header class="nav-container sticky top-0 z-50" id="navbar">
+    <header class="nav-container" id="navbar">
         <nav class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between flex-wrap gap-4">
-            <a href="https://mibenglish.github.io/index.html" class="flex items-center gap-3" aria-label="Kembali ke beranda mibenglish">
+            <a href="https://mibenglish.com/" class="flex items-center gap-3" aria-label="Kembali ke beranda mibenglish">
                 <div class="w-11 h-11 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -479,191 +651,253 @@
             </a>
             
             <div class="flex items-center gap-2 text-sm">
-                <a href="https://mibenglish.github.io/index.html" class="nav-link">Beranda</a>
+                <a href="https://mibenglish.com/" class="nav-link">Beranda</a>
             </div>
         </nav>
     </header>
     
-    <!-- Main Content -->
-    <main class="max-w-5xl mx-auto px-4 py-10 md:py-16">
-        <article>
-            <header class="text-center mb-14 reveal" id="heroHeader">
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-5" style="color: var(--fg);">Hubungi Kami</h1>
-                <p class="text-lg md:text-xl max-w-2xl mx-auto" style="color: var(--fg-muted);">Kami senang mendengar dari Anda. Kirimkan pertanyaan, saran, atau masukan Anda.</p>
-            </header>
-            
-            <div class="grid lg:grid-cols-2 gap-8">
-                
-                <!-- Contact Form -->
-                <div class="content-card p-6 md:p-8 reveal reveal-delay-1">
-                    <h2 class="text-2xl font-bold mb-6" style="color: var(--accent-light);">Kirim Pesan</h2>
-                    
-                    <form id="contactForm" novalidate>
-                        <div class="form-group">
-                            <label for="name" class="form-label">Nama Lengkap <span style="color: var(--error);">*</span></label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="Masukkan nama lengkap Anda" required aria-required="true" autocomplete="name">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email" class="form-label">Alamat Email <span style="color: var(--error);">*</span></label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="contoh@email.com" required aria-required="true" autocomplete="email">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subjek <span style="color: var(--error);">*</span></label>
-                            <select id="subject" name="subject" class="form-input form-select" required aria-required="true">
-                                <option value="">Pilih subjek pesan</option>
-                                <option value="pertanyaan">Pertanyaan Umum</option>
-                                <option value="materi">Pertanyaan tentang Materi</option>
-                                <option value="kerjasama">Kerjasama / Sponsor</option>
-                                <option value="teknis">Masalah Teknis</option>
-                                <option value="saran">Saran & Masukan</option>
-                                <option value="lainnya">Lainnya</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message" class="form-label">Pesan <span style="color: var(--error);">*</span></label>
-                            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tulis pesan Anda di sini..." required aria-required="true"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn-submit" id="submitBtn">
-                            <span id="btnContent">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                                </svg>
-                                Kirim Pesan
-                            </span>
-                        </button>
-                    </form>
-                    
-                    <div class="success-message mt-6" id="successMessage">
-                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" class="mx-auto mb-4">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M8 12l3 3 5-5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <h3 class="text-2xl font-bold mb-3" style="color: var(--success);">Pesan Terkirim!</h3>
-                        <p style="color: var(--fg-muted);">Terima kasih telah menghubungi kami. Kami akan membalas pesan Anda dalam 1-3 hari kerja.</p>
-                    </div>
-                </div>
-                
-                <!-- Contact Info -->
-                <div>
-                    <div class="content-card p-6 md:p-8 mb-6 reveal reveal-delay-2">
-                        <h2 class="text-2xl font-bold mb-6" style="color: var(--accent-light);">Informasi Kontak</h2>
-                        
-                        <div class="space-y-4">
-                            <div class="contact-info-item">
-                                <div class="contact-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                        <polyline points="22,6 12,13 2,6"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold mb-1 text-lg">Email</h3>
-                                    <a href="mailto:mibenglishid@gmail.com" style="font-size: 17px; font-weight: 600;">mibenglishid@gmail.com</a>
-                                    <p class="text-sm mt-1" style="color: var(--fg-muted);">Kami membalas dalam 1-3 hari kerja</p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-info-item">
-                                <div class="contact-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <line x1="2" y1="12" x2="22" y2="12"/>
-                                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="font-bold mb-1 text-lg">Website</h3>
-                                    <a href="https://mibenglish.github.io/index.html" style="font-size: 17px; font-weight: 600;">mibenglish.github.io</a>
-                                    <p class="text-sm mt-1" style="color: var(--fg-muted);">Akses semua materi pembelajaran</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="content-card p-6 md:p-8 mb-6 reveal reveal-delay-3">
-                        <h2 class="text-2xl font-bold mb-5" style="color: var(--accent-light);">Media Sosial</h2>
-                        <p class="mb-5" style="color: var(--fg-muted);">Ikuti kami untuk update materi terbaru:</p>
-                        
-                        <div class="grid grid-cols-2 gap-3">
-                            <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Ikuti kami di YouTube">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                                </svg>
-                                <span>YouTube</span>
-                            </a>
-                            
-                            <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Ikuti kami di TikTok">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                                </svg>
-                                <span>TikTok</span>
-                            </a>
-                            
-                            <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Ikuti kami di Instagram">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                                </svg>
-                                <span>Instagram</span>
-                            </a>
-                            
-                            <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Ikuti kami di Facebook">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                                </svg>
-                                <span>Facebook</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="highlight-box reveal reveal-delay-4">
-                        <p style="margin: 0;">
-                            <strong>Catatan:</strong> Untuk pertanyaan yang membutuhkan respons cepat, silakan hubungi kami melalui email.
-                        </p>
-                    </div>
-                </div>
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+        <!-- Ad Slot 1: Leaderboard (Below Header) -->
+        <div class="max-w-5xl mx-auto px-4 py-4 reveal">
+            <div class="ad-placeholder ad-leaderboard" id="ad-slot-1" role="complementary" aria-label="Advertisement">
+                <svg class="ad-placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="3" y1="9" x2="21" y2="9"/>
+                    <line x1="9" y1="21" x2="9" y2="9"/>
+                </svg>
+                <span class="ad-placeholder-text">AdSense - Leaderboard</span>
+                <span class="ad-placeholder-size">728 x 90</span>
             </div>
-        </article>
-    </main>
+        </div>
+        
+        <!-- Main Content -->
+        <main class="max-w-5xl mx-auto px-4 py-8 md:py-12">
+            <article>
+                <!-- Page Header -->
+                <header class="text-center mb-12 reveal">
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-5" style="color: var(--fg);">Hubungi Kami</h1>
+                    <p class="text-lg md:text-xl max-w-2xl mx-auto" style="color: var(--fg-muted);">
+                        Kami senang mendengar dari Anda. Kirimkan pertanyaan, saran, atau masukan Anda.
+                    </p>
+                </header>
+                
+                <!-- Content Grid -->
+                <div class="grid lg:grid-cols-3 gap-8">
+                    
+                    <!-- Main Content Column -->
+                    <div class="lg:col-span-2 main-column">
+                        <!-- Contact Form -->
+                        <div class="content-card p-6 md:p-8 reveal reveal-delay-1">
+                            <h2 class="text-2xl font-bold mb-6" style="color: var(--accent-light);">Kirim Pesan</h2>
+                            
+                            <form id="contactForm" novalidate>
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Nama Lengkap <span style="color: var(--error);">*</span></label>
+                                    <input type="text" id="name" name="name" class="form-input" placeholder="Masukkan nama lengkap Anda" required aria-required="true" autocomplete="name">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Alamat Email <span style="color: var(--error);">*</span></label>
+                                    <input type="email" id="email" name="email" class="form-input" placeholder="contoh@email.com" required aria-required="true" autocomplete="email">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">Subjek <span style="color: var(--error);">*</span></label>
+                                    <select id="subject" name="subject" class="form-input form-select" required aria-required="true">
+                                        <option value="">Pilih subjek pesan</option>
+                                        <option value="pertanyaan">Pertanyaan Umum</option>
+                                        <option value="materi">Pertanyaan tentang Materi</option>
+                                        <option value="kerjasama">Kerjasama / Sponsor</option>
+                                        <option value="teknis">Masalah Teknis</option>
+                                        <option value="saran">Saran & Masukan</option>
+                                        <option value="lainnya">Lainnya</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Pesan <span style="color: var(--error);">*</span></label>
+                                    <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tulis pesan Anda di sini..." required aria-required="true"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn-submit" id="submitBtn">
+                                    <span id="btnContent">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                        </svg>
+                                        Kirim Pesan
+                                    </span>
+                                </button>
+                            </form>
+                            
+                            <div class="success-message mt-6" id="successMessage">
+                                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" class="mx-auto mb-4">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M8 12l3 3 5-5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <h3 class="text-2xl font-bold mb-3" style="color: var(--success);">Pesan Terkirim!</h3>
+                                <p style="color: var(--fg-muted);">Terima kasih telah menghubungi kami. Kami akan membalas pesan Anda dalam 1-3 hari kerja.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Ad Slot 2: In-Article Rectangle -->
+                        <div class="my-8 reveal reveal-delay-2">
+                            <div class="ad-placeholder ad-rectangle" id="ad-slot-2" role="complementary" aria-label="Advertisement">
+                                <svg class="ad-placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                <span class="ad-placeholder-text">AdSense - In-Article Ad</span>
+                                <span class="ad-placeholder-size">336 x 280 atau 300 x 250</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Contact Info -->
+                        <div class="content-card p-6 md:p-8 reveal reveal-delay-3">
+                            <h2 class="text-2xl font-bold mb-6" style="color: var(--accent-light);">Informasi Kontak</h2>
+                            
+                            <div class="space-y-4">
+                                <div class="contact-info-item">
+                                    <div class="contact-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                            <polyline points="22,6 12,13 2,6"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold mb-1 text-lg">Email</h3>
+                                        <a href="mailto:mibenglishid@gmail.com" style="font-size: 17px; font-weight: 600;">mibenglishid@gmail.com</a>
+                                        <p class="text-sm mt-1" style="color: var(--fg-muted);">Kami membalas dalam 1-3 hari kerja</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-info-item">
+                                    <div class="contact-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"/>
+                                            <line x1="2" y1="12" x2="22" y2="12"/>
+                                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold mb-1 text-lg">Website</h3>
+                                        <a href="https://mibenglish.com/" style="font-size: 17px; font-weight: 600;">mibenglish.com</a>
+                                        <p class="text-sm mt-1" style="color: var(--fg-muted);">Akses semua materi pembelajaran</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sidebar Column -->
+                    <div class="lg:col-span-1 sidebar-column">
+                        <!-- Ad Slot 3: Sidebar -->
+                        <div class="mb-6 reveal reveal-delay-2">
+                            <div class="ad-placeholder ad-sidebar" id="ad-slot-3" role="complementary" aria-label="Advertisement">
+                                <svg class="ad-placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="12" y1="3" x2="12" y2="21"/>
+                                </svg>
+                                <span class="ad-placeholder-text">AdSense - Sidebar</span>
+                                <span class="ad-placeholder-size">300 x 250</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Media Card -->
+                        <div class="content-card p-6 mb-6 reveal reveal-delay-3">
+                            <h2 class="text-xl font-bold mb-5" style="color: var(--accent-light);">Media Sosial</h2>
+                            <p class="mb-5 text-sm" style="color: var(--fg-muted);">Ikuti kami untuk update materi terbaru:</p>
+                            
+                            <div class="flex flex-col gap-3">
+                                <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Ikuti kami di YouTube">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                    </svg>
+                                    <span>YouTube</span>
+                                </a>
+                                
+                                <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Ikuti kami di TikTok">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                                    </svg>
+                                    <span>TikTok</span>
+                                </a>
+                                
+                                <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Ikuti kami di Instagram">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                                    </svg>
+                                    <span>Instagram</span>
+                                </a>
+                                
+                                <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Ikuti kami di Facebook">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    </svg>
+                                    <span>Facebook</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-box reveal reveal-delay-4">
+                            <p style="margin: 0;">
+                                <strong>Catatan:</strong> Untuk pertanyaan yang membutuhkan respons cepat, silakan hubungi kami melalui email.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+        
+        <!-- Ad Slot 4: Above Footer Banner -->
+        <div class="max-w-5xl mx-auto px-4 py-4 reveal">
+            <div class="ad-placeholder ad-leaderboard" id="ad-slot-4" role="complementary" aria-label="Advertisement">
+                <svg class="ad-placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="3" y1="9" x2="21" y2="9"/>
+                    <line x1="9" y1="21" x2="9" y2="9"/>
+                </svg>
+                <span class="ad-placeholder-text">AdSense - Banner</span>
+                <span class="ad-placeholder-size">728 x 90 atau 320 x 100</span>
+            </div>
+        </div>
+    </div>
     
     <!-- Footer -->
     <footer>
-        <div class="max-w-5xl mx-auto px-4 py-14">
+        <div class="max-w-5xl mx-auto px-4 py-12">
             
             <!-- Brand -->
-            <div class="text-center mb-10">
+            <div class="text-center mb-8">
                 <p class="text-3xl md:text-4xl font-bold mb-3" style="font-family: 'Fraunces', serif; color: var(--accent-light);">mibenglish</p>
                 <p style="color: var(--fg-muted);">Belajar Bahasa Inggris dengan Cara Menyenangkan</p>
             </div>
             
             <!-- Social Links -->
-            <div class="flex flex-wrap justify-center gap-3 mb-10">
-                <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Ikuti kami di YouTube">
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Ikuti kami di YouTube">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
                     <span>YouTube</span>
                 </a>
                 
-                <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Ikuti kami di TikTok">
+                <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Ikuti kami di TikTok">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                     </svg>
                     <span>TikTok</span>
                 </a>
                 
-                <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Ikuti kami di Instagram">
+                <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Ikuti kami di Instagram">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                     </svg>
                     <span>Instagram</span>
                 </a>
                 
-                <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Ikuti kami di Facebook">
+                <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Ikuti kami di Facebook">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
@@ -675,14 +909,14 @@
                 Ikuti kami di YouTube, TikTok, Instagram, dan Facebook untuk update materi terbaru.
             </p>
             
-            <!-- Quick Links (Fixed Order) -->
-            <nav class="flex flex-wrap justify-center gap-2 md:gap-4 mb-10 text-sm" aria-label="Quick Links">
-                <a href="https://mibenglish.github.io/index.html" class="nav-link">Beranda</a>
-                <a href="https://mibenglish.github.io/about.html" class="nav-link">About Us</a>
-                <a href="https://mibenglish.github.io/privacy.html" class="nav-link">Privacy Policy</a>
-                <a href="https://mibenglish.github.io/terms.html" class="nav-link">Terms of Service</a>
-                <a href="https://mibenglish.github.io/disclaimer.html" class="nav-link">Disclaimer</a>
-                <a href="https://mibenglish.github.io/contact.html" class="nav-link">Contact</a>
+            <!-- Quick Links -->
+            <nav class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 text-sm" aria-label="Quick Links">
+                <a href="https://mibenglish.com/" class="nav-link">Beranda</a>
+                <a href="https://mibenglish.com/about.html" class="nav-link">About Us</a>
+                <a href="https://mibenglish.com/privacy.html" class="nav-link">Privacy Policy</a>
+                <a href="https://mibenglish.com/terms.html" class="nav-link">Terms of Service</a>
+                <a href="https://mibenglish.com/disclaimer.html" class="nav-link">Disclaimer</a>
+                <a href="https://mibenglish.com/contact.html" class="nav-link">Contact</a>
             </nav>
             
             <!-- Copyright -->
@@ -694,6 +928,17 @@
         </div>
     </footer>
     
+    <!-- Mobile Bottom Ad (Only visible on mobile) -->
+    <div class="mobile-ad-container" id="mobile-ad">
+        <div class="ad-placeholder ad-mobile-banner" id="ad-slot-5" role="complementary" aria-label="Advertisement">
+            <svg class="ad-placeholder-icon" style="width: 32px; height: 32px; margin-bottom: 6px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            </svg>
+            <span class="ad-placeholder-text" style="font-size: 12px;">AdSense - Mobile Anchor</span>
+            <span class="ad-placeholder-size" style="font-size: 10px;">320 x 100</span>
+        </div>
+    </div>
+    
     <script>
         // Initialize elements
         const navbar = document.getElementById('navbar');
@@ -702,6 +947,18 @@
         const btnContent = document.getElementById('btnContent');
         const successMessage = document.getElementById('successMessage');
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        
+        // Check if mobile and add padding for bottom ad
+        function checkMobile() {
+            if (window.innerWidth <= 640) {
+                document.body.classList.add('has-mobile-ad');
+            } else {
+                document.body.classList.remove('has-mobile-ad');
+            }
+        }
+        
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
         
         // Scroll handler for navbar
         let lastScroll = 0;
