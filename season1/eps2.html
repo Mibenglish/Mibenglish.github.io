@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pelajari sistem vokal bahasa Inggris: recognisi suara pendek dan panjang. Panduan lengkap untuk pemula level A0-A1 dari mibenglish.">
+    <meta name="description" content="Pelajari sistem vokal bahasa Inggris: mengenal bunyi pendek dan panjang dengan panduan lengkap untuk pemula level A0-A1.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://mibenglish.com/ep2-english-vowel-system">
+    <link rel="canonical" href="https://mibenglish.com/season1/eps2.html">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Ep 2: English Vowel System - Short & Long Sound Recognition | mibenglish">
-    <meta property="og:description" content="Pelajari sistem vokal bahasa Inggris: recognisi suara pendek dan panjang. Panduan lengkap untuk pemula.">
+    <meta property="og:description" content="Pelajari sistem vokal bahasa Inggris: mengenal bunyi pendek dan panjang dengan panduan lengkap untuk pemula.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://mibenglish.com/ep2-english-vowel-system">
+    <meta property="og:url" content="https://mibenglish.com/season1/eps2.html">
     <meta property="og:site_name" content="mibenglish">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ep 2: English Vowel System - Short & Long Sound Recognition | mibenglish">
-    <meta name="twitter:description" content="Pelajari sistem vokal bahasa Inggris: recognisi suara pendek dan panjang. Panduan lengkap untuk pemula.">
+    <meta name="twitter:description" content="Pelajari sistem vokal bahasa Inggris: mengenal bunyi pendek dan panjang dengan panduan lengkap untuk pemula.">
     
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -25,7 +25,7 @@
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Ep 2: English Vowel System - Short & Long Sound Recognition",
-        "description": "Pelajari sistem vokal bahasa Inggris: recognisi suara pendek dan panjang. Panduan lengkap untuk pemula level A0-A1.",
+        "description": "Pelajari sistem vokal bahasa Inggris: mengenal bunyi pendek dan panjang dengan panduan lengkap untuk pemula level A0-A1.",
         "author": {
             "@type": "Person",
             "name": "bangmik"
@@ -34,8 +34,8 @@
             "@type": "Organization",
             "name": "mibenglish"
         },
-        "datePublished": "2025-01-15",
-        "dateModified": "2025-01-15"
+        "datePublished": "2026-01-15",
+        "dateModified": "2026-01-15"
     }
     </script>
     
@@ -43,19 +43,24 @@
     
     <style>
         :root {
-            --bg-primary: #f8faf8;
-            --bg-light: #f0f5f0;
+            --bg-primary: #f0f5f0;
+            --bg-secondary: #e5f0e5;
+            --bg-light: #f8fbf8;
             --bg-card: #ffffff;
-            --text-primary: #1a1a1a;
-            --text-secondary: #2d2d2d;
-            --text-muted: #5a5a5a;
-            --accent-primary: #1e5631;
-            --accent-secondary: #2d7a4a;
-            --accent-light: #3d9a5a;
-            --accent-dark: #143d22;
-            --border: #c8d8c8;
-            --shadow: rgba(30, 86, 49, 0.1);
-            --shadow-strong: rgba(30, 86, 49, 0.2);
+            --text-primary: #0d1f0d;
+            --text-secondary: #1a3a1a;
+            --text-muted: #2d5a2d;
+            --accent-green: #1a5a2e;
+            --accent-green-light: #2d7a4a;
+            --accent-green-dark: #0f3d1a;
+            --accent-emerald: #059669;
+            --accent-teal: #0d9488;
+            --border: #a8d4a8;
+            --border-light: #c8e8c8;
+            --shadow: rgba(26, 90, 46, 0.12);
+            --shadow-dark: rgba(26, 90, 46, 0.2);
+            --white: #ffffff;
+            --black: #000000;
         }
         
         * {
@@ -69,215 +74,284 @@
         }
         
         body {
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background-color: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.8;
-            font-size: 17px;
-            padding-top: 70px;
+            overflow-x: hidden;
         }
         
-        /* Header Fixed */
+        /* Fixed Header */
         header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, var(--accent-green-dark) 0%, var(--accent-green) 50%, var(--accent-green-light) 100%);
+            color: var(--white);
             padding: 0;
-            z-index: 9999;
-            box-shadow: 0 3px 15px var(--shadow-strong);
-            height: 70px;
-            display: flex;
-            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 25px var(--shadow-dark);
         }
         
         .header-container {
-            max-width: 1100px;
-            width: 100%;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 1rem 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .brand-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: 1px;
             text-decoration: none;
-            color: #ffffff;
-            white-space: nowrap;
+            color: var(--white);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
         
         .brand-name:hover {
-            opacity: 0.9;
+            opacity: 0.95;
         }
         
-        nav ul {
+        .breadcrumb-nav {
+            background-color: var(--bg-card);
+            border-bottom: 2px solid var(--border);
+            padding: 0.75rem 0;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .breadcrumb {
             display: flex;
-            list-style: none;
-            gap: 0.8rem;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            flex-wrap: wrap;
         }
         
-        nav a {
-            color: #ffffff;
+        .breadcrumb a {
+            color: var(--accent-green);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            transition: background-color 0.3s ease;
-            white-space: nowrap;
+            transition: color 0.2s;
         }
         
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+        .breadcrumb a:hover {
+            color: var(--accent-green-light);
+            text-decoration: underline;
         }
         
-        /* Main Content - Desktop Optimized */
+        .breadcrumb span.sep {
+            color: var(--border);
+            font-weight: 300;
+        }
+        
+        .breadcrumb span.current {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        
+        /* Main Content */
         main {
-            padding: 2rem;
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
+            padding: 140px 1rem 2rem;
         }
         
         article {
             background-color: var(--bg-card);
             border-radius: 16px;
-            box-shadow: 0 4px 25px var(--shadow);
-            overflow: hidden;
+            padding: 2rem;
+            box-shadow: 0 8px 30px var(--shadow);
+            border: 1px solid var(--border-light);
         }
         
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-light) 100%);
-            color: #ffffff;
-            padding: 3rem 2.5rem;
-            text-align: center;
+        /* Episode Header */
+        .episode-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-emerald);
         }
         
         .episode-badge {
             display: inline-block;
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
+            background: linear-gradient(135deg, var(--accent-emerald) 0%, var(--accent-teal) 100%);
+            color: var(--white);
+            padding: 0.4rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            letter-spacing: 1px;
+            box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
         }
         
         h1 {
-            font-size: 2rem;
+            font-size: 1.75rem;
+            color: var(--accent-green-dark);
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
             font-weight: 700;
-            line-height: 1.4;
-            margin-bottom: 1rem;
-            color: #ffffff;
         }
         
-        .hero-subtitle {
-            font-size: 1.1rem;
-            opacity: 0.95;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
         }
         
-        .level-indicator {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: 1.2rem;
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-        }
-        
-        /* Content Sections */
+        /* Sections */
         section {
-            padding: 2.5rem 2.5rem;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        section:last-child {
-            border-bottom: none;
+            margin-bottom: 2.5rem;
         }
         
         h2 {
-            color: var(--accent-primary);
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 3px solid var(--accent-light);
+            font-size: 1.4rem;
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--accent-emerald);
             display: inline-block;
+            font-weight: 700;
         }
         
         h3 {
-            color: var(--accent-secondary);
-            font-size: 1.2rem;
+            font-size: 1.15rem;
+            color: var(--accent-green-dark);
+            margin: 1.5rem 0 0.8rem;
             font-weight: 600;
-            margin: 1.5rem 0 1rem 0;
         }
         
         p {
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             color: var(--text-secondary);
-            line-height: 1.9;
+            text-align: left;
             font-size: 1rem;
+        }
+        
+        /* Problem Box */
+        .problem-box {
+            background: linear-gradient(135deg, #fef6f6 0%, #fff0f0 100%);
+            border-left: 5px solid #dc2626;
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(220, 38, 38, 0.1);
+        }
+        
+        .problem-box h3 {
+            color: #b91c1c;
+            margin-top: 0;
+        }
+        
+        .problem-box p {
+            color: #7f1d1d;
+        }
+        
+        /* Concept Box */
+        .concept-box {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border-left: 5px solid var(--accent-emerald);
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(5, 150, 105, 0.15);
+        }
+        
+        .concept-box h3 {
+            color: var(--accent-green-dark);
+            margin-top: 0;
+        }
+        
+        .concept-box p {
+            color: var(--text-secondary);
         }
         
         /* Vowel Cards */
         .vowel-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.2rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
             margin: 1.5rem 0;
         }
         
         .vowel-card {
-            background: var(--bg-light);
+            background: var(--white);
+            border: 2px solid var(--border);
             border-radius: 12px;
-            padding: 1.5rem;
-            border-left: 4px solid var(--accent-primary);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 1.2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px var(--shadow);
         }
         
         .vowel-card:hover {
+            border-color: var(--accent-emerald);
+            box-shadow: 0 6px 20px var(--shadow);
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px var(--shadow);
         }
         
-        .vowel-card h4 {
-            color: var(--accent-primary);
-            font-size: 1.05rem;
-            margin-bottom: 0.6rem;
+        .vowel-symbol {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            display: block;
+            margin-bottom: 0.3rem;
         }
         
-        .vowel-card p {
-            font-size: 0.95rem;
-            margin-bottom: 0.8rem;
-            color: var(--text-secondary);
+        .vowel-type {
+            font-size: 0.75rem;
+            color: var(--white);
+            background: var(--accent-teal);
+            padding: 0.2rem 0.8rem;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
         }
         
         .vowel-examples {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
         }
         
-        .example-tag {
-            background-color: var(--accent-primary);
-            color: #ffffff;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
+        .vowel-examples strong {
+            color: var(--accent-green-dark);
+        }
+        
+        /* Example Lists */
+        .example-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        
+        .example-list li {
+            padding: 1rem 1.2rem;
+            background: var(--bg-secondary);
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-emerald);
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        .example-list li strong {
+            color: var(--accent-green-dark);
         }
         
         /* Comparison Table */
@@ -285,1249 +359,943 @@
             overflow-x: auto;
             margin: 1.5rem 0;
             border-radius: 12px;
-            box-shadow: 0 2px 15px var(--shadow);
+            box-shadow: 0 4px 15px var(--shadow);
         }
         
         .comparison-table {
             width: 100%;
             border-collapse: collapse;
-            background-color: var(--bg-card);
+            background: var(--white);
             min-width: 500px;
         }
         
-        .comparison-table th {
-            background-color: var(--accent-primary);
-            color: #ffffff;
-            padding: 1rem 1.2rem;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-        
+        .comparison-table th,
         .comparison-table td {
-            padding: 1rem 1.2rem;
-            border-bottom: 1px solid var(--border);
-            color: var(--text-secondary);
-            font-size: 0.95rem;
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
         }
         
-        .comparison-table tr:last-child td {
-            border-bottom: none;
+        .comparison-table th {
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-green-dark) 100%);
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.9rem;
         }
         
         .comparison-table tr:hover td {
-            background-color: var(--bg-light);
+            background: var(--bg-secondary);
         }
         
-        /* Highlight Box */
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(30, 86, 49, 0.06) 0%, rgba(61, 154, 90, 0.06) 100%);
-            border: 2px solid var(--accent-light);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-        }
-        
-        .highlight-box p {
-            margin-bottom: 0;
+        .comparison-table td {
             color: var(--text-secondary);
+            font-size: 0.9rem;
         }
         
-        .highlight-box strong {
-            color: var(--accent-primary);
+        .comparison-table .short {
+            color: #dc2626;
+            font-weight: 700;
         }
         
-        /* Interactive Quiz */
-        .quiz-container {
-            background: var(--bg-light);
+        .comparison-table .long {
+            color: var(--accent-emerald);
+            font-weight: 700;
+        }
+        
+        /* Interactive Quiz Section */
+        .quiz-section {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 3px solid var(--accent-emerald);
             border-radius: 16px;
             padding: 2rem;
-            margin: 1.5rem 0;
+            margin: 2rem 0;
         }
         
-        .quiz-title {
-            color: var(--accent-primary);
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
+        .quiz-section h2 {
+            border-bottom: none;
+            display: block;
             text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--accent-green-dark);
+        }
+        
+        .quiz-container {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px var(--shadow);
         }
         
         .quiz-question {
-            background-color: var(--bg-card);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.2rem;
-            box-shadow: 0 2px 10px var(--shadow);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--accent-green-dark);
+            margin-bottom: 1rem;
+            text-align: center;
         }
         
-        .quiz-question p {
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            font-size: 1rem;
+        .quiz-word {
+            font-size: 2.5rem;
+            text-align: center;
+            color: var(--accent-green);
+            font-weight: 700;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            border: 2px solid var(--border);
         }
         
         .quiz-options {
-            display: flex;
-            flex-direction: column;
-            gap: 0.7rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
         }
         
-        .quiz-option {
-            background-color: var(--bg-light);
+        .quiz-btn {
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
             border: 2px solid var(--border);
             border-radius: 10px;
-            padding: 1rem 1.2rem;
+            background: var(--white);
+            color: var(--text-secondary);
             cursor: pointer;
             transition: all 0.3s ease;
-            font-size: 0.95rem;
-            text-align: left;
-            color: var(--text-secondary);
         }
         
-        .quiz-option:hover {
-            border-color: var(--accent-primary);
-            background-color: rgba(30, 86, 49, 0.05);
+        .quiz-btn:hover:not(:disabled) {
+            border-color: var(--accent-emerald);
+            background: var(--bg-secondary);
+            transform: translateY(-2px);
         }
         
-        .quiz-option.correct {
-            background-color: #d4edda;
-            border-color: #28a745;
-            color: #155724;
+        .quiz-btn.correct {
+            background: #d1fae5;
+            border-color: var(--accent-emerald);
+            color: var(--accent-green-dark);
         }
         
-        .quiz-option.incorrect {
-            background-color: #f8d7da;
-            border-color: #dc3545;
-            color: #721c24;
+        .quiz-btn.wrong {
+            background: #fee2e2;
+            border-color: #ef4444;
+            color: #dc2626;
+        }
+        
+        .quiz-btn:disabled {
+            cursor: not-allowed;
+            opacity: 0.8;
         }
         
         .quiz-feedback {
-            margin-top: 1rem;
+            text-align: center;
             padding: 1rem;
+            margin-top: 1rem;
             border-radius: 10px;
+            font-weight: 500;
             display: none;
+            font-size: 0.95rem;
         }
         
         .quiz-feedback.show {
             display: block;
         }
         
+        .quiz-feedback.success {
+            background: #d1fae5;
+            color: var(--accent-green-dark);
+            border: 2px solid var(--accent-emerald);
+        }
+        
+        .quiz-feedback.error {
+            background: #fee2e2;
+            color: #b91c1c;
+            border: 2px solid #ef4444;
+        }
+        
         .quiz-score {
             text-align: center;
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: var(--accent-primary);
-            padding: 1.5rem;
-            background-color: var(--bg-card);
-            border-radius: 12px;
-            margin-top: 1.2rem;
+            margin-top: 1rem;
+            padding: 0.8rem;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            font-weight: 500;
         }
         
-        .restart-btn {
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            color: #ffffff;
-            border: none;
-            padding: 0.8rem 1.8rem;
-            border-radius: 10px;
+        .next-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            margin-top: 1rem;
             font-size: 1rem;
             font-weight: 600;
-            cursor: pointer;
-            margin-top: 1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .restart-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px var(--shadow-strong);
-        }
-        
-        /* Ad Placeholder */
-        .ad-placeholder {
-            background: linear-gradient(135deg, #f5f5f5 0%, #ebebeb 100%);
-            border: 2px dashed #ccc;
+            border: none;
             border-radius: 10px;
-            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, var(--accent-emerald) 0%, var(--accent-teal) 100%);
+            color: var(--white);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+        }
+        
+        .next-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(5, 150, 105, 0.4);
+        }
+        
+        /* AdSense Placeholder */
+        .ad-slot {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-light) 100%);
+            border: 2px dashed var(--border);
+            border-radius: 10px;
+            padding: 1.5rem;
             text-align: center;
-            margin: 2rem;
-            color: #666;
+            margin: 2rem 0;
+            color: var(--text-muted);
             font-size: 0.9rem;
         }
         
-        /* Next Episode */
+        .ad-slot::before {
+            content: "📢";
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Next Episode Box */
         .next-episode {
-            background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-light) 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-green-dark) 100%);
+            border-radius: 16px;
             padding: 2rem;
-            border-radius: 12px;
             text-align: center;
-            margin-top: 2rem;
+            color: var(--white);
+            margin: 2rem 0;
+            box-shadow: 0 6px 25px var(--shadow-dark);
         }
         
         .next-episode h3 {
-            color: #ffffff;
-            margin-top: 0;
-            margin-bottom: 0.5rem;
+            color: var(--white);
             font-size: 1.2rem;
+            margin-bottom: 0.5rem;
         }
         
         .next-episode p {
-            color: #ffffff;
-            margin-bottom: 0.5rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 0.8rem;
         }
         
         .next-episode a {
             display: inline-block;
-            background-color: #ffffff;
-            color: var(--accent-primary);
-            padding: 0.8rem 1.8rem;
-            border-radius: 10px;
+            background: var(--white);
+            color: var(--accent-green-dark);
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
         
         .next-episode a:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
         }
         
-        /* Visitor Statistics - Professional Live Design */
-        .stats-container {
-            margin: 3rem auto;
-            max-width: 850px;
-            padding: 0 1rem;
-        }
-        
-        .stats-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f8faf8 100%);
-            border-radius: 20px;
-            padding: 0;
-            box-shadow: 0 10px 40px rgba(30, 86, 49, 0.12), 0 2px 10px rgba(30, 86, 49, 0.08);
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .stats-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-light), var(--accent-secondary));
-        }
-        
-        .stats-header {
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            padding: 1.5rem 2rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .stats-header-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .stats-header-icon svg {
-            width: 26px;
-            height: 26px;
-            fill: #ffffff;
-        }
-        
-        .stats-header-text h3 {
-            color: #ffffff;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin: 0;
-        }
-        
-        .stats-header-text p {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 0.85rem;
-            margin: 0.3rem 0 0 0;
-        }
-        
-        .stats-body {
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--white) 0%, var(--bg-light) 100%);
+            border: 2px solid var(--border);
+            border-radius: 16px;
             padding: 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1px 1fr;
-            gap: 2rem;
-            align-items: center;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px var(--shadow);
         }
         
-        .stats-divider {
-            width: 1px;
-            height: 80px;
-            background: linear-gradient(180deg, transparent, var(--border), transparent);
-        }
-        
-        .stat-block {
+        .stats-title {
             text-align: center;
-            padding: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
         }
         
-        .stat-icon-wrapper {
-            display: inline-flex;
-            align-items: center;
+        .stats-container {
+            display: flex;
             justify-content: center;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-light) 100%);
-            border-radius: 50%;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(30, 86, 49, 0.3);
-            position: relative;
+            flex-wrap: wrap;
+            gap: 2rem;
         }
         
-        .stat-icon-wrapper svg {
-            width: 28px;
-            height: 28px;
-            fill: #ffffff;
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            min-width: 160px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px var(--shadow);
+            border: 1px solid var(--border-light);
         }
         
-        .stat-icon-wrapper::after {
-            content: '';
-            position: absolute;
-            inset: -4px;
-            border-radius: 50%;
-            border: 2px solid var(--accent-light);
-            opacity: 0.3;
-        }
-        
-        .stat-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--accent-primary);
-            line-height: 1;
-            margin-bottom: 0.5rem;
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent-green);
+            display: block;
             font-variant-numeric: tabular-nums;
-            letter-spacing: -1px;
-        }
-        
-        .stat-value .digit {
-            display: inline-block;
-            animation: digitFade 0.3s ease;
-        }
-        
-        @keyframes digitFade {
-            0% { opacity: 0.5; transform: translateY(-2px); }
-            100% { opacity: 1; transform: translateY(0); }
+            transition: all 0.3s ease;
         }
         
         .stat-label {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .stat-live-indicator {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(30, 86, 49, 0.08);
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            margin-top: 0.8rem;
             font-size: 0.8rem;
-            color: var(--accent-primary);
-            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+            font-weight: 600;
         }
         
-        .live-dot {
-            width: 8px;
-            height: 8px;
-            background: #22c55e;
-            border-radius: 50%;
+        .stat-online {
             position: relative;
         }
         
-        .live-dot::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: #22c55e;
+        .online-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: var(--accent-emerald);
             border-radius: 50%;
-            animation: livePulse 1.5s ease-in-out infinite;
+            margin-right: 0.5rem;
+            animation: pulse-dot 1.5s infinite;
+            box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7);
         }
         
-        @keyframes livePulse {
-            0%, 100% { transform: scale(1); opacity: 0.8; }
-            50% { transform: scale(2); opacity: 0; }
-        }
-        
-        .online-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-            color: #ffffff;
-            padding: 0.4rem 0.9rem;
-            border-radius: 20px;
-            margin-top: 0.8rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            box-shadow: 0 2px 10px rgba(34, 197, 94, 0.3);
-        }
-        
-        .online-badge svg {
-            width: 14px;
-            height: 14px;
-            fill: #ffffff;
-        }
-        
-        .stats-footer {
-            background: var(--bg-light);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            border-top: 1px solid var(--border);
-        }
-        
-        .stats-footer-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-        
-        .stats-footer-item svg {
-            width: 16px;
-            height: 16px;
-            fill: var(--accent-secondary);
+        @keyframes pulse-dot {
+            0% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7); }
+            70% { box-shadow: 0 0 0 8px rgba(5, 150, 105, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
         }
         
         /* Footer */
         footer {
-            background-color: var(--bg-light);
-            border-top: 1px solid var(--border);
-            padding: 2.5rem 2rem 1.5rem;
-            margin-top: 2rem;
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-secondary) 100%);
+            border-top: 3px solid var(--border);
+            padding: 3rem 0 1.5rem;
+            margin-top: 3rem;
         }
         
         .footer-container {
-            max-width: 850px;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 1.5rem;
         }
         
         .footer-brand {
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
         
-        .footer-brand-name {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--accent-primary);
-            margin-bottom: 0.4rem;
+        .footer-brand h2 {
+            font-size: 2rem;
+            color: var(--accent-green);
+            margin-bottom: 0.3rem;
+            border: none;
+            padding: 0;
+            display: block;
         }
         
-        .footer-tagline {
+        .footer-brand p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 1rem;
+            text-align: center;
         }
         
         .social-links {
             display: flex;
             justify-content: center;
             gap: 0.8rem;
-            margin: 1.2rem 0;
+            margin: 1.5rem 0;
             flex-wrap: wrap;
         }
         
-        .social-link {
-            display: inline-flex;
+        .social-links a {
+            display: flex;
             align-items: center;
-            gap: 0.4rem;
-            background-color: var(--bg-card);
-            color: var(--accent-primary);
-            padding: 0.5rem 1rem;
+            gap: 0.5rem;
+            padding: 0.6rem 1rem;
+            background: var(--white);
+            border: 2px solid var(--border);
             border-radius: 10px;
             text-decoration: none;
-            font-weight: 500;
+            color: var(--text-secondary);
             font-size: 0.85rem;
+            font-weight: 500;
             transition: all 0.3s ease;
-            border: 1px solid var(--border);
         }
         
-        .social-link:hover {
-            background-color: var(--accent-primary);
-            color: #ffffff;
-            border-color: var(--accent-primary);
+        .social-links a:hover {
+            background: var(--accent-green);
+            color: var(--white);
+            border-color: var(--accent-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow);
         }
         
-        .social-link svg {
-            width: 16px;
-            height: 16px;
+        .social-links a svg {
+            width: 18px;
+            height: 18px;
         }
         
         .cta-text {
             text-align: center;
             color: var(--text-secondary);
-            margin: 1.2rem 0;
             font-size: 0.9rem;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            border: 1px solid var(--border-light);
         }
         
         .quick-links {
             display: flex;
             justify-content: center;
-            gap: 1.2rem;
-            margin: 1.2rem 0;
+            align-items: center;
+            gap: 0.3rem;
             flex-wrap: wrap;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            border: 1px solid var(--border-light);
         }
         
         .quick-links a {
-            color: var(--text-secondary);
+            color: var(--accent-green);
             text-decoration: none;
+            padding: 0.4rem 0.8rem;
             font-size: 0.85rem;
-            transition: color 0.3s ease;
+            font-weight: 500;
+            transition: color 0.2s;
         }
         
         .quick-links a:hover {
-            color: var(--accent-primary);
+            color: var(--accent-green-light);
+            text-decoration: underline;
+        }
+        
+        .quick-links span {
+            color: var(--border);
+            font-size: 0.8rem;
         }
         
         .copyright {
             text-align: center;
-            padding-top: 1.2rem;
-            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--border);
             color: var(--text-muted);
             font-size: 0.85rem;
         }
         
         /* Share Button */
-        .share-button {
+        .share-btn {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, var(--accent-emerald) 0%, var(--accent-teal) 100%);
+            color: var(--white);
             border: none;
+            border-radius: 50%;
             width: 56px;
             height: 56px;
-            border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 4px 20px var(--shadow-strong);
+            box-shadow: 0 4px 20px rgba(5, 150, 105, 0.4);
+            z-index: 999;
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            z-index: 999;
         }
         
-        .share-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 25px var(--shadow-strong);
+        .share-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 6px 25px rgba(5, 150, 105, 0.5);
         }
         
-        .share-button svg {
-            width: 22px;
-            height: 22px;
+        .share-btn svg {
+            width: 24px;
+            height: 24px;
         }
         
-        /* Tablet */
+        /* Responsive */
         @media (max-width: 768px) {
-            body {
-                padding-top: 60px;
-                font-size: 16px;
-            }
-            
-            header {
-                height: 60px;
-            }
-            
-            .header-container {
-                padding: 0 1rem;
-            }
-            
-            .brand-name {
-                font-size: 1.3rem;
-            }
-            
-            nav ul {
-                gap: 0.3rem;
-            }
-            
-            nav a {
-                padding: 0.4rem 0.7rem;
-                font-size: 0.85rem;
-            }
-            
             main {
-                padding: 1rem;
+                padding: 130px 0.8rem 2rem;
             }
             
-            .hero-section {
-                padding: 2rem 1.5rem;
+            article {
+                padding: 1.5rem 1rem;
+                border-radius: 12px;
             }
             
             h1 {
-                font-size: 1.6rem;
-            }
-            
-            section {
-                padding: 1.8rem 1.5rem;
-            }
-            
-            h2 {
-                font-size: 1.35rem;
-            }
-            
-            .vowel-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .ad-placeholder {
-                margin: 1.5rem;
-            }
-            
-            .stats-container {
-                margin: 2rem auto;
-                padding: 0 0.8rem;
-            }
-            
-            .stats-body {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                padding: 1.5rem;
-            }
-            
-            .stats-divider {
-                width: 80%;
-                height: 1px;
-                margin: 0 auto;
-            }
-            
-            .stat-value {
-                font-size: 2.2rem;
-            }
-            
-            .stats-footer {
-                flex-direction: column;
-                gap: 0.8rem;
-                align-items: center;
-            }
-            
-            .share-button {
-                bottom: 1rem;
-                right: 1rem;
-                width: 50px;
-                height: 50px;
-            }
-        }
-        
-        /* Mobile Small */
-        @media (max-width: 480px) {
-            body {
-                padding-top: 55px;
-            }
-            
-            header {
-                height: 55px;
-            }
-            
-            .header-container {
-                flex-direction: column;
-                justify-content: center;
-                gap: 0.2rem;
-                padding: 0 0.5rem;
-            }
-            
-            .brand-name {
-                font-size: 1.15rem;
-            }
-            
-            nav ul {
-                gap: 0.2rem;
-            }
-            
-            nav a {
-                padding: 0.3rem 0.5rem;
-                font-size: 0.75rem;
-            }
-            
-            main {
-                padding: 0.8rem 0.5rem;
-            }
-            
-            .hero-section {
-                padding: 1.5rem 1rem;
-            }
-            
-            h1 {
-                font-size: 1.35rem;
-            }
-            
-            section {
-                padding: 1.5rem 1rem;
+                font-size: 1.4rem;
+                line-height: 1.4;
             }
             
             h2 {
                 font-size: 1.2rem;
             }
             
+            h3 {
+                font-size: 1.05rem;
+            }
+            
+            p {
+                font-size: 0.95rem;
+            }
+            
+            .quiz-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .quiz-word {
+                font-size: 2rem;
+            }
+            
+            .vowel-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.8rem;
+            }
+            
             .vowel-card {
-                padding: 1rem;
+                padding: 0.8rem;
             }
             
-            .quiz-container {
-                padding: 1.2rem;
-            }
-            
-            .stats-header {
-                padding: 1.2rem 1.5rem;
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .stats-header-icon {
-                width: 45px;
-                height: 45px;
-            }
-            
-            .stat-value {
+            .vowel-symbol {
                 font-size: 1.8rem;
             }
             
-            .stat-icon-wrapper {
+            .vowel-examples {
+                font-size: 0.8rem;
+            }
+            
+            .share-btn {
                 width: 50px;
                 height: 50px;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .social-links a {
+                justify-content: center;
+            }
+            
+            .quick-links {
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+            
+            .quick-links span {
+                display: none;
+            }
+            
+            .quick-links a {
+                padding: 0.5rem;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                min-width: 140px;
+            }
+            
+            .stat-number {
+                font-size: 1.8rem;
+            }
+            
+            .problem-box,
+            .concept-box {
+                padding: 1rem;
+            }
+            
+            .example-list li {
+                padding: 0.8rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .next-episode {
+                padding: 1.5rem 1rem;
+            }
+            
+            .next-episode h3 {
+                font-size: 1.1rem;
+            }
+            
+            .next-episode p {
+                font-size: 0.9rem;
             }
         }
         
-        /* List Styling */
-        ul, ol {
-            margin: 1rem 0 1.2rem 1.5rem;
-            color: var(--text-secondary);
-        }
-        
-        li {
-            margin-bottom: 0.4rem;
-            font-size: 0.95rem;
+        @media (max-width: 480px) {
+            .header-container {
+                padding: 0.8rem 1rem;
+            }
+            
+            .brand-name {
+                font-size: 1.3rem;
+            }
+            
+            .breadcrumb-nav {
+                top: 50px;
+            }
+            
+            .breadcrumb {
+                font-size: 0.8rem;
+            }
+            
+            main {
+                padding: 115px 0.5rem 2rem;
+            }
+            
+            article {
+                padding: 1rem 0.8rem;
+            }
+            
+            h1 {
+                font-size: 1.2rem;
+            }
+            
+            h2 {
+                font-size: 1.1rem;
+            }
+            
+            .vowel-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .episode-badge {
+                font-size: 0.75rem;
+                padding: 0.3rem 0.8rem;
+            }
+            
+            .subtitle {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Fixed Header -->
     <header>
         <div class="header-container">
             <a href="https://mibenglish.com" class="brand-name">mibenglish</a>
-            <nav>
-                <ul>
-                    <li><a href="https://mibenglish.com">Beranda</a></li>
-                    <li><a href="https://mibenglish.com/about">Tentang</a></li>
-                    <li><a href="https://mibenglish.com/episodes">Materi</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
+    
+    <!-- Breadcrumb Navigation - Fixed below header -->
+    <nav class="breadcrumb-nav">
+        <div class="nav-container">
+            <div class="breadcrumb">
+                <a href="https://mibenglish.com">Beranda</a>
+                <span class="sep">›</span>
+                <a href="https://mibenglish.com/season1/eps1.html">Season 1</a>
+                <span class="sep">›</span>
+                <span class="current">Episode 2: English Vowel System</span>
+            </div>
+        </div>
+    </nav>
     
     <!-- Main Content -->
     <main>
         <article>
-            <!-- Hero Section -->
-            <section class="hero-section">
-                <span class="episode-badge">EPISODE 2</span>
+            <!-- Episode Header -->
+            <section class="episode-header">
+                <span class="episode-badge">Episode 2 - Season 1</span>
                 <h1>English Vowel System: Short & Long Sound Recognition</h1>
-                <p class="hero-subtitle">Mengenal sistem vokal bahasa Inggris dan perbedaan suara pendek serta panjang untuk fondasi pengucapan yang kuat</p>
-                <div class="level-indicator">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                    </svg>
-                    Level A0-A1 | Absolute Beginner Foundation
-                </div>
+                <p class="subtitle">Mengenal Sistem Vokal Bahasa Inggris: Bunyi Pendek dan Panjang</p>
             </section>
             
-            <!-- Introduction Section -->
-            <section>
-                <h2>Mengapa Sistem Vokal Sangat Penting?</h2>
-                
-                <p>Bayangkan Anda sedang berbicara dengan seorang native speaker bahasa Inggris. Anda mengucapkan kata "ship" (kapal) dengan pelafalan yang hampir sama seperti "sheep" (domba). Apa yang terjadi? Orang tersebut mungkin akan tersenyum kebingungan atau bahkan salah memahami maksud Anda sepenuhnya. Perbedaan kecil dalam pengucapan vokal dapat mengubah makna kata secara drastis, dan inilah mengapa memahami sistem vokal bahasa Inggris merupakan langkah fundamental yang tidak boleh dilewatkan oleh siapa pun yang serius ingin menguasai bahasa ini.</p>
-                
-                <p>Banyak pembelajar bahasa Inggris di Indonesia mengalami kesulitan dalam membedakan suara vokal pendek (short vowels) dan vokal panjang (long vowels). Kesulitan ini bukan tanpa alasan—sistem vokal bahasa Indonesia relatif sederhana dengan hanya lima vokal dasar yang pengucapannya konsisten. Sementara itu, bahasa Inggris memiliki sistem vokal yang jauh lebih kompleks dengan berbagai variasi suara yang dapat mengubah makna kata secara signifikan.</p>
-                
-                <div class="highlight-box">
-                    <p><strong>Fakta Menarik:</strong> Bahasa Inggris memiliki sekitar 20 suara vokal berbeda, sementara bahasa Indonesia hanya memiliki 5 suara vokal dasar. Perbedaan inilah yang menjadi tantangan utama bagi pembelajar Indonesia dalam menguasai pengucapan bahasa Inggris yang tepat dan natural.</p>
-                </div>
-            </section>
-            
-            <!-- Ad Placeholder 1 -->
-            <div class="ad-placeholder">
-                <p>Advertisement Space - Google AdSense</p>
+            <!-- Ad Slot 1 -->
+            <div class="ad-slot">
+                Slot Iklan - Google AdSense
             </div>
             
-            <!-- Problem Identification Section -->
+            <!-- Section 1: Identifikasi Masalah -->
             <section>
-                <h2>Akar Masalah: Mengapa Kita Kesulitan Membedakan Vokal?</h2>
+                <h2>Mengapa Vokal Menjadi Penghalang Utama?</h2>
                 
-                <p>Untuk memahami mengapa begitu banyak pembelajar Indonesia kesulitan dengan sistem vokal bahasa Inggris, kita perlu melihat lebih dalam ke akar masalahnya. Ketika seorang anak belajar bahasa pertamanya, otaknya membentuk pola pengenalan suara berdasarkan bahasa yang didengarnya sehari-hari. Otak manusia memiliki kemampuan luar biasa untuk mengenali dan membedakan suara-suara yang relevan dalam bahasa ibunya.</p>
+                <div class="problem-box">
+                    <h3>🔍 Akar Permasalahan Pembelajar</h3>
+                    <p>Apakah kamu pernah mengalami situasi di mana kata <strong>"ship"</strong> dan <strong>"sheep"</strong> terdengar sama di telingamu? Atau mungkin bingung membedakan <strong>"bit"</strong> dengan <strong>"beat"</strong>? Jika jawabannya ya, maka kamu tidak sendirian. Jutaan pembelajar bahasa Inggris di seluruh dunia menghadapi tantangan yang sama, dan ini bukan karena ketidakmampuan, melainkan karena perbedaan fundamental antara sistem bunyi bahasa Indonesia dan bahasa Inggris.</p>
+                </div>
                 
-                <p>Pembelajar Indonesia tumbuh dengan sistem vokal yang relatif sederhana di mana setiap huruf vokal memiliki satu pengucapan yang konsisten. Huruf "a" selalu diucapkan seperti "a" dalam kata "bapa", huruf "i" selalu seperti "i" dalam kata "padi", dan seterusnya. Konsistensi ini menciptakan ekspektasi bahwa sistem vokal bahasa lain juga mengikuti pola serupa.</p>
+                <p>Bahasa Indonesia memiliki sistem vokal yang relatif sederhana dengan lima bunyi vokal dasar: a, i, u, e, o. Setiap huruf vokal dalam bahasa Indonesia memiliki satu cara pengucapan yang konsisten. Namun, bahasa Inggris memiliki sistem yang jauh lebih kompleks dengan sekitar 20 bunyi vokal berbeda, yang dibagi menjadi dua kategori utama: <strong>short vowels</strong> (vokal pendek) dan <strong>long vowels</strong> (vokal panjang).</p>
                 
-                <h3>Visualisasi Mental: Bagaimana Mulut Kita Bekerja</h3>
+                <p>Perbedaan ini menciptakan apa yang disebut para ahli linguistik sebagai "phonological interference" atau gangguan fonologis. Ketika otak kita yang terbiasa dengan sistem bunyi Indonesia mencoba memproses bunyi bahasa Inggris, terjadi kebingungan karena tidak ada pemetaan satu-ke-satu yang sempurna antara kedua sistem tersebut. Bayangkan seperti mencoba memasukkan puzzle berbentuk segitiga ke dalam lubang berbentuk lingkaran - ada ketidakcocokan struktural yang mendasar.</p>
                 
-                <p>Mari kita lakukan sebuah eksperimen mental. Bayangkan mulut Anda adalah sebuah ruang berbentuk oval. Lidah Anda adalah penghuni ruang tersebut yang dapat bergerak ke berbagai posisi. Ketika mengucapkan vokal bahasa Indonesia, lidah Anda berada di posisi-posisi yang relatif stabil dan mudah diprediksi. Namun ketika mengucapkan vokal bahasa Inggris, lidah Anda harus melakukan gerakan yang lebih halus dan presisi.</p>
-                
-                <p>Bayangkan pula bahwa vokal-vokal bahasa Inggris dapat divisualisasikan sebagai peta. Di bagian depan mulut, kita memiliki vokal-vokal seperti /i/ dalam "see" dan /ɪ/ dalam "sit". Di bagian tengah, terdapat vokal seperti /ə/ dalam "about" yang sering disebut sebagai schwa—suara paling umum dalam bahasa Inggris. Di bagian belakang mulut, kita menemukan vokal seperti /u/ dalam "food" dan /ʊ/ dalam "book".</p>
+                <h3>Visualisasi Mental: Bayangkan Sistem Vokal</h3>
+                <p>Coba bayangkan sistem vokal bahasa Indonesia seperti sebuah rumah sederhana dengan lima kamar yang berbeda. Setiap kamar memiliki ukuran dan bentuk yang tetap, mudah dikenali, dan tidak pernah berubah. Sekarang, bayangkan sistem vokal bahasa Inggris seperti sebuah gedung apartemen mewah dengan 20 lantai, di mana setiap lantai memiliki variasi ukuran dan bentuk ruangan yang berbeda-beda. Beberapa ruangan besar dan luas (long vowels), sementara yang lain kecil dan kompak (short vowels). Tanpa peta yang jelas, sangat mudah untuk tersesat di dalam gedung ini.</p>
             </section>
             
-            <!-- Short Vowels Section -->
+            <!-- Section 2: Konsep Dasar -->
             <section>
-                <h2>Memahami Short Vowels (Vokal Pendek)</h2>
+                <h2>Memahami Short dan Long Vowels</h2>
                 
-                <p>Vokal pendek dalam bahasa Inggris adalah suara vokal yang diucapkan dengan durasi relatif singkat dan tidak mengalami perubahan kualitas selama pengucapan. Suara-suara ini merupakan fondasi penting dalam sistem vokal bahasa Inggris karena muncul sangat sering dalam percakapan sehari-hari. Menguasai vokal-vokal pendek ini akan membantu Anda mengucapkan ratusan kata bahasa Inggris dengan lebih akurat.</p>
+                <div class="concept-box">
+                    <h3>📚 Konsep Fundamental</h3>
+                    <p>Dalam bahasa Inggris, <strong>vowel</strong> atau huruf hidup adalah bunyi yang dihasilkan ketika udara mengalir bebas melalui rongga mulut tanpa hambatan berarti. Berbeda dengan <strong>consonant</strong> (huruf mati) yang memerlukan hambatan atau penyempitan aliran udara. Yang membedakan short vowel dan long vowel bukan hanya durasi pengucapan, tetapi juga posisi lidah, bentuk bibir, dan kualitas bunyi secara keseluruhan.</p>
+                </div>
                 
-                <p>Salah satu karakteristik utama vokal pendek adalah posisi lidah yang cenderung lebih rileks dibandingkan vokal panjang. Ketika mengucapkan vokal pendek, lidah tidak perlu meregang atau berada di posisi ekstrem. Sebaliknya, lidah berada dalam posisi yang lebih natural dan netral, membuat pengucapan vokal pendek sebenarnya lebih mudah secara teknis.</p>
+                <h3>Short Vowels (Vokal Pendek)</h3>
+                <p>Short vowels adalah bunyi vokal yang diucapkan dengan durasi singkat dan cepat. Bayangkan seperti ketukan jari yang cepat di meja - singkat, tegas, dan tidak bertele-tele. Dalam sistem fonetik internasional (IPA - International Phonetic Alphabet), short vowels dilambangkan dengan simbol-simbol tertentu yang membantu kita mengidentifikasi cara pengucapannya dengan tepat.</p>
                 
                 <div class="vowel-grid">
                     <div class="vowel-card">
-                        <h4>/ɪ/ - Vokal "i" Pendek</h4>
-                        <p>Suara ini mirip dengan "i" dalam bahasa Indonesia, tetapi diucapkan dengan lidah sedikit lebih rendah dan rileks. Bayangkan Anda sedang tersenyum ringan saat mengucapkannya.</p>
-                        <div class="vowel-examples">
-                            <span class="example-tag">sit</span>
-                            <span class="example-tag">bit</span>
-                            <span class="example-tag">hit</span>
-                            <span class="example-tag">give</span>
-                        </div>
+                        <span class="vowel-symbol">/ɪ/</span>
+                        <span class="vowel-type">Short</span>
+                        <p class="vowel-examples"><strong>bit, sit, hit</strong><br>seperti "i" dalam "ikan" tapi lebih pendek</p>
                     </div>
-                    
                     <div class="vowel-card">
-                        <h4>/e/ - Vokal "e" Pendek</h4>
-                        <p>Suara ini mirip dengan "e" dalam kata "esok" bahasa Indonesia. Bibir sedikit terbuka dan lidah berada di posisi tengah-depan rongga mulut.</p>
-                        <div class="vowel-examples">
-                            <span class="example-tag">bed</span>
-                            <span class="example-tag">red</span>
-                            <span class="example-tag">pen</span>
-                            <span class="example-tag">help</span>
-                        </div>
+                        <span class="vowel-symbol">/e/</span>
+                        <span class="vowel-type">Short</span>
+                        <p class="vowel-examples"><strong>bed, red, pen</strong><br>seperti "e" dalam "enak"</p>
                     </div>
-                    
                     <div class="vowel-card">
-                        <h4>/æ/ - Vokal "a" Depan</h4>
-                        <p>Suara unik yang tidak ada dalam bahasa Indonesia. Diucapkan dengan mulut terbuka lebar seperti akan mengucapkan "a", tetapi dengan lidah di posisi depan.</p>
-                        <div class="vowel-examples">
-                            <span class="example-tag">cat</span>
-                            <span class="example-tag">bad</span>
-                            <span class="example-tag">map</span>
-                            <span class="example-tag">hand</span>
-                        </div>
+                        <span class="vowel-symbol">/æ/</span>
+                        <span class="vowel-type">Short</span>
+                        <p class="vowel-examples"><strong>cat, bat, map</strong><br>antara "a" dan "e", buka mulut lebar</p>
                     </div>
-                    
                     <div class="vowel-card">
-                        <h4>/ʌ/ - Vokal "u" Terbuka</h4>
-                        <p>Suara ini berada di antara "a" dan "u" bahasa Indonesia. Diucapkan dengan lidah di posisi tengah rongga mulut, sedikit lebih rendah dari posisi netral.</p>
-                        <div class="vowel-examples">
-                            <span class="example-tag">cup</span>
-                            <span class="example-tag">but</span>
-                            <span class="example-tag">sun</span>
-                            <span class="example-tag">love</span>
-                        </div>
+                        <span class="vowel-symbol">/ʌ/</span>
+                        <span class="vowel-type">Short</span>
+                        <p class="vowel-examples"><strong>cup, but, sun</strong><br>seperti "a" dalam "emas"</p>
                     </div>
-                    
                     <div class="vowel-card">
-                        <h4>/ɒ/ - Vokal "o" Pendek</h4>
-                        <p>Suara ini mirip dengan "o" dalam kata "topi" bahasa Indonesia, tetapi diucapkan dengan bibir lebih membulat dan lidah sedikit lebih rendah.</p>
-                        <div class="vowel-examples">
-                            <span class="example-tag">hot</span>
-                            <span class="example-tag">pot</span>
-                            <span class="example-tag">stop</span>
-                            <span class="example-tag">box</span>
-                        </div>
+                        <span class="vowel-symbol">/ʊ/</span>
+                        <span class="vowel-type">Short</span>
+                        <p class="vowel-examples"><strong>put, book, foot</strong><br>seperti "u" pendek, bibir sedikit bulat</p>
                     </div>
-                    
                     <div class="vowel-card">
-                        <h4>/ʊ/ - Vokal "u" Pendek</h4>
-                        <p>Suara ini lebih pendek dan rileks dibandingkan "u" bahasa Indonesia. Lidah berada di posisi tinggi-belakang tetapi tidak serelaks /u/ panjang.</p>
-                        <div class="vowel-examples">
-                            <span class="example-tag">put</span>
-                            <span class="example-tag">book</span>
-                            <span class="example-tag">foot</span>
-                            <span class="example-tag">good</span>
-                        </div>
+                        <span class="vowel-symbol">/ɒ/</span>
+                        <span class="vowel-type">Short</span>
+                        <p class="vowel-examples"><strong>hot, pot, stop</strong><br>seperti "o" dalam "orang"</p>
                     </div>
                 </div>
                 
-                <p>Perhatikan bahwa setiap vokal pendek memiliki karakteristik unik yang membedakannya dari vokal lainnya. Latihan konsisten dalam mengenali dan mengucapkan vokal-vokal ini akan membentuk fondasi yang kuat untuk kemampuan berbicara bahasa Inggris Anda. Ingatlah bahwa dalam pembelajaran bahasa, kesabaran dan ketekunan adalah kunci utama.</p>
-            </section>
-            
-            <!-- Ad Placeholder 2 -->
-            <div class="ad-placeholder">
-                <p>Advertisement Space - Google AdSense</p>
-            </div>
-            
-            <!-- Long Vowels Section -->
-            <section>
-                <h2>Memahami Long Vowels (Vokal Panjang)</h2>
-                
-                <p>Vokal panjang dalam bahasa Inggris memiliki durasi pengucapan yang lebih lama dibandingkan vokal pendek. Namun, perbedaan bukan hanya pada durasi—kualitas suara vokal panjang juga berbeda secara signifikan. Ketika mengucapkan vokal panjang, lidah berada dalam posisi yang lebih ekstrem dan tegang, menciptakan suara yang lebih jelas dan terekspresi.</p>
-                
-                <p>Dalam penulisan, vokal panjang sering ditandai dengan simbol titik dua (/ː/) dalam transkripsi fonetis, seperti /iː/ atau /uː/. Simbol ini menunjukkan bahwa vokal tersebut harus diucapkan dengan durasi lebih panjang. Dalam ejaan bahasa Inggris, vokal panjang sering ditandai dengan huruf vokal ganda atau kombinasi huruf tertentu.</p>
+                <h3>Long Vowels (Vokal Panjang)</h3>
+                <p>Long vowels diucapkan dengan durasi yang lebih panjang dan biasanya memiliki kualitas bunyi yang "penuh" dan "jelas". Bayangkan seperti menarik napas panjang - ada kesan "mengalir" yang lebih terasa. Dalam penulisan IPA, long vowels ditandai dengan simbol dua titik (ː) di sebelah kanan simbol vokal, menunjukkan bahwa bunyi tersebut harus dipanjangkan.</p>
                 
                 <div class="vowel-grid">
                     <div class="vowel-card">
-                        <h4>/iː/ - Vokal "i" Panjang</h4>
-                        <p>Suara "i" yang panjang dan jelas, diucapkan dengan lidah tinggi di bagian depan mulut. Bibir sedikit tertarik ke samping seperti sedang tersenyum lebar.</p>
-                        <div class="vowel-examples">
-                            <span class="example-tag">see</span>
-                            <span class="example-tag">tea</span>
-                            <span class="example-tag">me</span>
-                            <span class="example-tag">believe</span>
-                        </div>
+                        <span class="vowel-symbol">/iː/</span>
+                        <span class="vowel-type">Long</span>
+                        <p class="vowel-examples"><strong>see, beat, tea</strong><br>seperti "i" dalam "ini" tapi ditarik panjang</p>
                     </div>
-                    
                     <div class="vowel-card">
-                        <h4>/ɑː/ - Vokal "a" Panjang</h4>
-                        <p>Suara "a" yang panjang dan terbuka, diucapkan dengan mulut terbuka lebar dan lidah di posisi rendah-belakang. Mirip dengan "a" dalam "bapa" tetapi lebih panjang.</p>
-                        <div class="vowel-examples">
-                            <span class="example-tag">car</span>
-                            <span class="example-tag">far</span>
-                            <span class="example-tag">start</span>
-                            <span class="example-tag">heart</span>
-                        </div>
+                        <span class="vowel-symbol">/ɑː/</span>
+                        <span class="vowel-type">Long</span>
+                        <p class="vowel-examples"><strong>car, far, star</strong><br>seperti "a" dalam "ayah" tapi ditarik panjang</p>
                     </div>
-                    
                     <div class="vowel-card">
-                        <h4>/ɔː/ - Vokal "o" Panjang</h4>
-                        <p>Suara "o" yang bulat dan panjang, diucapkan dengan bibir membentuk lingkungan dan lidah di posisi tengah-belakang mulut.</p>
-                        <div class="vowel-examples">
-                            <span class="example-tag">door</span>
-                            <span class="example-tag">more</span>
-                            <span class="example-tag">four</span>
-                            <span class="example-tag">thought</span>
-                        </div>
+                        <span class="vowel-symbol">/ɔː/</span>
+                        <span class="vowel-type">Long</span>
+                        <p class="vowel-examples"><strong>door, more, saw</strong><br>seperti "o" dalam "oke" tapi ditarik panjang</p>
                     </div>
-                    
                     <div class="vowel-card">
-                        <h4>/uː/ - Vokal "u" Panjang</h4>
-                        <p>Suara "u" yang panjang dan bulat, diucapkan dengan bibir membulat sempurna dan lidah tinggi di bagian belakang mulut.</p>
-                        <div class="vowel-examples">
-                            <span class="example-tag">food</span>
-                            <span class="example-tag">moon</span>
-                            <span class="example-tag">blue</span>
-                            <span class="example-tag">true</span>
-                        </div>
+                        <span class="vowel-symbol">/uː/</span>
+                        <span class="vowel-type">Long</span>
+                        <p class="vowel-examples"><strong>too, moon, blue</strong><br>seperti "u" dalam "ular" tapi ditarik panjang</p>
                     </div>
-                    
                     <div class="vowel-card">
-                        <h4>/ɜː/ - Vokal Tengah Panjang</h4>
-                        <p>Suara unik yang diucapkan dengan lidah di posisi tengah, bibir sedikit membulat. Sering muncul dalam kata-kata dengan huruf "r" yang tidak diucapkan.</p>
-                        <div class="vowel-examples">
-                            <span class="example-tag">bird</span>
-                            <span class="example-tag">word</span>
-                            <span class="example-tag">turn</span>
-                            <span class="example-tag">nurse</span>
-                        </div>
+                        <span class="vowel-symbol">/ɜː/</span>
+                        <span class="vowel-type">Long</span>
+                        <p class="vowel-examples"><strong>bird, word, turn</strong><br>suara tengah, lidah rileks</p>
                     </div>
                 </div>
-                
-                <p>Salah satu tantangan terbesar bagi pembelajar Indonesia adalah membedakan pasangan vokal pendek dan panjang. Perbedaan durasi yang tampak kecil sebenarnya memiliki dampak besar dalam komunikasi. Ketika Anda mengucapkan kata dengan vokal yang salah—baik pendek menjadi panjang atau sebaliknya—pendengar native speaker akan merasa ada yang "aneh" dengan pengucapan Anda.</p>
             </section>
             
-            <!-- Comparison Section -->
+            <!-- Ad Slot 2 -->
+            <div class="ad-slot">
+                Slot Iklan - Google AdSense
+            </div>
+            
+            <!-- Section 3: Perbandingan -->
             <section>
-                <h2>Perbandingan Vokal Pendek vs Panjang</h2>
+                <h2>Short vs Long: Perbandingan Langsung</h2>
                 
-                <p>Untuk membantu Anda memahami perbedaan antara vokal pendek dan panjang dengan lebih baik, berikut adalah tabel perbandingan yang menunjukkan pasangan kata dengan vokal serupa namun durasi berbeda. Perhatikan bagaimana perubahan kecil dalam durasi vokal dapat mengubah makna kata secara keseluruhan.</p>
+                <p>Salah satu cara paling efektif untuk memahami perbedaan antara short dan long vowels adalah dengan membandingkan pasangan kata yang disebut <strong>minimal pairs</strong>. Ini adalah kata-kata yang memiliki semua bunyi sama kecuali satu bunyi vokal yang membedakan artinya. Dengan mempelajari minimal pairs, kita dapat melatih telinga untuk mengenali perbedaan bunyi yang sangat halus namun sangat penting dalam komunikasi.</p>
                 
                 <div class="table-wrapper">
                     <table class="comparison-table">
                         <thead>
                             <tr>
-                                <th>Vokal Pendek</th>
-                                <th>Contoh Kata</th>
-                                <th>Vokal Panjang</th>
-                                <th>Contoh Kata</th>
+                                <th>Short Vowel</th>
+                                <th>Long Vowel</th>
+                                <th>Perbedaan Makna</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>/ɪ/ (i pendek)</td>
-                                <td><strong>ship</strong> (kapal)</td>
-                                <td>/iː/ (i panjang)</td>
-                                <td><strong>sheep</strong> (domba)</td>
+                                <td><span class="short">ship</span> /ɪ/ <em>(kapal kecil)</em></td>
+                                <td><span class="long">sheep</span> /iː/ <em>(domba)</em></td>
+                                <td>Kapal vs Hewan</td>
                             </tr>
                             <tr>
-                                <td>/ɪ/ (i pendek)</td>
-                                <td><strong>sit</strong> (duduk)</td>
-                                <td>/iː/ (i panjang)</td>
-                                <td><strong>seat</strong> (kursi)</td>
+                                <td><span class="short">bit</span> /ɪ/ <em>(sedikit)</em></td>
+                                <td><span class="long">beat</span> /iː/ <em>(memukul)</em></td>
+                                <td>Jumlah vs Aksi</td>
                             </tr>
                             <tr>
-                                <td>/ʊ/ (u pendek)</td>
-                                <td><strong>full</strong> (penuh)</td>
-                                <td>/uː/ (u panjang)</td>
-                                <td><strong>fool</strong> (orang bodoh)</td>
+                                <td><span class="short">full</span> /ʊ/ <em>(penuh)</em></td>
+                                <td><span class="long">fool</span> /uː/ <em>(orang bodoh)</em></td>
+                                <td>Kondisi vs Sifat</td>
                             </tr>
                             <tr>
-                                <td>/ɒ/ (o pendek)</td>
-                                <td><strong>not</strong> (tidak)</td>
-                                <td>/ɔː/ (o panjang)</td>
-                                <td><strong>nought</strong> (nol/tiada)</td>
+                                <td><span class="short">not</span> /ɒ/ <em>(tidak)</em></td>
+                                <td><span class="long">nought</span> /ɔː/ <em>(nol)</em></td>
+                                <td>Negasi vs Angka</td>
                             </tr>
                             <tr>
-                                <td>/æ/ (a depan)</td>
-                                <td><strong>had</strong> (memiliki)</td>
-                                <td>/ɑː/ (a panjang)</td>
-                                <td><strong>hard</strong> (keras)</td>
+                                <td><span class="short">cut</span> /ʌ/ <em>(memotong)</em></td>
+                                <td><span class="long">cart</span> /ɑː/ <em>(kereta)</em></td>
+                                <td>Aksi vs Benda</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 
-                <div class="highlight-box">
-                    <p><strong>Tips Praktis:</strong> Untuk melatih telinga Anda membedakan vokal pendek dan panjang, cobalah mendengarkan pasangan kata-kata di atas dari sumber audio terpercaya seperti kamus online dengan pengucapan. Ulangi latihan ini secara rutin hingga Anda dapat membedakan suara dengan cepat dan akurat. Ingatlah bahwa konsistensi dalam latihan adalah kunci keberhasilan.</p>
+                <p>Perhatikan bagaimana perubahan satu bunyi vokal saja dapat mengubah makna kata secara total. Ini adalah alasan mengapa penguasaan sistem vokal sangat krusial dalam bahasa Inggris. Kesalahan dalam mengucapkan vokal yang tepat dapat menyebabkan kesalahpahaman yang serius dalam komunikasi sehari-hari.</p>
+            </section>
+            
+            <!-- Section 4: Panduan Praktis -->
+            <section>
+                <h2>Panduan Praktis Pengucapan</h2>
+                
+                <h3>Tips Mengucapkan Short Vowels</h3>
+                <ul class="example-list">
+                    <li><strong>Jaga agar pengucapan singkat dan "kaku"</strong> - Bayangkan sedang memotong kata menjadi sangat pendek. Jangan menarik atau memanjangkan bunyi vokal apapun.</li>
+                    <li><strong>Otot mulut dalam kondisi rileks</strong> - Short vowels tidak memerlukan ketegangan berlebihan pada bibir atau lidah. Biarkan mulut dalam posisi natural.</li>
+                    <li><strong>Praktikkan dengan ritme cepat</strong> - Ucapkan kata-kata short vowel dengan tempo yang lebih cepat untuk membantu melatih otot mulut.</li>
+                    <li><strong>Perhatikan posisi lidah</strong> - Untuk sebagian besar short vowels, lidah berada dalam posisi netral atau sedikit terangkat.</li>
+                </ul>
+                
+                <h3>Tips Mengucapkan Long Vowels</h3>
+                <ul class="example-list">
+                    <li><strong>Berikan "ruang" untuk bunyi berkembang</strong> - Bayangkan sedang menyanyikan satu not musik yang ditarik panjang. Beri waktu untuk bunyi vokal mengalir dengan penuh.</li>
+                    <li><strong>Bibir dan lidah lebih aktif</strong> - Long vowels memerlukan posisi mulut yang lebih tegas dan terarah. Bibir mungkin perlu dibulatkan atau direntangkan lebih lebar.</li>
+                    <li><strong>Visualisasikan "garis panjang"</strong> - Saat mengucapkan long vowel, bayangkan sedang menggambar garis horizontal panjang di udara.</li>
+                    <li><strong>Perhatikan ejaan</strong> - Long vowels sering diikuti oleh huruf konsonan yang tidak diucapkan atau kombinasi huruf vokal (seperti "ea", "oo", "ee").</li>
+                </ul>
+                
+                <div class="concept-box">
+                    <h3>💡 Rahasia Pengucapan yang Jarang Dibahas</h3>
+                    <p>Salah satu rahasia yang sering diabaikan oleh banyak pembelajar adalah hubungan antara <strong>stress</strong> (tekanan suara) dan kualitas vokal. Dalam bahasa Inggris, suku kata yang mendapat stress utama hampir selalu memiliki vokal yang lebih jelas dan sering kali lebih panjang. Sebaliknya, suku kata tanpa stress cenderung mengalami "vowel reduction" - vokal menjadi tidak jelas atau bahkan berubah menjadi <strong>schwa</strong> (/ə/), yang merupakan bunyi vokal paling umum dalam bahasa Inggris.</p>
                 </div>
             </section>
             
-            <!-- Ad Placeholder 3 -->
-            <div class="ad-placeholder">
-                <p>Advertisement Space - Google AdSense</p>
+            <!-- Section 5: Praktik Terarah -->
+            <section>
+                <h2>Praktik Terarah: Melatih Telinga dan Mulut</h2>
+                
+                <p>Pembelajaran bahasa bukan hanya tentang memahami teori, tetapi juga tentang membangun kebiasaan baru dalam cara kita mendengar dan menghasilkan bunyi. Seperti seorang musisi yang berlatih skala setiap hari, pembelajar bahasa Inggris juga perlu melatih "otot pendengaran" dan "otot pengucapan" secara konsisten dan terarah.</p>
+                
+                <h3>Latihan Mendengarkan Aktif</h3>
+                <p>Cobalah latihan sederhana berikut setiap hari selama minimal 10 menit. Dengarkan podcast atau video dalam bahasa Inggris, dan fokuskan perhatianmu untuk mengidentifikasi kapan pembicara menggunakan short vowel dan kapan menggunakan long vowel. Jangan khawatir tentang arti kata terlebih dahulu - fokuskan pada kualitas bunyi. Catat kata-kata yang berhasil kamu identifikasi dan verifikasi dengan kamus online yang menyediakan audio pengucapan.</p>
+                
+                <h3>Latihan Pengucapan Cermin</h3>
+                <p>Berdirilah di depan cermin dan amati mulutmu saat mengucapkan pasangan kata-kata minimal pairs. Perhatikan perbedaan posisi bibir, bukaan rahang, dan gerakan lidah antara short dan long vowels. Rekaman suaramu sendiri menggunakan smartphone dan bandingkan dengan pengucapan penutur asli dari kamus online. Metode ini membantu menciptakan umpan balik visual dan audio yang sangat berharga untuk perbaikan pengucapan.</p>
+                
+                <h3>Nilai Spiritual dalam Pembelajaran</h3>
+                <p>Sebagai seorang Muslim, setiap usaha untuk memperoleh ilmu pengetahuan merupakan bentuk ibadah kepada Allah SWT. Proses mempelajari bahasa baru memerlukan kesabaran, ketekunan, dan kerendahan hati - semua adalah akhlak mulia yang diajarkan dalam Islam. Rasulullah SAW bersabda bahwa orang yang berilmu dan mengajarkan ilmunya akan mendapatkan pahala yang berlipat ganda. Dengan mempelajari bahasa Inggris, kita membuka pintu untuk memahami ilmu pengetahuan yang lebih luas dan berkontribusi positif bagi umat manusia.</p>
+            </section>
+            
+            <!-- Ad Slot 3 -->
+            <div class="ad-slot">
+                Slot Iklan - Google AdSense
             </div>
-            
-            <!-- Spelling Patterns Section -->
-            <section>
-                <h2>Pola Ejaan Vokal dalam Bahasa Inggris</h2>
-                
-                <p>Salah satu aspek yang membingungkan dalam bahasa Inggris adalah tidak adanya korespondensi satu-satu antara huruf dan suara. Huruf yang sama dapat diucapkan dengan cara berbeda tergantung pada posisinya dalam kata dan huruf-huruf yang mengelilinginya. Meskipun demikian, terdapat beberapa pola umum yang dapat membantu Anda memprediksi pengucapan vokal dengan lebih akurat.</p>
-                
-                <h3>Pola Vokal Panjang</h3>
-                
-                <p>Vokal panjang dalam bahasa Inggris sering ditandai oleh beberapa pola ejaan khas. Pola pertama dan paling umum adalah <strong>silent e</strong>, di mana huruf "e" di akhir kata membuat vokal sebelumnya diucapkan panjang. Contohnya dapat kita lihat dalam pasangan kata "hat" (topi) menjadi "hate" (benci), atau "bit" (potongan kecil) menjadi "bite" (menggigit).</p>
-                
-                <p>Pola kedua adalah <strong>vowel teams</strong> atau kombinasi dua huruf vokal yang menghasilkan satu suara panjang. Dalam kombinasi ini, biasanya huruf vokal pertama menentukan nama vokal yang diucapkan, sementara huruf kedua bersifat senyap. Perhatikan kata-kata seperti "team" (tim), "boat" (perahu), atau "rain" (hujan).</p>
-                
-                <h3>Pola Vokal Pendek</h3>
-                
-                <p>Vokal pendek cenderung muncul dalam pola yang lebih sederhana. Pola yang paling umum adalah <strong>vokal tunggal diikuti konsonan ganda</strong>. Ketika huruf vokal diikuti oleh dua konsonan yang sama atau berbeda, vokal tersebut biasanya diucapkan pendek. Bandingkan "later" (nanti) dengan "latter" (yang terakhir), atau "hoping" (berharap) dengan "hopping" (melompat-lompat).</p>
-                
-                <p>Pola lain yang penting adalah <strong>closed syllable</strong> atau suku kata tertutup. Dalam suku kata tertutup, vokal diikuti oleh satu atau lebih konsonan yang "menutup" vokal tersebut, menyebabkan pengucapan pendek. Contohnya termasuk kata-kata seperti "cat" (kucing), "bed" (tempat tidur), "pig" (babi), "hot" (panas), dan "cup" (cangkir).</p>
-            </section>
-            
-            <!-- Practice Section -->
-            <section>
-                <h2>Praktik Terarah: Membangun Intuisi Vokal</h2>
-                
-                <p>Setelah memahami konsep dasar vokal pendek dan panjang, langkah selanjutnya adalah membangun intuisi atau "feeling" terhadap sistem vokal bahasa Inggris. Intuisi ini tidak dapat diperoleh hanya melalui membaca teori—Anda harus melibatkan telinga dan mulut Anda secara aktif dalam proses pembelajaran. Berikut adalah beberapa strategi praktis yang dapat Anda terapkan.</p>
-                
-                <h3>Strategi Mendengar Aktif</h3>
-                
-                <p>Strategi pertama adalah mendengarkan bahasa Inggris secara aktif dan sengaja. Alih-alih hanya membiarkan audio mengalir di latar belakang, fokuskan perhatian Anda pada bunyi vokal yang diucapkan pembicara. Cobalah untuk mengidentifikasi apakah vokal yang Anda dengar adalah pendek atau panjang. Dalam Islam, kita diajarkan untuk mendengarkan dengan penuh perhatian dan keikhlasan.</p>
-                
-                <p>Carilah materi audio yang jelas dan berkualitas, seperti podcast edukatif atau video pembelajaran bahasa Inggris. Mulailah dengan materi yang lambat dan jelas, kemudian secara bertahap tingkatkan kecepatan dan kompleksitasnya. Ingatlah bahwa pembelajaran adalah proses bertahap yang memerlukan kesabaran.</p>
-                
-                <h3>Strategi Pengucapan Cermin</h3>
-                
-                <p>Strategi kedua adalah teknik shadowing atau pengucapan cermin. Dengarkan sebuah kalimat atau frasa dalam bahasa Inggris, kemudian ulangi sesegera mungkin setelah pembicara asli. Fokuskan perhatian Anda pada posisi lidah dan bentuk bibir ketika mengucapkan vokal-vokal dalam kata tersebut. Anda juga dapat berlatih di depan cermin untuk memvisualisasikan bentuk mulut yang tepat.</p>
-                
-                <p>Latihan ini sangat efektif karena melibatkan multiple senses sekaligus—pendengaran untuk mengenali suara, penglihatan untuk memantau bentuk mulut, dan kinestetik untuk merasakan posisi lidah. Kombinasi ini menciptakan jejak memori yang lebih kuat dan membantu otak mengasosiasikan suara dengan gerakan fisik yang diperlukan.</p>
-            </section>
             
             <!-- Interactive Quiz Section -->
-            <section>
-                <h2>Uji Pemahaman Anda</h2>
-                
-                <p>Saatnya menguji sejauh mana Anda memahami materi tentang vokal pendek dan panjang dalam bahasa Inggris. Kuis interaktif berikut ini dirancang untuk membantu Anda mengidentifikasi area yang sudah dikuasai dan area yang masih memerlukan latihan lebih lanjut.</p>
-                
-                <div class="quiz-container">
-                    <h3 class="quiz-title">Kuis Recognisi Vokal</h3>
-                    
-                    <div class="quiz-question" data-question="1">
-                        <p>Pertanyaan 1: Kata "ship" dan "sheep" memiliki perbedaan utama pada aspek apa?</p>
-                        <div class="quiz-options">
-                            <button class="quiz-option" data-correct="false">A. Makna kata saja</button>
-                            <button class="quiz-option" data-correct="true">B. Durasi dan kualitas vokal</button>
-                            <button class="quiz-option" data-correct="false">C. Jumlah suku kata</button>
-                            <button class="quiz-option" data-correct="false">D. Posisi lidah saja</button>
-                        </div>
-                        <div class="quiz-feedback"></div>
+            <section class="quiz-section">
+                <h2>🎮 Kuis Interaktif: Tebak Vokal!</h2>
+                <div class="quiz-container" id="quizContainer">
+                    <div class="quiz-question" id="quizQuestion">Apakah kata di bawah ini menggunakan SHORT atau LONG vowel?</div>
+                    <div class="quiz-word" id="quizWord">ship</div>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" id="btnShort" onclick="checkAnswer('short')">Short Vowel</button>
+                        <button class="quiz-btn" id="btnLong" onclick="checkAnswer('long')">Long Vowel</button>
                     </div>
-                    
-                    <div class="quiz-question" data-question="2">
-                        <p>Pertanyaan 2: Vokal /æ/ dalam kata "cat" termasuk dalam kategori apa?</p>
-                        <div class="quiz-options">
-                            <button class="quiz-option" data-correct="false">A. Vokal panjang</button>
-                            <button class="quiz-option" data-correct="false">B. Diphthong</button>
-                            <button class="quiz-option" data-correct="true">C. Vokal pendek</button>
-                            <button class="quiz-option" data-correct="false">D. Schwa</button>
-                        </div>
-                        <div class="quiz-feedback"></div>
+                    <div class="quiz-feedback" id="quizFeedback"></div>
+                    <div class="quiz-score">Skor: <span id="scoreDisplay">0</span> / <span id="totalDisplay">0</span></div>
+                    <button class="next-btn" onclick="nextQuestion()">Kata Berikutnya →</button>
+                </div>
+            </section>
+            
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats-title">📊 Statistik Pembelajaran</div>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number" id="visitCount">0</span>
+                        <span class="stat-label">Total Kunjungan</span>
                     </div>
-                    
-                    <div class="quiz-question" data-question="3">
-                        <p>Pertanyaan 3: Pola ejaan mana yang biasanya menandai vokal panjang?</p>
-                        <div class="quiz-options">
-                            <button class="quiz-option" data-correct="false">A. Vokal + konsonan ganda</button>
-                            <button class="quiz-option" data-correct="false">B. Vokal di antara dua konsonan</button>
-                            <button class="quiz-option" data-correct="true">C. Vokal + konsonan + silent e</button>
-                            <button class="quiz-option" data-correct="false">D. Vokal tunggal di akhir suku kata tertutup</button>
-                        </div>
-                        <div class="quiz-feedback"></div>
-                    </div>
-                    
-                    <div class="quiz-question" data-question="4">
-                        <p>Pertanyaan 4: Pasangan kata manakah yang menunjukkan perbedaan antara vokal pendek dan panjang?</p>
-                        <div class="quiz-options">
-                            <button class="quiz-option" data-correct="false">A. Cat - Dog</button>
-                            <button class="quiz-option" data-correct="true">B. Full - Fool</button>
-                            <button class="quiz-option" data-correct="false">C. Book - Read</button>
-                            <button class="quiz-option" data-correct="false">D. Sun - Moon</button>
-                        </div>
-                        <div class="quiz-feedback"></div>
-                    </div>
-                    
-                    <div class="quiz-question" data-question="5">
-                        <p>Pertanyaan 5: Berapa jumlah perkiraan suara vokal dalam bahasa Inggris?</p>
-                        <div class="quiz-options">
-                            <button class="quiz-option" data-correct="false">A. 5 suara vokal</button>
-                            <button class="quiz-option" data-correct="false">B. 10 suara vokal</button>
-                            <button class="quiz-option" data-correct="true">C. Sekitar 20 suara vokal</button>
-                            <button class="quiz-option" data-correct="false">D. 30 suara vokal</button>
-                        </div>
-                        <div class="quiz-feedback"></div>
-                    </div>
-                    
-                    <div class="quiz-score" style="display: none;">
-                        Skor Anda: <span id="score">0</span> dari 5
-                        <br><br>
-                        <button class="restart-btn" onclick="restartQuiz()">Ulangi Kuis</button>
+                    <div class="stat-item stat-online">
+                        <span class="stat-number"><span class="online-indicator"></span><span id="onlineCount">0</span></span>
+                        <span class="stat-label">Pembelajar Online</span>
                     </div>
                 </div>
             </section>
             
-            <!-- Ad Placeholder 4 -->
-            <div class="ad-placeholder">
-                <p>Advertisement Space - Google AdSense</p>
+            <!-- Ad Slot 4 -->
+            <div class="ad-slot">
+                Slot Iklan - Google AdSense
             </div>
             
-            <!-- Summary Section -->
-            <section>
-                <h2>Ringkasan dan Langkah Selanjutnya</h2>
-                
-                <p>Perjalanan kita dalam memahami sistem vokal bahasa Inggris pada episode ini telah membawa kita melalui berbagai konsep fundamental. Kita telah mempelajari bahwa bahasa Inggris memiliki sistem vokal yang jauh lebih kompleks dibandingkan bahasa Indonesia, dengan sekitar 20 suara vokal berbeda yang perlu dikuasai.</p>
-                
-                <p>Kami juga telah membahas berbagai pola ejaan yang dapat membantu Anda memprediksi pengucapan vokal, termasuk pola silent e, vowel teams, dan closed syllables. Pola-pola ini tidak bersifat mutlak—bahasa Inggris memang terkenal dengan pengecualiannya—namun pemahaman tentang pola umum ini akan memberi Anda fondasi yang kuat.</p>
-                
-                <p>Ingatlah bahwa pembelajaran bahasa adalah proses yang memerlukan kesabaran, konsistensi, dan niat yang baik. Dalam Islam, kita diajarkan bahwa setiap ilmu yang dipelajari dengan niat baik dan diamalkan untuk kebaikan akan menjadi amal yang berpahala. Jadikanlah pembelajaran bahasa Inggris ini sebagai bagian dari upaya Anda untuk memperluas wawasan dan memberikan manfaat bagi orang lain.</p>
-                
-                <div class="next-episode">
-                    <h3>Episode Selanjutnya</h3>
-                    <p>Nantikan pembahasan menarik di episode berikutnya tentang sistem konsonan bahasa Inggris!</p>
-                    <p><strong>Ep 3: English Consonant System: Core Articulation Map</strong></p>
-                    <a href="https://mibenglish.com/ep3-english-consonant-system">Lanjut ke Episode 3</a>
-                </div>
+            <!-- Next Episode -->
+            <section class="next-episode">
+                <h3>Episode Selanjutnya</h3>
+                <p><strong>Ep 3: English Consonant System: Core Articulation Map</strong></p>
+                <p>Nantikan pembahasan lengkap tentang sistem konsonan bahasa Inggris di episode berikutnya. Pelajari cara menghasilkan setiap bunyi konsonan dengan tepat!</p>
+                <a href="https://mibenglish.com/season1/eps3.html">Lanjut ke Episode 3 →</a>
             </section>
         </article>
     </main>
-    
-    <!-- Visitor Statistics - Professional Live Design -->
-    <div class="stats-container">
-        <div class="stats-card">
-            <div class="stats-header">
-                <div class="stats-header-icon">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
-                    </svg>
-                </div>
-                <div class="stats-header-text">
-                    <h3>Statistik Pengunjung</h3>
-                    <p>Data kunjungan website mibenglish</p>
-                </div>
-            </div>
-            
-            <div class="stats-body">
-                <div class="stat-block">
-                    <div class="stat-icon-wrapper">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
-                        </svg>
-                    </div>
-                    <div class="stat-value" id="visitorCount">105,899</div>
-                    <div class="stat-label">Total Kunjungan</div>
-                    <div class="stat-live-indicator">
-                        <span class="live-dot"></span>
-                    </div>
-                </div>
-                
-                <div class="stats-divider"></div>
-                
-                <div class="stat-block">
-                    <div class="stat-icon-wrapper">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                        </svg>
-                    </div>
-                    <div class="stat-value" id="onlineCount">97</div>
-                    <div class="stat-label">Sedang Belajar</div>
-                    <div class="online-badge">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                        Aktif
-                    </div>
-                </div>
-            </div>
-            
-            <div class="stats-footer">
-                <div class="stats-footer-item">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-                    </svg>
-                    <span>Pelajari lebih banyak</span>
-                </div>
-                <div class="stats-footer-item">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                    </svg>
-                    <span>Tingkatkan wawasan bahasa</span>
-                </div>
-            </div>
-        </div>
-    </div>
     
     <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <div class="footer-brand-name">mibenglish</div>
-                <p class="footer-tagline">Belajar Bahasa Inggris dengan Mudah dan Menyenangkan</p>
+                <h2>mibenglish</h2>
+                <p>Belajar Bahasa Inggris untuk Semua</p>
             </div>
             
             <div class="social-links">
-                <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener" aria-label="Ikuti kami di YouTube" class="social-link">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
+                <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener" aria-label="Ikuti kami di YouTube">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                     YouTube
                 </a>
-                <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener" aria-label="Ikuti kami di TikTok" class="social-link">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                    </svg>
+                <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener" aria-label="Ikuti kami di TikTok">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
                     TikTok
                 </a>
-                <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener" aria-label="Ikuti kami di Instagram" class="social-link">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
+                <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener" aria-label="Ikuti kami di Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     Instagram
                 </a>
-                <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener" aria-label="Ikuti kami di Facebook" class="social-link">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
+                <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener" aria-label="Ikuti kami di Facebook">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     Facebook
                 </a>
             </div>
@@ -1536,287 +1304,257 @@
             
             <div class="quick-links">
                 <a href="https://mibenglish.com">Beranda</a>
+                <span>|</span>
                 <a href="https://mibenglish.com/about">About Us</a>
-                <a href="https://mibenglish.com/privacy-policy">Privacy Policy</a>
-                <a href="https://mibenglish.com/terms-of-service">Terms of Service</a>
+                <span>|</span>
+                <a href="https://mibenglish.com/privacy">Privacy Policy</a>
+                <span>|</span>
+                <a href="https://mibenglish.com/terms">Terms of Service</a>
+                <span>|</span>
                 <a href="https://mibenglish.com/disclaimer">Disclaimer</a>
+                <span>|</span>
                 <a href="https://mibenglish.com/contact">Contact</a>
             </div>
             
-            <p class="copyright">&copy; 2025 mibenglish. All rights reserved.</p>
+            <div class="copyright">
+                <p>&copy; 2026 mibenglish. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
     
     <!-- Share Button -->
-    <button class="share-button" aria-label="Bagikan halaman ini" onclick="sharePage()">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/>
-        </svg>
+    <button class="share-btn" onclick="shareContent()" aria-label="Bagikan halaman ini">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
     </button>
     
-    <!-- Copy Protection -->
+    <!-- Copy Protection Script -->
     <script>
     document.addEventListener('copy', function(e) {
         const selection = window.getSelection();
         const originalText = selection.toString();
         const sourceUrl = window.location.href;
-        const copiedText = originalText + '\n\nSumber: ' + sourceUrl + ' - mibenglish.com';
-        e.clipboardData.setData('text/plain', copiedText);
+        const customText = originalText + '\n\nSumber: ' + sourceUrl + '\n© mibenglish.com';
+        
+        e.clipboardData.setData('text/plain', customText);
         e.preventDefault();
     });
     </script>
     
-    <!-- Professional Live Visitor Counter -->
-    <script>
-    (function() {
-        // Obfuscated configuration
-        const _0x1a2b3c = {
-            base: 105899,
-            start: new Date('2025-01-01').getTime(),
-            minOnline: 97,
-            storageKey: btoa('mib_v_data').slice(0, 10)
-        };
-        
-        // Calculate dynamic base from elapsed time
-        function _getBaseCount() {
-            const now = Date.now();
-            const elapsed = now - _0x1a2b3c.start;
-            const days = Math.floor(elapsed / 86400000);
-            // Natural growth pattern: ~2 per day with acceleration
-            const growth = Math.floor(days * 2) + Math.floor(days / 10) * 5;
-            return _0x1a2b3c.base + growth;
-        }
-        
-        // Get or initialize stored data
-        function _getStoredData() {
-            try {
-                const stored = localStorage.getItem(_0x1a2b3c.storageKey);
-                if (!stored) return null;
-                return JSON.parse(stored);
-            } catch (e) {
-                return null;
-            }
-        }
-        
-        // Save data to storage
-        function _saveData(data) {
-            try {
-                localStorage.setItem(_0x1a2b3c.storageKey, JSON.stringify(data));
-            } catch (e) {}
-        }
-        
-        // Main counter logic
-        function _initCounter() {
-            const now = Date.now();
-            const stored = _getStoredData();
-            const baseTarget = _getBaseCount();
-            
-            let currentCount;
-            
-            if (!stored) {
-                // First visit - start from base
-                currentCount = baseTarget;
-                _saveData({ f: now, c: currentCount, l: now });
-            } else {
-                const timeSinceLast = now - stored.l;
-                
-                if (timeSinceLast < 5000) {
-                    // Quick refresh - keep same number
-                    currentCount = stored.c;
-                } else {
-                    // Time passed - natural increment
-                    const increment = Math.max(0, Math.floor(timeSinceLast / 30000)) + Math.floor(Math.random() * 2);
-                    currentCount = Math.max(stored.c, baseTarget) + increment;
-                    _saveData({ f: stored.f, c: currentCount, l: now });
-                }
-            }
-            
-            return currentCount;
-        }
-        
-        // Animate number with smooth counting effect
-        function _animateCounter(element, target) {
-            const duration = 2500;
-            const startTime = performance.now();
-            const startVal = 0;
-            
-            function _easeOutQuart(t) {
-                return 1 - Math.pow(1 - t, 4);
-            }
-            
-            function _update(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                const eased = _easeOutQuart(progress);
-                const current = Math.floor(startVal + (target - startVal) * eased);
-                
-                element.innerHTML = _formatNumber(current);
-                
-                if (progress < 1) {
-                    requestAnimationFrame(_update);
-                }
-            }
-            
-            requestAnimationFrame(_update);
-        }
-        
-        // Format with thousand separators
-        function _formatNumber(num) {
-            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        }
-        
-        // Live increment simulation
-        function _startLiveUpdates(element, currentCount) {
-            let count = currentCount;
-            
-            setInterval(() => {
-                // Random chance to increment (simulates traffic)
-                if (Math.random() > 0.6) {
-                    count += Math.floor(Math.random() * 2) + 1;
-                    
-                    // Animate the change
-                    element.style.transition = 'transform 0.15s ease';
-                    element.style.transform = 'scale(1.02)';
-                    
-                    setTimeout(() => {
-                        element.innerHTML = _formatNumber(count);
-                        element.style.transform = 'scale(1)';
-                    }, 100);
-                }
-            }, 4000);
-        }
-        
-        // Online counter with realistic fluctuation
-        function _initOnlineCounter() {
-            const element = document.getElementById('onlineCount');
-            if (!element) return;
-            
-            let online = _0x1a2b3c.minOnline + Math.floor(Math.random() * 15);
-            element.textContent = online;
-            
-            setInterval(() => {
-                // Realistic fluctuation
-                const change = Math.floor(Math.random() * 7) - 3;
-                online = Math.max(_0x1a2b3c.minOnline, online + change);
-                
-                // Smooth update
-                element.style.transition = 'opacity 0.3s ease';
-                element.style.opacity = '0.7';
-                
-                setTimeout(() => {
-                    element.textContent = online;
-                    element.style.opacity = '1';
-                }, 150);
-            }, 6000);
-        }
-        
-        // Initialize everything
-        const visitorEl = document.getElementById('visitorCount');
-        if (visitorEl) {
-            const count = _initCounter();
-            _animateCounter(visitorEl, count);
-            _startLiveUpdates(visitorEl, count);
-        }
-        
-        _initOnlineCounter();
-    })();
-    </script>
-    
     <!-- Quiz Script -->
     <script>
+    const quizData = [
+        { word: 'ship', answer: 'short', hint: 'Kapal kecil - bunyi /ɪ/ pendek' },
+        { word: 'sheep', answer: 'long', hint: 'Domba - bunyi /iː/ panjang' },
+        { word: 'bit', answer: 'short', hint: 'Sedikit - bunyi /ɪ/ pendek' },
+        { word: 'beat', answer: 'long', hint: 'Memukul - bunyi /iː/ panjang' },
+        { word: 'cup', answer: 'short', hint: 'Cangkir - bunyi /ʌ/ pendek' },
+        { word: 'cart', answer: 'long', hint: 'Kereta - bunyi /ɑː/ panjang' },
+        { word: 'hot', answer: 'short', hint: 'Panas - bunyi /ɒ/ pendek' },
+        { word: 'door', answer: 'long', hint: 'Pintu - bunyi /ɔː/ panjang' },
+        { word: 'full', answer: 'short', hint: 'Penuh - bunyi /ʊ/ pendek' },
+        { word: 'fool', answer: 'long', hint: 'Orang bodoh - bunyi /uː/ panjang' },
+        { word: 'cat', answer: 'short', hint: 'Kucing - bunyi /æ/ pendek' },
+        { word: 'car', answer: 'long', hint: 'Mobil - bunyi /ɑː/ panjang' },
+        { word: 'bed', answer: 'short', hint: 'Tempat tidur - bunyi /e/ pendek' },
+        { word: 'bird', answer: 'long', hint: 'Burung - bunyi /ɜː/ panjang' },
+        { word: 'book', answer: 'short', hint: 'Buku - bunyi /ʊ/ pendek' },
+        { word: 'moon', answer: 'long', hint: 'Bulan - bunyi /uː/ panjang' }
+    ];
+    
+    let currentQuestion = 0;
     let score = 0;
-    let answered = 0;
-    const totalQuestions = 5;
+    let totalAnswered = 0;
+    let shuffledQuiz = [...quizData].sort(() => Math.random() - 0.5);
     
-    document.querySelectorAll('.quiz-option').forEach(option => {
-        option.addEventListener('click', function() {
-            const question = this.closest('.quiz-question');
-            const feedback = question.querySelector('.quiz-feedback');
-            const options = question.querySelectorAll('.quiz-option');
-            
-            if (question.classList.contains('answered')) return;
-            
-            question.classList.add('answered');
-            options.forEach(opt => opt.style.pointerEvents = 'none');
-            
-            if (this.dataset.correct === 'true') {
-                this.classList.add('correct');
-                feedback.innerHTML = '<div class="highlight-box"><strong>Benar!</strong> ' + getExplanation(question.dataset.question) + '</div>';
-                score++;
+    function checkAnswer(answer) {
+        const feedback = document.getElementById('quizFeedback');
+        const btnShort = document.getElementById('btnShort');
+        const btnLong = document.getElementById('btnLong');
+        const current = shuffledQuiz[currentQuestion];
+        
+        btnShort.disabled = true;
+        btnLong.disabled = true;
+        
+        if (answer === current.answer) {
+            score++;
+            feedback.className = 'quiz-feedback show success';
+            feedback.textContent = '✅ Benar! ' + current.hint;
+            if (answer === 'short') {
+                btnShort.classList.add('correct');
             } else {
-                this.classList.add('incorrect');
-                options.forEach(opt => {
-                    if (opt.dataset.correct === 'true') {
-                        opt.classList.add('correct');
-                    }
-                });
-                feedback.innerHTML = '<div class="highlight-box"><strong>Belum tepat.</strong> ' + getExplanation(question.dataset.question) + '</div>';
+                btnLong.classList.add('correct');
             }
-            
-            feedback.classList.add('show');
-            answered++;
-            
-            if (answered === totalQuestions) {
-                showScore();
+        } else {
+            feedback.className = 'quiz-feedback show error';
+            feedback.textContent = '❌ Kurang tepat. Jawaban: ' + current.answer + ' vowel. ' + current.hint;
+            if (answer === 'short') {
+                btnShort.classList.add('wrong');
+                btnLong.classList.add('correct');
+            } else {
+                btnLong.classList.add('wrong');
+                btnShort.classList.add('correct');
             }
-        });
+        }
+        
+        totalAnswered++;
+        document.getElementById('scoreDisplay').textContent = score;
+        document.getElementById('totalDisplay').textContent = totalAnswered;
+    }
+    
+    function nextQuestion() {
+        currentQuestion = (currentQuestion + 1) % shuffledQuiz.length;
+        const current = shuffledQuiz[currentQuestion];
+        
+        document.getElementById('quizWord').textContent = current.word;
+        document.getElementById('quizFeedback').className = 'quiz-feedback';
+        
+        const btnShort = document.getElementById('btnShort');
+        const btnLong = document.getElementById('btnLong');
+        btnShort.disabled = false;
+        btnLong.disabled = false;
+        btnShort.classList.remove('correct', 'wrong');
+        btnLong.classList.remove('correct', 'wrong');
+    }
+    
+    // Initialize quiz on load
+    document.addEventListener('DOMContentLoaded', function() {
+        nextQuestion();
     });
-    
-    function getExplanation(qNum) {
-        const explanations = {
-            '1': 'Kata "ship" menggunakan vokal pendek /ɪ/, sementara "sheep" menggunakan vokal panjang /iː/. Perbedaan ini ada pada durasi dan kualitas pengucapan vokal.',
-            '2': 'Vokal /æ/ dalam "cat" termasuk vokal pendek karena diucapkan dengan durasi singkat dan tidak mengalami perubahan kualitas.',
-            '3': 'Pola vokal + konsonan + silent e adalah pola klasik yang menandai vokal panjang, seperti dalam "make", "time", atau "note".',
-            '4': '"Full" menggunakan vokal pendek /ʊ/ sedangkan "fool" menggunakan vokal panjang /uː/. Kedua kata ini adalah contoh klasik pasangan minimal.',
-            '5': 'Bahasa Inggris memiliki sekitar 20 suara vokal berbeda, jauh lebih banyak dari 5 vokal dalam bahasa Indonesia.'
-        };
-        return explanations[qNum];
-    }
-    
-    function showScore() {
-        const scoreDiv = document.querySelector('.quiz-score');
-        document.getElementById('score').textContent = score;
-        scoreDiv.style.display = 'block';
-        scoreDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-    
-    function restartQuiz() {
-        score = 0;
-        answered = 0;
-        
-        document.querySelectorAll('.quiz-question').forEach(question => {
-            question.classList.remove('answered');
-            const options = question.querySelectorAll('.quiz-option');
-            options.forEach(opt => {
-                opt.classList.remove('correct', 'incorrect');
-                opt.style.pointerEvents = 'auto';
-            });
-            const feedback = question.querySelector('.quiz-feedback');
-            feedback.classList.remove('show');
-        });
-        
-        document.querySelector('.quiz-score').style.display = 'none';
-        document.querySelector('.quiz-container').scrollIntoView({ behavior: 'smooth' });
-    }
     </script>
     
     <!-- Share Script -->
     <script>
-    function sharePage() {
+    function shareContent() {
         const shareData = {
             title: document.title,
-            text: 'Pelajari sistem vokal bahasa Inggris: recognisi suara pendek dan panjang',
+            text: 'Pelajari sistem vokal bahasa Inggris di mibenglish!',
             url: window.location.href
         };
         
         if (navigator.share) {
-            navigator.share(shareData).catch(err => {});
+            navigator.share(shareData).catch(console.error);
         } else {
-            navigator.clipboard.writeText(window.location.href)
-                .then(() => alert('Link berhasil disalin!'))
-                .catch(err => {});
+            navigator.clipboard.writeText(window.location.href).then(function() {
+                alert('Link berhasil disalin: ' + window.location.href);
+            });
         }
     }
+    </script>
+    
+    <!-- Dynamic Statistics System -->
+    <script>
+    (function(){
+        'use strict';
+        
+        // Konfigurasi sistem
+        const CONFIG = {
+            startDate: new Date('2026-01-01T00:00:00').getTime(),
+            msPerDay: 86400000,
+            minOnline: 97,
+            maxOnline: 500,
+            storageKey: 'mib_last_visits',
+            updateInterval: 2500
+        };
+        
+        // Fungsi easing ease-out-quart
+        function easeOutQuart(t) {
+            return 1 - Math.pow(1 - t, 4);
+        }
+        
+        // Hitung total kunjungan berbasis waktu
+        function calculateVisits() {
+            const now = Date.now();
+            const daysElapsed = Math.floor((now - CONFIG.startDate) / CONFIG.msPerDay);
+            
+            // Pertumbuhan harian: 150-600 per hari
+            const dailyGrowth = 150 + Math.floor(Math.random() * 450);
+            let totalVisits = daysElapsed * dailyGrowth;
+            
+            // Ambil nilai tersimpan
+            const storedValue = parseInt(localStorage.getItem(CONFIG.storageKey)) || 0;
+            
+            // Pastikan nilai tidak pernah turun
+            if (storedValue > totalVisits && storedValue < 1000000) {
+                totalVisits = storedValue + Math.floor(Math.random() * 50) + 10;
+            } else if (storedValue >= 1000000) {
+                totalVisits = storedValue + Math.floor(Math.random() * 90) + 10;
+            }
+            
+            // Simpan nilai
+            localStorage.setItem(CONFIG.storageKey, totalVisits);
+            
+            return totalVisits;
+        }
+        
+        // Animasi counter dengan easing
+        function animateCounter(elementId, targetValue) {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+            
+            const duration = 2000;
+            const startTime = performance.now();
+            const startValue = 0;
+            
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easedProgress = easeOutQuart(progress);
+                const currentValue = Math.floor(startValue + (targetValue - startValue) * easedProgress);
+                
+                element.textContent = currentValue.toLocaleString('id-ID');
+                
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            
+            requestAnimationFrame(update);
+        }
+        
+        // Hitung pembelajar online
+        function getOnlineCount() {
+            return CONFIG.minOnline + Math.floor(Math.random() * (CONFIG.maxOnline - CONFIG.minOnline));
+        }
+        
+        // Update online counter dengan fluktuasi
+        function initOnlineCounter(elementId) {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+            
+            let currentOnline = getOnlineCount();
+            element.textContent = currentOnline;
+            
+            setInterval(function() {
+                // Fluktuasi: naik atau turun 1-5
+                const direction = Math.random() > 0.5 ? 1 : -1;
+                const change = Math.floor(Math.random() * 5) + 1;
+                currentOnline = Math.max(CONFIG.minOnline, Math.min(CONFIG.maxOnline, currentOnline + (direction * change)));
+                element.textContent = currentOnline;
+            }, CONFIG.updateInterval);
+        }
+        
+        // Pertumbuhan berkala
+        function initGrowth(elementId) {
+            const element = document.getElementById(elementId);
+            if (!element) return;
+            
+            setInterval(function() {
+                let currentValue = parseInt(element.textContent.replace(/\./g, '')) || 0;
+                const increment = Math.floor(Math.random() * 3) + 1;
+                currentValue += increment;
+                element.textContent = currentValue.toLocaleString('id-ID');
+                localStorage.setItem(CONFIG.storageKey, currentValue);
+            }, 15000);
+        }
+        
+        // Inisialisasi saat DOM siap
+        document.addEventListener('DOMContentLoaded', function() {
+            const visits = calculateVisits();
+            animateCounter('visitCount', visits);
+            initOnlineCounter('onlineCount');
+            initGrowth('visitCount');
+        });
+    })();
     </script>
 </body>
 </html>
