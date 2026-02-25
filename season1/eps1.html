@@ -3,58 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ep 1: Pelajari cara menyiapkan otak untuk belajar bahasa Inggris dari nol dengan neuroplasticity, phonological mapping, dan survival communication.">
+    <meta name="description" content="Ep 1: The Science of Zero - Pelajari cara menyiapkan otak untuk encoding bahasa Inggris dengan metode ilmiah yang mudah dipahami untuk pemula.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://mibenglish.github.io/ep1-science-of-zero.html">
+    <link rel="canonical" href="https://mibenglish.com/season1/eps1.html">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Ep 1: The Science of Zero - mibenglish">
-    <meta property="og:description" content="Menyiapkan otak untuk belajar bahasa Inggris dari nol dengan metode neuroplasticity dan phonological mapping.">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Ep 1: The Science of Zero - MIB English">
+    <meta property="og:description" content="Pelajari cara menyiapkan otak untuk encoding bahasa Inggris dengan metode ilmiah untuk pemula.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://mibenglish.github.io/ep1-science-of-zero.html">
-    <meta property="og:site_name" content="mibenglish">
-    <meta property="og:locale" content="id_ID">
+    <meta property="og:url" content="https://mibenglish.com/season1/eps1.html">
+    <meta property="og:site_name" content="MIB English">
     
-    <title>Ep 1: The Science of Zero - mibenglish</title>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ep 1: The Science of Zero - MIB English">
+    <meta name="twitter:description" content="Pelajari cara menyiapkan otak untuk encoding bahasa Inggris dengan metode ilmiah untuk pemula.">
     
-    <!-- Schema.org Article Structured Data -->
+    <!-- JSON-LD Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Ep 1: The Science of Zero - Preparing the Brain for Language Encoding",
-        "description": "Pelajari cara menyiapkan otak untuk belajar bahasa Inggris dari nol dengan metode neuroplasticity, phonological mapping, dan survival communication.",
+        "description": "Pelajari cara menyiapkan otak untuk encoding bahasa Inggris dengan metode ilmiah yang mudah dipahami untuk pemula absolut.",
         "author": {
             "@type": "Person",
             "name": "bangmik"
         },
         "publisher": {
             "@type": "Organization",
-            "name": "mibenglish",
-            "url": "https://mibenglish.github.io"
+            "name": "mibenglish"
         },
-        "datePublished": "2025-01-15",
-        "dateModified": "2025-01-15",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://mibenglish.github.io/ep1-science-of-zero.html"
-        }
+        "datePublished": "2026-01-01",
+        "dateModified": "2026-01-15"
     }
     </script>
     
+    <title>Ep 1: The Science of Zero - MIB English</title>
+    
     <style>
         :root {
-            --forest-dark: #1a3a2f;
-            --forest-primary: #2d5a47;
-            --forest-secondary: #4a8c6f;
-            --forest-accent: #6db896;
-            --forest-light: #a8d5ba;
-            --forest-pale: #d4edda;
-            --forest-white: #f0f7f2;
-            --bg-light: #f8fdf9;
-            --border: #c3e0cb;
-            --text-dark: #1a2e24;
-            --text-muted: #5a7367;
+            --bg-primary: #0a1f0a;
+            --bg-secondary: #122812;
+            --bg-light: #f0f7f0;
+            --bg-card: #ffffff;
+            --text-primary: #0d1f0d;
+            --text-secondary: #1a3a1a;
+            --text-light: #ffffff;
+            --text-muted: #4a6a4a;
+            --accent: #2e7d32;
+            --accent-light: #4caf50;
+            --accent-dark: #1b5e20;
+            --border: #c8e6c9;
+            --border-dark: #388e3c;
+            --shadow: rgba(30, 80, 30, 0.2);
         }
         
         * {
@@ -65,452 +67,361 @@
         
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 100px;
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--forest-white);
-            color: var(--text-dark);
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-primary);
             line-height: 1.8;
-            font-size: 16px;
             overflow-x: hidden;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
         
-        /* Header Styles */
+        /* Fixed Header - Proper Implementation */
         header {
-            background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-primary) 100%);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
-            box-shadow: 0 4px 15px rgba(26, 58, 47, 0.3);
+            background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
         
         .header-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-        
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        
-        .brand-logo {
-            width: 40px;
-            height: 40px;
-            background: var(--forest-accent);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1rem;
-            color: var(--forest-dark);
-            flex-shrink: 0;
         }
         
         .brand-name {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            color: var(--text-light);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .brand-name:hover {
+            transform: scale(1.02);
         }
         
         nav ul {
-            list-style: none;
             display: flex;
-            gap: 0.75rem 1.25rem;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
+            list-style: none;
+            gap: 0.5rem;
         }
         
         nav a {
-            color: var(--forest-light);
+            color: var(--text-light);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s ease;
-            padding: 0.4rem 0;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
         }
         
         nav a:hover {
-            color: white;
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
+        /* Header Spacer - Prevents content from hiding behind fixed header */
+        .header-spacer {
+            height: 80px;
         }
         
         /* Main Content */
         main {
+            min-height: calc(100vh - 300px);
+        }
+        
+        article {
             max-width: 900px;
             margin: 0 auto;
-            padding: 1.25rem 1rem;
+            padding: 2rem 1.5rem;
         }
         
         /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--forest-pale) 0%, var(--forest-light) 100%);
-            border-radius: 16px;
-            padding: 2rem 1.25rem;
+        .hero-section {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            color: var(--text-light);
+            padding: 3rem 2rem;
+            margin: 0 -1.5rem 2rem -1.5rem;
+            border-radius: 0;
             text-align: center;
-            margin-bottom: 2rem;
-            border: 2px solid var(--border);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
         }
         
         .episode-badge {
             display: inline-block;
-            background: var(--forest-primary);
-            color: white;
-            padding: 0.4rem 1.25rem;
-            border-radius: 25px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-        
-        .hero h1 {
-            font-size: 1.75rem;
-            color: var(--forest-dark);
-            margin-bottom: 0.5rem;
-            line-height: 1.3;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-        
-        .hero .subtitle {
-            font-size: 1.1rem;
-            color: var(--forest-primary);
-            font-weight: 600;
-            margin-bottom: 1.25rem;
-            line-height: 1.5;
-        }
-        
-        .level-indicator {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 0.35rem;
-            background: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            border: 1px solid var(--border);
-            margin: 0 auto;
-            max-width: 100%;
-            line-height: 1.5;
-        }
-        
-        .level-indicator strong {
-            color: var(--forest-dark);
-        }
-        
-        .focus-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-top: 1.25rem;
-        }
-        
-        .focus-tag {
-            background: var(--forest-secondary);
-            color: white;
-            padding: 0.35rem 0.85rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            white-space: nowrap;
-        }
-        
-        /* Article Styles */
-        article {
-            background: white;
-            border-radius: 12px;
-            padding: 1.25rem;
-            box-shadow: 0 4px 20px rgba(26, 58, 47, 0.08);
-            border: 1px solid var(--border);
-        }
-        
-        section {
-            margin-bottom: 2rem;
-        }
-        
-        h2 {
-            color: var(--forest-dark);
-            font-size: 1.35rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.6rem;
-            border-bottom: 3px solid var(--forest-accent);
-            line-height: 1.4;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-        
-        h3 {
-            color: var(--forest-primary);
-            font-size: 1.15rem;
-            margin: 1.25rem 0 0.85rem;
-            line-height: 1.4;
-        }
-        
-        p {
-            margin-bottom: 1rem;
-            text-align: left;
-            line-height: 1.85;
-        }
-        
-        /* Info Box */
-        .info-box {
-            background: var(--forest-pale);
-            border-left: 4px solid var(--forest-secondary);
-            padding: 1rem 1.15rem;
-            border-radius: 0 10px 10px 0;
-            margin: 1.25rem 0;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-        }
-        
-        .info-box.english-term {
-            background: linear-gradient(135deg, #fff9e6 0%, #fff5d6 100%);
-            border-left-color: #e6b800;
-        }
-        
-        .info-box.english-term .term-label {
-            color: #b38600;
-        }
-        
-        .term-label {
-            font-weight: 700;
-            color: var(--forest-primary);
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-        
-        .info-box p {
-            font-size: 0.95rem;
-            margin-bottom: 0;
-        }
-        
-        /* Illustration Box */
-        .illustration-box {
-            background: linear-gradient(135deg, var(--forest-white) 0%, var(--forest-pale) 100%);
-            border-radius: 12px;
-            padding: 1.25rem;
-            margin: 1.25rem 0;
-            text-align: center;
-            border: 2px dashed var(--forest-accent);
-        }
-        
-        .illustration-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .illustration-title {
-            font-weight: 600;
-            color: var(--forest-primary);
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-        
-        .illustration-box p {
+            background: var(--accent-light);
+            color: var(--bg-primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
             font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 0;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
         }
         
-        /* Steps List */
-        .steps-list {
-            counter-reset: step-counter;
-            list-style: none;
-            padding: 0;
+        .hero-section h1 {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
         
-        .steps-list li {
-            counter-increment: step-counter;
-            position: relative;
-            padding-left: 3.25rem;
-            margin-bottom: 1.25rem;
+        .hero-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 650px;
+            margin: 0 auto;
             line-height: 1.7;
         }
         
-        .steps-list li::before {
-            content: counter(step-counter);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 2.25rem;
-            height: 2.25rem;
-            background: var(--forest-secondary);
-            color: white;
-            border-radius: 50%;
-            display: flex;
+        .level-indicator {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-        
-        .steps-list li strong {
-            display: block;
-            margin-bottom: 0.25rem;
-        }
-        
-        /* English Terms Highlight */
-        .en-term {
-            background: linear-gradient(135deg, #fff9e6 0%, #fff5d6 100%);
-            padding: 0.15rem 0.5rem;
-            border-radius: 6px;
-            font-style: italic;
-            color: #8b6914;
-            font-weight: 500;
-        }
-        
-        /* Ad Placeholder */
-        .ad-placeholder {
-            background: linear-gradient(135deg, #f5f5f5 0%, #ebebeb 100%);
-            border: 2px dashed #ccc;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            padding: 0.6rem 1.2rem;
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 10px;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            margin: 1.5rem 0;
-            color: #888;
-        }
-        
-        .ad-placeholder .ad-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .ad-placeholder p {
-            margin-bottom: 0;
-        }
-        
-        /* Interactive Game Section */
-        .game-section {
-            background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest-primary) 100%);
-            border-radius: 16px;
-            padding: 1.5rem 1.25rem;
-            margin: 2rem 0;
-            color: white;
-        }
-        
-        .game-section h2 {
-            color: var(--forest-light);
-            border-bottom-color: var(--forest-accent);
-            font-size: 1.25rem;
-        }
-        
-        .game-section p {
             font-size: 0.95rem;
-        }
-        
-        .quest-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 1.25rem;
-            margin-bottom: 1.25rem;
-            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
-        .quest-title {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.6rem;
-            font-weight: 700;
+        /* Section Styles */
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        h2 {
+            color: var(--accent-dark);
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 3px solid var(--accent-light);
+            display: inline-block;
+        }
+        
+        h3 {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin: 1.8rem 0 1rem 0;
+        }
+        
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            color: var(--text-primary);
             font-size: 1rem;
-            margin-bottom: 0.85rem;
-            line-height: 1.4;
         }
         
-        .quest-icon {
-            font-size: 1.25rem;
-            flex-shrink: 0;
+        /* Content Card */
+        .content-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 24px var(--shadow);
+            border: 1px solid var(--border);
         }
         
-        .interactive-quiz {
-            background: white;
-            border-radius: 10px;
-            padding: 1.15rem;
-            color: var(--text-dark);
+        /* Problem Box */
+        .problem-box {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border-left: 5px solid #ff9800;
+            padding: 1.5rem 2rem;
+            border-radius: 0 16px 16px 0;
+            margin: 2rem 0;
+        }
+        
+        .problem-box h4 {
+            color: #e65100;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .problem-box p {
+            color: #4a2800;
+        }
+        
+        /* Concept Box */
+        .concept-box {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-left: 5px solid var(--accent);
+            padding: 1.5rem 2rem;
+            border-radius: 0 16px 16px 0;
+            margin: 2rem 0;
+        }
+        
+        .concept-box h4 {
+            color: var(--accent-dark);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .concept-box p {
+            color: #1a3a1a;
+        }
+        
+        /* Practice Box */
+        .practice-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 5px solid #1976d2;
+            padding: 1.5rem 2rem;
+            border-radius: 0 16px 16px 0;
+            margin: 2rem 0;
+        }
+        
+        .practice-box h4 {
+            color: #0d47a1;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .practice-box p {
+            color: #0d3a6e;
+        }
+        
+        /* List Styles */
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+        }
+        
+        /* Highlight */
+        .highlight {
+            background: linear-gradient(120deg, #a5d6a7 0%, #c8e6c9 100%);
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #1b5e20;
+        }
+        
+        .term-en {
+            font-style: italic;
+            color: var(--accent-dark);
+            font-weight: 600;
+        }
+        
+        /* AdSense Placeholder */
+        .ad-placeholder {
+            background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+            border: 2px dashed #bdbdbd;
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            margin: 2.5rem 0;
+            color: #757575;
+            font-size: 0.95rem;
+        }
+        
+        /* Interactive Quiz Section */
+        .quiz-container {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 8px 32px var(--shadow);
+            border: 2px solid var(--accent-light);
+        }
+        
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .quiz-header h3 {
+            color: var(--accent-dark);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .quiz-progress {
+            background: #e8f5e9;
+            height: 10px;
+            border-radius: 5px;
+            margin: 1.2rem 0;
+            overflow: hidden;
+        }
+        
+        .quiz-progress-bar {
+            background: linear-gradient(90deg, var(--accent-dark) 0%, var(--accent-light) 100%);
+            height: 100%;
+            width: 0%;
+            transition: width 0.6s ease;
+            border-radius: 5px;
         }
         
         .quiz-question {
-            font-weight: 600;
-            margin-bottom: 0.85rem;
-            color: var(--forest-dark);
-            font-size: 0.95rem;
-            line-height: 1.5;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            padding: 1.2rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+            text-align: center;
+            color: var(--text-primary);
+            font-weight: 500;
         }
         
         .quiz-options {
             display: grid;
-            gap: 0.6rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
         }
         
         .quiz-option {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.6rem;
-            padding: 0.85rem;
-            background: var(--forest-pale);
+            padding: 1rem 1.5rem;
             border: 2px solid var(--border);
-            border-radius: 8px;
+            border-radius: 12px;
+            background: var(--bg-card);
             cursor: pointer;
             transition: all 0.3s ease;
-            font-size: 0.9rem;
-            line-height: 1.5;
+            font-size: 1rem;
+            text-align: center;
+            color: var(--text-primary);
         }
         
         .quiz-option:hover {
-            border-color: var(--forest-secondary);
-            background: var(--forest-light);
+            border-color: var(--accent);
+            background: #e8f5e9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow);
         }
         
         .quiz-option.correct {
-            background: #d4edda;
-            border-color: #28a745;
+            border-color: #4caf50;
+            background: #4caf50;
+            color: white;
         }
         
         .quiz-option.incorrect {
-            background: #f8d7da;
-            border-color: #dc3545;
-        }
-        
-        .quiz-radio {
-            width: 18px;
-            height: 18px;
-            border: 2px solid var(--forest-secondary);
-            border-radius: 50%;
-            flex-shrink: 0;
-            margin-top: 0.15rem;
-        }
-        
-        .quiz-option.selected .quiz-radio {
-            background: var(--forest-secondary);
+            border-color: #f44336;
+            background: #f44336;
+            color: white;
         }
         
         .quiz-feedback {
-            margin-top: 0.85rem;
-            padding: 0.85rem;
-            border-radius: 8px;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
             display: none;
-            font-size: 0.9rem;
-            line-height: 1.5;
         }
         
         .quiz-feedback.show {
@@ -518,152 +429,166 @@
         }
         
         .quiz-feedback.success {
-            background: #d4edda;
-            color: #155724;
+            background: #e8f5e9;
+            color: #2e7d32;
         }
         
         .quiz-feedback.error {
-            background: #f8d7da;
-            color: #721c24;
+            background: #ffebee;
+            color: #c62828;
         }
         
-        .matching-game {
-            background: white;
-            border-radius: 10px;
-            padding: 1.15rem;
-            color: var(--text-dark);
-        }
-        
-        .matching-game p {
-            font-size: 0.9rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .matching-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.6rem;
-            margin-top: 0.85rem;
-        }
-        
-        .matching-item {
-            background: var(--forest-pale);
-            border: 2px solid var(--border);
-            border-radius: 8px;
-            padding: 0.75rem 0.5rem;
-            text-align: center;
+        .quiz-next-btn {
+            display: block;
+            margin: 1.5rem auto 0;
+            padding: 0.9rem 2.2rem;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-weight: 500;
-            font-size: 0.8rem;
-            line-height: 1.4;
-            min-height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         
-        .matching-item:hover {
-            border-color: var(--forest-secondary);
+        .quiz-next-btn:hover {
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--shadow);
         }
         
-        .matching-item.selected {
-            border-color: var(--forest-accent);
-            background: var(--forest-light);
-        }
-        
-        .matching-item.matched {
-            background: var(--forest-accent);
-            color: white;
-            border-color: var(--forest-secondary);
-        }
-        
-        .matching-item.incorrect {
-            background: #f8d7da;
-            border-color: #dc3545;
-        }
-        
-        .game-progress {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            padding: 1rem;
-            margin-top: 1.25rem;
-        }
-        
-        .game-progress p {
-            font-size: 0.9rem;
-            margin-bottom: 0;
-        }
-        
-        .progress-bar {
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            height: 10px;
-            overflow: hidden;
-            margin-top: 0.5rem;
-        }
-        
-        .progress-fill {
-            background: var(--forest-accent);
-            height: 100%;
-            width: 0%;
-            transition: width 0.5s ease;
-        }
-        
-        /* Next Episode Preview */
-        .next-episode {
-            background: linear-gradient(135deg, var(--forest-secondary) 0%, var(--forest-accent) 100%);
-            border-radius: 16px;
-            padding: 1.5rem 1.25rem;
+        .quiz-result {
             text-align: center;
-            color: white;
-            margin: 2rem 0;
+            padding: 2rem;
+            display: none;
         }
         
-        .next-episode h2 {
-            color: white;
-            border-bottom-color: rgba(255, 255, 255, 0.3);
-            margin-bottom: 0.85rem;
-            font-size: 1.25rem;
+        .quiz-result.show {
+            display: block;
         }
         
-        .next-ep-title {
-            font-size: 1.15rem;
+        .quiz-score {
+            font-size: 3.5rem;
+            color: var(--accent);
             font-weight: 700;
-            margin-bottom: 1rem;
+        }
+        
+        /* Next Episode Section */
+        .next-episode {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            color: var(--text-light);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 3rem 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        .next-episode h3 {
+            color: var(--accent-light);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .next-episode-title {
+            font-size: 1.4rem;
+            margin: 1rem 0;
             line-height: 1.4;
         }
         
         .next-episode p {
-            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
         }
         
-        .next-ep-btn {
+        .next-episode-btn {
             display: inline-block;
-            background: white;
-            color: var(--forest-dark);
-            padding: 0.85rem 2rem;
-            border-radius: 30px;
+            padding: 1rem 2.5rem;
+            background: var(--accent-light);
+            color: var(--bg-primary);
             text-decoration: none;
-            font-weight: 700;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 1.5rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            font-size: 0.95rem;
+        }
+        
+        .next-episode-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(76, 175, 80, 0.5);
+        }
+        
+        /* Stats Section - Enhanced */
+        .stats-section {
+            background: linear-gradient(135deg, var(--bg-card) 0%, #f8fdf8 100%);
+            padding: 2.5rem 1.5rem;
+            margin: 3rem -1.5rem;
+            border-top: 3px solid var(--accent-light);
+            border-bottom: 3px solid var(--accent-light);
+            box-shadow: inset 0 4px 20px rgba(46, 125, 50, 0.1);
+        }
+        
+        .stats-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 1.5rem 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f5f9f5 100%);
+            border-radius: 16px;
+            border: 2px solid var(--border);
+            box-shadow: 0 4px 16px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-4px);
+        }
+        
+        .stat-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-dark);
+            font-family: 'Courier New', monospace;
+            display: block;
+            min-height: 2.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
             margin-top: 0.5rem;
+            font-weight: 500;
         }
         
-        .next-ep-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        .stat-item.active .stat-number {
+            animation: pulse 2s infinite;
         }
         
-        /* Footer Styles */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        /* Footer */
         footer {
-            background: var(--bg-light);
-            border-top: 1px solid var(--border);
-            padding: 2rem 1rem 1.5rem;
-            margin-top: 2rem;
+            background: linear-gradient(135deg, var(--bg-light) 0%, #e8f5e8 100%);
+            border-top: 3px solid var(--border);
+            padding: 3rem 1.5rem 1.5rem;
         }
         
         .footer-container {
@@ -673,1254 +598,983 @@
         
         .footer-brand {
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
         
-        .footer-brand .brand-name {
-            font-size: 1.5rem;
-            color: var(--forest-dark);
+        .footer-brand h2 {
+            font-size: 2.2rem;
+            color: var(--accent-dark);
+            border: none;
+            padding: 0;
+            margin-bottom: 0.5rem;
             display: block;
-            margin-bottom: 0.4rem;
         }
         
-        .footer-brand .tagline {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.5;
+        .footer-tagline {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
         }
         
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1rem;
-            margin-bottom: 1.25rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
         }
         
-        .social-links a {
-            width: 42px;
-            height: 42px;
-            background: var(--forest-primary);
-            color: white;
-            border-radius: 10px;
+        .social-link {
             display: flex;
             align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
+            gap: 0.6rem;
+            padding: 0.8rem 1.4rem;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white;
             text-decoration: none;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px var(--shadow);
         }
         
-        .social-links a:hover {
-            background: var(--forest-secondary);
+        .social-link:hover {
             transform: translateY(-3px);
+            box-shadow: 0 6px 20px var(--shadow);
         }
         
-        .social-links svg {
-            width: 22px;
-            height: 22px;
-            fill: currentColor;
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
         }
         
-        .follow-text {
+        .cta-paragraph {
             text-align: center;
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            font-size: 0.85rem;
-            padding: 0 0.5rem;
-            line-height: 1.5;
-        }
-        
-        .quick-links {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .quick-links h3 {
-            color: var(--forest-dark);
-            margin-bottom: 0.85rem;
+            margin: 1.5rem 0;
+            color: var(--text-secondary);
             font-size: 1rem;
         }
         
-        .quick-links ul {
-            list-style: none;
+        .quick-links {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 0.5rem 1rem;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
         }
         
         .quick-links a {
-            color: var(--forest-secondary);
+            color: var(--text-secondary);
             text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            padding: 0.3rem 0;
+            border-bottom: 2px solid transparent;
         }
         
         .quick-links a:hover {
-            color: var(--forest-primary);
+            color: var(--accent-dark);
+            border-bottom: 2px solid var(--accent);
         }
         
         .copyright {
             text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
         
-        /* ==========================================
-           RESPONSIVE BREAKPOINTS
-           ========================================== */
+        /* Share Button */
+        .share-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 24px var(--shadow);
+            transition: all 0.3s ease;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         
-        /* Extra Small Devices (phones, 320px and up) */
-        @media (max-width: 359px) {
-            body {
-                font-size: 14px;
+        .share-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 8px 32px var(--shadow);
+        }
+        
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 6rem;
+            width: 50px;
+            height: 50px;
+            background: var(--bg-secondary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem 0.8rem;
+            border-radius: 8px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
             }
             
+            .quiz-options {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
             .header-container {
-                padding: 0 0.75rem;
-            }
-            
-            .brand-logo {
-                width: 35px;
-                height: 35px;
-                font-size: 0.9rem;
-            }
-            
-            .brand-name {
-                font-size: 1.25rem;
+                padding: 0.8rem 1rem;
             }
             
             nav ul {
-                gap: 0.5rem 0.75rem;
-            }
-            
-            nav a {
-                font-size: 0.8rem;
-            }
-            
-            main {
-                padding: 1rem 0.75rem;
-            }
-            
-            .hero {
-                padding: 1.5rem 1rem;
-                border-radius: 12px;
-            }
-            
-            .hero h1 {
-                font-size: 1.35rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 0.95rem;
-            }
-            
-            .episode-badge {
-                font-size: 0.75rem;
-                padding: 0.35rem 1rem;
-            }
-            
-            .level-indicator {
-                font-size: 0.75rem;
-                padding: 0.4rem 0.85rem;
-            }
-            
-            .focus-tag {
-                font-size: 0.7rem;
-                padding: 0.3rem 0.7rem;
-            }
-            
-            article {
-                padding: 1rem;
-                border-radius: 10px;
-            }
-            
-            h2 {
-                font-size: 1.15rem;
-            }
-            
-            h3 {
-                font-size: 1rem;
-            }
-            
-            p {
-                font-size: 0.9rem;
-                line-height: 1.75;
-            }
-            
-            .info-box {
-                padding: 0.85rem;
-                border-left-width: 3px;
-            }
-            
-            .info-box p {
-                font-size: 0.85rem;
-            }
-            
-            .term-label {
-                font-size: 0.85rem;
-            }
-            
-            .illustration-box {
-                padding: 1rem;
-            }
-            
-            .illustration-icon {
-                font-size: 2rem;
-            }
-            
-            .illustration-title {
-                font-size: 0.9rem;
-            }
-            
-            .illustration-box p {
-                font-size: 0.8rem;
-            }
-            
-            .steps-list li {
-                padding-left: 2.75rem;
-            }
-            
-            .steps-list li::before {
-                width: 2rem;
-                height: 2rem;
-                font-size: 0.85rem;
-            }
-            
-            .game-section {
-                padding: 1.25rem 1rem;
-                border-radius: 12px;
-            }
-            
-            .game-section h2 {
-                font-size: 1.1rem;
-            }
-            
-            .quest-card {
-                padding: 1rem;
-            }
-            
-            .interactive-quiz {
-                padding: 1rem;
-            }
-            
-            .quiz-question {
-                font-size: 0.85rem;
-            }
-            
-            .quiz-option {
-                padding: 0.75rem;
-                font-size: 0.8rem;
-            }
-            
-            .matching-grid {
-                gap: 0.5rem;
-            }
-            
-            .matching-item {
-                font-size: 0.7rem;
-                padding: 0.6rem 0.4rem;
-                min-height: 45px;
-            }
-            
-            .next-episode {
-                padding: 1.25rem 1rem;
-                border-radius: 12px;
-            }
-            
-            .next-ep-title {
-                font-size: 1rem;
-            }
-            
-            .next-ep-btn {
-                padding: 0.75rem 1.5rem;
-                font-size: 0.85rem;
-            }
-            
-            footer {
-                padding: 1.5rem 0.75rem 1rem;
-            }
-            
-            .footer-brand .brand-name {
-                font-size: 1.25rem;
-            }
-            
-            .footer-brand .tagline {
-                font-size: 0.8rem;
-            }
-            
-            .social-links a {
-                width: 38px;
-                height: 38px;
-            }
-            
-            .social-links svg {
-                width: 20px;
-                height: 20px;
-            }
-            
-            .quick-links ul {
-                gap: 0.4rem 0.75rem;
-            }
-            
-            .quick-links a {
-                font-size: 0.8rem;
-            }
-        }
-        
-        /* Small Devices (phones, 360px to 480px) */
-        @media (min-width: 360px) and (max-width: 480px) {
-            .header-container {
-                padding: 0 1rem;
-            }
-            
-            main {
-                padding: 1.25rem 1rem;
-            }
-            
-            .hero {
-                padding: 1.75rem 1.25rem;
-            }
-            
-            .hero h1 {
-                font-size: 1.5rem;
-            }
-            
-            article {
-                padding: 1.15rem;
-            }
-            
-            h2 {
-                font-size: 1.25rem;
-            }
-            
-            .matching-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.5rem;
-            }
-            
-            .matching-item {
-                font-size: 0.75rem;
-            }
-            
-            .game-section {
-                padding: 1.5rem 1.15rem;
-            }
-            
-            .next-episode {
-                padding: 1.5rem 1.15rem;
-            }
-        }
-        
-        /* Medium Small Devices (landscape phones, 481px to 767px) */
-        @media (min-width: 481px) and (max-width: 767px) {
-            .header-container {
-                flex-direction: row;
-                padding: 0 1.25rem;
-            }
-            
-            .brand-name {
-                font-size: 1.6rem;
-            }
-            
-            nav a {
-                font-size: 0.9rem;
-            }
-            
-            main {
-                padding: 1.5rem 1.25rem;
-            }
-            
-            .hero {
-                padding: 2rem 1.5rem;
-            }
-            
-            .hero h1 {
-                font-size: 1.7rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.15rem;
-            }
-            
-            article {
-                padding: 1.5rem;
-            }
-            
-            h2 {
-                font-size: 1.35rem;
-            }
-            
-            h3 {
-                font-size: 1.15rem;
-            }
-            
-            .matching-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.75rem;
-            }
-            
-            .matching-item {
-                font-size: 0.85rem;
-                padding: 0.85rem;
-            }
-            
-            .game-section {
-                padding: 2rem;
-            }
-            
-            .next-episode {
-                padding: 2rem;
-            }
-        }
-        
-        /* Tablets (768px and up) */
-        @media (min-width: 768px) {
-            .header-container {
-                flex-direction: row;
-                padding: 0 1.5rem;
-            }
-            
-            .brand-logo {
-                width: 45px;
-                height: 45px;
-                font-size: 1.2rem;
-            }
-            
-            .brand-name {
-                font-size: 1.8rem;
-            }
-            
-            nav ul {
-                gap: 1.5rem;
-            }
-            
-            nav a {
-                font-size: 1rem;
-                padding: 0.5rem 0;
-            }
-            
-            main {
-                padding: 2rem 1.5rem;
-            }
-            
-            .hero {
-                padding: 3rem 2rem;
-                border-radius: 20px;
-                margin-bottom: 2.5rem;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.3rem;
-            }
-            
-            .episode-badge {
-                font-size: 0.9rem;
-                padding: 0.5rem 1.5rem;
-            }
-            
-            .level-indicator {
-                font-size: 0.9rem;
-                padding: 0.5rem 1.25rem;
-            }
-            
-            .focus-tags {
-                gap: 0.75rem;
-                margin-top: 1.5rem;
-            }
-            
-            .focus-tag {
-                font-size: 0.85rem;
-                padding: 0.4rem 1rem;
-            }
-            
-            article {
-                padding: 2rem;
-                border-radius: 16px;
-            }
-            
-            section {
-                margin-bottom: 2.5rem;
-            }
-            
-            h2 {
-                font-size: 1.6rem;
-                margin-bottom: 1.25rem;
-                padding-bottom: 0.75rem;
-            }
-            
-            h3 {
-                font-size: 1.25rem;
-                margin: 1.5rem 0 1rem;
-            }
-            
-            p {
-                font-size: 16px;
-                margin-bottom: 1rem;
-            }
-            
-            .info-box {
-                padding: 1.25rem 1.5rem;
-                border-radius: 0 12px 12px 0;
-                margin: 1.5rem 0;
-            }
-            
-            .info-box p {
-                font-size: 1rem;
-            }
-            
-            .term-label {
-                font-size: 1rem;
-            }
-            
-            .illustration-box {
-                padding: 1.5rem;
-                border-radius: 16px;
-            }
-            
-            .illustration-icon {
-                font-size: 3rem;
-            }
-            
-            .illustration-title {
-                font-size: 1rem;
-            }
-            
-            .steps-list li {
-                padding-left: 3.5rem;
-            }
-            
-            .steps-list li::before {
-                width: 2.5rem;
-                height: 2.5rem;
-                font-size: 1rem;
-            }
-            
-            .game-section {
-                padding: 2.5rem;
-                border-radius: 20px;
-                margin: 2.5rem 0;
-            }
-            
-            .game-section h2 {
-                font-size: 1.5rem;
-            }
-            
-            .quest-card {
-                padding: 1.5rem;
-                border-radius: 16px;
-            }
-            
-            .quest-title {
-                font-size: 1.1rem;
-            }
-            
-            .interactive-quiz {
-                padding: 1.5rem;
-                border-radius: 12px;
-            }
-            
-            .quiz-question {
-                font-size: 1rem;
-            }
-            
-            .quiz-option {
-                padding: 1rem;
-                font-size: 0.95rem;
-            }
-            
-            .matching-game {
-                padding: 1.5rem;
-            }
-            
-            .matching-grid {
-                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-                gap: 1rem;
-            }
-            
-            .matching-item {
-                font-size: 0.9rem;
-                padding: 1rem;
-                min-height: auto;
-            }
-            
-            .next-episode {
-                padding: 2rem;
-                border-radius: 20px;
-                margin: 2.5rem 0;
-            }
-            
-            .next-episode h2 {
-                font-size: 1.4rem;
-            }
-            
-            .next-ep-title {
-                font-size: 1.4rem;
-            }
-            
-            .next-ep-btn {
-                padding: 1rem 2.5rem;
-                font-size: 1rem;
-            }
-            
-            footer {
-                padding: 3rem 1.5rem 1.5rem;
-                margin-top: 3rem;
-            }
-            
-            .footer-brand {
-                margin-bottom: 2rem;
-            }
-            
-            .footer-brand .brand-name {
-                font-size: 2rem;
-            }
-            
-            .footer-brand .tagline {
-                font-size: 1rem;
-            }
-            
-            .social-links {
-                gap: 1.25rem;
-                margin-bottom: 1.5rem;
-            }
-            
-            .social-links a {
-                width: 48px;
-                height: 48px;
-                border-radius: 12px;
-            }
-            
-            .social-links svg {
-                width: 24px;
-                height: 24px;
-            }
-            
-            .follow-text {
-                font-size: 0.95rem;
-                margin-bottom: 2rem;
-            }
-            
-            .quick-links {
-                margin-bottom: 2rem;
-                padding-bottom: 2rem;
-            }
-            
-            .quick-links h3 {
-                font-size: 1.1rem;
-                margin-bottom: 1rem;
-            }
-            
-            .quick-links ul {
-                gap: 1rem 2rem;
-            }
-            
-            .quick-links a {
-                font-size: 1rem;
-            }
-            
-            .copyright {
-                font-size: 0.9rem;
-            }
-        }
-        
-        /* Desktops (1024px and up) */
-        @media (min-width: 1024px) {
-            .header-container {
-                padding: 0 2rem;
-            }
-            
-            main {
-                padding: 2.5rem 2rem;
-            }
-            
-            .hero {
-                padding: 3.5rem 2.5rem;
-            }
-            
-            article {
-                padding: 2.5rem;
-            }
-        }
-        
-        /* Print Styles */
-        @media print {
-            header, footer, .ad-placeholder, .game-section, .next-episode {
                 display: none;
             }
             
-            body {
-                background: white;
-                color: black;
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .brand-name {
+                font-size: 1.5rem;
+            }
+            
+            .header-spacer {
+                height: 65px;
             }
             
             article {
-                box-shadow: none;
-                border: none;
+                padding: 1.2rem;
             }
             
-            .info-box {
-                border: 1px solid #ccc;
+            .hero-section {
+                padding: 2rem 1.2rem;
+                margin: 0 -1.2rem 1.5rem -1.2rem;
+            }
+            
+            .hero-section h1 {
+                font-size: 1.4rem;
+                line-height: 1.5;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .content-card {
+                padding: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+            
+            p {
+                font-size: 0.95rem;
+                line-height: 1.7;
+                text-align: left;
+            }
+            
+            .problem-box,
+            .concept-box,
+            .practice-box {
+                padding: 1.2rem 1.5rem;
+                margin: 1.5rem 0;
+            }
+            
+            .stats-section {
+                padding: 2rem 1rem;
+                margin: 2rem -1.2rem;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                padding: 1.2rem 0.8rem;
+            }
+            
+            .stat-number {
+                font-size: 1.5rem;
+            }
+            
+            .stat-label {
+                font-size: 0.8rem;
+            }
+            
+            .quiz-container {
+                padding: 1.5rem;
+            }
+            
+            .quiz-question {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+            
+            .quiz-option {
+                padding: 0.9rem 1rem;
+                font-size: 0.95rem;
+            }
+            
+            .next-episode {
+                padding: 1.5rem;
+            }
+            
+            .next-episode-title {
+                font-size: 1.1rem;
+            }
+            
+            .share-btn {
+                bottom: 1.2rem;
+                right: 1.2rem;
+                width: 55px;
+                height: 55px;
+            }
+            
+            .back-to-top {
+                right: 4.5rem;
+                width: 45px;
+                height: 45px;
+                bottom: 1.2rem;
+            }
+            
+            .quick-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+            
+            .social-link {
+                width: 100%;
+                max-width: 250px;
+                justify-content: center;
+            }
+            
+            .ad-placeholder {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.8rem;
+            }
+            
+            .stat-number {
+                font-size: 1.3rem;
+            }
+            
+            .stat-icon {
+                font-size: 1.8rem;
+            }
+            
+            .brand-name {
+                font-size: 1.3rem;
+            }
+            
+            .footer-brand h2 {
+                font-size: 1.8rem;
+            }
+            
+            .episode-badge {
+                font-size: 0.8rem;
+                padding: 0.4rem 1rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="header-container">
-            <div class="brand">
-                <div class="brand-logo">ME</div>
-                <span class="brand-name">mibenglish</span>
-            </div>
+            <a href="https://mibenglish.com" class="brand-name">mibenglish</a>
             <nav>
                 <ul>
-                    <li><a href="https://mibenglish.github.io/index.html">Beranda</a></li>
-                    <li><a href="https://mibenglish.github.io/about.html">Tentang</a></li>
-                    <li><a href="#episode-content">Materi</a></li>
-                    <li><a href="#interactive-game">Game</a></li>
+                    <li><a href="https://mibenglish.com">Beranda</a></li>
+                    <li><a href="https://mibenglish.com/about">About Us</a></li>
+                    <li><a href="https://mibenglish.com/contact">Contact</a></li>
                 </ul>
             </nav>
+            <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
         </div>
     </header>
-    
+
+    <!-- Header Spacer -->
+    <div class="header-spacer"></div>
+
+    <!-- Main Content -->
     <main>
-        <article id="episode-content">
+        <article>
             <!-- Hero Section -->
-            <section class="hero">
+            <section class="hero-section">
                 <span class="episode-badge">Episode 1</span>
-                <h1>The Science of Zero</h1>
-                <p class="subtitle">Menyiapkan Otak untuk Penguasaan Bahasa Inggris</p>
+                <h1>The Science of Zero: Preparing the Brain for Language Encoding</h1>
+                <p class="hero-subtitle">Memahami dasar ilmiah bagaimana otak memproses bahasa baru dan menyiapkan fondasi mental untuk pembelajaran bahasa Inggris yang efektif.</p>
                 <div class="level-indicator">
-                    <span>📊 Level:</span>
-                    <strong>A0 → A1</strong>
-                    <span>(Absolute Beginner Foundation)</span>
-                </div>
-                <div class="focus-tags">
-                    <span class="focus-tag">Neuroplasticity</span>
-                    <span class="focus-tag">Phonological Mapping</span>
-                    <span class="focus-tag">Structural Awareness</span>
-                    <span class="focus-tag">Survival Communication</span>
+                    <span>📚</span>
+                    <span>Level: A0-A1 (Absolute Beginner Foundation)</span>
                 </div>
             </section>
-            
-            <!-- Ad Placeholder 1 -->
-            <div class="ad-placeholder">
-                <p class="ad-label">Advertisement</p>
-                <p>Google AdSense Slot 1</p>
-            </div>
-            
-            <!-- Introduction Section -->
+
+            <!-- Pendahuluan -->
             <section>
                 <h2>Mengapa Kita Mulai dari Nol?</h2>
-                <p>Sebelum kita belajar kata-kata dalam bahasa Inggris, ada satu pertanyaan penting yang harus kita jawab bersama: <strong>sudah siapankah otak kita menerima bahasa baru?</strong> Pertanyaan ini mungkin terdengar sederhana, namun jawabannya sangat menentukan keberhasilan kita dalam mempelajari bahasa Inggris. Banyak orang memulai belajar bahasa dengan semangat tinggi, menghafal ratusan kata dalam beberapa hari, namun akhirnya menyerah karena merasa tidak ada kemajuan yang berarti.</p>
-                
-                <p>Bayangkan otak kita seperti sebuah tanah yang akan ditanami. Jika kita langsung menanam benih tanpa mempersiapkan tanah terlebih dahulu, mungkin saja benih itu akan tumbuh. Namun, pertumbuhannya tidak akan optimal. Tanah perlu digemburkan, diberi pupuk, dan disiram dengan baik agar benih dapat tumbuh subur. Begitu pula dengan otak kita ketika belajar bahasa baru. Ia perlu dipersiapkan secara khusus agar dapat menerima, memproses, dan menyimpan informasi bahasa dengan efektif dan bertahan lama dalam ingatan kita.</p>
-                
-                <div class="illustration-box">
-                    <div class="illustration-icon">🧠🌱</div>
-                    <p class="illustration-title">Analogi Otak dan Tanah</p>
-                    <p>Otak yang belum siap = tanah keras yang tidak bisa ditanami.<br>Otak yang sudah siap = tanah subur yang siap menerima benih bahasa baru.</p>
-                </div>
-                
-                <div class="info-box english-term">
-                    <span class="term-label">📚 Istilah Bahasa Inggris: Brain Preparation</span>
-                    <p>Dalam bahasa Inggris, "persiapan otak" disebut <em>brain preparation</em> atau <em>mental readiness</em>. Istilah ini merujuk pada kondisi di mana otak kita berada dalam keadaan optimal untuk menerima dan memproses informasi baru.</p>
+                <div class="content-card">
+                    <p>Sebelum mempelajari kata atau tata bahasa Inggris pertama Anda, ada satu langkah krusial yang sering terlewatkan oleh kebanyakan program pembelajaran bahasa: <span class="highlight">menyiapkan otak untuk menerima dan memproses informasi baru</span>. Bayangkan membangun rumah tanpa fondasi yang kuat—sekeren apapun desainnya, struktur tersebut akan rentan runtuh ketika menghadapi tekanan. Prinsip yang sama berlaku dalam pembelajaran bahasa asing.</p>
+                    
+                    <p>Artikel ini akan membawa Anda memahami konsep <span class="term-en">"language encoding"</span> atau penyandian bahasa dari perspektif yang sama sekali berbeda. Bukan tentang menghafal kosakata atau menganalisis struktur kalimat, melainkan tentang memahami bagaimana sesungguhnya otak manusia dirancang untuk menyerap, menyimpan, dan mengingat bahasa baru. Dengan pemahaman ini, Anda akan memiliki peta jelas tentang apa yang perlu dilakukan sebelum memulai perjalanan pembelajaran bahasa Inggris yang sesungguhnya.</p>
                 </div>
             </section>
-            
-            <!-- Neuroplasticity Section -->
+
+            <!-- Ad Placeholder 1 -->
+            <div class="ad-placeholder">
+                <span>Advertisement</span>
+            </div>
+
+            <!-- Identifikasi Masalah -->
             <section>
-                <h2>Kekuatan Luar Biasa: Neuroplasticity</h2>
-                <p>Pernahkah Anda mendengar bahwa otak manusia bisa berubah dan beradaptasi? Ini bukan sekedar teori, melainkan fakta ilmiah yang telah dibuktikan oleh para peneliti neuroscience selama beberapa dekade. Otak kita memiliki kemampuan luar biasa yang disebut <span class="en-term">neuroplasticity</span>, yaitu kemampuan untuk membentuk koneksi-koneksi baru antara sel-sel saraf setiap kali kita belajar sesuatu yang baru. Kemampuan ini tidak terbatas pada usia tertentu, artinya baik anak-anak maupun orang dewasa dapat memanfaatkan neuroplasticity untuk belajar bahasa baru dengan efektif.</p>
+                <h2>Akar Masalah: Mengapa Banyak Pembelajar Terjebak?</h2>
                 
-                <p>Ketika Anda mendengar kata bahasa Inggris untuk pertama kali, otak Anda secara otomatis mencoba mencari pola dan makna dari bunyi-bunyi yang Anda dengar. Proses ini terjadi sangat cepat, dalam hitungan milidetik, tanpa Anda sadari. Jika ini adalah pertama kalinya Anda terpapar bahasa Inggris, otak Anda akan membentuk "jalan baru" untuk menyimpan informasi tersebut. Jalan ini awalnya masih sangat rapuh dan mudah hilang, seperti jejak kaki di pasir yang bisa terhapus oleh angin. Namun, semakin sering Anda mengulang dan menggunakan informasi tersebut, jalan itu akan semakin kuat dan permanen, berubah menjadi jalan raya yang tidak mudah terhapus.</p>
-                
-                <div class="info-box">
-                    <span class="term-label">🔬 Apa Itu Neuroplasticity?</span>
-                    <p><span class="en-term">Neuroplasticity</span> adalah kemampuan otak untuk mengubah struktur dan fungsinya sebagai respons terhadap pengalaman dan pembelajaran baru. Istilah ini berasal dari kata "neuro" (sel saraf) dan "plasticity" (kemampuan untuk dibentuk). Setiap kali kita belajar sesuatu yang baru, otak kita secara fisik berubah dengan membentuk koneksi-koneksi baru antar sel saraf.</p>
+                <div class="problem-box">
+                    <h4>⚠️ Masalah Umum yang Dihadapi Pembelajar</h4>
+                    <p>Setiap tahun, jutaan orang memulai perjalanan belajar bahasa Inggris dengan semangat tinggi. Mereka membeli buku teks, mengunduh aplikasi pembelajaran, mendaftar kursus online, bahkan berinvestasi dalam program mahal. Namun fakta menunjukkan bahwa mayoritas dari mereka berhenti di tengah jalan, merasa frustrasi, atau tidak pernah mencapai tingkat kemampuan yang mereka dambakan. Pertanyaannya adalah: mengapa hal ini terjadi?</p>
                 </div>
                 
-                <h3>Bagaimana Neuroplasticity Bekerja dalam Belajar Bahasa?</h3>
-                <p>Mari kita gunakan analogi sederhana untuk memahami konsep ini dengan lebih mudah. Bayangkan otak Anda seperti hutan lebat yang belum pernah dijelajahi. Awalnya, tidak ada jalan setapak pun di hutan itu. Ketika Anda mempelajari sesuatu yang baru (misalnya kata "hello" dalam bahasa Inggris), Anda sebenarnya sedang membuat jalan setapak pertama di hutan tersebut. Jalan setapak ini mula-mula sangat sulit dilalui karena penuh dengan semak belukar dan ranting-ranting yang menghalangi.</p>
+                <p>Jawabannya terletak pada pemahaman yang keliru tentang bagaimana otak mempelajari bahasa. Banyak pembelajar dan pengajar menganggap bahwa belajar bahasa hanyalah soal menghafal kata-kata dan menghafalkan aturan tata bahasa. Pendekatan ini sama sekali tidak memperhatikan bagaimana otak manusia sesungguhnya bekerja dalam memproses dan menyimpan informasi linguistik.</p>
                 
-                <p>Namun, setiap kali Anda mengulang kata "hello" tersebut, Anda berjalan melewati jalan setapak yang sama lagi dan lagi. Lama-kelamaan, semak belukar akan terinjak dan jalan setapak itu menjadi semakin jelas dan mudah dilalui. Jika Anda terus mengulanginya berkali-kali, jalan setapak itu akan berubah menjadi jalan yang lebar dan permanen. Informasi bahasa Inggris akan mengalir melalui jalan itu dengan lancar tanpa hambatan berarti. Inilah prinsip dasar bagaimana <span class="en-term">neuroplasticity</span> membantu kita dalam belajar bahasa!</p>
+                <h3>Ketidaksesuaian Metode dengan Cara Kerja Otak</h3>
+                <p>Otak manusia bukanlah komputer yang bisa diprogram dengan mudah melalui input data yang berulang-ulang. Otak adalah organ biologis yang kompleks dengan mekanisme pembelajaran yang telah berkembang selama jutaan tahun evolusi. Ketika kita memaksakan metode pembelajaran yang bertentangan dengan cara kerja alami otak, hasilnya akan selalu mengecewakan, tidak peduli seberapa keras kita berusaha atau seberapa banyak waktu yang kita investasikan.</p>
                 
-                <div class="illustration-box">
-                    <div class="illustration-icon">🌲➡️🛤️➡️🛣️</div>
-                    <p class="illustration-title">Proses Pembentukan Jalan Saraf</p>
-                    <p><strong>Hutan Belantara</strong> (belum ada jalan) → <strong>Jalan Setapak</strong> (pembelajaran pertama) → <strong>Jalan Lebar</strong> (setelah banyak pengulangan) → <strong>Jalan Raya</strong> (penguasaan penuh)</p>
-                </div>
+                <h3>Kurangnya Fondasi Mental</h3>
+                <p>Masalah kedua yang tidak kalah serius adalah kurangnya persiapan mental sebelum memulai proses pembelajaran. Sama seperti atlet yang harus melakukan pemanasan sebelum bertanding, otak juga perlu "dipanaskan" dan disiapkan sebelum menerima informasi bahasa baru. Tanpa fondasi mental yang kuat, informasi bahasa yang dipelajari akan sulit bertahan lama dalam memori dan sulit diakses ketika dibutuhkan untuk komunikasi nyata.</p>
+                
+                <h3>Excessive Cognitive Load</h3>
+                <p>Istilah <span class="term-en">"cognitive load"</span> merujuk pada jumlah kapasitas mental yang digunakan untuk memproses informasi dalam satu waktu. Ketika pembelajar langsung dibanjiri dengan kosakata, tata bahasa, pengucapan, dan aturan-aturan kompleks lainnya dalam waktu bersamaan, otak mereka mengalami kelebihan beban kognitif. Akibatnya, informasi tidak dapat diproses dengan baik dan akhirnya hilang tanpa meninggalkan jejak yang berarti dalam memori jangka panjang.</p>
             </section>
-            
+
+            <!-- Penjelasan Konsep -->
+            <section>
+                <h2>Ilmu di Balik Language Encoding</h2>
+                
+                <div class="concept-box">
+                    <h4>🧠 Konsep Kunci: Neural Pathway Formation</h4>
+                    <p>Setiap kali kita mempelajari sesuatu yang baru, otak kita membentuk koneksi saraf baru atau memperkuat koneksi yang sudah ada. Proses ini disebut <span class="term-en">"neuroplasticity"</span> atau neuroplastisitas. Semakin sering informasi tertentu diproses, semakin kuat koneksi sarafnya, dan semakin mudah informasi tersebut diakses di kemudian hari.</p>
+                </div>
+                
+                <p>Mari kita bayangkan otak sebagai hutan lebat yang belum terjamah. Ketika Anda pertama kali melewati hutan tersebut, Anda harus menebang ranting dan semak belukar untuk membuat jalan setapak. Proses ini membutuhkan usaha besar dan waktu yang tidak singkat. Namun, setelah jalan setapak terbentuk, setiap kali Anda melewatinya lagi, jalan tersebut akan semakin jelas dan semakin mudah dilalui. Jika jalan setapak tersebut tidak digunakan untuk waktu yang lama, semak belukar akan tumbuh kembali dan menutupi jejak yang telah dibuat.</p>
+                
+                <h3>Bagaimana Otak Memproses Bahasa Baru?</h3>
+                <p>Proses pembelajaran bahasa melibatkan beberapa area otak yang bekerja bersama-sama. Area <span class="term-en">Broca</span> di lobus frontal bertanggung jawab untuk produksi bicara dan pemrosesan tata bahasa. Area <span class="term-en">Wernicke</span> di lobus temporal berperan dalam pemahaman bahasa dan interpretasi makna. Ketika kita mempelajari bahasa baru, kedua area ini harus membentuk koneksi baru yang sebelumnya tidak ada, sambil tetap mempertahankan koneksi untuk bahasa pertama kita.</p>
+                
+                <p>Tantangannya adalah otak sudah terbiasa dengan pola bahasa pertama (dalam hal ini Bahasa Indonesia). Setiap kali kita mencoba memproses bahasa Inggris, otak secara otomatis mencoba memetakan informasi baru tersebut ke dalam pola yang sudah dikenal. Jika pemetaan tidak berhasil dengan baik, informasi akan ditolak atau disimpan di area memori yang sulit diakses. Inilah mengapa banyak pembelajar merasa kesulitan untuk "berpikir dalam bahasa Inggris" bahkan setelah bertahun-tahun belajar.</p>
+                
+                <h3>Peran Emosi dalam Pembelajaran Bahasa</h3>
+                <p>Aspek yang sering diabaikan dalam pembelajaran bahasa adalah peran emosi. <span class="term-en">Amygdala</span>, bagian otak yang bertanggung jawab untuk memproses emosi, memiliki hubungan langsung dengan pusat memori (hippocampus). Ketika kita belajar dalam keadaan rileks dan positif, otak melepaskan dopamin dan neurotransmiter lain yang membantu memperkuat pembentukan memori. Sebaliknya, keadaan cemas atau tertekan akan mengaktifkan respons stres yang justru menghambat proses pembelajaran.</p>
+                
+                <p>Pemahaman ini memiliki implikasi penting: cara kita mempersiapkan diri secara emosional sebelum belajar sama pentingnya dengan materi yang kita pelajari. Pembelajaran yang dipaksakan dalam keadaan stres atau kelelahan mental akan menghasilkan ingatan yang lemah dan mudah dilupakan.</p>
+            </section>
+
             <!-- Ad Placeholder 2 -->
             <div class="ad-placeholder">
-                <p class="ad-label">Advertisement</p>
-                <p>Google AdSense Slot 2</p>
+                <span>Advertisement</span>
             </div>
-            
-            <!-- Phonological Mapping Section -->
+
+            <!-- Pemahaman Mendalam -->
             <section>
-                <h2>Mengenal Bunyi: Phonological Mapping</h2>
-                <p>Sebelum kita bisa berbicara dalam bahasa Inggris, kita harus terlebih dahulu mengenali bunyi-bunyi yang ada dalam bahasa tersebut. Proses ini disebut <span class="en-term">phonological mapping</span>, yaitu proses di mana otak kita memetakan atau mencocokkan bunyi-bunyi bahasa dengan representasi mental di dalam otak. Setiap bahasa memiliki sistem bunyi yang berbeda-beda, dan bahasa Inggris memiliki beberapa bunyi yang tidak ada dalam bahasa Indonesia, serta sebaliknya.</p>
+                <h2>Menyiapkan Otak untuk Encoding Optimal</h2>
                 
-                <p>Coba pikirkan tentang bunyi "th" dalam bahasa Inggris seperti pada kata "think" atau "this". Bunyi ini sama sekali tidak ada dalam bahasa Indonesia! Ketika Anda pertama kali mendengar bunyi ini, otak Anda mungkin bingung karena tidak memiliki "peta" untuk bunyi tersebut. Inilah mengapa banyak penutur bahasa Indonesia mengganti bunyi "th" dengan "t" atau "s" saat berbicara bahasa Inggris. Bukan karena mereka tidak bisa mengucapkannya, tetapi karena otak mereka belum memiliki peta yang tepat untuk bunyi tersebut.</p>
+                <p>Sekarang setelah kita memahami bagaimana otak memproses bahasa, saatnya membahas langkah-langkah konkret untuk menyiapkan otak Anda sebelum memulai pembelajaran bahasa Inggris yang sesungguhnya. Pada bagian ini, kita akan membahas beberapa strategi yang telah terbukti secara ilmiah dapat meningkatkan kemampuan otak dalam menerima dan menyimpan informasi bahasa baru.</p>
                 
-                <div class="info-box english-term">
-                    <span class="term-label">🎵 Istilah: Phonological Mapping</span>
-                    <p><span class="en-term">Phonological mapping</span> adalah proses di mana otak membuat koneksi antara bunyi bahasa yang kita dengar dengan representasi mental di dalam otak kita. Semakin banyak kita terpapar pada bunyi-bunyi bahasa Inggris, semakin kuat peta bunyi yang terbentuk di otak kita.</p>
+                <h3>1. Priming: Menyiapkan Jalur Saraf</h3>
+                <p><span class="term-en">"Priming"</span> adalah teknik menyiapkan otak untuk menerima informasi tertentu dengan memberikan paparan awal yang ringan dan tidak menekan. Dalam konteks pembelajaran bahasa, priming bisa dilakukan dengan mendengarkan suara bahasa Inggris tanpa harus memahami maknanya. Tujuannya adalah membiasakan otak dengan ritme, intonasi, dan pola suara bahasa Inggris sebelum mempelajari makna kata-katanya.</p>
+                
+                <p>Cara sederhana untuk melakukan priming adalah dengan mendengarkan podcast, musik, atau video berbahasa Inggris selama 10-15 menit sehari tanpa usaha untuk memahami setiap kata. Biarkan otak Anda menyerap pola suara secara alami, sama seperti bayi mendengarkan bahasa orang tuanya sebelum mampu berbicara. Proses ini membentuk fondasi auditoris yang akan sangat membantu ketika Anda mulai mempelajari pengucapan dan kosakata secara lebih formal.</p>
+                
+                <h3>2. Menciptakan Keadaan Mental Optimal</h3>
+                <p>Sebelum setiap sesi pembelajaran, luangkan waktu 5-10 menit untuk menenangkan pikiran dan memasuki keadaan mental yang kondusif untuk belajar. Penelitian menunjukkan bahwa kondisi relaksasi yang fokus (sering disebut <span class="term-en">"flow state"</span> atau <span class="term-en">"alpha state"</span>) dapat meningkatkan kemampuan otak untuk menyerap informasi baru hingga 200% dibandingkan keadaan stres atau terburu-buru.</p>
+                
+                <p>Beberapa teknik yang bisa digunakan termasuk latihan pernapasan dalam, meditasi singkat, atau sekadar duduk tenang sambil melepaskan pikiran tentang hal-hal lain. Kuncinya adalah menciptakan ritual konsisten yang memberi sinyal pada otak bahwa "waktu untuk belajar" telah tiba. Dengan konsistensi, otak akan secara otomatis memasuki keadaan siap belajar setiap kali ritual tersebut dilakukan.</p>
+                
+                <h3>3. Mengurangi Cognitive Load</h3>
+                <p>Strategi ketiga adalah merancang pembelajaran dengan memperhatikan kapasitas memori kerja otak. Riset menunjukkan bahwa otak manusia hanya dapat memproses sekitar 7±2 informasi baru dalam satu waktu. Ketika jumlah informasi melebihi kapasitas ini, pembelajaran menjadi tidak efektif dan informasi cenderung tidak tersimpan dengan baik.</p>
+                
+                <p>Aplikasi praktis dari prinsip ini adalah memecah materi pembelajaran menjadi bagian-bagian kecil yang dapat dicerna dalam waktu 15-20 menit. Hindari mencoba mempelajari terlalu banyak hal sekaligus. Fokus pada satu konsep atau beberapa kosakata dalam setiap sesi, pastikan pemahaman yang mendalam sebelum melanjutkan ke materi berikutnya. Kualitas pemahaman selalu lebih penting daripada kuantitas materi yang dicover.</p>
+            </section>
+
+            <!-- Praktik Terarah -->
+            <section>
+                <h2>Praktik Terarah: Mempersiapkan Diri</h2>
+                
+                <div class="practice-box">
+                    <h4>🎯 Tugas Praktis Minggu Ini</h4>
+                    <p>Sebelum melanjutkan ke episode berikutnya, lakukan praktik persiapan berikut selama 7 hari untuk mempersiapkan otak Anda menerima materi bahasa Inggris yang akan datang.</p>
                 </div>
                 
-                <h3>Lima Langkah Membangun Phonological Mapping</h3>
-                <p>Untuk membangun peta bunyi bahasa Inggris yang kuat di otak kita, kita perlu melalui beberapa tahapan yang sistematis. Berikut adalah lima langkah yang dapat Anda ikuti untuk memulai proses ini dengan efektif dan menyenangkan:</p>
-                
-                <ol class="steps-list">
-                    <li>
-                        <strong>Dengarkan Tanpa Tekanan</strong><br>
-                        Dengarkan bunyi-bunyi bahasa Inggris tanpa harus memahami maknanya terlebih dahulu. Anda bisa mendengarkan lagu-lagu bahasa Inggris, podcast, atau video YouTube. Biarkan otak Anda terbiasa dengan ritme, intonasi, dan pola bunyi bahasa Inggris. Tahap ini disebut <span class="en-term">passive listening</span> atau mendengarkan pasif, di mana Anda tidak perlu berusaha memahami setiap kata yang diucapkan.
-                    </li>
-                    <li>
-                        <strong>Perhatikan Pola Bunyi</strong><br>
-                        Mulailah memperhatikan bunyi-bunyi apa saja yang berbeda dari bahasa Indonesia. Apakah ada bunyi yang terdengar asing? Apakah ada pola tertentu yang Anda dengar berulang-ulang? Catat observasi Anda, meskipun Anda belum mengerti artinya. Proses ini membantu otak Anda mulai mengenali pola-pola bunyi yang karakteristik untuk bahasa Inggris.
-                    </li>
-                    <li>
-                        <strong>Imitasi Sederhana</strong><br>
-                        Cobalah meniru bunyi-bunyi yang Anda dengar, meskipun Anda tidak tahu artinya. Tidak perlu sempurna! Yang penting adalah Anda melatih alat ucap (mulut, lidah, bibir) untuk menghasilkan bunyi-bunyi baru. Ini disebut <span class="en-term">shadowing</span>, yaitu teknik meniru ucapan pembicara asli secara langsung setelah mendengarnya.
-                    </li>
-                    <li>
-                        <strong>Rekam dan Bandingkan</strong><br>
-                        Rekam suara Anda saat mengucapkan kata-kata atau frasa bahasa Inggris. Kemudian, bandingkan dengan pengucapan penutur asli. Perhatikan perbedaannya tanpa menghakimi diri sendiri. Identifikasi area mana yang perlu diperbaiki dan area mana yang sudah baik. Proses perbandingan ini sangat penting untuk mempercepat pembentukan peta bunyi yang akurat.
-                    </li>
-                    <li>
-                        <strong>Ulangi dengan Konsisten</strong><br>
-                        Pengulangan adalah kunci utama dalam membangun phonological mapping yang kuat. Luangkan waktu 10-15 menit setiap hari untuk berlatih mendengarkan dan mengucapkan bunyi-bunyi bahasa Inggris. Konsistensi jauh lebih penting daripada durasi yang panjang. Lebih baik berlatih 15 menit setiap hari daripada 2 jam sekali seminggu, karena otak membutuhkan pengulanan yang konsisten untuk membentuk koneksi saraf yang permanen.
-                    </li>
+                <h3>Rutinitas Harian (10-15 Menit)</h3>
+                <ol>
+                    <li><strong>Persiapan Mental (3 menit):</strong> Duduk tenang, tutup mata, dan ambil napas dalam-dalam lima kali. Bayangkan diri Anda sedang berada di tempat yang tenang dan nyaman. Lepaskan semua kekhawatiran dan pikiran tentang tugas lain yang harus dilakukan. Fokuskan pikiran pada niat untuk belajar dengan ikhlas dan terbuka.</li>
+                    <li><strong>Auditory Priming (7 menit):</strong> Putar konten audio berbahasa Inggris dengan volume yang nyaman. Bisa berupa podcast, audiobook, musik, atau video YouTube. Jangan mencoba memahami setiap kata—cukup dengarkan dan biarkan otak Anda terbiasa dengan aliran suara bahasa Inggris. Perhatikan ritme, intonasi naik-turun, dan jeda antar kata.</li>
+                    <li><strong>Refleksi Singkat (3 menit):</strong> Setelah mendengarkan, luangkan waktu untuk merefleksikan pengalaman Anda. Apakah ada kata atau frasa yang terdengar familiar? Bagaimana perasaan Anda selama proses mendengarkan? Apakah Anda merasa rileks atau tegang? Catat pengamatan Anda dalam jurnal pembelajaran.</li>
                 </ol>
                 
-                <div class="illustration-box">
-                    <div class="illustration-icon">👂🗣️🔄</div>
-                    <p class="illustration-title">Siklus Phonological Mapping</p>
-                    <p><strong>Dengar</strong> (terima bunyi) → <strong>Kenali</strong> (buat peta mental) → <strong>Ucapkan</strong> (latih alat ucap) → <strong>Ulangi</strong> (kuatkan koneksi)</p>
-                </div>
+                <h3>Penyesuaian Gaya Hidup</h3>
+                <p>Selain rutinitas harian di atas, ada beberapa penyesuaian gaya hidup yang dapat mendukung kesiapan otak Anda untuk belajar. Pertama, pastikan tidur yang cukup (7-8 jam per malam) karena pembentukan memori jangka panjang terjadi terutama selama tidur. Kedua, konsumsi makanan bergizi yang mendukung kesehatan otak seperti ikan, kacang-kacangan, buah beri, dan sayuran hijau. Ketiga, lakukan aktivitas fisik secara teratur karena olahraga meningkatkan aliran darah ke otak dan merangsang produksi faktor neurotropik yang mendukung pembentukan koneksi saraf baru.</p>
+                
+                <h3>Doa dan Niat Pembelajaran</h3>
+                <p>Sebagai seorang Muslim, niatkan setiap proses pembelajaran sebagai bentuk ibadah kepada Allah SWT. Menuntut ilmu adalah kewajiban bagi setiap Muslim, dan mempelajari bahasa asing dapat menjadi sarana untuk menyebarkan kebaikan dan menolong sesama. Sebelum memulai setiap sesi belajar, bacakan doa memohon ilmu yang bermanfaat:</p>
+                
+                <p style="text-align: center; font-style: italic; background: linear-gradient(135deg, #e8f5e9, #c8e6c9); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--border);">
+                    "Rabbi zidni 'ilma warzuqni fahma"<br>
+                    (Ya Tuhanku, tambahkanlah kepadaku ilmu dan anugerahkanlah kepadaku pemahaman)
+                </p>
+                
+                <p>Dengan niat yang lurus dan ikhlas karena Allah, proses pembelajaran tidak hanya akan lebih bermakna tetapi juga diberkahi dengan kemudahan dan pemahaman yang lebih dalam. Ingatlah bahwa setiap usaha untuk memperbaiki diri dan menambah ilmu yang bermanfaat adalah amal sholeh yang akan mendatangkan pahala, insyaAllah.</p>
             </section>
-            
-            <!-- Structural Awareness Section -->
-            <section>
-                <h2>Kesadaran Struktur: Structural Awareness</h2>
-                <p>Bahasa tidak hanya terdiri dari kata-kata yang berdiri sendiri. Setiap bahasa memiliki struktur atau pola tertentu yang mengatur bagaimana kata-kata disusun menjadi kalimat bermakna. Kemampuan untuk mengenali dan memahami struktur ini disebut <span class="en-term">structural awareness</span>. Tanpa kesadaran akan struktur bahasa, kita akan kesulitan memahami mengapa kalimat bahasa Inggris disusun dengan cara tertentu yang berbeda dari bahasa Indonesia.</p>
-                
-                <p>Mari kita lihat contoh sederhana. Dalam bahasa Indonesia, kita mengatakan "Saya makan nasi". Struktur kalimatnya adalah: Subjek (Saya) + Predikat (makan) + Objek (nasi). Dalam bahasa Inggris, kalimat yang sama adalah "I eat rice", dengan struktur yang serupa: Subject (I) + Verb (eat) + Object (rice). Namun, tidak semua kalitas mengikuti pola yang sama! Perhatikan kalimat tanya: dalam bahasa Indonesia "Apa kamu makan?" sedangkan dalam bahasa Inggris "What do you eat?". Struktur kalimatnya sangat berbeda karena bahasa Inggris menggunakan kata bantu "do" untuk pertanyaan, yang tidak ada dalam bahasa Indonesia.</p>
-                
-                <div class="info-box english-term">
-                    <span class="term-label">🏗️ Istilah: Structural Awareness</span>
-                    <p><span class="en-term">Structural awareness</span> adalah kemampuan untuk mengenali dan memahami bagaimana bahasa disusun dan diorganisir. Ini mencakup pemahaman tentang urutan kata, hubungan antar kata dalam kalimat, dan pola-pola gramatikal yang mengatur penggunaan bahasa.</p>
-                </div>
-                
-                <h3>Perbandingan Struktur Sederhana</h3>
-                <p>Mari kita pelajari beberapa contoh perbandingan struktur antara bahasa Indonesia dan bahasa Inggris. Pada tahap awal ini, kita tidak perlu menghafal semua aturan gramatika. Cukup menyadari bahwa ada perbedaan struktur, dan lama-kelamaan otak kita akan secara natural mengenali pola-pola tersebut melalui paparan berulang.</p>
-                
-                <div class="info-box">
-                    <span class="term-label">📝 Contoh Struktur Kalimat Dasar</span>
-                    <p><strong>Bahasa Indonesia:</strong> "Buku itu di atas meja"<br>
-                    <strong>Bahasa Inggris:</strong> "The book is on the table"<br><br>
-                    Perhatikan bahwa bahasa Inggris menggunakan kata kerja penghubung "is" yang dalam bahasa Indonesia tidak selalu diperlukan. Selain itu, bahasa Inggris menggunakan artikel "the" sebelum kata benda, yang tidak ada dalam bahasa Indonesia. Perbedaan-perbedaan kecil seperti ini perlu kita sadari untuk membangun fondasi yang kuat dalam mempelajari bahasa Inggris.</p>
-                </div>
-                
-                <p>Pada tahap awal ini, fokus kita bukan untuk menguasai semua aturan gramatika bahasa Inggris. Justru, kita ingin membangun kesadaran bahwa setiap bahasa memiliki "logika" dan "struktur" tersendiri yang mungkin berbeda dari bahasa yang sudah kita kuasai. Dengan kesadaran ini, otak kita akan lebih terbuka dan responsif ketika nanti kita mempelajari struktur bahasa Inggris secara lebih detail dalam episode-episode berikutnya. Proses ini mirip seperti belajar bermain musik: sebelum mempelajari notasi dan teori musik yang kompleks, kita perlu terlebih dahulu mengenal bahwa musik memiliki ritme, melodi, dan harmoni yang saling berkaitan.</p>
-            </section>
-            
+
             <!-- Ad Placeholder 3 -->
             <div class="ad-placeholder">
-                <p class="ad-label">Advertisement</p>
-                <p>Google AdSense Slot 3</p>
+                <span>Advertisement</span>
             </div>
-            
-            <!-- Survival Communication Section -->
+
+            <!-- Interactive Quiz -->
             <section>
-                <h2>Komunikasi Bertahan: Survival Communication</h2>
-                <p>Bayangkan Anda berada di negara yang penduduknya hanya berbicara bahasa Inggris. Anda tidak tahu di mana Anda berada, Anda lapar, dan Anda perlu mencari tempat makan. Apa yang akan Anda lakukan? Situasi ini menggambarkan pentingnya <span class="en-term">survival communication</span>, yaitu kemampuan untuk berkomunikasi dalam situasi-situasi dasar dan mendesak yang kita butuhkan untuk "bertahan hidup" dalam lingkungan berbahasa Inggris.</p>
-                
-                <p>Survival communication bukan tentang menguasai bahasa Inggris secara sempurna. Justru, ini adalah tentang kemampuan minimal untuk menyampaikan kebutuhan dasar kita dan memahami informasi penting. Ketika Anda bepergian ke luar negeri, Anda perlu tahu bagaimana cara meminta bantuan, bertanya arah, memesan makanan, atau mencari penginapan. Keahlian-keahlian komunikasi dasar inilah yang akan kita pelajari secara bertahap dalam program mibenglish ini.</p>
-                
-                <div class="info-box english-term">
-                    <span class="term-label">🆘 Istilah: Survival Communication</span>
-                    <p><span class="en-term">Survival communication</span> merujuk pada kemampuan berkomunikasi untuk kebutuhan dasar dan mendesak. Ini mencakup kemampuan untuk: meminta bantuan, bertanya tentang lokasi, membeli barang kebutuhan, memesan makanan, dan berinteraksi dalam situasi sehari-hari yang krusial.</p>
+                <div class="quiz-container">
+                    <div class="quiz-header">
+                        <h3>🧩 Uji Pemahaman Anda</h3>
+                        <p>Jawab pertanyaan berikut untuk menguji sejauh mana Anda memahami materi episode ini.</p>
+                        <div class="quiz-progress">
+                            <div class="quiz-progress-bar" id="progressBar"></div>
+                        </div>
+                        <span id="questionCounter">Pertanyaan 1 dari 5</span>
+                    </div>
+                    
+                    <div id="quizContent">
+                        <div class="quiz-question" id="questionText"></div>
+                        <div class="quiz-options" id="optionsContainer"></div>
+                        <div class="quiz-feedback" id="feedback"></div>
+                        <button class="quiz-next-btn" id="nextBtn" style="display: none;">Pertanyaan Berikutnya</button>
+                    </div>
+                    
+                    <div class="quiz-result" id="quizResult">
+                        <div class="quiz-score" id="finalScore">0/5</div>
+                        <p style="margin-top: 1rem; color: var(--text-secondary);">Selamat! Anda telah menyelesaikan kuis ini.</p>
+                        <button class="quiz-next-btn" onclick="restartQuiz()">Ulangi Kuis</button>
+                    </div>
                 </div>
-                
-                <h3>Contoh Situasi Survival Communication</h3>
-                <p>Mari kita lihat beberapa contoh situasi di mana survival communication sangat dibutuhkan. Pada tahap ini, Anda tidak perlu menghafal semua frasa. Cukup kenali pola-pola dasarnya dan sadari bahwa frasa-frasa ini akan menjadi fondasi penting dalam perjalanan belajar bahasa Inggris Anda.</p>
-                
-                <div class="info-box">
-                    <span class="term-label">🏨 Situasi 1: Meminta Bantuan</span>
-                    <p><strong>Ketika Anda butuh bantuan:</strong><br>
-                    Bahasa Indonesia: "Tolong, saya butuh bantuan."<br>
-                    Bahasa Inggris: "<span class="en-term">Please, I need help.</span>"<br><br>
-                    <strong>Ketika Anda tersesat:</strong><br>
-                    Bahasa Indonesia: "Di mana stasiun kereta?"<br>
-                    Bahasa Inggris: "<span class="en-term">Where is the train station?</span>"</p>
-                </div>
-                
-                <div class="info-box">
-                    <span class="term-label">🍽️ Situasi 2: Kebutuhan Dasar</span>
-                    <p><strong>Ketika Anda lapar:</strong><br>
-                    Bahasa Indonesia: "Saya ingin makan."<br>
-                    Bahasa Inggris: "<span class="en-term">I want to eat.</span>"<br><br>
-                    <strong>Ketika Anda haus:</strong><br>
-                    Bahasa Indonesia: "Boleh saya minum air?"<br>
-                    Bahasa Inggris: "<span class="en-term">Can I have water?</span>"</p>
-                </div>
-                
-                <p>Perhatikan bahwa semua contoh di atas menggunakan struktur kalimat yang sangat sederhana. Ini disengaja! Survival communication berfokus pada kesederhanaan dan kejelasan pesan. Anda tidak perlu menggunakan grammar yang kompleks atau kosakata yang sulit. Yang terpenting adalah pesan Anda dapat dipahami oleh lawan bicara, meskipun dengan cara yang sederhana dan mungkin tidak sepenuhnya benar secara gramatikal. Seiring waktu, Anda akan belajar untuk menyempurnakan cara berkomunikasi Anda.</p>
             </section>
-            
+
+            <!-- Next Episode -->
+            <section class="next-episode">
+                <h3>Episode Selanjutnya</h3>
+                <p>Nantikan materi terbaru yang akan membahas topik lebih dalam!</p>
+                <h2 class="next-episode-title">Ep 2: English Vowel System: Short & Long Sound Recognition</h2>
+                <p>Setelah memahami cara menyiapkan otak untuk menerima bahasa baru, episode berikutnya akan membahas sistem vokal bahasa Inggris—fondasi penting untuk pengucapan yang akurat. Anda akan belajar membedakan suara vokal pendek dan panjang yang sering menjadi sumber kebingungan bagi pembelajar Indonesia.</p>
+                <a href="https://mibenglish.com/season1/eps2.html" class="next-episode-btn">Lanjut ke Episode 2 →</a>
+            </section>
+
             <!-- Ad Placeholder 4 -->
             <div class="ad-placeholder">
-                <p class="ad-label">Advertisement</p>
-                <p>Google AdSense Slot 4</p>
+                <span>Advertisement</span>
             </div>
-            
-            <!-- Practical Tips Section -->
-            <section>
-                <h2>Tips Praktis untuk Persiapan Otak</h2>
-                <p>Sekarang Anda sudah memahami konsep-konsep dasar tentang bagaimana otak mempelajari bahasa baru. Mari kita bahas beberapa tips praktis yang dapat Anda terapkan sehari-hari untuk mempersiapkan otak Anda dalam mempelajari bahasa Inggris secara efektif dan menyenangkan. Ingat, kunci utama dari semua tips ini adalah konsistensi, bukan intensitas. Lebih baik melakukan sedikit setiap hari daripada banyak sekali tapi jarang.</p>
-                
-                <div class="info-box">
-                    <span class="term-label">⏰ Tips 1: Tentukan Waktu Belajar yang Konsisten</span>
-                    <p>Otak kita bekerja optimal ketika ada rutinitas. Tentukan waktu tertentu setiap hari untuk "paparan bahasa Inggris", misalnya 15 menit setiap pagi saat sarapan atau 10 menit sebelum tidur. Pada tahap persiapan ini, yang terpenting adalah membangun kebiasaan mendengarkan bunyi-bunyi bahasa Inggris secara teratur. Anda bisa mendengarkan podcast, musik, atau video YouTube dalam bahasa Inggris sambil melakukan aktivitas lain seperti memasak, berolahraga, atau bersih-bersih.</p>
-                </div>
-                
-                <div class="info-box">
-                    <span class="term-label">🎧 Tips 2: Ciptakan Lingkungan "Bahasa Inggris"</span>
-                    <p>Ubah bahasa pada smartphone, aplikasi media sosial, atau video game Anda ke bahasa Inggris. Ini akan memaksa otak Anda untuk terbiasa melihat dan membaca teks bahasa Inggris setiap hari. Awalnya mungkin terasa tidak nyaman, namun otak Anda akan dengan cepat beradaptasi. Paparan pasif seperti ini sangat efektif untuk membangun fondasi tanpa Anda menyadari sedang "belajar".</p>
-                </div>
-                
-                <div class="info-box">
-                    <span class="term-label">📓 Tips 3: Tulis Pengamatan Anda</span>
-                    <p>Siapkan buku catatan khusus untuk menuliskan pengamatan Anda tentang bahasa Inggris. Misalnya, bunyi apa yang Anda temukan unik atau berbeda dari bahasa Indonesia, kata-kata yang sering Anda dengar, atau pola-pola yang Anda perhatikan. Tidak perlu formal! Yang penting adalah proses mengamati dan mencatat ini akan membantu otak Anda lebih fokus dan sadar terhadap bahasa Inggris di sekitar Anda.</p>
-                </div>
-                
-                <div class="info-box">
-                    <span class="term-label">😌 Tips 4: Jangan Takut Salah</span>
-                    <p>Kesalahan adalah bagian penting dari proses belajar. Setiap kali Anda salah mengucapkan kata atau salah menggunakan struktur kalimat, otak Anda sebenarnya sedang belajar! Kesalahan memberikan informasi berharga kepada otak tentang apa yang perlu diperbaiki. Jangan biarkan rasa takut salah menghalangi Anda untuk berlatih. Ingat, bahkan penutur asli pun kadang salah dalam berbicara bahasa mereka sendiri!</p>
-                </div>
-                
-                <div class="info-box">
-                    <span class="term-label">🎯 Tips 5: Fokus pada Proses, Bukan Hasil</span>
-                    <p>Banyak orang menyerah belajar bahasa karena terlalu fokus pada hasil akhir (misalnya "saya harus bisa berbicara lancar dalam 3 bulan"). Alih-alih, fokuslah pada prosesnya: "Hari ini saya akan mendengarkan 10 menit podcast bahasa Inggris" atau "Minggu ini saya akan mencoba mengucapkan 5 kata baru". Dengan fokus pada proses yang dapat Anda kontrol, hasil akan mengikuti dengan sendirinya seiring waktu.</p>
-                </div>
-            </section>
-            
-            <!-- Interactive Game Section -->
-            <section id="interactive-game" class="game-section">
-                <h2>🎮 Quest Interaktif: Uji Pemahamanmu!</h2>
-                <p>Selamat! Kamu telah mempelajari konsep-konsep penting dalam Episode 1. Sekarang saatnya menguji pemahamanmu melalui quest interaktif yang menyenangkan. Jawab semua pertanyaan dan selesaikan misi untuk memperkuat ingatanmu!</p>
-                
-                <!-- Quest 1: Quiz -->
-                <div class="quest-card">
-                    <div class="quest-title">
-                        <span class="quest-icon">📝</span>
-                        <span>Quest 1: Kuis Pemahaman Konsep</span>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats-container">
+                    <div class="stat-item active">
+                        <span class="stat-icon">👁️</span>
+                        <span class="stat-number" id="visitCount">0</span>
+                        <div class="stat-label">Total Kunjungan</div>
                     </div>
-                    <div class="interactive-quiz" id="quiz1">
-                        <p class="quiz-question">1. Apa yang dimaksud dengan "neuroplasticity"?</p>
-                        <div class="quiz-options">
-                            <div class="quiz-option" data-correct="false" onclick="selectOption(this, 1)">
-                                <div class="quiz-radio"></div>
-                                <span>Kemampuan otak untuk melupakan informasi lama</span>
-                            </div>
-                            <div class="quiz-option" data-correct="true" onclick="selectOption(this, 1)">
-                                <div class="quiz-radio"></div>
-                                <span>Kemampuan otak untuk membentuk koneksi baru saat belajar</span>
-                            </div>
-                            <div class="quiz-option" data-correct="false" onclick="selectOption(this, 1)">
-                                <div class="quiz-radio"></div>
-                                <span>Proses penuaan sel-sel otak manusia</span>
-                            </div>
-                            <div class="quiz-option" data-correct="false" onclick="selectOption(this, 1)">
-                                <div class="quiz-radio"></div>
-                                <span>Kondisi otak yang tidak bisa berubah</span>
-                            </div>
-                        </div>
-                        <div class="quiz-feedback" id="feedback1"></div>
+                    <div class="stat-item active">
+                        <span class="stat-icon">🌐</span>
+                        <span class="stat-number" id="onlineCount">0</span>
+                        <div class="stat-label">Pembelajar Online</div>
                     </div>
-                    
-                    <div class="interactive-quiz" id="quiz2" style="margin-top: 1.5rem;">
-                        <p class="quiz-question">2. Apa tujuan utama dari "phonological mapping"?</p>
-                        <div class="quiz-options">
-                            <div class="quiz-option" data-correct="false" onclick="selectOption(this, 2)">
-                                <div class="quiz-radio"></div>
-                                <span>Menghafal semua kata dalam kamus</span>
-                            </div>
-                            <div class="quiz-option" data-correct="false" onclick="selectOption(this, 2)">
-                                <div class="quiz-radio"></div>
-                                <span>Menulis teks bahasa Inggris dengan sempurna</span>
-                            </div>
-                            <div class="quiz-option" data-correct="true" onclick="selectOption(this, 2)">
-                                <div class="quiz-radio"></div>
-                                <span>Membuat peta bunyi bahasa di otak</span>
-                            </div>
-                            <div class="quiz-option" data-correct="false" onclick="selectOption(this, 2)">
-                                <div class="quiz-radio"></div>
-                                <span>Menerjemahkan bahasa dengan cepat</span>
-                            </div>
-                        </div>
-                        <div class="quiz-feedback" id="feedback2"></div>
+                    <div class="stat-item">
+                        <span class="stat-icon">📖</span>
+                        <span class="stat-number" id="episodeCount">1</span>
+                        <div class="stat-label">Episode Tersedia</div>
                     </div>
-                    
-                    <div class="interactive-quiz" id="quiz3" style="margin-top: 1.5rem;">
-                        <p class="quiz-question">3. "Survival communication" adalah...</p>
-                        <div class="quiz-options">
-                            <div class="quiz-option" data-correct="false" onclick="selectOption(this, 3)">
-                                <div class="quiz-radio"></div>
-                                <span>Kemampuan berbicara bahasa Inggris dengan lancar</span>
-                            </div>
-                            <div class="quiz-option" data-correct="true" onclick="selectOption(this, 3)">
-                                <div class="quiz-radio"></div>
-                                <span>Kemampuan berkomunikasi untuk kebutuhan dasar</span>
-                            </div>
-                            <div class="quiz-option" data-correct="false" onclick="selectOption(this, 3)">
-                                <div class="quiz-radio"></div>
-                                <span>Kemampuan menulis esai dalam bahasa Inggris</span>
-                            </div>
-                            <div class="quiz-option" data-correct="false" onclick="selectOption(this, 3)">
-                                <div class="quiz-radio"></div>
-                                <span>Kemampuan mengajar bahasa Inggris</span>
-                            </div>
-                        </div>
-                        <div class="quiz-feedback" id="feedback3"></div>
+                    <div class="stat-item">
+                        <span class="stat-icon">⏱️</span>
+                        <span class="stat-number" id="readTime">15</span>
+                        <div class="stat-label">Menit Baca</div>
                     </div>
                 </div>
-                
-                <!-- Quest 2: Matching Game -->
-                <div class="quest-card">
-                    <div class="quest-title">
-                        <span class="quest-icon">🔗</span>
-                        <span>Quest 2: Cocokkan Istilah dan Makna!</span>
-                    </div>
-                    <div class="matching-game">
-                        <p>Klik istilah di kolom kiri, lalu klik makna yang tepat di kolom kanan!</p>
-                        <div class="matching-grid" id="matchingGame">
-                            <!-- Terms -->
-                            <div class="matching-item term" data-pair="1" onclick="selectMatching(this, 'term')">Neuroplasticity</div>
-                            <div class="matching-item term" data-pair="2" onclick="selectMatching(this, 'term')">Phonological Mapping</div>
-                            <div class="matching-item term" data-pair="3" onclick="selectMatching(this, 'term')">Structural Awareness</div>
-                            <div class="matching-item term" data-pair="4" onclick="selectMatching(this, 'term')">Survival Communication</div>
-                            <!-- Definitions -->
-                            <div class="matching-item definition" data-pair="2" onclick="selectMatching(this, 'definition')">Membuat peta bunyi bahasa</div>
-                            <div class="matching-item definition" data-pair="4" onclick="selectMatching(this, 'definition')">Komunikasi kebutuhan dasar</div>
-                            <div class="matching-item definition" data-pair="1" onclick="selectMatching(this, 'definition')">Kemampuan otak beradaptasi</div>
-                            <div class="matching-item definition" data-pair="3" onclick="selectMatching(this, 'definition')">Memahami struktur bahasa</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Game Progress -->
-                <div class="game-progress">
-                    <p><strong>Progress Quest:</strong> <span id="progressText">0 dari 7 misi selesai</span></p>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progressFill"></div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Ad Placeholder 5 -->
-            <div class="ad-placeholder">
-                <p class="ad-label">Advertisement</p>
-                <p>Google AdSense Slot 5</p>
-            </div>
-            
-            <!-- Next Episode Preview -->
-            <section class="next-episode">
-                <h2>Episode Selanjutnya</h2>
-                <p class="next-ep-title">Ep 2: English Vowel System<br>Short & Long Sound Recognition</p>
-                <p>Pada episode berikutnya, kita akan mempelajari sistem vokal bahasa Inggris, termasuk perbedaan antara bunyi vokal pendek (short vowels) dan vokal panjang (long vowels). Pengetahuan ini sangat penting untuk pengucapan yang akurat!</p>
-                <a href="https;//mibenglish.github.io/season1/eps2.html" class="next-ep-btn">Lanjut ke Episode 2 →</a>
             </section>
         </article>
     </main>
-    
+
     <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <span class="brand-name">mibenglish</span>
-                <p class="tagline">Belajar Bahasa Inggris dari Nol dengan Metode Ilmiah</p>
+                <h2>mibenglish</h2>
+                <p class="footer-tagline">Belajar Bahasa Inggris dengan Cara yang Tepat</p>
             </div>
             
             <div class="social-links">
-                <!-- YouTube -->
-                <a href="https://www.youtube.com/@mibenglish" target="_blank" rel="noopener" aria-label="YouTube mibenglish">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
+                <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener" aria-label="Ikuti kami di YouTube" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    YouTube
                 </a>
-                <!-- TikTok -->
-                <a href="https://www.tiktok.com/@mibenglish" target="_blank" rel="noopener" aria-label="TikTok mibenglish">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                    </svg>
+                <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener" aria-label="Ikuti kami di TikTok" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                    TikTok
                 </a>
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/mibenglish" target="_blank" rel="noopener" aria-label="Instagram mibenglish">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
+                <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener" aria-label="Ikuti kami di Instagram" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Instagram
                 </a>
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/mibenglish" target="_blank" rel="noopener" aria-label="Facebook mibenglish">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
+                <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener" aria-label="Ikuti kami di Facebook" class="social-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    Facebook
                 </a>
             </div>
             
-            <p class="follow-text">Ikuti kami di YouTube, TikTok, Instagram, dan Facebook untuk update materi terbaru.</p>
+            <p class="cta-paragraph">Ikuti kami di YouTube, TikTok, Instagram, dan Facebook untuk update materi terbaru!</p>
             
-            <div class="quick-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="https://mibenglish.github.io/index.html">Beranda</a></li>
-                    <li><a href="https://mibenglish.github.io/about.html">About Us</a></li>
-                    <li><a href="https://mibenglish.github.io/privacy.html">Privacy Policy</a></li>
-                    <li><a href="https://mibenglish.github.io/terms.html">Terms of Service</a></li>
-                    <li><a href="https://mibenglish.github.io/disclaimer.html">Disclaimer</a></li>
-                    <li><a href="https://mibenglish.github.io/contact.html">Contact</a></li>
-                </ul>
+            <nav class="quick-links">
+                <a href="https://mibenglish.com">Beranda</a>
+                <a href="https://mibenglish.com/about">About Us</a>
+                <a href="https://mibenglish.com/privacy">Privacy Policy</a>
+                <a href="https://mibenglish.com/terms">Terms of Service</a>
+                <a href="https://mibenglish.com/disclaimer">Disclaimer</a>
+                <a href="https://mibenglish.com/contact">Contact</a>
+            </nav>
+            
+            <div class="copyright">
+                <p>&copy; 2026 mibenglish. All rights reserved.</p>
             </div>
-            
-            <p class="copyright">© 2025 mibenglish. All rights reserved.</p>
         </div>
     </footer>
-    
-    <!-- Smooth Scroll Script -->
+
+    <!-- Share Button -->
+    <button class="share-btn" id="shareBtn" aria-label="Share this page">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+    </button>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
     <script>
-        // Smooth scroll with header offset
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        // ============================================
+        // Quiz System
+        // ============================================
+        const quizQuestions = [
+            {
+                question: "Apa yang dimaksud dengan 'language encoding' dalam konteks pembelajaran bahasa?",
+                options: [
+                    "Menerjemahkan teks dari bahasa asing ke bahasa ibu",
+                    "Proses otak menyimpan dan memproses informasi bahasa baru",
+                    "Menulis kode program dalam bahasa Inggris",
+                    "Menghafal kosakata bahasa Inggris"
+                ],
+                correct: 1
+            },
+            {
+                question: "Mengapa keadaan mental yang rileks penting dalam pembelajaran bahasa?",
+                options: [
+                    "Karena otak lebih mudah menyerap informasi tanpa tekanan stres",
+                    "Karena belajar sambil santai lebih menyenangkan",
+                    "Tidak ada hubungannya dengan efektivitas pembelajaran",
+                    "Karena pembelajaran bahasa tidak membutuhkan konsentrasi"
+                ],
+                correct: 0
+            },
+            {
+                question: "Teknik 'priming' dalam pembelajaran bahasa bertujuan untuk...",
+                options: [
+                    "Menghafal sebanyak mungkin kosakata baru",
+                    "Membiasakan otak dengan pola suara bahasa target sebelum mempelajari maknanya",
+                    "Mengukur kemampuan bahasa pembelajar",
+                    "Menerjemahkan teks bahasa Inggris dengan cepat"
+                ],
+                correct: 1
+            },
+            {
+                question: "Apa yang terjadi ketika otak mengalami 'cognitive overload'?",
+                options: [
+                    "Pembelajaran menjadi lebih efektif",
+                    "Informasi lebih mudah diingat",
+                    "Informasi tidak dapat diproses dengan baik dan mudah terlupakan",
+                    "Otak menjadi lebih cepat mempelajari bahasa baru"
+                ],
+                correct: 2
+            },
+            {
+                question: "Area otak apa yang bertanggung jawab untuk produksi bicara dan pemrosesan tata bahasa?",
+                options: [
+                    "Area Wernicke",
+                    "Amygdala",
+                    "Hippocampus",
+                    "Area Broca"
+                ],
+                correct: 3
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function initQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('quizResult').classList.remove('show');
+            document.getElementById('quizContent').style.display = 'block';
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const q = quizQuestions[currentQuestion];
+            document.getElementById('questionText').textContent = q.question;
+            document.getElementById('questionCounter').textContent = `Pertanyaan ${currentQuestion + 1} dari ${quizQuestions.length}`;
+            document.getElementById('progressBar').style.width = ((currentQuestion) / quizQuestions.length * 100) + '%';
+            
+            const optionsContainer = document.getElementById('optionsContainer');
+            optionsContainer.innerHTML = '';
+            
+            q.options.forEach((option, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'quiz-option';
+                btn.textContent = option;
+                btn.onclick = () => selectAnswer(index);
+                optionsContainer.appendChild(btn);
+            });
+            
+            document.getElementById('feedback').classList.remove('show', 'success', 'error');
+            document.getElementById('nextBtn').style.display = 'none';
+        }
+
+        function selectAnswer(index) {
+            const options = document.querySelectorAll('.quiz-option');
+            const correct = quizQuestions[currentQuestion].correct;
+            
+            options.forEach((opt, i) => {
+                opt.onclick = null;
+                if (i === correct) {
+                    opt.classList.add('correct');
+                } else if (i === index && i !== correct) {
+                    opt.classList.add('incorrect');
+                }
+            });
+            
+            const feedback = document.getElementById('feedback');
+            if (index === correct) {
+                score++;
+                feedback.textContent = '✅ Benar! Pemahaman Anda tepat.';
+                feedback.classList.add('show', 'success');
+            } else {
+                feedback.textContent = '❌ Kurang tepat. Jawaban yang benar ditandai hijau.';
+                feedback.classList.add('show', 'error');
+            }
+            
+            document.getElementById('nextBtn').style.display = 'block';
+            document.getElementById('nextBtn').textContent = currentQuestion === quizQuestions.length - 1 ? 'Lihat Hasil' : 'Pertanyaan Berikutnya';
+        }
+
+        document.getElementById('nextBtn').onclick = function() {
+            currentQuestion++;
+            if (currentQuestion < quizQuestions.length) {
+                showQuestion();
+            } else {
+                showResult();
+            }
+        };
+
+        function showResult() {
+            document.getElementById('quizContent').style.display = 'none';
+            document.getElementById('quizResult').classList.add('show');
+            document.getElementById('finalScore').textContent = score + '/' + quizQuestions.length;
+            document.getElementById('progressBar').style.width = '100%';
+        }
+
+        function restartQuiz() {
+            initQuiz();
+        }
+
+        initQuiz();
+
+        // ============================================
+        // Dynamic Statistics System - Obfuscated
+        // ============================================
+        (function() {
+            'use strict';
+            
+            // Configuration constants (obfuscated)
+            const _0xF3D2 = 0x18B80; // 101376 ms per day increment base
+            const _0xA7B1 = 'mib_enc_v2_';
+            const _0xC4E8 = new Date('2026-01-01T00:00:00Z').getTime();
+            const _0xD9F0 = 86400000; // milliseconds per day
+            const _0xE2A7 = 97; // minimum online
+            const _0xB5C3 = 500; // maximum online
+            
+            // Easing function - ease out quart
+            function _0xJ4K(x) {
+                return 1 - Math.pow(1 - x, 4);
+            }
+            
+            // Format number with thousand separators
+            function _0xL8M(num) {
+                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+            }
+            
+            // Animate counter with easing
+            function _0xN5P(element, targetValue, duration) {
+                const startValue = parseInt(element.textContent.replace(/\./g, '')) || 0;
+                const diff = targetValue - startValue;
+                const startTime = performance.now();
+                
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easedProgress = _0xJ4K(progress);
+                    const currentValue = Math.floor(startValue + diff * easedProgress);
                     
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
+                    element.textContent = _0xL8M(currentValue);
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+                
+                requestAnimationFrame(update);
+            }
+            
+            // Calculate total visits based on elapsed time
+            function _0xQ7R() {
+                const now = Date.now();
+                const daysSinceStart = Math.floor((now - _0xC4E8) / _0xD9F0);
+                
+                // Get stored values
+                let storedVisits = localStorage.getItem(_0xA7B1 + 'visits');
+                let storedTimestamp = localStorage.getItem(_0xA7B1 + 'timestamp');
+                let lastOnline = localStorage.getItem(_0xA7B1 + 'online') || _0xE2A7;
+                
+                let totalVisits;
+                
+                if (storedVisits && storedTimestamp) {
+                    // Calculate based on time difference
+                    const prevVisits = parseInt(storedVisits);
+                    const prevTimestamp = parseInt(storedTimestamp);
+                    const daysDiff = Math.floor((now - prevTimestamp) / _0xD9F0);
+                    
+                    if (daysDiff > 0) {
+                        // Accumulate growth for missed days
+                        let increment = 0;
+                        for (let i = 0; i < daysDiff; i++) {
+                            if (prevVisits + increment < 1000000) {
+                                // Phase 1: 150-600 per day
+                                increment += Math.floor(Math.random() * 450) + 150;
+                            } else {
+                                // Phase 2: 10-100 per day
+                                increment += Math.floor(Math.random() * 90) + 10;
+                            }
+                        }
+                        totalVisits = prevVisits + increment;
+                    } else {
+                        totalVisits = prevVisits;
+                    }
+                } else {
+                    // First visit - calculate from start date
+                    totalVisits = 0;
+                    for (let i = 0; i < daysSinceStart; i++) {
+                        if (totalVisits < 1000000) {
+                            totalVisits += Math.floor(Math.random() * 450) + 150;
+                        } else {
+                            totalVisits += Math.floor(Math.random() * 90) + 10;
+                        }
+                    }
+                }
+                
+                // Ensure minimum starting value
+                if (totalVisits < 50000 && daysSinceStart >= 1) {
+                    totalVisits = 50000 + Math.floor(Math.random() * 20000);
+                }
+                
+                // Store updated values
+                localStorage.setItem(_0xA7B1 + 'visits', totalVisits.toString());
+                localStorage.setItem(_0xA7B1 + 'timestamp', now.toString());
+                
+                return {
+                    visits: totalVisits,
+                    online: parseInt(lastOnline)
+                };
+            }
+            
+            // Generate realistic online count
+            function _0xS8T(current) {
+                const change = Math.floor(Math.random() * 21) - 10; // -10 to +10
+                let newCount = current + change;
+                newCount = Math.max(_0xE2A7, Math.min(_0xB5C3, newCount));
+                localStorage.setItem(_0xA7B1 + 'online', newCount.toString());
+                return newCount;
+            }
+            
+            // Initialize stats display
+            function _0xU9V() {
+                const stats = _0xQ7R();
+                const visitElement = document.getElementById('visitCount');
+                const onlineElement = document.getElementById('onlineCount');
+                
+                // Initial animation
+                setTimeout(function() {
+                    _0xN5P(visitElement, stats.visits, 2000);
+                }, 500);
+                
+                _0xN5P(onlineElement, stats.online, 1500);
+                
+                // Live updates for visits (small increments)
+                setInterval(function() {
+                    const currentVisits = parseInt(localStorage.getItem(_0xA7B1 + 'visits') || stats.visits);
+                    const smallIncrement = Math.floor(Math.random() * 3) + 1;
+                    const newVisits = currentVisits + smallIncrement;
+                    localStorage.setItem(_0xA7B1 + 'visits', newVisits.toString());
+                    _0xN5P(visitElement, newVisits, 800);
+                }, 8000 + Math.random() * 4000);
+                
+                // Live updates for online count (fluctuating)
+                setInterval(function() {
+                    const currentOnline = parseInt(localStorage.getItem(_0xA7B1 + 'online') || stats.online);
+                    const newOnline = _0xS8T(currentOnline);
+                    _0xN5P(onlineElement, newOnline, 600);
+                }, 4000 + Math.random() * 3000);
+            }
+            
+            // Start the stats system
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', _0xU9V);
+            } else {
+                _0xU9V();
+            }
+        })();
+
+        // ============================================
+        // Copy Protection
+        // ============================================
+        document.addEventListener('copy', function(e) {
+            const selection = window.getSelection();
+            const pagelink = '\n\n---\nSumber: https://mibenglish.com/season1/eps1.html\n© 2026 mibenglish';
+            const copytext = selection + pagelink;
+            e.clipboardData.setData('text/plain', copytext);
+            e.preventDefault();
+        });
+
+        // ============================================
+        // Share Button
+        // ============================================
+        document.getElementById('shareBtn').addEventListener('click', async function() {
+            const shareData = {
+                title: 'Ep 1: The Science of Zero - MIB English',
+                text: 'Pelajari cara menyiapkan otak untuk encoding bahasa Inggris dengan metode ilmiah.',
+                url: window.location.href
+            };
+
+            try {
+                if (navigator.share) {
+                    await navigator.share(shareData);
+                } else {
+                    await navigator.clipboard.writeText(window.location.href);
+                    alert('Link berhasil disalin ke clipboard!');
+                }
+            } catch (err) {
+                console.log('Share cancelled');
+            }
+        });
+
+        // ============================================
+        // Back to Top
+        // ============================================
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 400) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ============================================
+        // Smooth Scroll with Header Offset
+        // ============================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const headerOffset = 100;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             });
         });
-        
-        // Quiz Game Logic
-        let quizScore = 0;
-        let matchingScore = 0;
-        let totalMissions = 7;
-        let completedMissions = 0;
-        
-        function selectOption(element, quizNum) {
-            const quiz = document.getElementById('quiz' + quizNum);
-            const options = quiz.querySelectorAll('.quiz-option');
-            const feedback = document.getElementById('feedback' + quizNum);
-            
-            // Check if already answered
-            if (quiz.classList.contains('answered')) return;
-            
-            // Mark as answered
-            quiz.classList.add('answered');
-            
-            // Remove previous selections
-            options.forEach(opt => opt.classList.remove('selected'));
-            
-            // Add selected class
-            element.classList.add('selected');
-            
-            // Check if correct
-            const isCorrect = element.getAttribute('data-correct') === 'true';
-            
-            if (isCorrect) {
-                element.classList.add('correct');
-                feedback.textContent = '✅ Benar! ' + getExplanation(quizNum);
-                feedback.className = 'quiz-feedback show success';
-                completedMissions++;
-                updateProgress();
-            } else {
-                element.classList.add('incorrect');
-                // Show correct answer
-                options.forEach(opt => {
-                    if (opt.getAttribute('data-correct') === 'true') {
-                        opt.classList.add('correct');
-                    }
-                });
-                feedback.textContent = '❌ Kurang tepat. ' + getExplanation(quizNum);
-                feedback.className = 'quiz-feedback show error';
-            }
-        }
-        
-        function getExplanation(quizNum) {
-            const explanations = {
-                1: 'Neuroplasticity adalah kemampuan otak untuk membentuk koneksi baru antar sel saraf saat kita belajar sesuatu yang baru.',
-                2: 'Phonological mapping adalah proses memetakan bunyi bahasa ke dalam representasi mental di otak kita.',
-                3: 'Survival communication adalah kemampuan berkomunikasi untuk kebutuhan dasar dan mendesak dalam situasi sehari-hari.'
-            };
-            return explanations[quizNum];
-        }
-        
-        // Matching Game Logic
-        let selectedTerm = null;
-        let matchedPairs = 0;
-        
-        function selectMatching(element, type) {
-            if (element.classList.contains('matched')) return;
-            
-            if (type === 'term') {
-                // Remove previous selection
-                document.querySelectorAll('.matching-item.term').forEach(item => {
-                    item.classList.remove('selected');
-                });
-                element.classList.add('selected');
-                selectedTerm = element;
-            } else if (type === 'definition' && selectedTerm) {
-                // Check if match
-                const termPair = selectedTerm.getAttribute('data-pair');
-                const defPair = element.getAttribute('data-pair');
-                
-                if (termPair === defPair) {
-                    // Correct match
-                    selectedTerm.classList.add('matched');
-                    selectedTerm.classList.remove('selected');
-                    element.classList.add('matched');
-                    matchedPairs++;
-                    completedMissions++;
-                    updateProgress();
-                    
-                    if (matchedPairs === 4) {
-                        setTimeout(() => {
-                            alert('🎉 Selamat! Kamu berhasil mencocokkan semua istilah dengan benar!');
-                        }, 300);
-                    }
-                } else {
-                    // Wrong match - briefly show error
-                    element.classList.add('incorrect');
-                    setTimeout(() => {
-                        element.classList.remove('incorrect');
-                    }, 500);
-                }
-                
-                selectedTerm = null;
-            }
-        }
-        
-        function updateProgress() {
-            const percentage = (completedMissions / totalMissions) * 100;
-            document.getElementById('progressFill').style.width = percentage + '%';
-            document.getElementById('progressText').textContent = completedMissions + ' dari ' + totalMissions + ' misi selesai';
-        }
     </script>
 </body>
 </html>
