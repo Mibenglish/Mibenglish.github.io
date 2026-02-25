@@ -67,32 +67,153 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 0;
+            letter-spacing: -0.5px;
         }
-        .brand-logo span { color: var(--secondary); }
+        .brand-logo .brand-name {
+            display: inline-flex;
+        }
+        .brand-logo .brand-mib {
+            color: var(--primary);
+        }
+        .brand-logo .brand-english {
+            color: var(--secondary);
+        }
 
-        /* Visitor Counter Badge */
-        .visitor-badge {
+        /* Stats Container */
+        .stats-container {
             display: flex;
             align-items: center;
-            gap: 6px;
-            font-size: 0.8rem;
+            gap: 12px;
+        }
+
+        .stat-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 8px;
+            background: var(--bg-page);
+            border: 1px solid var(--border);
+            min-width: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(45, 155, 106, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .stat-badge .stat-label {
+            font-size: 0.6rem;
             font-weight: 600;
             color: var(--text-sub);
-            background: var(--bg-page);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-badge .stat-value {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .stat-badge.online .stat-value {
+            color: var(--secondary);
+        }
+
+        .stat-badge.online .stat-value::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--secondary);
+            border-radius: 50%;
+            margin-right: 4px;
+            animation: pulse-dot 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        /* Visitor Counter Widget - Mobile Friendly */
+        .visitor-widget {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .visitor-badge-compact {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-sub);
+            background: linear-gradient(135deg, var(--accent) 0%, #e8f8f0 100%);
             padding: 6px 12px;
             border-radius: 20px;
-            border: 1px solid var(--border);
-            user-select: none; /* Tidak bisa di select biar gampang lihat */
+            border: 1px solid var(--secondary);
+            position: relative;
+            overflow: hidden;
         }
-        .visitor-badge svg {
-            width: 14px;
-            height: 14px;
+
+        .visitor-badge-compact::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+            animation: shine 4s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .visitor-badge-compact svg {
+            width: 12px;
+            height: 12px;
             fill: var(--secondary);
         }
-        .visitor-badge .count {
+
+        .visitor-badge-compact .count {
             color: var(--primary);
             font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .online-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--secondary);
+            border-radius: 50%;
+            animation: pulse-online 2s ease-in-out infinite;
+            box-shadow: 0 0 0 0 rgba(45, 155, 106, 0.4);
+        }
+
+        @keyframes pulse-online {
+            0% { box-shadow: 0 0 0 0 rgba(45, 155, 106, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(45, 155, 106, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(45, 155, 106, 0); }
         }
 
         /* === NAVIGASI & KONTEN === */
@@ -145,16 +266,34 @@
             border-radius: var(--radius);
             margin-bottom: 1.5rem;
             box-shadow: 0 4px 12px rgba(13, 79, 60, 0.2);
+            position: relative;
+            overflow: hidden;
         }
 
-        .season-header h1 { font-size: 1.3rem; margin-bottom: 0.4rem; color: #FFFFFF; }
-        .season-header p { font-size: 1rem; color: #E0F2E9; margin-bottom: 0.6rem; }
-        .season-meta { font-size: 0.9rem; color: #B8D8C8; display: inline-block; background: rgba(255,255,255,0.15); padding: 4px 10px; border-radius: 20px; }
+        .season-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float-bg 8s ease-in-out infinite;
+        }
+
+        @keyframes float-bg {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-10%, 10%); }
+        }
+
+        .season-header h1 { font-size: 1.3rem; margin-bottom: 0.4rem; color: #FFFFFF; position: relative; }
+        .season-header p { font-size: 1rem; color: #E0F2E9; margin-bottom: 0.6rem; position: relative; }
+        .season-meta { font-size: 0.9rem; color: #B8D8C8; display: inline-block; background: rgba(255,255,255,0.15); padding: 4px 10px; border-radius: 20px; position: relative; }
 
         .controls-bar { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem; }
         .search-box { position: relative; width: 100%; }
-        .search-box input { width: 100%; padding: 1rem 1rem 1rem 3rem; border: 1px solid var(--border); border-radius: 10px; font-size: 16px; background: white; box-shadow: var(--shadow); }
-        .search-box input:focus { outline: none; border-color: var(--secondary); }
+        .search-box input { width: 100%; padding: 1rem 1rem 1rem 3rem; border: 1px solid var(--border); border-radius: 10px; font-size: 16px; background: white; box-shadow: var(--shadow); transition: all 0.2s; }
+        .search-box input:focus { outline: none; border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(45, 155, 106, 0.15); }
         .search-box svg { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-sub); }
 
         .per-page-select { display: flex; align-items: center; justify-content: space-between; background: white; padding: 0.8rem 1rem; border-radius: 10px; border: 1px solid var(--border); }
@@ -172,7 +311,8 @@
 
         /* Pagination */
         .pagination { display: flex; justify-content: center; gap: 8px; margin-top: 2.5rem; flex-wrap: wrap; }
-        .page-btn { min-width: 44px; height: 44px; background: white; border: 1px solid var(--border); border-radius: 10px; font-weight: 600; cursor: pointer; font-size: 1rem; }
+        .page-btn { min-width: 44px; height: 44px; background: white; border: 1px solid var(--border); border-radius: 10px; font-weight: 600; cursor: pointer; font-size: 1rem; transition: all 0.15s; }
+        .page-btn:hover:not(:disabled) { border-color: var(--secondary); }
         .page-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
         .page-btn:disabled { opacity: 0.4; cursor: default; }
         .page-dots { padding: 0 5px; align-self: center; color: var(--text-sub); }
@@ -182,19 +322,59 @@
         footer { background: white; border-top: 1px solid var(--border); padding: 2.5rem 1rem; margin-top: 3rem; text-align: center; }
         .footer-inner { max-width: 1000px; margin: 0 auto; }
         .footer-links { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
-        .footer-links a { text-decoration: none; color: var(--text-sub); font-size: 1rem; font-weight: 600; padding: 0.5rem; }
+        .footer-links a { text-decoration: none; color: var(--text-sub); font-size: 1rem; font-weight: 600; padding: 0.5rem; transition: color 0.2s; }
         .footer-links a:hover { color: var(--primary); }
         .socials { margin-bottom: 1.5rem; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-        .social-btn { padding: 10px 20px; background: var(--bg-page); border-radius: 20px; text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.9rem; }
+        .social-btn { padding: 10px 20px; background: var(--bg-page); border-radius: 20px; text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.9rem; transition: all 0.2s; }
         .social-btn:hover { background: var(--primary); color: white; }
         .copyright { font-size: 0.85rem; color: #666; }
 
         /* Floating Share */
-        .share-fab { position: fixed; bottom: 20px; right: 20px; width: 56px; height: 56px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(13, 79, 60, 0.4); cursor: pointer; z-index: 999; border: none; }
+        .share-fab { position: fixed; bottom: 20px; right: 20px; width: 56px; height: 56px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(13, 79, 60, 0.4); cursor: pointer; z-index: 999; border: none; transition: transform 0.2s, box-shadow 0.2s; }
+        .share-fab:hover { transform: scale(1.05); box-shadow: 0 6px 16px rgba(13, 79, 60, 0.5); }
         .share-fab svg { width: 24px; height: 24px; fill: white; }
         
         .toast { position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%) translateY(100px); background: #333; color: white; padding: 12px 24px; border-radius: 50px; font-size: 0.9rem; opacity: 0; transition: all 0.3s ease; z-index: 1000; pointer-events: none; }
         .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+        /* Live Stats Indicator */
+        .live-stats-bar {
+            background: linear-gradient(90deg, var(--accent) 0%, #e8f8f0 50%, var(--accent) 100%);
+            padding: 8px 16px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            font-size: 0.8rem;
+            border: 1px solid rgba(45, 155, 106, 0.2);
+        }
+
+        .live-stat-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-sub);
+        }
+
+        .live-stat-item strong {
+            color: var(--primary);
+        }
+
+        .live-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--secondary);
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
 
         /* Responsive */
         @media (min-width: 600px) {
@@ -210,17 +390,32 @@
             .ep-arrow { display: flex; width: 32px; height: 32px; background: var(--bg-page); border-radius: 50%; align-items: center; justify-content: center; }
             .ep-card:hover .ep-arrow { background: var(--primary); color: white; }
         }
+
+        @media (max-width: 400px) {
+            .visitor-badge-compact { padding: 5px 8px; font-size: 0.7rem; }
+            .visitor-badge-compact .count { font-size: 0.75rem; }
+            .brand-logo { font-size: 1.2rem; }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="header-inner">
-            <a href="https://mibenglish.com/" class="brand-logo">mib<span>english</span></a>
-            <!-- Visitor Counter Cerdas -->
-            <div class="visitor-badge" id="visitorWidget" title="Total Pengunjung">
-                <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-                <span class="count" id="visitorCount">...</span>
+            <!-- Brand Logo - Menyatu -->
+            <a href="https://mibenglish.com/" class="brand-logo">
+                <span class="brand-name">
+                    <span class="brand-mib">mib</span><span class="brand-english">english</span>
+                </span>
+            </a>
+            
+            <!-- Live Stats Widget -->
+            <div class="visitor-widget">
+                <div class="online-dot" title="Pengunjung Online"></div>
+                <div class="visitor-badge-compact" id="visitorBadge" title="Statistik Pengunjung">
+                    <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                    <span class="count" id="visitorCount">...</span>
+                </div>
             </div>
         </div>
     </header>
@@ -228,6 +423,20 @@
     <nav class="nav-tabs"><div class="nav-tabs-inner" id="navTabs"></div></nav>
 
     <main>
+        <!-- Live Stats Bar -->
+        <div class="live-stats-bar">
+            <div class="live-stat-item">
+                <span class="live-dot"></span>
+                <span>Online: <strong id="onlineCount">-</strong></span>
+            </div>
+            <div class="live-stat-item">
+                <span>Hari ini: <strong id="todayCount">-</strong></span>
+            </div>
+            <div class="live-stat-item">
+                <span>Minggu ini: <strong id="weekCount">-</strong></span>
+            </div>
+        </div>
+
         <div class="season-header">
             <h1 id="seasonTitle">Memuat...</h1>
             <p id="seasonDesc">Silakan pilih musim.</p>
@@ -300,63 +509,137 @@ const episodeTitles = {
 };
 
 // ===========================
-// "ANALYTICS" ENGINE (RAHASIA)
+// SMART ANALYTICS ENGINE
 // ===========================
 (function(){
-    // Kunci penyimpanan disamarkan
-    const _key = 'mib_usr_d';
-    const _timeKey = 'mib_sys_t';
+    // Kunci penyimpanan
+    const STORE_KEY = 'mib_session_v2';
+    const FP_KEY = 'mib_fp';
     
-    // Fungsi hash sederhana untuk menghitung base (105.899)
-    // Rumus: 105899 -> dipecah agar tidak ketahuan di "Find"
-    // (100000 + 5899) atau menggunakan hex:
-    const _base = parseInt('19dab', 16); // Hasilnya 105899
-
-    // Ambil waktu sistem
-    const now = new Date().getTime();
+    // Generate device fingerprint sederhana
+    function generateFingerprint() {
+        let stored = localStorage.getItem(FP_KEY);
+        if (stored) return stored;
+        
+        // Kombinasi karakteristik device
+        const screenInfo = screen.width + 'x' + screen.height;
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const lang = navigator.language;
+        const cores = navigator.hardwareConcurrency || 4;
+        const random = Math.random().toString(36).substring(2, 8);
+        
+        // Hash sederhana
+        const raw = screenInfo + tz + lang + cores + random;
+        let hash = 0;
+        for (let i = 0; i < raw.length; i++) {
+            const char = raw.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash = hash & hash;
+        }
+        const fp = Math.abs(hash).toString(16).substring(0, 6);
+        localStorage.setItem(FP_KEY, fp);
+        return fp;
+    }
     
-    // Ambil data dari local storage
-    let storedData = localStorage.getItem(_key);
-    let lastTime = localStorage.getItem(_timeKey);
+    // Base counter dari fingerprint (setiap device berbeda)
+    const fp = generateFingerprint();
+    const fpNum = parseInt(fp, 16);
     
-    let currentCount = _base;
-    let timeDiff = 0;
-
-    // Jika ada data waktu sebelumnya, hitung selisih
-    if (lastTime) {
-        timeDiff = now - parseInt(lastTime);
-    } else {
-        // Jika pertama kali, set waktu sekarang
-        localStorage.setItem(_timeKey, now);
-    }
-
-    // Logika: Setiap 10 hari (864.000.000 ms) tambah 20 kunjungan
-    // Kita hitung berapa cycle 10 hari yang terlewat
-    const tenDaysMs = 864000000; 
-    let cycles = Math.floor(timeDiff / tenDaysMs);
+    // Base: 105.000 + variasi dari fingerprint
+    const BASE_TOTAL = 105000 + (fpNum % 5000); // Range: 105000 - 109999
     
-    if (storedData) {
-        currentCount = parseInt(storedData);
+    // Waktu referensi
+    const LAUNCH_DATE = new Date('2023-01-01').getTime();
+    const now = Date.now();
+    const daysSinceLaunch = Math.floor((now - LAUNCH_DATE) / (1000 * 60 * 60 * 24));
+    
+    // Hitung counter dengan variasi
+    const dailyGrowth = 15 + (fpNum % 20); // 15-35 per hari
+    const sessionData = localStorage.getItem(STORE_KEY);
+    let data = sessionData ? JSON.parse(sessionData) : null;
+    
+    // Hitung total pengunjung
+    let totalVisitors = BASE_TOTAL + Math.floor(daysSinceLaunch * dailyGrowth * 0.3);
+    
+    // Variasi berdasarkan jam
+    const hour = new Date().getHours();
+    const hourMultiplier = 1 + Math.sin((hour - 6) * Math.PI / 12) * 0.15; // Peak di siang
+    totalVisitors = Math.floor(totalVisitors * hourMultiplier);
+    
+    // Tambah offset session
+    if (data && data.lastVisit) {
+        const hoursSinceLastVisit = (now - data.lastVisit) / (1000 * 60 * 60);
+        if (hoursSinceLastVisit < 1) {
+            totalVisitors = data.count || totalVisitors;
+        } else {
+            totalVisitors += Math.floor(hoursSinceLastVisit * (1 + fpNum % 3));
+        }
     }
-
-    // Tambahkan hasil perhitungan waktu
-    if (cycles > 0) {
-        currentCount += (cycles * 20);
-        // Reset timer untuk cycle berikutnya (simulasi bertahap)
-        localStorage.setItem(_timeKey, now);
+    
+    // Simpan session
+    localStorage.setItem(STORE_KEY, JSON.stringify({
+        count: totalVisitors,
+        lastVisit: now,
+        fp: fp
+    }));
+    
+    // Hitung statistik turunan
+    const onlineUsers = Math.floor(12 + (fpNum % 40) + Math.random() * 8); // 12-60 online
+    const todayVisitors = Math.floor(150 + (fpNum % 200) + Math.random() * 50); // 150-400 hari ini
+    const weekVisitors = Math.floor(1200 + (fpNum % 800) + Math.random() * 200); // 1200-2200 minggu ini
+    
+    // Update tampilan dengan animasi
+    function animateCount(element, target, duration = 1500) {
+        const start = 0;
+        const startTime = performance.now();
+        
+        function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Easing
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(start + (target - start) * easeOut);
+            
+            element.textContent = current.toLocaleString('id-ID');
+            
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            }
+        }
+        
+        requestAnimationFrame(update);
     }
-
-    // Tambahkan 1 untuk kunjungan saat ini (simulasi real user)
-    currentCount += 1;
-
-    // Simpan kembali
-    localStorage.setItem(_key, currentCount);
-
-    // Update Tampilan
-    const el = document.getElementById('visitorCount');
-    if(el) {
-        el.innerText = currentCount.toLocaleString('id-ID');
-    }
+    
+    // Set nilai awal
+    const visitorEl = document.getElementById('visitorCount');
+    const onlineEl = document.getElementById('onlineCount');
+    const todayEl = document.getElementById('todayCount');
+    const weekEl = document.getElementById('weekCount');
+    
+    // Animasi masuk
+    setTimeout(() => {
+        if (visitorEl) animateCount(visitorEl, totalVisitors);
+        if (onlineEl) onlineEl.textContent = onlineUsers;
+        if (todayEl) todayEl.textContent = todayVisitors.toLocaleString('id-ID');
+        if (weekEl) weekEl.textContent = weekVisitors.toLocaleString('id-ID');
+    }, 300);
+    
+    // Update online users secara periodik (simulasi real-time)
+    setInterval(() => {
+        if (onlineEl) {
+            const change = Math.floor(Math.random() * 5) - 2; // -2 sampai +2
+            const newOnline = Math.max(8, parseInt(onlineEl.textContent.replace(/\./g, '')) + change);
+            onlineEl.textContent = newOnline;
+            
+            // Update total juga (naik perlahan)
+            if (visitorEl && Math.random() > 0.7) {
+                const currentTotal = parseInt(visitorEl.textContent.replace(/\./g, ''));
+                visitorEl.textContent = (currentTotal + 1).toLocaleString('id-ID');
+            }
+        }
+    }, 5000); // Update setiap 5 detik
+    
 })();
 
 
