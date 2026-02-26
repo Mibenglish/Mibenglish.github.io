@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Halaman Utama -->
+  <url><loc>https://mibenglish.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://mibenglish.com/index.html</loc><priority>1.0</priority></url>
+  <url><loc>https://mibenglish.com/about.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mibenglish.com/contact.html</loc><priority>0.8</priority></url>
+  <url><loc>https://mibenglish.com/privacy.html</loc><priority>0.5</priority></url>
+  <url><loc>https://mibenglish.com/terms.html</loc><priority>0.5</priority></url>
+  <url><loc>https://mibenglish.com/disclaimer.html</loc><priority>0.5</priority></url>
+
+  <!-- Season 1 Episodes -->
+  <url><loc>https://mibenglish.com/season1/eps1.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps2.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps3.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps4.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps5.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps6.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps7.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps8.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps9.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps10.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps11.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps12.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps13.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps14.html</loc><priority>0.9</priority></url>
+  <url><loc>https://mibenglish.com/season1/eps15.html</loc><priority>0.9</priority></url>
+
+</urlset>
