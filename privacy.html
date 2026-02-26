@@ -134,10 +134,10 @@
             75% { transform: translate(20px, 10px) scale(1.02); }
         }
         
-        /* Entrance animations */
+        /* Entrance animations - FIXED: Content visible by default */
         .fade-up {
-            opacity: 0;
-            transform: translateY(30px);
+            opacity: 1;
+            transform: translateY(0);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
         
@@ -344,12 +344,12 @@
             text-decoration: underline;
         }
         
-        /* AdSense Placeholder Styles */
+        /* AdSense Placeholder Styles - FIXED: Better visibility */
         .ad-container {
-            background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(21, 128, 61, 0.03) 100%);
-            border: 1px dashed var(--border);
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.08) 0%, rgba(21, 128, 61, 0.05) 100%);
+            border: 2px dashed var(--accent);
             border-radius: 16px;
-            padding: 20px;
+            padding: 24px 20px;
             margin: 24px 0;
             text-align: center;
             position: relative;
@@ -364,33 +364,51 @@
             right: 0;
             height: 3px;
             background: linear-gradient(90deg, transparent, var(--accent), transparent);
-            opacity: 0.5;
+            opacity: 0.8;
         }
         
         .ad-label {
-            font-size: 11px;
+            font-size: 12px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--fg-muted);
-            margin-bottom: 8px;
+            letter-spacing: 2px;
+            color: var(--accent-light);
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 8px;
+            font-weight: 600;
         }
         
         .ad-label svg {
-            width: 12px;
-            height: 12px;
+            width: 14px;
+            height: 14px;
         }
         
         .ad-slot {
             min-height: 100px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            color: var(--fg);
+            font-size: 15px;
+            font-weight: 500;
+            gap: 8px;
+        }
+        
+        .ad-slot-placeholder {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px 24px;
+            display: inline-block;
+        }
+        
+        .ad-slot-size {
+            font-size: 13px;
             color: var(--fg-muted);
-            font-size: 14px;
+            margin-top: 4px;
         }
         
         /* Horizontal Ad (Leaderboard) */
@@ -674,7 +692,10 @@
                          data-full-width-responsive="true"></ins>
                     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                     -->
-                    <span>Ad Slot 1 - Horizontal/Leaderboard (728x90)</span>
+                    <div class="ad-slot-placeholder">
+                        📢 Slot Iklan 1 - Horizontal/Leaderboard
+                    </div>
+                    <span class="ad-slot-size">Ukuran: 728x90 px</span>
                 </div>
             </div>
             
@@ -707,7 +728,7 @@
                     </p>
                     <div class="highlight-box">
                         <p style="margin: 0; position: relative;">
-                            Dengan menggunakan website kami, Anda menyetujui pengumpulan dan penggunaan informasi sesuai dengan kebijakan ini. Mohon baca kebijakan ini dengan seksama.
+                            Dengan menggunakan website kami, Anda menyetujui pengumpulan dan penggunaan informasi sesuai dengan kebijakan ini. Mohon baca kebijakan ini dengan seksama untuk memahami praktik privasi kami.
                         </p>
                     </div>
                 </section>
@@ -718,33 +739,33 @@
                     
                     <h3 class="font-semibold mt-4 mb-2 text-lg">2.1 Informasi yang Anda Berikan Secara Langsung</h3>
                     <ul class="policy-list">
-                        <li><strong>Informasi Akun:</strong> Nama, alamat email, dan informasi lainnya yang Anda berikan saat mendaftar atau menghubungi kami.</li>
-                        <li><strong>Informasi Komunikasi:</strong> Pesan atau pertanyaan yang Anda kirimkan melalui formulir kontak atau email.</li>
-                        <li><strong>Umpan Balik:</strong> Komentar, ulasan, atau umpan balik yang Anda berikan di website kami.</li>
+                        <li><strong>Informasi Akun:</strong> Nama, alamat email, dan informasi lainnya yang Anda berikan saat mendaftar atau menghubungi kami melalui formulir yang tersedia di website.</li>
+                        <li><strong>Informasi Komunikasi:</strong> Pesan atau pertanyaan yang Anda kirimkan melalui formulir kontak atau email akan kami simpan untuk keperluan merespons dan meningkatkan layanan.</li>
+                        <li><strong>Umpan Balik:</strong> Komentar, ulasan, atau umpan balik yang Anda berikan di website kami menjadi bagian dari data yang kami kelola untuk peningkatan kualitas konten.</li>
                     </ul>
                     
                     <h3 class="font-semibold mt-6 mb-2 text-lg">2.2 Informasi yang Dikumpulkan Secara Otomatis</h3>
                     <ul class="policy-list">
-                        <li><strong>Data Log:</strong> Alamat IP, jenis browser, halaman yang dikunjungi, waktu akses, dan halaman rujukan.</li>
-                        <li><strong>Informasi Perangkat:</strong> Jenis perangkat, sistem operasi, dan pengenal perangkat unik.</li>
-                        <li><strong>Data Lokasi:</strong> Lokasi geografis umum berdasarkan alamat IP Anda.</li>
-                        <li><strong>Data Penggunaan:</strong> Bagaimana Anda berinteraksi dengan konten dan fitur di website kami.</li>
+                        <li><strong>Data Log:</strong> Alamat IP, jenis browser, halaman yang dikunjungi, waktu akses, dan halaman rujukan secara otomatis tercatat saat Anda menjelajahi website kami.</li>
+                        <li><strong>Informasi Perangkat:</strong> Jenis perangkat, sistem operasi, dan pengenal perangkat unik dikumpulkan untuk mengoptimalkan pengalaman pengguna di berbagai platform.</li>
+                        <li><strong>Data Lokasi:</strong> Lokasi geografis umum berdasarkan alamat IP Anda dapat kami gunakan untuk menyajikan konten yang lebih relevan.</li>
+                        <li><strong>Data Penggunaan:</strong> Bagaimana Anda berinteraksi dengan konten dan fitur di website kami kami analisis untuk peningkatan layanan.</li>
                     </ul>
                 </section>
                 
                 <!-- Section 3 -->
                 <section id="penggunaan-informasi" class="policy-section">
                     <h2 class="section-title">3. Penggunaan Informasi</h2>
-                    <p>Kami menggunakan informasi yang dikumpulkan untuk:</p>
+                    <p>Kami menggunakan informasi yang dikumpulkan untuk berbagai tujuan yang bertujuan meningkatkan pengalaman Anda:</p>
                     <ul class="policy-list">
-                        <li>Menyediakan, mengoperasikan, dan memelihara website kami</li>
-                        <li>Meningkatkan, mempersonalisasi, dan memperluas layanan kami</li>
-                        <li>Memahami dan menganalisis bagaimana Anda menggunakan website kami</li>
-                        <li>Mengembangkan produk, layanan, fitur, dan fungsionalitas baru</li>
-                        <li>Berkomunikasi dengan Anda untuk memberikan update dan informasi lainnya</li>
-                        <li>Mengirimkan email pemasaran dan promosi (dengan persetujuan Anda)</li>
-                        <li>Menemukan dan mencegah penipuan atau aktivitas ilegal</li>
-                        <li>Menampilkan iklan yang relevan kepada Anda</li>
+                        <li>Menyediakan, mengoperasikan, dan memelihara website kami agar tetap berfungsi optimal untuk semua pengunjung</li>
+                        <li>Meningkatkan, mempersonalisasi, dan memperluas layanan kami sesuai dengan kebutuhan dan preferensi pengguna</li>
+                        <li>Memahami dan menganalisis bagaimana Anda menggunakan website kami untuk pengembangan konten yang lebih baik</li>
+                        <li>Mengembangkan produk, layanan, fitur, dan fungsionalitas baru yang sesuai dengan kebutuhan pengguna</li>
+                        <li>Berkomunikasi dengan Anda untuk memberikan update dan informasi penting terkait layanan kami</li>
+                        <li>Mengirimkan email pemasaran dan promosi dengan persetujuan Anda sesuai regulasi yang berlaku</li>
+                        <li>Menemukan dan mencegah penipuan atau aktivitas ilegal yang dapat membahayakan pengguna lain</li>
+                        <li>Menampilkan iklan yang relevan dan sesuai dengan minat Anda melalui partner periklanan kami</li>
                     </ul>
                 </section>
                 
@@ -768,7 +789,10 @@
                              data-ad-slot="XXXXXXXXXX"></ins>
                         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                         -->
-                        <span>Ad Slot 2 - In-Article Ad (Responsive)</span>
+                        <div class="ad-slot-placeholder">
+                            📢 Slot Iklan 2 - In-Article Ad
+                        </div>
+                        <span class="ad-slot-size">Format: Responsive/Fluid</span>
                     </div>
                 </div>
                 
@@ -776,20 +800,20 @@
                 <section id="cookies" class="policy-section">
                     <h2 class="section-title">4. Cookies dan Teknologi Pelacakan</h2>
                     <p>
-                        Kami menggunakan cookies dan teknologi pelacakan serupa untuk melacak aktivitas di website kami dan menyimpan informasi tertentu. Cookies adalah file dengan jumlah data kecil yang dapat mencakup pengenal unik anonim.
+                        Kami menggunakan cookies dan teknologi pelacakan serupa untuk melacak aktivitas di website kami dan menyimpan informasi tertentu. Cookies adalah file dengan jumlah data kecil yang dapat mencakup pengenal unik anonim yang disimpan di perangkat Anda.
                     </p>
                     
                     <h3 class="font-semibold mt-4 mb-2 text-lg">4.1 Jenis Cookies yang Kami Gunakan</h3>
                     <ul class="policy-list">
-                        <li><strong>Cookies Esensial:</strong> Diperlukan untuk fungsi dasar website seperti navigasi dan akses ke area aman. Website tidak dapat berfungsi dengan baik tanpa cookies ini.</li>
-                        <li><strong>Cookies Preferensi:</strong> Memungkinkan website mengingat pilihan Anda seperti bahasa atau preferensi tampilan.</li>
-                        <li><strong>Cookies Analitik:</strong> Membantu kami memahami bagaimana pengunjung berinteraksi dengan website melalui pengumpulan dan pelaporan informasi secara anonim.</li>
-                        <li><strong>Cookies Iklan:</strong> Digunakan untuk menampilkan iklan yang relevan kepada Anda. Cookies ini melacak kunjungan Anda di berbagai website.</li>
+                        <li><strong>Cookies Esensial:</strong> Diperlukan untuk fungsi dasar website seperti navigasi dan akses ke area aman. Website tidak dapat berfungsi dengan baik tanpa cookies ini dan akan mempengaruhi pengalaman pengguna secara signifikan.</li>
+                        <li><strong>Cookies Preferensi:</strong> Memungkinkan website mengingat pilihan Anda seperti bahasa atau preferensi tampilan sehingga Anda tidak perlu mengaturnya ulang setiap kali berkunjung.</li>
+                        <li><strong>Cookies Analitik:</strong> Membantu kami memahami bagaimana pengunjung berinteraksi dengan website melalui pengumpulan dan pelaporan informasi secara anonim untuk perbaikan layanan.</li>
+                        <li><strong>Cookies Iklan:</strong> Digunakan untuk menampilkan iklan yang relevan kepada Anda. Cookies ini melacak kunjungan Anda di berbagai website untuk personalisasi iklan yang lebih tepat sasaran.</li>
                     </ul>
                     
                     <h3 class="font-semibold mt-6 mb-2 text-lg">4.2 Mengelola Cookies</h3>
                     <p>
-                        Anda dapat mengatur browser Anda untuk menolak semua atau sebagian cookies, atau memberi tahu Anda ketika website mencoba menempatkan cookie. Namun, jika Anda menonaktifkan cookies, beberapa fitur website mungkin tidak berfungsi dengan baik.
+                        Anda dapat mengatur browser Anda untuk menolak semua atau sebagian cookies, atau memberi tahu Anda ketika website mencoba menempatkan cookie. Panduan pengaturan cookies tersedia di menu bantuan browser Anda. Namun, jika Anda menonaktifkan cookies, beberapa fitur website mungkin tidak berfungsi dengan baik dan pengalaman pengguna dapat berkurang.
                     </p>
                 </section>
                 
@@ -799,22 +823,22 @@
                     
                     <h3 class="font-semibold mt-4 mb-2 text-lg">5.1 Google AdSense</h3>
                     <p>
-                        Website kami menggunakan <strong>Google AdSense</strong>, layanan untuk menyertakan iklan dari Google. Google AdSense menggunakan cookies untuk menampilkan iklan berdasarkan kunjungan sebelumnya pengguna ke website kami atau website lain.
+                        Website kami menggunakan <strong>Google AdSense</strong>, layanan untuk menyertakan iklan dari Google. Google AdSense menggunakan cookies untuk menampilkan iklan berdasarkan kunjungan sebelumnya pengguna ke website kami atau website lain di internet untuk memberikan iklan yang lebih relevan.
                     </p>
                     
                     <h3 class="font-semibold mt-4 mb-2 text-lg">5.2 Personalisasi Iklan</h3>
                     <p>
-                        Google menggunakan cookies untuk menayangkan iklan kepada pengguna kami berdasarkan kunjungan mereka ke website kami dan/atau website lain di Internet. Pengguna dapat menonaktifkan iklan yang dipersonalisasi dengan mengunjungi <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Pengaturan Iklan Google</a>.
+                        Google menggunakan cookies untuk menayangkan iklan kepada pengguna kami berdasarkan kunjungan mereka ke website kami dan/atau website lain di Internet. Pengguna dapat menonaktifkan iklan yang dipersonalisasi dengan mengunjungi <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Pengaturan Iklan Google</a> untuk mengontrol preferensi iklan yang ditampilkan.
                     </p>
                     
                     <h3 class="font-semibold mt-4 mb-2 text-lg">5.3 Pihak Ketiga</h3>
                     <p>
-                        Pihak ketiga (termasuk Google) menggunakan cookies untuk menampilkan iklan berdasarkan kunjungan pengguna sebelumnya ke website ini atau website lain. Penggunaan cookies oleh Google untuk iklan dapat dilihat di <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Kebijakan Privasi Google</a>.
+                        Pihak ketiga (termasuk Google) menggunakan cookies untuk menampilkan iklan berdasarkan kunjungan pengguna sebelumnya ke website ini atau website lain. Penggunaan cookies oleh Google untuk iklan dapat dilihat di <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Kebijakan Privasi Google</a> yang menjelaskan secara detail bagaimana data digunakan.
                     </p>
                     
                     <h3 class="font-semibold mt-4 mb-2 text-lg">5.4 Opt-Out</h3>
                     <p>
-                        Anda dapat memilih untuk tidak menggunakan Google Analytics for Display Advertising dan menonaktifkan Google Display Network Ads personalisasi dengan mengunjungi <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Pengaturan Iklan Google</a> atau <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>.
+                        Anda dapat memilih untuk tidak menggunakan Google Analytics for Display Advertising dan menonaktifkan Google Display Network Ads personalisasi dengan mengunjungi <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Pengaturan Iklan Google</a> atau <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a> untuk opt-out dari program periklanan yang dipersonalisasi.
                     </p>
                 </section>
                 
@@ -822,18 +846,18 @@
                 <section id="layanan-pihak-ketiga" class="policy-section">
                     <h2 class="section-title">6. Layanan Pihak Ketiga</h2>
                     <p>
-                        Kami dapat menggunakan layanan pihak ketiga untuk tujuan tertentu. Layanan ini memiliki kebijakan privasi mereka sendiri:
+                        Kami dapat menggunakan layanan pihak ketiga untuk tujuan tertentu dalam mengoperasikan dan meningkatkan website kami. Layanan ini memiliki kebijakan privasi mereka sendiri yang mengatur penggunaan data:
                     </p>
                     
                     <ul class="policy-list">
-                        <li><strong>Google Analytics:</strong> Layanan analisis web yang melacak dan melaporkan traffic website. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Kebijakan Privasi Google</a></li>
-                        <li><strong>Google AdSense:</strong> Layanan periklanan untuk menampilkan iklan relevan. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Kebijakan Privasi Google</a></li>
-                        <li><strong>YouTube:</strong> Untuk menampilkan video konten edukatif. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Kebijakan Privasi YouTube</a></li>
-                        <li><strong>Social Media:</strong> Tautan ke platform media sosial kami (TikTok, Instagram, Facebook) yang memiliki kebijakan privasi masing-masing.</li>
+                        <li><strong>Google Analytics:</strong> Layanan analisis web yang melacak dan melaporkan traffic website untuk membantu kami memahami perilaku pengunjung. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Kebijakan Privasi Google</a></li>
+                        <li><strong>Google AdSense:</strong> Layanan periklanan untuk menampilkan iklan relevan yang mendukung operasional website kami. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Kebijakan Privasi Google</a></li>
+                        <li><strong>YouTube:</strong> Untuk menampilkan video konten edukatif yang membantu proses pembelajaran pengguna. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Kebijakan Privasi YouTube</a></li>
+                        <li><strong>Social Media:</strong> Tautan ke platform media sosial kami (TikTok, Instagram, Facebook) yang memiliki kebijakan privasi masing-masing platform.</li>
                     </ul>
                     
                     <p class="mt-4">
-                        Kami tidak bertanggung jawab atas praktik privasi situs web pihak ketiga. Kami mendorong Anda untuk membaca kebijakan privasi setiap situs yang Anda kunjungi.
+                        Kami tidak bertanggung jawab atas praktik privasi situs web pihak ketiga. Kami mendorong Anda untuk membaca kebijakan privasi setiap situs yang Anda kunjungi untuk memahami bagaimana data Anda dikelola oleh masing-masing platform.
                     </p>
                 </section>
                 
@@ -857,7 +881,10 @@
                              data-full-width-responsive="true"></ins>
                         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                         -->
-                        <span>Ad Slot 3 - Rectangle/Medium Rectangle (300x250)</span>
+                        <div class="ad-slot-placeholder">
+                            📢 Slot Iklan 3 - Rectangle/Medium Rectangle
+                        </div>
+                        <span class="ad-slot-size">Ukuran: 300x250 px</span>
                     </div>
                 </div>
                 
@@ -865,19 +892,19 @@
                 <section id="keamanan" class="policy-section">
                     <h2 class="section-title">7. Keamanan Data</h2>
                     <p>
-                        Keamanan data Anda penting bagi kami. Kami menerapkan langkah-langkah keamanan yang wajar untuk melindungi informasi pribadi Anda dari akses, penggunaan, atau pengungkapan yang tidak sah.
+                        Keamanan data Anda sangat penting bagi kami. Kami menerapkan langkah-langkah keamanan yang wajar untuk melindungi informasi pribadi Anda dari akses, penggunaan, atau pengungkapan yang tidak sah. Berikut adalah langkah-langkah keamanan yang kami terapkan:
                     </p>
                     
                     <ul class="policy-list">
-                        <li>Enkripsi data sensitif menggunakan protokol HTTPS/TLS</li>
-                        <li>Akses terbatas ke informasi pribadi hanya untuk karyawan yang membutuhkan</li>
-                        <li>Pemantauan berkala untuk kerentanan keamanan</li>
-                        <li>Pencadangan data secara berkala</li>
+                        <li>Enkripsi data sensitif menggunakan protokol HTTPS/TLS untuk semua transmisi data antara browser Anda dan server kami</li>
+                        <li>Akses terbatas ke informasi pribadi hanya untuk karyawan yang membutuhkan untuk menjalankan tugas mereka</li>
+                        <li>Pemantauan berkala untuk kerentanan keamanan dan penerapan patch keamanan secara rutin</li>
+                        <li>Pencadangan data secara berkala untuk mencegah kehilangan data dalam kondisi darurat</li>
                     </ul>
                     
                     <div class="highlight-box">
                         <p style="margin: 0; position: relative;">
-                            Namun, tidak ada metode transmisi melalui Internet atau metode penyimpanan elektronik yang 100% aman. Meskipun kami berusaha menggunakan cara yang dapat diterima secara komersial untuk melindungi informasi pribadi Anda, kami tidak dapat menjamin keamanan mutlaknya.
+                            Namun, tidak ada metode transmisi melalui Internet atau metode penyimpanan elektronik yang 100% aman. Meskipun kami berusaha menggunakan cara yang dapat diterima secara komersial untuk melindungi informasi pribadi Anda, kami tidak dapat menjamin keamanan mutlaknya. Kami selalu berupaya meningkatkan protokol keamanan kami.
                         </p>
                     </div>
                 </section>
@@ -885,19 +912,19 @@
                 <!-- Section 8 -->
                 <section id="hak-pengguna" class="policy-section">
                     <h2 class="section-title">8. Hak Pengguna</h2>
-                    <p>Anda memiliki hak-hak berikut terkait data pribadi Anda:</p>
+                    <p>Anda memiliki hak-hak berikut terkait data pribadi Anda yang kami kelola:</p>
                     
                     <ul class="policy-list">
-                        <li><strong>Hak Akses:</strong> Anda berhak meminta salinan informasi pribadi yang kami miliki tentang Anda.</li>
-                        <li><strong>Hak Koreksi:</strong> Anda berhak meminta kami memperbaiki informasi yang Anda yakini tidak akurat.</li>
-                        <li><strong>Hak Penghapusan:</strong> Anda berhak meminta kami menghapus informasi pribadi Anda dalam keadaan tertentu.</li>
-                        <li><strong>Hak Pembatasan:</strong> Anda berhak meminta kami membatasi pemrosesan informasi Anda dalam keadaan tertentu.</li>
-                        <li><strong>Hak Keberatan:</strong> Anda berhak menolak pemrosesan informasi pribadi Anda dalam keadaan tertentu.</li>
-                        <li><strong>Hak Portabilitas:</strong> Anda berhak meminta transfer data Anda ke organisasi lain atau kepada Anda.</li>
+                        <li><strong>Hak Akses:</strong> Anda berhak meminta salinan informasi pribadi yang kami miliki tentang Anda. Kami akan menyediakan data tersebut dalam format yang dapat dibaca mesin.</li>
+                        <li><strong>Hak Koreksi:</strong> Anda berhak meminta kami memperbaiki informasi yang Anda yakini tidak akurat atau tidak lengkap. Kami akan memverifikasi dan melakukan koreksi yang diperlukan.</li>
+                        <li><strong>Hak Penghapusan:</strong> Anda berhak meminta kami menghapus informasi pribadi Anda dalam keadaan tertentu, seperti ketika data tidak lagi diperlukan untuk tujuan pengumpulan.</li>
+                        <li><strong>Hak Pembatasan:</strong> Anda berhak meminta kami membatasi pemrosesan informasi Anda dalam keadaan tertentu, seperti saat verifikasi keakuratan data sedang dilakukan.</li>
+                        <li><strong>Hak Keberatan:</strong> Anda berhak menolak pemrosesan informasi pribadi Anda dalam keadaan tertentu, termasuk untuk tujuan pemasaran langsung.</li>
+                        <li><strong>Hak Portabilitas:</strong> Anda berhak meminta transfer data Anda ke organisasi lain atau kepada Anda dalam format yang terstruktur dan dapat dibaca mesin.</li>
                     </ul>
                     
                     <p class="mt-4">
-                        Untuk menggunakan hak-hak ini, silakan hubungi kami melalui informasi kontak yang tersedia di bagian bawah kebijakan ini.
+                        Untuk menggunakan hak-hak ini, silakan hubungi kami melalui informasi kontak yang tersedia di bagian bawah kebijakan ini. Kami akan merespons permintaan Anda sesuai dengan regulasi yang berlaku.
                     </p>
                 </section>
                 
@@ -921,7 +948,10 @@
                              data-ad-slot="XXXXXXXXXX"></ins>
                         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                         -->
-                        <span>Ad Slot 4 - In-Article Ad (Responsive)</span>
+                        <div class="ad-slot-placeholder">
+                            📢 Slot Iklan 4 - In-Article Ad
+                        </div>
+                        <span class="ad-slot-size">Format: Responsive/Fluid</span>
                     </div>
                 </div>
                 
@@ -929,10 +959,10 @@
                 <section id="anak-anak" class="policy-section">
                     <h2 class="section-title">9. Privasi Anak-anak</h2>
                     <p>
-                        Layanan kami tidak ditujukan untuk siapa pun yang berusia di bawah <strong>13 tahun</strong>. Kami tidak dengan sengaja mengumpulkan informasi pribadi dari anak-anak di bawah 13 tahun.
+                        Layanan kami tidak ditujukan untuk siapa pun yang berusia di bawah <strong>13 tahun</strong>. Kami tidak dengan sengaja mengumpulkan informasi pribadi dari anak-anak di bawah 13 tahun. Jika Anda adalah orang tua atau wali dan mengetahui bahwa anak Anda telah memberikan informasi pribadi kepada kami, segera hubungi kami.
                     </p>
                     <p class="mt-4">
-                        Jika Anda adalah orang tua atau wali dan Anda mengetahui bahwa anak Anda telah memberikan informasi pribadi kepada kami, silakan hubungi kami. Jika kami mengetahui bahwa kami telah mengumpulkan informasi pribadi dari anak-anak di bawah 13 tahun, kami akan mengambil langkah untuk menghapus informasi tersebut.
+                        Jika kami mengetahui bahwa kami telah mengumpulkan informasi pribadi dari anak-anak di bawah 13 tahun tanpa verifikasi persetujuan orang tua, kami akan mengambil langkah untuk menghapus informasi tersebut secepat mungkin. Kami berkomitmen untuk mematuhi regulasi perlindungan anak yang berlaku.
                     </p>
                 </section>
                 
@@ -940,15 +970,15 @@
                 <section id="perubahan" class="policy-section">
                     <h2 class="section-title">10. Perubahan Kebijakan</h2>
                     <p>
-                        Kami dapat memperbarui Kebijakan Privasi kami dari waktu ke waktu. Kami akan memberi tahu Anda tentang perubahan apa pun dengan memposting Kebijakan Privasi baru di halaman ini dan memperbarui tanggal "Terakhir diperbarui".
+                        Kami dapat memperbarui Kebijakan Privasi kami dari waktu ke waktu untuk mencerminkan perubahan dalam praktik privasi kami atau untuk mematuhi regulasi baru. Kami akan memberi tahu Anda tentang perubahan apa pun dengan memposting Kebijakan Privasi baru di halaman ini dan memperbarui tanggal "Terakhir diperbarui".
                     </p>
                     <p class="mt-4">
-                        Anda disarankan untuk meninjau Kebijakan Privasi ini secara berkala untuk setiap perubahan. Perubahan pada Kebijakan Privasi ini efektif ketika diposting di halaman ini.
+                        Anda disarankan untuk meninjau Kebijakan Privasi ini secara berkala untuk setiap perubahan. Perubahan pada Kebijakan Privasi ini efektif ketika diposting di halaman ini, kecuali dinyatakan lain.
                     </p>
                     <ul class="policy-list mt-4">
-                        <li>Kami akan mengirimkan email untuk memberi tahu Anda tentang perubahan signifikan (jika Anda berlangganan)</li>
-                        <li>Pemberitahuan akan ditampilkan di website kami untuk perubahan penting</li>
-                        <li>Tanggal pembaruan terakhir selalu tercantum di bagian atas kebijakan ini</li>
+                        <li>Kami akan mengirimkan email untuk memberi tahu Anda tentang perubahan signifikan jika Anda terdaftar sebagai pelanggan newsletter kami</li>
+                        <li>Pemberitahuan akan ditampilkan di website kami untuk perubahan penting yang mempengaruhi hak dan kewajiban Anda</li>
+                        <li>Tanggal pembaruan terakhir selalu tercantum di bagian atas kebijakan ini untuk referensi mudah</li>
                     </ul>
                 </section>
                 
@@ -956,7 +986,7 @@
                 <section id="kontak" class="policy-section">
                     <h2 class="section-title">11. Hubungi Kami</h2>
                     <p>
-                        Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau ingin menggunakan hak-hak Anda, silakan hubungi kami:
+                        Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau ingin menggunakan hak-hak Anda terkait data pribadi, silakan hubungi kami melalui saluran berikut:
                     </p>
                     
                     <div class="highlight-box mt-4">
@@ -973,7 +1003,7 @@
                     </div>
                     
                     <p class="mt-4">
-                        Kami akan berusaha merespons permintaan Anda dalam waktu <strong>30 hari kerja</strong>.
+                        Kami akan berusaha merespons permintaan Anda dalam waktu <strong>30 hari kerja</strong>. Untuk permintaan yang kompleks, kami akan menginformasikan estimasi waktu yang diperlukan untuk memproses permintaan Anda.
                     </p>
                 </section>
                 
@@ -999,7 +1029,10 @@
                          data-full-width-responsive="true"></ins>
                     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                     -->
-                    <span>Ad Slot 5 - Horizontal/Leaderboard (728x90)</span>
+                    <div class="ad-slot-placeholder">
+                        📢 Slot Iklan 5 - Horizontal/Leaderboard
+                    </div>
+                    <span class="ad-slot-size">Ukuran: 728x90 px</span>
                 </div>
             </div>
         </article>
@@ -1074,6 +1107,11 @@
     <script>
         // Intersection Observer for fade-up animations
         document.addEventListener('DOMContentLoaded', function() {
+            // Make sure all content is visible immediately
+            document.querySelectorAll('.fade-up').forEach(el => {
+                el.classList.add('visible');
+            });
+            
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
@@ -1091,15 +1129,6 @@
             document.querySelectorAll('.fade-up').forEach(el => {
                 observer.observe(el);
             });
-            
-            // Trigger initial elements
-            setTimeout(() => {
-                document.querySelectorAll('.fade-up').forEach(el => {
-                    if (el.getBoundingClientRect().top < window.innerHeight) {
-                        el.classList.add('visible');
-                    }
-                });
-            }, 100);
         });
         
         // Smooth scroll for anchor links with header offset
