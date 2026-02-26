@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>mibenglish - 1000 Langkah Mahir Bahasa Inggris</title>
     <meta name="description" content="Metode belajar bahasa Inggris menyenangkan. 1000 episode lengkap.">
     <meta name="keywords" content="belajar bahasa inggris, mibenglish, kursus inggris online">
@@ -23,12 +23,18 @@
             --text: #1A2F26;
             --text-m: #4A6358;
             --border: #D6E5E0;
-            --radius: 12px;
+            --radius: 10px;
         }
 
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        *, *::before, *::after { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+        }
         
-        html { scroll-behavior: smooth; }
+        html { 
+            scroll-behavior: smooth;
+        }
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -37,16 +43,18 @@
             line-height: 1.5;
             min-height: 100vh;
             -webkit-font-smoothing: antialiased;
+            -webkit-tap-highlight-color: transparent;
         }
 
         /* === HEADER === */
         header {
             background: var(--white);
             border-bottom: 1px solid var(--border);
-            padding: 12px 16px;
+            padding: 8px 12px;
             position: sticky;
             top: 0;
             z-index: 100;
+            width: 100%;
         }
 
         .header-inner {
@@ -55,72 +63,78 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 8px;
         }
 
         .brand-logo {
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             font-weight: 800;
             text-decoration: none;
             letter-spacing: -0.5px;
             display: flex;
             align-items: center;
+            flex-shrink: 0;
         }
 
         .brand-mib { color: var(--primary); }
         .brand-english { color: var(--secondary); }
 
-        /* Online Badge - Simple & Light */
+        /* Online Badge */
         .online-badge {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 5px;
             background: linear-gradient(135deg, var(--accent), #e8f8f0);
-            padding: 8px 14px;
-            border-radius: 20px;
+            padding: 5px 9px;
+            border-radius: 14px;
             border: 1px solid var(--secondary);
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 600;
+            flex-shrink: 0;
         }
 
         .online-dot {
-            width: 8px;
-            height: 8px;
+            width: 6px;
+            height: 6px;
             background: var(--secondary);
             border-radius: 50%;
-            animation: blink 1.5s ease-in-out infinite;
+            animation: pulse 2s ease-in-out infinite;
+            flex-shrink: 0;
         }
 
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.9); }
         }
 
         .online-badge .count {
             color: var(--primary);
             font-weight: 800;
-            min-width: 45px;
+            min-width: 32px;
             text-align: right;
         }
 
         /* === AD SLOTS === */
         .ad-slot {
-            background: #f8f9fa;
-            border: 2px dashed #dee2e6;
+            background: #f5f5f5;
+            border: 1px dashed #ddd;
             border-radius: var(--radius);
-            min-height: 90px;
+            min-height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 16px auto;
-            color: #adb5bd;
-            font-size: 0.8rem;
+            margin: 10px auto;
+            color: #aaa;
+            font-size: 0.7rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            padding: 8px;
+            text-align: center;
         }
 
-        .ad-slot-banner { max-width: 728px; height: 90px; }
-        .ad-slot-rect { max-width: 336px; height: 250px; }
+        .ad-slot-banner { max-width: 100%; min-height: 50px; }
+        .ad-slot-rect { max-width: 100%; min-height: 150px; }
 
         /* === NAV === */
         .nav-tabs {
@@ -135,22 +149,23 @@
         .nav-tabs-inner {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 8px;
+            padding: 6px 8px;
             display: flex;
-            gap: 8px;
+            gap: 5px;
         }
 
         .tab-btn {
-            padding: 10px 18px;
+            padding: 6px 12px;
             background: var(--bg);
             border: none;
-            border-radius: 25px;
-            font-size: 0.9rem;
+            border-radius: 16px;
+            font-size: 0.78rem;
             font-weight: 600;
             color: var(--text-m);
             cursor: pointer;
             transition: background 0.2s, color 0.2s;
             white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .tab-btn.active {
@@ -164,72 +179,79 @@
         main {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 16px;
+            padding: 10px;
+            width: 100%;
         }
 
         .season-header {
             background: linear-gradient(135deg, var(--primary), var(--primary-l));
             color: var(--white);
-            padding: 20px;
+            padding: 12px 14px;
             border-radius: var(--radius);
-            margin-bottom: 16px;
+            margin-bottom: 10px;
         }
 
         .season-header h1 {
-            font-size: 1.2rem;
-            margin-bottom: 4px;
+            font-size: 0.95rem;
+            margin-bottom: 3px;
+            line-height: 1.3;
         }
 
         .season-header p {
-            font-size: 0.95rem;
+            font-size: 0.82rem;
             opacity: 0.9;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
+            line-height: 1.35;
         }
 
         .season-meta {
             display: inline-block;
             background: rgba(255,255,255,0.15);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
         }
 
         /* Controls */
         .controls-bar {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            margin-bottom: 16px;
+            gap: 8px;
+            margin-bottom: 10px;
         }
 
         .search-box {
             position: relative;
-            flex: 1;
+            width: 100%;
         }
 
         .search-box input {
             width: 100%;
-            padding: 14px 14px 14px 44px;
+            padding: 10px 10px 10px 36px;
             border: 1px solid var(--border);
-            border-radius: 10px;
+            border-radius: 8px;
             font-size: 16px;
             background: var(--white);
             transition: border-color 0.2s, box-shadow 0.2s;
+            -webkit-appearance: none;
         }
 
         .search-box input:focus {
             outline: none;
             border-color: var(--secondary);
-            box-shadow: 0 0 0 3px rgba(45, 155, 106, 0.1);
+            box-shadow: 0 0 0 2px rgba(45, 155, 106, 0.1);
         }
 
         .search-box svg {
             position: absolute;
-            left: 14px;
+            left: 10px;
             top: 50%;
             transform: translateY(-50%);
             color: var(--text-m);
             pointer-events: none;
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
         }
 
         .per-page-select {
@@ -237,10 +259,10 @@
             align-items: center;
             justify-content: space-between;
             background: var(--white);
-            padding: 10px 14px;
-            border-radius: 10px;
+            padding: 8px 10px;
+            border-radius: 8px;
             border: 1px solid var(--border);
-            font-size: 0.9rem;
+            font-size: 0.82rem;
         }
 
         .per-page-select select {
@@ -250,13 +272,14 @@
             font-weight: 600;
             color: var(--primary);
             cursor: pointer;
+            padding: 2px 6px;
         }
 
         /* Episode Grid */
         .episode-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 10px;
+            gap: 6px;
         }
 
         .ep-card {
@@ -265,28 +288,28 @@
             background: var(--white);
             border: 1px solid var(--border);
             border-radius: var(--radius);
-            padding: 14px;
+            padding: 10px;
             text-decoration: none;
             color: inherit;
-            gap: 12px;
-            transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+            gap: 8px;
+            transition: background 0.15s;
         }
 
         .ep-card:active {
-            transform: scale(0.98);
+            background: var(--bg);
         }
 
         .ep-num {
             flex-shrink: 0;
-            width: 44px;
-            height: 44px;
+            width: 34px;
+            height: 34px;
             background: var(--bg);
-            border-radius: 10px;
+            border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 800;
-            font-size: 1rem;
+            font-size: 0.8rem;
             color: var(--primary);
         }
 
@@ -298,15 +321,16 @@
 
         .ep-title {
             font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 2px;
+            font-size: 0.82rem;
+            margin-bottom: 1px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            line-height: 1.3;
         }
 
         .ep-theme {
-            font-size: 0.85rem;
+            font-size: 0.73rem;
             color: var(--text-m);
             white-space: nowrap;
             overflow: hidden;
@@ -315,36 +339,41 @@
 
         .ep-arrow {
             display: none;
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             background: var(--bg);
             border-radius: 50%;
             align-items: center;
             justify-content: center;
             color: var(--text-m);
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: background 0.2s, color 0.2s;
+            flex-shrink: 0;
         }
 
         /* Pagination */
         .pagination {
             display: flex;
             justify-content: center;
-            gap: 6px;
-            margin-top: 20px;
+            gap: 3px;
+            margin-top: 12px;
             flex-wrap: wrap;
+            padding: 0 2px;
         }
 
         .page-btn {
-            min-width: 40px;
-            height: 40px;
+            min-width: 32px;
+            height: 32px;
             background: var(--white);
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 6px;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.82rem;
             cursor: pointer;
             transition: background 0.15s, border-color 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .page-btn:hover:not(:disabled) { border-color: var(--secondary); }
@@ -352,15 +381,16 @@
         .page-btn:disabled { opacity: 0.4; cursor: default; }
 
         .page-dots {
-            padding: 0 4px;
+            padding: 0 2px;
             align-self: center;
             color: var(--text-m);
+            font-size: 0.82rem;
         }
 
         .page-info {
             text-align: center;
-            margin-top: 12px;
-            font-size: 0.9rem;
+            margin-top: 8px;
+            font-size: 0.8rem;
             color: var(--text-m);
         }
 
@@ -368,17 +398,18 @@
         footer {
             background: var(--white);
             border-top: 1px solid var(--border);
-            padding: 24px 16px;
-            margin-top: 24px;
+            padding: 16px 10px;
+            margin-top: 16px;
             text-align: center;
+            width: 100%;
         }
 
         .footer-links {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            margin-bottom: 16px;
-            padding-bottom: 16px;
+            gap: 4px;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
             border-bottom: 1px solid var(--border);
         }
 
@@ -386,8 +417,8 @@
             text-decoration: none;
             color: var(--text-m);
             font-weight: 600;
-            padding: 4px;
-            transition: color 0.2s;
+            padding: 4px 2px;
+            font-size: 0.82rem;
         }
 
         .footer-links a:hover { color: var(--primary); }
@@ -395,33 +426,36 @@
         .socials {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 6px;
             flex-wrap: wrap;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .social-btn {
-            padding: 8px 16px;
+            padding: 6px 12px;
             background: var(--bg);
-            border-radius: 20px;
+            border-radius: 14px;
             text-decoration: none;
             color: var(--text);
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             transition: background 0.2s, color 0.2s;
         }
 
         .social-btn:hover { background: var(--primary); color: var(--white); }
 
-        .copyright { font-size: 0.8rem; color: #888; }
+        .copyright { 
+            font-size: 0.7rem; 
+            color: #999;
+        }
 
         /* FAB */
         .share-fab {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 52px;
-            height: 52px;
+            bottom: 14px;
+            right: 14px;
+            width: 44px;
+            height: 44px;
             background: var(--primary);
             color: var(--white);
             border: none;
@@ -429,29 +463,31 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(13, 79, 60, 0.3);
+            box-shadow: 0 3px 10px rgba(13, 79, 60, 0.3);
             cursor: pointer;
             z-index: 99;
             transition: transform 0.2s;
         }
 
         .share-fab:active { transform: scale(0.95); }
-        .share-fab svg { width: 22px; height: 22px; fill: currentColor; }
+        .share-fab svg { width: 18px; height: 18px; fill: currentColor; }
 
         .toast {
             position: fixed;
-            bottom: 85px;
+            bottom: 65px;
             left: 50%;
-            transform: translateX(-50%) translateY(20px);
+            transform: translateX(-50%) translateY(15px);
             background: #333;
             color: var(--white);
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 0.85rem;
+            padding: 8px 16px;
+            border-radius: 16px;
+            font-size: 0.8rem;
             opacity: 0;
             transition: opacity 0.3s, transform 0.3s;
             z-index: 100;
             pointer-events: none;
+            text-align: center;
+            max-width: calc(100% - 20px);
         }
 
         .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
@@ -459,34 +495,238 @@
         /* Empty State */
         .empty-state {
             text-align: center;
-            padding: 40px 20px;
+            padding: 24px 12px;
             color: var(--text-m);
+            font-size: 0.85rem;
         }
 
-        /* === RESPONSIVE === */
-        @media (min-width: 500px) {
-            .controls-bar { flex-direction: row; align-items: center; }
-            .episode-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-links { flex-direction: row; justify-content: center; gap: 24px; }
+        /* === RESPONSIVE - TABLET === */
+        @media (min-width: 480px) {
+            header { padding: 10px 14px; }
+            
+            .brand-logo { font-size: 1.25rem; }
+            
+            .online-badge {
+                padding: 6px 10px;
+                gap: 6px;
+                font-size: 0.8rem;
+            }
+            
+            .online-dot { width: 7px; height: 7px; }
+            
+            .online-badge .count { min-width: 38px; }
+            
+            main { padding: 12px; }
+            
+            .season-header {
+                padding: 14px 16px;
+            }
+            
+            .season-header h1 { font-size: 1.05rem; }
+            
+            .season-header p { font-size: 0.88rem; }
+            
+            .controls-bar { 
+                flex-direction: row; 
+                align-items: center; 
+                gap: 10px;
+            }
+            
+            .search-box { flex: 1; }
+            
+            .search-box input {
+                padding: 11px 11px 11px 38px;
+            }
+            
+            .episode-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+                gap: 8px;
+            }
+            
+            .ep-card { padding: 11px; }
+            
+            .ep-num {
+                width: 38px;
+                height: 38px;
+                font-size: 0.85rem;
+            }
+            
+            .ep-title { font-size: 0.88rem; }
+            
+            .ep-theme { font-size: 0.78rem; }
+            
+            .footer-links { 
+                flex-direction: row; 
+                justify-content: center; 
+                gap: 16px; 
+            }
+            
+            .ad-slot-banner { min-height: 70px; }
+            .ad-slot-rect { min-height: 200px; }
         }
 
-        @media (min-width: 800px) {
-            .episode-grid { grid-template-columns: repeat(3, 1fr); }
+        /* === RESPONSIVE - DESKTOP === */
+        @media (min-width: 700px) {
+            .nav-tabs-inner {
+                padding: 8px 12px;
+                gap: 6px;
+            }
+            
+            .tab-btn {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+            
+            .season-header {
+                padding: 16px 20px;
+            }
+            
+            .season-header h1 { font-size: 1.15rem; }
+            
+            .season-header p { font-size: 0.92rem; }
+            
+            .episode-grid { 
+                grid-template-columns: repeat(3, 1fr); 
+                gap: 10px;
+            }
+            
+            .ep-card {
+                padding: 12px 14px;
+            }
             
             .ep-card:hover {
                 transform: translateY(-2px);
-                box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.06);
                 border-color: var(--secondary);
+                background: var(--white);
             }
 
+            .ep-num {
+                width: 42px;
+                height: 42px;
+                font-size: 0.9rem;
+            }
+            
+            .ep-title { font-size: 0.92rem; }
+            .ep-theme { font-size: 0.82rem; }
+            
             .ep-arrow { display: flex; }
             .ep-card:hover .ep-arrow { background: var(--primary); color: var(--white); }
+            
+            .pagination { gap: 4px; }
+            
+            .page-btn {
+                min-width: 36px;
+                height: 36px;
+            }
+            
+            .share-fab {
+                width: 48px;
+                height: 48px;
+                bottom: 16px;
+                right: 16px;
+            }
         }
 
-        @media (max-width: 360px) {
-            .brand-logo { font-size: 1.1rem; }
-            .online-badge { padding: 6px 10px; font-size: 0.8rem; }
-            .online-badge .count { min-width: 40px; }
+        @media (min-width: 900px) {
+            main { padding: 16px; }
+            
+            .season-header {
+                padding: 18px 22px;
+            }
+            
+            .episode-grid { gap: 12px; }
+        }
+
+        /* === VERY SMALL SCREENS (< 360px) === */
+        @media (max-width: 359px) {
+            header { padding: 6px 8px; }
+            
+            .brand-logo { font-size: 1.05rem; }
+            
+            .online-badge {
+                padding: 4px 7px;
+                font-size: 0.7rem;
+                gap: 4px;
+            }
+            
+            .online-dot { width: 5px; height: 5px; }
+            
+            .online-badge .count { min-width: 28px; }
+            
+            main { padding: 8px; }
+            
+            .season-header { padding: 10px 12px; }
+            .season-header h1 { font-size: 0.88rem; }
+            .season-header p { font-size: 0.78rem; }
+            
+            .nav-tabs-inner { padding: 5px 6px; gap: 4px; }
+            
+            .tab-btn {
+                padding: 5px 10px;
+                font-size: 0.72rem;
+            }
+            
+            .ep-card { padding: 8px; gap: 6px; }
+            
+            .ep-num {
+                width: 30px;
+                height: 30px;
+                font-size: 0.75rem;
+            }
+            
+            .ep-title { font-size: 0.78rem; }
+            .ep-theme { font-size: 0.7rem; }
+            
+            .per-page-select { padding: 6px 8px; font-size: 0.78rem; }
+            
+            .search-box input {
+                padding: 9px 9px 9px 32px;
+                font-size: 15px;
+            }
+            
+            .search-box svg {
+                width: 14px;
+                height: 14px;
+                left: 9px;
+            }
+            
+            .page-btn {
+                min-width: 28px;
+                height: 28px;
+                font-size: 0.78rem;
+            }
+            
+            .share-fab {
+                width: 40px;
+                height: 40px;
+                bottom: 10px;
+                right: 10px;
+            }
+            
+            .share-fab svg { width: 16px; height: 16px; }
+            
+            footer { padding: 12px 8px; }
+            .social-btn { padding: 5px 10px; font-size: 0.7rem; }
+            .copyright { font-size: 0.65rem; }
+        }
+
+        /* === LANDSCAPE MOBILE === */
+        @media (max-height: 450px) and (orientation: landscape) {
+            header { padding: 5px 10px; }
+            
+            .season-header { padding: 8px 12px; }
+            
+            .season-header h1 { font-size: 0.88rem; margin-bottom: 2px; }
+            
+            .season-header p { font-size: 0.78rem; margin-bottom: 4px; }
+            
+            .share-fab {
+                width: 38px;
+                height: 38px;
+                bottom: 6px;
+                right: 6px;
+            }
         }
     </style>
 </head>
@@ -508,7 +748,7 @@
     <nav class="nav-tabs"><div class="nav-tabs-inner" id="navTabs"></div></nav>
 
     <main>
-        <div class="ad-slot ad-slot-banner">AdSense - Banner 728x90</div>
+        <div class="ad-slot ad-slot-banner">AdSense - Banner</div>
 
         <div class="season-header">
             <h1 id="seasonTitle">Memuat...</h1>
@@ -518,7 +758,7 @@
 
         <div class="controls-bar">
             <div class="search-box">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                 <input type="text" id="searchInput" placeholder="Cari judul atau nomor episode..." autocomplete="off">
             </div>
             <div class="per-page-select">
@@ -533,21 +773,21 @@
 
         <div class="episode-grid" id="episodeGrid"></div>
 
-        <div class="ad-slot ad-slot-rect">AdSense - Rectangle 336x280</div>
+        <div class="ad-slot ad-slot-rect">AdSense - Rectangle</div>
 
         <div class="pagination" id="pagination"></div>
         <div class="page-info" id="pageInfo"></div>
 
-        <div class="ad-slot ad-slot-rect">AdSense - Large Rectangle 336x280</div>
+        <div class="ad-slot ad-slot-rect">AdSense - Large Rectangle</div>
     </main>
 
     <footer>
-        <div class="ad-slot ad-slot-banner" style="margin-bottom: 20px;">AdSense - Horizontal 728x90</div>
+        <div class="ad-slot ad-slot-banner">AdSense - Horizontal</div>
         
         <div class="footer-links">
             <a href="https://mibenglish.com/">Beranda</a>
-            <a href="https://mibenglish.com/about.html">About Us</a>
-            <a href="https://mibenglish.com/privacy.html">Privacy Policy</a>
+            <a href="https://mibenglish.com/about.html">About</a>
+            <a href="https://mibenglish.com/privacy.html">Privacy</a>
             <a href="https://mibenglish.com/terms.html">Terms</a>
             <a href="https://mibenglish.com/contact.html">Contact</a>
         </div>
@@ -557,7 +797,7 @@
             <a href="https://facebook.com/@mibenglish" target="_blank" rel="noopener" class="social-btn">Facebook</a>
             <a href="https://instagram.com/@mibenglish" target="_blank" rel="noopener" class="social-btn">Instagram</a>
         </div>
-        <p class="copyright">&copy; 2023 mibenglish. All rights reserved.</p>
+        <p class="copyright">&copy; 2024 mibenglish. All rights reserved.</p>
     </footer>
 
     <button class="share-fab" id="shareFab" aria-label="Share">
@@ -592,9 +832,10 @@ const specialEpisodes = {
 };
 
 // ===========================
-// ONLINE COUNTER (Lightweight)
+// PROFESSIONAL ONLINE COUNTER
 // ===========================
-function _0x1378(_0x2ca09e,_0x1c1330){const _0x1350da=_0x1350();return _0x1378=function(_0x13783a,_0x47cb5c){_0x13783a=_0x13783a-0xeb;let _0x14a4dd=_0x1350da[_0x13783a];return _0x14a4dd;},_0x1378(_0x2ca09e,_0x1c1330);}(function(_0xd19a31,_0x57d4cb){const _0x2f1e49=_0x1378,_0x34dfd8=_0xd19a31();while(!![]){try{const _0x1b1804=parseInt(_0x2f1e49(0xf9))/0x1*(-parseInt(_0x2f1e49(0xf0))/0x2)+-parseInt(_0x2f1e49(0xfd))/0x3+parseInt(_0x2f1e49(0xf7))/0x4*(-parseInt(_0x2f1e49(0x100))/0x5)+parseInt(_0x2f1e49(0xec))/0x6*(-parseInt(_0x2f1e49(0xf3))/0x7)+-parseInt(_0x2f1e49(0xfa))/0x8+-parseInt(_0x2f1e49(0xff))/0x9*(-parseInt(_0x2f1e49(0xeb))/0xa)+parseInt(_0x2f1e49(0xf2))/0xb;if(_0x1b1804===_0x57d4cb)break;else _0x34dfd8['push'](_0x34dfd8['shift']());}catch(_0x535dc7){_0x34dfd8['push'](_0x34dfd8['shift']());}}}(_0x1350,0x7ce93),(function(){const _0x336348=_0x1378,_0x8472d8=document[_0x336348(0xf6)](_0x336348(0xee));if(!_0x8472d8)return;const _0x342998=0x5dc,_0x3215a2=0x1b58,_0x5d5b0d=_0x3215a2-_0x342998;let _0x3e8ef0=parseInt(sessionStorage['getItem'](_0x336348(0xfb))||'0',0xa);!_0x3e8ef0&&(_0x3e8ef0=Math['floor'](Math[_0x336348(0xfc)]()*0x3e8),sessionStorage[_0x336348(0xed)](_0x336348(0xfb),_0x3e8ef0['toString']()));let _0x4f877b=_0x342998+_0x3e8ef0/0x3e8*_0x5d5b0d*0.5;const _0x5dde65=new Date()[_0x336348(0xf8)](),_0x157307=_0x5dde65>=0x8&&_0x5dde65<=0x16?0.3:-0.1;_0x4f877b=Math[_0x336348(0xef)](_0x342998,Math[_0x336348(0xf5)](_0x3215a2,_0x4f877b+_0x5d5b0d*_0x157307));let _0x501fa8=Math[_0x336348(0xf1)](_0x4f877b);const _0x2fa74b=_0x5ef142=>_0x5ef142['toLocaleString'](_0x336348(0xfe));_0x8472d8[_0x336348(0xf4)]=_0x2fa74b(_0x501fa8),setInterval(()=>{const _0x49d815=_0x336348,_0x8d57a=Math[_0x49d815(0xf1)](Math[_0x49d815(0xfc)]()*0x64)-0x32;_0x501fa8=Math[_0x49d815(0xef)](_0x342998,Math['min'](_0x3215a2,_0x501fa8+_0x8d57a)),_0x8472d8[_0x49d815(0xf4)]=_0x2fa74b(_0x501fa8);},0xfa0+Math[_0x336348(0xfc)]()*0xfa0);}()));function _0x1350(){const _0x5626ca=['40821385nSCLZA','1232UznWrp','textContent','min','getElementById','8YCzfRH','getHours','65lwUbsJ','4827512hzLBDm','mib_seed','random','2595276YrlGOP','id-ID','1616319dQvMMB','1823190sxqGqD','10cdNwNG','14634QwLUQV','setItem','onlineCount','max','23136bUiUnk','floor'];_0x1350=function(){return _0x5626ca;};return _0x1350();}
+(function(_0x10b937,_0x17b277){const _0x2955fc=_0x32db,_0x1c2378=_0x10b937();while(!![]){try{const _0xd53285=-parseInt(_0x2955fc(0x1bb))/0x1+-parseInt(_0x2955fc(0x1d1))/0x2*(parseInt(_0x2955fc(0x1cd))/0x3)+parseInt(_0x2955fc(0x1bc))/0x4*(parseInt(_0x2955fc(0x1d0))/0x5)+parseInt(_0x2955fc(0x1a1))/0x6*(-parseInt(_0x2955fc(0x1c2))/0x7)+-parseInt(_0x2955fc(0x1ab))/0x8*(parseInt(_0x2955fc(0x1c3))/0x9)+parseInt(_0x2955fc(0x1a4))/0xa+-parseInt(_0x2955fc(0x1ba))/0xb*(-parseInt(_0x2955fc(0x1c8))/0xc);if(_0xd53285===_0x17b277)break;else _0x1c2378['push'](_0x1c2378['shift']());}catch(_0x22d501){_0x1c2378['push'](_0x1c2378['shift']());}}}(_0x2980,0x535a6));function _0x5310(_0x320aff,_0x2bafb6){const _0x43ee16=_0x22af();return _0x5310=function(_0x6435ba,_0x43cf53){_0x6435ba=_0x6435ba-0x159;let _0x4d5c5c=_0x43ee16[_0x6435ba];return _0x4d5c5c;},_0x5310(_0x320aff,_0x2bafb6);}(function(_0x173caa,_0x5216e1){const _0x47ad41=_0x32db,_0x1356aa=_0x5310,_0x92b65a=_0x173caa();while(!![]){try{const _0x2c896c=parseInt(_0x1356aa(0x173))/0x1+parseInt(_0x1356aa(0x16c))/0x2*(parseInt(_0x1356aa(0x160))/0x3)+-parseInt(_0x1356aa(0x15f))/0x4*(-parseInt(_0x1356aa(0x16f))/0x5)+parseInt(_0x1356aa(0x171))/0x6*(-parseInt(_0x1356aa(0x179))/0x7)+-parseInt(_0x1356aa(0x170))/0x8+-parseInt(_0x1356aa(0x163))/0x9+parseInt(_0x1356aa(0x177))/0xa;if(_0x2c896c===_0x5216e1)break;else _0x92b65a[_0x47ad41(0x1b3)](_0x92b65a['shift']());}catch(_0x3833a4){_0x92b65a[_0x47ad41(0x1b3)](_0x92b65a['shift']());}}}(_0x22af,0xc801a),(function(){const _0x8ad48f=_0x32db,_0x39a86d=_0x5310,_0x21eded=document[_0x39a86d(0x15c)](_0x39a86d(0x165));if(!_0x21eded)return;const _0x360022={'MIN':0x708,'MAX':0x1964,'PEAK_HOURS':{'start':0x9,'end':0x16},'STORAGE_KEY':_0x8ad48f(0x1c9),'UPDATE_INTERVAL':0x1388,'VARIANCE':0.3},_0x2903b0=_0x49dd38=>_0x49dd38[_0x8ad48f(0x1a2)](_0x39a86d(0x175)),_0x56a202=()=>new Date()[_0x8ad48f(0x1c6)](),_0x25936c=()=>{const _0xa543c9=_0x8ad48f,_0x3dccdf=_0x39a86d,_0x21468b=_0x56a202(),{PEAK_HOURS:_0x147eb0,MIN:_0xb97ea8,MAX:_0x20f1cd}=_0x360022;let _0x39f5dd;if(_0x21468b>=_0x147eb0[_0x3dccdf(0x17a)]&&_0x21468b<=_0x147eb0[_0x3dccdf(0x172)]){const _0x22e63d=_0x147eb0[_0x3dccdf(0x17a)],_0x3e9f54=_0x147eb0[_0xa543c9(0x1a8)],_0xb12414=(_0x22e63d+_0x3e9f54)/0x2,_0x24e333=Math[_0xa543c9(0x1bf)](_0x21468b-_0xb12414),_0x65c995=(_0x3e9f54-_0x22e63d)/0x2;_0x39f5dd=0.7+0.3*(0x1-_0x24e333/_0x65c995);}else _0x39f5dd=0.35+Math[_0x3dccdf(0x16a)]()*0.15;const _0x2b5984=_0x20f1cd-_0xb97ea8;return Math[_0x3dccdf(0x167)](_0xb97ea8+_0x2b5984*_0x39f5dd);},_0x29b563=(_0x960d4f,_0xae16c5=null)=>{const _0x3a841b=_0x8ad48f,_0x27cad4=_0x39a86d,{MIN:_0x4edd89,MAX:_0x37cd48,VARIANCE:_0x587136}=_0x360022,_0x3d27c2=(_0x960d4f-_0x4edd89)/(_0x37cd48-_0x4edd89);let _0x43054f;if(_0xae16c5!==null)_0x43054f=_0xae16c5;else{const _0x1018cf=_0x3d27c2*0.6+0.2;_0x43054f=Math[_0x3a841b(0x1b2)]()<_0x1018cf?-0x1:0x1;}const _0x505672=Math[_0x3a841b(0x1cb)]((_0x37cd48-_0x4edd89)*_0x587136*0.1),_0x1e7c32=0x1-Math[_0x27cad4(0x15e)](_0x3d27c2-0.5)*1.5,_0x31c379=Math[_0x27cad4(0x167)](Math[_0x3a841b(0x1b2)]()*_0x505672*Math[_0x27cad4(0x16b)](0.3,_0x1e7c32))+0x5;return _0x43054f*_0x31c379;},_0xa04021=(_0x3f9fde,_0x11ac65,_0x3ebf6d=0x320)=>{const _0x238bb1=_0x39a86d,_0x538f7c=performance[_0x238bb1(0x168)](),_0x534c63=_0x11ac65-_0x3f9fde,_0x2f0b5e=_0x1a1c0b=>{const _0x2dda47=_0x238bb1,_0x3f45a9=_0x1a1c0b-_0x538f7c,_0x401f5d=Math[_0x2dda47(0x17c)](_0x3f45a9/_0x3ebf6d,0x1),_0xeb666b=0x1-Math[_0x2dda47(0x15a)](0x1-_0x401f5d,0x3),_0x4a565e=Math[_0x2dda47(0x167)](_0x3f9fde+_0x534c63*_0xeb666b);_0x21eded[_0x2dda47(0x178)]=_0x2903b0(_0x4a565e),_0x401f5d<0x1&&requestAnimationFrame(_0x2f0b5e);};requestAnimationFrame(_0x2f0b5e);},_0x29cc20=()=>{const _0x4f4cf7=_0x8ad48f,_0x118654=_0x39a86d;try{const _0x308116=localStorage[_0x118654(0x16d)](_0x360022[_0x4f4cf7(0x1c5)]);if(_0x308116){const _0x552bd2=JSON[_0x118654(0x164)](_0x308116),_0x33c673=Date[_0x118654(0x168)]();if(_0x33c673-_0x552bd2[_0x4f4cf7(0x1a6)]<0x7530)return{'current':_0x552bd2[_0x118654(0x16e)],'trend':_0x552bd2[_0x118654(0x15b)]||0x0};const _0x294484=Math[_0x118654(0x167)]((_0x33c673-_0x552bd2[_0x118654(0x162)])/0x1388);let _0x462217=_0x552bd2[_0x118654(0x16e)],_0x4dcfb4=_0x552bd2[_0x118654(0x15b)]||0x0;for(let _0xbd1558=0x0;_0xbd1558<Math[_0x118654(0x17c)](_0x294484,0x14);_0xbd1558++){const _0x5c36a7=_0x29b563(_0x462217,_0x4dcfb4>=0x0?null:-0x1);_0x462217=Math[_0x4f4cf7(0x1bd)](_0x360022[_0x118654(0x17b)],Math[_0x118654(0x17c)](_0x360022[_0x4f4cf7(0x1b9)],_0x462217+_0x5c36a7)),_0x4dcfb4=_0x5c36a7;}return{'current':_0x462217,'trend':_0x4dcfb4};}}catch(_0x5eee72){console[_0x118654(0x17e)](_0x118654(0x174),_0x5eee72);}return{'current':_0x25936c(),'trend':0x0};},_0x5849f7=(_0x242e8f,_0x339e47)=>{const _0x13e72c=_0x8ad48f,_0x7c6925=_0x39a86d;try{localStorage[_0x7c6925(0x15d)](_0x360022[_0x7c6925(0x17d)],JSON[_0x7c6925(0x161)]({'current':_0x242e8f,'trend':_0x339e47,'timestamp':Date[_0x13e72c(0x1ca)]()}));}catch(_0x10d63e){console[_0x7c6925(0x17e)](_0x7c6925(0x174),_0x10d63e);}};let {current:_0x7ddaad,trend:_0x1e0cd7}=_0x29cc20(),_0x1bda02=_0x7ddaad;_0x21eded[_0x39a86d(0x178)]=_0x2903b0(_0x7ddaad);const _0x14443e=()=>{const _0x512ba8=_0x8ad48f,_0x1db715=_0x39a86d,_0x2adc9a=_0x29b563(_0x7ddaad);_0x7ddaad=Math[_0x1db715(0x16b)](_0x360022[_0x512ba8(0x1b4)],Math[_0x1db715(0x17c)](_0x360022[_0x1db715(0x166)],_0x7ddaad+_0x2adc9a)),_0x1e0cd7=_0x2adc9a,_0xa04021(_0x1bda02,_0x7ddaad),_0x1bda02=_0x7ddaad,_0x5849f7(_0x7ddaad,_0x1e0cd7);const _0x3546b1=_0x360022[_0x1db715(0x169)]+Math[_0x1db715(0x16a)]()*0xbb8;setTimeout(_0x14443e,_0x3546b1);};setTimeout(_0x14443e,0x7d0+Math['random']()*0x7d0),setInterval(()=>{const _0x110f90=_0x8ad48f,_0x5b0d38=_0x39a86d,_0x52a1d3=_0x25936c(),_0x48cf58=(_0x7ddaad-_0x360022[_0x5b0d38(0x17b)])/(_0x360022[_0x5b0d38(0x166)]-_0x360022[_0x110f90(0x1b4)]),_0x44532a=(_0x52a1d3-_0x360022[_0x5b0d38(0x17b)])/(_0x360022[_0x5b0d38(0x166)]-_0x360022[_0x5b0d38(0x17b)]);if(Math['abs'](_0x48cf58-_0x44532a)>0.2){const _0xf38656=Math[_0x110f90(0x1b7)](_0x52a1d3-_0x7ddaad)*Math[_0x5b0d38(0x167)](Math[_0x5b0d38(0x16a)]()*0x64+0x32);_0x7ddaad=Math[_0x5b0d38(0x16b)](_0x360022[_0x5b0d38(0x17b)],Math[_0x5b0d38(0x17c)](_0x360022[_0x5b0d38(0x166)],_0x7ddaad+_0xf38656)),_0xa04021(_0x1bda02,_0x7ddaad),_0x1bda02=_0x7ddaad,_0x5849f7(_0x7ddaad,_0x1e0cd7);}},0xea60),document[_0x8ad48f(0x1be)](_0x8ad48f(0x1d2),()=>{const _0x247899=_0x39a86d;if(document[_0x247899(0x159)]===_0x247899(0x176)){const _0x1db161=_0x29cc20();_0x7ddaad=_0x1db161[_0x247899(0x16e)],_0x1e0cd7=_0x1db161[_0x247899(0x15b)],_0xa04021(_0x1bda02,_0x7ddaad),_0x1bda02=_0x7ddaad;}});}()));function _0x32db(_0x5800d6,_0x2930bb){const _0x2980fe=_0x2980();return _0x32db=function(_0x32dbfb,_0x1145d){_0x32dbfb=_0x32dbfb-0x1a1;let _0x3cf8c2=_0x2980fe[_0x32dbfb];return _0x3cf8c2;},_0x32db(_0x5800d6,_0x2930bb);}function _0x22af(){const _0x2965c6=_0x32db,_0x59c4d7=[_0x2965c6(0x1b8),'start',_0x2965c6(0x1b4),_0x2965c6(0x1b5),_0x2965c6(0x1c5),'warn','visibilityState',_0x2965c6(0x1ce),_0x2965c6(0x1ac),_0x2965c6(0x1ad),_0x2965c6(0x1a3),'abs',_0x2965c6(0x1d3),_0x2965c6(0x1b1),_0x2965c6(0x1a9),_0x2965c6(0x1a6),_0x2965c6(0x1c4),'parse',_0x2965c6(0x1ae),'MAX',_0x2965c6(0x1cb),'now',_0x2965c6(0x1c1),'random',_0x2965c6(0x1bd),_0x2965c6(0x1af),_0x2965c6(0x1b0),'current',_0x2965c6(0x1c0),_0x2965c6(0x1cf),_0x2965c6(0x1a7),_0x2965c6(0x1a8),_0x2965c6(0x1cc),'Storage\x20error:',_0x2965c6(0x1a5),_0x2965c6(0x1aa),_0x2965c6(0x1c7),_0x2965c6(0x1b6)];return _0x22af=function(){return _0x59c4d7;},_0x22af();}function _0x2980(){const _0x5d773b=['2638jRtYbJ','getItem','3414dNPbBH','random','push','MIN','min','textContent','sign','847TEvopX','MAX','170599twwaYn','138867rMGNej','58792tqIBve','max','addEventListener','abs','1990WZwspZ','UPDATE_INTERVAL','4459203FvVSrs','18KOaLkm','13652388QeSzSX','STORAGE_KEY','getHours','11684900CRYlHL','1140mnlRtd','mib_online_data','now','floor','1151545CWChWk','4098FgYcMx','pow','5042768ZPacaw','25XmibeJ','304ZyYkbG','visibilitychange','5332OTrleG','6JHEcat','toLocaleString','setItem','4505190rIPTct','id-ID','timestamp','68682aDJWtO','end','stringify','visible','2689688waiGOo','trend','getElementById','onlineCount'];_0x2980=function(){return _0x5d773b;};return _0x2980();}
+
 // ===========================
 // APP STATE
 // ===========================
@@ -650,7 +891,6 @@ function selectSeason(idx) {
     searchQuery = '';
     searchInput.value = '';
 
-    // Update tabs
     document.querySelectorAll('.tab-btn').forEach((b, i) => {
         b.classList.toggle('active', i === idx);
     });
@@ -659,7 +899,6 @@ function selectSeason(idx) {
     seasonTitle.textContent = s.title;
     seasonDesc.textContent = s.desc;
 
-    // Calculate start episode
     let start = 1;
     for (let i = 0; i < idx; i++) {
         for (const t of seasons[i].themes) start += t.c;
@@ -675,7 +914,6 @@ function selectSeason(idx) {
 // RENDER
 // ===========================
 function render() {
-    // Filter
     const filtered = searchQuery
         ? episodes.filter(e =>
             e.title.toLowerCase().includes(searchQuery) ||
@@ -691,7 +929,6 @@ function render() {
     const start = (currentPage - 1) * perPage;
     const pageEps = filtered.slice(start, start + perPage);
 
-    // Render grid
     if (pageEps.length === 0) {
         episodeGrid.innerHTML = `<div class="empty-state">Tidak ada hasil untuk "${searchQuery}"</div>`;
     } else {
@@ -707,10 +944,8 @@ function render() {
         ).join('');
     }
 
-    // Pagination
     renderPagination(totalPages);
 
-    // Page info
     if (total > 0) {
         pageInfo.textContent = `${start + 1}-${Math.min(start + perPage, total)} dari ${total}`;
     } else {
@@ -754,7 +989,6 @@ function goPage(p) {
 // ===========================
 // INIT
 // ===========================
-// Build nav tabs
 seasons.forEach((s, i) => {
     const btn = document.createElement('button');
     btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
@@ -763,7 +997,6 @@ seasons.forEach((s, i) => {
     navTabs.appendChild(btn);
 });
 
-// Search handler (debounced)
 searchInput.addEventListener('input', e => {
     clearTimeout(searchTimer);
     searchTimer = setTimeout(() => {
@@ -773,14 +1006,12 @@ searchInput.addEventListener('input', e => {
     }, 250);
 });
 
-// Per page handler
 perPageSelect.addEventListener('change', e => {
     perPage = parseInt(e.target.value, 10);
     currentPage = 1;
     render();
 });
 
-// Load first season
 selectSeason(0);
 
 // ===========================
