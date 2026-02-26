@@ -19,569 +19,438 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Terms of Service",
-        "description": "Syarat dan Ketentuan penggunaan layanan mibenglish.",
-        "publisher": {
-            "@type": "Organization",
-            "name": "mibenglish",
-            "url": "https://mibenglish.com"
-        },
-        "datePublished": "2026-01-01",
-        "dateModified": "2026-01-20"
-    }
-    </script>
-    
     <style>
         :root {
             --bg: #0a1a14;
             --bg-light: #0f2519;
-            --bg-card: rgba(15, 37, 25, 0.85);
+            --bg-card: rgba(15, 37, 25, 0.9);
             --fg: #e8f5e9;
-            --fg-muted: #8fbfa0;
+            --fg-muted: #9fc8ab;
             --accent: #00d67d;
-            --accent-light: #3de8a0;
+            --accent-light: #4deaa8;
             --accent-dark: #00a060;
             --border: rgba(0, 214, 125, 0.2);
-            --glow: rgba(0, 214, 125, 0.15);
         }
         
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
         
         body {
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg);
             color: var(--fg);
-            line-height: 1.8;
+            line-height: 1.7;
             font-size: 16px;
-            overflow-x: hidden;
+            min-height: 100vh;
         }
         
-        h1, h2, h3 { font-family: 'Fraunces', serif; line-height: 1.3; }
+        h1, h2, h3 {
+            font-family: 'Fraunces', serif;
+            line-height: 1.3;
+        }
         
-        /* Animated Background */
-        .bg-scene {
+        /* Simplified Background */
+        .bg-pattern {
             position: fixed;
             inset: 0;
             z-index: -1;
-            overflow: hidden;
-        }
-        
-        .bg-gradient {
-            position: absolute;
-            inset: 0;
             background: 
-                radial-gradient(ellipse 120% 80% at 0% 0%, rgba(0, 160, 96, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse 100% 60% at 100% 100%, rgba(0, 214, 125, 0.1) 0%, transparent 50%),
-                linear-gradient(180deg, var(--bg) 0%, var(--bg-light) 50%, var(--bg) 100%);
-        }
-        
-        .floating-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(60px);
-            animation: float 20s ease-in-out infinite;
-            pointer-events: none;
-        }
-        
-        .orb-1 {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(0, 214, 125, 0.2) 0%, transparent 70%);
-            top: -100px;
-            left: -100px;
-            animation-delay: 0s;
-        }
-        
-        .orb-2 {
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(0, 160, 96, 0.15) 0%, transparent 70%);
-            bottom: -50px;
-            right: -50px;
-            animation-delay: -7s;
-        }
-        
-        .orb-3 {
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(61, 232, 160, 0.12) 0%, transparent 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: -14s;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(30px, -30px) scale(1.05); }
-            50% { transform: translate(-20px, 20px) scale(0.95); }
-            75% { transform: translate(20px, 30px) scale(1.02); }
-        }
-        
-        /* Grid Pattern Overlay */
-        .grid-pattern {
-            position: absolute;
-            inset: 0;
-            background-image: 
-                linear-gradient(rgba(0, 214, 125, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 214, 125, 0.03) 1px, transparent 1px);
-            background-size: 60px 60px;
-            mask-image: radial-gradient(ellipse 80% 60% at 50% 30%, black 0%, transparent 70%);
+                radial-gradient(ellipse 100% 60% at 0% 0%, rgba(0, 160, 96, 0.12) 0%, transparent 50%),
+                radial-gradient(ellipse 80% 50% at 100% 100%, rgba(0, 214, 125, 0.08) 0%, transparent 50%),
+                var(--bg);
         }
         
         /* Navigation */
         .nav-container {
-            background: rgba(10, 26, 20, 0.9);
-            backdrop-filter: blur(16px);
+            background: rgba(10, 26, 20, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
-            transition: all 0.3s ease;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         
-        .nav-container.scrolled {
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        .nav-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
+            text-decoration: none;
         }
         
         .logo-icon {
-            width: 42px;
-            height: 42px;
-            border-radius: 12px;
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-            box-shadow: 0 4px 20px rgba(0, 214, 125, 0.3);
-            transition: all 0.3s ease;
+            transition: transform 0.2s ease;
         }
         
         .logo-container:hover .logo-icon {
-            transform: scale(1.05) rotate(-3deg);
-            box-shadow: 0 6px 25px rgba(0, 214, 125, 0.4);
+            transform: scale(1.05);
         }
         
         .logo-text {
             font-family: 'Fraunces', serif;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--accent-light);
-            transition: color 0.3s ease;
         }
         
-        .logo-container:hover .logo-text {
-            color: var(--accent);
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
         
         .nav-link {
             color: var(--fg-muted);
-            padding: 10px 18px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
+            padding: 8px 14px;
+            border-radius: 8px;
             font-weight: 500;
-            font-size: 0.95rem;
-            position: relative;
-            overflow: hidden;
+            font-size: 0.9rem;
             text-decoration: none;
-        }
-        
-        .nav-link::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, var(--glow) 0%, transparent 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: background 0.2s ease, color 0.2s ease;
         }
         
         .nav-link:hover {
+            background: rgba(0, 214, 125, 0.1);
             color: var(--accent-light);
-            transform: translateY(-2px);
-        }
-        
-        .nav-link:hover::before {
-            opacity: 1;
         }
         
         .nav-link.active {
-            background: rgba(0, 214, 125, 0.12);
+            background: rgba(0, 214, 125, 0.15);
             color: var(--accent-light);
-            border: 1px solid var(--border);
         }
         
-        .nav-link:focus-visible {
-            outline: 2px solid var(--accent);
-            outline-offset: 2px;
+        /* Main Content */
+        main {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 24px 20px 60px;
         }
         
-        /* Content Card */
-        .content-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
+        /* Header Section */
+        .page-header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding: 20px 0;
         }
         
-        .content-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-            opacity: 0.5;
-        }
-        
-        /* Policy Section */
-        .policy-section {
-            padding: 28px 0;
-            border-bottom: 1px solid var(--border);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        
-        .policy-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .policy-section:last-child { border-bottom: none; }
-        
-        .section-title {
-            color: var(--accent-light);
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--accent);
-            display: inline-block;
-            position: relative;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 40%;
-            height: 2px;
-            background: var(--accent-light);
-            transition: width 0.4s ease;
-        }
-        
-        .policy-section:hover .section-title::after {
-            width: 100%;
-        }
-        
-        .policy-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .policy-list li {
-            position: relative;
-            padding-left: 28px;
-            margin-bottom: 14px;
-            transition: all 0.3s ease;
-        }
-        
-        .policy-list li:hover {
-            transform: translateX(8px);
+        .page-header h1 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 800;
             color: var(--fg);
+            margin-bottom: 8px;
         }
         
-        .policy-list li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 10px;
-            height: 10px;
-            background: var(--accent);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--accent);
-            transition: all 0.3s ease;
-        }
-        
-        .policy-list li:hover::before {
-            transform: scale(1.3);
-            box-shadow: 0 0 15px var(--accent);
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(0, 214, 125, 0.08) 0%, rgba(0, 160, 96, 0.05) 100%);
-            border-left: 4px solid var(--accent);
-            padding: 20px 24px;
-            border-radius: 0 16px 16px 0;
-            margin: 20px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .highlight-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--accent-light), var(--accent), var(--accent-dark));
-            animation: borderGlow 3s ease-in-out infinite;
-        }
-        
-        @keyframes borderGlow {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
+        .page-header .subtitle {
+            color: var(--fg-muted);
+            font-size: 1.1rem;
+            margin-bottom: 16px;
         }
         
         .update-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 20px;
+            padding: 8px 16px;
             background: rgba(0, 214, 125, 0.1);
             border: 1px solid var(--border);
-            border-radius: 30px;
-            font-size: 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
             color: var(--fg-muted);
-            transition: all 0.3s ease;
         }
         
-        .update-badge:hover {
-            background: rgba(0, 214, 125, 0.15);
-            transform: scale(1.02);
-        }
-        
-        .update-badge svg {
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        
-        /* TOC */
+        /* TOC Card */
         .toc-card {
-            background: linear-gradient(135deg, rgba(0, 214, 125, 0.05) 0%, transparent 100%);
+            background: rgba(0, 214, 125, 0.05);
             border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 32px;
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .toc-card h2 {
+            font-size: 1.1rem;
+            color: var(--accent-light);
+            margin-bottom: 14px;
+        }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 4px;
         }
         
         .toc-link {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 10px 14px;
+            gap: 8px;
+            padding: 10px 12px;
             color: var(--fg-muted);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            font-size: 0.95rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
             text-decoration: none;
+            transition: background 0.2s ease, color 0.2s ease;
         }
         
         .toc-link::before {
             content: '';
-            width: 6px;
-            height: 6px;
+            width: 5px;
+            height: 5px;
             background: var(--accent);
             border-radius: 50%;
-            transition: all 0.3s ease;
+            flex-shrink: 0;
         }
         
         .toc-link:hover {
             background: rgba(0, 214, 125, 0.1);
             color: var(--accent-light);
-            transform: translateX(8px);
         }
         
-        .toc-link:hover::before {
-            transform: scale(1.5);
-            box-shadow: 0 0 10px var(--accent);
+        /* Content Card */
+        .content-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+        }
+        
+        /* Policy Sections */
+        .policy-section {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .policy-section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .policy-section:first-child {
+            padding-top: 0;
+        }
+        
+        .section-title {
+            color: var(--accent-light);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+        
+        .policy-section p {
+            margin-bottom: 12px;
+            color: var(--fg);
+        }
+        
+        .policy-section h3 {
+            color: var(--fg);
+            font-size: 1.05rem;
+            margin: 18px 0 10px;
+        }
+        
+        /* Policy List */
+        .policy-list {
+            list-style: none;
+            margin: 12px 0;
+        }
+        
+        .policy-list li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 10px;
+            color: var(--fg);
+            line-height: 1.6;
+        }
+        
+        .policy-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 7px;
+            height: 7px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: rgba(0, 214, 125, 0.08);
+            border-left: 3px solid var(--accent);
+            padding: 16px 18px;
+            border-radius: 0 10px 10px 0;
+            margin: 16px 0;
+        }
+        
+        .highlight-box p {
+            margin: 0;
         }
         
         /* Links */
         a {
             color: var(--accent-light);
             text-decoration: none;
-            transition: all 0.3s ease;
         }
         
         a:hover {
             color: var(--accent);
         }
         
-        /* AdSense Placeholder */
+        /* Ad Placeholder */
         .ad-placeholder {
-            background: linear-gradient(135deg, rgba(0, 214, 125, 0.05) 0%, rgba(0, 160, 96, 0.03) 100%);
-            border: 1px dashed rgba(0, 214, 125, 0.3);
-            border-radius: 16px;
-            padding: 20px;
-            margin: 24px 0;
+            background: rgba(0, 214, 125, 0.04);
+            border: 1px dashed rgba(0, 214, 125, 0.25);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 20px 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .ad-placeholder::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, rgba(0, 214, 125, 0.08) 0%, transparent 70%);
-            pointer-events: none;
         }
         
         .ad-label {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            color: var(--fg-muted);
-            font-size: 0.9rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .ad-slot {
-            margin-top: 12px;
-            padding: 30px;
-            background: rgba(0, 214, 125, 0.03);
-            border-radius: 12px;
-            border: 1px solid rgba(0, 214, 125, 0.1);
-            min-height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            gap: 8px;
             color: var(--fg-muted);
             font-size: 0.85rem;
         }
         
-        /* Footer */
-        footer {
-            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg) 100%);
-            border-top: 1px solid var(--border);
-            position: relative;
+        .ad-slot {
+            margin-top: 10px;
+            padding: 24px;
+            background: rgba(0, 214, 125, 0.03);
+            border-radius: 8px;
+            border: 1px solid rgba(0, 214, 125, 0.1);
+            color: var(--fg-muted);
+            font-size: 0.8rem;
         }
         
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        /* Footer */
+        footer {
+            background: var(--bg-light);
+            border-top: 1px solid var(--border);
+            padding: 40px 20px;
+        }
+        
+        .footer-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
         }
         
         .footer-brand {
             font-family: 'Fraunces', serif;
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: 700;
             color: var(--accent-light);
-            text-align: center;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         
-        .footer-social {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 20px;
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
+        .footer-tagline {
             color: var(--fg-muted);
-            font-weight: 500;
-            transition: all 0.3s ease;
-            text-decoration: none;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
         }
         
-        .footer-social:hover {
-            background: rgba(0, 214, 125, 0.12);
-            border-color: var(--accent);
-            color: var(--fg);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0, 214, 125, 0.2);
-        }
-        
-        .footer-social svg {
-            transition: transform 0.3s ease;
-        }
-        
-        .footer-social:hover svg {
-            transform: scale(1.15);
-        }
-        
-        .footer-social:focus-visible {
-            outline: 2px solid var(--accent);
-            outline-offset: 2px;
-        }
-        
-        .quick-links-container {
+        .social-links {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 8px;
-            margin-top: 24px;
+            gap: 10px;
+            margin-bottom: 24px;
         }
         
-        .quick-link {
-            padding: 10px 20px;
-            background: rgba(0, 214, 125, 0.06);
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: var(--bg);
             border: 1px solid var(--border);
             border-radius: 10px;
             color: var(--fg-muted);
             font-size: 0.9rem;
             font-weight: 500;
-            transition: all 0.3s ease;
             text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .social-link:hover {
+            background: rgba(0, 214, 125, 0.12);
+            border-color: var(--accent);
+            color: var(--fg);
+        }
+        
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+        
+        .quick-link {
+            padding: 8px 14px;
+            background: rgba(0, 214, 125, 0.06);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--fg-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
         }
         
         .quick-link:hover {
             background: rgba(0, 214, 125, 0.12);
-            border-color: var(--accent);
             color: var(--accent-light);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 214, 125, 0.15);
         }
         
         .quick-link.active {
             background: rgba(0, 214, 125, 0.15);
-            border-color: var(--accent);
             color: var(--accent-light);
         }
         
-        /* Scroll to top button */
+        .copyright {
+            color: var(--fg-muted);
+            font-size: 0.85rem;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+        
+        /* Scroll to Top */
         .scroll-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
+            bottom: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            background: var(--accent);
             border: none;
             cursor: pointer;
             display: flex;
@@ -589,93 +458,162 @@
             justify-content: center;
             opacity: 0;
             visibility: hidden;
-            transform: translateY(20px);
-            transition: all 0.4s ease;
-            box-shadow: 0 4px 20px rgba(0, 214, 125, 0.4);
-            z-index: 100;
+            transform: scale(0.9);
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 16px rgba(0, 214, 125, 0.3);
+            z-index: 99;
         }
         
         .scroll-top.visible {
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
+            transform: scale(1);
         }
         
         .scroll-top:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 8px 30px rgba(0, 214, 125, 0.5);
+            transform: scale(1.08);
         }
         
-        .scroll-top svg {
-            color: white;
-            transition: transform 0.3s ease;
+        .scroll-top:active {
+            transform: scale(0.95);
         }
         
-        .scroll-top:hover svg {
-            transform: translateY(-3px);
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: flex;
-            }
-            
-            body { font-size: 15px; }
-            .section-title { font-size: 1.3rem; }
-            .content-card { border-radius: 16px; }
-        }
-        
+        /* Mobile Styles */
         @media (max-width: 640px) {
-            .policy-list li:hover {
-                transform: none;
+            body {
+                font-size: 15px;
             }
             
-            .toc-link:hover {
-                transform: none;
+            .nav-inner {
+                padding: 12px 16px;
             }
-        }
-        
-        @media print {
-            .nav-container, footer, .scroll-top, .bg-scene, .ad-placeholder { display: none; }
-            body { background: white; color: black; }
-            .policy-section { opacity: 1; transform: none; }
-        }
-        
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
+            
+            .logo-text {
+                font-size: 1.15rem;
+            }
+            
+            .nav-links {
+                gap: 4px;
+            }
+            
+            .nav-link {
+                padding: 6px 10px;
+                font-size: 0.85rem;
+            }
+            
+            main {
+                padding: 16px 16px 48px;
+            }
+            
+            .page-header {
+                margin-bottom: 24px;
+                padding: 16px 0;
+            }
+            
+            .toc-card {
+                padding: 16px;
+            }
+            
+            .toc-card h2 {
+                font-size: 1rem;
+            }
+            
+            .toc-link {
+                padding: 8px 10px;
+                font-size: 0.85rem;
+            }
+            
+            .content-card {
+                padding: 18px;
+                border-radius: 14px;
             }
             
             .policy-section {
-                opacity: 1;
-                transform: none;
+                padding: 20px 0;
+            }
+            
+            .section-title {
+                font-size: 1.1rem;
+            }
+            
+            .highlight-box {
+                padding: 14px 16px;
+            }
+            
+            .ad-placeholder {
+                padding: 12px;
+                margin: 16px 0;
+            }
+            
+            .ad-slot {
+                padding: 18px;
+            }
+            
+            .social-links {
+                gap: 8px;
+            }
+            
+            .social-link {
+                padding: 8px 12px;
+                font-size: 0.85rem;
+            }
+            
+            .quick-link {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+            
+            .scroll-top {
+                bottom: 20px;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+        
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition-duration: 0.01ms !important;
+            }
+            
+            html {
+                scroll-behavior: auto;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            .nav-container,
+            footer,
+            .scroll-top,
+            .bg-pattern,
+            .ad-placeholder {
+                display: none !important;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .content-card {
+                background: white;
+                border: 1px solid #ddd;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="bg-scene" aria-hidden="true">
-        <div class="bg-gradient"></div>
-        <div class="floating-orb orb-1"></div>
-        <div class="floating-orb orb-2"></div>
-        <div class="floating-orb orb-3"></div>
-        <div class="grid-pattern"></div>
-    </div>
+    <!-- Background -->
+    <div class="bg-pattern" aria-hidden="true"></div>
     
     <!-- Navigation -->
-    <header class="nav-container sticky top-0 z-50" role="banner">
-        <nav class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between flex-wrap gap-4" role="navigation" aria-label="Navigasi utama">
-            <a href="https://mibenglish.com" class="logo-container" aria-label="Kembali ke beranda mibenglish">
+    <header class="nav-container" role="banner">
+        <nav class="nav-inner" role="navigation" aria-label="Navigasi utama">
+            <a href="https://mibenglish.com" class="logo-container" aria-label="Kembali ke beranda">
                 <div class="logo-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 2L2 7l10 5 10-5-10-5z"/>
                         <path d="M2 17l10 5 10-5"/>
                         <path d="M2 12l10 5 10-5"/>
@@ -684,7 +622,7 @@
                 <span class="logo-text">mibenglish</span>
             </a>
             
-            <div class="flex items-center gap-2 nav-links">
+            <div class="nav-links">
                 <a href="https://mibenglish.com" class="nav-link">Beranda</a>
                 <a href="https://mibenglish.com/terms.html" class="nav-link active">Terms</a>
                 <a href="https://mibenglish.com/privacy.html" class="nav-link">Privacy</a>
@@ -692,14 +630,14 @@
         </nav>
     </header>
     
-    <main class="max-w-4xl mx-auto px-4 py-8 md:py-12" role="main">
+    <main role="main">
         <article>
             <!-- Header -->
-            <header class="text-center mb-12">
-                <h1 class="text-3xl md:text-5xl font-extrabold mb-4" style="color: var(--fg);">Terms of Service</h1>
-                <p class="text-lg md:text-xl mb-6" style="color: var(--fg-muted);">Syarat dan Ketentuan mibenglish</p>
+            <header class="page-header">
+                <h1>Terms of Service</h1>
+                <p class="subtitle">Syarat dan Ketentuan mibenglish</p>
                 <span class="update-badge">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="10"/>
                         <polyline points="12 6 12 12 16 14"/>
                     </svg>
@@ -709,8 +647,8 @@
             
             <!-- Table of Contents -->
             <nav class="toc-card" aria-label="Daftar isi">
-                <h2 class="font-bold mb-4 text-lg" style="color: var(--accent-light);">Daftar Isi</h2>
-                <div class="grid md:grid-cols-2 gap-1">
+                <h2>Daftar Isi</h2>
+                <div class="toc-grid">
                     <a href="#penerimaan" class="toc-link">1. Penerimaan Ketentuan</a>
                     <a href="#deskripsi" class="toc-link">2. Deskripsi Layanan</a>
                     <a href="#akun" class="toc-link">3. Akun Pengguna</a>
@@ -726,21 +664,21 @@
                 </div>
             </nav>
             
-            <!-- AdSense Placeholder 1 - Header Banner -->
-            <div class="ad-placeholder" data-ad-slot="ca-pub-XXXXXXXXXX/TERM001" data-ad-position="Header Banner">
+            <!-- Ad Placeholder 1 -->
+            <div class="ad-placeholder">
                 <div class="ad-label">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
                         <line x1="3" y1="9" x2="21" y2="9"/>
                         <line x1="9" y1="21" x2="9" y2="9"/>
                     </svg>
-                    <span>AdSense Advertisement - Header Banner</span>
+                    <span>AdSense - Header Banner</span>
                 </div>
                 <div class="ad-slot">Slot: ca-pub-XXXXXXXXXX/TERM001</div>
             </div>
             
             <!-- Main Content -->
-            <div class="content-card p-6 md:p-10">
+            <div class="content-card">
                 
                 <section id="penerimaan" class="policy-section">
                     <h2 class="section-title">1. Penerimaan Ketentuan</h2>
@@ -748,9 +686,7 @@
                         Selamat datang di <strong>mibenglish</strong>. Dengan mengakses atau menggunakan website kami di <strong>mibenglish.com</strong>, Anda menyetujui untuk terikat dengan Syarat dan Ketentuan ini. Jika Anda tidak menyetujui ketentuan ini, mohon untuk tidak menggunakan layanan kami.
                     </p>
                     <div class="highlight-box">
-                        <p style="margin: 0;">
-                            Syarat dan Ketentuan ini berlaku untuk semua pengunjung, pengguna, dan pihak lain yang mengakses atau menggunakan layanan kami.
-                        </p>
+                        <p>Syarat dan Ketentuan ini berlaku untuk semua pengunjung, pengguna, dan pihak lain yang mengakses atau menggunakan layanan kami.</p>
                     </div>
                 </section>
                 
@@ -769,7 +705,7 @@
                 
                 <section id="akun" class="policy-section">
                     <h2 class="section-title">3. Akun Pengguna</h2>
-                    <h3 class="font-semibold mt-4 mb-2 text-lg">3.1 Pendaftaran</h3>
+                    <h3>3.1 Pendaftaran</h3>
                     <p>Untuk mengakses fitur tertentu, Anda mungkin perlu membuat akun. Anda bertanggung jawab untuk:</p>
                     <ul class="policy-list">
                         <li>Memberikan informasi yang akurat dan lengkap saat pendaftaran</li>
@@ -778,7 +714,7 @@
                         <li>Memberitahu kami segera jika ada penggunaan tidak sah atas akun Anda</li>
                     </ul>
                     
-                    <h3 class="font-semibold mt-6 mb-2 text-lg">3.2 Penghentian Akun</h3>
+                    <h3>3.2 Penghentian Akun</h3>
                     <p>
                         Kami berhak untuk menangguhkan atau menghentikan akun Anda jika Anda melanggar Syarat dan Ketentuan ini atau terlibat dalam perilaku yang merugikan pengguna lain atau layanan kami.
                     </p>
@@ -796,15 +732,15 @@
                     </ul>
                 </section>
                 
-                <!-- AdSense Placeholder 2 - In-Content Rectangle -->
-                <div class="ad-placeholder" data-ad-slot="ca-pub-XXXXXXXXXX/TERM002" data-ad-position="In-Content Rectangle">
+                <!-- Ad Placeholder 2 -->
+                <div class="ad-placeholder">
                     <div class="ad-label">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
                             <line x1="3" y1="9" x2="21" y2="9"/>
                             <line x1="9" y1="21" x2="9" y2="9"/>
                         </svg>
-                        <span>AdSense Advertisement - In-Content Rectangle</span>
+                        <span>AdSense - In-Content</span>
                     </div>
                     <div class="ad-slot">Slot: ca-pub-XXXXXXXXXX/TERM002</div>
                 </div>
@@ -847,20 +783,20 @@
                         <li>YouTube untuk konten video</li>
                         <li>Platform media sosial (TikTok, Instagram, Facebook)</li>
                     </ul>
-                    <p class="mt-4">
+                    <p>
                         Kami tidak bertanggung jawab atas konten, kebijakan privasi, atau praktik layanan pihak ketiga. Mohon baca syarat dan ketentuan setiap layanan pihak ketiga yang Anda gunakan.
                     </p>
                 </section>
                 
-                <!-- AdSense Placeholder 3 - Mid-Content Banner -->
-                <div class="ad-placeholder" data-ad-slot="ca-pub-XXXXXXXXXX/TERM003" data-ad-position="Mid-Content Banner">
+                <!-- Ad Placeholder 3 -->
+                <div class="ad-placeholder">
                     <div class="ad-label">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
                             <line x1="3" y1="9" x2="21" y2="9"/>
                             <line x1="9" y1="21" x2="9" y2="9"/>
                         </svg>
-                        <span>AdSense Advertisement - Mid-Content Banner</span>
+                        <span>AdSense - Mid-Content</span>
                     </div>
                     <div class="ad-slot">Slot: ca-pub-XXXXXXXXXX/TERM003</div>
                 </div>
@@ -877,9 +813,7 @@
                         <li>Jaminan bahwa error akan diperbaiki</li>
                     </ul>
                     <div class="highlight-box">
-                        <p style="margin: 0;">
-                            Kami tidak menjamin bahwa layanan kami akan memenuhi kebutuhan spesifik Anda atau bahwa layanan akan tersedia secara terus-menerus tanpa gangguan.
-                        </p>
+                        <p>Kami tidak menjamin bahwa layanan kami akan memenuhi kebutuhan spesifik Anda atau bahwa layanan akan tersedia secara terus-menerus tanpa gangguan.</p>
                     </div>
                 </section>
                 
@@ -894,7 +828,7 @@
                         <li>Kerusakan perangkat atau kehilangan informasi</li>
                         <li>Tindakan pihak ketiga yang mempengaruhi layanan kami</li>
                     </ul>
-                    <p class="mt-4">
+                    <p>
                         Batasan ini berlaku sejauh diizinkan oleh hukum yang berlaku.
                     </p>
                 </section>
@@ -918,15 +852,15 @@
                     </p>
                 </section>
                 
-                <!-- AdSense Placeholder 4 - Pre-Footer Rectangle -->
-                <div class="ad-placeholder" data-ad-slot="ca-pub-XXXXXXXXXX/TERM004" data-ad-position="Pre-Footer Rectangle">
+                <!-- Ad Placeholder 4 -->
+                <div class="ad-placeholder">
                     <div class="ad-label">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
                             <line x1="3" y1="9" x2="21" y2="9"/>
                             <line x1="9" y1="21" x2="9" y2="9"/>
                         </svg>
-                        <span>AdSense Advertisement - Pre-Footer Rectangle</span>
+                        <span>AdSense - Pre-Footer</span>
                     </div>
                     <div class="ad-slot">Slot: ca-pub-XXXXXXXXXX/TERM004</div>
                 </div>
@@ -934,24 +868,24 @@
                 <section id="kontak" class="policy-section">
                     <h2 class="section-title">12. Hubungi Kami</h2>
                     <p>Jika Anda memiliki pertanyaan tentang Syarat dan Ketentuan ini, silakan hubungi kami:</p>
-                    <div class="highlight-box mt-4">
-                        <p style="margin: 0 0 10px 0;"><strong>mibenglish</strong></p>
-                        <p style="margin: 0 0 8px 0;"><strong>Email:</strong> <a href="mailto:mibenglishid@gmail.com">mibenglishid@gmail.com</a></p>
-                        <p style="margin: 0;"><strong>Website:</strong> <a href="https://mibenglish.com">mibenglish.com</a></p>
+                    <div class="highlight-box">
+                        <p style="margin-bottom: 8px;"><strong>mibenglish</strong></p>
+                        <p style="margin-bottom: 6px;"><strong>Email:</strong> <a href="mailto:mibenglishid@gmail.com">mibenglishid@gmail.com</a></p>
+                        <p><strong>Website:</strong> <a href="https://mibenglish.com">mibenglish.com</a></p>
                     </div>
                 </section>
                 
             </div>
             
-            <!-- AdSense Placeholder 5 - Footer Banner -->
-            <div class="ad-placeholder" data-ad-slot="ca-pub-XXXXXXXXXX/TERM005" data-ad-position="Footer Banner">
+            <!-- Ad Placeholder 5 -->
+            <div class="ad-placeholder">
                 <div class="ad-label">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
                         <line x1="3" y1="9" x2="21" y2="9"/>
                         <line x1="9" y1="21" x2="9" y2="9"/>
                     </svg>
-                    <span>AdSense Advertisement - Footer Banner</span>
+                    <span>AdSense - Footer Banner</span>
                 </div>
                 <div class="ad-slot">Slot: ca-pub-XXXXXXXXXX/TERM005</div>
             </div>
@@ -960,51 +894,42 @@
     
     <!-- Footer -->
     <footer role="contentinfo">
-        <div class="max-w-5xl mx-auto px-4 py-12">
+        <div class="footer-inner">
+            <p class="footer-brand">mibenglish</p>
+            <p class="footer-tagline">Belajar Bahasa Inggris dengan Cara Menyenangkan</p>
             
-            <!-- Brand -->
-            <div class="text-center mb-8">
-                <p class="footer-brand">mibenglish</p>
-                <p style="color: var(--fg-muted);">Belajar Bahasa Inggris dengan Cara Menyenangkan</p>
-            </div>
-            
-            <!-- Social Links -->
-            <div class="flex flex-wrap justify-center gap-3 mb-8">
-                <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Ikuti kami di YouTube">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <div class="social-links">
+                <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
                     <span>YouTube</span>
                 </a>
-                
-                <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Ikuti kami di TikTok">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
                     </svg>
                     <span>TikTok</span>
                 </a>
-                
-                <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Ikuti kami di Instagram">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                     </svg>
                     <span>Instagram</span>
                 </a>
-                
-                <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Ikuti kami di Facebook">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
                     <span>Facebook</span>
                 </a>
             </div>
             
-            <p class="text-center text-sm mb-6" style="color: var(--fg-muted);">
+            <p style="color: var(--fg-muted); font-size: 0.85rem; margin-bottom: 20px;">
                 Ikuti kami di YouTube, TikTok, Instagram, dan Facebook untuk update materi terbaru.
             </p>
             
-            <!-- Quick Links -->
-            <div class="quick-links-container">
+            <div class="quick-links">
                 <a href="https://mibenglish.com" class="quick-link">Beranda</a>
                 <a href="https://mibenglish.com/about.html" class="quick-link">About Us</a>
                 <a href="https://mibenglish.com/privacy.html" class="quick-link">Privacy Policy</a>
@@ -1013,134 +938,71 @@
                 <a href="https://mibenglish.com/contact.html" class="quick-link">Contact</a>
             </div>
             
-            <!-- Copyright -->
-            <div class="text-center pt-8 mt-8" style="border-top: 1px solid var(--border);">
-                <p style="color: var(--fg-muted);">
-                    &copy; 2026 mibenglish. All rights reserved.
-                </p>
-            </div>
+            <p class="copyright">&copy; 2026 mibenglish. All rights reserved.</p>
         </div>
     </footer>
     
     <!-- Scroll to Top Button -->
-    <button class="scroll-top" aria-label="Kembali ke atas" id="scrollTop">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="18 15 12 9 6 15"/>
         </svg>
     </button>
     
     <script>
-        // Initialize all elements
-        const nav = document.querySelector('.nav-container');
-        const scrollTopBtn = document.getElementById('scrollTop');
-        const policySections = document.querySelectorAll('.policy-section');
-        const tocLinks = document.querySelectorAll('.toc-link');
-        
-        // Scroll handler for nav and scroll-to-top button
-        function handleScroll() {
-            const scrollY = window.scrollY;
+        (function() {
+            var scrollTopBtn = document.getElementById('scrollTop');
+            var tocLinks = document.querySelectorAll('.toc-link');
             
-            // Nav shadow on scroll
-            if (nav) {
-                if (scrollY > 50) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
-            }
-            
-            // Scroll to top button visibility
-            if (scrollTopBtn) {
-                if (scrollY > 400) {
-                    scrollTopBtn.classList.add('visible');
-                } else {
-                    scrollTopBtn.classList.remove('visible');
-                }
-            }
-        }
-        
-        // Scroll to top functionality
-        if (scrollTopBtn) {
-            scrollTopBtn.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
-        
-        // Intersection Observer for scroll reveal
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px 0px -50px 0px',
-            threshold: 0.1
-        };
-        
-        const sectionObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry, index) {
-                if (entry.isIntersecting) {
-                    // Staggered animation delay
-                    const delay = Array.from(policySections).indexOf(entry.target) * 80;
-                    setTimeout(function() {
-                        entry.target.classList.add('visible');
-                    }, Math.min(delay, 400));
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all policy sections
-        policySections.forEach(function(section) {
-            sectionObserver.observe(section);
-        });
-        
-        // Smooth scroll for TOC links
-        tocLinks.forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
+            // Scroll handler
+            function handleScroll() {
+                var scrollY = window.scrollY || window.pageYOffset;
                 
-                if (targetElement) {
-                    const headerOffset = 100;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.scrollY - headerOffset;
-                    
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Update URL without jumping
-                    history.pushState(null, null, targetId);
-                }
-            });
-        });
-        
-        // Handle hash on page load
-        function handleHashOnLoad() {
-            if (window.location.hash) {
-                const targetElement = document.querySelector(window.location.hash);
-                if (targetElement) {
-                    setTimeout(function() {
-                        const headerOffset = 100;
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.scrollY - headerOffset;
-                        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-                    }, 100);
+                if (scrollTopBtn) {
+                    if (scrollY > 300) {
+                        scrollTopBtn.classList.add('visible');
+                    } else {
+                        scrollTopBtn.classList.remove('visible');
+                    }
                 }
             }
-        }
-        
-        // Event listeners
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        window.addEventListener('load', handleHashOnLoad);
-        
-        // Initial check
-        handleScroll();
-        
-        // Respect reduced motion preference
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            policySections.forEach(function(section) {
-                section.classList.add('visible');
+            
+            // Scroll to top
+            if (scrollTopBtn) {
+                scrollTopBtn.addEventListener('click', function() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+            
+            // Smooth scroll for TOC
+            tocLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var targetId = this.getAttribute('href');
+                    var target = document.querySelector(targetId);
+                    
+                    if (target) {
+                        var offset = target.getBoundingClientRect().top + window.scrollY - 80;
+                        window.scrollTo({ top: offset, behavior: 'smooth' });
+                        history.pushState(null, null, targetId);
+                    }
+                });
             });
-        }
+            
+            // Handle hash on load
+            if (window.location.hash) {
+                setTimeout(function() {
+                    var target = document.querySelector(window.location.hash);
+                    if (target) {
+                        var offset = target.getBoundingClientRect().top + window.scrollY - 80;
+                        window.scrollTo({ top: offset, behavior: 'smooth' });
+                    }
+                }, 100);
+            }
+            
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            handleScroll();
+        })();
     </script>
 </body>
 </html>
