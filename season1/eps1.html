@@ -1025,7 +1025,7 @@
         document.addEventListener('click', e => { if (!e.target.closest('.share-float')) { const m = document.getElementById('shareMenu'); if (m) m.classList.remove('show'); } });
         
         // ===== Statistics - Dynamic Visit Counter =====
-        (functiona() {
+        (function() {
             // Configuration: Start from Jan 1, 2026, daily growth 100-600, online learners 113-583
             const config = { 
                 startDate: new Date('2026-01-01').getTime(), 
