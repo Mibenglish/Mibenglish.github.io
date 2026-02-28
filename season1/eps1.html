@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Pelajari cara mempersiapkan otak untuk belajar bahasa Inggris dari nol. Pahami sains di balik pembelajaran bahasa dan bangun fondasi yang kuat.">
+    <meta name="description" content="Pelajari cara mempersiapkan otak untuk menerima bahasa Inggris dengan metode ilmiah. Episode 1 Mibenglish untuk pemula absolut.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Mibenglish">
     <link rel="canonical" href="https://mibenglish.com">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Ep 1: The Science of Zero - Mibenglish">
-    <meta property="og:description" content="Persiapkan otak Anda untuk belajar bahasa Inggris dari nol. Pahami sains pembelajaran bahasa dan bangun fondasi kuat.">
+    <meta property="og:description" content="Mempersiapkan otak untuk menerima bahasa Inggris dengan pendekatan ilmiah untuk pemula absolut.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://mibenglish.com/season1/eps1.html">
     <meta property="og:site_name" content="Mibenglish">
@@ -19,7 +19,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ep 1: The Science of Zero - Mibenglish">
-    <meta name="twitter:description" content="Persiapkan otak Anda untuk belajar bahasa Inggris dari nol. Pahami sains pembelajaran bahasa.">
+    <meta name="twitter:description" content="Mempersiapkan otak untuk menerima bahasa Inggris dengan pendekatan ilmiah untuk pemula absolut.">
     <meta name="twitter:site" content="@mibenglish">
     
     <title>Ep 1: The Science of Zero - Mibenglish</title>
@@ -30,15 +30,15 @@
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "The Science of Zero: Preparing the Brain for Language Encoding",
-        "description": "Pelajari cara mempersiapkan otak untuk belajar bahasa Inggris dari nol dengan memahami sains di balik pembelajaran bahasa dan membangun fondasi yang kuat.",
+        "description": "Pelajari cara mempersiapkan otak untuk menerima bahasa Inggris dengan metode ilmiah yang terbukti efektif untuk pemula absolut level A0-A1.",
         "author": { "@type": "Person", "name": "bangmik" },
         "publisher": { "@type": "Organization", "name": "Mibenglish", "url": "https://mibenglish.com" },
-        "datePublished": "2026-01-01",
-        "dateModified": "2026-01-15",
+        "datePublished": "2025-01-01",
+        "dateModified": "2025-01-15",
         "mainEntityOfPage": { "@type": "WebPage", "@id": "https://mibenglish.com/season1/eps1.html" },
         "inLanguage": "id",
         "articleSection": "English Foundation",
-        "wordCount": "2850"
+        "wordCount": "2800"
     }
     </script>
     
@@ -64,6 +64,12 @@
             --transition: all 0.3s ease;
             --font-size-base: 16px;
             --font-size-multiplier: 1;
+            --forest-dark: #0d2818;
+            --forest-primary: #1a472a;
+            --forest-medium: #2d6a4f;
+            --forest-light: #40916c;
+            --forest-pale: #74c69d;
+            --forest-bg: #f8fdf9;
         }
         
         [data-theme="dark"] {
@@ -149,6 +155,7 @@
         .highlight-box { background: var(--white); border: 1px solid var(--pale-green); border-left: 4px solid var(--gold-accent); padding: 0.8rem 1rem; margin: 0.8rem 0; border-radius: 0 8px 8px 0; }
         .highlight-box.warning { border-left-color: #d4793a; background: var(--cream); }
         .highlight-box.success { border-left-color: var(--accent-green); background: var(--cream); }
+        .highlight-box p { margin-bottom: 0; }
         
         /* ===== English Term ===== */
         .term-en { background-color: var(--primary-green); color: var(--white); padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.85em; font-weight: 500; }
@@ -159,39 +166,43 @@
         .example-sentence { font-size: 0.95rem; color: var(--text-dark); margin: 0.4rem 0; padding-left: 0.8rem; border-left: 3px solid var(--light-green); }
         .translation { color: var(--secondary-green); font-style: italic; font-size: 0.85rem; margin-left: 0.8rem; display: block; margin-top: 0.2rem; }
         
-        /* ===== Diagram Box ===== */
+        /* ===== Diagram/Illustration Box ===== */
         .diagram-box {
-            background: linear-gradient(135deg, var(--mint) 0%, var(--cream) 100%);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--mint) 100%);
             border: 2px solid var(--pale-green);
             border-radius: 12px;
             padding: 1rem;
             margin: 1rem 0;
             text-align: center;
         }
-        .diagram-box .diagram-title {
-            font-weight: 600;
+        .diagram-title {
             color: var(--primary-green);
+            font-weight: 700;
             margin-bottom: 0.75rem;
             font-size: 0.95rem;
         }
-        .diagram-box .diagram-content {
+        .diagram-content {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 0.5rem;
-            align-items: center;
+            margin: 0.75rem 0;
         }
-        .diagram-step {
+        .diagram-item {
             background: var(--white);
-            border: 2px solid var(--secondary-green);
+            border: 2px solid var(--accent-green);
             border-radius: 8px;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 0.75rem;
             font-size: 0.85rem;
             color: var(--text-dark);
-            min-width: 200px;
+            min-width: 80px;
         }
         .diagram-arrow {
+            display: flex;
+            align-items: center;
             color: var(--gold-accent);
             font-size: 1.2rem;
+            font-weight: bold;
         }
         
         /* ===== Ad Slots (5 Positions) ===== */
@@ -337,62 +348,170 @@
         .toggle-switch input:checked + .toggle-slider { background-color: var(--gold-accent); }
         .toggle-switch input:checked + .toggle-slider:before { transform: translateX(26px); }
         
-        /* ===== Language Grid ===== */
-        .language-section-title {
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(135deg, var(--forest-dark) 0%, #081510 100%);
+            color: var(--white);
+            margin-top: 1.5rem;
+            padding: 1.5rem 0.75rem 1rem;
+        }
+        
+        .footer-container {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-brand h3 {
+            color: var(--forest-pale);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.75);
             font-size: 0.85rem;
-            color: var(--text-medium);
-            margin-bottom: 0.75rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--mint);
+            line-height: 1.6;
         }
         
-        .language-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
-        .language-btn { 
-            padding: 0.75rem 0.5rem; 
-            border: 2px solid var(--pale-green); 
-            background: var(--cream); 
-            border-radius: 8px; 
-            cursor: pointer; 
-            transition: var(--transition); 
+        .footer-cta {
+            background: linear-gradient(135deg, var(--forest-primary) 0%, var(--forest-medium) 100%);
+            padding: 1rem;
+            border-radius: 8px;
             text-align: center;
-            text-decoration: none;
-            display: block;
         }
-        .language-btn:hover { border-color: var(--gold-accent); background: var(--mint); }
-        .language-btn.active { border-color: var(--gold-accent); background: var(--gold-accent); color: var(--primary-dark); }
-        .language-btn .lang-flag { font-size: 1.2rem; display: block; margin-bottom: 0.25rem; }
-        .language-btn .lang-name { font-weight: 600; font-size: 0.8rem; display: block; }
-        .language-btn .lang-native { font-size: 0.65rem; opacity: 0.8; }
         
-        /* ===== Footer ===== */
-        footer { background: var(--primary-dark); color: var(--text-light); padding: 2rem 1rem 1rem; border-top: 3px solid var(--gold-accent); }
-        .footer-container { max-width: 100%; margin: 0 auto; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem; }
-        .footer-section h4 { color: var(--gold-accent); font-size: 1rem; margin-bottom: 0.8rem; font-weight: 600; }
-        .footer-section p { color: var(--pale-green); font-size: 0.9rem; line-height: 1.6; margin-bottom: 0; }
-        .footer-section ul { list-style: none; }
-        .footer-section ul li { margin-bottom: 0.4rem; }
-        .footer-section a { color: var(--pale-green); text-decoration: none; font-size: 0.9rem; transition: var(--transition); }
-        .footer-section a:hover { color: var(--gold-accent); }
+        .footer-cta h4 {
+            color: var(--forest-pale);
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
         
-        .footer-brand { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
-        .footer-logo { width: 48px; height: 48px; background: linear-gradient(135deg, var(--gold-accent) 0%, var(--gold-light) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3); }
-        .footer-logo svg { width: 28px; height: 28px; stroke: var(--primary-dark); }
-        .footer-brand-name { font-size: 1.4rem; font-weight: 700; color: var(--gold-accent); letter-spacing: 0.5px; }
-        .footer-brand-tagline { font-size: 0.75rem; color: var(--mint); margin-top: -0.25rem; }
+        .footer-cta p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
         
-        .social-links { display: flex; gap: 0.8rem; margin-top: 0.8rem; flex-wrap: wrap; }
-        .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--secondary-green); border-radius: 10px; color: var(--white); text-decoration: none; transition: var(--transition); border: 1px solid var(--accent-green); }
-        .social-links a svg { width: 20px; height: 20px; fill: currentColor; }
-        .social-links a:hover { background: var(--gold-accent); border-color: var(--gold-light); transform: translateY(-3px); box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3); }
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--gold-accent);
+            color: var(--forest-dark);
+            padding: 0.6rem 1.25rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
         
-        .cta-button { display: inline-block; background: var(--gold-accent); color: var(--primary-dark); text-decoration: none; padding: 0.6rem 1.2rem; border-radius: 20px; font-weight: 600; font-size: 0.9rem; margin-top: 0.8rem; transition: var(--transition); }
-        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(201,162,39,0.4); }
+        .btn-cta:hover {
+            background-color: var(--white);
+        }
         
-        .footer-bottom { border-top: 1px solid var(--secondary-green); padding-top: 1rem; text-align: center; }
-        .copyright { color: var(--pale-green); font-size: 0.85rem; }
+        .footer-links h4 {
+            color: var(--forest-pale);
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
         
-        /* ===== Responsive ===== */
+        .footer-links ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.4rem 1rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--forest-pale);
+        }
+        
+        .footer-social h4 {
+            color: var(--forest-pale);
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--forest-primary) 0%, var(--forest-medium) 100%);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-icon:hover {
+            background: linear-gradient(135deg, var(--gold-accent) 0%, var(--gold-light) 100%);
+            transform: translateY(-2px);
+        }
+        
+        .footer-stats {
+            background: linear-gradient(135deg, rgba(26, 71, 42, 0.4) 0%, rgba(45, 106, 79, 0.4) 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            gap: 1rem;
+        }
+        
+        .footer-stats .stat-item {
+            flex: 1;
+        }
+        
+        .footer-stats .stat-number {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gold-accent);
+            transition: transform 0.3s ease;
+        }
+        
+        .footer-stats .stat-number.animating {
+            transform: scale(1.05);
+        }
+        
+        .footer-stats .stat-label {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 0.2rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1rem;
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.8rem;
+        }
+        
+        /* ===== Responsive - Mobile First ===== */
         @media (max-width: 600px) {
             html { font-size: 15px; }
             body { padding-top: 60px; }
@@ -400,13 +519,44 @@
             .nav-container { gap: 0.4rem; }
             nav a, .nav-btn { font-size: 0.75rem; padding: 0.3rem 0.5rem; }
             .ad-slot { margin: 0.8rem 1rem; padding: 1rem; }
-            .footer-grid { grid-template-columns: 1fr; text-align: center; }
-            .social-links { justify-content: center; }
-            .language-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-links ul {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
-        @media (max-width: 380px) {
-            .language-grid { grid-template-columns: 1fr; }
+        /* ===== Responsive - Tablet ===== */
+        @media (min-width: 480px) {
+            .footer-links ul {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        /* ===== Responsive - Desktop ===== */
+        @media (min-width: 640px) {
+            .header-container {
+                max-width: 720px;
+                margin: 0 auto;
+            }
+            
+            .article-header { padding: 2rem 1.5rem; }
+            .article-header h1 { font-size: 1.6rem; }
+            
+            section { padding: 1.5rem; }
+            h2 { font-size: 1.25rem; }
+            
+            .footer-grid {
+                display: grid;
+                grid-template-columns: 1.5fr 1fr;
+                gap: 1.5rem;
+            }
+            
+            .footer-links ul {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-stats .stat-number {
+                font-size: 1.5rem;
+            }
         }
         
         /* ===== Accessibility ===== */
@@ -415,7 +565,7 @@
         
         /* Print Styles */
         @media print {
-            header, nav, .share-float, .ad-slot, #quiz-section, .stats-section, .settings-overlay, .settings-modal { display: none !important; }
+            header, nav, .share-float, .ad-slot, #quiz-section, .stats-section, .settings-overlay, .settings-modal, footer { display: none !important; }
             body { background: white; padding-top: 0; }
         }
     </style>
@@ -462,122 +612,10 @@
                 <h3>Tampilan</h3>
                 <div class="dark-mode-toggle">
                     <div class="dark-mode-label">
-                        <span></span>
-                        <div><div class="label-text">Mode Gelap</div><div class="label-desc">Mengurangi kelelahan mata</div></div>
+                        <span>&#127769;</span>
+                        <div><div class="label-text">Mode Gelap</div><div class="label-desc">Mengurangi kelelahan mata saat belajar malam</div></div>
                     </div>
                     <label class="toggle-switch"><input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()"><span class="toggle-slider"></span></label>
-                </div>
-            </div>
-            <div class="settings-section">
-                <h3>Bahasa / Language</h3>
-                <p class="language-section-title">Pilih bahasa untuk melihat konten dalam bahasa tersebut:</p>
-                <div class="language-grid" id="languageGrid">
-                    <!-- Asia Timur & Tenggara -->
-                    <a href="https://mibenglish.com/seasonmandarin1/eps1.html" class="language-btn" data-lang="mandarin">
-                        <span class="lang-flag">&#127464;&#127475;</span>
-                        <span class="lang-name">Mandarin</span>
-                        <span class="lang-native">中文</span>
-                    </a>
-                    <a href="https://mibenglish.com/seasonjepang1/eps1.html" class="language-btn" data-lang="jepang">
-                        <span class="lang-flag">&#127471;&#127477;</span>
-                        <span class="lang-name">Jepang</span>
-                        <span class="lang-native">日本語</span>
-                    </a>
-                    <a href="https://mibenglish.com/seasonkorea1/eps1.html" class="language-btn" data-lang="korea">
-                        <span class="lang-flag">&#127472;&#127479;</span>
-                        <span class="lang-name">Korea</span>
-                        <span class="lang-native">한국어</span>
-                    </a>
-                    <a href="https://mibenglish.com/seasonvietnam1/eps1.html" class="language-btn" data-lang="vietnam">
-                        <span class="lang-flag">&#127483;&#127475;</span>
-                        <span class="lang-name">Vietnam</span>
-                        <span class="lang-native">Tiếng Việt</span>
-                    </a>
-                    <a href="https://mibenglish.com/seasonthai1/eps1.html" class="language-btn" data-lang="thai">
-                        <span class="lang-flag">&#127481;&#127469;</span>
-                        <span class="lang-name">Thai</span>
-                        <span class="lang-native">ไทย</span>
-                    </a>
-                    
-                    <!-- Asia Selatan -->
-                    <a href="https://mibenglish.com/seasonhindi1/eps1.html" class="language-btn" data-lang="hindi">
-                        <span class="lang-flag">&#127470;&#127475;</span>
-                        <span class="lang-name">Hindi</span>
-                        <span class="lang-native">हिन्दी</span>
-                    </a>
-                    <a href="https://mibenglish.com/seasonbengali1/eps1.html" class="language-btn" data-lang="bengali">
-                        <span class="lang-flag">&#127463;&#127465;</span>
-                        <span class="lang-name">Bengali</span>
-                        <span class="lang-native">বাংলা</span>
-                    </a>
-                    <a href="https://mibenglish.com/seasonurdu1/eps1.html" class="language-btn" data-lang="urdu">
-                        <span class="lang-flag">&#127477;&#127472;</span>
-                        <span class="lang-name">Urdu</span>
-                        <span class="lang-native">اردو</span>
-                    </a>
-                    
-                    <!-- Timur Tengah & Afrika -->
-                    <a href="https://mibenglish.com/seasonarab1/eps1.html" class="language-btn" data-lang="arab">
-                        <span class="lang-flag">&#127480;&#127462;</span>
-                        <span class="lang-name">Arab</span>
-                        <span class="lang-native">العربية</span>
-                    </a>
-                    <a href="https://mibenglish.com/seasonswahili1/eps1.html" class="language-btn" data-lang="swahili">
-                        <span class="lang-flag">&#127472;&#127466;</span>
-                        <span class="lang-name">Swahili</span>
-                        <span class="lang-native">Kiswahili</span>
-                    </a>
-                    
-                    <!-- Eropa Barat -->
-                    <a href="https://mibenglish.com/seasonspanyol1/eps1.html" class="language-btn" data-lang="spanyol">
-                        <span class="lang-flag">&#127466;&#127480;</span>
-                        <span class="lang-name">Spanyol</span>
-                        <span class="lang-native">Español</span>
-                    </a>
-                    <a href="https://mibenglish.com/seasonportugis1/eps1.html" class="language-btn" data-lang="portugis">
-                        <span class="lang-flag">&#127477;&#127481;</span>
-                        <span class="lang-name">Portugis</span>
-                        <span class="lang-native">Português</span>
-                    </a>
-                    <a href="https://mibenglish.com/seasonprancis1/eps1.html" class="language-btn" data-lang="prancis">
-                        <span class="lang-flag">&#127467;&#127479;</span>
-                        <span class="lang-name">Prancis</span>
-                        <span class="lang-native">Français</span>
-                    </a>
-                    <a href="https://mibenglish.com/seasonjerman1/eps1.html" class="language-btn" data-lang="jerman">
-                        <span class="lang-flag">&#127465;&#127466;</span>
-                        <span class="lang-name">Jerman</span>
-                        <span class="lang-native">Deutsch</span>
-                    </a>
-                    <a href="https://mibenglish.com/seasonitalia1/eps1.html" class="language-btn" data-lang="italia">
-                        <span class="lang-flag">&#127470;&#127481;</span>
-                        <span class="lang-name">Italia</span>
-                        <span class="lang-native">Italiano</span>
-                    </a>
-                    
-                    <!-- Eropa Timur & Tengah -->
-                    <a href="https://mibenglish.com/seasonrusia1/eps1.html" class="language-btn" data-lang="rusia">
-                        <span class="lang-flag">&#127479;&#127482;</span>
-                        <span class="lang-name">Rusia</span>
-                        <span class="lang-native">Русский</span>
-                    </a>
-                    <a href="https://mibenglish.com/seasonpolandia1/eps1.html" class="language-btn" data-lang="polandia">
-                        <span class="lang-flag">&#127477;&#127473;</span>
-                        <span class="lang-name">Polandia</span>
-                        <span class="lang-native">Polski</span>
-                    </a>
-                    <a href="https://mibenglish.com/seasonturki1/eps1.html" class="language-btn" data-lang="turki">
-                        <span class="lang-flag">&#127481;&#127479;</span>
-                        <span class="lang-name">Turki</span>
-                        <span class="lang-native">Türkçe</span>
-                    </a>
-                    
-                    <!-- Indonesia (Default) -->
-                    <a href="https://mibenglish.com/season1/eps1.html" class="language-btn active" data-lang="indonesia">
-                        <span class="lang-flag">&#127470;&#127465;</span>
-                        <span class="lang-name">Indonesia</span>
-                        <span class="lang-native">Bahasa Indonesia</span>
-                    </a>
                 </div>
             </div>
         </div>
@@ -589,32 +627,30 @@
             <!-- Article Header -->
             <header class="article-header">
                 <h1>The Science of Zero: Preparing the Brain for Language Encoding</h1>
-                <p class="subtitle">Mempersiapkan Fondasi Mental untuk Belajar Bahasa Inggris</p>
+                <p class="subtitle">Membangun Fondasi Mental untuk Menerima Bahasa Baru</p>
                 <span class="level-indicator">Level A0-A1 (Absolute Beginner Foundation)</span>
             </header>
             
             <!-- ==================== SECTION 1 ==================== -->
             <section id="section-1">
-                <h2>1. Mengapa Harus Mulai dari Nol?</h2>
-                <p>Banyak pembelajar bahasa Inggris mengalami kesulitan yang sama: mereka berusaha menghafal kosakata dan aturan tata bahasa tanpa memahami bagaimana otak mereka sebenarnya memproses informasi baru. Keterlambatan pemahaman ini bukan karena ketidakmampuan, melainkan karena <strong>ketidaksiapan kognitif</strong>—otak belum dalam kondisi optimal untuk menerima dan menyimpan informasi bahasa asing. Bayangkan seperti mencoba membangun rumah tanpa fondasi yang kuat; betapa pun bagusnya dinding dan atapnya, struktur tersebut akan mudah roboh.</p>
+                <h2>1. Mengapa Banyak Orang Gagal Belajar Bahasa Inggris?</h2>
+                <p>Sebelum kita mulai perjalanan belajar bahasa Inggris, ada satu pertanyaan penting yang harus kita jawab bersama: mengapa jutaan orang di seluruh dunia menghabiskan bertahun-tahun belajar bahasa Inggris, namun tetap tidak bisa menggunakannya dengan percaya diri? Jawabannya bukan karena kurangnya kecerdasan atau bakat, melainkan karena pendekatan yang keliru sejak awal. Banyak pembelajar langsung terjun ke <span class="term-en">vocabulary</span> dan <span class="term-en">grammar</span> tanpa memahami bagaimana otak mereka seharusnya menerima informasi baru tersebut.</p>
                 
-                <h3>Mengidentifikasi Akar Masalah</h3>
-                <p>Sebelum kita mempelajari bahasa Inggris, penting untuk memahami mengapa begitu banyak orang yang menyerah di tengah jalan. Penelitian menunjukkan bahwa 90% kegagalan dalam pembelajaran bahasa bukan karena materi yang terlalu sulit, melainkan karena pendekatan yang keliru sejak awal. Pembelajar sering kali langsung terjun ke <span class="term-en">vocabulary</span> (kosakata) dan <span class="term-en">grammar</span> (tata bahasa) tanpa memahami bagaimana cara kerja otak dalam menyerap bahasa baru.</p>
+                <h3>Akar Masalah Utama</h3>
+                <p>Masalah mendasar yang sering diabaikan adalah kondisi mental dan kesiapan otak dalam menerima bahasa baru. Bayangkan Anda mencoba menuangkan air ke dalam gelas yang sudah penuh—air tersebut akan tumpah dan sia-sia. Demikian pula dengan pembelajaran bahasa: jika pikiran kita sudah penuh dengan keraguan, ketakutan, dan metode yang salah, maka apapun yang kita pelajari tidak akan bisa terserap dengan optimal. Inilah yang disebut dengan kondisi <strong>"Zero State"</strong> atau kondisi nol yang perlu dipahami setiap pembelajar.</p>
                 
                 <div class="highlight-box warning">
-                    <p><strong>Peringatan:</strong> Jika Anda merasa stuck atau tertahan dalam pembelajaran bahasa Inggris, kemungkinan besar Anda melewatkan tahap persiapan mental ini. Jangan buru-buru menghafal; persiapkan dulu "wadah" untuk menerima ilmu tersebut.</p>
+                    <p><strong>Peringatan Penting:</strong> Jangan pernah merasa bodoh atau tidak mampu belajar bahasa Inggris. Setiap manusia dilahirkan dengan kemampuan alami untuk mempelajari bahasa. Yang perlu diperbaiki adalah metode dan persiapan mental, bukan kemampuan diri Anda.</p>
                 </div>
                 
-                <h3>Konsep "Zero State" dalam Pembelajaran</h3>
-                <p>Istilah <span class="term-en">zero state</span> merujuk pada kondisi mental di mana pembelajar berada dalam posisi murni—belum terkontaminasi oleh metode yang salah, belum terbebani oleh ekspektasi yang tidak realistis, dan siap menerima informasi dengan cara yang benar. Ini adalah momen krusial yang sering diabaikan. Dalam tradisi Islam, ada prinsip bahwa "ilmu itu butuh wadah yang kosong"—sebuah metafora yang sangat tepat untuk menggambarkan pentingnya memulai dengan pikiran yang bersih dan terbuka.</p>
-                
-                <p>Ketika seseorang memulai dengan kondisi mental yang tepat, proses pembelajaran menjadi lebih natural dan menyenangkan. Sebaliknya, jika seseorang memaksakan diri belajar sambil membawa "bagasi" berupa metode lama yang salah, kecemasan berlebih, atau trauma dari pengalaman belajar sebelumnya, maka proses encoding (penyandian informasi dalam memori) akan terhambat.</p>
+                <h3>Faktor-Faktor Penghambat</h3>
+                <p>Setiap pembelajar memiliki hambatan yang berbeda, namun ada beberapa pola umum yang sering ditemukan. Hambatan pertama adalah <strong>mental block</strong>—keyakinan bahwa bahasa Inggris itu sulit dan hanya untuk orang-orang tertentu. Hambatan kedua adalah <strong>metode pasif</strong>—hanya membaca dan menghafal tanpa praktik aktif. Hambatan ketiga adalah <strong>lingkungan tidak kondusif</strong>—tidak ada kesempatan untuk menggunakan bahasa dalam kehidupan sehari-hari. Hambatan keempat adalah <strong>tidak adanya fondasi yang kuat</strong>—langsung belajar hal-hal kompleks tanpa memahami dasar-dasarnya terlebih dahulu.</p>
                 
                 <ul>
-                    <li><strong>Kondisi Mental Optimal</strong> — Pikiran tenang, fokus, dan menerima dengan lapang</li>
-                    <li><strong>Keyakinan Positif</strong> — Meyakini bahwa kemampuan berbahasa adalah potensi yang bisa dikembangkan</li>
-                    <li><strong>Komitmen Proses</strong> — Memahami bahwa pembelajaran adalah perjalanan, bukan sprint</li>
-                    <li><strong>Keterbukaan Mental</strong> — Siap melepas kebiasaan lama yang menghambat</li>
+                    <li><strong>Mental Block</strong> — Perspektif bahwa bahasa Inggris adalah sesuatu yang menakutkan dan tidak bisa dikuasai oleh orang biasa. Padahal, bahasa adalah anugerah yang diberikan kepada setiap manusia tanpa terkecuali.</li>
+                    <li><strong>Metode Pasif</strong> — Kebiasaan hanya membaca buku teks dan menghafal kata-kata tanpa pernah mencoba menggunakannya dalam konteks nyata. Bahasa bukanlah pengetahuan yang dihafal, melainkan keterampilan yang dipraktikkan.</li>
+                    <li><strong>Lingkungan Tidak Kondusif</strong> — Tidak adanya ruang aman untuk berbuat salah dan belajar dari kesalahan tersebut. Padahal, kesalahan adalah guru terbaik dalam pembelajaran bahasa.</li>
+                    <li><strong>Fondasi yang Lemah</strong> — Terburu-buru mempelajari hal-hal kompleks tanpa memahami prinsip dasar bagaimana bahasa bekerja dalam pikiran manusia.</li>
                 </ul>
             </section>
             
@@ -627,40 +663,38 @@
             
             <!-- ==================== SECTION 2 ==================== -->
             <section id="section-2">
-                <h2>2. Bagaimana Otak Mempelajari Bahasa</h2>
-                <p>Memahami cara kerja otak dalam memproses bahasa adalah kunci utama untuk belajar dengan efektif. Otak manusia memiliki bagian khusus yang bertanggung jawab untuk bahasa, yang disebut <span class="term-en">Broca's area</span> (untuk produksi bahasa) dan <span class="term-en">Wernicke's area</span> (untuk pemahaman bahasa). Kedua area ini bekerja sama dalam jaringan kompleks untuk membantu kita memahami dan menghasilkan bahasa.</p>
+                <h2>2. Konsep Zero State: Memulai dari Titik Nol</h2>
+                <p>Konsep <span class="term-en">Zero State</span> adalah fondasi utama dalam metode pembelajaran Mibenglish. Ini bukan berarti Anda tidak tahu apa-apa, melainkan sebuah kondisi mental di mana Anda membuka diri sepenuhnya untuk menerima pengetahuan baru tanpa prasangka dan hambatan masa lalu. Seperti seorang petani yang ingin menanam benih baru, lahan harus dibersihkan terlebih dahulu dari gulma dan batu-batu penghalang. Demikian pula dengan pembelajaran bahasa: pikiran harus dibersihkan dari keraguan dan metode lama yang tidak efektif sebelum bisa menerima pendekatan baru yang lebih baik.</p>
                 
-                <h3>Proses Encoding dalam Otak</h3>
-                <p>Ketika Anda mendengar atau melihat kata baru dalam bahasa Inggris, otak Anda melalui serangkaian proses yang disebut <span class="term-en">language encoding</span>. Proses ini dimulai dari penerimaan stimulus (suara atau tulisan), dilanjutkan dengan pengolahan di area pendengaran atau penglihatan, kemudian diteruskan ke area bahasa untuk diinterpretasikan, dan akhirnya disimpan dalam <span class="term-en">long-term memory</span> (memori jangka panjang).</p>
+                <h3>Imajinasi: Bayangkan Pikiran Anda</h3>
+                <p>Coba bayangkan pikiran Anda sebagai sebuah lahan yang subur. Lahan ini memiliki potensi untuk menumbuhkan apa saja—termasuk kemampuan berbahasa Inggris yang fasih. Namun selama ini, mungkin ada "gulma-gulma" yang tumbuh di lahan tersebut: keyakinan bahwa Anda tidak bisa, pengalaman buruk di masa sekolah, atau tekanan untuk bisa langsung mahir dalam waktu singkat. Gulma-gulma ini harus dicabut satu per satu, dan prosesnya dimulai dengan kesadaran bahwa mereka ada dan perlu dihilangkan.</p>
                 
                 <div class="diagram-box">
-                    <div class="diagram-title">Proses Encoding Bahasa dalam Otak</div>
+                    <div class="diagram-title">Proses Pencapaian Zero State</div>
                     <div class="diagram-content">
-                        <div class="diagram-step">1. Penerimaan Stimulus<br><small>(Mendengar/Membaca)</small></div>
-                        <div class="diagram-arrow">&#8595;</div>
-                        <div class="diagram-step">2. Pengolahan Sensorik<br><small>(Area Pendengaran/Penglihatan)</small></div>
-                        <div class="diagram-arrow">&#8595;</div>
-                        <div class="diagram-step">3. Interpretasi Makna<br><small>(Wernicke's Area)</small></div>
-                        <div class="diagram-arrow">&#8595;</div>
-                        <div class="diagram-step">4. Penyimpanan Memori<br><small>(Hippocampus & Long-term Memory)</small></div>
+                        <div class="diagram-item">Kesadaran</div>
+                        <div class="diagram-arrow">&#8594;</div>
+                        <div class="diagram-item">Penerimaan</div>
+                        <div class="diagram-arrow">&#8594;</div>
+                        <div class="diagram-item">Pelepasan</div>
+                        <div class="diagram-arrow">&#8594;</div>
+                        <div class="diagram-item">Kesiapan</div>
                     </div>
+                    <p style="font-size: 0.85rem; margin-top: 0.75rem; color: var(--text-medium);">Empat tahap untuk mencapai kondisi mental yang optimal dalam menerima bahasa baru</p>
                 </div>
                 
                 <div class="highlight-box">
-                    <p><strong>Prinsip Penting:</strong> Otak lebih efektif menyimpan informasi yang memiliki makna emosional atau konteks yang jelas. Inilah mengapa menghafal daftar kata tanpa konteks sering kali tidak efektif—otak tidak memiliki "kaitan" untuk menyimpan informasi tersebut.</p>
+                    <p><strong>Prinsip Penting:</strong> Setiap kebaikan dan kemampuan yang kita miliki adalah anugerah yang harus disyukuri. Dengan memulai dari titik nol, kita sedang membuka diri untuk menerima ilmu yang bermanfaat—ilmu yang tidak hanya membuat kita pandai berbahasa, tetapi juga membuka kesempatan untuk berkontribusi lebih besar bagi sesama.</p>
                 </div>
                 
-                <h3>Neuroplasticity: Harapan untuk Semua Pembelajar</h3>
-                <p>Satu kabar baik yang perlu Anda ketahui: otak manusia memiliki kemampuan luar biasa yang disebut <span class="term-en">neuroplasticity</span> (neuroplastisitas). Ini berarti otak dapat terus berubah dan membentuk koneksi baru sepanjang hidup kita. Tidak ada yang terlalu tua untuk belajar bahasa baru. Penelitian menunjukkan bahwa bahkan orang dewasa di usia 60-70 tahun masih bisa membentuk jalur saraf baru untuk mempelajari bahasa asing.</p>
+                <h3>Empat Tahap Zero State</h3>
+                <p>Proses mencapai Zero State tidak terjadi secara instan, melainkan melalui empat tahap yang saling terhubung. Tahap pertama adalah <strong>Kesadaran</strong>—mengenali semua hambatan mental yang selama ini menghalangi. Tahap kedua adalah <strong>Penerimaan</strong>—menerima kenyataan bahwa hambatan tersebut ada tanpa menghakimi diri sendiri. Tahap ketiga adalah <strong>Pelepasan</strong>—secara aktif melepaskan keraguan dan ketakutan yang tidak beralasan. Tahap keempat adalah <strong>Kesiapan</strong>—kondisi di mana pikiran terbuka lebar siap menerima pembelajaran baru dengan cara yang segar dan optimis.</p>
                 
-                <p>Neuroplasticity ini juga menjadi bukti bahwa setiap manusia diberkahi dengan potensi yang luar biasa. Dengan tekad yang kuat dan metode yang tepat, siapa pun dapat mengembangkan kemampuan berbahasa. Ini sejalan dengan prinsip bahwa setiap usaha yang bermanfaat dan dilakukan dengan niat baik akan membawa hasil yang berkah.</p>
-                
-                <h3>Faktor yang Mempengaruhi Keberhasilan</h3>
                 <ol>
-                    <li><strong>Motivasi Intrinsik</strong> — Dorongan yang datang dari dalam diri sendiri, bukan karena paksaan dari luar. Ketika Anda belajar karena ingin memahami dan menguasai, bukan sekadar untuk lulus ujian, proses encoding menjadi lebih dalam dan bertahan lama.</li>
-                    <li><strong>Konsistensi Latihan</strong> — Otak membutuhkan pengulangan untuk memperkuat koneksi saraf. Latihan 15 menit setiap hari lebih efektif daripada 2 jam sekali seminggu. Prinsip ini mirip dengan membangun kebiasaan baik—sedikit demi sedikit, lama-lama menjadi bukit.</li>
-                    <li><strong>Konteks yang Bermakna</strong> — Belajar kata dalam konteks kalimat atau situasi nyata membantu otak membuat asosiasi yang lebih kuat. Kata "apple" lebih mudah diingat ketika Anda membayangkan buah apel merah yang segar, bukan sekadar huruf a-p-p-l-e.</li>
-                    <li><strong>Emosi Positif</strong> — Pembelajaran yang disertai perasaan senang dan rileks mengaktifkan sistem dopamin di otak, yang membantu memperkuat memori. Inilah mengapa belajar sambil tertekan atau takut sering kali tidak efektif.</li>
+                    <li><strong>Kesadaran (Awareness)</strong> — Mengenali pola pikir negatif yang selama ini mungkin tidak disadari. Misalnya, keyakinan "saya tidak punya bakat bahasa" atau "bahasa Inggris terlalu sulit untuk saya". Kesadaran adalah langkah pertama menuju perubahan.</li>
+                    <li><strong>Penerimaan (Acceptance)</strong> — Menerima bahwa kondisi saat ini adalah titik awal yang valid. Tidak ada yang salah dengan menjadi pemula. Setiap ahli pernah menjadi pemula yang penuh keraguan.</li>
+                    <li><strong>Pelepasan (Release)</strong> — Melepaskan beban pikiran yang tidak produktif. Ini termasuk melepaskan kebutuhan untuk "selalu benar" dan membuka diri untuk berbuat salah sebagai bagian dari proses belajar.</li>
+                    <li><strong>Kesiapan (Readiness)</strong> — Mencapai kondisi mental yang siap menerima informasi baru dengan rasa ingin tahu yang murni, seperti seorang anak kecil yang belajar bahasa pertamanya dengan antusiasme alami.</li>
                 </ol>
             </section>
             
@@ -673,33 +707,49 @@
             
             <!-- ==================== SECTION 3 ==================== -->
             <section id="section-3">
-                <h2>3. Mempersiapkan Mental untuk Belajar</h2>
-                <p>Persiapan mental sama pentingnya dengan materi yang akan dipelajari. Seperti seorang atlet yang melakukan pemanasan sebelum bertanding, pembelajar bahasa juga perlu mempersiapkan kondisi mental mereka sebelum mulai belajar. Tanpa persiapan ini, energi dan waktu yang dihabiskan untuk belajar tidak akan optimal hasilnya.</p>
+                <h2>3. Bagaimana Otak Mempelajari Bahasa</h2>
+                <p>Memahami cara kerja otak dalam mempelajari bahasa akan membantu Anda mengoptimalkan proses belajar. Otak manusia memiliki area khusus yang disebut <span class="term-en">Broca's area</span> dan <span class="term-en">Wernicke's area</span> yang bertanggung jawab untuk produksi dan pemahaman bahasa. Area-area ini bekerja seperti otot—semakin sering digunakan, semakin kuat dan efisien koneksinya. Ini berarti kemampuan berbahasa bukanlah bakat yang dimiliki segelintir orang, melainkan kemampuan yang bisa dilatih oleh siapa saja dengan metode yang tepat.</p>
                 
-                <h3>Menghilangkan Mental Block</h3>
-                <p><span class="term-en">Mental block</span> adalah kondisi di mana pikiran seseorang terhambat untuk menerima informasi baru. Ini sering disebabkan oleh pengalaman negatif di masa lalu, keyakinan yang salah tentang kemampuan diri, atau tekanan dari lingkungan. Gejalanya mudah dikenali: Anda merasa sulit berkonsentrasi, cepat lupa materi yang baru dipelajari, atau merasa tidak percaya diri saat harus menggunakan bahasa Inggris.</p>
-                
-                <p>Untuk mengatasi mental block, pertama-tama Anda perlu mengakui keberadaannya. Tidak ada yang salah dengan merasa kesulitan—itu adalah bagian dari proses. Yang penting adalah bagaimana Anda meresponsnya. Alih-alih menghindari atau menyerah, hadapi dengan kesabaran dan keyakinan bahwa setiap kesulitan adalah kesempatan untuk tumbuh.</p>
+                <h3>Neuroplasticity: Keajaiban Otak Manusia</h3>
+                <p>Selama bertahun-tahun, ilmuwan percaya bahwa otak manusia sudah "mati" dan tidak bisa berubah setelah usia tertentu. Namun penelitian modern membuktikan sebaliknya—otak memiliki kemampuan luar biasa yang disebut <span class="term-en">neuroplasticity</span> atau plastisitas saraf. Ini adalah kemampuan otak untuk membentuk koneksi neural baru sepanjang hidup. Dengan kata lain, tidak ada kata terlambat untuk belajar bahasa baru. Otak Anda bisa "diprogram ulang" untuk menerima bahasa Inggris kapanpun Anda siap memulainya dengan cara yang benar.</p>
                 
                 <div class="highlight-box success">
-                    <p><strong>Insight:</strong> Dalam menghadapi tantangan pembelajaran, bersikaplah jujur pada diri sendiri tentang kemampuan saat ini, namun tetap optimis tentang potensi yang bisa dikembangkan. Keseimbangan antara realistis dan optimis adalah kunci untuk menjaga motivasi jangka panjang.</p>
+                    <p><strong>Fakta Menarik:</strong> Penelitian menunjukkan bahwa belajar bahasa baru dapat meningkatkan <span class="term-en">cognitive reserve</span> atau cadangan kognitif, yang membantu melindungi otak dari penurunan fungsi seiring bertambahnya usia. Dengan belajar bahasa Inggris, Anda tidak hanya mendapatkan keterampilan baru, tetapi juga menjaga kesehatan otak.</p>
                 </div>
                 
-                <h3>Teknik Relaksasi untuk Pembelajaran Optimal</h3>
-                <p>Sebelum memulai sesi belajar, luangkan waktu 3-5 menit untuk mengatur napas dan menenangkan pikiran. Teknik sederhana ini dapat meningkatkan fokus dan membuat otak lebih reseptif terhadap informasi baru. Caranya mudah: duduk dengan nyaman, tutup mata, tarik napas dalam-dalam melalui hidung selama 4 detik, tahan 4 detik, lalu hembuskan perlahan melalui mulut selama 6 detik. Ulangi 5-10 kali.</p>
+                <h3>Language Encoding: Bagaimana Bahasa Tersimpan</h3>
+                <p><span class="term-en">Language encoding</span> adalah proses bagaimana informasi bahasa disimpan dalam memori jangka panjang. Proses ini melibatkan tiga tahap utama: <strong>encoding</strong> (memasukkan informasi), <strong>storage</strong> (menyimpan informasi), dan <strong>retrieval</strong> (mengambil informasi saat dibutuhkan). Banyak pembelajar gagal bukan karena tidak bisa menyimpan informasi, melainkan karena proses encoding yang tidak efektif—informasi masuk tetapi tidak "terkunci" dengan baik dalam memori.</p>
                 
-                <p>Teknik ini bukan sekadar relaksasi fisik, tetapi juga cara untuk "membersihkan" pikiran dari gangguan dan kecemasan. Dengan demikian, Anda memasuki kondisi <span class="term-en">flow state</span>—kondisi mental di mana fokus penuh terarah pada satu aktivitas tanpa gangguan. Ini adalah kondisi ideal untuk pembelajaran efektif.</p>
-                
-                <h3>Membangun Mindset Growth</h3>
-                <p>Penelitian oleh Carol Dweck, seorang psikolog dari Stanford University, menunjukkan bahwa orang dengan <span class="term-en">growth mindset</span> (pola pikir berkembang) lebih sukses dalam pembelajaran dibandingkan mereka dengan <span class="term-en">fixed mindset</span> (pola pikir tetap). Perbedaannya terletak pada cara mereka memandang kemampuan: fixed mindset menganggap kemampuan adalah bawaan lahir yang tidak bisa diubah, sementara growth mindset meyakini bahwa kemampuan bisa dikembangkan melalui usaha dan latihan.</p>
-                
-                <div class="example-box">
-                    <div class="label">Perbandingan Mindset</div>
-                    <p class="example-sentence"><strong>Fixed Mindset:</strong> "Saya tidak berbakat bahasa, jadi sia-sia kalau saya berusaha."</p>
-                    <span class="translation">Pikiran ini menghambat usaha dan membuat seseorang menyerah sebelum mencoba.</span>
-                    <p class="example-sentence"><strong>Growth Mindset:</strong> "Saya belum mahir bahasa Inggris, tapi dengan latihan konsisten saya pasti bisa berkembang."</p>
-                    <span class="translation">Pikiran ini membuka peluang untuk belajar dan mengakui proses sebagai bagian dari perjalanan.</span>
+                <div class="diagram-box">
+                    <div class="diagram-title">Proses Language Encoding dalam Otak</div>
+                    <div class="diagram-content" style="flex-direction: column; align-items: center;">
+                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                            <div class="diagram-item">Input (Mendengar/Membaca)</div>
+                            <div class="diagram-arrow">&#8595;</div>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                            <div class="diagram-item" style="background: var(--gold-accent); color: var(--primary-dark);">Encoding (Pemrosesan Aktif)</div>
+                            <div class="diagram-arrow">&#8595;</div>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem;">
+                            <div class="diagram-item">Storage (Memori Jangka Panjang)</div>
+                            <div class="diagram-arrow">&#8595;</div>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; align-items: center;">
+                            <div class="diagram-item" style="background: var(--accent-green); color: var(--white);">Retrieval (Penggunaan Aktif)</div>
+                        </div>
+                    </div>
                 </div>
+                
+                <h3>Faktor yang Meningkatkan Encoding</h3>
+                <p>Agar proses encoding berjalan optimal, ada beberapa faktor yang perlu diperhatikan. Pertama, <strong>emosi positif</strong>—otak lebih mudah mengingat informasi yang dikaitkan dengan perasaan baik. Kedua, <strong>repetisi bermakna</strong>—bukan sekadar mengulang-ulang, melainkan mengulang dalam konteks yang berbeda dan bermakna. Ketiga, <strong>koneksi dengan pengetahuan existing</strong>—menghubungkan informasi baru dengan sesuatu yang sudah dikenal membuatnya lebih mudah diingat. Keempat, <strong>penggunaan aktif</strong>—menggunakan bahasa dalam konteks nyata memperkuat koneksi neural lebih dari sekadar membaca atau mendengar.</p>
+                
+                <ul>
+                    <li><strong>Emosi Positif</strong> — Belajar dengan rasa senang dan antusias membuat otak melepaskan dopamin, neurotransmitter yang membantu memperkuat koneksi neural.</li>
+                    <li><strong>Repetisi Bermakna</strong> — Mengulang kata atau frasa dalam konteks yang berbeda-beda, bukan sekadar menghafal daftar kata tanpa konteks.</li>
+                    <li><strong>Koneksi dengan Yang Sudah Dikenal</strong> — Menghubungkan kata baru dengan kata yang sudah dikenal dalam bahasa Indonesia atau pengalaman pribadi.</li>
+                    <li><strong>Penggunaan Aktif</strong> — Berbicara, menulis, dan menggunakan bahasa dalam situasi nyata memperkuat memori lebih efektif.</li>
+                </ul>
             </section>
             
             <!-- ========== AD SLOT 3 ========== -->
@@ -711,29 +761,33 @@
             
             <!-- ==================== SECTION 4 ==================== -->
             <section id="section-4">
-                <h2>4. Latihan Terpandu</h2>
-                <p>Teori tanpa praktik adalah ilmu yang mandul. Setelah memahami bagaimana otak bekerja dan bagaimana mempersiapkan mental, saatnya Anda mengaplikasikannya dalam latihan nyata. Latihan-latihan berikut dirancang untuk membantu Anda membangun fondasi yang kuat sebelum melanjutkan ke materi bahasa Inggris yang lebih spesifik.</p>
+                <h2>4. Latihan Terpandu: Mencapai Zero State</h2>
+                <p>Sekarang saatnya mempraktikkan apa yang telah kita pelajari. Ingat, membaca tentang cara berenang tidak akan membuat Anda bisa berenang—Anda harus masuk ke dalam air dan mencobanya sendiri. Demikian pula dengan persiapan mental untuk belajar bahasa: Anda harus benar-benar melakukannya, bukan sekadar memahami konsepnya. Latihan-latihan berikut dirancang untuk membantu Anda mencapai kondisi Zero State yang optimal sebelum melanjutkan ke materi bahasa Inggris selanjutnya.</p>
                 
-                <h3>Latihan 1: Assessment Diri (5 menit)</h3>
-                <p>Ambil selembar kertas atau buka aplikasi catatan di ponsel Anda. Tuliskan jawaban jujur untuk pertanyaan-pertanyaan berikut. Tidak ada jawaban yang salah—yang penting adalah kejujuran Anda pada diri sendiri.</p>
+                <h3>Latihan 1: Identifikasi Hambatan Mental (5 menit)</h3>
+                <p>Ambil selembar kertas atau buka aplikasi catatan di ponsel Anda. Tuliskan minimal tiga keraguan atau ketakutan yang Anda miliki tentang belajar bahasa Inggris. Jujur pada diri sendiri—tidak ada jawaban yang salah di sini. Setelah menuliskan setiap keraguan, tuliskan juga alasan mengapa keraguan tersebut mungkin tidak sepenuhnya benar. Contoh: "Saya takut salah bicara" bisa ditantang dengan "Kesalahan adalah bagian normal dari proses belajar, dan tidak ada yang akan menghakimi saya."</p>
                 
                 <div class="example-box">
-                    <div class="label">Pertanyaan Refleksi</div>
-                    <p class="example-sentence">Apa motivasi utama saya ingin belajar bahasa Inggris?</p>
-                    <span class="translation">Tuliskan alasan personal Anda, bukan alasan yang menurut Anda "seharusnya" benar.</span>
-                    <p class="example-sentence">Berapa banyak waktu yang realistis bisa saya alokasikan untuk belajar setiap hari?</p>
-                    <span class="translation">Jujur pada diri sendiri—lebih baik 15 menit konsisten daripada 2 jam yang tidak terlaksana.</span>
-                    <p class="example-sentence">Apa hambatan terbesar yang saya hadapi selama ini dalam belajar bahasa?</p>
-                    <span class="translation">Identifikasi dengan spesifik agar bisa dicari solusinya.</span>
+                    <div class="label">Contoh Praktik</div>
+                    <p class="example-sentence"><strong>Keraguan:</strong> "Saya tidak punya bakat bahasa."</p>
+                    <span class="translation"><strong>Tantangan:</strong> "Setiap manusia lahir dengan kemampuan berbahasa. Yang saya butuhkan adalah metode yang tepat, bukan bakat khusus."</span>
                 </div>
                 
-                <h3>Latihan 2: Teknik Pernapasan (5 menit)</h3>
-                <p>Praktikkan teknik pernapasan yang dijelaskan sebelumnya. Lakukan sebelum setiap sesi belajar untuk mempersiapkan kondisi mental yang optimal. Catat bagaimana perasaan Anda sebelum dan sesudah melakukan teknik ini—apakah ada perbedaan dalam tingkat fokus dan ketenangan?</p>
+                <h3>Latihan 2: Affirmasi Positif (5 menit)</h3>
+                <p>Berdasarkan keraguan yang telah Anda identifikasi, buatlah afirmasi positif yang berlawanan. Afirmasi adalah pernyataan positif yang diulang-ulang untuk memprogram ulang pikiran bawah sadar. Tuliskan afirmasi tersebut dan ucapkan dengan suara keras tiga kali. Contoh: "Saya adalah pembelajar bahasa yang mampu. Setiap hari saya menjadi lebih baik. Saya menikmati proses belajar tanpa tekanan." Ucapkan dengan keyakinan penuh, seolah-olah pernyataan tersebut sudah menjadi kenyataan.</p>
                 
-                <h3>Latihan 3: Visualisasi Target (10 menit)</h3>
-                <p>Bayangkan diri Anda 6 bulan ke depan. Apa yang ingin Anda capai dalam bahasa Inggris? Visualisasikan dengan detail: situasi seperti apa di mana Anda menggunakan bahasa Inggris? Siapa yang Anda ajak bicara? Apa yang Anda bicarakan? Visualisasi yang jelas dan detail membantu otak membuat "peta tujuan" yang memotivasi dan mengarahkan usaha Anda.</p>
+                <div class="example-box">
+                    <div class="label">Contoh Afirmasi</div>
+                    <p class="example-sentence">"Saya membuka diri untuk menerima bahasa Inggris dengan mudah dan menyenangkan."</p>
+                    <span class="translation">"I open myself to receive English easily and enjoyably." — Ulangi 3x dengan keyakinan penuh</span>
+                </div>
                 
-                <p>Ingat, visualisasi bukan tentang membangun mimpi yang tidak realistis, melainkan tentang memberikan arah yang jelas bagi usaha Anda. Seperti seorang musafir yang membutuhkan peta dan kompas, visualisasi membantu Anda tetap pada jalur yang benar dalam perjalanan pembelajaran.</p>
+                <h3>Latihan 3: Visualisasi Sukses (10 menit)</h3>
+                <p>Carilah tempat yang tenang dan nyaman. Tutup mata Anda dan ambil beberapa napas dalam-dalam. Bayangkan diri Anda satu tahun dari sekarang—Anda sedang berbicara bahasa Inggris dengan lancar dan percaya diri. Lihat detail visualisasinya: di mana Anda berada, dengan siapa Anda berbicara, dan apa yang sedang dibahas. Rasakan emosi positif dari keberhasilan tersebut—kebanggaan, kepuasan, dan kebebasan untuk berkomunikasi tanpa batas. Visualisasi ini membantu otak "mendaftarkan" tujuan akhir Anda, sehingga proses menuju sana menjadi lebih jelas dan bermotivasi.</p>
+                
+                <div class="highlight-box success">
+                    <p><strong>Tips Penting:</strong> Lakukan visualisasi ini setiap hari selama minimal 21 hari. Penelitian menunjukkan bahwa repetisi visualisasi selama periode ini dapat membentuk pola pikir baru yang lebih mendukung tujuan Anda. Ingat, konsistensi lebih penting daripada durasi—lebih baik 5 menit setiap hari daripada 30 menit sekali seminggu.</p>
+                </div>
             </section>
             
             <!-- ========== AD SLOT 4 ========== -->
@@ -745,22 +799,27 @@
             
             <!-- ==================== SECTION 5 ==================== -->
             <section id="section-5">
-                <h2>5. Ringkasan</h2>
-                <p>Episode ini telah membahas fondasi penting yang sering diabaikan dalam pembelajaran bahasa Inggris. Sebelum kita mempelajari kosakata dan tata bahasa, memahami cara kerja otak dan mempersiapkan kondisi mental adalah langkah krusial yang akan menentukan keberhasilan pembelajaran jangka panjang. Berikut adalah poin-poin kunci yang perlu diingat:</p>
+                <h2>5. Ringkasan dan Persiapan Episode Berikutnya</h2>
+                <p>Selamat telah menyelesaikan Episode 1! Anda telah mengambil langkah pertama yang sangat penting dalam perjalanan belajar bahasa Inggris. Ingat bahwa fondasi yang kuat akan menentukan keberhasilan jangka panjang, dan Anda baru saja membangun fondasi mental yang kokoh. Sebelum melanjutkan ke episode berikutnya, pastikan Anda telah memahami dan mempraktikkan semua konsep yang dibahas dalam episode ini.</p>
                 <ul>
-                    <li><strong>Zero State</strong> — Kondisi mental optimal untuk menerima informasi baru, bebas dari mental block dan metode yang salah</li>
-                    <li><strong>Language Encoding</strong> — Proses otak dalam menerima, mengolah, dan menyimpan informasi bahasa; membutuhkan konteks dan emosi positif</li>
-                    <li><strong>Neuroplasticity</strong> — Kemampuan otak untuk terus berubah dan membentuk koneksi baru, memberi harapan bahwa siapa pun bisa belajar bahasa</li>
-                    <li><strong>Growth Mindset</strong> — Pola pikir yang meyakini kemampuan bisa dikembangkan melalui usaha dan latihan konsisten</li>
-                    <li><strong>Persiapan Mental</strong> — Teknik relaksasi dan visualisasi untuk menciptakan kondisi belajar yang optimal</li>
+                    <li><strong>Kondisi Zero State</strong> — Kondisi mental di mana pikiran terbuka untuk menerima pengetahuan baru tanpa hambatan dari masa lalu. Ini adalah fondasi utama sebelum mempelajari materi bahasa apapun.</li>
+                    <li><strong>Empat Tahap Persiapan</strong> — Kesadaran, Penerimaan, Pelepasan, dan Kesiapan adalah tahapan yang harus dilalui untuk mencapai kondisi mental optimal dalam belajar.</li>
+                    <li><strong>Neuroplasticity</strong> — Otak memiliki kemampuan untuk membentuk koneksi neural baru sepanjang hidup. Tidak ada kata terlambat untuk belajar bahasa baru.</li>
+                    <li><strong>Language Encoding</strong> — Proses menyimpan informasi bahasa dalam memori jangka panjang melibatkan encoding, storage, dan retrieval yang harus dilatih secara konsisten.</li>
+                    <li><strong>Faktor Pendukung</strong> — Emosi positif, repetisi bermakna, koneksi dengan pengetahuan yang sudah ada, dan penggunaan aktif adalah kunci keberhasilan encoding bahasa.</li>
                 </ul>
-                <p>Dengan fondasi yang sudah terbangun, Anda siap untuk memasuki materi selanjutnya: sistem vokal bahasa Inggris. Episode berikutnya akan membahas tentang pengenalan bunyi vokal pendek dan panjang—langkah pertama dalam menguasai pengucapan bahasa Inggris yang benar.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Pesan Penutup:</strong> Setiap ilmu yang bermanfaat adalah anugerah yang harus disyukuri dan diamalkan. Dengan mempelajari bahasa Inggris, Anda membuka pintu untuk berkontribusi lebih luas bagi sesama—berbagi kebaikan, membantu orang lain, dan menjadi jembatan komunikasi antar budaya. Jadikan niat ini sebagai motivasi yang kuat dalam perjalanan belajar Anda.</p>
+                </div>
+                
+                <p>Di episode berikutnya, kita akan mulai mempelajari aspek teknis bahasa Inggris, dimulai dengan sistem vokal atau <span class="term-en">vowel system</span>. Anda akan belajar mengenali dan memproduksi bunyi-bunyi vokal pendek dan panjang yang menjadi fondasi pengucapan bahasa Inggris yang benar. Pastikan Anda sudah melakukan latihan-latihan dalam episode ini sebelum melanjutkan, karena persiapan mental yang baik akan membuat proses belajar berikutnya menjadi lebih efektif dan menyenangkan.</p>
             </section>
             
             <!-- ==================== QUIZ SECTION ==================== -->
             <section id="quiz-section">
                 <h2>Kuis Pemahaman</h2>
-                <p>Uji pemahaman Anda tentang materi episode ini:</p>
+                <p>Uji pemahaman Anda tentang materi The Science of Zero yang telah dipelajari:</p>
                 <div class="quiz-container">
                     <div class="quiz-header">
                         <h3>Progres Kuis</h3>
@@ -792,7 +851,7 @@
             <div class="next-episode">
                 <h3>Episode Selanjutnya</h3>
                 <p>Episode 2: English Vowel System: Short & Long Sound Recognition</p>
-                <span class="subtitle-next">Pelajari perbedaan vokal pendek dan panjang dalam bahasa Inggris</span>
+                <span class="subtitle-next">Pelajari cara mengenali dan memproduksi bunyi vokal bahasa Inggris dengan benar</span>
                 <a href="https://mibenglish.com/season1/eps2.html" class="btn-next">Lanjutkan</a>
             </div>
         </article>
@@ -802,32 +861,29 @@
     <div class="share-float">
         <button class="share-toggle" onclick="toggleShare()">&#128228;</button>
         <div class="share-options" id="shareMenu">
-            <a href="#" onclick="copyLink(event)">&#128203; Salin Tautan</a>
-            <a href="https://wa.me/?text=https://mibenglish.com/season1/eps1.html" target="_blank">&#128172; WhatsApp</a>
-            <a href="https://t.me/share/url?url=https://mibenglish.com/season1/eps1.html" target="_blank">&#9992; Telegram</a>
-            <a href="https://twitter.com/intent/tweet?url=https://mibenglish.com/season1/eps1.html" target="_blank">&#128038; Twitter</a>
+            <a href="#" onclick="copyLink(event)">Salin Tautan</a>
+            <a href="https://wa.me/?text=https://mibenglish.com/season1/eps1.html" target="_blank">WhatsApp</a>
+            <a href="https://t.me/share/url?url=https://mibenglish.com/season1/eps1.html" target="_blank">Telegram</a>
+            <a href="https://twitter.com/intent/tweet?url=https://mibenglish.com/season1/eps1.html" target="_blank">Twitter</a>
         </div>
     </div>
     
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <div class="footer-grid">
-                <div class="footer-section">
-                    <div class="footer-brand">
-                        <div class="footer-logo">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <div class="footer-brand-name">Mibenglish</div>
-                            <div class="footer-brand-tagline">Learn English the Smart Way</div>
-                        </div>
-                    </div>
-                    <p>Platform pembelajaran bahasa Inggris.</p>
+                <div class="footer-brand">
+                    <h3>Mibenglish</h3>
+                    <p>Platform pembelajaran bahasa Inggris dengan pendekatan bertahap dan nilai-nilai universal. Membantu Anda menguasai bahasa Inggris dari tingkat dasar hingga mahir dengan metode yang terbukti efektif.</p>
                 </div>
-                <div class="footer-section">
+                
+                <div class="footer-cta">
+                    <h4>Mulai Perjalanan Anda</h4>
+                    <p>Bergabunglah dengan ribuan pembelajar lainnya</p>
+                    <a href="https://mibenglish.com" class="btn-cta">Mulai Belajar</a>
+                </div>
+                
+                <div class="footer-links">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="https://mibenglish.com">Beranda</a></li>
@@ -835,39 +891,55 @@
                         <li><a href="https://mibenglish.com/contact">Contact</a></li>
                         <li><a href="https://mibenglish.com/privacy">Privacy Policy</a></li>
                         <li><a href="https://mibenglish.com/terms">Terms of Service</a></li>
-                        <li><a href="https://mibenglish.com/Disclaimer">Disclaimer</a></li>
+                        <li><a href="https://mibenglish.com/disclaimer">Disclaimer</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
+                
+                <div class="footer-social">
                     <h4>Ikuti Kami</h4>
-                    <div class="social-links">
-                        <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-                        <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener" title="YouTube"><svg viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
-                        <a href="https://t.me/mibenglish" target="_blank" rel="noopener" title="Telegram"><svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
-                        <a href="https://twitter.com/mibenglish" target="_blank" rel="noopener" title="Twitter"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-                        <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener" title="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/mibenglish" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com/@mibenglish" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                            </svg>
+                        </a>
+                        <a href="https://t.me/mibenglish" class="social-icon" aria-label="Telegram" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/mibenglish" class="social-icon" aria-label="Twitter" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/mibenglish" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
                     </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Mulai Belajar</h4>
-                    <p>Bergabunglah dengan ribuan pembelajar</p>
-                    <a href="https://mibenglish.com" class="cta-button">Mulai Belajar</a>
                 </div>
             </div>
-            <div class="stats-section">
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <div class="stat-number" id="visit-count">-</div>
-                        <div class="stat-label">Jumlah Kunjungan</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" id="online-learners">-</div>
-                        <div class="stat-label">Pembelajar Online</div>
-                    </div>
+            
+            <div class="footer-stats">
+                <div class="stat-item">
+                    <div class="stat-number" id="visit-count">-</div>
+                    <div class="stat-label">Jumlah Kunjungan</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="online-learners">-</div>
+                    <div class="stat-label">Pembelajar Online</div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2026 Mibenglish. All rights reserved.</p>
+                <p>&copy; 2025 Mibenglish. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -912,34 +984,34 @@
         // ===== Quiz Data =====
         const quizData = [
             { 
-                question: "Apa yang dimaksud dengan 'zero state' dalam konteks pembelajaran bahasa?", 
-                options: ["Kondisi di mana otak menolak semua informasi baru", "Kondisi mental murni dan siap menerima informasi dengan benar", "Tahap di mana seseorang sudah mahir berbahasa", "Proses menghafal kosakata dengan cepat"], 
+                question: "Apa yang dimaksud dengan kondisi 'Zero State' dalam pembelajaran bahasa?", 
+                options: ["Kondisi tidak tahu sama sekali tentang bahasa", "Kondisi mental terbuka untuk menerima pengetahuan baru tanpa hambatan", "Kondisi sudah mahir dalam bahasa target", "Kondisi otak yang tidak bisa belajar lagi"], 
                 correct: 1, 
-                explanation: "Zero state adalah kondisi mental yang murni, belum terkontaminasi metode salah, dan siap menerima informasi dengan cara yang benar." 
+                explanation: "Zero State adalah kondisi mental di mana pikiran terbuka untuk menerima pengetahuan baru tanpa hambatan dari masa lalu, bukan berarti tidak tahu apa-apa." 
             },
             { 
-                question: "Apa fungsi Wernicke's area dalam otak manusia?", 
-                options: ["Mengontrol gerakan tangan", "Memproses pemahaman bahasa", "Mengatur keseimbangan tubuh", "Menyimpan memori jangka pendek"], 
+                question: "Apa itu neuroplasticity dan mengapa penting untuk pembelajaran bahasa?", 
+                options: ["Kemampuan otot untuk berubah", "Kemampuan otak membentuk koneksi neural baru sepanjang hidup", "Proses menghafal kata-kata", "Metode mengajar bahasa tradisional"], 
                 correct: 1, 
-                explanation: "Wernicke's area adalah bagian otak yang bertanggung jawab untuk pemahaman bahasa, sementara Broca's area untuk produksi bahasa." 
+                explanation: "Neuroplasticity adalah kemampuan otak untuk membentuk koneksi neural baru sepanjang hidup, yang berarti tidak ada kata terlambat untuk belajar bahasa baru." 
             },
             { 
-                question: "Apa yang dimaksud dengan neuroplasticity?", 
-                options: ["Kemampuan otak untuk menolak perubahan", "Proses penuaan sel-sel otak", "Kemampuan otak untuk berubah dan membentuk koneksi baru", "Teknik menghafal dengan cepat"], 
+                question: "Mana yang BUKAN faktor yang meningkatkan proses language encoding?", 
+                options: ["Emosi positif saat belajar", "Repetisi bermakna dalam konteks berbeda", "Menghafal daftar kata tanpa konteks", "Penggunaan aktif dalam situasi nyata"], 
                 correct: 2, 
-                explanation: "Neuroplasticity adalah kemampuan luar biasa otak untuk terus berubah dan membentuk koneksi saraf baru sepanjang hidup." 
+                explanation: "Menghafal daftar kata tanpa konteks justru tidak efektif untuk encoding. Yang efektif adalah repetisi bermakna dalam konteks berbeda-beda." 
             },
             { 
-                question: "Mengapa motivasi intrinsik lebih efektif dalam pembelajaran bahasa?", 
-                options: ["Karena lebih mudah dicapai", "Karena encoding menjadi lebih dalam dan bertahan lama", "Karena tidak membutuhkan usaha", "Karena disarankan oleh para ahli"], 
+                question: "Apa urutan yang benar dari empat tahap mencapai Zero State?", 
+                options: ["Kesiapan - Pelepasan - Penerimaan - Kesadaran", "Kesadaran - Penerimaan - Pelepasan - Kesiapan", "Penerimaan - Kesadaran - Kesiapan - Pelepasan", "Pelepasan - Kesiapan - Kesadaran - Penerimaan"], 
                 correct: 1, 
-                explanation: "Motivasi intrinsik yang datang dari dalam diri membuat proses encoding lebih dalam dan memori bertahan lebih lama." 
+                explanation: "Urutan yang benar adalah: Kesadaran (mengenali hambatan), Penerimaan (menerima kondisi saat ini), Pelepasan (melepaskan keraguan), Kesiapan (siap menerima pembelajaran baru)." 
             },
             { 
-                question: "Apa perbedaan utama antara growth mindset dan fixed mindset?", 
-                options: ["Growth mindset fokus pada hasil, fixed mindset pada proses", "Growth mindset meyakini kemampuan bisa dikembangkan, fixed mindset menganggap kemampuan tetap", "Growth mindset untuk orang pintar, fixed mindset untuk orang biasa", "Tidak ada perbedaan yang signifikan"], 
-                correct: 1, 
-                explanation: "Growth mindset meyakini kemampuan bisa dikembangkan melalui usaha, sementara fixed mindset menganggap kemampuan adalah bawaan yang tidak bisa diubah." 
+                question: "Mengapa banyak orang gagal belajar bahasa Inggris menurut episode ini?", 
+                options: ["Karena tidak memiliki bakat bahasa", "Karena bahasa Inggris terlalu sulit", "Karena pendekatan yang keliru sejak awal dan tidak mempersiapkan mental", "Karena tidak punya waktu cukup"], 
+                correct: 2, 
+                explanation: "Kegagalan belajar bahasa Inggris umumnya disebabkan oleh pendekatan yang keluaru sejak awal—langsung terjun ke vocabulary dan grammar tanpa memahami cara otak menerima informasi baru." 
             }
         ];
         
@@ -1007,7 +1079,7 @@
             document.getElementById('quiz-result').classList.add('show'); 
             document.getElementById('final-score').textContent = `${score}/${quizData.length}`; 
             const p = (score / quizData.length) * 100; 
-            document.getElementById('result-message').textContent = p >= 80 ? 'Luar biasa! Pemahaman Anda sangat baik!' : p >= 60 ? 'Bagus! Terus tingkatkan.' : 'Jangan menyerah! Coba lagi.'; 
+            document.getElementById('result-message').textContent = p >= 80 ? 'Luar biasa! Pemahaman Anda sangat baik tentang konsep Zero State.' : p >= 60 ? 'Bagus! Terus tingkatkan pemahaman Anda dengan mengulang materi.' : 'Jangan menyerah! Baca kembali materi dan coba lagi kuis ini.'; 
         }
         
         function restartQuiz() { 
@@ -1024,12 +1096,14 @@
         function copyLink(e) { e.preventDefault(); navigator.clipboard.writeText(window.location.href).then(() => alert('Tautan berhasil disalin!')); }
         document.addEventListener('click', e => { if (!e.target.closest('.share-float')) { const m = document.getElementById('shareMenu'); if (m) m.classList.remove('show'); } });
         
-        // ===== Statistics - Dynamic Visit Counter =====
+        // ===== Statistics =====
         (function() {
-            // Configuration: Start from Jan 1, 2026, daily growth 100-600, online learners 113-583
+            // Configuration: Start date January 1, 2026
+            // Daily growth: 100-600 visits per day
+            // Online learners: 113-583 fluctuating
             const config = { 
                 startDate: new Date('2026-01-01').getTime(), 
-                initialVisits: 1547, 
+                initialVisits: 0, 
                 minDailyGrowth: 100, 
                 maxDailyGrowth: 600, 
                 onlineMin: 113, 
@@ -1037,6 +1111,7 @@
             };
             
             const seededRandom = s => { const x = Math.sin(s) * 10000; return x - Math.floor(x); };
+            
             const getDailyGrowth = n => config.minDailyGrowth + Math.floor(seededRandom(n * 9973) * (config.maxDailyGrowth - config.minDailyGrowth));
             
             const calcVisits = () => { 
@@ -1071,7 +1146,10 @@
                 if (!v || !o) return; 
                 setTimeout(() => anim(v, calcVisits()), 300); 
                 o.textContent = getOnline().toLocaleString('id-ID'); 
-                setInterval(() => { const n = getOnline(); o.textContent = n.toLocaleString('id-ID'); }, 60000); 
+                setInterval(() => { 
+                    const n = getOnline(); 
+                    o.textContent = n.toLocaleString('id-ID'); 
+                }, 60000); 
                 setInterval(() => anim(v, calcVisits(), 600), 60000); 
             };
             
