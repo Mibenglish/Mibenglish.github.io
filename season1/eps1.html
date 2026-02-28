@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-font-size="normal" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -342,7 +342,12 @@
         .social-icon:hover { background: linear-gradient(135deg, var(--gold-accent) 0%, var(--gold-light) 100%); transform: translateY(-2px); }
         .footer-stats { background: linear-gradient(135deg, rgba(26, 71, 42, 0.4) 0%, rgba(45, 106, 79, 0.4) 100%); padding: 1rem; border-radius: 8px; display: flex; justify-content: space-around; text-align: center; gap: 1rem; }
         .footer-stats .stat-item { flex: 1; }
-        .footer-stats .stat-number { font-size: 1.3rem; font-weight: 700; color: var(--gold-accent); transition: transform 0.3s ease; }
+        .footer-stats .stat-number { font-size: 1.3rem; font-weight: 700; color: var(--gold-accent); transition: all 0.3s ease; }
+        .stat-live { display: inline-block; width: 8px; height: 8px; background: #4ade80; border-radius: 50%; margin-left: 6px; animation: pulse-live 2s infinite; vertical-align: middle; }
+        .stat-container { display: inline-block; position: relative; }
+        .stat-updating { animation: stat-flash 0.3s ease; }
+        @keyframes stat-flash { 0% { color: #4ade80; } 100% { color: var(--gold-accent); } }
+        @keyframes pulse-live { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.2); } }
         .footer-stats .stat-number.animating { transform: scale(1.05); }
         .footer-stats .stat-label { font-size: 0.75rem; color: rgba(255, 255, 255, 0.7); margin-top: 0.2rem; }
         .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1rem; text-align: center; }
@@ -350,7 +355,7 @@
         
         /* ===== Responsive ===== */
         @media (max-width: 600px) {
-            html { font-size: 15px; }
+            :root { --font-size-base: 15px; }
             body { padding-top: 60px; }
             nav { top: 50px; padding: 0.5rem; }
             .nav-container { gap: 0.4rem; }
@@ -1147,12 +1152,31 @@
             return visits;
         }
         
+        var currentOnline = 0;
+        var onlineTrend = 0;
+        
         function getOnlineLearners() {
             var minOnline = 113;
             var maxOnline = 583;
-            var now = new Date();
-            var seed = now.getFullYear() * 525600 + now.getMonth() * 43800 + now.getDate() * 1440 + now.getHours() * 60 + now.getMinutes();
-            return Math.floor(minOnline + seededRandom(seed) * (maxOnline - minOnline));
+            
+            // Initialize on first call
+            if (currentOnline === 0) {
+                var now = new Date();
+                var seed = now.getFullYear() * 525600 + now.getMonth() * 43800 + now.getDate() * 1440 + now.getHours() * 60 + now.getMinutes();
+                currentOnline = Math.floor(minOnline + seededRandom(seed) * (maxOnline - minOnline));
+                onlineTrend = (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 3 + 1);
+            }
+            
+            // Fluctuate based on trend
+            var change = onlineTrend + (Math.random() - 0.5) * 5;
+            currentOnline = Math.max(minOnline, Math.min(maxOnline, Math.floor(currentOnline + change)));
+            
+            // Occasionally change trend direction
+            if (Math.random() < 0.15) {
+                onlineTrend = (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 4 + 1);
+            }
+            
+            return currentOnline;
         }
         
         function formatNumber(num) {
@@ -1184,26 +1208,48 @@
             requestAnimationFrame(update);
         }
         
+        var visitCountEl = null;
+        var onlineLearnersEl = null;
+        var currentVisitDisplay = 0;
+        
         function initStatistics() {
-            var visitCount = document.getElementById('visit-count');
-            var onlineLearners = document.getElementById('online-learners');
+            visitCountEl = document.getElementById('visit-count');
+            onlineLearnersEl = document.getElementById('online-learners');
             
-            if (visitCount && onlineLearners) {
-                setTimeout(function() {
-                    animateNumber(visitCount, calculateVisits());
-                }, 300);
+            if (visitCountEl && onlineLearnersEl) {
+                // Add live indicator to online learners
+                var liveIndicator = document.createElement('span');
+                liveIndicator.className = 'stat-live';
+                liveIndicator.title = 'Live - pembelajar aktif saat ini';
+                onlineLearnersEl.parentNode.insertBefore(liveIndicator, onlineLearnersEl.nextSibling);
                 
-                onlineLearners.textContent = getOnlineLearners().toLocaleString('id-ID');
+                // Initial values
+                currentVisitDisplay = calculateVisits();
+                visitCountEl.textContent = formatNumber(currentVisitDisplay);
+                onlineLearnersEl.textContent = getOnlineLearners().toLocaleString('id-ID');
                 
-                // Update online learners every minute
+                // Update online learners every 3-5 seconds with animation (variable interval for realism)
+                function updateOnlineLearners() {
+                    var newOnline = getOnlineLearners();
+                    onlineLearnersEl.classList.add('stat-updating');
+                    onlineLearnersEl.textContent = newOnline.toLocaleString('id-ID');
+                    setTimeout(function() {
+                        onlineLearnersEl.classList.remove('stat-updating');
+                    }, 300);
+                    // Random interval between 3-6 seconds for realistic feel
+                    setTimeout(updateOnlineLearners, 3000 + Math.random() * 3000);
+                }
+                setTimeout(updateOnlineLearners, 4000);
+                
+                // Gradually increase visit count
                 setInterval(function() {
-                    onlineLearners.textContent = getOnlineLearners().toLocaleString('id-ID');
-                }, 60000);
-                
-                // Update visit count every minute
-                setInterval(function() {
-                    animateNumber(visitCount, calculateVisits());
-                }, 60000);
+                    var newVisits = calculateVisits();
+                    if (newVisits > currentVisitDisplay) {
+                        currentVisitDisplay += Math.floor(Math.random() * 3) + 1;
+                        if (currentVisitDisplay > newVisits) currentVisitDisplay = newVisits;
+                        visitCountEl.textContent = formatNumber(currentVisitDisplay);
+                    }
+                }, 3000);
             }
         }
         
