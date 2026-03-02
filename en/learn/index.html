@@ -104,11 +104,14 @@
             font-size: 0.875rem;
             cursor: pointer;
             font-family: inherit;
+            white-space: nowrap;
         }
         
         .settings-btn {
             width: 40px;
             height: 40px;
+            min-width: 40px;
+            min-height: 40px;
             background: transparent;
             border: none;
             color: #ffffff;
@@ -119,46 +122,49 @@
             justify-content: center;
         }
         
-        /* Navigation Light */
+        /* Navigation Light - Auto height for larger fonts */
         .nav {
             position: fixed;
             top: 56px;
             left: 0;
             right: 0;
-            height: 48px;
             background: #1a472a;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 999;
             overflow-x: auto;
+            overflow-y: hidden;
             -webkit-overflow-scrolling: touch;
+            padding: 8px 0;
+            min-height: 48px;
         }
         
         .nav::-webkit-scrollbar { display: none; }
         
         .nav-inner {
             display: flex;
-            gap: 4px;
-            padding: 0 8px;
+            gap: 6px;
+            padding: 0 12px;
         }
         
         .nav-link {
             color: #ffffff;
             text-decoration: none;
-            padding: 8px 14px;
+            padding: 8px 16px;
             border-radius: 20px;
-            font-size: 0.875rem;
+            font-size: 0.9rem;
             font-weight: 500;
             white-space: nowrap;
             transition: background 0.2s ease;
+            flex-shrink: 0;
         }
         
         .nav-link.active { background: #c9a227; color: #ffffff; }
         
-        /* Main Content Light */
+        /* Main Content Light - Dynamic padding based on nav height */
         .main {
-            padding-top: 120px;
+            padding-top: 130px;
             padding-bottom: 24px;
             max-width: 900px;
             margin: 0 auto;
@@ -434,20 +440,44 @@
             border: 2px dashed #d4e5d4;
         }
         
-        /* Ad Slot Light */
+        /* ========== AD SLOTS - 5 Banners ========== */
         .ad-slot {
             background: #e8f5e9;
             border: 2px dashed #b4d4b4;
             border-radius: 10px;
-            min-height: 70px;
+            min-height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 16px 0;
             color: #4a5a4a;
             font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .ad-slot-banner {
+            margin: 16px 0;
+        }
+        
+        .ad-slot-inline {
+            margin: 20px 0;
+        }
+        
+        .ad-slot-large {
+            min-height: 100px;
+            margin: 24px 0;
+        }
+        
+        /* Ad grid for desktop */
+        .ad-row {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 16px 0;
         }
         
         /* Footer Light */
@@ -881,9 +911,9 @@
         }
         
         [data-theme="dark"] .ad-slot {
-            background: #1e1e1e;
-            border-color: #333333;
-            color: #888888;
+            background: #1a2a1a;
+            border-color: #2a4a2a;
+            color: #6a8a6a;
         }
         
         [data-theme="dark"] .footer {
@@ -963,6 +993,14 @@
             .main { padding-left: 20px; padding-right: 20px; }
             .season-title { font-size: 1.375rem; }
             .episode-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            
+            /* Ad row for tablet */
+            .ad-row {
+                flex-direction: row;
+            }
+            .ad-row .ad-slot {
+                flex: 1;
+            }
         }
         
         @media (min-width: 800px) {
@@ -971,6 +1009,19 @@
             .footer-content { display: flex; gap: 40px; max-width: 900px; margin: 0 auto; }
             .footer-brand-section { flex: 1; }
         }
+        
+        /* ========== FONT SIZE ADJUSTMENTS FOR NAV ========== */
+        [data-font-size="large"] .header { height: 60px; }
+        [data-font-size="large"] .nav { top: 60px; min-height: 52px; }
+        [data-font-size="large"] .main { padding-top: 140px; }
+        [data-font-size="large"] .nav-link { padding: 6px 12px; font-size: 0.85rem; }
+        
+        [data-font-size="xlarge"] .header { height: 64px; }
+        [data-font-size="xlarge"] .nav { top: 64px; min-height: 56px; }
+        [data-font-size="xlarge"] .main { padding-top: 150px; }
+        [data-font-size="xlarge"] .nav-link { padding: 6px 10px; font-size: 0.8rem; }
+        [data-font-size="xlarge"] .lang-btn { padding: 6px 10px; font-size: 0.8rem; }
+        [data-font-size="xlarge"] .brand { font-size: 1rem; }
     </style>
 </head>
 <body>
@@ -1087,7 +1138,8 @@
     
     <!-- Main -->
     <main class="main">
-        <div class="ad-slot">AdSense - Banner</div>
+        <!-- AD 1: Top Banner -->
+        <div class="ad-slot ad-slot-banner">AdSense - Banner Atas</div>
         
         <div class="season-tabs">
             <div class="tabs-inner" id="navTabs"></div>
@@ -1098,6 +1150,9 @@
             <p class="season-desc" id="seasonDesc">Silakan pilih musim.</p>
             <span class="season-meta" id="episodeRange">-</span>
         </div>
+        
+        <!-- AD 2: After Season Header -->
+        <div class="ad-slot ad-slot-inline">AdSense - Banner Tengah 1</div>
         
         <div class="controls">
             <div class="search-box">
@@ -1119,13 +1174,21 @@
         
         <div class="episode-grid" id="episodeGrid"></div>
         
-        <div class="ad-slot">AdSense - Rectangle</div>
+        <!-- AD 3: After Episode Grid -->
+        <div class="ad-slot ad-slot-large">AdSense - Banner Besar</div>
         
         <div class="pagination" id="pagination"></div>
         <div class="page-info" id="pageInfo"></div>
         
-        <div class="ad-slot">AdSense - Large Rectangle</div>
+        <!-- AD 4: After Pagination - Side by side on tablet+ -->
+        <div class="ad-row">
+            <div class="ad-slot">AdSense - Rectangle Kiri</div>
+            <div class="ad-slot">AdSense - Rectangle Kanan</div>
+        </div>
     </main>
+    
+    <!-- AD 5: Before Footer -->
+    <div class="ad-slot ad-slot-large" style="max-width: 900px; margin: 0 auto 0; border-radius: 0;">AdSense - Banner Bawah</div>
     
     <!-- Footer -->
     <footer class="footer">
