@@ -19,8 +19,8 @@
     <link rel="alternate" hreflang="en" href="https://mibenglish.com/">
     <link rel="alternate" hreflang="id" href="https://mibenglish.com/id/">
     <link rel="alternate" hreflang="ar" href="https://mibenglish.com/ar/">
-    <link rel="alternate" hreflang="zh" href="https:///zh/">
-    <link rel="alternate" hreflang="ja" href="https:///ja/">
+    <link rel="alternate" hreflang="zh" href="https://mibenglish.com/zh/">
+    <link rel="alternate" hreflang="ja" href="https://mibenglish.com/ja/">
     <link rel="alternate" hreflang="ko" href="https://mibenglish.com/ko/">
     <link rel="alternate" hreflang="vi" href="https://mibenglish.com/vi/">
     <link rel="alternate" hreflang="th" href="https://mibenglish.com/th/">
@@ -44,43 +44,86 @@
     <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
+        /* ========================================
+           LIGHT MODE (DEFAULT)
+        ======================================== */
         :root {
-            --primary-dark: #0a1f0a;
-            --primary-green: #1a472a;
-            --secondary-green: #2d5a3d;
-            --accent-green: #3d7a4f;
-            --light-green: #5a9a6e;
-            --pale-green: #8bc49f;
-            --mint: #c8e6d0;
-            --cream: #f8faf8;
-            --white: #ffffff;
-            --text-dark: #0a1a0a;
-            --text-medium: #1a2f1a;
-            --text-light: #e8f5e9;
-            --gold-accent: #c9a227;
-            --gold-light: #e6c84a;
-            --shadow: rgba(10, 31, 10, 0.2);
-            --shadow-light: rgba(10, 31, 10, 0.08);
+            --bg-primary: #f8faf8;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #e8f5e9;
+            --bg-card: #ffffff;
+            --bg-input: #f8faf8;
+            
+            --text-primary: #0a1a0a;
+            --text-secondary: #1a2f1a;
+            --text-muted: #4a5a4a;
+            --text-inverse: #ffffff;
+            
+            --accent-primary: #1a472a;
+            --accent-secondary: #2d5a3d;
+            --accent-tertiary: #3d7a4f;
+            --accent-light: #c8e6d0;
+            
+            --gold-primary: #c9a227;
+            --gold-secondary: #e6c84a;
+            --gold-bg: #fef9e7;
+            
+            --border-light: #c8e6d0;
+            --border-medium: #8bc49f;
+            
+            --shadow-sm: rgba(10, 31, 10, 0.08);
+            --shadow-md: rgba(10, 31, 10, 0.15);
+            --shadow-lg: rgba(10, 31, 10, 0.25);
+            
+            --overlay-bg: rgba(0, 0, 0, 0.7);
+            
             --transition: all 0.3s ease;
             --font-size-base: 16px;
             --font-size-multiplier: 1;
+            
+            --header-bg: #0a1f0a;
+            --nav-bg: #1a472a;
+            --footer-bg: #0a1f0a;
+            --hero-gradient: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
         }
         
+        /* ========================================
+           DARK MODE
+        ======================================== */
         [data-theme="dark"] {
-            --primary-dark: #0a0f0a;
-            --primary-green: #1a3a2a;
-            --secondary-green: #2d4a3d;
-            --accent-green: #3d6a4f;
-            --light-green: #4a8a5e;
-            --pale-green: #6ba47f;
-            --mint: #98c6a0;
-            --cream: #1a2a1a;
-            --white: #0f1a0f;
-            --text-dark: #e8f5e9;
-            --text-medium: #c8e6d0;
-            --text-light: #1a2a1a;
-            --shadow: rgba(0, 0, 0, 0.4);
-            --shadow-light: rgba(0, 0, 0, 0.2);
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --bg-card: #1c2128;
+            --bg-input: #21262d;
+            
+            --text-primary: #e6edf3;
+            --text-secondary: #b1bac4;
+            --text-muted: #8b949e;
+            --text-inverse: #0d1117;
+            
+            --accent-primary: #238636;
+            --accent-secondary: #2ea043;
+            --accent-tertiary: #3fb950;
+            --accent-light: #388b61;
+            
+            --gold-primary: #d4a72c;
+            --gold-secondary: #e3b341;
+            --gold-bg: #2d2418;
+            
+            --border-light: #30363d;
+            --border-medium: #484f58;
+            
+            --shadow-sm: rgba(0, 0, 0, 0.3);
+            --shadow-md: rgba(0, 0, 0, 0.4);
+            --shadow-lg: rgba(0, 0, 0, 0.6);
+            
+            --overlay-bg: rgba(0, 0, 0, 0.85);
+            
+            --header-bg: #010409;
+            --nav-bg: #0d1117;
+            --footer-bg: #010409;
+            --hero-gradient: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1c2128 100%);
         }
         
         [data-font-size="small"] { --font-size-multiplier: 0.875; }
@@ -94,8 +137,8 @@
         
         body {
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-            background-color: var(--cream);
-            color: var(--text-dark);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
             line-height: 1.7;
             min-height: 100vh;
             overflow-x: hidden;
@@ -109,7 +152,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
+            background: var(--overlay-bg);
             z-index: 9999;
             display: flex;
             align-items: center;
@@ -126,15 +169,16 @@
         }
         
         .lang-popup {
-            background: var(--white);
+            background: var(--bg-secondary);
             border-radius: 20px;
             width: 100%;
             max-width: 800px;
             max-height: 90vh;
             overflow-y: auto;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 25px 80px var(--shadow-lg);
             transform: scale(0.9) translateY(20px);
             transition: all 0.3s ease;
+            border: 1px solid var(--border-light);
         }
         
         .lang-popup-overlay.show .lang-popup {
@@ -142,8 +186,8 @@
         }
         
         .lang-popup-header {
-            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
-            color: var(--white);
+            background: var(--hero-gradient);
+            color: var(--text-inverse);
             padding: 2rem;
             text-align: center;
             border-radius: 20px 20px 0 0;
@@ -152,15 +196,18 @@
         .lang-popup-header h2 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
+            color: #ffffff;
         }
         
         .lang-popup-header p {
             opacity: 0.9;
             font-size: 0.95rem;
+            color: #ffffff;
         }
         
         .lang-popup-body {
             padding: 1.5rem;
+            background: var(--bg-secondary);
         }
         
         .lang-grid {
@@ -174,25 +221,25 @@
             flex-direction: column;
             align-items: center;
             padding: 1rem 0.5rem;
-            border: 2px solid var(--mint);
+            border: 2px solid var(--border-light);
             border-radius: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
-            background: var(--cream);
+            background: var(--bg-card);
             text-decoration: none;
-            color: inherit;
+            color: var(--text-primary);
         }
         
         .lang-option:hover {
-            border-color: var(--gold-accent);
-            background: var(--mint);
+            border-color: var(--gold-primary);
+            background: var(--bg-tertiary);
             transform: translateY(-3px);
         }
         
         .lang-option.selected {
-            border-color: var(--gold-accent);
-            background: var(--gold-accent);
-            color: var(--primary-dark);
+            border-color: var(--gold-primary);
+            background: var(--gold-primary);
+            color: var(--text-inverse);
         }
         
         .lang-flag {
@@ -214,11 +261,13 @@
         .lang-popup-footer {
             padding: 1rem 1.5rem 1.5rem;
             text-align: center;
+            background: var(--bg-secondary);
+            border-radius: 0 0 20px 20px;
         }
         
         .btn-confirm-lang {
-            background: linear-gradient(135deg, var(--gold-accent) 0%, var(--gold-light) 100%);
-            color: var(--primary-dark);
+            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 100%);
+            color: var(--text-inverse);
             border: none;
             padding: 1rem 3rem;
             border-radius: 30px;
@@ -240,12 +289,12 @@
             top: 0;
             left: 0;
             right: 0;
-            background: var(--primary-dark);
-            color: var(--white);
+            background: var(--header-bg);
+            color: #ffffff;
             padding: 0.75rem 1rem;
             z-index: 1000;
-            box-shadow: 0 2px 15px var(--shadow);
-            border-bottom: 2px solid var(--gold-accent);
+            box-shadow: 0 2px 15px var(--shadow-md);
+            border-bottom: 2px solid var(--gold-primary);
         }
         
         .header-container {
@@ -259,7 +308,7 @@
         .brand {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--white);
+            color: #ffffff;
             text-decoration: none;
             transition: var(--transition);
             display: flex;
@@ -267,8 +316,7 @@
             gap: 0.5rem;
         }
         
-        .brand:hover { color: var(--gold-accent); }
-        
+        .brand:hover { color: var(--gold-primary); }
         
         .header-actions {
             display: flex;
@@ -282,7 +330,7 @@
             gap: 0.5rem;
             background: rgba(255,255,255,0.1);
             border: 1px solid rgba(255,255,255,0.2);
-            color: var(--white);
+            color: #ffffff;
             padding: 0.5rem 1rem;
             border-radius: 25px;
             cursor: pointer;
@@ -293,13 +341,13 @@
         
         .lang-selector-btn:hover {
             background: rgba(255,255,255,0.2);
-            border-color: var(--gold-accent);
+            border-color: var(--gold-primary);
         }
         
         .settings-btn {
             background: none;
             border: none;
-            color: var(--white);
+            color: #ffffff;
             cursor: pointer;
             padding: 0.5rem;
             border-radius: 50%;
@@ -311,19 +359,19 @@
         
         .settings-btn:hover {
             background: rgba(255,255,255,0.1);
-            color: var(--gold-accent);
+            color: var(--gold-primary);
         }
         
         /* ===== Navigation ===== */
         nav {
             position: fixed;
-            top: 60px;
+            top: 3.75rem;
             left: 0;
             right: 0;
-            background: var(--primary-green);
+            background: var(--nav-bg);
             padding: 0.75rem 1rem;
             z-index: 999;
-            border-bottom: 1px solid var(--secondary-green);
+            border-bottom: 1px solid var(--border-light);
         }
         
         .nav-container {
@@ -336,7 +384,7 @@
         }
         
         .nav-link {
-            color: var(--white);
+            color: #ffffff;
             text-decoration: none;
             padding: 0.5rem 1.25rem;
             border-radius: 25px;
@@ -346,19 +394,19 @@
         }
         
         .nav-link:hover, .nav-link.active {
-            background: var(--gold-accent);
-            color: var(--primary-dark);
+            background: var(--gold-primary);
+            color: var(--text-inverse);
         }
         
         /* ===== Main Content ===== */
         main {
-            margin-top: 110px;
+            margin-top: 8.125rem;
         }
         
         /* ===== Hero Section ===== */
         .hero {
-            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 50%, var(--accent-green) 100%);
-            color: var(--white);
+            background: var(--hero-gradient);
+            color: #ffffff;
             padding: 4rem 1rem;
             text-align: center;
             position: relative;
@@ -386,8 +434,8 @@
         
         .hero-badge {
             display: inline-block;
-            background: var(--gold-accent);
-            color: var(--primary-dark);
+            background: var(--gold-primary);
+            color: var(--text-inverse);
             padding: 0.5rem 1.5rem;
             border-radius: 25px;
             font-weight: 600;
@@ -399,6 +447,7 @@
             font-size: 2.5rem;
             margin-bottom: 1rem;
             line-height: 1.3;
+            color: #ffffff;
         }
         
         .hero-subtitle {
@@ -409,6 +458,7 @@
             margin-left: auto;
             margin-right: auto;
             line-height: 1.7;
+            color: #ffffff;
         }
         
         .hero-stats {
@@ -426,12 +476,13 @@
         .stat-number {
             font-size: 2rem;
             font-weight: 700;
-            color: var(--gold-accent);
+            color: var(--gold-primary);
         }
         
         .stat-label {
             font-size: 0.85rem;
             opacity: 0.9;
+            color: #ffffff;
         }
         
         .hero-cta {
@@ -442,8 +493,8 @@
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, var(--gold-accent) 0%, var(--gold-light) 100%);
-            color: var(--primary-dark);
+            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 100%);
+            color: var(--text-inverse);
             padding: 1rem 2.5rem;
             border-radius: 30px;
             text-decoration: none;
@@ -465,7 +516,7 @@
         
         .btn-secondary {
             background: transparent;
-            color: var(--white);
+            color: #ffffff;
             padding: 1rem 2.5rem;
             border-radius: 30px;
             text-decoration: none;
@@ -477,13 +528,13 @@
         
         .btn-secondary:hover {
             background: rgba(255,255,255,0.1);
-            border-color: var(--gold-accent);
-            color: var(--gold-accent);
+            border-color: var(--gold-primary);
+            color: var(--gold-primary);
         }
         
         /* ===== Languages Showcase ===== */
         .languages-showcase {
-            background: var(--cream);
+            background: var(--bg-primary);
             padding: 3rem 1rem;
         }
         
@@ -499,12 +550,12 @@
         
         .section-header h2 {
             font-size: 1.75rem;
-            color: var(--primary-green);
+            color: var(--accent-primary);
             margin-bottom: 0.75rem;
         }
         
         .section-header p {
-            color: var(--text-medium);
+            color: var(--text-secondary);
             max-width: 600px;
             margin: 0 auto;
         }
@@ -520,20 +571,21 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            background: var(--white);
+            background: var(--bg-card);
             padding: 0.5rem 1rem;
             border-radius: 25px;
-            border: 1px solid var(--mint);
+            border: 1px solid var(--border-light);
             transition: all 0.3s ease;
             cursor: pointer;
             text-decoration: none;
-            color: inherit;
+            color: var(--text-primary);
         }
         
         .language-chip:hover {
-            border-color: var(--gold-accent);
+            border-color: var(--gold-primary);
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px var(--shadow-light);
+            box-shadow: 0 4px 12px var(--shadow-sm);
+            background: var(--bg-tertiary);
         }
         
         .language-chip .flag {
@@ -542,13 +594,13 @@
         
         .language-chip .name {
             font-weight: 500;
-            color: var(--text-dark);
+            color: var(--text-primary);
             font-size: 0.9rem;
         }
         
         /* ===== Features Section ===== */
         .features {
-            background: var(--white);
+            background: var(--bg-secondary);
             padding: 4rem 1rem;
         }
         
@@ -559,24 +611,24 @@
         }
         
         .feature-card {
-            background: var(--cream);
+            background: var(--bg-card);
             border-radius: 16px;
             padding: 2rem 1.5rem;
             text-align: center;
             transition: all 0.3s ease;
-            border: 2px solid transparent;
+            border: 2px solid var(--border-light);
         }
         
         .feature-card:hover {
-            border-color: var(--gold-accent);
+            border-color: var(--gold-primary);
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px var(--shadow-light);
+            box-shadow: 0 10px 30px var(--shadow-md);
         }
         
         .feature-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
             border-radius: 16px;
             display: flex;
             align-items: center;
@@ -586,30 +638,30 @@
         }
         
         .feature-card h3 {
-            color: var(--primary-green);
+            color: var(--accent-primary);
             font-size: 1.15rem;
             margin-bottom: 0.75rem;
         }
         
         .feature-card p {
-            color: var(--text-medium);
+            color: var(--text-secondary);
             font-size: 0.9rem;
             line-height: 1.6;
         }
         
         /* ===== How It Works ===== */
         .how-it-works {
-            background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
-            color: var(--white);
+            background: var(--hero-gradient);
+            color: #ffffff;
             padding: 4rem 1rem;
         }
         
         .how-it-works .section-header h2 {
-            color: var(--white);
+            color: #ffffff;
         }
         
         .how-it-works .section-header p {
-            color: var(--mint);
+            color: rgba(255,255,255,0.8);
         }
         
         .steps-container {
@@ -637,8 +689,8 @@
         .step-number {
             width: 50px;
             height: 50px;
-            background: var(--gold-accent);
-            color: var(--primary-dark);
+            background: var(--gold-primary);
+            color: var(--text-inverse);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -651,18 +703,19 @@
         .step-card h3 {
             font-size: 1.1rem;
             margin-bottom: 0.75rem;
-            color: var(--gold-accent);
+            color: var(--gold-primary);
         }
         
         .step-card p {
             font-size: 0.9rem;
             opacity: 0.9;
             line-height: 1.6;
+            color: #ffffff;
         }
         
         /* ===== Learning Levels ===== */
         .learning-levels {
-            background: var(--cream);
+            background: var(--bg-primary);
             padding: 4rem 1rem;
         }
         
@@ -673,11 +726,11 @@
         }
         
         .level-card {
-            background: var(--white);
+            background: var(--bg-card);
             border-radius: 16px;
             padding: 1.5rem;
             text-align: center;
-            border: 2px solid var(--mint);
+            border: 2px solid var(--border-light);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -698,7 +751,7 @@
         .level-card.advanced::before { background: #ef4444; }
         
         .level-card:hover {
-            border-color: var(--gold-accent);
+            border-color: var(--gold-primary);
             transform: translateY(-3px);
         }
         
@@ -716,20 +769,25 @@
         .level-card.intermediate .level-badge { background: #fef3c7; color: #92400e; }
         .level-card.advanced .level-badge { background: #fee2e2; color: #991b1b; }
         
+        [data-theme="dark"] .level-card.beginner .level-badge { background: #14532d; color: #86efac; }
+        [data-theme="dark"] .level-card.elementary .level-badge { background: #1e3a5f; color: #93c5fd; }
+        [data-theme="dark"] .level-card.intermediate .level-badge { background: #78350f; color: #fcd34d; }
+        [data-theme="dark"] .level-card.advanced .level-badge { background: #7f1d1d; color: #fca5a5; }
+        
         .level-card h3 {
-            color: var(--primary-green);
+            color: var(--accent-primary);
             font-size: 1rem;
             margin-bottom: 0.5rem;
         }
         
         .level-card p {
-            color: var(--text-medium);
+            color: var(--text-secondary);
             font-size: 0.85rem;
         }
         
         /* ===== CTA Section ===== */
         .cta-section {
-            background: linear-gradient(135deg, var(--gold-accent) 0%, var(--gold-light) 100%);
+            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 100%);
             padding: 4rem 1rem;
             text-align: center;
         }
@@ -741,19 +799,20 @@
         
         .cta-content h2 {
             font-size: 2rem;
-            color: var(--primary-dark);
+            color: var(--text-inverse);
             margin-bottom: 1rem;
         }
         
         .cta-content p {
-            color: var(--primary-green);
+            color: var(--text-inverse);
             margin-bottom: 2rem;
             font-size: 1.1rem;
+            opacity: 0.9;
         }
         
         .btn-cta-dark {
-            background: var(--primary-green);
-            color: var(--white);
+            background: var(--accent-primary);
+            color: #ffffff;
             padding: 1rem 2.5rem;
             border-radius: 30px;
             text-decoration: none;
@@ -766,14 +825,14 @@
         }
         
         .btn-cta-dark:hover {
-            background: var(--primary-dark);
+            background: var(--accent-secondary);
             transform: translateY(-2px);
         }
         
         /* ===== Footer ===== */
         footer {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, #081510 100%);
-            color: var(--white);
+            background: var(--footer-bg);
+            color: #ffffff;
             padding: 3rem 1rem 1.5rem;
         }
         
@@ -784,7 +843,7 @@
         
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr;
             gap: 2rem;
             margin-bottom: 2rem;
         }
@@ -792,17 +851,18 @@
         .footer-brand h3 {
             font-size: 1.5rem;
             margin-bottom: 0.75rem;
-            color: var(--gold-accent);
+            color: var(--gold-primary);
         }
         
         .footer-brand p {
             opacity: 0.8;
             font-size: 0.9rem;
             line-height: 1.7;
+            color: rgba(255,255,255,0.8);
         }
         
         .footer-section h4 {
-            color: var(--mint);
+            color: rgba(255,255,255,0.9);
             margin-bottom: 1rem;
             font-size: 1rem;
         }
@@ -823,12 +883,13 @@
         }
         
         .footer-links a:hover {
-            color: var(--gold-accent);
+            color: var(--gold-primary);
         }
         
         .social-icons {
             display: flex;
             gap: 0.75rem;
+            margin-top: 1rem;
         }
         
         .social-icon {
@@ -839,14 +900,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
+            color: #ffffff;
             text-decoration: none;
             transition: var(--transition);
         }
         
         .social-icon:hover {
-            background: var(--gold-accent);
-            color: var(--primary-dark);
+            background: var(--gold-primary);
+            color: var(--text-inverse);
         }
         
         .footer-bottom {
@@ -858,6 +919,7 @@
         .footer-bottom p {
             opacity: 0.6;
             font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
         }
         
         /* ===== Settings Modal ===== */
@@ -867,7 +929,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
+            background: var(--overlay-bg);
             z-index: 2000;
             display: none;
             opacity: 0;
@@ -884,7 +946,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) scale(0.9);
-            background: var(--white);
+            background: var(--bg-secondary);
             border-radius: 16px;
             width: 90%;
             max-width: 500px;
@@ -894,7 +956,8 @@
             display: none;
             opacity: 0;
             transition: all 0.3s ease;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 60px var(--shadow-lg);
+            border: 1px solid var(--border-light);
         }
         
         .settings-modal.show {
@@ -904,8 +967,8 @@
         }
         
         .settings-header {
-            background: var(--primary-green);
-            color: var(--white);
+            background: var(--accent-primary);
+            color: #ffffff;
             padding: 1.25rem 1.5rem;
             display: flex;
             justify-content: space-between;
@@ -921,7 +984,7 @@
         .settings-close {
             background: rgba(255, 255, 255, 0.2);
             border: none;
-            color: var(--white);
+            color: #ffffff;
             width: 36px;
             height: 36px;
             border-radius: 50%;
@@ -944,7 +1007,7 @@
         .settings-section {
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
-            border-bottom: 1px solid var(--mint);
+            border-bottom: 1px solid var(--border-light);
         }
         
         .settings-section:last-child {
@@ -954,7 +1017,7 @@
         }
         
         .settings-section h3 {
-            color: var(--primary-green);
+            color: var(--accent-primary);
             font-size: 1rem;
             margin-bottom: 1rem;
         }
@@ -967,23 +1030,24 @@
         .font-size-btn {
             flex: 1;
             padding: 0.8rem;
-            border: 2px solid var(--pale-green);
-            background: var(--cream);
+            border: 2px solid var(--border-light);
+            background: var(--bg-card);
             border-radius: 8px;
             cursor: pointer;
             transition: var(--transition);
             text-align: center;
             font-family: inherit;
+            color: var(--text-primary);
         }
         
         .font-size-btn:hover {
-            border-color: var(--gold-accent);
+            border-color: var(--gold-primary);
         }
         
         .font-size-btn.active {
-            border-color: var(--gold-accent);
-            background: var(--gold-accent);
-            color: var(--primary-dark);
+            border-color: var(--gold-primary);
+            background: var(--gold-primary);
+            color: var(--text-inverse);
         }
         
         .font-size-btn .size-label {
@@ -1002,8 +1066,9 @@
             align-items: center;
             justify-content: space-between;
             padding: 1rem;
-            background: var(--cream);
+            background: var(--bg-card);
             border-radius: 10px;
+            color: var(--text-primary);
         }
         
         .toggle-switch {
@@ -1025,7 +1090,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: var(--pale-green);
+            background-color: var(--border-medium);
             transition: 0.3s;
             border-radius: 30px;
         }
@@ -1044,7 +1109,7 @@
         }
         
         .toggle-switch input:checked + .toggle-slider {
-            background-color: var(--gold-accent);
+            background-color: var(--gold-primary);
         }
         
         .toggle-switch input:checked + .toggle-slider:before {
@@ -1081,7 +1146,7 @@
         }
         
         /* ===== Accessibility ===== */
-        :focus { outline: 2px solid var(--gold-accent); outline-offset: 2px; }
+        :focus { outline: 2px solid var(--gold-primary); outline-offset: 2px; }
         
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -1103,107 +1168,107 @@
             </div>
             <div class="lang-popup-body">
                 <div class="lang-grid" id="langGrid">
-                    <a href="/" class="lang-option selected">
+                    <a href="https://mibenglish.com/" class="lang-option selected">
                         <span class="lang-flag">🇬🇧</span>
                         <span class="lang-name">English</span>
                         <span class="lang-native">English</span>
                     </a>
-                    <a href="/id/" class="lang-option">
+                    <a href="https://mibenglish.com/id/" class="lang-option">
                         <span class="lang-flag">🇮🇩</span>
                         <span class="lang-name">Indonesian</span>
                         <span class="lang-native">Bahasa Indonesia</span>
                     </a>
-                    <a href="/ar/" class="lang-option">
+                    <a href="https://mibenglish.com/ar/" class="lang-option">
                         <span class="lang-flag">🇸🇦</span>
                         <span class="lang-name">Arabic</span>
                         <span class="lang-native">العربية</span>
                     </a>
-                    <a href="/zh/" class="lang-option">
+                    <a href="https://mibenglish.com/zh/" class="lang-option">
                         <span class="lang-flag">🇨🇳</span>
                         <span class="lang-name">Chinese</span>
                         <span class="lang-native">中文</span>
                     </a>
-                    <a href="/ja/" class="lang-option">
+                    <a href="https://mibenglish.com/ja/" class="lang-option">
                         <span class="lang-flag">🇯🇵</span>
                         <span class="lang-name">Japanese</span>
                         <span class="lang-native">日本語</span>
                     </a>
-                    <a href="/ko/" class="lang-option">
+                    <a href="https://mibenglish.com/ko/" class="lang-option">
                         <span class="lang-flag">🇰🇷</span>
                         <span class="lang-name">Korean</span>
                         <span class="lang-native">한국어</span>
                     </a>
-                    <a href="/vi/" class="lang-option">
+                    <a href="https://mibenglish.com/vi/" class="lang-option">
                         <span class="lang-flag">🇻🇳</span>
                         <span class="lang-name">Vietnamese</span>
                         <span class="lang-native">Tiếng Việt</span>
                     </a>
-                    <a href="/th/" class="lang-option">
+                    <a href="https://mibenglish.com/th/" class="lang-option">
                         <span class="lang-flag">🇹🇭</span>
                         <span class="lang-name">Thai</span>
                         <span class="lang-native">ไทย</span>
                     </a>
-                    <a href="/hi/" class="lang-option">
+                    <a href="https://mibenglish.com/hi/" class="lang-option">
                         <span class="lang-flag">🇮🇳</span>
                         <span class="lang-name">Hindi</span>
                         <span class="lang-native">हिन्दी</span>
                     </a>
-                    <a href="/bn/" class="lang-option">
+                    <a href="https://mibenglish.com/bn/" class="lang-option">
                         <span class="lang-flag">🇧🇩</span>
                         <span class="lang-name">Bengali</span>
                         <span class="lang-native">বাংলা</span>
                     </a>
-                    <a href="/ur/" class="lang-option">
+                    <a href="https://mibenglish.com/ur/" class="lang-option">
                         <span class="lang-flag">🇵🇰</span>
                         <span class="lang-name">Urdu</span>
                         <span class="lang-native">اردو</span>
                     </a>
-                    <a href="/sw/" class="lang-option">
+                    <a href="https://mibenglish.com/sw/" class="lang-option">
                         <span class="lang-flag">🇰🇪</span>
                         <span class="lang-name">Swahili</span>
                         <span class="lang-native">Kiswahili</span>
                     </a>
-                    <a href="/es/" class="lang-option">
+                    <a href="https://mibenglish.com/es/" class="lang-option">
                         <span class="lang-flag">🇪🇸</span>
                         <span class="lang-name">Spanish</span>
                         <span class="lang-native">Español</span>
                     </a>
-                    <a href="/pt/" class="lang-option">
+                    <a href="https://mibenglish.com/pt/" class="lang-option">
                         <span class="lang-flag">🇵🇹</span>
                         <span class="lang-name">Portuguese</span>
                         <span class="lang-native">Português</span>
                     </a>
-                    <a href="/fr/" class="lang-option">
+                    <a href="https://mibenglish.com/fr/" class="lang-option">
                         <span class="lang-flag">🇫🇷</span>
                         <span class="lang-name">French</span>
                         <span class="lang-native">Français</span>
                     </a>
-                    <a href="/de/" class="lang-option">
+                    <a href="https://mibenglish.com/de/" class="lang-option">
                         <span class="lang-flag">🇩🇪</span>
                         <span class="lang-name">German</span>
                         <span class="lang-native">Deutsch</span>
                     </a>
-                    <a href="/it/" class="lang-option">
+                    <a href="https://mibenglish.com/it/" class="lang-option">
                         <span class="lang-flag">🇮🇹</span>
                         <span class="lang-name">Italian</span>
                         <span class="lang-native">Italiano</span>
                     </a>
-                    <a href="/ru/" class="lang-option">
+                    <a href="https://mibenglish.com/ru/" class="lang-option">
                         <span class="lang-flag">🇷🇺</span>
                         <span class="lang-name">Russian</span>
                         <span class="lang-native">Русский</span>
                     </a>
-                    <a href="/pl/" class="lang-option">
+                    <a href="https://mibenglish.com/pl/" class="lang-option">
                         <span class="lang-flag">🇵🇱</span>
                         <span class="lang-name">Polish</span>
                         <span class="lang-native">Polski</span>
                     </a>
-                    <a href="/tr/" class="lang-option">
+                    <a href="https://mibenglish.com/tr/" class="lang-option">
                         <span class="lang-flag">🇹🇷</span>
                         <span class="lang-name">Turkish</span>
                         <span class="lang-native">Türkçe</span>
                     </a>
-                    <a href="/el/" class="lang-option">
+                    <a href="https://mibenglish.com/el/" class="lang-option">
                         <span class="lang-flag">🇬🇷</span>
                         <span class="lang-name">Greek</span>
                         <span class="lang-native">Ελληνικά</span>
@@ -1219,7 +1284,7 @@
     <!-- Header -->
     <header>
         <div class="header-container">
-            <a href="https://mibenglish.com" class="brand">
+            <a href="https://mibenglish.com/" class="brand">
                 <span>MIBEnglish</span>
             </a>
             <div class="header-actions">
@@ -1240,11 +1305,11 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="https://mibenglish.com class="nav-link active">Home</a>
-            <a href="https://mibenglish.com/learn" class="nav-link">Learn</a>
-            <a href="https://mibenglish.com/dictionary" class="nav-link">Dictionary</a>
-            <a href="https://mibenglish.com/games" class="nav-link">Games</a>
-            <a href="https://mibenglish.com/market" class="nav-link">Market</a>
+            <a href="https://mibenglish.com/" class="nav-link active">Home</a>
+            <a href="https://mibenglish.com/learn/" class="nav-link">Learn</a>
+            <a href="https://mibenglish.com/dictionary/" class="nav-link">Dictionary</a>
+            <a href="https://mibenglish.com/games/" class="nav-link">Games</a>
+            <a href="https://mibenglish.com/market/" class="nav-link">Market</a>
         </div>
     </nav>
     
@@ -1269,7 +1334,8 @@
                 </div>
                 
                 <div class="hero-cta">
-                    <a href="https://mibenglish.com/en" class="btn-primary">🚀 Start Learning Now</a>
+                    <a href="https://mibenglish.com/en/" class="btn-primary">🚀 Start Learning Now</a>
+                </div>
             </div>
         </section>
         
@@ -1281,26 +1347,26 @@
                     <p>Choose your preferred language for the optimal learning experience</p>
                 </div>
                 <div class="languages-grid">
-                    <a href="/" class="language-chip"><span class="flag">🇬🇧</span><span class="name">English</span></a>
-                    <a href="/id/" class="language-chip"><span class="flag">🇮🇩</span><span class="name">Indonesian</span></a>
-                    <a href="/ar/" class="language-chip"><span class="flag">🇸🇦</span><span class="name">Arabic</span></a>
-                    <a href="/zh/" class="language-chip"><span class="flag">🇨🇳</span><span class="name">Chinese</span></a>
-                    <a href="/ja/" class="language-chip"><span class="flag">🇯🇵</span><span class="name">Japanese</span></a>
-                    <a href="/ko/" class="language-chip"><span class="flag">🇰🇷</span><span class="name">Korean</span></a>
-                    <a href="/vi/" class="language-chip"><span class="flag">🇻🇳</span><span class="name">Vietnamese</span></a>
-                    <a href="/th/" class="language-chip"><span class="flag">🇹🇭</span><span class="name">Thai</span></a>
-                    <a href="/hi/" class="language-chip"><span class="flag">🇮🇳</span><span class="name">Hindi</span></a>
-                    <a href="/bn/" class="language-chip"><span class="flag">🇧🇩</span><span class="name">Bengali</span></a>
-                    <a href="/ur/" class="language-chip"><span class="flag">🇵🇰</span><span class="name">Urdu</span></a>
-                    <a href="/sw/" class="language-chip"><span class="flag">🇰🇪</span><span class="name">Swahili</span></a>
-                    <a href="/es/" class="language-chip"><span class="flag">🇪🇸</span><span class="name">Spanish</span></a>
-                    <a href="/pt/" class="language-chip"><span class="flag">🇵🇹</span><span class="name">Portuguese</span></a>
-                    <a href="/fr/" class="language-chip"><span class="flag">🇫🇷</span><span class="name">French</span></a>
-                    <a href="/de/" class="language-chip"><span class="flag">🇩🇪</span><span class="name">German</span></a>
-                    <a href="/it/" class="language-chip"><span class="flag">🇮🇹</span><span class="name">Italian</span></a>
-                    <a href="/ru/" class="language-chip"><span class="flag">🇷🇺</span><span class="name">Russian</span></a>
-                    <a href="/pl/" class="language-chip"><span class="flag">🇵🇱</span><span class="name">Polish</span></a>
-                    <a href="/tr/" class="language-chip"><span class="flag">🇹🇷</span><span class="name">Turkish</span></a>
+                    <a href="https://mibenglish.com/" class="language-chip"><span class="flag">🇬🇧</span><span class="name">English</span></a>
+                    <a href="https://mibenglish.com/id/" class="language-chip"><span class="flag">🇮🇩</span><span class="name">Indonesian</span></a>
+                    <a href="https://mibenglish.com/ar/" class="language-chip"><span class="flag">🇸🇦</span><span class="name">Arabic</span></a>
+                    <a href="https://mibenglish.com/zh/" class="language-chip"><span class="flag">🇨🇳</span><span class="name">Chinese</span></a>
+                    <a href="https://mibenglish.com/ja/" class="language-chip"><span class="flag">🇯🇵</span><span class="name">Japanese</span></a>
+                    <a href="https://mibenglish.com/ko/" class="language-chip"><span class="flag">🇰🇷</span><span class="name">Korean</span></a>
+                    <a href="https://mibenglish.com/vi/" class="language-chip"><span class="flag">🇻🇳</span><span class="name">Vietnamese</span></a>
+                    <a href="https://mibenglish.com/th/" class="language-chip"><span class="flag">🇹🇭</span><span class="name">Thai</span></a>
+                    <a href="https://mibenglish.com/hi/" class="language-chip"><span class="flag">🇮🇳</span><span class="name">Hindi</span></a>
+                    <a href="https://mibenglish.com/bn/" class="language-chip"><span class="flag">🇧🇩</span><span class="name">Bengali</span></a>
+                    <a href="https://mibenglish.com/ur/" class="language-chip"><span class="flag">🇵🇰</span><span class="name">Urdu</span></a>
+                    <a href="https://mibenglish.com/sw/" class="language-chip"><span class="flag">🇰🇪</span><span class="name">Swahili</span></a>
+                    <a href="https://mibenglish.com/es/" class="language-chip"><span class="flag">🇪🇸</span><span class="name">Spanish</span></a>
+                    <a href="https://mibenglish.com/pt/" class="language-chip"><span class="flag">🇵🇹</span><span class="name">Portuguese</span></a>
+                    <a href="https://mibenglish.com/fr/" class="language-chip"><span class="flag">🇫🇷</span><span class="name">French</span></a>
+                    <a href="https://mibenglish.com/de/" class="language-chip"><span class="flag">🇩🇪</span><span class="name">German</span></a>
+                    <a href="https://mibenglish.com/it/" class="language-chip"><span class="flag">🇮🇹</span><span class="name">Italian</span></a>
+                    <a href="https://mibenglish.com/ru/" class="language-chip"><span class="flag">🇷🇺</span><span class="name">Russian</span></a>
+                    <a href="https://mibenglish.com/pl/" class="language-chip"><span class="flag">🇵🇱</span><span class="name">Polish</span></a>
+                    <a href="https://mibenglish.com/tr/" class="language-chip"><span class="flag">🇹🇷</span><span class="name">Turkish</span></a>
                 </div>
             </div>
         </section>
@@ -1353,7 +1419,7 @@
                     <div class="step-card">
                         <div class="step-number">2</div>
                         <h3>Determine Level</h3>
-                        <p>We’ll help you find your English level to provide materials tailored to your abilities.</p>
+                        <p>We'll help you find your English level to provide materials tailored to your abilities.</p>
                     </div>
                     <div class="step-card">
                         <div class="step-number">3</div>
@@ -1401,7 +1467,7 @@
             <div class="cta-content">
                 <h2>Ready to Start Your Journey?</h2>
                 <p>Join thousands of other learners and master English in a different way.</p>
-                <a href="#" class="btn-cta-dark">🎯 Start Now - Free!</a>
+                <a href="https://mibenglish.com/en/" class="btn-cta-dark">🎯 Start Now - Free!</a>
             </div>
         </section>
     </main>
@@ -1423,10 +1489,9 @@
                         <a href="https://youtube.com/@mibenglish" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
                         </a>
-                        <a href="https://www.tiktok.com/@username" class="social-icon" aria-label="TikTok" target="_blank" rel="noopener">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                             </svg>
-                             </a>
+                        <a href="https://www.tiktok.com/@mibenglish" class="social-icon" aria-label="TikTok" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                        </a>
                         <a href="https://facebook.com/mibenglish" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         </a>
@@ -1436,11 +1501,11 @@
                 <div class="footer-section">
                     <h4>Support</h4>
                     <ul class="footer-links">
-                        <li><a href="/en/about.html">About</a></li>
-                        <li><a href="/en/contact.html">Contact</a></li>
-                        <li><a href="/en/privacy.html">Privacy Policy</a></li>
-                        <li><a href="/en/terms.html">Terms & Conditions </a></li>
-                        <li><a href="/en/disclaimer.html">Disclaimer </a></li>
+                        <li><a href="https://mibenglish.com/en/about.html">About</a></li>
+                        <li><a href="https://mibenglish.com/en/contact.html">Contact</a></li>
+                        <li><a href="https://mibenglish.com/en/privacy.html">Privacy Policy</a></li>
+                        <li><a href="https://mibenglish.com/en/terms.html">Terms & Conditions</a></li>
+                        <li><a href="https://mibenglish.com/en/disclaimer.html">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
@@ -1538,7 +1603,7 @@
             localStorage.setItem('mibVisited', 'true');
         }
         
-        // Settings Funstartssctions
+        // Settings Functions
         function openSettings() {
             document.getElementById('settingsOverlay').classList.add('show');
             document.getElementById('settingsModal').classList.add('show');
