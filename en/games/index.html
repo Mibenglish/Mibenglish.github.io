@@ -1,1 +1,2072 @@
+<!DOCTYPE html>
+<html lang="id" data-font-size="normal" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MIBEnglish Games - Belajar Bahasa Inggris dengan games seru! Kuis vocabulary, word match, spelling, dan banyak lagi.">
+    <meta name="keywords" content="game bahasa inggris, english games, belajar inggris seru, vocabulary quiz, word games">
+    <meta name="author" content="MIBEnglish">
+    <meta name="theme-color" content="#1a472a">
+    <title>Games Belajar Bahasa Inggris - MIBEnglish</title>
+    
+    <link rel="canonical" href="https://mibenglish.com/id/games/">
+    <link rel="alternate" hreflang="en" href="https://mibenglish.com/games/">
+    <link rel="alternate" hreflang="id" href="https://mibenglish.com/id/games/">
+    <link rel="alternate" hreflang="x-default" href="https://mibenglish.com/games/">
+    
+    <style>
+        /* ========== BASE RESET ========== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        /* ========== FONT SIZE SETTINGS ========== */
+        [data-font-size="small"] { font-size: 14px; }
+        [data-font-size="normal"] { font-size: 16px; }
+        [data-font-size="large"] { font-size: 18px; }
+        [data-font-size="xlarge"] { font-size: 20px; }
+        
+        /* ========== LIGHT THEME (DEFAULT) ========== */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f7f5;
+            color: #1a1a1a;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Header Light */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            background: #0d1f0d;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            z-index: 1000;
+            border-bottom: 2px solid #c9a227;
+        }
+        
+        .brand {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            font-family: inherit;
+            white-space: nowrap;
+        }
+        
+        .settings-btn {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            min-height: 40px;
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Navigation Light */
+        .nav {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            right: 0;
+            background: #1a472a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            padding: 8px 0;
+            min-height: 48px;
+        }
+        
+        .nav::-webkit-scrollbar { display: none; }
+        
+        .nav-inner {
+            display: flex;
+            gap: 6px;
+            padding: 0 12px;
+        }
+        
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: background 0.2s ease;
+            flex-shrink: 0;
+        }
+        
+        .nav-link.active { background: #c9a227; color: #ffffff; }
+        
+        /* Main Content */
+        .main {
+            padding-top: 130px;
+            padding-bottom: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        
+        /* Category Header */
+        .category-header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
+            color: #ffffff;
+            padding: 20px 16px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .category-info {
+            flex: 1;
+        }
+        
+        .category-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .category-count {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+        
+        .category-icon {
+            font-size: 2.5rem;
+            opacity: 0.3;
+        }
+        
+        /* Level Filter */
+        .level-filter {
+            background: #ffffff;
+            border: 1px solid #d4e5d4;
+            border-radius: 10px;
+            padding: 10px 12px;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .level-filter::-webkit-scrollbar { display: none; }
+        
+        .level-btn {
+            padding: 8px 16px;
+            border: 2px solid #d4e5d4;
+            background: #f8faf8;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1a472a;
+            cursor: pointer;
+            font-family: inherit;
+            white-space: nowrap;
+            transition: all 0.2s ease;
+        }
+        
+        .level-btn.active {
+            background: #1a472a;
+            color: #ffffff;
+            border-color: #1a472a;
+        }
+        
+        .level-btn:active:not(.active) {
+            background: #e8f5e9;
+            border-color: #c9a227;
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            background: #ffffff;
+            border: 1px solid #d4e5d4;
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1a472a;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: #6b7b6b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Games Grid */
+        .games-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        
+        /* Game Card */
+        .game-card {
+            background: #ffffff;
+            border: 2px solid #d4e5d4;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .game-card:active {
+            border-color: #c9a227;
+            transform: scale(0.98);
+        }
+        
+        .game-card-header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .game-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .game-info {
+            flex: 1;
+        }
+        
+        .game-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+        
+        .game-desc {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .game-card-body {
+            padding: 12px 16px;
+        }
+        
+        .game-levels {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .game-level-btn {
+            padding: 6px 12px;
+            border: 1px solid #d4e5d4;
+            background: #f8faf8;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #1a472a;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+        
+        .game-level-btn:hover {
+            background: #e8f5e9;
+            border-color: #c9a227;
+        }
+        
+        .game-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: #6b7b6b;
+        }
+        
+        .game-rating {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .game-rating .stars {
+            color: #c9a227;
+        }
+        
+        .game-plays {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        /* Game Modal */
+        .game-modal {
+            max-width: 500px;
+        }
+        
+        .game-modal-header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .game-modal-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin: 0 auto 12px;
+        }
+        
+        .game-modal-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .game-modal-subtitle {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+        
+        .game-modal-body {
+            padding: 20px;
+        }
+        
+        .level-select-title {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: #1a472a;
+            margin-bottom: 12px;
+        }
+        
+        .level-select-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        
+        .level-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            background: #f8faf8;
+            border: 2px solid #d4e5d4;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .level-option:hover {
+            border-color: #c9a227;
+            background: #e8f5e9;
+        }
+        
+        .level-option.selected {
+            border-color: #c9a227;
+            background: #fffbeb;
+        }
+        
+        .level-option-icon {
+            width: 40px;
+            height: 40px;
+            background: #e8f5e9;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+        
+        .level-option-info {
+            flex: 1;
+        }
+        
+        .level-option-name {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            color: #1a472a;
+        }
+        
+        .level-option-desc {
+            font-size: 0.75rem;
+            color: #6b7b6b;
+        }
+        
+        .level-option-badge {
+            font-size: 0.6875rem;
+            padding: 4px 10px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        
+        .badge-easy { background: #e8f5e9; color: #2e7d32; }
+        .badge-medium { background: #fff3e0; color: #e65100; }
+        .badge-hard { background: #ffebee; color: #c62828; }
+        .badge-expert { background: #f3e5f5; color: #7b1fa2; }
+        
+        .btn-play {
+            width: 100%;
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            color: #ffffff;
+            border: none;
+            padding: 16px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        /* Play Game Modal */
+        .play-modal {
+            max-width: 500px;
+            max-height: 90vh;
+        }
+        
+        .play-modal-header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .play-modal-info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .play-modal-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .play-modal-level {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .play-modal-stats {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .play-stat {
+            text-align: center;
+        }
+        
+        .play-stat-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .play-stat-label {
+            font-size: 0.625rem;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+        }
+        
+        .play-modal-body {
+            padding: 20px;
+        }
+        
+        .question-counter {
+            text-align: center;
+            font-size: 0.875rem;
+            color: #6b7b6b;
+            margin-bottom: 12px;
+        }
+        
+        .question-card {
+            background: #f8faf8;
+            border: 2px solid #d4e5d4;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .question-word {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1a472a;
+            margin-bottom: 8px;
+        }
+        
+        .question-hint {
+            font-size: 0.875rem;
+            color: #6b7b6b;
+        }
+        
+        .question-type {
+            font-size: 0.75rem;
+            color: #c9a227;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        
+        .option-btn {
+            padding: 14px 12px;
+            border: 2px solid #d4e5d4;
+            background: #ffffff;
+            border-radius: 12px;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: #1a1a1a;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+        
+        .option-btn:hover {
+            border-color: #c9a227;
+            background: #fffbeb;
+        }
+        
+        .option-btn.correct {
+            border-color: #4caf50;
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .option-btn.wrong {
+            border-color: #f44336;
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e8e8e8;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #c9a227, #e6c84a);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+        
+        /* Game Result */
+        .result-card {
+            text-align: center;
+            padding: 24px;
+        }
+        
+        .result-icon {
+            font-size: 4rem;
+            margin-bottom: 16px;
+        }
+        
+        .result-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a472a;
+            margin-bottom: 8px;
+        }
+        
+        .result-score {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #c9a227;
+            margin-bottom: 8px;
+        }
+        
+        .result-detail {
+            font-size: 0.875rem;
+            color: #6b7b6b;
+            margin-bottom: 20px;
+        }
+        
+        .result-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .btn-retry {
+            padding: 12px 24px;
+            background: #f8faf8;
+            border: 2px solid #d4e5d4;
+            border-radius: 25px;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: #1a472a;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        .btn-home {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            border: none;
+            border-radius: 25px;
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: #ffffff;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        /* Ad Slots */
+        .ad-slot {
+            background: #e8f5e9;
+            border: 2px dashed #b4d4b4;
+            border-radius: 10px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a5a4a;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+            padding: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .ad-slot-banner { margin: 16px 0; }
+        .ad-slot-inline { margin: 20px 0; }
+        .ad-slot-large { min-height: 100px; margin: 24px 0; }
+        
+        .ad-row {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #0d1f0d;
+            color: #ffffff;
+            padding: 32px 16px 20px;
+            margin-top: 32px;
+        }
+        
+        .footer-brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #c9a227;
+            margin-bottom: 8px;
+        }
+        
+        .footer-desc {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+        
+        .social-icon {
+            width: 38px;
+            height: 38px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+        
+        .social-icon:active { background: #c9a227; }
+        
+        .footer-section-title {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 8px; }
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+        .footer-links a:active { color: #c9a227; }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 16px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer-bottom p {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        /* Modal Base */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+        
+        .modal-overlay.show { display: flex; }
+        
+        .modal {
+            background: #ffffff;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 400px;
+            max-height: 85vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .modal-header {
+            background: #1a472a;
+            color: #ffffff;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        
+        .modal-header h2 { font-size: 1.125rem; }
+        
+        .modal-close {
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 50%;
+            color: #ffffff;
+            font-size: 1.125rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-body { padding: 16px; }
+        
+        /* Language Popup */
+        .lang-popup { max-width: 500px; }
+        
+        .lang-popup-header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .lang-popup-header h2 { font-size: 1.125rem; margin-bottom: 4px; }
+        .lang-popup-header p { font-size: 0.875rem; opacity: 0.9; }
+        
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            padding: 16px;
+        }
+        
+        .lang-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 6px;
+            border: 2px solid #d4e5d4;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #1a1a1a;
+            background: #f8faf8;
+            min-height: 70px;
+            transition: all 0.2s ease;
+        }
+        
+        .lang-option:active { border-color: #c9a227; background: #e8f5e9; }
+        .lang-option.selected { border-color: #c9a227; background: #c9a227; color: #ffffff; }
+        
+        .lang-flag { font-size: 1.25rem; margin-bottom: 4px; }
+        .lang-name { font-size: 0.6875rem; font-weight: 600; text-align: center; }
+        
+        .lang-popup-footer {
+            padding: 12px 16px 16px;
+            text-align: center;
+        }
+        
+        .btn-confirm {
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            color: #ffffff;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        /* Settings */
+        .settings-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .settings-section:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .settings-section h3 {
+            font-size: 0.9375rem;
+            color: #1a472a;
+            margin-bottom: 12px;
+        }
+        
+        .font-size-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+        
+        .font-size-btn {
+            padding: 10px 4px;
+            border: 2px solid #d4e5d4;
+            background: #f8faf8;
+            border-radius: 8px;
+            text-align: center;
+            font-family: inherit;
+            color: #1a1a1a;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .font-size-btn.active {
+            border-color: #c9a227;
+            background: #c9a227;
+            color: #ffffff;
+        }
+        
+        .font-size-btn span { display: block; }
+        .font-size-btn .size-label { font-size: 0.75rem; font-weight: 600; }
+        .font-size-btn .size-preview { font-size: 0.625rem; opacity: 0.7; }
+        
+        .dark-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            background: #f8faf8;
+            border-radius: 10px;
+            border: 1px solid #d4e5d4;
+            font-size: 0.9375rem;
+            color: #1a1a1a;
+        }
+        
+        .toggle-switch {
+            position: relative;
+            width: 50px;
+            height: 28px;
+        }
+        
+        .toggle-switch input { opacity: 0; width: 0; height: 0; }
+        
+        .toggle-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #b4b4b4;
+            border-radius: 28px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .toggle-slider:before {
+            content: "";
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            left: 3px;
+            bottom: 3px;
+            background: #ffffff;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        
+        .toggle-switch input:checked + .toggle-slider { background: #c9a227; }
+        .toggle-switch input:checked + .toggle-slider:before { transform: translateX(22px); }
+        
+        .btn-change-lang {
+            width: 100%;
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            border-radius: 25px;
+            font-size: 0.9375rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        /* FAB */
+        .share-fab {
+            position: fixed;
+            bottom: 20px;
+            right: 16px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            border: none;
+            border-radius: 50%;
+            color: #ffffff;
+            cursor: pointer;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(201,162,39,0.4);
+        }
+        
+        .toast {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a472a;
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.875rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 101;
+            text-align: center;
+            pointer-events: none;
+        }
+        .toast.show { opacity: 1; }
+        
+        /* ========== DARK THEME ========== */
+        [data-theme="dark"] body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .header {
+            background: #1a1a1a;
+            border-bottom-color: #c9a227;
+        }
+        
+        [data-theme="dark"] .nav {
+            background: #1e3a1e;
+        }
+        
+        [data-theme="dark"] .level-filter {
+            background: #1e1e1e;
+            border-color: #333333;
+        }
+        
+        [data-theme="dark"] .level-btn {
+            background: #252525;
+            border-color: #333333;
+            color: #a0d0a0;
+        }
+        
+        [data-theme="dark"] .level-btn.active {
+            background: #2d5a3d;
+            color: #ffffff;
+            border-color: #2d5a3d;
+        }
+        
+        [data-theme="dark"] .stats-bar {
+            background: #1e1e1e;
+            border-color: #333333;
+        }
+        
+        [data-theme="dark"] .stat-value {
+            color: #6ab060;
+        }
+        
+        [data-theme="dark"] .stat-label {
+            color: #888888;
+        }
+        
+        [data-theme="dark"] .game-card {
+            background: #1e1e1e;
+            border-color: #333333;
+        }
+        
+        [data-theme="dark"] .game-card-body {
+            background: #1e1e1e;
+        }
+        
+        [data-theme="dark"] .game-level-btn {
+            background: #252525;
+            border-color: #333333;
+            color: #a0d0a0;
+        }
+        
+        [data-theme="dark"] .game-meta {
+            color: #888888;
+        }
+        
+        [data-theme="dark"] .level-select-title {
+            color: #6ab060;
+        }
+        
+        [data-theme="dark"] .level-option {
+            background: #252525;
+            border-color: #333333;
+        }
+        
+        [data-theme="dark"] .level-option:hover {
+            background: #2a2a2a;
+            border-color: #c9a227;
+        }
+        
+        [data-theme="dark"] .level-option.selected {
+            background: #2a2a2a;
+        }
+        
+        [data-theme="dark"] .level-option-icon {
+            background: #1e3a1e;
+        }
+        
+        [data-theme="dark"] .level-option-name {
+            color: #a0d0a0;
+        }
+        
+        [data-theme="dark"] .question-card {
+            background: #252525;
+            border-color: #333333;
+        }
+        
+        [data-theme="dark"] .question-word {
+            color: #6ab060;
+        }
+        
+        [data-theme="dark"] .question-hint {
+            color: #888888;
+        }
+        
+        [data-theme="dark"] .option-btn {
+            background: #252525;
+            border-color: #333333;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .option-btn:hover {
+            background: #2a2a2a;
+            border-color: #c9a227;
+        }
+        
+        [data-theme="dark"] .progress-bar {
+            background: #333333;
+        }
+        
+        [data-theme="dark"] .result-title {
+            color: #6ab060;
+        }
+        
+        [data-theme="dark"] .btn-retry {
+            background: #252525;
+            border-color: #333333;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .ad-slot {
+            background: #1a2a1a;
+            border-color: #2a4a2a;
+            color: #6a8a6a;
+        }
+        
+        [data-theme="dark"] .footer {
+            background: #1a1a1a;
+        }
+        
+        [data-theme="dark"] .modal {
+            background: #1e1e1e;
+        }
+        
+        [data-theme="dark"] .modal-header {
+            background: #2d5a3d;
+        }
+        
+        [data-theme="dark"] .lang-option {
+            background: #252525;
+            border-color: #333333;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .lang-option:active {
+            border-color: #c9a227;
+            background: #2a2a2a;
+        }
+        
+        [data-theme="dark"] .lang-option.selected {
+            background: #c9a227;
+            border-color: #c9a227;
+            color: #ffffff;
+        }
+        
+        [data-theme="dark"] .settings-section {
+            border-bottom-color: #333333;
+        }
+        
+        [data-theme="dark"] .settings-section h3 {
+            color: #6ab060;
+        }
+        
+        [data-theme="dark"] .font-size-btn {
+            background: #252525;
+            border-color: #333333;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .font-size-btn.active {
+            background: #c9a227;
+            border-color: #c9a227;
+            color: #ffffff;
+        }
+        
+        [data-theme="dark"] .dark-toggle {
+            background: #252525;
+            border-color: #333333;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .btn-confirm,
+        [data-theme="dark"] .btn-change-lang {
+            background: linear-gradient(135deg, #b8922a, #d4b840);
+        }
+        
+        [data-theme="dark"] .toast {
+            background: #2d5a3d;
+        }
+        
+        [data-theme="dark"] .share-fab {
+            background: linear-gradient(135deg, #b8922a, #d4b840);
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (min-width: 480px) {
+            .lang-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        @media (min-width: 600px) {
+            .main { padding-left: 20px; padding-right: 20px; }
+            .category-title { font-size: 1.375rem; }
+            .games-grid { grid-template-columns: repeat(2, 1fr); }
+            .ad-row { flex-direction: row; }
+            .ad-row .ad-slot { flex: 1; }
+        }
+        
+        @media (min-width: 800px) {
+            .games-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer { padding: 40px 24px 24px; }
+            .footer-content { display: flex; gap: 40px; max-width: 900px; margin: 0 auto; }
+            .footer-brand-section { flex: 1; }
+        }
+        
+        /* ========== FONT SIZE ADJUSTMENTS FOR NAV ========== */
+        [data-font-size="large"] .header { height: 60px; }
+        [data-font-size="large"] .nav { top: 60px; min-height: 52px; }
+        [data-font-size="large"] .main { padding-top: 140px; }
+        [data-font-size="large"] .nav-link { padding: 6px 12px; font-size: 0.85rem; }
+        
+        [data-font-size="xlarge"] .header { height: 64px; }
+        [data-font-size="xlarge"] .nav { top: 64px; min-height: 56px; }
+        [data-font-size="xlarge"] .main { padding-top: 150px; }
+        [data-font-size="xlarge"] .nav-link { padding: 6px 10px; font-size: 0.8rem; }
+        [data-font-size="xlarge"] .lang-btn { padding: 6px 10px; font-size: 0.8rem; }
+        [data-font-size="xlarge"] .brand { font-size: 1rem; }
+    </style>
+</head>
+<body>
+    <!-- Language Popup -->
+    <div class="modal-overlay" id="langPopup">
+        <div class="modal lang-popup">
+            <div class="lang-popup-header">
+                <h2>Pilih Bahasa Anda</h2>
+                <p>Pilih bahasa untuk pengalaman belajar terbaik</p>
+            </div>
+            <div class="lang-grid">
+                <a href="https://mibenglish.com/games/" class="lang-option"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></a>
+                <a href="https://mibenglish.com/id/games/" class="lang-option selected"><span class="lang-flag">🇮🇩</span><span class="lang-name">Indonesian</span></a>
+                <a href="https://mibenglish.com/ar/games/" class="lang-option"><span class="lang-flag">🇸🇦</span><span class="lang-name">Arabic</span></a>
+                <a href="https://mibenglish.com/zh/games/" class="lang-option"><span class="lang-flag">🇨🇳</span><span class="lang-name">Chinese</span></a>
+                <a href="https://mibenglish.com/ja/games/" class="lang-option"><span class="lang-flag">🇯🇵</span><span class="lang-name">Japanese</span></a>
+                <a href="https://mibenglish.com/ko/games/" class="lang-option"><span class="lang-flag">🇰🇷</span><span class="lang-name">Korean</span></a>
+                <a href="https://mibenglish.com/vi/games/" class="lang-option"><span class="lang-flag">🇻🇳</span><span class="lang-name">Vietnamese</span></a>
+                <a href="https://mibenglish.com/th/games/" class="lang-option"><span class="lang-flag">🇹🇭</span><span class="lang-name">Thai</span></a>
+                <a href="https://mibenglish.com/es/games/" class="lang-option"><span class="lang-flag">🇪🇸</span><span class="lang-name">Spanish</span></a>
+                <a href="https://mibenglish.com/pt/games/" class="lang-option"><span class="lang-flag">🇵🇹</span><span class="lang-name">Portuguese</span></a>
+                <a href="https://mibenglish.com/fr/games/" class="lang-option"><span class="lang-flag">🇫🇷</span><span class="lang-name">French</span></a>
+                <a href="https://mibenglish.com/de/games/" class="lang-option"><span class="lang-flag">🇩🇪</span><span class="lang-name">German</span></a>
+            </div>
+            <div class="lang-popup-footer">
+                <button class="btn-confirm" onclick="closeLangPopup()">Lanjutkan dalam Bahasa Indonesia</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Settings Modal -->
+    <div class="modal-overlay" id="settingsOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Pengaturan</h2>
+                <button class="modal-close" onclick="closeSettings()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h3>Ukuran Font</h3>
+                    <div class="font-size-grid">
+                        <button class="font-size-btn" data-size="small" onclick="setFontSize('small')">
+                            <span class="size-label">Kecil</span>
+                            <span class="size-preview">Aa</span>
+                        </button>
+                        <button class="font-size-btn active" data-size="normal" onclick="setFontSize('normal')">
+                            <span class="size-label">Normal</span>
+                            <span class="size-preview">Aa</span>
+                        </button>
+                        <button class="font-size-btn" data-size="large" onclick="setFontSize('large')">
+                            <span class="size-label">Besar</span>
+                            <span class="size-preview">Aa</span>
+                        </button>
+                        <button class="font-size-btn" data-size="xlarge" onclick="setFontSize('xlarge')">
+                            <span class="size-label">Sgt Besar</span>
+                            <span class="size-preview">Aa</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h3>Tampilan</h3>
+                    <div class="dark-toggle">
+                        <span>Mode Gelap</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="darkToggle" onchange="toggleDarkMode()">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h3>Bahasa</h3>
+                    <button class="btn-change-lang" onclick="openLangPopup()">Ganti Bahasa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Game Selection Modal -->
+    <div class="modal-overlay" id="gameModal">
+        <div class="modal game-modal">
+            <div class="modal-header game-modal-header">
+                <div class="game-modal-icon" id="modalGameIcon">🎯</div>
+                <div class="game-modal-title" id="modalGameTitle">Vocabulary Quiz</div>
+                <div class="game-modal-subtitle" id="modalGameDesc">Tebak arti kata bahasa Inggris</div>
+                <button class="modal-close" onclick="closeGameModal()" style="position:absolute;top:16px;right:16px;">✕</button>
+            </div>
+            <div class="modal-body game-modal-body">
+                <div class="level-select-title">Pilih Level:</div>
+                <div class="level-select-grid" id="levelSelectGrid"></div>
+                <button class="btn-play" id="playBtn" onclick="startGame()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    Mulai Bermain
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Play Game Modal -->
+    <div class="modal-overlay" id="playModal">
+        <div class="modal play-modal">
+            <div class="modal-header play-modal-header">
+                <div class="play-modal-info">
+                    <div class="play-modal-title" id="playGameTitle">Vocabulary Quiz</div>
+                    <div class="play-modal-level" id="playLevel">Beginner</div>
+                </div>
+                <div class="play-modal-stats">
+                    <div class="play-stat">
+                        <div class="play-stat-value" id="playScore">0</div>
+                        <div class="play-stat-label">Skor</div>
+                    </div>
+                    <div class="play-stat">
+                        <div class="play-stat-value" id="playStreak">0</div>
+                        <div class="play-stat-label">Streak</div>
+                    </div>
+                </div>
+                <button class="modal-close" onclick="closePlayModal()">✕</button>
+            </div>
+            <div class="modal-body play-modal-body" id="playModalBody">
+                <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width: 0%"></div></div>
+                <div class="question-counter" id="questionCounter">Pertanyaan 1 dari 10</div>
+                <div class="question-card">
+                    <div class="question-type" id="questionType">TERJEMAHKAN</div>
+                    <div class="question-word" id="questionWord">Hello</div>
+                    <div class="question-hint" id="questionHint">Pilih arti yang benar</div>
+                </div>
+                <div class="options-grid" id="optionsGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="https://mibenglish.com/" class="brand">MIBEnglish</a>
+        <div class="header-actions">
+            <button class="lang-btn" onclick="openLangPopup()">
+                <span>🇮🇩</span>
+                <span>ID</span>
+                <span>▼</span>
+            </button>
+            <button class="settings-btn" onclick="openSettings()">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.51,8.1,5.74,7.56,6.03L5.18,5.07c-0.22-0.08-0.47,0-0.59,0.22L2.67,8.61c-0.12,0.21-0.07,0.47,0.12,0.61l2.03,1.58c-0.05,0.3-0.07,0.61-0.07,0.94s0.02,0.64,0.07,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54c0.04,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Nav -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="https://mibenglish.com/" class="nav-link">Home</a>
+            <a href="https://mibenglish.com/id/learn/" class="nav-link">Learn</a>
+            <a href="https://mibenglish.com/id/dictionary/" class="nav-link">Dictionary</a>
+            <a href="https://mibenglish.com/id/games/" class="nav-link active">Games</a>
+            <a href="https://mibenglish.com/id/market/" class="nav-link">Market</a>
+        </div>
+    </nav>
+    
+    <!-- Main -->
+    <main class="main">
+        <!-- AD 1: Top Banner -->
+        <div class="ad-slot ad-slot-banner">AdSense - Banner Atas</div>
+        
+        <!-- Category Header -->
+        <div class="category-header">
+            <div class="category-info">
+                <h1 class="category-title">Games Bahasa Inggris</h1>
+                <p class="category-count">15+ games seru untuk belajar</p>
+            </div>
+            <div class="category-icon">🎮</div>
+        </div>
+        
+        <!-- AD 2: After Category Header -->
+        <div class="ad-slot ad-slot-inline">AdSense - Banner Tengah 1</div>
+        
+        <!-- Level Filter -->
+        <div class="level-filter">
+            <button class="level-btn active" data-level="all" onclick="filterGames('all')">Semua</button>
+            <button class="level-btn" data-level="beginner" onclick="filterGames('beginner')">🌱 Beginner</button>
+            <button class="level-btn" data-level="intermediate" onclick="filterGames('intermediate')">🌿 Intermediate</button>
+            <button class="level-btn" data-level="advanced" onclick="filterGames('advanced')">🌳 Advanced</button>
+        </div>
+        
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-value" id="totalGames">15</div>
+                <div class="stat-label">Games</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="totalPlays">125K</div>
+                <div class="stat-label">Dimainkan</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="avgRating">4.8</div>
+                <div class="stat-label">Rating</div>
+            </div>
+        </div>
+        
+        <!-- Games Grid -->
+        <div class="games-grid" id="gamesGrid"></div>
+        
+        <!-- AD 3: After Games Grid -->
+        <div class="ad-slot ad-slot-large">AdSense - Banner Besar</div>
+        
+        <!-- AD 4 & 5: Side by Side -->
+        <div class="ad-row">
+            <div class="ad-slot">AdSense - Rectangle Kiri</div>
+            <div class="ad-slot">AdSense - Rectangle Kanan</div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand-section">
+                <div class="footer-brand">MIBEnglish</div>
+                <p class="footer-desc">Belajar bahasa Inggris dengan games seru! Vocabulary quiz, word match, spelling challenge, dan banyak lagi. Main sambil belajar, tingkatkan kemampuan bahasa Inggrismu!</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/mibenglish" class="social-icon" target="_blank" rel="noopener">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://youtube.com/@mibenglish" class="social-icon" target="_blank" rel="noopener">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@mibenglish" class="social-icon" target="_blank" rel="noopener">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                    </a>
+                    <a href="https://facebook.com/mibenglish" class="social-icon" target="_blank" rel="noopener">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-section-title">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="https://mibenglish.com/id/about.html">Tentang</a></li>
+                    <li><a href="https://mibenglish.com/id/contact.html">Kontak</a></li>
+                    <li><a href="https://mibenglish.com/id/privacy.html">Kebijakan Privasi</a></li>
+                    <li><a href="https://mibenglish.com/id/terms.html">Syarat & Ketentuan</a></li>
+                    <li><a href="https://mibenglish.com/id/disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MIBEnglish. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- FAB -->
+    <button class="share-fab" id="shareFab">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+    </button>
+    <div class="toast" id="toast">Link disalin!</div>
+
+<script>
+// ========== SETTINGS FUNCTIONS ==========
+document.addEventListener('DOMContentLoaded', function() {
+    var savedFontSize = localStorage.getItem('mibFontSize') || 'normal';
+    var savedTheme = localStorage.getItem('mibTheme') || 'light';
+    
+    document.documentElement.setAttribute('data-font-size', savedFontSize);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    var fontSizeBtns = document.querySelectorAll('.font-size-btn');
+    fontSizeBtns.forEach(function(btn) {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-size') === savedFontSize) {
+            btn.classList.add('active');
+        }
+    });
+    
+    if (savedTheme === 'dark') {
+        document.getElementById('darkToggle').checked = true;
+    }
+});
+
+function openSettings() { document.getElementById('settingsOverlay').classList.add('show'); }
+function closeSettings() { document.getElementById('settingsOverlay').classList.remove('show'); }
+function openLangPopup() { document.getElementById('langPopup').classList.add('show'); }
+function closeLangPopup() { document.getElementById('langPopup').classList.remove('show'); localStorage.setItem('mibVisited', 'true'); }
+
+function setFontSize(size) {
+    document.documentElement.setAttribute('data-font-size', size);
+    localStorage.setItem('mibFontSize', size);
+    document.querySelectorAll('.font-size-btn').forEach(function(btn) {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-size') === size) btn.classList.add('active');
+    });
+}
+
+function toggleDarkMode() {
+    var isDark = document.getElementById('darkToggle').checked;
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    localStorage.setItem('mibTheme', isDark ? 'dark' : 'light');
+}
+
+document.getElementById('settingsOverlay').addEventListener('click', function(e) { if (e.target === this) closeSettings(); });
+document.getElementById('langPopup').addEventListener('click', function(e) { if (e.target === this) closeLangPopup(); });
+
+// ========== GAMES DATA ==========
+var gamesData = [
+    {
+        id: 'vocab-quiz',
+        icon: '🎯',
+        title: 'Vocabulary Quiz',
+        desc: 'Tebak arti kata bahasa Inggris',
+        levels: ['beginner', 'intermediate', 'advanced'],
+        rating: 4.9,
+        plays: '25K',
+        type: 'quiz'
+    },
+    {
+        id: 'word-match',
+        icon: '🔗',
+        title: 'Word Match',
+        desc: 'Cocokkan kata dengan artinya',
+        levels: ['beginner', 'intermediate', 'advanced'],
+        rating: 4.8,
+        plays: '18K',
+        type: 'match'
+    },
+    {
+        id: 'fill-blank',
+        icon: '✏️',
+        title: 'Fill in the Blank',
+        desc: 'Isi kata yang kosong dalam kalimat',
+        levels: ['beginner', 'intermediate', 'advanced', 'expert'],
+        rating: 4.7,
+        plays: '15K',
+        type: 'fill'
+    },
+    {
+        id: 'spelling',
+        icon: '🔤',
+        title: 'Spelling Challenge',
+        desc: 'Eja kata dengan benar',
+        levels: ['beginner', 'intermediate', 'advanced'],
+        rating: 4.6,
+        plays: '12K',
+        type: 'spelling'
+    },
+    {
+        id: 'word-scramble',
+        icon: '🔀',
+        title: 'Word Scramble',
+        desc: 'Susun huruf menjadi kata yang benar',
+        levels: ['beginner', 'intermediate', 'advanced'],
+        rating: 4.8,
+        plays: '20K',
+        type: 'scramble'
+    },
+    {
+        id: 'listen-type',
+        icon: '👂',
+        title: 'Listen & Type',
+        desc: 'Dengar dan ketik kata yang kamu dengar',
+        levels: ['beginner', 'intermediate', 'advanced'],
+        rating: 4.5,
+        plays: '8K',
+        type: 'listen'
+    },
+    {
+        id: 'synonym-antonym',
+        icon: '↔️',
+        title: 'Synonym & Antonym',
+        desc: 'Tentukan sinonim dan antonim kata',
+        levels: ['intermediate', 'advanced', 'expert'],
+        rating: 4.7,
+        plays: '10K',
+        type: 'synonym'
+    },
+    {
+        id: 'grammar-quiz',
+        icon: '📝',
+        title: 'Grammar Quiz',
+        desc: 'Uji pemahaman tata bahasa Inggris',
+        levels: ['beginner', 'intermediate', 'advanced', 'expert'],
+        rating: 4.6,
+        plays: '14K',
+        type: 'grammar'
+    },
+    {
+        id: 'sentence-builder',
+        icon: '🏗️',
+        title: 'Sentence Builder',
+        desc: 'Susun kata menjadi kalimat benar',
+        levels: ['beginner', 'intermediate', 'advanced'],
+        rating: 4.8,
+        plays: '11K',
+        type: 'sentence'
+    },
+    {
+        id: 'word-search',
+        icon: '🔍',
+        title: 'Word Search',
+        desc: 'Temukan kata tersembunyi di grid',
+        levels: ['beginner', 'intermediate'],
+        rating: 4.4,
+        plays: '9K',
+        type: 'search'
+    },
+    {
+        id: 'idioms-quiz',
+        icon: '💬',
+        title: 'Idioms Quiz',
+        desc: 'Tebak arti idiom bahasa Inggris',
+        levels: ['intermediate', 'advanced', 'expert'],
+        rating: 4.5,
+        plays: '7K',
+        type: 'idioms'
+    },
+    {
+        id: 'phrasal-verbs',
+        icon: '🚀',
+        title: 'Phrasal Verbs',
+        desc: 'Pelajari dan tebak phrasal verbs',
+        levels: ['intermediate', 'advanced', 'expert'],
+        rating: 4.6,
+        plays: '6K',
+        type: 'phrasal'
+    },
+    {
+        id: 'picture-quiz',
+        icon: '🖼️',
+        title: 'Picture Quiz',
+        desc: 'Tebak kata dari gambar',
+        levels: ['beginner', 'intermediate'],
+        rating: 4.9,
+        plays: '22K',
+        type: 'picture'
+    },
+    {
+        id: 'article-quiz',
+        icon: '📰',
+        title: 'Article Quiz',
+        desc: 'Pilih a/an/the yang benar',
+        levels: ['beginner', 'intermediate'],
+        rating: 4.3,
+        plays: '5K',
+        type: 'article'
+    },
+    {
+        id: 'tense-master',
+        icon: '⏰',
+        title: 'Tense Master',
+        desc: 'Kuasai semua tenses bahasa Inggris',
+        levels: ['beginner', 'intermediate', 'advanced', 'expert'],
+        rating: 4.7,
+        plays: '13K',
+        type: 'tense'
+    }
+];
+
+var levelLabels = {
+    'beginner': { name: 'Beginner', desc: 'Kata-kata dasar', badge: 'badge-easy' },
+    'intermediate': { name: 'Intermediate', desc: 'Kata-kata menengah', badge: 'badge-medium' },
+    'advanced': { name: 'Advanced', desc: 'Kata-kata tingkat lanjut', badge: 'badge-hard' },
+    'expert': { name: 'Expert', desc: 'Tingkat mahir', badge: 'badge-expert' }
+};
+
+var levelIcons = {
+    'beginner': '🌱',
+    'intermediate': '🌿',
+    'advanced': '🌳',
+    'expert': '🏆'
+};
+
+// ========== QUIZ DATA ==========
+var quizData = {
+    'vocab-quiz': {
+        beginner: [
+            { word: 'Hello', correct: 'Halo', options: ['Halo', 'Selamat tinggal', 'Terima kasih', 'Maaf'] },
+            { word: 'Book', correct: 'Buku', options: ['Buku', 'Meja', 'Kursi', 'Pena'] },
+            { word: 'Water', correct: 'Air', options: ['Api', 'Air', 'Tanah', 'Angin'] },
+            { word: 'House', correct: 'Rumah', options: ['Sekolah', 'Rumah', 'Kantor', 'Toko'] },
+            { word: 'Eat', correct: 'Makan', options: ['Minum', 'Tidur', 'Makan', 'Jalan'] },
+            { word: 'Big', correct: 'Besar', options: ['Kecil', 'Besar', 'Tinggi', 'Pendek'] },
+            { word: 'Happy', correct: 'Bahagia', options: ['Sedih', 'Marah', 'Bahagia', 'Takut'] },
+            { word: 'Run', correct: 'Lari', options: ['Jalan', 'Lari', 'Duduk', 'Berdiri'] },
+            { word: 'Red', correct: 'Merah', options: ['Biru', 'Hijau', 'Kuning', 'Merah'] },
+            { word: 'Father', correct: 'Ayah', options: ['Ibu', 'Ayah', 'Anak', 'Saudara'] }
+        ],
+        intermediate: [
+            { word: 'Achievement', correct: 'Prestasi', options: ['Prestasi', 'Kegagalan', 'Harapan', 'Impian'] },
+            { word: 'Determine', correct: 'Menentukan', options: ['Menentukan', 'Mempertimbangkan', 'Memikirkan', 'Mengabaikan'] },
+            { word: 'Significant', correct: 'Penting', options: ['Sepele', 'Penting', 'Biasa', 'Umum'] },
+            { word: 'Establish', correct: 'Mendirikan', options: ['Menghancurkan', 'Mendirikan', 'Meninggalkan', 'Mengubah'] },
+            { word: 'Consequence', correct: 'Konsekuensi', options: ['Konsekuensi', 'Hadiah', 'Keuntungan', 'Hiburan'] }
+        ],
+        advanced: [
+            { word: 'Ubiquitous', correct: 'Ada di mana-mana', options: ['Langka', 'Ada di mana-mana', 'Tersembunyi', 'Sementara'] },
+            { word: 'Ephemeral', correct: 'Sementara', options: ['Kekal', 'Sementara', 'Abadi', 'Tetap'] },
+            { word: 'Pragmatic', correct: 'Praktis', options: ['Idealis', 'Praktis', 'Emosional', 'Abstrak'] }
+        ]
+    },
+    'word-match': {
+        beginner: [
+            { word: 'Apple', correct: 'Apel', options: ['Apel', 'Jeruk', 'Pisang', 'Mangga'] },
+            { word: 'Cat', correct: 'Kucing', options: ['Anjing', 'Kucing', 'Burung', 'Ikan'] },
+            { word: 'Sun', correct: 'Matahari', options: ['Bulan', 'Bintang', 'Matahari', 'Awan'] }
+        ]
+    },
+    'fill-blank': {
+        beginner: [
+            { word: 'I ___ a student.', hint: 'am/is/are', correct: 'am', options: ['am', 'is', 'are', 'be'] },
+            { word: 'She ___ to school every day.', hint: 'go/goes', correct: 'goes', options: ['go', 'goes', 'going', 'went'] },
+            { word: 'They ___ playing football.', hint: 'am/is/are', correct: 'are', options: ['am', 'is', 'are', 'be'] }
+        ]
+    },
+    'grammar-quiz': {
+        beginner: [
+            { word: 'She ___ a book now.', hint: 'Present Continuous', correct: 'is reading', options: ['reads', 'is reading', 'read', 'reading'] },
+            { word: 'I ___ to Jakarta yesterday.', hint: 'Past Tense', correct: 'went', options: ['go', 'goes', 'went', 'going'] }
+        ]
+    },
+    'synonym-antonym': {
+        intermediate: [
+            { word: 'Happy', hint: 'Sinonim', correct: 'Joyful', options: ['Sad', 'Joyful', 'Angry', 'Tired'] },
+            { word: 'Big', hint: 'Antonim', correct: 'Small', options: ['Large', 'Small', 'Huge', 'Giant'] }
+        ]
+    }
+};
+
+// ========== GAME STATE ==========
+var currentGame = null;
+var currentLevel = null;
+var currentQuestion = 0;
+var score = 0;
+var streak = 0;
+var questions = [];
+var totalQuestions = 10;
+
+function $(id) { return document.getElementById(id); }
+
+// ========== RENDER GAMES ==========
+function renderGames(filter) {
+    var html = '';
+    var filteredGames = gamesData;
+    
+    if (filter && filter !== 'all') {
+        filteredGames = gamesData.filter(function(g) {
+            return g.levels.indexOf(filter) !== -1;
+        });
+    }
+    
+    filteredGames.forEach(function(game) {
+        html += '<div class="game-card" onclick="openGameModal(\'' + game.id + '\')">';
+        html += '<div class="game-card-header">';
+        html += '<div class="game-icon">' + game.icon + '</div>';
+        html += '<div class="game-info">';
+        html += '<div class="game-title">' + game.title + '</div>';
+        html += '<div class="game-desc">' + game.desc + '</div>';
+        html += '</div>';
+        html += '</div>';
+        html += '<div class="game-card-body">';
+        html += '<div class="game-levels">';
+        game.levels.forEach(function(lvl) {
+            html += '<span class="game-level-btn" onclick="event.stopPropagation(); quickPlay(\'' + game.id + '\', \'' + lvl + '\')">' + levelLabels[lvl].name + '</span>';
+        });
+        html += '</div>';
+        html += '<div class="game-meta">';
+        html += '<div class="game-rating"><span class="stars">★</span> ' + game.rating + '</div>';
+        html += '<div class="game-plays">👥 ' + game.plays + '</div>';
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+    });
+    
+    $('gamesGrid').innerHTML = html;
+}
+
+function filterGames(level) {
+    document.querySelectorAll('.level-btn').forEach(function(btn) {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-level') === level) {
+            btn.classList.add('active');
+        }
+    });
+    renderGames(level);
+}
+
+// ========== GAME MODAL ==========
+function openGameModal(gameId) {
+    currentGame = gamesData.find(function(g) { return g.id === gameId; });
+    if (!currentGame) return;
+    
+    $('modalGameIcon').textContent = currentGame.icon;
+    $('modalGameTitle').textContent = currentGame.title;
+    $('modalGameDesc').textContent = currentGame.desc;
+    
+    var levelHtml = '';
+    currentGame.levels.forEach(function(lvl) {
+        var label = levelLabels[lvl];
+        levelHtml += '<div class="level-option" onclick="selectLevel(\'' + lvl + '\')" data-level="' + lvl + '">';
+        levelHtml += '<div class="level-option-icon">' + levelIcons[lvl] + '</div>';
+        levelHtml += '<div class="level-option-info">';
+        levelHtml += '<div class="level-option-name">' + label.name + '</div>';
+        levelHtml += '<div class="level-option-desc">' + label.desc + '</div>';
+        levelHtml += '</div>';
+        levelHtml += '<span class="level-option-badge ' + label.badge + '">' + lvl.toUpperCase() + '</span>';
+        levelHtml += '</div>';
+    });
+    $('levelSelectGrid').innerHTML = levelHtml;
+    
+    // Select first level by default
+    currentLevel = currentGame.levels[0];
+    document.querySelector('.level-option').classList.add('selected');
+    
+    $('gameModal').classList.add('show');
+}
+
+function closeGameModal() {
+    $('gameModal').classList.remove('show');
+}
+
+function selectLevel(level) {
+    currentLevel = level;
+    document.querySelectorAll('.level-option').forEach(function(opt) {
+        opt.classList.remove('selected');
+        if (opt.getAttribute('data-level') === level) {
+            opt.classList.add('selected');
+        }
+    });
+}
+
+function quickPlay(gameId, level) {
+    currentGame = gamesData.find(function(g) { return g.id === gameId; });
+    currentLevel = level;
+    startGame();
+}
+
+// ========== PLAY GAME ==========
+function startGame() {
+    closeGameModal();
+    
+    // Reset state
+    currentQuestion = 0;
+    score = 0;
+    streak = 0;
+    
+    // Get questions for this game and level
+    var gameQuestions = quizData[currentGame.id] && quizData[currentGame.id][currentLevel];
+    if (!gameQuestions || gameQuestions.length === 0) {
+        // Use default vocab quiz if no specific data
+        gameQuestions = quizData['vocab-quiz'][currentLevel] || quizData['vocab-quiz']['beginner'];
+    }
+    
+    // Shuffle and pick questions
+    questions = shuffleArray(gameQuestions.slice()).slice(0, totalQuestions);
+    
+    // Update UI
+    $('playGameTitle').textContent = currentGame.title;
+    $('playLevel').textContent = levelLabels[currentLevel].name;
+    $('playScore').textContent = '0';
+    $('playStreak').textContent = '0';
+    
+    $('playModal').classList.add('show');
+    showQuestion();
+}
+
+function closePlayModal() {
+    $('playModal').classList.remove('show');
+}
+
+function showQuestion() {
+    if (currentQuestion >= questions.length) {
+        showResult();
+        return;
+    }
+    
+    var q = questions[currentQuestion];
+    var progress = ((currentQuestion) / questions.length) * 100;
+    
+    $('progressFill').style.width = progress + '%';
+    $('questionCounter').textContent = 'Pertanyaan ' + (currentQuestion + 1) + ' dari ' + questions.length;
+    $('questionWord').textContent = q.word;
+    $('questionHint').textContent = q.hint || 'Pilih jawaban yang benar';
+    
+    // Shuffle options
+    var options = shuffleArray(q.options.slice());
+    
+    var optionsHtml = '';
+    options.forEach(function(opt) {
+        optionsHtml += '<button class="option-btn" onclick="checkAnswer(\'' + opt.replace(/'/g, "\\'") + '\', \'' + q.correct.replace(/'/g, "\\'") + '\', this)">' + opt + '</button>';
+    });
+    $('optionsGrid').innerHTML = optionsHtml;
+}
+
+function checkAnswer(selected, correct, btn) {
+    var buttons = document.querySelectorAll('.option-btn');
+    buttons.forEach(function(b) { b.disabled = true; });
+    
+    if (selected === correct) {
+        btn.classList.add('correct');
+        score += 10 + (streak * 2);
+        streak++;
+        $('playScore').textContent = score;
+        $('playStreak').textContent = streak;
+    } else {
+        btn.classList.add('wrong');
+        streak = 0;
+        $('playStreak').textContent = streak;
+        // Show correct answer
+        buttons.forEach(function(b) {
+            if (b.textContent === correct) {
+                b.classList.add('correct');
+            }
+        });
+    }
+    
+    currentQuestion++;
+    setTimeout(showQuestion, 1000);
+}
+
+function showResult() {
+    var percentage = Math.round((score / (questions.length * 20)) * 100);
+    var icon, title;
+    
+    if (percentage >= 90) { icon = '🏆'; title = 'Luar Biasa!'; }
+    else if (percentage >= 70) { icon = '🌟'; title = 'Bagus Sekali!'; }
+    else if (percentage >= 50) { icon = '👍'; title = 'Cukup Bagus!'; }
+    else { icon = '💪'; title = 'Terus Berlatih!'; }
+    
+    var html = '<div class="result-card">';
+    html += '<div class="result-icon">' + icon + '</div>';
+    html += '<div class="result-title">' + title + '</div>';
+    html += '<div class="result-score">' + score + ' pts</div>';
+    html += '<div class="result-detail">' + currentQuestion + ' pertanyaan selesai</div>';
+    html += '<div class="result-actions">';
+    html += '<button class="btn-retry" onclick="startGame()">🔁 Main Lagi</button>';
+    html += '<button class="btn-home" onclick="closePlayModal()">🏠 Kembali</button>';
+    html += '</div>';
+    html += '</div>';
+    
+    $('playModalBody').innerHTML = html;
+}
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
+
+// ========== SHARE & TOAST ==========
+$('shareFab').addEventListener('click', function() {
+    var url = window.location.href;
+    if (navigator.share) {
+        navigator.share({ url: url }).catch(function() { copyToClipboard(url); });
+    } else {
+        copyToClipboard(url);
+    }
+});
+
+function copyToClipboard(url) {
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(function() { showToast('Link disalin!'); }).catch(function() { showToast('Gagal menyalin link'); });
+    } else {
+        showToast('Gagal menyalin link');
+    }
+}
+
+function showToast(message) {
+    $('toast').textContent = message;
+    $('toast').classList.add('show');
+    setTimeout(function() { $('toast').classList.remove('show'); }, 2000);
+}
+
+// ========== INITIALIZE ==========
+(function() {
+    renderGames('all');
+})();
+</script>
+</body>
+</html>
 
