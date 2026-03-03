@@ -1511,30 +1511,91 @@
         
         function initVoices() {
             let voices = voiceSynthesis.getVoices();
-            maleVoice = voices.find(voice => 
-                voice.lang.startsWith('en') && 
-                (voice.name.toLowerCase().includes('male') || 
-                 voice.name.toLowerCase().includes('david') ||
-                 voice.name.toLowerCase().includes('james') ||
-                 voice.name.toLowerCase().includes('daniel') ||
-                 voice.name.toLowerCase().includes('guy') ||
-                 voice.name.toLowerCase().includes('mark') ||
-                 voice.name.toLowerCase().includes('alex') ||
-                 voice.name.toLowerCase().includes('tom') ||
-                 !voice.name.toLowerCase().includes('female') &&
-                 !voice.name.toLowerCase().includes('samantha') &&
-                 !voice.name.toLowerCase().includes('victoria') &&
-                 !voice.name.toLowerCase().includes('karen') &&
-                 !voice.name.toLowerCase().includes('moira') &&
-                 !voice.name.toLowerCase().includes('fiona'))
-            );
             
-            if (!maleVoice) {
-                maleVoice = voices.find(voice => voice.lang.startsWith('en'));
+            // Daftar nama suara wanita yang harus dihindari
+            const femaleVoiceNames = [
+                'female', 'samantha', 'victoria', 'karen', 'moira', 'fiona',
+                'siri', 'cortana', 'alex', 'alice', 'anna', 'beta', 'carmit',
+                'damayanti', 'dora', 'ellen', 'eva', 'fiona', 'fred', // Fred usually male but checking
+                'greta', 'hanna', 'ioana', 'jill', 'julie', 'kate', 'kyoko',
+                'laura', 'lea', 'linda', 'lotte', 'luciana', 'lynette', 'majj',
+                'mariska', 'mei-jia', 'melina', 'milena', 'minnie', 'monica',
+                'nora', 'o-ren', 'paulina', 'sara', 'sarah', 'sophia', 'tessa',
+                'thu', 'ting-ting', 'tracy', 'vanessa', 'veena', 'vicki',
+                'victoria', 'xiao-xiao', 'ya-ling', 'yu-shu', 'zira',
+                'susan', 'hazel', 'rachel', 'amy', 'emma', 'brian', 'aria',
+                'jenny', 'joanna', 'kendra', 'kimberly', 'salli', 'mizuki',
+                'zhiyu', 'mia', 'penelope', 'lupe', 'conchita', 'lucia',
+                'marta', 'carla', 'bianca', 'takumi', 'mizuki', 'kazuha',
+                'tomoko', 'yuna', 'seoyeon', 'jiyun', 'sunhi', 'yumi'
+            ];
+            
+            // Daftar nama suara pria
+            const maleVoiceNames = [
+                'male', 'david', 'james', 'daniel', 'guy', 'mark', 'alex',
+                'tom', 'george', 'john', 'michael', 'robert', 'william',
+                'richard', 'charles', 'thomas', 'christopher', 'matthew',
+                'anthony', 'steven', 'brian', 'kevin', 'jason', 'jeffrey',
+                'scott', 'eric', 'andrew', 'paul', 'joshua', 'ryan',
+                'nick', 'ryan', 'jake', 'sam', 'ben', 'adrian', 'brad',
+                'calvin', 'derik', 'eddie', 'frank', 'grant', 'henry',
+                'ivan', 'julian', 'kyle', 'leo', 'mike', 'nathan', 'owen',
+                'peter', 'quinn', 'ross', 'sean', 'tim', 'victor', 'wesley',
+                'xavier', 'zach', 'arthur', 'bruce', 'carl', 'derek',
+                'ethan', 'felix', 'gary', 'harry', 'ian', 'jack', 'keith',
+                'larry', 'martin', 'neil', 'oscar', 'patrick', 'quincy',
+                'ralph', 'simon', 'troy', 'vince', 'walt', 'xander',
+                'albert', 'bernard', 'clarence', 'dennis', 'edmund',
+                'gordon', 'harold', 'ivan', 'joseph', 'kenneth', 'lawrence',
+                'marshall', 'nelson', 'oliver', 'phillip', 'raymond',
+                'shane', 'theodore', 'vincent', 'warren', 'wayne', 'yosef',
+                'google us english', 'microsoft david', 'microsoft mark',
+                'microsoft richard', 'microsoft george', 'microsoft james'
+            ];
+            
+            // Fungsi untuk mengecek apakah suara adalah wanita
+            function isFemaleVoice(voiceName) {
+                const name = voiceName.toLowerCase();
+                return femaleVoiceNames.some(femaleName => name.includes(femaleName));
             }
             
-            if (!maleVoice && voices.length > 0) {
-                maleVoice = voices[0];
+            // Fungsi untuk mengecek apakah suara adalah pria
+            function isMaleVoice(voiceName) {
+                const name = voiceName.toLowerCase();
+                return maleVoiceNames.some(maleName => name.includes(maleName));
+            }
+            
+            // Filter suara bahasa Inggris
+            let englishVoices = voices.filter(voice => voice.lang.startsWith('en'));
+            
+            // Prioritas 1: Cari suara yang jelas-jelas pria dan BUKAN wanita
+            maleVoice = englishVoices.find(voice => {
+                const name = voice.name.toLowerCase();
+                return isMaleVoice(name) && !isFemaleVoice(name);
+            });
+            
+            // Prioritas 2: Cari suara dengan "male" di nama
+            if (!maleVoice) {
+                maleVoice = englishVoices.find(voice => 
+                    voice.name.toLowerCase().includes('male')
+                );
+            }
+            
+            // Prioritas 3: Cari suara bahasa Inggris yang BUKAN wanita
+            if (!maleVoice) {
+                maleVoice = englishVoices.find(voice => !isFemaleVoice(voice.name));
+            }
+            
+            // Prioritas 4: Ambil suara Inggris pertama yang tersedia (fallback terakhir)
+            if (!maleVoice && englishVoices.length > 0) {
+                maleVoice = englishVoices[0];
+            }
+            
+            // Log untuk debugging (bisa dihapus di production)
+            if (maleVoice) {
+                console.log('Selected voice:', maleVoice.name);
+            } else {
+                console.log('No suitable male voice found');
             }
         }
         
