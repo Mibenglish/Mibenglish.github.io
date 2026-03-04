@@ -224,6 +224,7 @@
             cursor: pointer;
             font-family: inherit;
             transition: all 0.3s ease;
+            min-width: 70px;
         }
         
         .voice-btn:hover {
@@ -244,21 +245,52 @@
         }
         
         .voice-btn.loading {
-            background: rgba(201, 162, 39, 0.5);
-            border-color: #c9a227;
-            color: #0d1f0d;
-            animation: blink 1s infinite;
-            cursor: wait;
+            background: #3d7a4f;
+            border-color: #3d7a4f;
+            color: #ffffff;
         }
         
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+        .voice-btn.error {
+            background: #d4793a;
+            border-color: #d4793a;
+            color: #ffffff;
         }
         
         @keyframes pulse {
             0%, 100% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.4); }
             50% { box-shadow: 0 0 0 8px rgba(201, 162, 39, 0); }
+        }
+        
+        /* ========== VOICE STATUS TOOLTIP ========== */
+        .voice-status {
+            position: fixed;
+            top: 70px;
+            right: 16px;
+            background: var(--primary-green);
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            z-index: 1001;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            max-width: 250px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .voice-status.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .voice-status.error {
+            background: #d4793a;
+        }
+        
+        .voice-status.success {
+            background: var(--accent-green);
         }
         
         /* ========== SENTENCE HIGHLIGHTING ========== */
@@ -684,7 +716,7 @@
         [data-theme="dark"] .related-title { color: #7cc87c; }
         [data-theme="dark"] .share-options { background: #2a3a2a; border: 1px solid #3a5a3a; }
         [data-theme="dark"] .share-options a { color: #d4d4d4; }
-        [data-theme="dark"] .share-options a:hover { background: #3a5a3a; }
+        [data-theme="dark"] .share-options a:hover { background: #3a4a3a; }
         [data-theme="dark"] .share-toggle { background: #2d5a3d; border-color: #c9a227; }
         [data-theme="dark"] .quiz-section { background: linear-gradient(135deg, #1a2a1a 0%, #2a3a2a 100%); }
         [data-theme="dark"] .quiz-section h2 { color: #ffd966; }
@@ -757,6 +789,9 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Voice Status Notification -->
+    <div class="voice-status" id="voiceStatus"></div>
     
     <!-- Language Popup -->
     <div class="modal-overlay" id="langPopup">
@@ -915,7 +950,7 @@
                     <p class="banner-desc">Enjoy a fun English learning experience with our interactive games—suitable for all levels</p>
                     <div class="banner-features">
                     </div>
-                    <span class="banner-cta">Let’s start playing! <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                    <span class="banner-cta">Let's start playing! <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
                 </div>
             </a>
             
@@ -985,7 +1020,7 @@
                     <div class="glow-effect glow-2"></div>
                     <span class="banner-badge">🛒 Marketplace</span>
                     <h3 class="banner-title">Shop for Your Needs at Mibenglish Market!</h3>
-                    <p class="banner-desc">✨ Explore a variety of high-quality products at unbeatable prices. From study books to educational materials, we’ve got everything you need!</p>
+                    <p class="banner-desc">✨ Explore a variety of high-quality products at unbeatable prices. From study books to educational materials, we've got everything you need!</p>
                     <div class="banner-features">
                     </div>
                     <span class="banner-cta">Visit the Market <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
@@ -1021,11 +1056,11 @@
                     <div class="glow-effect glow-2"></div>
                     <span class="banner-badge">🎯 Trending!</span>
                     <h3 class="banner-title">Challenge Yourself with the Latest Educational Game!</h3>
-                    <p class="banner-desc">Don’t miss out on exciting games that will make your English learning process even more enjoyable. Start playing now and see your progress!
+                    <p class="banner-desc">Don't miss out on exciting games that will make your English learning process even more enjoyable. Start playing now and see your progress!
 </p>
                     <div class="banner-features">
                     </div>
-                    <span class="banner-cta">Let’s start playing! <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                    <span class="banner-cta">Let's start playing! <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
                 </div>
             </a>
             
@@ -1048,7 +1083,7 @@
                     <div class="glow-effect glow-2"></div>
                     <span class="banner-badge">⭐ Best Seller!</span>
                     <h3 class="banner-title">Complete Learning Supplies at Mibenglish Market!</h3>
-                    <p class="banner-desc">Need books, stationery, or learning accessories? Everything’s here at affordable prices. Check it out before it’s gone!</p>
+                    <p class="banner-desc">Need books, stationery, or learning accessories? Everything's here at affordable prices. Check it out before it's gone!</p>
                     <div class="banner-features">
                     </div>
                     <span class="banner-cta">Shop Now <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
@@ -1275,6 +1310,9 @@
             });
             if (savedTheme === 'dark') document.getElementById('darkToggle').checked = true;
             loadQuestion();
+            
+            // ========== PRE-LOAD VOICE ON PAGE LOAD ========== //
+            preLoadVoice();
         });
         
         function openSettings() { document.getElementById('settingsOverlay').classList.add('show'); }
@@ -1376,184 +1414,160 @@
             }
         });
         
-        // ========== AUTOVOICE FEATURE - IMPROVED WITH PRE-LOADING ========== //
+        // ========== IMPROVED AUTOVOICE FEATURE ========== //
+        // Global voice variables
         let voiceSynthesis = window.speechSynthesis;
         let voiceIsPlaying = false;
         let voiceIsPaused = false;
         let currentSentenceIndex = 0;
         let sentences = [];
-        let selectedVoice = null;
+        let maleVoice = null;
         let currentUtterance = null;
-        let voicesReady = false;
-        let voiceLoadAttempts = 0;
-        const MAX_VOICE_LOAD_ATTEMPTS = 10;
+        let voiceInitialized = false;
+        let voiceInitAttempts = 0;
+        const MAX_VOICE_INIT_ATTEMPTS = 10;
         
-        // Comprehensive list of known MALE English voice names across different platforms
+        // Male voice names to prioritize (common English male voices across platforms)
         const MALE_VOICE_NAMES = [
-            // Google voices
-            'google us english male', 'google uk english male', 'google australia english male',
-            'google india english male',
-            // Microsoft voices (Windows)
-            'microsoft david', 'microsoft mark', 'microsoft james', 'microsoft guy',
-            'microsoft richard', 'microsoft george', 'microsoft steve',
-            // Apple voices (macOS/iOS)
-            'alex', 'daniel', 'tom', 'fred', 'junior', 'ralph', 'bruce', 'fred',
-            'marvin', 'trinoids', 'whisper', 'zarvox',
-            // Amazon Polly voices
-            'matthew', 'justin', 'joey', 'kevin', 'gregory', 'matthew', 'brian',
-            'arthur', 'oscar', 'ryan',
-            // Android voices
-            'english male', 'en-us male', 'en-gb male',
-            // Other common male voice identifiers
-            'male', 'david', 'james', 'john', 'michael', 'robert', 'william',
-            'richard', 'thomas', 'charles', 'christopher', 'steven', 'brian',
-            'kevin', 'jason', 'scott', 'eric', 'adam', 'nathan', 'peter',
-            'sam', 'rory', 'hugo', 'karl', 'lee', 'oliver', 'ryan'
+            'david', 'james', 'daniel', 'guy', 'mark', 'alex', 'tom', 'paul', 
+            'george', 'richard', 'steven', 'michael', 'brian', 'kevin', 'ryan',
+            'google us english male', 'microsoft david', 'microsoft mark', 
+            'microsoft guy', 'alex', 'fred', 'junior', 'ralph', 'bruce',
+            'male', 'english male', 'us english male'
         ];
         
-        // Female voice names to AVOID
+        // Female voice names to avoid
         const FEMALE_VOICE_NAMES = [
-            'female', 'samantha', 'victoria', 'karen', 'moira', 'fiona',
-            'siri', 'alexandra', 'amelie', 'anna', 'carmit', 'ellen',
-            'ioana', 'joana', 'kate', 'kyoko', 'laura', 'lena', 'lieke',
-            'linda', 'martha', 'mekhi', 'melina', 'mercedes', 'mila',
-            'monica', 'nora', 'olya', 'paulina', 'sara', 'satu', 'sinji',
-            'tessa', 'veena', 'victoria', 'xander', 'yuna', 'zira',
-            'susan', 'hazel', 'helen', 'heather', 'jenny', 'aria', 'jane',
-            'michelle', 'catherine', 'emily', 'grace', 'hannah', 'lisa',
-            'mary', 'naomi', 'rachel', 'rebecca', 'rosie', 'sarah', 'zoe'
+            'samantha', 'victoria', 'karen', 'moira', 'fiona', 'susan', 'vicki',
+            'female', 'woman', 'girl', 'alice', 'ella', 'emma', 'jenny', 'linda',
+            'google us english female', 'microsoft zira', 'microsoft susan',
+            'english female', 'us english female'
         ];
         
-        // Initialize and pre-load voices with retry mechanism
-        function initVoices() {
-            let voices = voiceSynthesis.getVoices();
-            voiceLoadAttempts++;
+        // Show status notification
+        function showVoiceStatus(message, isError, isSuccess) {
+            let statusEl = document.getElementById('voiceStatus');
+            if (!statusEl) return;
             
-            if (voices.length === 0 && voiceLoadAttempts < MAX_VOICE_LOAD_ATTEMPTS) {
-                // Retry if no voices found yet
-                setTimeout(initVoices, 100);
+            statusEl.textContent = message;
+            statusEl.classList.remove('error', 'success');
+            if (isError) statusEl.classList.add('error');
+            if (isSuccess) statusEl.classList.add('success');
+            statusEl.classList.add('show');
+            
+            // Auto hide after 3 seconds
+            setTimeout(function() {
+                statusEl.classList.remove('show');
+            }, 3000);
+        }
+        
+        // Pre-load voice on page load - CRITICAL FOR RELIABILITY
+        function preLoadVoice() {
+            let voiceBtn = document.getElementById('voiceBtn');
+            
+            // Check if speech synthesis is supported
+            if (!voiceSynthesis) {
+                console.error('Speech synthesis not supported');
+                showVoiceStatus('Browser does not support voice', true, false);
                 return;
             }
             
-            // Priority 1: Find a male English voice by name matching
-            selectedVoice = findMaleEnglishVoice(voices);
+            // Force voices to load by calling getVoices
+            let voices = voiceSynthesis.getVoices();
             
-            // Priority 2: Fall back to ANY English voice
-            if (!selectedVoice) {
-                selectedVoice = voices.find(voice => voice.lang.startsWith('en'));
-            }
-            
-            // Priority 3: Fall back to first available voice
-            if (!selectedVoice && voices.length > 0) {
-                selectedVoice = voices[0];
-            }
-            
-            // Mark voices as ready and pre-cache
-            if (selectedVoice) {
-                voicesReady = true;
-                preCacheVoice();
-                updateVoiceButtonReady();
+            if (voices.length > 0) {
+                // Voices already loaded
+                selectMaleVoice(voices);
+            } else {
+                // Voices not loaded yet, set up listener
+                voiceBtn.classList.add('loading');
+                
+                // Multiple attempts to load voices
+                let loadAttempt = 0;
+                let loadInterval = setInterval(function() {
+                    loadAttempt++;
+                    voices = voiceSynthesis.getVoices();
+                    
+                    if (voices.length > 0) {
+                        clearInterval(loadInterval);
+                        selectMaleVoice(voices);
+                        voiceBtn.classList.remove('loading');
+                    } else if (loadAttempt >= MAX_VOICE_INIT_ATTEMPTS) {
+                        clearInterval(loadInterval);
+                        voiceBtn.classList.remove('loading');
+                        console.warn('Could not load voices after multiple attempts');
+                        showVoiceStatus('Voice loading... Try again in a moment', false, false);
+                    }
+                }, 200);
+                
+                // Also listen for the voiceschanged event
+                if (voiceSynthesis.onvoiceschanged !== undefined) {
+                    voiceSynthesis.onvoiceschanged = function() {
+                        voices = voiceSynthesis.getVoices();
+                        if (voices.length > 0) {
+                            selectMaleVoice(voices);
+                            voiceBtn.classList.remove('loading');
+                        }
+                    };
+                }
             }
         }
         
-        // Find the best male English voice
-        function findMaleEnglishVoice(voices) {
-            if (!voices || voices.length === 0) return null;
+        // Select the best male voice available
+        function selectMaleVoice(voices) {
+            if (!voices || voices.length === 0) {
+                console.warn('No voices available');
+                return;
+            }
             
-            // First, try to find voices that match known male names exactly
+            console.log('Available voices:', voices.map(v => v.name + ' (' + v.lang + ')'));
+            
+            // Priority 1: Find explicitly male English voice by name
             for (let maleName of MALE_VOICE_NAMES) {
                 let found = voices.find(voice => 
-                    voice.lang.startsWith('en') && 
-                    voice.name.toLowerCase().includes(maleName.toLowerCase())
+                    voice.lang.toLowerCase().startsWith('en') && 
+                    voice.name.toLowerCase().includes(maleName)
                 );
-                if (found) return found;
-            }
-            
-            // Second, try to find English voices that are NOT female
-            let nonFemaleEnglishVoice = voices.find(voice => {
-                if (!voice.lang.startsWith('en')) return false;
-                let nameLower = voice.name.toLowerCase();
-                // Check if it's explicitly female
-                for (let femaleName of FEMALE_VOICE_NAMES) {
-                    if (nameLower.includes(femaleName.toLowerCase())) {
-                        return false;
-                    }
+                if (found) {
+                    maleVoice = found;
+                    console.log('Found male voice by name:', maleVoice.name);
+                    voiceInitialized = true;
+                    return;
                 }
-                return true;
-            });
-            
-            if (nonFemaleEnglishVoice) return nonFemaleEnglishVoice;
-            
-            // Third, just get any English voice (might be female but at least works)
-            return voices.find(voice => voice.lang.startsWith('en'));
-        }
-        
-        // Pre-cache voice by speaking silently - this "warms up" the TTS engine
-        function preCacheVoice() {
-            if (!selectedVoice) return;
-            
-            // Create a silent utterance to pre-load the voice
-            let warmUpUtterance = new SpeechSynthesisUtterance('');
-            if (selectedVoice) {
-                warmUpUtterance.voice = selectedVoice;
             }
-            warmUpUtterance.lang = 'en-US';
-            warmUpUtterance.volume = 0; // Silent
-            warmUpUtterance.rate = 1;
-            warmUpUtterance.pitch = 1;
             
-            // Speak silently to pre-load the voice engine
-            voiceSynthesis.speak(warmUpUtterance);
+            // Priority 2: Find English voice that is NOT female
+            let englishVoices = voices.filter(voice => 
+                voice.lang.toLowerCase().startsWith('en')
+            );
             
-            // Also try a short test phrase for better caching
-            setTimeout(function() {
-                let testUtterance = new SpeechSynthesisUtterance('Ready');
-                if (selectedVoice) {
-                    testUtterance.voice = selectedVoice;
+            for (let voice of englishVoices) {
+                let isFemale = FEMALE_VOICE_NAMES.some(femaleName => 
+                    voice.name.toLowerCase().includes(femaleName)
+                );
+                if (!isFemale) {
+                    maleVoice = voice;
+                    console.log('Found non-female English voice:', maleVoice.name);
+                    voiceInitialized = true;
+                    return;
                 }
-                testUtterance.lang = 'en-US';
-                testUtterance.volume = 0; // Silent
-                testUtterance.rate = 1;
-                voiceSynthesis.speak(testUtterance);
-            }, 100);
-        }
-        
-        // Update voice button to show ready state
-        function updateVoiceButtonReady() {
-            let voiceBtn = document.getElementById('voiceBtn');
-            if (voiceBtn && voicesReady) {
-                voiceBtn.classList.remove('loading');
-                voiceBtn.title = 'Auto Voice - Read article aloud (Click to start)';
+            }
+            
+            // Priority 3: Any English voice
+            maleVoice = englishVoices[0] || null;
+            if (maleVoice) {
+                console.log('Using first available English voice:', maleVoice.name);
+                voiceInitialized = true;
+                return;
+            }
+            
+            // Priority 4: Any voice available
+            maleVoice = voices[0] || null;
+            if (maleVoice) {
+                console.log('Using first available voice:', maleVoice.name);
+                voiceInitialized = true;
             }
         }
-        
-        // Load voices with proper event handling
-        if (voiceSynthesis.onvoiceschanged !== undefined) {
-            voiceSynthesis.onvoiceschanged = initVoices;
-        }
-        
-        // Immediate initialization attempt
-        initVoices();
-        
-        // Also try after a delay for browsers that load voices slowly
-        setTimeout(function() {
-            if (!voicesReady) {
-                initVoices();
-            }
-        }, 500);
-        
-        // Additional delayed attempts for stubborn browsers
-        setTimeout(function() {
-            if (!voicesReady) {
-                initVoices();
-            }
-        }, 1000);
-        
-        setTimeout(function() {
-            if (!voicesReady) {
-                initVoices();
-            }
-        }, 2000);
         
         // Extract sentences from article content
         function extractSentences() {
@@ -1605,6 +1619,8 @@
                     }
                 }
             });
+            
+            console.log('Extracted', sentences.length, 'sentences for voice reading');
         }
         
         // Highlight current sentence
@@ -1629,7 +1645,7 @@
             }
         }
         
-        // Speak a sentence
+        // Speak a sentence with retry mechanism
         function speakSentence(index) {
             if (index >= sentences.length || !voiceIsPlaying) {
                 stopVoice();
@@ -1642,9 +1658,9 @@
             let sentence = sentences[index].text;
             currentUtterance = new SpeechSynthesisUtterance(sentence);
             
-            // Set voice properties - use selectedVoice (prioritized male voice)
-            if (selectedVoice) {
-                currentUtterance.voice = selectedVoice;
+            // Set voice properties
+            if (maleVoice) {
+                currentUtterance.voice = maleVoice;
             }
             currentUtterance.lang = 'en-US';
             currentUtterance.rate = 0.9; // Slightly slower for learning
@@ -1658,41 +1674,39 @@
                     prevElement.classList.remove('sentence-reading');
                     prevElement.classList.add('sentence-read');
                     
-                    // Speak next sentence with small delay for smoother transition
-                    setTimeout(function() {
-                        speakSentence(currentSentenceIndex + 1);
-                    }, 100);
+                    // Speak next sentence
+                    speakSentence(currentSentenceIndex + 1);
                 }
             };
             
-            // Handle errors - retry with fallback
+            // Handle errors with retry
             currentUtterance.onerror = function(event) {
                 console.error('Speech error:', event.error);
                 
-                // Try to re-initialize voices if there's an error
-                if (event.error === 'voice-unavailable' || event.error === 'synthesis-unavailable') {
-                    initVoices();
+                // If it's a network error or interrupted, retry
+                if (event.error === 'network' || event.error === 'interrupted') {
+                    if (voiceIsPlaying && voiceInitAttempts < 3) {
+                        voiceInitAttempts++;
+                        setTimeout(function() {
+                            speakSentence(currentSentenceIndex);
+                        }, 500);
+                        return;
+                    }
                 }
                 
-                // Continue to next sentence if still playing
+                // Move to next sentence on error
                 if (voiceIsPlaying) {
-                    setTimeout(function() {
-                        speakSentence(currentSentenceIndex + 1);
-                    }, 200);
+                    speakSentence(currentSentenceIndex + 1);
                 }
             };
             
-            // Cancel any pending speech and speak
+            // Cancel any existing speech before speaking
             voiceSynthesis.cancel();
-            voiceSynthesis.speak(currentUtterance);
             
-            // Safety timeout - if speech doesn't start within 5 seconds, move to next
+            // Small delay before speaking to ensure cancel is processed
             setTimeout(function() {
-                if (voiceIsPlaying && currentSentenceIndex === index && !voiceSynthesis.speaking) {
-                    console.log('Speech timeout, moving to next sentence');
-                    speakSentence(index + 1);
-                }
-            }, 5000);
+                voiceSynthesis.speak(currentUtterance);
+            }, 50);
         }
         
         // Toggle voice playback
@@ -1703,24 +1717,26 @@
                 // Stop voice
                 stopVoice();
             } else {
-                // Check if voices are ready
-                if (!voicesReady || !selectedVoice) {
-                    // Try to initialize voices again
-                    initVoices();
+                // Check if voice is initialized
+                if (!voiceInitialized || !maleVoice) {
+                    // Try to initialize again
+                    preLoadVoice();
                     
-                    // Show loading state
+                    // Show loading status
                     voiceBtn.classList.add('loading');
-                    voiceBtn.title = 'Loading voice... Please wait';
+                    showVoiceStatus('Loading voice...', false, false);
                     
                     // Wait a bit and try again
                     setTimeout(function() {
-                        if (voicesReady && selectedVoice) {
+                        voiceBtn.classList.remove('loading');
+                        if (maleVoice) {
                             startVoicePlayback(voiceBtn);
                         } else {
-                            // Still not ready - show error
-                            voiceBtn.classList.remove('loading');
-                            voiceBtn.title = 'Voice not available. Please refresh the page and try again.';
-                            alert('Voice feature is still loading. Please wait a moment and try again, or refresh the page.');
+                            showVoiceStatus('Voice not available. Please refresh the page.', true, false);
+                            voiceBtn.classList.add('error');
+                            setTimeout(function() {
+                                voiceBtn.classList.remove('error');
+                            }, 2000);
                         }
                     }, 1000);
                     return;
@@ -1732,19 +1748,21 @@
         
         // Start voice playback
         function startVoicePlayback(voiceBtn) {
+            // Start voice
             voiceIsPlaying = true;
-            voiceBtn.classList.remove('loading');
+            voiceInitAttempts = 0;
             voiceBtn.classList.add('playing');
+            voiceBtn.classList.remove('error');
             voiceBtn.title = 'Click to stop voice';
             
-            // Initialize if not done
+            // Initialize sentences if not done
             if (sentences.length === 0) {
                 extractSentences();
             }
             
             // Check if we have sentences to read
             if (sentences.length === 0) {
-                alert('No content found to read.');
+                showVoiceStatus('No content to read', true, false);
                 stopVoice();
                 return;
             }
@@ -1755,6 +1773,9 @@
             }
             voiceIsPaused = false;
             
+            // Show success message
+            showVoiceStatus('Voice ready - Male voice: ' + (maleVoice ? maleVoice.name : 'Default'), false, true);
+            
             // Start speaking
             speakSentence(currentSentenceIndex);
         }
@@ -1763,7 +1784,11 @@
         function stopVoice() {
             voiceIsPlaying = false;
             voiceIsPaused = false;
-            voiceSynthesis.cancel();
+            
+            // Cancel any ongoing speech
+            if (voiceSynthesis) {
+                voiceSynthesis.cancel();
+            }
             
             // Remove highlights
             document.querySelectorAll('.sentence-reading, .sentence-read').forEach(function(el) {
@@ -1771,8 +1796,7 @@
             });
             
             let voiceBtn = document.getElementById('voiceBtn');
-            voiceBtn.classList.remove('playing');
-            voiceBtn.classList.remove('loading');
+            voiceBtn.classList.remove('playing', 'error');
             voiceBtn.title = 'Auto Voice - Read article aloud';
         }
         
@@ -1790,16 +1814,16 @@
             }
         });
         
-        // Resume speech synthesis if it gets stuck (Chrome bug workaround)
+        // Resume speaking if it gets stuck (Chrome bug workaround)
         setInterval(function() {
             if (voiceIsPlaying && !voiceSynthesis.speaking && !voiceSynthesis.pending) {
-                // Speech synthesis got stuck, try to resume
-                voiceSynthesis.cancel();
-                if (currentSentenceIndex < sentences.length) {
-                    speakSentence(currentSentenceIndex);
+                // Speech ended unexpectedly, try to resume
+                if (currentSentenceIndex < sentences.length - 1) {
+                    console.log('Resuming speech from sentence', currentSentenceIndex);
+                    speakSentence(currentSentenceIndex + 1);
                 }
             }
-        }, 10000);
+        }, 1000);
     </script>
 </body>
 </html>
