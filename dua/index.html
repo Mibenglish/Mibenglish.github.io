@@ -218,7 +218,7 @@
             margin: -2px -4px;
         }
         
-        /* ========== NAVIGATION ========== */
+        /* Navigation Light - EXACT COPY FROM LEARN.TXT */
         .nav {
             position: fixed;
             top: 56px;
@@ -230,12 +230,19 @@
             justify-content: center;
             z-index: 999;
             overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
             padding: 8px 0;
             min-height: 48px;
         }
         
         .nav::-webkit-scrollbar { display: none; }
-        .nav-inner { display: flex; gap: 6px; padding: 0 12px; }
+        
+        .nav-inner {
+            display: flex;
+            gap: 6px;
+            padding: 0 12px;
+        }
         
         .nav-link {
             color: #ffffff;
@@ -246,9 +253,10 @@
             font-weight: 500;
             white-space: nowrap;
             transition: background 0.2s ease;
+            flex-shrink: 0;
         }
         
-        .nav-link:hover, .nav-link.active { background: #c9a227; color: #ffffff; }
+        .nav-link.active { background: #c9a227; color: #ffffff; }
         
         /* ========== MAIN CONTENT ========== */
         .main { max-width: 720px; margin: 0 auto; padding: 0 12px 24px; }
@@ -670,15 +678,14 @@
         </div>
     </header>
     
-    <!-- Navigation -->
+     <!-- Navigation - EXACT FROM LEARN.TXT -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="https://mibenglish.com/" class="nav-link">Home</a>
+            <a href="https://mibenglish.com/dua/index.html" class="nav-link active">Dua</a>
             <a href="https://mibenglish.com/en/learn/" class="nav-link">Learn</a>
-            <a href="https://mibenglish.com/en/dictionary/" class="nav-link">Dictionary</a>
-            <a href="https://mibenglish.com/games/" class="nav-link">Games</a>
-            <a href="https://mibenglish.com/market/" class="nav-link">Market</a>
-            <a href="https://mibenglish.com/dua/" class="nav-link active">Dua</a>
+            <a href="https://mibenglish.com/en//dictionary/" class="nav-link">Dictionary</a>
+            <a href="https://mibenglish.com/games" class="nav-link">Games</a>
+            <a href="https://mibenglish.com/en/market/" class="nav-link">Market</a>
         </div>
     </nav>
     
