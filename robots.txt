@@ -1,0 +1,6 @@
+# Allow all crawlers including AI
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mibenglish.com/sitemap.xml
