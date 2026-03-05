@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en" data-font-size="normal" data-theme="light">
+<head>
+    <!-- ===== CRITICAL: Resource Hints for Performance SEO ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    
+    <!-- DNS Prefetch - Resolve DNS early for external resources -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    
+    <!-- Preload - Load critical resources early -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" crossorigin>
+    
+    <!-- ===== Favicon & App Icons ===== -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://mibenglish.com/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://mibenglish.com/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="https://mibenglish.com/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://mibenglish.com/apple-touch-icon.png">
+    <link rel="manifest" href="https://mibenglish.com/site.webmanifest">
+    
+    <!-- ===== Theme Colors for Browsers ===== -->
+    <meta name="theme-color" content="#1a472a">
+    <meta name="msapplication-TileColor" content="#1a472a">
+    <meta name="msapplication-TileImage" content="https://mibenglish.com/mstile-144x144.png">
+    
+    <!-- ===== Basic Meta Tags ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- ========== DYNAMIC: Meta Description ========== -->
+    <meta name="description" id="meta-description" content="">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Mibenglish">
+    
+    <!-- ========== DYNAMIC: Meta Keywords ========== -->
+    <meta name="keywords" id="meta-keywords" content="">
+    
+    <!-- ========== DYNAMIC: Canonical URL ========== -->
+    <link rel="canonical" id="canonical-url" href="">
+    
+    <!-- ===== RSS Feed Link for Content Discovery ===== -->
+    <link rel="alternate" type="application/rss+xml" title="Mibenglish - Latest Episodes" href="https://mibenglish.com/feed.xml">
+    
+    <!-- ========== DYNAMIC: Hreflang Tags ========== -->
+    <link rel="alternate" hreflang="en" id="hreflang-en" href="">
+    <link rel="alternate" hreflang="id" id="hreflang-id" href="">
+    <link rel="alternate" hreflang="x-default" id="hreflang-default" href="">
+    
+    <!-- ========== DYNAMIC: Open Graph (Facebook, LinkedIn, etc.) ========== -->
+    <meta property="og:title" id="og-title" content="">
+    <meta property="og:description" id="og-description" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="og:site_name" content="Mibenglish">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" id="og-image" content="">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="article:published_time" id="article-published" content="">
+    <meta property="article:author" content="https://mibenglish.com/author/bangmik">
+    <meta property="article:section" content="English Foundation">
+    
+    <!-- ========== DYNAMIC: Twitter Card ========== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" id="twitter-title" content="">
+    <meta name="twitter:description" id="twitter-description" content="">
+    <meta name="twitter:site" content="@mibenglish">
+    <meta name="twitter:image" id="twitter-image" content="">
+    
+    <!-- ========== DYNAMIC: Page Title ========== -->
+    <title id="page-title"></title>
+    
+    <!-- ========== DYNAMIC: JSON-LD Structured Data ========== -->
+    <script type="application/ld+json" id="jsonld-article">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "",
+        "author": {"@type": "Person", "name": "Mikdad"},
+        "publisher": {"@type": "Organization", "name": "Mibenglish"},
+        "datePublished": "",
+        "dateModified": ""
+    }
+    </script>
+    
+    <!-- ========== DYNAMIC: FAQ JSON-LD ========== -->
+    <script type="application/ld+json" id="jsonld-faq">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": []
+    }
+    </script>
+    
+    <style>
+        /* ========== BASE RESET ========== */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        
+        /* ========== FONT SIZE SETTINGS ========== */
+        [data-font-size="small"] { font-size: 14px; }
+        [data-font-size="normal"] { font-size: 15px; }
+        [data-font-size="large"] { font-size: 18px; }
+        [data-font-size="xlarge"] { font-size: 20px; }
+        
+        /* ========== CSS Variables ========== */
+        :root {
+            --primary-dark: #0d1f0d;
+            --primary-green: #1a472a;
+            --secondary-green: #2d5a3d;
+            --accent-green: #3d7a4f;
+            --light-green: #5a9a6e;
+            --pale-green: #8bc49f;
+            --mint: #c8e6d0;
+            --cream: #f8faf8;
+            --white: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-medium: #4a5a4a;
+            --gold-accent: #c9a227;
+            --gold-light: #e6c84a;
+            --shadow: rgba(10, 31, 10, 0.2);
+            --shadow-light: rgba(10, 31, 10, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        [data-theme="dark"] {
+            --primary-dark: #0a0f0a;
+            --primary-green: #1a3a2a;
+            --cream: #1a2a1a;
+            --white: #0f1a0f;
+            --text-dark: #e8f5e9;
+            --text-medium: #c8e6d0;
+            --mint: #98c6a0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding-top: 104px;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-green);
+            color: #ffffff;
+            padding: 8px 16px;
+            z-index: 9999;
+            text-decoration: none;
+        }
+        .skip-link:focus { top: 0; }
+        
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            background: #0d1f0d;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            z-index: 1000;
+            border-bottom: 2px solid #c9a227;
+        }
+        
+        .brand { font-size: 1.125rem; font-weight: 700; color: #ffffff; text-decoration: none; }
+        .header-actions { display: flex; align-items: center; gap: 8px; }
+        
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        .settings-btn {
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* ========== AUTOVOICE BUTTON ========== */
+        .voice-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .voice-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .voice-btn.active {
+            background: #c9a227;
+            border-color: #c9a227;
+            color: #0d1f0d;
+        }
+        
+        .voice-btn.playing {
+            background: #c9a227;
+            border-color: #c9a227;
+            color: #0d1f0d;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.4); }
+            50% { box-shadow: 0 0 0 8px rgba(201, 162, 39, 0); }
+        }
+        
+        /* ========== SENTENCE HIGHLIGHTING ========== */
+        .sentence-reading {
+            background: linear-gradient(90deg, rgba(201, 162, 39, 0.3) 0%, rgba(201, 162, 39, 0.4) 50%, rgba(201, 162, 39, 0.3) 100%);
+            border-radius: 4px;
+            padding: 2px 4px;
+            margin: -2px -4px;
+            transition: background 0.3s ease;
+            box-shadow: 0 2px 8px rgba(201, 162, 39, 0.3);
+        }
+        
+        .sentence-read {
+            background: rgba(45, 90, 61, 0.15);
+            border-radius: 4px;
+            padding: 2px 4px;
+            margin: -2px -4px;
+        }
+        
+        /* ========== NAVIGATION ========== */
+        .nav {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            right: 0;
+            background: #1a472a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            overflow-x: auto;
+            padding: 8px 0;
+            min-height: 48px;
+        }
+        
+        .nav::-webkit-scrollbar { display: none; }
+        .nav-inner { display: flex; gap: 6px; padding: 0 12px; }
+        
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: background 0.2s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active { background: #c9a227; color: #ffffff; }
+        
+        /* ========== MAIN CONTENT ========== */
+        .main { max-width: 720px; margin: 0 auto; padding: 0 12px 24px; }
+        
+        /* ========== ARTICLE HEADER ========== */
+        .article-header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
+            color: #ffffff;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin: 0 -12px 16px;
+            border-radius: 12px;
+        }
+        
+        .article-header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+        
+        .article-header .subtitle {
+            font-size: 1rem;
+            color: var(--mint);
+            position: relative;
+            z-index: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .level-indicator {
+            display: inline-block;
+            background: #c9a227;
+            color: #0d1f0d;
+            padding: 0.25rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* ========== BREADCRUMB ========== */
+        .breadcrumb {
+            background: var(--cream);
+            padding: 0.5rem 1rem;
+            margin: 0 -12px 0;
+            border-bottom: 1px solid var(--mint);
+            font-size: 0.85rem;
+        }
+        
+        .breadcrumb-container { max-width: 720px; margin: 0 auto; }
+        .breadcrumb-list { list-style: none; display: flex; align-items: center; flex-wrap: wrap; gap: 0.3rem; }
+        .breadcrumb-item { display: flex; align-items: center; gap: 0.3rem; }
+        .breadcrumb-item::after { content: '>'; color: var(--pale-green); margin-left: 0.3rem; }
+        .breadcrumb-item:last-child::after { display: none; }
+        .breadcrumb-item a { color: var(--secondary-green); text-decoration: none; }
+        .breadcrumb-item a:hover { color: var(--gold-accent); }
+        .breadcrumb-item span { color: var(--text-medium); }
+        
+        /* ========== TABLE OF CONTENTS ========== */
+        .toc-section {
+            background: linear-gradient(135deg, var(--cream) 0%, var(--mint) 100%);
+            padding: 1rem;
+            margin: 0 -12px 16px;
+            border-bottom: 1px solid var(--pale-green);
+        }
+        
+        .toc-container { max-width: 720px; margin: 0 auto; }
+        .toc-title { font-size: 0.9rem; font-weight: 600; color: var(--primary-green); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .toc-list { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; }
+        .toc-list a { display: inline-block; background: #ffffff; color: var(--secondary-green); padding: 0.3rem 0.6rem; border-radius: 15px; font-size: 0.8rem; text-decoration: none; border: 1px solid var(--pale-green); transition: var(--transition); }
+        .toc-list a:hover { background: var(--gold-accent); color: #ffffff; border-color: var(--gold-accent); }
+        
+        /* ========== ARTICLE META ========== */
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            padding: 0.75rem 1rem;
+            background: var(--cream);
+            border-bottom: 1px solid var(--mint);
+            margin: 0 -12px 16px;
+            font-size: 0.85rem;
+            color: var(--text-medium);
+        }
+        
+        .meta-item { display: flex; align-items: center; gap: 0.4rem; }
+        .meta-item svg { width: 16px; height: 16px; fill: var(--secondary-green); }
+        
+        /* ========== SECTIONS ========== */
+        section {
+            background: #ffffff;
+            padding: 1.2rem 1rem;
+            margin-bottom: 16px;
+            border-radius: 10px;
+            border: 1px solid var(--mint);
+            box-shadow: 0 2px 8px var(--shadow-light);
+        }
+        
+        h2 {
+            color: var(--primary-green);
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid var(--pale-green);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        
+        h2::before { content: ''; display: inline-block; width: 5px; height: 20px; min-width: 5px; background: var(--gold-accent); border-radius: 2px; }
+        h3 { color: var(--secondary-green); font-size: 1.05rem; margin: 1rem 0 0.6rem; }
+        
+        p { margin-bottom: 0.8rem; text-align: left; color: var(--text-medium); font-size: 0.95rem; line-height: 1.7; }
+        
+        ul, ol { margin: 0.75rem 0 0.75rem 1rem; padding-left: 0.5rem; }
+        li { margin-bottom: 0.4rem; font-size: 0.9rem; color: var(--text-medium); line-height: 1.6; }
+        
+        /* ========== HIGHLIGHT BOXES ========== */
+        .highlight-box { background: #ffffff; border: 1px solid var(--pale-green); border-left: 4px solid var(--gold-accent); padding: 0.8rem 1rem; margin: 0.8rem 0; border-radius: 0 8px 8px 0; }
+        .highlight-box.warning { border-left-color: #d4793a; background: #fff8f0; }
+        .highlight-box.success { border-left-color: var(--accent-green); background: #f0fff4; }
+        .highlight-box.info { border-left-color: #3a7bd5; background: #f0f8ff; }
+        
+        /* ========== ENGLISH TERM ========== */
+        .term-en { background-color: var(--primary-green); color: #ffffff; padding: 0.1rem 0.4rem; border-radius: 3px; font-size: 0.85em; font-weight: 500; }
+        
+        /* ========== EXAMPLE BOX ========== */
+        .example-box { background: var(--cream); border: 1px solid var(--pale-green); border-radius: 8px; padding: 0.8rem; margin: 0.8rem 0; }
+        .example-box .label { color: var(--primary-green); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem; }
+        .example-sentence { font-size: 0.95rem; color: var(--text-dark); margin: 0.4rem 0; padding-left: 0.8rem; border-left: 3px solid var(--light-green); }
+        .translation { color: var(--secondary-green); font-style: italic; font-size: 0.85rem; margin-left: 0.8rem; display: block; margin-top: 0.2rem; }
+        
+        /* ========== DIAGRAM BOX ========== */
+        .diagram-box { background: linear-gradient(135deg, var(--cream) 0%, var(--mint) 100%); border: 2px solid var(--pale-green); border-radius: 12px; padding: 1rem; margin: 1rem 0; text-align: center; }
+        .diagram-box .diagram-title { font-weight: 600; color: var(--primary-green); margin-bottom: 0.75rem; font-size: 0.9rem; }
+        .diagram-box pre { background: rgba(255,255,255,0.7); padding: 1rem; border-radius: 8px; overflow-x: auto; text-align: left; font-size: 0.85rem; line-height: 1.6; }
+        
+        /* ========== FAQ SECTION ========== */
+        .faq-section { background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%); color: #ffffff; padding: 1.5rem 1rem; margin-bottom: 16px; border-radius: 10px; }
+        .faq-section h2 { color: #ffffff; border-bottom-color: rgba(255,255,255,0.3); }
+        .faq-section h2::before { background: var(--gold-accent); }
+        .faq-section > p { color: #ffffff; opacity: 0.95; font-size: 0.95rem; }
+        .faq-item { background: rgba(255,255,255,0.12); border-radius: 8px; margin-bottom: 0.75rem; padding: 0.85rem; border: 1px solid rgba(255,255,255,0.2); }
+        .faq-item h3 { color: #ffd966; font-size: 0.95rem; margin: 0 0 0.5rem 0; }
+        .faq-item h3::before { content: 'Q: '; background: var(--gold-accent); color: #1a1a1a; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 700; }
+        .faq-item p { color: #ffffff; margin: 0; font-size: 0.92rem; padding-left: 1.5rem; line-height: 1.6; }
+        
+        /* ========== AD SLOTS ========== */
+        .ad-slot { background: linear-gradient(135deg, var(--cream) 0%, var(--mint) 100%); border: 2px dashed var(--light-green); border-radius: 10px; min-height: 80px; display: flex; align-items: center; justify-content: center; color: var(--secondary-green); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; text-align: center; padding: 12px; margin: 16px 0; }
+        .ad-slot-label { display: inline-block; background: var(--gold-accent); color: var(--primary-dark); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.5rem; }
+        
+        /* ========== PROMO BANNERS ========== */
+        .promo-banner { border-radius: 16px; overflow: hidden; margin: 20px 0; box-shadow: 0 8px 30px var(--shadow); transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; display: block; }
+        .promo-banner:hover { transform: translateY(-4px); box-shadow: 0 12px 40px var(--shadow); }
+        .promo-banner.game-banner { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
+        .promo-banner.market-banner { background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%); }
+        .banner-content { padding: 1.5rem; color: #ffffff; position: relative; overflow: hidden; }
+        .banner-content::before { content: ''; position: absolute; top: -50%; right: -50%; width: 100%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); pointer-events: none; }
+        .banner-badge { display: inline-block; background: #c9a227; color: #0d1f0d; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .banner-title { font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; position: relative; z-index: 1; color: #ffffff; }
+        .banner-desc { font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.5; position: relative; z-index: 1; color: #e8f5e9; }
+        .banner-features { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+        .banner-feature { display: inline-flex; align-items: center; gap: 0.3rem; background: rgba(255,255,255,0.2); color: #ffffff; padding: 0.3rem 0.6rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500; }
+        .banner-feature svg { width: 14px; height: 14px; fill: #c9a227; }
+        .banner-cta { display: inline-flex; align-items: center; gap: 0.5rem; background: #c9a227; color: #0d1f0d; padding: 0.7rem 1.5rem; border-radius: 25px; font-weight: 700; font-size: 0.9rem; transition: all 0.3s ease; position: relative; z-index: 1; }
+        .banner-cta:hover { background: #e6c84a; transform: scale(1.02); color: #0d1f0d; }
+        .banner-cta svg { width: 18px; height: 18px; transition: transform 0.3s ease; fill: #0d1f0d; }
+        .promo-banner:hover .banner-cta svg { transform: translateX(4px); }
+        .banner-icon { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); opacity: 0.15; font-size: 5rem; }
+        .glow-effect { position: absolute; width: 150px; height: 150px; border-radius: 50%; filter: blur(60px); opacity: 0.3; pointer-events: none; animation: pulse-glow 3s ease-in-out infinite; }
+        .glow-1 { background: #d53f8c; top: -30px; right: -30px; }
+        .glow-2 { background: #3182ce; bottom: -30px; left: -30px; animation-delay: 1.5s; }
+        .market-banner .glow-1 { background: #dd6b20; }
+        .market-banner .glow-2 { background: #319795; }
+        @keyframes pulse-glow { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.5; } }
+        @media (max-width: 480px) { .banner-title { font-size: 1.15rem; } .banner-desc { font-size: 0.9rem; } .banner-features { flex-direction: column; } .banner-cta { width: 100%; justify-content: center; } }
+        [data-theme="dark"] .promo-banner.game-banner { background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1c2128 100%); }
+        [data-theme="dark"] .promo-banner.market-banner { background: linear-gradient(135deg, #1a3a2a 0%, #2a4a3a 100%); }
+        [data-theme="dark"] .banner-badge { background: #c9a227; color: #0d1f0d; }
+        [data-theme="dark"] .banner-cta { background: #c9a227; color: #0d1f0d; }
+        [data-theme="dark"] .banner-cta:hover { background: #e6c84a; color: #0d1f0d; }
+        
+        /* ========== QUIZ SECTION ========== */
+        .quiz-section { background: #1a2a1a; color: #ffffff; padding: 1.5rem 1rem; margin-bottom: 16px; border-radius: 10px; }
+        .quiz-section h2 { color: #ffd966; border-bottom-color: #c9a227; }
+        .quiz-section h2::before { background: #c9a227; }
+        .quiz-section > p { color: #ffffff; opacity: 0.95; }
+        .quiz-container { background: rgba(255,255,255,0.08); border-radius: 10px; padding: 1rem; margin: 0.8rem 0; border: 1px solid rgba(255,255,255,0.1); }
+        .quiz-header { text-align: center; margin-bottom: 1rem; }
+        .quiz-header h3 { color: #ffffff; margin: 0; font-size: 1rem; }
+        .quiz-progress { display: flex; justify-content: center; gap: 0.4rem; margin-top: 0.5rem; }
+        .progress-dot { width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.3); transition: var(--transition); }
+        .progress-dot.active { background-color: var(--gold-accent); }
+        .progress-dot.completed { background-color: var(--light-green); }
+        .quiz-question { background-color: rgba(255, 255, 255, 0.08); padding: 1rem; border-radius: 8px; margin-bottom: 0.75rem; }
+        .question-text { font-size: 0.9rem; margin-bottom: 0.75rem; line-height: 1.5; color: #ffffff; }
+        .quiz-options { display: flex; flex-direction: column; gap: 0.5rem; }
+        .quiz-option { background: rgba(255,255,255,0.12); border: 2px solid transparent; border-radius: 8px; padding: 0.8rem 1rem; cursor: pointer; transition: var(--transition); font-size: 0.95rem; text-align: left; color: #ffffff; width: 100%; font-family: inherit; }
+        .quiz-option:hover { background: rgba(255,255,255,0.2); border-color: var(--gold-accent); }
+        .quiz-option.correct { background: rgba(76,175,80,0.35); border-color: #4CAF50; }
+        .quiz-option.incorrect { background: rgba(244,67,54,0.25); border-color: #f44336; }
+        .quiz-feedback { padding: 0.75rem; border-radius: 6px; margin-top: 0.75rem; text-align: center; font-size: 0.9rem; display: none; color: #ffffff; }
+        .quiz-feedback.show { display: block; }
+        .quiz-feedback.correct { background-color: rgba(64, 145, 108, 0.3); }
+        .quiz-feedback.incorrect { background-color: rgba(180, 80, 80, 0.3); }
+        .quiz-nav { display: flex; justify-content: space-between; margin-top: 0.75rem; gap: 0.5rem; }
+        .btn-quiz { background: var(--gold-accent); color: var(--primary-dark); border: none; padding: 0.6rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: var(--transition); font-family: inherit; }
+        .btn-quiz:hover:not(:disabled) { background: var(--gold-light); }
+        .btn-quiz:disabled { opacity: 0.5; cursor: not-allowed; }
+        .quiz-result { text-align: center; padding: 1.5rem 1rem; display: none; }
+        .quiz-result.show { display: block; }
+        .result-score { font-size: 2.5rem; font-weight: 700; color: var(--gold-accent); }
+        .result-message { margin-top: 0.75rem; font-size: 0.95rem; line-height: 1.5; color: #ffffff; opacity: 0.9; }
+        
+        /* ========== NEXT EPISODE ========== */
+        .next-episode { background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%); color: #ffffff; padding: 1.25rem 1rem; border-radius: 8px; text-align: center; margin-bottom: 16px; }
+        .next-episode h3 { color: #ffd966; margin: 0 0 0.4rem 0; font-size: 0.9rem; }
+        .next-episode p { color: #ffffff; font-size: 0.95rem; margin-bottom: 0.25rem; }
+        .next-episode .subtitle-next { font-size: 0.85rem; opacity: 0.9; color: #ffffff; }
+        .btn-next { display: inline-block; background: var(--gold-accent); color: var(--primary-dark); padding: 0.6rem 1.25rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; margin-top: 0.75rem; transition: var(--transition); }
+        .btn-next:hover { background: var(--gold-light); transform: translateY(-2px); }
+        
+        /* ========== RELATED ARTICLES ========== */
+        .related-articles { background: #ffffff; padding: 1rem; border-radius: 8px; border: 1px solid var(--mint); margin-bottom: 16px; }
+        .related-title { font-size: 0.95rem; font-weight: 600; color: var(--primary-green); margin-bottom: 0.75rem; }
+        .related-list { display: grid; gap: 0.5rem; }
+        .related-item { display: flex; gap: 0.5rem; align-items: center; padding: 0.5rem; background: var(--cream); border-radius: 6px; text-decoration: none; transition: var(--transition); }
+        .related-item:hover { background: var(--mint); }
+        .related-item span { color: var(--text-medium); font-size: 0.85rem; }
+        .related-item .ep-num { background: var(--gold-accent); color: var(--primary-dark); padding: 0.2rem 0.5rem; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
+        
+        /* ========== AUTHOR BIO ========== */
+        .author-bio { background: linear-gradient(135deg, var(--cream) 0%, var(--mint) 100%); padding: 1rem; border-radius: 12px; display: flex; gap: 1rem; align-items: flex-start; border: 1px solid var(--pale-green); margin-bottom: 16px; }
+        .author-avatar { width: 60px; height: 60px; border-radius: 50%; background: var(--primary-green); display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: 700; font-size: 1.2rem; flex-shrink: 0; }
+        .author-info h4 { color: var(--primary-green); font-size: 0.95rem; margin-bottom: 0.3rem; }
+        .author-info p { font-size: 0.85rem; margin-bottom: 0; color: var(--text-medium); }
+        .author-social { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+        .author-social a { color: var(--secondary-green); font-size: 0.8rem; text-decoration: none; }
+        .author-social a:hover { color: var(--gold-accent); }
+        
+        /* ========== SHARE BUTTON ========== */
+        .share-float { position: fixed; bottom: 20px; right: 20px; z-index: 999; }
+        .share-toggle { width: 50px; height: 50px; border-radius: 50%; background: var(--primary-green); border: 2px solid var(--gold-accent); color: #ffffff; font-size: 1.3rem; cursor: pointer; box-shadow: 0 4px 12px var(--shadow); transition: var(--transition); display: flex; align-items: center; justify-content: center; }
+        .share-toggle:hover { background: var(--secondary-green); transform: scale(1.05); }
+        .share-options { position: absolute; bottom: 60px; right: 0; display: none; flex-direction: column; gap: 0.4rem; background: #ffffff; padding: 0.6rem; border-radius: 10px; box-shadow: 0 4px 20px var(--shadow); min-width: 150px; }
+        .share-options.show { display: flex; }
+        .share-options a { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.8rem; text-decoration: none; color: var(--text-dark); border-radius: 6px; font-size: 0.85rem; transition: var(--transition); }
+        .share-options a:hover { background: var(--mint); }
+        
+        /* ========== SETTINGS MODAL ========== */
+        .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 16px; }
+        .modal-overlay.show { display: flex; }
+        .modal { background: #ffffff; border-radius: 16px; width: 100%; max-width: 400px; max-height: 85vh; overflow-y: auto; }
+        .modal-header { background: #1a472a; color: #ffffff; padding: 16px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1; }
+        .modal-header h2 { font-size: 1.125rem; margin: 0; border: none; padding: 0; }
+        .modal-header h2::before { display: none; }
+        .modal-close { width: 32px; height: 32px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; color: #ffffff; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .modal-body { padding: 16px; }
+        
+        .lang-popup { max-width: 500px; }
+        .lang-popup-header { background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%); padding: 20px; text-align: center; }
+        .lang-popup-header h2 { font-size: 1.125rem; margin-bottom: 4px; }
+        .lang-popup-header p { font-size: 0.875rem; opacity: 0.9; color: #ffffff; }
+        .lang-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 16px; }
+        .lang-option { display: flex; flex-direction: column; align-items: center; padding: 10px 6px; border: 2px solid #d4e5d4; border-radius: 10px; text-decoration: none; color: #1a1a1a; background: #f8faf8; min-height: 70px; transition: all 0.2s ease; }
+        .lang-option:hover { border-color: #c9a227; background: #e8f5e9; }
+        .lang-option.selected { border-color: #c9a227; background: #c9a227; color: #ffffff; }
+        .lang-flag { font-size: 1.25rem; margin-bottom: 4px; }
+        .lang-name { font-size: 0.6875rem; font-weight: 600; text-align: center; }
+        .lang-popup-footer { padding: 12px 16px 16px; text-align: center; }
+        .btn-confirm { background: linear-gradient(135deg, #c9a227, #e6c84a); color: #ffffff; border: none; padding: 14px 32px; border-radius: 25px; font-size: 1rem; font-weight: 700; cursor: pointer; font-family: inherit; }
+        .btn-change-lang { width: 100%; background: linear-gradient(135deg, #c9a227, #e6c84a); color: #ffffff; border: none; padding: 14px; border-radius: 25px; font-size: 0.9375rem; font-weight: 700; cursor: pointer; font-family: inherit; }
+        
+        .settings-section { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #e8e8e8; }
+        .settings-section:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .settings-section h3 { font-size: 0.9375rem; color: #1a472a; margin-bottom: 12px; }
+        .font-size-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+        .font-size-btn { padding: 10px 4px; border: 2px solid #d4e5d4; background: #f8faf8; border-radius: 8px; text-align: center; font-family: inherit; color: #1a1a1a; cursor: pointer; transition: all 0.2s ease; }
+        .font-size-btn.active { border-color: #c9a227; background: #c9a227; color: #ffffff; }
+        .font-size-btn span { display: block; }
+        .font-size-btn .size-label { font-size: 0.75rem; font-weight: 600; }
+        .font-size-btn .size-preview { font-size: 0.625rem; opacity: 0.7; }
+        
+        .dark-toggle { display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #f8faf8; border-radius: 10px; border: 1px solid #d4e5d4; font-size: 0.9375rem; color: #1a1a1a; }
+        .toggle-switch { position: relative; width: 50px; height: 28px; }
+        .toggle-switch input { opacity: 0; width: 0; height: 0; }
+        .toggle-slider { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #b4b4b4; border-radius: 28px; cursor: pointer; transition: background 0.3s ease; }
+        .toggle-slider:before { content: ""; position: absolute; width: 22px; height: 22px; left: 3px; bottom: 3px; background: #ffffff; border-radius: 50%; transition: transform 0.3s ease; }
+        .toggle-switch input:checked + .toggle-slider { background: #c9a227; }
+        .toggle-switch input:checked + .toggle-slider:before { transform: translateX(22px); }
+        
+        /* ========== FOOTER ========== */
+        .footer { background: #0d1f0d; color: #ffffff; padding: 32px 16px 20px; margin-top: 32px; }
+        .footer-brand { font-size: 1.25rem; font-weight: 700; color: #c9a227; margin-bottom: 8px; }
+        .footer-desc { font-size: 0.875rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 16px; }
+        .social-icons { display: flex; gap: 10px; margin-bottom: 24px; }
+        .social-icon { width: 38px; height: 38px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; text-decoration: none; transition: background 0.2s ease; }
+        .social-icon:hover { background: #c9a227; }
+        .footer-section-title { font-size: 1rem; margin-bottom: 12px; color: rgba(255,255,255,0.9); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 8px; }
+        .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.875rem; transition: color 0.2s ease; }
+        .footer-links a:hover { color: #c9a227; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; margin-top: 20px; text-align: center; }
+        .footer-bottom p { font-size: 0.8125rem; color: rgba(255,255,255,0.5); }
+        
+        /* ========== DARK THEME ========== */
+        [data-theme="dark"] body { background-color: #121212; color: #e0e0e0; }
+        [data-theme="dark"] .header { background: #1a1a1a; border-bottom-color: #c9a227; }
+        [data-theme="dark"] .nav { background: #1e3a1e; }
+        [data-theme="dark"] .article-header { background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1c2128 100%); }
+        [data-theme="dark"] .article-header .subtitle { color: #a8d5b8; }
+        [data-theme="dark"] section, [data-theme="dark"] .related-articles { background: #1e1e1e; border-color: #333333; }
+        [data-theme="dark"] h2 { color: #7cc87c; border-bottom-color: #4a6a4a; }
+        [data-theme="dark"] h2::before { background: #c9a227; }
+        [data-theme="dark"] h3 { color: #9fd5a0; }
+        [data-theme="dark"] p { color: #d4d4d4; }
+        [data-theme="dark"] li { color: #c8c8c8; }
+        [data-theme="dark"] ol li::marker { color: #c9a227; }
+        [data-theme="dark"] ul li::marker { color: #7cc87c; }
+        [data-theme="dark"] .highlight-box { background: #2a3a2a; border-color: #4a6a4a; color: #e8e8e8; }
+        [data-theme="dark"] .highlight-box.warning { background: #3a3020; border-left-color: #d4793a; }
+        [data-theme="dark"] .highlight-box.success { background: #203020; border-left-color: #4ade80; }
+        [data-theme="dark"] .highlight-box.info { background: #203030; border-left-color: #60a5fa; }
+        [data-theme="dark"] .highlight-box p { color: #e8e8e8; }
+        [data-theme="dark"] .example-box { background: #2a3a2a; border-color: #4a6a4a; }
+        [data-theme="dark"] .example-box .label { color: #7cc87c; }
+        [data-theme="dark"] .example-sentence { color: #f0f0f0; border-left-color: #7cc87c; }
+        [data-theme="dark"] .translation { color: #a8d5b8; }
+        [data-theme="dark"] .breadcrumb { background: #1a1a1a; border-color: #333333; }
+        [data-theme="dark"] .breadcrumb-item a { color: #7cc87c; }
+        [data-theme="dark"] .breadcrumb-item span { color: #a0a0a0; }
+        [data-theme="dark"] .toc-section { background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%); border-color: #333333; }
+        [data-theme="dark"] .toc-title { color: #7cc87c; }
+        [data-theme="dark"] .toc-list a { background: #2a3a2a; border-color: #4a6a4a; color: #d4d4d4; }
+        [data-theme="dark"] .toc-list a:hover { background: #c9a227; color: #ffffff; border-color: #c9a227; }
+        [data-theme="dark"] .article-meta { background: #1a1a1a; border-color: #333333; color: #a0a0a0; }
+        [data-theme="dark"] .article-meta .meta-item { color: #a0a0a0; }
+        [data-theme="dark"] .article-meta svg { fill: #7cc87c; }
+        [data-theme="dark"] .ad-slot { background: #1a2a1a; border-color: #3a5a3a; color: #8ab88a; }
+        [data-theme="dark"] .ad-slot-label { background: #c9a227; color: #1a1a1a; }
+        [data-theme="dark"] .diagram-box { background: linear-gradient(135deg, #1a2a1a 0%, #2a3a2a 100%); border-color: #4a6a4a; }
+        [data-theme="dark"] .diagram-box .diagram-title { color: #c9a227; }
+        [data-theme="dark"] .diagram-box pre { background: #1a1a1a; color: #d4d4d4; border: 1px solid #333333; }
+        [data-theme="dark"] .term-en { background-color: #2a4a2a; color: #d4f0d4; }
+        [data-theme="dark"] .footer { background: #1a1a1a; }
+        [data-theme="dark"] .modal { background: #1e1e1e; }
+        [data-theme="dark"] .modal-header { background: #2d5a3d; }
+        [data-theme="dark"] .lang-option { background: #252525; border-color: #444444; color: #e0e0e0; }
+        [data-theme="dark"] .lang-option:hover { border-color: #c9a227; background: #2a3a2a; }
+        [data-theme="dark"] .lang-option.selected { background: #c9a227; border-color: #c9a227; color: #ffffff; }
+        [data-theme="dark"] .settings-section { border-bottom-color: #333333; }
+        [data-theme="dark"] .settings-section h3 { color: #7cc87c; }
+        [data-theme="dark"] .font-size-btn { background: #252525; border-color: #444444; color: #e0e0e0; }
+        [data-theme="dark"] .font-size-btn.active { background: #c9a227; border-color: #c9a227; color: #ffffff; }
+        [data-theme="dark"] .dark-toggle { background: #252525; border-color: #444444; color: #e0e0e0; }
+        [data-theme="dark"] .author-bio { background: linear-gradient(135deg, #1a2a1a 0%, #252525 100%); border-color: #3a5a3a; }
+        [data-theme="dark"] .author-info h4 { color: #7cc87c; }
+        [data-theme="dark"] .author-info p { color: #b0b0b0; }
+        [data-theme="dark"] .author-social a { color: #9fd5a0; }
+        [data-theme="dark"] .author-avatar { background: #2d5a3d; }
+        [data-theme="dark"] .related-item { background: #2a3a2a; border: 1px solid #3a5a3a; }
+        [data-theme="dark"] .related-item:hover { background: #3a4a3a; }
+        [data-theme="dark"] .related-item span { color: #d4d4d4; }
+        [data-theme="dark"] .related-item .ep-num { background: #c9a227; color: #1a1a1a; }
+        [data-theme="dark"] .related-title { color: #7cc87c; }
+        [data-theme="dark"] .share-options { background: #2a3a2a; border: 1px solid #3a5a3a; }
+        [data-theme="dark"] .share-options a { color: #d4d4d4; }
+        [data-theme="dark"] .share-options a:hover { background: #3a5a3a; }
+        [data-theme="dark"] .share-toggle { background: #2d5a3d; border-color: #c9a227; }
+        [data-theme="dark"] .quiz-section { background: linear-gradient(135deg, #1a2a1a 0%, #2a3a2a 100%); }
+        [data-theme="dark"] .quiz-section h2 { color: #ffd966; }
+        [data-theme="dark"] .quiz-section > p { color: #d4d4d4; }
+        [data-theme="dark"] .quiz-container { background: rgba(0,0,0,0.3); border-color: #3a5a3a; }
+        [data-theme="dark"] .quiz-header h3 { color: #ffffff; }
+        [data-theme="dark"] .quiz-question { background: rgba(0,0,0,0.3); }
+        [data-theme="dark"] .question-text { color: #f0f0f0; }
+        [data-theme="dark"] .quiz-option { background: rgba(60,80,60,0.5); border-color: #4a6a4a; color: #f0f0f0; }
+        [data-theme="dark"] .quiz-option:hover { background: rgba(80,100,80,0.6); border-color: #c9a227; }
+        [data-theme="dark"] .quiz-feedback { color: #ffffff; }
+        [data-theme="dark"] .btn-quiz { background: #c9a227; color: #1a1a1a; }
+        [data-theme="dark"] .btn-quiz:hover:not(:disabled) { background: #dab82e; }
+        [data-theme="dark"] .faq-section { background: linear-gradient(135deg, #1a3a2a 0%, #2a4a3a 100%); }
+        [data-theme="dark"] .faq-section h2 { color: #ffffff; }
+        [data-theme="dark"] .faq-section > p { color: #d4d4d4; }
+        [data-theme="dark"] .faq-item { background: rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.15); }
+        [data-theme="dark"] .faq-item h3 { color: #ffd966; }
+        [data-theme="dark"] .faq-item h3::before { background: #c9a227; color: #1a1a1a; }
+        [data-theme="dark"] .faq-item p { color: #e8e8e8; }
+        [data-theme="dark"] .next-episode { background: linear-gradient(135deg, #1a3a2a 0%, #2a4a3a 100%); }
+        [data-theme="dark"] .next-episode h3 { color: #ffd966; }
+        [data-theme="dark"] .next-episode p { color: #ffffff; }
+        [data-theme="dark"] .next-episode .subtitle-next { color: #d4d4d4; }
+        [data-theme="dark"] .btn-next { background: #c9a227; color: #1a1a1a; }
+        [data-theme="dark"] .btn-next:hover { background: #dab82e; }
+        [data-theme="dark"] .progress-dot { background-color: rgba(255, 255, 255, 0.2); }
+        [data-theme="dark"] .progress-dot.active { background-color: #c9a227; }
+        [data-theme="dark"] .progress-dot.completed { background-color: #7cc87c; }
+        [data-theme="dark"] .level-indicator { background: #c9a227; color: #1a1a1a; }
+        [data-theme="dark"] .skip-link { background: #2d5a3d; }
+        
+        /* ========== DARK THEME - SENTENCE HIGHLIGHTING ========== */
+        [data-theme="dark"] .sentence-reading {
+            background: linear-gradient(90deg, rgba(201, 162, 39, 0.4) 0%, rgba(201, 162, 39, 0.5) 50%, rgba(201, 162, 39, 0.4) 100%);
+            color: #0d1f0d;
+        }
+        
+        [data-theme="dark"] .sentence-read {
+            background: rgba(124, 200, 124, 0.2);
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (min-width: 600px) {
+            .main { padding-left: 20px; padding-right: 20px; }
+            .article-header { margin-left: -20px; margin-right: -20px; }
+            .breadcrumb { margin-left: -20px; margin-right: -20px; }
+            .toc-section { margin-left: -20px; margin-right: -20px; }
+            .article-meta { margin-left: -20px; margin-right: -20px; }
+        }
+        @media (min-width: 800px) { .footer { padding: 40px 24px 24px; } .footer-content { display: flex; gap: 40px; max-width: 720px; margin: 0 auto; } .footer-brand-section { flex: 1; } }
+        @media (max-width: 600px) { body { padding-top: 104px; } .nav-inner { gap: 4px; padding: 0 8px; } .nav-link { padding: 6px 12px; font-size: 0.85rem; } .author-bio { flex-direction: column; text-align: center; } .author-avatar { margin: 0 auto; } }
+        @media (max-width: 480px) { .brand { font-size: 1rem; } .lang-btn span:last-child { display: none; } .voice-btn span { display: none; } }
+        
+        [data-font-size="large"] .header { height: 60px; }
+        [data-font-size="large"] .nav { top: 60px; min-height: 52px; }
+        [data-font-size="large"] body { padding-top: 112px; }
+        [data-font-size="large"] .nav-link { padding: 6px 12px; font-size: 0.85rem; }
+        [data-font-size="xlarge"] .header { height: 64px; }
+        [data-font-size="xlarge"] .nav { top: 64px; min-height: 56px; }
+        [data-font-size="xlarge"] body { padding-top: 120px; }
+        [data-font-size="xlarge"] .nav-link { padding: 6px 10px; font-size: 0.8rem; }
+        [data-font-size="xlarge"] .lang-btn { padding: 6px 10px; font-size: 0.8rem; }
+        [data-font-size="xlarge"] .brand { font-size: 1rem; }
+        
+        :focus { outline: 2px solid #c9a227; outline-offset: 2px; }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+        @media print { .header, .nav, .modal-overlay, .footer, .ad-slot, .share-float { display: none !important; } body { padding-top: 0 !important; background: white !important; } section { box-shadow: none; border: 1px solid #ccc; } }
+        
+        /* ========== LOADING STATE ========== */
+        .loading-content { text-align: center; padding: 3rem 1rem; color: var(--text-medium); }
+        .loading-spinner { width: 40px; height: 40px; border: 3px solid var(--mint); border-top-color: var(--gold-accent); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1rem; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Language Popup -->
+    <div class="modal-overlay" id="langPopup">
+        <div class="modal lang-popup">
+            <div class="lang-popup-header">
+                <h2>Select Your Language</h2>
+                <p>Choose your language for the best learning experience</p>
+            </div>
+            <div class="lang-grid" id="lang-grid">
+                <!-- Languages will be populated dynamically -->
+            </div>
+            <div class="lang-popup-footer">
+                <button class="btn-confirm" onclick="closeLangPopup()">Continue in English</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Settings Modal -->
+    <div class="modal-overlay" id="settingsOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button class="modal-close" onclick="closeSettings()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h3>Font Size</h3>
+                    <div class="font-size-grid">
+                        <button class="font-size-btn" data-size="small" onclick="setFontSize('small')"><span class="size-label">Small</span><span class="size-preview">Aa</span></button>
+                        <button class="font-size-btn active" data-size="normal" onclick="setFontSize('normal')"><span class="size-label">Normal</span><span class="size-preview">Aa</span></button>
+                        <button class="font-size-btn" data-size="large" onclick="setFontSize('large')"><span class="size-label">Large</span><span class="size-preview">Aa</span></button>
+                        <button class="font-size-btn" data-size="xlarge" onclick="setFontSize('xlarge')"><span class="size-label">X-Large</span><span class="size-preview">Aa</span></button>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h3>Appearance</h3>
+                    <div class="dark-toggle">
+                        <span>Dark Mode</span>
+                        <label class="toggle-switch"><input type="checkbox" id="darkToggle" onchange="toggleDarkMode()"><span class="toggle-slider"></span></label>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h3>Language</h3>
+                    <button class="btn-change-lang" onclick="closeSettings(); setTimeout(openLangPopup, 100);">Change Language</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="https://mibenglish.com/" class="brand">MIBEnglish</a>
+        <div class="header-actions">
+            <button class="voice-btn" id="voiceBtn" onclick="toggleVoice()" title="Auto Voice - Read article aloud">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                <span>Voice</span>
+            </button>
+            <button class="lang-btn" onclick="openLangPopup()"><span>🇬🇧</span><span>EN</span><span>▼</span></button>
+            <button class="settings-btn" onclick="openSettings()">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.51,8.1,5.74,7.56,6.03L5.18,5.07c-0.22-0.08-0.47,0-0.59,0.22L2.67,8.61c-0.12,0.21-0.07,0.47,0.12,0.61l2.03,1.58c-0.05,0.3-0.07,0.61-0.07,0.94s0.02,0.64,0.07,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54c0.04,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/></svg>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="https://mibenglish.com/Dua" class="nav-link">Dua</a>
+            <a href="https://mibenglish.com/en/learn/" class="nav-link active">Learn</a>
+            <a href="https://mibenglish.com/en/dictionary/" class="nav-link">Dictionary</a>
+            <a href="https://mibenglish.com/games/" class="nav-link">Games</a>
+            <a href="https://mibenglish.com/en/market/" class="nav-link">Market</a>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="main" id="main-content">
+        <article itemscope itemtype="https://schema.org/Article">
+            <!-- Article Header (Dynamic) -->
+            <header class="article-header">
+                <h1 itemprop="headline" id="article-title">Loading...</h1>
+                <p class="subtitle" itemprop="description" id="article-subtitle">Please wait...</p>
+                <span class="level-indicator" id="level-indicator">Level A0-A1 (Absolute Beginner Foundation)</span>
+            </header>
+            
+            <!-- Breadcrumb Navigation (Dynamic) -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <div class="breadcrumb-container">
+                    <ol class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="https://mibenglish.com"><span>Home</span></a></li>
+                        <li class="breadcrumb-item"><a href="https://mibenglish.com/en/learn/"><span>Learn</span></a></li>
+                        <li class="breadcrumb-item"><a href="https://mibenglish.com/en/learn/season1/"><span>Season 1</span></a></li>
+                        <li class="breadcrumb-item"><span id="breadcrumb-episode">Loading...</span></li>
+                    </ol>
+                </div>
+            </nav>
+            
+            <!-- Table of Contents (Dynamic) -->
+            <div class="toc-section">
+                <div class="toc-container">
+                    <h2 class="toc-title">📑 Table of Contents</h2>
+                    <ul class="toc-list" id="toc-list">
+                        <li><a href="#section-1">Loading...</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Article Meta (Dynamic) -->
+            <div class="article-meta">
+                <span class="meta-item">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/></svg>
+                    <span id="read-time">X min read</span>
+                </span>
+                <span class="meta-item">
+                    <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                    <span id="article-date">Loading...</span>
+                </span>
+            </div>
+            
+            <!-- AD SLOT 1 -->
+            <div class="ad-slot"><span class="ad-slot-label">Ad</span><div>AdSense - Slot 1</div></div>
+            
+            <!-- PROMO BANNER: GAMES 1 -->
+            <a href="https://mibenglish.com/games" class="promo-banner game-banner" target="_blank" rel="noopener">
+                <div class="banner-content">
+                    <div class="glow-effect glow-1"></div>
+                    <div class="glow-effect glow-2"></div>
+                    <span class="banner-badge">🎮 New Games!</span>
+                    <h3 class="banner-title">Learn English While Playing Fun Games!</h3>
+                    <p class="banner-desc">Enjoy a fun English learning experience with our interactive games—suitable for all levels</p>
+                    <div class="banner-features"></div>
+                    <span class="banner-cta">Let's start playing! <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                </div>
+            </a>
+            
+            <!-- Dynamic Content Sections -->
+            <div id="content-sections">
+                <div class="loading-content">
+                    <div class="loading-spinner"></div>
+                    <p>Loading episode content...</p>
+                </div>
+            </div>
+            
+            <!-- Author Bio Section -->
+            <div class="author-bio">
+                <div class="author-avatar">MAM</div>
+                <div class="author-info">
+                    <h4>Written by <a href="https://mibenglish.com/author/bangmik" style="color: var(--gold-accent); text-decoration: none;">Mikdad</a></h4>
+                    <p>I founded Mibenglish to make learning English enjoyable, practical, and effective. My mission is to help learners build real skills, grow their confidence, and discover the joy of language learning. Through carefully designed lessons and a supportive approach, I aim to make every step of the journey engaging and meaningful.</p>
+                </div>
+            </div>
+            
+            <!-- Related Articles (Dynamic) -->
+            <div class="related-articles">
+                <h3 class="related-title">Related Episodes</h3>
+                <div class="related-list" id="related-list">
+                    <div class="loading-content"><p>Loading...</p></div>
+                </div>
+            </div>
+            
+            <!-- Quiz Section (Dynamic) -->
+            <section id="quiz-section" class="quiz-section">
+                <h2>Comprehension Quiz</h2>
+                <p>Test your understanding of this episode:</p>
+                <div class="quiz-container">
+                    <div class="quiz-header">
+                        <h3>Quiz Progress</h3>
+                        <div class="quiz-progress" id="quiz-progress">
+                            <span class="progress-dot active"></span>
+                            <span class="progress-dot"></span>
+                            <span class="progress-dot"></span>
+                            <span class="progress-dot"></span>
+                            <span class="progress-dot"></span>
+                        </div>
+                    </div>
+                    <div id="quiz-content"></div>
+                    <div class="quiz-result" id="quiz-result">
+                        <div class="result-score" id="final-score">0/5</div>
+                        <p class="result-message" id="result-message"></p>
+                        <button class="btn-quiz" onclick="restartQuiz()">Retake Quiz</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Next Episode (Dynamic) -->
+            <div class="next-episode" id="next-episode">
+                <h3>Next Episode</h3>
+                <p id="next-episode-title">Loading...</p>
+                <span class="subtitle-next" id="next-episode-subtitle">Please wait...</span>
+                <a href="#" class="btn-next" id="next-episode-link">Continue</a>
+            </div>
+        </article>
+    </main>
+    
+    <!-- Share Button -->
+    <div class="share-float">
+        <button class="share-toggle" onclick="toggleShare()"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg></button>
+        <div class="share-options" id="shareMenu">
+            <a href="#" onclick="copyLink(event)">Copy Link</a>
+            <a href="#" id="share-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="#" id="share-telegram" target="_blank" rel="noopener">Telegram</a>
+            <a href="#" id="share-twitter" target="_blank" rel="noopener">Twitter</a>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand-section">
+                <div class="footer-brand">MIBEnglish</div>
+                <p class="footer-desc">English learning, thoughtfully crafted for diverse minds. Available in 20 languages — because fluency isn't one-size-fits-all.</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/mibenglish" class="social-icon" target="_blank" rel="noopener">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://youtube.com/@mibenglish" class="social-icon" target="_blank" rel="noopener">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@mibenglish" class="social-icon" target="_blank" rel="noopener">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                    </a>
+                    <a href="https://facebook.com/mibenglish" class="social-icon" target="_blank" rel="noopener">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-section-title">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="https://mibenglish.com">Home</a></li>
+                    <li><a href="https://mibenglish.com/en/about.html">About</a></li>
+                    <li><a href="https://mibenglish.com/en/contact.html">Contact</a></li>
+                    <li><a href="https://mibenglish.com/en/privacy.html">Privacy Policy</a></li>
+                    <li><a href="https://mibenglish.com/en/terms.html">Terms & Conditions</a></li>
+                    <li><a href="https://mibenglish.com/en/disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MIBEnglish. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // ========== GLOBAL VARIABLES ========== //
+        let episodeData = null;
+        let currentQuestion = 0, score = 0, answered = false;
+        let quizData = [];
+        
+        // ========== LANGUAGE DATA ========== //
+        const languages = [
+            { code: 'en', flag: '🇬🇧', name: 'English' },
+            { code: 'id', flag: '🇮🇩', name: 'Indonesian' },
+            { code: 'ar', flag: '🇸🇦', name: 'Arabic' },
+            { code: 'zh', flag: '🇨🇳', name: 'Chinese' },
+            { code: 'ja', flag: '🇯🇵', name: 'Japanese' },
+            { code: 'ko', flag: '🇰🇷', name: 'Korean' },
+            { code: 'vi', flag: '🇻🇳', name: 'Vietnamese' },
+            { code: 'th', flag: '🇹🇭', name: 'Thai' },
+            { code: 'hi', flag: '🇮🇳', name: 'Hindi' },
+            { code: 'bn', flag: '🇧🇩', name: 'Bengali' },
+            { code: 'ur', flag: '🇵🇰', name: 'Urdu' },
+            { code: 'sw', flag: '🇰🇪', name: 'Swahili' },
+            { code: 'es', flag: '🇪🇸', name: 'Spanish' },
+            { code: 'pt', flag: '🇵🇹', name: 'Portuguese' },
+            { code: 'fr', flag: '🇫🇷', name: 'French' },
+            { code: 'de', flag: '🇩🇪', name: 'German' },
+            { code: 'it', flag: '🇮🇹', name: 'Italian' },
+            { code: 'ru', flag: '🇷🇺', name: 'Russian' },
+            { code: 'pl', flag: '🇵🇱', name: 'Polish' },
+            { code: 'tr', flag: '🇹🇷', name: 'Turkish' },
+            { code: 'el', flag: '🇬🇷', name: 'Greek' }
+        ];
+        
+        // ========== INITIALIZE ON DOM READY ========== //
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load saved preferences
+            var savedFontSize = localStorage.getItem('mibFontSize') || 'normal';
+            var savedTheme = localStorage.getItem('mibTheme') || 'light';
+            document.documentElement.setAttribute('data-font-size', savedFontSize);
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.querySelectorAll('.font-size-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-size') === savedFontSize) btn.classList.add('active');
+            });
+            if (savedTheme === 'dark') document.getElementById('darkToggle').checked = true;
+            
+            // Initialize language grid
+            initLanguageGrid();
+            
+            // Load episode data from JSON
+            loadEpisodeData();
+        });
+        
+        // ========== LANGUAGE GRID INITIALIZATION ========== //
+        function initLanguageGrid() {
+            const grid = document.getElementById('lang-grid');
+            const urlParams = new URLSearchParams(window.location.search);
+            const currentEps = urlParams.get('eps') || '1';
+            
+            grid.innerHTML = languages.map(lang => {
+                const href = `https://mibenglish.com/${lang.code}/season1/eps${currentEps}.html`;
+                const selected = lang.code === 'en' ? 'selected' : '';
+                return `<a href="${href}" class="lang-option ${selected}"><span class="lang-flag">${lang.flag}</span><span class="lang-name">${lang.name}</span></a>`;
+            }).join('');
+        }
+        
+        // ========== LOAD EPISODE DATA FROM JSON ========== //
+        async function loadEpisodeData() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const epsNumber = urlParams.get('eps') || '1';
+            const jsonFile = `eps${epsNumber}.json`;
+            
+            try {
+                const response = await fetch(jsonFile);
+                if (!response.ok) throw new Error('Episode not found');
+                episodeData = await response.json();
+                populatePage(episodeData);
+            } catch (error) {
+                console.error('Error loading episode:', error);
+                document.getElementById('content-sections').innerHTML = `
+                    <section>
+                        <h2>Episode Not Found</h2>
+                        <p>Sorry, the requested episode could not be loaded. Please check the URL or try another episode.</p>
+                        <p><a href="https://mibenglish.com/en/learn/">← Back to Learn</a></p>
+                    </section>
+                `;
+            }
+        }
+        
+        // ========== POPULATE PAGE WITH EPISODE DATA ========== //
+        function populatePage(data) {
+            // Update meta tags
+            document.getElementById('meta-description').content = data.meta.description;
+            document.getElementById('meta-keywords').content = data.meta.keywords.join(', ');
+            document.getElementById('canonical-url').href = data.url.canonical;
+            document.getElementById('hreflang-en').href = data.url.english;
+            document.getElementById('hreflang-id').href = data.url.indonesian;
+            document.getElementById('hreflang-default').href = data.url.english;
+            
+            // Open Graph
+            document.getElementById('og-title').content = data.meta.ogTitle;
+            document.getElementById('og-description').content = data.meta.ogDescription;
+            document.getElementById('og-url').content = data.url.canonical;
+            document.getElementById('og-image').content = data.meta.ogImage;
+            document.getElementById('article-published').content = data.meta.publishedDate;
+            
+            // Twitter
+            document.getElementById('twitter-title').content = data.meta.twitterTitle;
+            document.getElementById('twitter-description').content = data.meta.twitterDescription;
+            document.getElementById('twitter-image').content = data.meta.twitterImage;
+            
+            // Page title
+            document.getElementById('page-title').textContent = data.meta.pageTitle;
+            
+            // JSON-LD
+            const articleJsonLd = {
+                "@context": "https://schema.org",
+                "@type": "Article",
+                "headline": data.article.title,
+                "author": {"@type": "Person", "name": "Mikdad"},
+                "publisher": {"@type": "Organization", "name": "Mibenglish"},
+                "datePublished": data.meta.publishedDate,
+                "dateModified": data.meta.modifiedDate
+            };
+            document.getElementById('jsonld-article').textContent = JSON.stringify(articleJsonLd);
+            
+            const faqJsonLd = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": data.faq.map(item => ({
+                    "@type": "Question",
+                    "name": item.question,
+                    "acceptedAnswer": {"@type": "Answer", "text": item.answer}
+                }))
+            };
+            document.getElementById('jsonld-faq').textContent = JSON.stringify(faqJsonLd);
+            
+            // Article header
+            document.getElementById('article-title').textContent = `Ep ${data.article.episode}: ${data.article.title}`;
+            document.getElementById('article-subtitle').textContent = data.article.subtitle;
+            document.getElementById('level-indicator').textContent = data.article.level;
+            document.getElementById('breadcrumb-episode').textContent = `Episode ${data.article.episode}: ${data.article.titleShort}`;
+            
+            // Table of Contents
+            const tocList = document.getElementById('toc-list');
+            tocList.innerHTML = data.tableOfContents.map((item, i) => 
+                `<li><a href="#section-${i + 1}">${item}</a></li>`
+            ).join('');
+            
+            // Article meta
+            document.getElementById('read-time').textContent = `${data.article.readTime} min read`;
+            document.getElementById('article-date').textContent = data.article.date;
+            
+            // Content sections
+            const contentSections = document.getElementById('content-sections');
+            contentSections.innerHTML = data.sections.map((section, i) => renderSection(section, i)).join('');
+            
+            // Related articles
+            const relatedList = document.getElementById('related-list');
+            relatedList.innerHTML = data.related.map(item => 
+                `<a href="${item.url}" class="related-item"><span class="ep-num">Ep ${item.episode}</span><span>${item.title}</span></a>`
+            ).join('');
+            
+            // Quiz data
+            quizData = data.quiz;
+            loadQuestion();
+            
+            // Update quiz progress dots
+            const progressDots = document.getElementById('quiz-progress');
+            progressDots.innerHTML = quizData.map((_, i) => 
+                `<span class="progress-dot ${i === 0 ? 'active' : ''}"></span>`
+            ).join('');
+            
+            // Next episode
+            document.getElementById('next-episode-title').textContent = `Ep ${data.nextEpisode.episode}: ${data.nextEpisode.title}`;
+            document.getElementById('next-episode-subtitle').textContent = data.nextEpisode.subtitle;
+            document.getElementById('next-episode-link').href = data.nextEpisode.url;
+            
+            // Share links
+            const currentUrl = data.url.canonical;
+            document.getElementById('share-whatsapp').href = `https://wa.me/?text=${encodeURIComponent(currentUrl)}`;
+            document.getElementById('share-telegram').href = `https://t.me/share/url?url=${encodeURIComponent(currentUrl)}`;
+            document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}`;
+        }
+        
+        // ========== RENDER SECTION HTML ========== //
+        function renderSection(section, index) {
+            let html = '';
+            
+            // Ad slots between sections
+            if (index > 0 && index % 2 === 0) {
+                html += `<div class="ad-slot"><span class="ad-slot-label">Ad</span><div>AdSense - Slot ${Math.ceil(index / 2) + 1}</div></div>`;
+            }
+            
+            // Promo banners between sections
+            if (index === 2) {
+                html += `
+                    <a href="https://mibenglish.com/market" class="promo-banner market-banner" target="_blank" rel="noopener">
+                        <div class="banner-content">
+                            <div class="glow-effect glow-1"></div>
+                            <div class="glow-effect glow-2"></div>
+                            <span class="banner-badge">🛒 Marketplace</span>
+                            <h3 class="banner-title">Shop for Your Needs at Mibenglish Market!</h3>
+                            <p class="banner-desc">✨ Explore a variety of high-quality products at unbeatable prices. From study books to educational materials, we've got everything you need!</p>
+                            <div class="banner-features"></div>
+                            <span class="banner-cta">Visit the Market <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                        </div>
+                    </a>
+                `;
+            }
+            if (index === 3) {
+                html += `
+                    <a href="https://mibenglish.com/games" class="promo-banner game-banner" target="_blank" rel="noopener">
+                        <div class="banner-content">
+                            <div class="glow-effect glow-1"></div>
+                            <div class="glow-effect glow-2"></div>
+                            <span class="banner-badge">🎯 Trending!</span>
+                            <h3 class="banner-title">Challenge Yourself with the Latest Educational Game!</h3>
+                            <p class="banner-desc">Don't miss out on exciting games that will make your English learning process even more enjoyable. Start playing now and see your progress!</p>
+                            <div class="banner-features"></div>
+                            <span class="banner-cta">Let's start playing! <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                        </div>
+                    </a>
+                `;
+            }
+            if (index === 4) {
+                html += `
+                    <a href="https://mibenglish.com/market" class="promo-banner market-banner" target="_blank" rel="noopener">
+                        <div class="banner-content">
+                            <div class="glow-effect glow-1"></div>
+                            <div class="glow-effect glow-2"></div>
+                            <span class="banner-badge">⭐ Best Seller!</span>
+                            <h3 class="banner-title">Complete Learning Supplies at Mibenglish Market!</h3>
+                            <p class="banner-desc">Need books, stationery, or learning accessories? Everything's here at affordable prices. Check it out before it's gone!</p>
+                            <div class="banner-features"></div>
+                            <span class="banner-cta">Shop Now <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                        </div>
+                    </a>
+                `;
+            }
+            
+            html += `<section id="section-${index + 1}">`;
+            html += `<h2>${index + 1}. ${section.title}</h2>`;
+            
+            section.content.forEach(item => {
+                switch(item.type) {
+                    case 'paragraph':
+                        html += `<p>${item.text}</p>`;
+                        break;
+                    case 'heading':
+                        html += `<h3>${item.text}</h3>`;
+                        break;
+                    case 'list':
+                        const tag = item.ordered ? 'ol' : 'ul';
+                        html += `<${tag}>${item.items.map(li => `<li>${li}</li>`).join('')}</${tag}>`;
+                        break;
+                    case 'highlight':
+                        html += `<div class="highlight-box ${item.style || ''}"><p><strong>${item.label || 'Note'}:</strong> ${item.text}</p></div>`;
+                        break;
+                    case 'example':
+                        html += `<div class="example-box"><div class="label">${item.label || 'Example'}</div><p class="example-sentence">${item.sentence}</p><span class="translation">${item.translation}</span></div>`;
+                        break;
+                    case 'diagram':
+                        html += `<div class="diagram-box"><div class="diagram-title">${item.title}</div><pre>${item.content}</pre></div>`;
+                        break;
+                }
+            });
+            
+            html += '</section>';
+            return html;
+        }
+        
+        // ========== SETTINGS FUNCTIONS ========== //
+        function openSettings() { document.getElementById('settingsOverlay').classList.add('show'); }
+        function closeSettings() { document.getElementById('settingsOverlay').classList.remove('show'); }
+        function openLangPopup() { document.getElementById('langPopup').classList.add('show'); }
+        function closeLangPopup() { document.getElementById('langPopup').classList.remove('show'); }
+        
+        function setFontSize(size) {
+            document.documentElement.setAttribute('data-font-size', size);
+            localStorage.setItem('mibFontSize', size);
+            document.querySelectorAll('.font-size-btn').forEach(function(btn) {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-size') === size) btn.classList.add('active');
+            });
+        }
+        
+        function toggleDarkMode() {
+            var isDark = document.getElementById('darkToggle').checked;
+            document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+            localStorage.setItem('mibTheme', isDark ? 'dark' : 'light');
+        }
+        
+        document.getElementById('settingsOverlay').addEventListener('click', function(e) { if (e.target === this) closeSettings(); });
+        document.getElementById('langPopup').addEventListener('click', function(e) { if (e.target === this) closeLangPopup(); });
+        
+        // ========== QUIZ FUNCTIONS ========== //
+        function loadQuestion() {
+            if (!quizData.length) return;
+            var q = quizData[currentQuestion];
+            var container = document.getElementById('quiz-content');
+            if (!container) return;
+            var html = '<div class="quiz-question"><p class="question-text">' + q.question + '</p><div class="quiz-options">';
+            for (var i = 0; i < q.options.length; i++) {
+                html += '<button class="quiz-option" onclick="selectAnswer(' + i + ')">' + String.fromCharCode(65 + i) + '. ' + q.options[i] + '</button>';
+            }
+            html += '</div><div class="quiz-feedback" id="feedback"></div></div><div class="quiz-nav"><button class="btn-quiz" id="prev-btn" onclick="prevQuestion()" ' + (currentQuestion === 0 ? 'disabled' : '') + '>Previous</button><button class="btn-quiz" id="next-btn" onclick="nextQuestion()" disabled>Next</button></div>';
+            container.innerHTML = html;
+            updateProgressDots();
+        }
+        
+        function selectAnswer(index) {
+            if (answered) return;
+            answered = true;
+            var q = quizData[currentQuestion];
+            var options = document.querySelectorAll('.quiz-option');
+            var feedback = document.getElementById('feedback');
+            options.forEach(function(opt, i) {
+                if (i === q.correct) opt.classList.add('correct');
+                else if (i === index) opt.classList.add('incorrect');
+            });
+            if (index === q.correct) { score++; feedback.className = 'quiz-feedback show correct'; feedback.textContent = 'Correct! ' + q.explanation; }
+            else { feedback.className = 'quiz-feedback show incorrect'; feedback.textContent = 'Not quite right. ' + q.explanation; }
+            document.getElementById('next-btn').disabled = false;
+        }
+        
+        function nextQuestion() {
+            if (currentQuestion < quizData.length - 1) { currentQuestion++; answered = false; loadQuestion(); }
+            else showResult();
+        }
+        
+        function prevQuestion() {
+            if (currentQuestion > 0) { currentQuestion--; answered = true; loadQuestion(); document.getElementById('next-btn').disabled = false; }
+        }
+        
+        function updateProgressDots() {
+            document.querySelectorAll('.progress-dot').forEach(function(dot, i) {
+                dot.classList.remove('active', 'completed');
+                if (i < currentQuestion) dot.classList.add('completed');
+                else if (i === currentQuestion) dot.classList.add('active');
+            });
+        }
+        
+        function showResult() {
+            document.getElementById('quiz-content').style.display = 'none';
+            document.getElementById('quiz-result').classList.add('show');
+            document.getElementById('final-score').textContent = score + '/' + quizData.length;
+            var percentage = (score / quizData.length) * 100;
+            document.getElementById('result-message').textContent = percentage >= 80 ? 'Excellent! You understood this episode well!' : percentage >= 60 ? 'Good job! Keep improving your understanding.' : 'Don\'t give up! Review the material and try again.';
+        }
+        
+        function restartQuiz() {
+            currentQuestion = 0; score = 0; answered = false;
+            document.getElementById('quiz-content').style.display = 'block';
+            document.getElementById('quiz-result').classList.remove('show');
+            loadQuestion();
+        }
+        
+        // ========== SHARE FUNCTIONS ========== //
+        function toggleShare() {
+            var menu = document.getElementById('shareMenu');
+            menu.classList.toggle('show');
+        }
+        
+        function copyLink(e) {
+            e.preventDefault();
+            navigator.clipboard.writeText(window.location.href).then(function() { alert('Link copied!'); });
+        }
+        
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.share-float')) {
+                document.getElementById('shareMenu').classList.remove('show');
+            }
+        });
+        
+        // ========== AUTOVOICE FEATURE ========== //
+        (function() {
+            'use strict';
+            
+            var audioPlayer = null;
+            var voiceIsPlaying = false;
+            var currentSentenceIndex = 0;
+            var sentences = [];
+            var audioLoaded = false;
+            var loadingAudio = false;
+            
+            function loadAudioData(callback) {
+                if (audioLoaded || window.PREGENERATED_AUDIO) {
+                    audioLoaded = true;
+                    callback();
+                    return;
+                }
+                
+                if (loadingAudio) return;
+                loadingAudio = true;
+                
+                var script = document.createElement('script');
+                script.src = './audio-data.js';
+                script.onload = function() {
+                    audioLoaded = true;
+                    loadingAudio = false;
+                    console.log('Audio data loaded successfully');
+                    callback();
+                };
+                script.onerror = function() {
+                    loadingAudio = false;
+                    console.error('Failed to load audio data');
+                    alert('Voice feature not available. Please ensure audio-data.js is present.');
+                };
+                document.head.appendChild(script);
+            }
+            
+            function initVoice() {
+                if (audioPlayer) return;
+                
+                audioPlayer = document.createElement('audio');
+                audioPlayer.id = 'voicePlayer';
+                audioPlayer.preload = 'auto';
+                audioPlayer.style.display = 'none';
+                document.body.appendChild(audioPlayer);
+                
+                var article = document.querySelector('article') || document.querySelector('main') || document.body;
+                var elements = article.querySelectorAll('p, h2, h3, li');
+                
+                elements.forEach(function(el) {
+                    if (el.closest('.ad-slot, .article-meta, .breadcrumb, .toc-section, .related-articles, .author-bio, .next-episode, .quiz-section, .faq-section, .footer, .share-options')) return;
+                    
+                    var text = (el.textContent || '').trim();
+                    if (text.length > 15 && !el.querySelector('script, style, svg')) {
+                        sentences.push({ element: el, text: text });
+                    }
+                });
+                
+                console.log('Voice: Ready - ' + sentences.length + ' sentences found');
+            }
+            
+            function clearHighlights() {
+                document.querySelectorAll('.sentence-reading, .sentence-read').forEach(function(el) {
+                    el.classList.remove('sentence-reading', 'sentence-read');
+                });
+            }
+            
+            function highlightSentence(idx) {
+                clearHighlights();
+                if (idx >= 0 && idx < sentences.length) {
+                    var el = sentences[idx].element;
+                    el.classList.add('sentence-reading');
+                    try { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch(e) {}
+                }
+            }
+            
+            function playSentence(idx) {
+                if (!voiceIsPlaying || idx >= sentences.length) {
+                    stopVoice();
+                    return;
+                }
+                
+                currentSentenceIndex = idx;
+                highlightSentence(idx);
+                
+                var audioKeys = Object.keys(window.PREGENERATED_AUDIO);
+                var audioKey = audioKeys[idx % audioKeys.length];
+                var audioItem = window.PREGENERATED_AUDIO[audioKey];
+                
+                audioPlayer.src = audioItem.audio;
+                
+                audioPlayer.onended = function() {
+                    if (voiceIsPlaying) {
+                        if (sentences[currentSentenceIndex]) {
+                            sentences[currentSentenceIndex].element.classList.remove('sentence-reading');
+                            sentences[currentSentenceIndex].element.classList.add('sentence-read');
+                        }
+                        playSentence(currentSentenceIndex + 1);
+                    }
+                };
+                
+                audioPlayer.onerror = function() {
+                    console.warn('Audio error, skipping');
+                    if (voiceIsPlaying) playSentence(currentSentenceIndex + 1);
+                };
+                
+                audioPlayer.play().catch(function() {
+                    if (voiceIsPlaying) playSentence(currentSentenceIndex + 1);
+                });
+            }
+            
+            window.toggleVoice = function() {
+                var btn = document.getElementById('voiceBtn');
+                
+                if (voiceIsPlaying) {
+                    stopVoice();
+                    return;
+                }
+                
+                loadAudioData(function() {
+                    initVoice();
+                    
+                    voiceIsPlaying = true;
+                    btn.classList.add('playing');
+                    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg><span>Stop</span>';
+                    btn.title = 'Click to stop';
+                    
+                    currentSentenceIndex = 0;
+                    clearHighlights();
+                    playSentence(0);
+                });
+            };
+            
+            function stopVoice() {
+                voiceIsPlaying = false;
+                
+                if (audioPlayer) {
+                    audioPlayer.pause();
+                    audioPlayer.currentTime = 0;
+                    audioPlayer.src = '';
+                }
+                
+                clearHighlights();
+                
+                var btn = document.getElementById('voiceBtn');
+                if (btn) {
+                    btn.classList.remove('playing');
+                    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg><span>Voice</span>';
+                    btn.title = 'Auto Voice - Read article aloud';
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
