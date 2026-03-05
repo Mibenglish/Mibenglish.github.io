@@ -1,0 +1,335 @@
+{
+  "meta": {
+    "description": "Learn the fundamentals of English sentence structure. Understand Subject-Verb-Object pattern and build your first correct English sentences with confidence.",
+    "keywords": ["English sentence structure", "subject verb object", "basic English grammar", "SVO pattern", "English foundation"],
+    "ogTitle": "Ep 1: Sentence Structure Basics - Mibenglish",
+    "ogDescription": "Master the foundation of English sentences. Learn Subject-Verb-Object pattern with clear examples and interactive quizzes.",
+    "ogImage": "https://mibenglish.com/images/eps1-og.jpg",
+    "twitterTitle": "Sentence Structure Basics",
+    "twitterDescription": "Learn the fundamentals of English sentence structure. Understand SVO pattern and build correct sentences.",
+    "twitterImage": "https://mibenglish.com/images/eps1-twitter.jpg",
+    "pageTitle": "Ep 1: Sentence Structure Basics | Mibenglish",
+    "publishedDate": "2025-01-15T08:00:00+00:00",
+    "modifiedDate": "2025-01-15"
+  },
+  "url": {
+    "canonical": "https://mibenglish.com/en/season1/eps1.html",
+    "english": "https://mibenglish.com/en/season1/eps1.html",
+    "indonesian": "https://mibenglish.com/id/season1/eps1.html"
+  },
+  "article": {
+    "episode": 1,
+    "title": "Sentence Structure Basics",
+    "titleShort": "Sentence Structure",
+    "subtitle": "Understanding the Foundation of English Sentences",
+    "level": "Level A0-A1 (Absolute Beginner Foundation)",
+    "readTime": 12,
+    "date": "January 15, 2025"
+  },
+  "tableOfContents": [
+    "1. What is a Sentence?",
+    "2. The SVO Pattern",
+    "3. Building Your First Sentences",
+    "4. Common Mistakes to Avoid",
+    "5. Episode Summary"
+  ],
+  "sections": [
+    {
+      "title": "What is a Sentence?",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "A sentence is the fundamental unit of communication in English. It expresses a complete thought and contains at least one subject and one verb. Understanding sentence structure is the foundation upon which all your English communication skills will be built, making it essential to master this concept before moving on to more complex grammar topics."
+        },
+        {
+          "type": "paragraph",
+          "text": "Every complete sentence in English follows specific patterns and rules. When you understand these patterns, you can create clear, effective communication that others will easily understand. This knowledge empowers you to express your thoughts, ideas, and needs with confidence in any situation."
+        },
+        {
+          "type": "heading",
+          "text": "Key Components of a Sentence"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>Subject</strong> — The person, thing, or idea that performs the action or is being described",
+            "<strong>Verb</strong> — The action or state of being that connects the subject to the rest of the sentence",
+            "<strong>Object</strong> — The receiver of the action (in many, but not all, sentences)",
+            "<strong>Complete Thought</strong> — The sentence must make sense on its own without additional information"
+          ]
+        },
+        {
+          "type": "highlight",
+          "style": "info",
+          "label": "Did You Know?",
+          "text": "The shortest complete sentence in English is \"Go!\" It has an implied subject (you) and expresses a complete command."
+        }
+      ]
+    },
+    {
+      "title": "The SVO Pattern",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "English follows a specific word order called Subject-Verb-Object (SVO). This pattern is the backbone of English sentence structure and differs from many other languages. Mastering SVO will help you construct grammatically correct sentences naturally, without having to consciously think about word placement each time you speak or write."
+        },
+        {
+          "type": "heading",
+          "text": "Understanding the SVO Order"
+        },
+        {
+          "type": "diagram",
+          "title": "The SVO Pattern Structure",
+          "content": "┌─────────────────────────────────────────────────────────────┐\n│                    SUBJECT → VERB → OBJECT                   │\n├─────────────────────────────────────────────────────────────┤\n│  Subject      │  Verb        │  Object                       │\n│  (Who/What)   │  (Action)    │  (Receiver)                   │\n├───────────────┼──────────────┼───────────────────────────────┤\n│  I            │  eat         │  an apple                     │\n│  She          │  reads       │  a book                       │\n│  They         │  play        │  football                     │\n│  The cat      │  chases      │  the mouse                    │\n└───────────────┴──────────────┴───────────────────────────────┘"
+        },
+        {
+          "type": "example",
+          "label": "Example",
+          "sentence": "Maria studies English every day.",
+          "translation":Maria = Subject (who performs the action), studies = Verb (the action), English = Object (what is studied)"
+        },
+        {
+          "type": "highlight",
+          "style": "success",
+          "label": "Pro Tip",
+          "text": "In English, the subject almost always comes before the verb. This is different from languages like Indonesian or Arabic where word order can be more flexible. Consistently practicing SVO order will help you think in English more naturally."
+        },
+        {
+          "type": "heading",
+          "text": "Sentences Without Objects"
+        },
+        {
+          "type": "paragraph",
+          "text": "Not all sentences need an object. Some verbs are complete with just a subject and verb. These are called intransitive verbs. Understanding when an object is needed and when it is optional will help you construct more natural and varied sentences in your daily communication."
+        },
+        {
+          "type": "example",
+          "label": "Example",
+          "sentence": "The baby sleeps peacefully.",
+          "translation": "Subject = The baby, Verb = sleeps. No object needed because 'sleep' is an intransitive verb."
+        }
+      ]
+    },
+    {
+      "title": "Building Your First Sentences",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Now that you understand the SVO pattern, let's practice building sentences. Start with simple subjects and verbs, then gradually add objects and modifiers. This step-by-step approach will build your confidence and help you internalize the correct word order patterns."
+        },
+        {
+          "type": "heading",
+          "text": "Step 1: Choose Your Subject"
+        },
+        {
+          "type": "paragraph",
+          "text": "The subject can be a person (I, you, he, she, Maria, the teacher), a thing (the book, the car, my phone), or an idea (happiness, freedom, success). Choosing the right subject helps you clearly communicate who or what your sentence is about, making your message more precise and easier to understand."
+        },
+        {
+          "type": "heading",
+          "text": "Step 2: Add Your Verb"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "Common action verbs: eat, drink, walk, run, read, write, speak, listen",
+            "State verbs: am, is, are, was, were, feel, seem, appear",
+            "Remember: The verb must agree with your subject (I am, she is, they are)"
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Step 3: Add an Object (if needed)"
+        },
+        {
+          "type": "paragraph",
+          "text": "If your verb is transitive, add an object to complete the meaning. The object answers the question \"what?\" or \"who?\" after the verb. Adding objects allows you to create more informative and detailed sentences that convey richer meaning."
+        },
+        {
+          "type": "example",
+          "label": "Building Process",
+          "sentence": "I drink coffee every morning.",
+          "translation": "Subject: I → Verb: drink → Object: coffee → Time: every morning"
+        },
+        {
+          "type": "highlight",
+          "style": "warning",
+          "label": "Caution",
+          "text": "Don't translate word-for-word from your native language! Always follow English SVO order. Many learners make mistakes by applying their native language's word order to English sentences, which can lead to confusion and misunderstandings."
+        }
+      ]
+    },
+    {
+      "title": "Common Mistakes to Avoid",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "When learning sentence structure, there are several common errors that many beginners make. Being aware of these mistakes will help you avoid them and progress faster in your English learning journey. Let's examine each one carefully and learn how to correct them."
+        },
+        {
+          "type": "heading",
+          "text": "Mistake #1: Wrong Word Order"
+        },
+        {
+          "type": "example",
+          "label": "Wrong",
+          "sentence": "Eats apple an she.",
+          "translation": "This is incorrect — the words are not in SVO order"
+        },
+        {
+          "type": "example",
+          "label": "Correct",
+          "sentence": "She eats an apple.",
+          "translation": "Subject (She) + Verb (eats) + Object (an apple)"
+        },
+        {
+          "type": "heading",
+          "text": "Mistake #2: Missing Subject or Verb"
+        },
+        {
+          "type": "example",
+          "label": "Wrong",
+          "sentence": "Is very beautiful.",
+          "translation": "Missing subject — who or what is beautiful?"
+        },
+        {
+          "type": "example",
+          "label": "Correct",
+          "sentence": "The flower is very beautiful.",
+          "translation": "Subject (The flower) + Verb (is) + Description (very beautiful)"
+        },
+        {
+          "type": "heading",
+          "text": "Mistake #3: Subject-Verb Disagreement"
+        },
+        {
+          "type": "example",
+          "label": "Wrong",
+          "sentence": "She eat breakfast at 7 AM.",
+          "translation": "The verb 'eat' doesn't agree with the subject 'she'"
+        },
+        {
+          "type": "example",
+          "label": "Correct",
+          "sentence": "She eats breakfast at 7 AM.",
+          "translation": "Add 's' to the verb for third person singular (he/she/it)"
+        },
+        {
+          "type": "highlight",
+          "style": "success",
+          "label": "Practice Tip",
+          "text": "Read your sentences aloud. If something sounds wrong, it probably is! Your ear will develop over time to recognize correct English patterns naturally."
+        }
+      ]
+    },
+    {
+      "title": "Episode Summary",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Congratulations on completing Episode 1! You have taken the first important step in mastering English sentence structure. The concepts you learned today form the foundation for everything you will learn in future episodes, so make sure you understand them well before moving forward."
+        },
+        {
+          "type": "heading",
+          "text": "Key Takeaways"
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "<strong>SVO Pattern</strong> — English sentences follow Subject → Verb → Object order",
+            "<strong>Complete Sentences</strong> — Every sentence needs at least a subject and a verb",
+            "<strong>Object Optional</strong> — Some verbs don't need objects (intransitive verbs)",
+            "<strong>Word Order Matters</strong> — Wrong word order can change or confuse meaning",
+            "<strong>Practice Daily</strong> — Build simple sentences regularly to reinforce the pattern"
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "In the next episode, we will explore the verb 'to be' in detail. This essential verb is the foundation for describing people, things, and situations in English. Understanding 'to be' will unlock your ability to introduce yourself, describe your surroundings, and express states of being with confidence."
+        },
+        {
+          "type": "highlight",
+          "style": "success",
+          "label": "Encouragement",
+          "text": "You've made excellent progress today! Every expert was once a beginner. Keep practicing, stay curious, and remember that making mistakes is part of the learning process. Your dedication to learning English will open doors to new opportunities and connections around the world."
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is the most basic sentence structure in English?",
+      "answer": "The most basic sentence structure is Subject + Verb (SV). For example, 'Birds fly.' or 'She sleeps.' This minimal structure expresses a complete thought with just two words, though most sentences include additional elements like objects or modifiers for more detailed communication."
+    },
+    {
+      "question": "Do all English sentences need an object?",
+      "answer": "No, not all sentences need an object. Intransitive verbs like 'sleep,' 'arrive,' and 'happen' do not require objects. For example, 'The baby sleeps' is a complete sentence without an object. Understanding which verbs require objects and which don't will help you create more natural English sentences."
+    },
+    {
+      "question": "Why is word order so important in English?",
+      "answer": "Unlike some languages that use case endings or inflections to show grammatical relationships, English relies heavily on word order to convey meaning. The sentence 'The dog bites the man' means something very different from 'The man bites the dog,' even though they contain the same words. Correct word order ensures clear communication."
+    },
+    {
+      "question": "How can I practice sentence structure effectively?",
+      "answer": "Start with simple SVO sentences using common subjects and verbs. Write 5-10 sentences daily, read them aloud, and gradually increase complexity. Use language learning apps, watch English videos with subtitles, and practice speaking with native speakers or language partners whenever possible."
+    }
+  ],
+  "related": [
+    {
+      "episode": 2,
+      "title": "The Verb 'To Be'",
+      "url": "https://mibenglish.com/en/season1/eps2.html"
+    },
+    {
+      "episode": 3,
+      "title": "Articles: A, An, The",
+      "url": "https://mibenglish.com/en/season1/eps3.html"
+    },
+    {
+      "episode": 4,
+      "title": "Personal Pronouns",
+      "url": "https://mibenglish.com/en/season1/eps4.html"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What does SVO stand for in English sentence structure?",
+      "options": ["Subject-Verb-Object", "Simple-Very-Organized", "Statement-View-Opinion", "Sound-Voice-Order"],
+      "correct": 0,
+      "explanation": "SVO stands for Subject-Verb-Object, which is the basic word order pattern in English sentences. The subject comes first, followed by the verb, and then the object."
+    },
+    {
+      "question": "Which sentence follows the correct SVO pattern?",
+      "options": ["Apple eats she an.", "She eats an apple.", "An apple she eats.", "Eats she apple an."],
+      "correct": 1,
+      "explanation": "'She eats an apple' follows the correct SVO pattern: Subject (She) → Verb (eats) → Object (an apple)."
+    },
+    {
+      "question": "Which of the following is a complete sentence?",
+      "options": ["Running fast.", "Is beautiful.", "The cat sleeps.", "In the morning."],
+      "correct": 2,
+      "explanation": "'The cat sleeps' is a complete sentence because it has a subject (The cat) and a verb (sleeps). The other options are missing either a subject or a verb."
+    },
+    {
+      "question": "What is missing in the sentence: '_____ reads books every day.'",
+      "options": ["An object", "A verb", "A subject", "Nothing is missing"],
+      "correct": 2,
+      "explanation": "The sentence is missing a subject. We need to know who reads books every day. A complete sentence would be 'Maria reads books every day.'"
+    },
+    {
+      "question": "Which verb form is correct: 'She _____ breakfast at 8 AM.'",
+      "options": ["eat", "eats", "eating", "ate"],
+      "correct": 1,
+      "explanation": "The correct form is 'eats' because the subject 'she' is third person singular, which requires adding 's' to the verb in present simple tense."
+    }
+  ],
+  "nextEpisode": {
+    "episode": 2,
+    "title": "The Verb 'To Be'",
+    "subtitle": "Mastering the Essential Linking Verb",
+    "url": "https://mibenglish.com/en/season1/eps2.html"
+  }
+}
