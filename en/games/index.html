@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MIBEnglish Games - Belajar Bahasa Inggris dengan games seru! Kuis vocabulary, word match, spelling, dan banyak lagi.">
-    <meta name="keywords" content="game bahasa inggris, english games, belajar inggris seru, vocabulary quiz, word games">
+    <meta name="description" content="Games Database - Koleksi ribuan game seru! Mainkan sekarang, gratis tanpa download.">
+    <meta name="keywords" content="games, online games, browser games, free games">
     <meta name="author" content="MIBEnglish">
     <meta name="theme-color" content="#1a472a">
-    <title>Games Belajar Bahasa Inggris - MIBEnglish</title>
-    
-    <link rel="canonical" href="https://mibenglish.com/id/games/">
-    <link rel="alternate" hreflang="en" href="https://mibenglish.com/games/">
-    <link rel="alternate" hreflang="id" href="https://mibenglish.com/id/games/">
-    <link rel="alternate" hreflang="x-default" href="https://mibenglish.com/games/">
+    <title>Games Database - MIBEnglish</title>
     
     <style>
         /* ========== BASE RESET ========== */
@@ -29,7 +24,7 @@
         
         /* ========== FONT SIZE SETTINGS ========== */
         [data-font-size="small"] { font-size: 14px; }
-        [data-font-size="normal"] { font-size: 16px; }
+        [data-font-size="normal"] { font-size: 15px; }
         [data-font-size="large"] { font-size: 18px; }
         [data-font-size="xlarge"] { font-size: 20px; }
         
@@ -73,19 +68,33 @@
             gap: 8px;
         }
         
-        .lang-btn {
+        .search-box {
             display: flex;
             align-items: center;
-            gap: 4px;
             background: rgba(255,255,255,0.1);
             border: 1px solid rgba(255,255,255,0.2);
-            color: #ffffff;
-            padding: 8px 12px;
             border-radius: 20px;
-            font-size: 0.875rem;
-            cursor: pointer;
+            padding: 6px 12px;
+            gap: 6px;
+        }
+        
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 0.85rem;
+            width: 140px;
+            outline: none;
             font-family: inherit;
-            white-space: nowrap;
+        }
+        
+        .search-box input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .search-box svg {
+            color: rgba(255,255,255,0.6);
+            flex-shrink: 0;
         }
         
         .settings-btn {
@@ -103,7 +112,7 @@
             justify-content: center;
         }
         
-        /* ========== NAVIGATION ========== */
+        /* Navigation - SAMA DENGAN TEMPLATE */
         .nav {
             position: fixed;
             top: 56px;
@@ -120,7 +129,12 @@
         }
         
         .nav::-webkit-scrollbar { display: none; }
-        .nav-inner { display: flex; gap: 6px; padding: 0 12px; }
+        
+        .nav-inner {
+            display: flex;
+            gap: 6px;
+            padding: 0 12px;
+        }
         
         .nav-link {
             color: #ffffff;
@@ -135,8 +149,15 @@
         
         .nav-link:hover, .nav-link.active { background: #c9a227; color: #ffffff; }
         
-        /* ========== MAIN CONTENT ========== */
-        .main { max-width: 720px; margin: 0 auto; padding: 0 12px 24px; }
+        /* Main Content */
+        .main {
+            padding-top: 130px;
+            padding-bottom: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
         
         /* Category Header */
         .category-header {
@@ -150,9 +171,7 @@
             justify-content: space-between;
         }
         
-        .category-info {
-            flex: 1;
-        }
+        .category-info { flex: 1; }
         
         .category-title {
             font-size: 1.125rem;
@@ -223,9 +242,7 @@
             gap: 10px;
         }
         
-        .stat-item {
-            text-align: center;
-        }
+        .stat-item { text-align: center; }
         
         .stat-value {
             font-size: 1.25rem;
@@ -240,450 +257,195 @@
             letter-spacing: 0.5px;
         }
         
-        /* Games Grid */
+        /* Games Grid - ROBLOX STYLE */
         .games-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 12px;
         }
         
-        /* Game Card */
+        /* Game Card - ROBLOX STYLE */
         .game-card {
             background: #ffffff;
             border: 2px solid #d4e5d4;
-            border-radius: 16px;
+            border-radius: 12px;
             overflow: hidden;
             transition: all 0.2s ease;
             cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .game-card:hover {
+            border-color: #c9a227;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
         .game-card:active {
-            border-color: #c9a227;
             transform: scale(0.98);
         }
         
-        .game-card-header {
+        /* Game Thumbnail */
+        .game-thumb {
+            position: relative;
+            aspect-ratio: 16/10;
             background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            overflow: hidden;
         }
         
-        .game-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 12px;
+        .game-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .game-thumb img.loaded {
+            opacity: 1;
+        }
+        
+        .game-thumb-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            flex-shrink: 0;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
         }
         
-        .game-info {
-            flex: 1;
+        /* Badge */
+        .game-badge {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        
+        .badge-new { background: #4caf50; }
+        .badge-hot { background: #f44336; }
+        .badge-featured { background: #ff9800; }
+        .badge-top { background: #9c27b0; }
+        
+        /* Votes */
+        .game-votes {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(4px);
+            padding: 3px 8px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        
+        .game-votes svg {
+            width: 10px;
+            height: 10px;
+            color: #c9a227;
+        }
+        
+        /* Play Overlay */
+        .game-play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        
+        .game-card:hover .game-play-overlay {
+            opacity: 1;
+        }
+        
+        .game-play-btn {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            transform: scale(0.8);
+            transition: transform 0.2s ease;
+        }
+        
+        .game-card:hover .game-play-btn {
+            transform: scale(1);
+        }
+        
+        /* Game Card Body */
+        .game-card-body {
+            padding: 10px;
         }
         
         .game-title {
-            font-size: 1rem;
+            font-size: 0.85rem;
             font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 2px;
-        }
-        
-        .game-desc {
-            font-size: 0.8125rem;
-            color: rgba(255,255,255,0.8);
-        }
-        
-        .game-card-body {
-            padding: 12px 16px;
-        }
-        
-        .game-levels {
-            display: flex;
-            gap: 6px;
-            margin-bottom: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .game-level-btn {
-            padding: 6px 12px;
-            border: 1px solid #d4e5d4;
-            background: #f8faf8;
-            border-radius: 15px;
-            font-size: 0.75rem;
-            font-weight: 600;
             color: #1a472a;
-            cursor: pointer;
-            font-family: inherit;
-            transition: all 0.2s ease;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         
-        .game-level-btn:hover {
+        .game-category-tag {
+            display: inline-block;
             background: #e8f5e9;
-            border-color: #c9a227;
+            color: #1a472a;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 6px;
         }
         
         .game-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #6b7b6b;
         }
         
         .game-rating {
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 3px;
         }
         
         .game-rating .stars {
             color: #c9a227;
+            font-size: 0.65rem;
         }
         
         .game-plays {
             display: flex;
             align-items: center;
-            gap: 4px;
-        }
-        
-        /* Game Modal */
-        .game-modal {
-            max-width: 500px;
-        }
-        
-        .game-modal-header {
-            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .game-modal-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.75rem;
-            margin: 0 auto 12px;
-        }
-        
-        .game-modal-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-        
-        .game-modal-subtitle {
-            font-size: 0.875rem;
-            opacity: 0.9;
-        }
-        
-        .game-modal-body {
-            padding: 20px;
-        }
-        
-        .level-select-title {
-            font-size: 0.9375rem;
-            font-weight: 700;
-            color: #1a472a;
-            margin-bottom: 12px;
-        }
-        
-        .level-select-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 16px;
-        }
-        
-        .level-option {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 14px 16px;
-            background: #f8faf8;
-            border: 2px solid #d4e5d4;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .level-option:hover {
-            border-color: #c9a227;
-            background: #e8f5e9;
-        }
-        
-        .level-option.selected {
-            border-color: #c9a227;
-            background: #fffbeb;
-        }
-        
-        .level-option-icon {
-            width: 40px;
-            height: 40px;
-            background: #e8f5e9;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-        }
-        
-        .level-option-info {
-            flex: 1;
-        }
-        
-        .level-option-name {
-            font-size: 0.9375rem;
-            font-weight: 700;
-            color: #1a472a;
-        }
-        
-        .level-option-desc {
-            font-size: 0.75rem;
-            color: #6b7b6b;
-        }
-        
-        .level-option-badge {
-            font-size: 0.6875rem;
-            padding: 4px 10px;
-            border-radius: 10px;
-            font-weight: 600;
-        }
-        
-        .badge-easy { background: #e8f5e9; color: #2e7d32; }
-        .badge-medium { background: #fff3e0; color: #e65100; }
-        .badge-hard { background: #ffebee; color: #c62828; }
-        .badge-expert { background: #f3e5f5; color: #7b1fa2; }
-        
-        .btn-play {
-            width: 100%;
-            background: linear-gradient(135deg, #c9a227, #e6c84a);
-            color: #ffffff;
-            border: none;
-            padding: 16px;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            font-family: inherit;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-        
-        /* Play Game Modal */
-        .play-modal {
-            max-width: 500px;
-            max-height: 90vh;
-        }
-        
-        .play-modal-header {
-            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
-            padding: 16px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .play-modal-info {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .play-modal-title {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #ffffff;
-        }
-        
-        .play-modal-level {
-            font-size: 0.75rem;
-            color: rgba(255,255,255,0.8);
-        }
-        
-        .play-modal-stats {
-            display: flex;
-            gap: 12px;
-        }
-        
-        .play-stat {
-            text-align: center;
-        }
-        
-        .play-stat-value {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #ffffff;
-        }
-        
-        .play-stat-label {
-            font-size: 0.625rem;
-            color: rgba(255,255,255,0.7);
-            text-transform: uppercase;
-        }
-        
-        .play-modal-body {
-            padding: 20px;
-        }
-        
-        .question-counter {
-            text-align: center;
-            font-size: 0.875rem;
-            color: #6b7b6b;
-            margin-bottom: 12px;
-        }
-        
-        .question-card {
-            background: #f8faf8;
-            border: 2px solid #d4e5d4;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 16px;
-            text-align: center;
-        }
-        
-        .question-word {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: #1a472a;
-            margin-bottom: 8px;
-        }
-        
-        .question-hint {
-            font-size: 0.875rem;
-            color: #6b7b6b;
-        }
-        
-        .question-type {
-            font-size: 0.75rem;
-            color: #c9a227;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-        
-        .options-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-bottom: 16px;
-        }
-        
-        .option-btn {
-            padding: 14px 12px;
-            border: 2px solid #d4e5d4;
-            background: #ffffff;
-            border-radius: 12px;
-            font-size: 0.9375rem;
-            font-weight: 500;
-            color: #1a1a1a;
-            cursor: pointer;
-            font-family: inherit;
-            transition: all 0.2s ease;
-            text-align: center;
-        }
-        
-        .option-btn:hover {
-            border-color: #c9a227;
-            background: #fffbeb;
-        }
-        
-        .option-btn.correct {
-            border-color: #4caf50;
-            background: #e8f5e9;
-            color: #2e7d32;
-        }
-        
-        .option-btn.wrong {
-            border-color: #f44336;
-            background: #ffebee;
-            color: #c62828;
-        }
-        
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: #e8e8e8;
-            border-radius: 4px;
-            overflow: hidden;
-            margin-bottom: 16px;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #c9a227, #e6c84a);
-            border-radius: 4px;
-            transition: width 0.3s ease;
-        }
-        
-        /* Game Result */
-        .result-card {
-            text-align: center;
-            padding: 24px;
-        }
-        
-        .result-icon {
-            font-size: 4rem;
-            margin-bottom: 16px;
-        }
-        
-        .result-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1a472a;
-            margin-bottom: 8px;
-        }
-        
-        .result-score {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #c9a227;
-            margin-bottom: 8px;
-        }
-        
-        .result-detail {
-            font-size: 0.875rem;
-            color: #6b7b6b;
-            margin-bottom: 20px;
-        }
-        
-        .result-actions {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
-        
-        .btn-retry {
-            padding: 12px 24px;
-            background: #f8faf8;
-            border: 2px solid #d4e5d4;
-            border-radius: 25px;
-            font-size: 0.9375rem;
-            font-weight: 600;
-            color: #1a472a;
-            cursor: pointer;
-            font-family: inherit;
-        }
-        
-        .btn-home {
-            padding: 12px 24px;
-            background: linear-gradient(135deg, #c9a227, #e6c84a);
-            border: none;
-            border-radius: 25px;
-            font-size: 0.9375rem;
-            font-weight: 600;
-            color: #ffffff;
-            cursor: pointer;
-            font-family: inherit;
+            gap: 3px;
         }
         
         /* Ad Slots */
@@ -714,6 +476,24 @@
             flex-direction: column;
             gap: 12px;
             margin: 16px 0;
+        }
+        
+        /* Load More */
+        .load-more {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        .btn-load-more {
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            color: #ffffff;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
         }
         
         /* Footer */
@@ -843,62 +623,6 @@
         
         .modal-body { padding: 16px; }
         
-        /* Language Popup */
-        .lang-popup { max-width: 500px; }
-        
-        .lang-popup-header {
-            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .lang-popup-header h2 { font-size: 1.125rem; margin-bottom: 4px; }
-        .lang-popup-header p { font-size: 0.875rem; opacity: 0.9; }
-        
-        .lang-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            padding: 16px;
-        }
-        
-        .lang-option {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px 6px;
-            border: 2px solid #d4e5d4;
-            border-radius: 10px;
-            text-decoration: none;
-            color: #1a1a1a;
-            background: #f8faf8;
-            min-height: 70px;
-            transition: all 0.2s ease;
-        }
-        
-        .lang-option:active { border-color: #c9a227; background: #e8f5e9; }
-        .lang-option.selected { border-color: #c9a227; background: #c9a227; color: #ffffff; }
-        
-        .lang-flag { font-size: 1.25rem; margin-bottom: 4px; }
-        .lang-name { font-size: 0.6875rem; font-weight: 600; text-align: center; }
-        
-        .lang-popup-footer {
-            padding: 12px 16px 16px;
-            text-align: center;
-        }
-        
-        .btn-confirm {
-            background: linear-gradient(135deg, #c9a227, #e6c84a);
-            color: #ffffff;
-            border: none;
-            padding: 14px 32px;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            font-family: inherit;
-        }
-        
         /* Settings */
         .settings-section {
             margin-bottom: 20px;
@@ -991,19 +715,6 @@
         .toggle-switch input:checked + .toggle-slider { background: #c9a227; }
         .toggle-switch input:checked + .toggle-slider:before { transform: translateX(22px); }
         
-        .btn-change-lang {
-            width: 100%;
-            background: linear-gradient(135deg, #c9a227, #e6c84a);
-            color: #ffffff;
-            border: none;
-            padding: 14px;
-            border-radius: 25px;
-            font-size: 0.9375rem;
-            font-weight: 700;
-            cursor: pointer;
-            font-family: inherit;
-        }
-        
         /* FAB */
         .share-fab {
             position: fixed;
@@ -1091,82 +802,21 @@
             border-color: #333333;
         }
         
-        [data-theme="dark"] .game-card-body {
-            background: #1e1e1e;
+        [data-theme="dark"] .game-thumb-placeholder {
+            background: linear-gradient(135deg, #1e3a1e 0%, #2d5a3d 100%);
         }
         
-        [data-theme="dark"] .game-level-btn {
-            background: #252525;
-            border-color: #333333;
+        [data-theme="dark"] .game-title {
+            color: #a0d0a0;
+        }
+        
+        [data-theme="dark"] .game-category-tag {
+            background: #1e3a1e;
             color: #a0d0a0;
         }
         
         [data-theme="dark"] .game-meta {
             color: #888888;
-        }
-        
-        [data-theme="dark"] .level-select-title {
-            color: #6ab060;
-        }
-        
-        [data-theme="dark"] .level-option {
-            background: #252525;
-            border-color: #333333;
-        }
-        
-        [data-theme="dark"] .level-option:hover {
-            background: #2a2a2a;
-            border-color: #c9a227;
-        }
-        
-        [data-theme="dark"] .level-option.selected {
-            background: #2a2a2a;
-        }
-        
-        [data-theme="dark"] .level-option-icon {
-            background: #1e3a1e;
-        }
-        
-        [data-theme="dark"] .level-option-name {
-            color: #a0d0a0;
-        }
-        
-        [data-theme="dark"] .question-card {
-            background: #252525;
-            border-color: #333333;
-        }
-        
-        [data-theme="dark"] .question-word {
-            color: #6ab060;
-        }
-        
-        [data-theme="dark"] .question-hint {
-            color: #888888;
-        }
-        
-        [data-theme="dark"] .option-btn {
-            background: #252525;
-            border-color: #333333;
-            color: #e0e0e0;
-        }
-        
-        [data-theme="dark"] .option-btn:hover {
-            background: #2a2a2a;
-            border-color: #c9a227;
-        }
-        
-        [data-theme="dark"] .progress-bar {
-            background: #333333;
-        }
-        
-        [data-theme="dark"] .result-title {
-            color: #6ab060;
-        }
-        
-        [data-theme="dark"] .btn-retry {
-            background: #252525;
-            border-color: #333333;
-            color: #e0e0e0;
         }
         
         [data-theme="dark"] .ad-slot {
@@ -1185,23 +835,6 @@
         
         [data-theme="dark"] .modal-header {
             background: #2d5a3d;
-        }
-        
-        [data-theme="dark"] .lang-option {
-            background: #252525;
-            border-color: #333333;
-            color: #e0e0e0;
-        }
-        
-        [data-theme="dark"] .lang-option:active {
-            border-color: #c9a227;
-            background: #2a2a2a;
-        }
-        
-        [data-theme="dark"] .lang-option.selected {
-            background: #c9a227;
-            border-color: #c9a227;
-            color: #ffffff;
         }
         
         [data-theme="dark"] .settings-section {
@@ -1230,11 +863,6 @@
             color: #e0e0e0;
         }
         
-        [data-theme="dark"] .btn-confirm,
-        [data-theme="dark"] .btn-change-lang {
-            background: linear-gradient(135deg, #b8922a, #d4b840);
-        }
-        
         [data-theme="dark"] .toast {
             background: #2d5a3d;
         }
@@ -1242,152 +870,29 @@
         [data-theme="dark"] .share-fab {
             background: linear-gradient(135deg, #b8922a, #d4b840);
         }
-
-                /* ========== RESPONSIVE ========== */
-        @media (min-width: 480px) {
-            .lang-grid { grid-template-columns: repeat(4, 1fr); }
-        }
-        
-        @media (min-width: 600px) {
-            .main { padding-left: 20px; padding-right: 20px; }
-            .article-header { margin-left: -20px; margin-right: -20px; }
-            .breadcrumb { margin-left: -20px; margin-right: -20px; }
-            .toc-section { margin-left: -20px; margin-right: -20px; }
-            .cta-section { margin-left: -20px; margin-right: -20px; }
-        }
-        
-        @media (min-width: 800px) {
-            .footer { padding: 40px 24px 24px; }
-            .footer-content {
-                display: flex;
-                gap: 40px;
-                max-width: 720px;
-                margin: 0 auto;
-            }
-            .footer-brand-section { flex: 1; }
-        }
-        
-        @media (max-width: 600px) {
-            .article-header h1 { font-size: 1.3rem; }
-            .bismillah { font-size: 2rem; }
-            .arabic-main { font-size: 1.6rem; padding: 1.5rem; }
-            .arabic-verse { font-size: 1.4rem; padding: 1.2rem; }
-            .nav-link { padding: 6px 12px; font-size: 0.85rem; }
-            .header { padding: 0 12px; }
-            .voice-btn span { display: none; }
-            .voice-btn { padding: 8px; }
-            .prayer-card { padding: 1.5rem 1rem; }
-            .amiin-text { font-size: 2rem; }
-        }
-        
-        @media (max-width: 400px) {
-            .nav-link { padding: 5px 10px; font-size: 0.8rem; }
-            .font-size-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-                /* ========== RESPONSIVE ========== */
-        @media (min-width: 480px) {
-            .lang-grid { grid-template-columns: repeat(4, 1fr); }
-        }
-        
-        @media (min-width: 600px) {
-            .main { padding-left: 20px; padding-right: 20px; }
-            .article-header { margin-left: -20px; margin-right: -20px; }
-            .breadcrumb { margin-left: -20px; margin-right: -20px; }
-            .toc-section { margin-left: -20px; margin-right: -20px; }
-            .cta-section { margin-left: -20px; margin-right: -20px; }
-        }
-        
-        @media (min-width: 800px) {
-            .footer { padding: 40px 24px 24px; }
-            .footer-content {
-                display: flex;
-                gap: 40px;
-                max-width: 720px;
-                margin: 0 auto;
-            }
-            .footer-brand-section { flex: 1; }
-        }
-        
-        @media (max-width: 600px) {
-            .article-header h1 { font-size: 1.3rem; }
-            .bismillah { font-size: 2rem; }
-            .arabic-main { font-size: 1.6rem; padding: 1.5rem; }
-            .arabic-verse { font-size: 1.4rem; padding: 1.2rem; }
-            .nav-link { padding: 6px 12px; font-size: 0.85rem; }
-            .header { padding: 0 12px; }
-            .voice-btn span { display: none; }
-            .voice-btn { padding: 8px; }
-            .prayer-card { padding: 1.5rem 1rem; }
-            .amiin-text { font-size: 2rem; }
-        }
-        
-        @media (max-width: 400px) {
-            .nav-link { padding: 5px 10px; font-size: 0.8rem; }
-            .font-size-grid { grid-template-columns: repeat(2, 1fr); }
-        }
         
         /* ========== RESPONSIVE ========== */
         @media (min-width: 480px) {
-            .lang-grid { grid-template-columns: repeat(4, 1fr); }
+            .games-grid { grid-template-columns: repeat(3, 1fr); }
         }
         
         @media (min-width: 600px) {
             .main { padding-left: 20px; padding-right: 20px; }
             .category-title { font-size: 1.375rem; }
-            .games-grid { grid-template-columns: repeat(2, 1fr); }
+            .games-grid { grid-template-columns: repeat(4, 1fr); }
             .ad-row { flex-direction: row; }
             .ad-row .ad-slot { flex: 1; }
         }
         
         @media (min-width: 800px) {
-            .games-grid { grid-template-columns: repeat(2, 1fr); }
+            .games-grid { grid-template-columns: repeat(5, 1fr); }
             .footer { padding: 40px 24px 24px; }
             .footer-content { display: flex; gap: 40px; max-width: 900px; margin: 0 auto; }
             .footer-brand-section { flex: 1; }
         }
-        
-        /* ========== FONT SIZE ADJUSTMENTS FOR NAV ========== */
-        [data-font-size="large"] .header { height: 60px; }
-        [data-font-size="large"] .nav { top: 60px; min-height: 52px; }
-        [data-font-size="large"] .main { padding-top: 140px; }
-        [data-font-size="large"] .nav-link { padding: 6px 12px; font-size: 0.85rem; }
-        
-        [data-font-size="xlarge"] .header { height: 64px; }
-        [data-font-size="xlarge"] .nav { top: 64px; min-height: 56px; }
-        [data-font-size="xlarge"] .main { padding-top: 150px; }
-        [data-font-size="xlarge"] .nav-link { padding: 6px 10px; font-size: 0.8rem; }
-        [data-font-size="xlarge"] .lang-btn { padding: 6px 10px; font-size: 0.8rem; }
-        [data-font-size="xlarge"] .brand { font-size: 1rem; }
     </style>
 </head>
 <body>
-    <!-- Language Popup -->
-    <div class="modal-overlay" id="langPopup">
-        <div class="modal lang-popup">
-            <div class="lang-popup-header">
-                <h2>Pilih Bahasa Anda</h2>
-                <p>Pilih bahasa untuk pengalaman belajar terbaik</p>
-            </div>
-            <div class="lang-grid">
-                <a href="https://mibenglish.com/games/" class="lang-option"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></a>
-                <a href="https://mibenglish.com/id/games/" class="lang-option selected"><span class="lang-flag">🇮🇩</span><span class="lang-name">Indonesian</span></a>
-                <a href="https://mibenglish.com/ar/games/" class="lang-option"><span class="lang-flag">🇸🇦</span><span class="lang-name">Arabic</span></a>
-                <a href="https://mibenglish.com/zh/games/" class="lang-option"><span class="lang-flag">🇨🇳</span><span class="lang-name">Chinese</span></a>
-                <a href="https://mibenglish.com/ja/games/" class="lang-option"><span class="lang-flag">🇯🇵</span><span class="lang-name">Japanese</span></a>
-                <a href="https://mibenglish.com/ko/games/" class="lang-option"><span class="lang-flag">🇰🇷</span><span class="lang-name">Korean</span></a>
-                <a href="https://mibenglish.com/vi/games/" class="lang-option"><span class="lang-flag">🇻🇳</span><span class="lang-name">Vietnamese</span></a>
-                <a href="https://mibenglish.com/th/games/" class="lang-option"><span class="lang-flag">🇹🇭</span><span class="lang-name">Thai</span></a>
-                <a href="https://mibenglish.com/es/games/" class="lang-option"><span class="lang-flag">🇪🇸</span><span class="lang-name">Spanish</span></a>
-                <a href="https://mibenglish.com/pt/games/" class="lang-option"><span class="lang-flag">🇵🇹</span><span class="lang-name">Portuguese</span></a>
-                <a href="https://mibenglish.com/fr/games/" class="lang-option"><span class="lang-flag">🇫🇷</span><span class="lang-name">French</span></a>
-                <a href="https://mibenglish.com/de/games/" class="lang-option"><span class="lang-flag">🇩🇪</span><span class="lang-name">German</span></a>
-            </div>
-            <div class="lang-popup-footer">
-                <button class="btn-confirm" onclick="closeLangPopup()">Lanjutkan dalam Bahasa Indonesia</button>
-            </div>
-        </div>
-    </div>
-    
     <!-- Settings Modal -->
     <div class="modal-overlay" id="settingsOverlay">
         <div class="modal">
@@ -1427,76 +932,21 @@
                         </label>
                     </div>
                 </div>
-                <div class="settings-section">
-                    <h3>Bahasa</h3>
-                    <button class="btn-change-lang" onclick="openLangPopup()">Ganti Bahasa</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Game Selection Modal -->
-    <div class="modal-overlay" id="gameModal">
-        <div class="modal game-modal">
-            <div class="modal-header game-modal-header">
-                <div class="game-modal-icon" id="modalGameIcon">🎯</div>
-                <div class="game-modal-title" id="modalGameTitle">Vocabulary Quiz</div>
-                <div class="game-modal-subtitle" id="modalGameDesc">Tebak arti kata bahasa Inggris</div>
-                <button class="modal-close" onclick="closeGameModal()" style="position:absolute;top:16px;right:16px;">✕</button>
-            </div>
-            <div class="modal-body game-modal-body">
-                <div class="level-select-title">Pilih Level:</div>
-                <div class="level-select-grid" id="levelSelectGrid"></div>
-                <button class="btn-play" id="playBtn" onclick="startGame()">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                    Mulai Bermain
-                </button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Play Game Modal -->
-    <div class="modal-overlay" id="playModal">
-        <div class="modal play-modal">
-            <div class="modal-header play-modal-header">
-                <div class="play-modal-info">
-                    <div class="play-modal-title" id="playGameTitle">Vocabulary Quiz</div>
-                    <div class="play-modal-level" id="playLevel">Beginner</div>
-                </div>
-                <div class="play-modal-stats">
-                    <div class="play-stat">
-                        <div class="play-stat-value" id="playScore">0</div>
-                        <div class="play-stat-label">Skor</div>
-                    </div>
-                    <div class="play-stat">
-                        <div class="play-stat-value" id="playStreak">0</div>
-                        <div class="play-stat-label">Streak</div>
-                    </div>
-                </div>
-                <button class="modal-close" onclick="closePlayModal()">✕</button>
-            </div>
-            <div class="modal-body play-modal-body" id="playModalBody">
-                <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width: 0%"></div></div>
-                <div class="question-counter" id="questionCounter">Pertanyaan 1 dari 10</div>
-                <div class="question-card">
-                    <div class="question-type" id="questionType">TERJEMAHKAN</div>
-                    <div class="question-word" id="questionWord">Hello</div>
-                    <div class="question-hint" id="questionHint">Pilih arti yang benar</div>
-                </div>
-                <div class="options-grid" id="optionsGrid"></div>
             </div>
         </div>
     </div>
 
     <!-- Header -->
     <header class="header">
-        <a href="https://mibenglish.com/" class="brand">MIBEnglish</a>
+        <a href="#" class="brand">🎮 MIBEnglish</a>
         <div class="header-actions">
-            <button class="lang-btn" onclick="openLangPopup()">
-                <span>🇮🇩</span>
-                <span>ID</span>
-                <span>▼</span>
-            </button>
+            <div class="search-box">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" id="headerSearch" placeholder="Cari game..." autocomplete="off">
+            </div>
             <button class="settings-btn" onclick="openSettings()">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.51,8.1,5.74,7.56,6.03L5.18,5.07c-0.22-0.08-0.47,0-0.59,0.22L2.67,8.61c-0.12,0.21-0.07,0.47,0.12,0.61l2.03,1.58c-0.05,0.3-0.07,0.61-0.07,0.94s0.02,0.64,0.07,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54c0.04,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
@@ -1505,10 +955,10 @@
         </div>
     </header>
     
-    <!-- Nav -->
+    <!-- Nav - SAMA DENGAN TEMPLATE -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="https://mibenglish.com/" class="nav-link">Home</a>
+            <a href="https://mibenglish.com/id/dua" class="nav-link">Dua</a>
             <a href="https://mibenglish.com/id/learn/" class="nav-link">Learn</a>
             <a href="https://mibenglish.com/id/dictionary/" class="nav-link">Dictionary</a>
             <a href="https://mibenglish.com/id/games/" class="nav-link active">Games</a>
@@ -1524,10 +974,10 @@
         <!-- Category Header -->
         <div class="category-header">
             <div class="category-info">
-                <h1 class="category-title">Games Bahasa Inggris</h1>
-                <p class="category-count">15+ games seru untuk belajar</p>
+                <h1 class="category-title">🎮 MIBENGLISH GAMES</h1>
+                <p class="category-count" id="categoryCount">1,000+ games tersedia</p>
             </div>
-            <div class="category-icon">🎮</div>
+            <div class="category-icon">🎯</div>
         </div>
         
         <!-- AD 2: After Category Header -->
@@ -1535,30 +985,23 @@
         
         <!-- Level Filter -->
         <div class="level-filter">
-            <button class="level-btn active" data-level="all" onclick="filterGames('all')">Semua</button>
-            <button class="level-btn" data-level="beginner" onclick="filterGames('beginner')">🌱 Beginner</button>
-            <button class="level-btn" data-level="intermediate" onclick="filterGames('intermediate')">🌿 Intermediate</button>
-            <button class="level-btn" data-level="advanced" onclick="filterGames('advanced')">🌳 Advanced</button>
-        </div>
-        
-        <!-- Stats Bar -->
-        <div class="stats-bar">
-            <div class="stat-item">
-                <div class="stat-value" id="totalGames">15</div>
-                <div class="stat-label">Games</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-value" id="totalPlays">125K</div>
-                <div class="stat-label">Dimainkan</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-value" id="avgRating">4.8</div>
-                <div class="stat-label">Rating</div>
-            </div>
+            <button class="level-btn active" data-level="all" onclick="filterGames('all')">🎯 Semua</button>
+            <button class="level-btn" data-level="action" onclick="filterGames('action')">⚔️ Action</button>
+            <button class="level-btn" data-level="puzzle" onclick="filterGames('puzzle')">🧩 Puzzle</button>
+            <button class="level-btn" data-level="racing" onclick="filterGames('racing')">🏎️ Racing</button>
+            <button class="level-btn" data-level="sports" onclick="filterGames('sports')">⚽ Sports</button>
+            <button class="level-btn" data-level="adventure" onclick="filterGames('adventure')">🗺️ Adventure</button>
+            <button class="level-btn" data-level="strategy" onclick="filterGames('strategy')">🧠 Strategy</button>
+            <button class="level-btn" data-level="multiplayer" onclick="filterGames('multiplayer')">👥 Multiplayer</button>
         </div>
         
         <!-- Games Grid -->
         <div class="games-grid" id="gamesGrid"></div>
+        
+        <!-- Load More -->
+        <div class="load-more" id="loadMoreContainer">
+            <button class="btn-load-more" id="loadMoreBtn" onclick="loadMore()">Load More Games</button>
+        </div>
         
         <!-- AD 3: After Games Grid -->
         <div class="ad-slot ad-slot-large">AdSense - Banner Besar</div>
@@ -1574,19 +1017,19 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand-section">
-                <div class="footer-brand">MIBEnglish</div>
-                <p class="footer-desc">Belajar bahasa Inggris dengan games seru! Vocabulary quiz, word match, spelling challenge, dan banyak lagi. Main sambil belajar, tingkatkan kemampuan bahasa Inggrismu!</p>
+                <div class="footer-brand">🎮 MIBEnglish Games</div>
+                <p class="footer-desc">Koleksi ribuan game seru! Mainkan sekarang, gratis tanpa download. Game baru ditambahkan setiap hari!</p>
                 <div class="social-icons">
-                    <a href="https://instagram.com/mibenglish" class="social-icon" target="_blank" rel="noopener">
+                    <a href="https://instagram.com/mibenglish" class="social-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     </a>
-                    <a href="https://youtube.com/@mibenglish" class="social-icon" target="_blank" rel="noopener">
+                    <a href="https://youtube.com/@mibenglish" class="social-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
                     </a>
-                    <a href="https://www.tiktok.com/@mibenglish" class="social-icon" target="_blank" rel="noopener">
+                    <a href="https://www.tiktok.com/@mibenglish" class="social-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
                     </a>
-                    <a href="https://facebook.com/mibenglish" class="social-icon" target="_blank" rel="noopener">
+                    <a href="https://facebook.com/mibenglish" class="social-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     </a>
                 </div>
@@ -1603,7 +1046,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 MIBEnglish. All rights reserved.</p>
+            <p>&copy; 2025 MIBEnglish Games. All rights reserved.</p>
         </div>
     </footer>
     
@@ -1633,12 +1076,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (savedTheme === 'dark') {
         document.getElementById('darkToggle').checked = true;
     }
+    
+    // Initialize
+    renderGames();
+    initLazyLoad();
 });
 
 function openSettings() { document.getElementById('settingsOverlay').classList.add('show'); }
 function closeSettings() { document.getElementById('settingsOverlay').classList.remove('show'); }
-function openLangPopup() { document.getElementById('langPopup').classList.add('show'); }
-function closeLangPopup() { document.getElementById('langPopup').classList.remove('show'); localStorage.setItem('mibVisited', 'true'); }
 
 function setFontSize(size) {
     document.documentElement.setAttribute('data-font-size', size);
@@ -1656,485 +1101,167 @@ function toggleDarkMode() {
 }
 
 document.getElementById('settingsOverlay').addEventListener('click', function(e) { if (e.target === this) closeSettings(); });
-document.getElementById('langPopup').addEventListener('click', function(e) { if (e.target === this) closeLangPopup(); });
 
 // ========== GAMES DATA ==========
-var gamesData = [
-    {
-        id: 'vocab-quiz',
-        icon: '🎯',
-        title: 'Vocabulary Quiz',
-        desc: 'Tebak arti kata bahasa Inggris',
-        levels: ['beginner', 'intermediate', 'advanced'],
-        rating: 4.9,
-        plays: '25K',
-        type: 'quiz'
-    },
-    {
-        id: 'word-match',
-        icon: '🔗',
-        title: 'Word Match',
-        desc: 'Cocokkan kata dengan artinya',
-        levels: ['beginner', 'intermediate', 'advanced'],
-        rating: 4.8,
-        plays: '18K',
-        type: 'match'
-    },
-    {
-        id: 'fill-blank',
-        icon: '✏️',
-        title: 'Fill in the Blank',
-        desc: 'Isi kata yang kosong dalam kalimat',
-        levels: ['beginner', 'intermediate', 'advanced', 'expert'],
-        rating: 4.7,
-        plays: '15K',
-        type: 'fill'
-    },
-    {
-        id: 'spelling',
-        icon: '🔤',
-        title: 'Spelling Challenge',
-        desc: 'Eja kata dengan benar',
-        levels: ['beginner', 'intermediate', 'advanced'],
-        rating: 4.6,
-        plays: '12K',
-        type: 'spelling'
-    },
-    {
-        id: 'word-scramble',
-        icon: '🔀',
-        title: 'Word Scramble',
-        desc: 'Susun huruf menjadi kata yang benar',
-        levels: ['beginner', 'intermediate', 'advanced'],
-        rating: 4.8,
-        plays: '20K',
-        type: 'scramble'
-    },
-    {
-        id: 'listen-type',
-        icon: '👂',
-        title: 'Listen & Type',
-        desc: 'Dengar dan ketik kata yang kamu dengar',
-        levels: ['beginner', 'intermediate', 'advanced'],
-        rating: 4.5,
-        plays: '8K',
-        type: 'listen'
-    },
-    {
-        id: 'synonym-antonym',
-        icon: '↔️',
-        title: 'Synonym & Antonym',
-        desc: 'Tentukan sinonim dan antonim kata',
-        levels: ['intermediate', 'advanced', 'expert'],
-        rating: 4.7,
-        plays: '10K',
-        type: 'synonym'
-    },
-    {
-        id: 'grammar-quiz',
-        icon: '📝',
-        title: 'Grammar Quiz',
-        desc: 'Uji pemahaman tata bahasa Inggris',
-        levels: ['beginner', 'intermediate', 'advanced', 'expert'],
-        rating: 4.6,
-        plays: '14K',
-        type: 'grammar'
-    },
-    {
-        id: 'sentence-builder',
-        icon: '🏗️',
-        title: 'Sentence Builder',
-        desc: 'Susun kata menjadi kalimat benar',
-        levels: ['beginner', 'intermediate', 'advanced'],
-        rating: 4.8,
-        plays: '11K',
-        type: 'sentence'
-    },
-    {
-        id: 'word-search',
-        icon: '🔍',
-        title: 'Word Search',
-        desc: 'Temukan kata tersembunyi di grid',
-        levels: ['beginner', 'intermediate'],
-        rating: 4.4,
-        plays: '9K',
-        type: 'search'
-    },
-    {
-        id: 'idioms-quiz',
-        icon: '💬',
-        title: 'Idioms Quiz',
-        desc: 'Tebak arti idiom bahasa Inggris',
-        levels: ['intermediate', 'advanced', 'expert'],
-        rating: 4.5,
-        plays: '7K',
-        type: 'idioms'
-    },
-    {
-        id: 'phrasal-verbs',
-        icon: '🚀',
-        title: 'Phrasal Verbs',
-        desc: 'Pelajari dan tebak phrasal verbs',
-        levels: ['intermediate', 'advanced', 'expert'],
-        rating: 4.6,
-        plays: '6K',
-        type: 'phrasal'
-    },
-    {
-        id: 'picture-quiz',
-        icon: '🖼️',
-        title: 'Picture Quiz',
-        desc: 'Tebak kata dari gambar',
-        levels: ['beginner', 'intermediate'],
-        rating: 4.9,
-        plays: '22K',
-        type: 'picture'
-    },
-    {
-        id: 'article-quiz',
-        icon: '📰',
-        title: 'Article Quiz',
-        desc: 'Pilih a/an/the yang benar',
-        levels: ['beginner', 'intermediate'],
-        rating: 4.3,
-        plays: '5K',
-        type: 'article'
-    },
-    {
-        id: 'tense-master',
-        icon: '⏰',
-        title: 'Tense Master',
-        desc: 'Kuasai semua tenses bahasa Inggris',
-        levels: ['beginner', 'intermediate', 'advanced', 'expert'],
-        rating: 4.7,
-        plays: '13K',
-        type: 'tense'
-    }
+// Format: id, title, category, rating, plays, votes%, badge, icon, image (optional)
+// image path: games/images/{id}.jpg atau URL lengkap
+const gamesData = [
+    { id: 1, title: "Space Invaders", category: "action", rating: 4.8, plays: "1.2M", votes: "98%", badge: "hot", icon: "🚀", image: "" },
+    { id: 2, title: "2048 Puzzle", category: "puzzle", rating: 4.9, plays: "2.5M", votes: "96%", badge: "featured", icon: "🔢", image: "" },
+    { id: 3, title: "Turbo Racing", category: "racing", rating: 4.6, plays: "890K", votes: "92%", badge: "new", icon: "🏎️", image: "" },
+    { id: 4, title: "Soccer World Cup", category: "sports", rating: 4.7, plays: "1.8M", votes: "94%", badge: "", icon: "⚽", image: "" },
+    { id: 5, title: "Mystery Island", category: "adventure", rating: 4.5, plays: "456K", votes: "89%", badge: "new", icon: "🏝️", image: "" },
+    { id: 6, title: "Chess Master", category: "strategy", rating: 4.9, plays: "3.1M", votes: "97%", badge: "top", icon: "♟️", image: "" },
+    { id: 7, title: "Battle Royale", category: "multiplayer", rating: 4.8, plays: "5.2M", votes: "95%", badge: "hot", icon: "🎮", image: "" },
+    { id: 8, title: "Zombie Slayer", category: "action", rating: 4.4, plays: "678K", votes: "88%", badge: "", icon: "🧟", image: "" },
+    { id: 9, title: "Sudoku Challenge", category: "puzzle", rating: 4.7, plays: "1.9M", votes: "93%", badge: "", icon: "📝", image: "" },
+    { id: 10, title: "Formula 1 GP", category: "racing", rating: 4.8, plays: "1.1M", votes: "96%", badge: "featured", icon: "🏁", image: "" },
+    { id: 11, title: "Basketball Pro", category: "sports", rating: 4.3, plays: "560K", votes: "85%", badge: "", icon: "🏀", image: "" },
+    { id: 12, title: "Treasure Hunt", category: "adventure", rating: 4.6, plays: "780K", votes: "91%", badge: "new", icon: "💎", image: "" },
+    { id: 13, title: "Tower Defense", category: "strategy", rating: 4.5, plays: "890K", votes: "90%", badge: "", icon: "🏰", image: "" },
+    { id: 14, title: "Team Deathmatch", category: "multiplayer", rating: 4.7, plays: "2.3M", votes: "94%", badge: "hot", icon: "⚔️", image: "" },
+    { id: 15, title: "Ninja Warrior", category: "action", rating: 4.6, plays: "920K", votes: "92%", badge: "", icon: "🥷", image: "" },
+    { id: 16, title: "Tetris Classic", category: "puzzle", rating: 4.9, plays: "4.2M", votes: "98%", badge: "top", icon: "🧱", image: "" },
+    { id: 17, title: "Drag Racing", category: "racing", rating: 4.4, plays: "670K", votes: "87%", badge: "", icon: "🚗", image: "" },
+    { id: 18, title: "Golf Masters", category: "sports", rating: 4.5, plays: "340K", votes: "89%", badge: "", icon: "⛳", image: "" },
+    { id: 19, title: "Jungle Quest", category: "adventure", rating: 4.7, plays: "1.4M", votes: "95%", badge: "featured", icon: "🌴", image: "" },
+    { id: 20, title: "Civilization Wars", category: "strategy", rating: 4.8, plays: "2.1M", votes: "96%", badge: "top", icon: "🏛️", image: "" },
+    { id: 21, title: "Coop Survival", category: "multiplayer", rating: 4.6, plays: "1.7M", votes: "91%", badge: "", icon: "🤝", image: "" },
+    { id: 22, title: "Dragon Fighter", category: "action", rating: 4.5, plays: "890K", votes: "90%", badge: "new", icon: "🐉", image: "" },
+    { id: 23, title: "Mahjong Solitaire", category: "puzzle", rating: 4.6, plays: "1.5M", votes: "92%", badge: "", icon: "🀄", image: "" },
+    { id: 24, title: "MotoGP Racing", category: "racing", rating: 4.7, plays: "1.2M", votes: "94%", badge: "hot", icon: "🏍️", image: "" }
 ];
 
-var levelLabels = {
-    'beginner': { name: 'Beginner', desc: 'Kata-kata dasar', badge: 'badge-easy' },
-    'intermediate': { name: 'Intermediate', desc: 'Kata-kata menengah', badge: 'badge-medium' },
-    'advanced': { name: 'Advanced', desc: 'Kata-kata tingkat lanjut', badge: 'badge-hard' },
-    'expert': { name: 'Expert', desc: 'Tingkat mahir', badge: 'badge-expert' }
-};
+// State
+let displayedGames = 0;
+const GAMES_PER_PAGE = 12;
+let currentFilter = 'all';
 
-var levelIcons = {
-    'beginner': '🌱',
-    'intermediate': '🌿',
-    'advanced': '🌳',
-    'expert': '🏆'
-};
-
-// ========== QUIZ DATA ==========
-var quizData = {
-    'vocab-quiz': {
-        beginner: [
-            { word: 'Hello', correct: 'Halo', options: ['Halo', 'Selamat tinggal', 'Terima kasih', 'Maaf'] },
-            { word: 'Book', correct: 'Buku', options: ['Buku', 'Meja', 'Kursi', 'Pena'] },
-            { word: 'Water', correct: 'Air', options: ['Api', 'Air', 'Tanah', 'Angin'] },
-            { word: 'House', correct: 'Rumah', options: ['Sekolah', 'Rumah', 'Kantor', 'Toko'] },
-            { word: 'Eat', correct: 'Makan', options: ['Minum', 'Tidur', 'Makan', 'Jalan'] },
-            { word: 'Big', correct: 'Besar', options: ['Kecil', 'Besar', 'Tinggi', 'Pendek'] },
-            { word: 'Happy', correct: 'Bahagia', options: ['Sedih', 'Marah', 'Bahagia', 'Takut'] },
-            { word: 'Run', correct: 'Lari', options: ['Jalan', 'Lari', 'Duduk', 'Berdiri'] },
-            { word: 'Red', correct: 'Merah', options: ['Biru', 'Hijau', 'Kuning', 'Merah'] },
-            { word: 'Father', correct: 'Ayah', options: ['Ibu', 'Ayah', 'Anak', 'Saudara'] }
-        ],
-        intermediate: [
-            { word: 'Achievement', correct: 'Prestasi', options: ['Prestasi', 'Kegagalan', 'Harapan', 'Impian'] },
-            { word: 'Determine', correct: 'Menentukan', options: ['Menentukan', 'Mempertimbangkan', 'Memikirkan', 'Mengabaikan'] },
-            { word: 'Significant', correct: 'Penting', options: ['Sepele', 'Penting', 'Biasa', 'Umum'] },
-            { word: 'Establish', correct: 'Mendirikan', options: ['Menghancurkan', 'Mendirikan', 'Meninggalkan', 'Mengubah'] },
-            { word: 'Consequence', correct: 'Konsekuensi', options: ['Konsekuensi', 'Hadiah', 'Keuntungan', 'Hiburan'] }
-        ],
-        advanced: [
-            { word: 'Ubiquitous', correct: 'Ada di mana-mana', options: ['Langka', 'Ada di mana-mana', 'Tersembunyi', 'Sementara'] },
-            { word: 'Ephemeral', correct: 'Sementara', options: ['Kekal', 'Sementara', 'Abadi', 'Tetap'] },
-            { word: 'Pragmatic', correct: 'Praktis', options: ['Idealis', 'Praktis', 'Emosional', 'Abstrak'] }
-        ]
-    },
-    'word-match': {
-        beginner: [
-            { word: 'Apple', correct: 'Apel', options: ['Apel', 'Jeruk', 'Pisang', 'Mangga'] },
-            { word: 'Cat', correct: 'Kucing', options: ['Anjing', 'Kucing', 'Burung', 'Ikan'] },
-            { word: 'Sun', correct: 'Matahari', options: ['Bulan', 'Bintang', 'Matahari', 'Awan'] }
-        ]
-    },
-    'fill-blank': {
-        beginner: [
-            { word: 'I ___ a student.', hint: 'am/is/are', correct: 'am', options: ['am', 'is', 'are', 'be'] },
-            { word: 'She ___ to school every day.', hint: 'go/goes', correct: 'goes', options: ['go', 'goes', 'going', 'went'] },
-            { word: 'They ___ playing football.', hint: 'am/is/are', correct: 'are', options: ['am', 'is', 'are', 'be'] }
-        ]
-    },
-    'grammar-quiz': {
-        beginner: [
-            { word: 'She ___ a book now.', hint: 'Present Continuous', correct: 'is reading', options: ['reads', 'is reading', 'read', 'reading'] },
-            { word: 'I ___ to Jakarta yesterday.', hint: 'Past Tense', correct: 'went', options: ['go', 'goes', 'went', 'going'] }
-        ]
-    },
-    'synonym-antonym': {
-        intermediate: [
-            { word: 'Happy', hint: 'Sinonim', correct: 'Joyful', options: ['Sad', 'Joyful', 'Angry', 'Tired'] },
-            { word: 'Big', hint: 'Antonim', correct: 'Small', options: ['Large', 'Small', 'Huge', 'Giant'] }
-        ]
-    }
-};
-
-// ========== GAME STATE ==========
-var currentGame = null;
-var currentLevel = null;
-var currentQuestion = 0;
-var score = 0;
-var streak = 0;
-var questions = [];
-var totalQuestions = 10;
-
-function $(id) { return document.getElementById(id); }
-
-// ========== RENDER GAMES ==========
-function renderGames(filter) {
-    var html = '';
-    var filteredGames = gamesData;
+// Render Games
+function renderGames() {
+    const grid = document.getElementById('gamesGrid');
+    const filteredGames = currentFilter === 'all' 
+        ? gamesData 
+        : gamesData.filter(g => g.category === currentFilter);
     
-    if (filter && filter !== 'all') {
-        filteredGames = gamesData.filter(function(g) {
-            return g.levels.indexOf(filter) !== -1;
-        });
-    }
+    const gamesToShow = filteredGames.slice(displayedGames, displayedGames + GAMES_PER_PAGE);
     
-    filteredGames.forEach(function(game) {
-        html += '<div class="game-card" onclick="openGameModal(\'' + game.id + '\')">';
-        html += '<div class="game-card-header">';
-        html += '<div class="game-icon">' + game.icon + '</div>';
-        html += '<div class="game-info">';
-        html += '<div class="game-title">' + game.title + '</div>';
-        html += '<div class="game-desc">' + game.desc + '</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '<div class="game-card-body">';
-        html += '<div class="game-levels">';
-        game.levels.forEach(function(lvl) {
-            html += '<span class="game-level-btn" onclick="event.stopPropagation(); quickPlay(\'' + game.id + '\', \'' + lvl + '\')">' + levelLabels[lvl].name + '</span>';
-        });
-        html += '</div>';
-        html += '<div class="game-meta">';
-        html += '<div class="game-rating"><span class="stars">★</span> ' + game.rating + '</div>';
-        html += '<div class="game-plays">👥 ' + game.plays + '</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
+    gamesToShow.forEach(game => {
+        const card = document.createElement('a');
+        card.href = '#';
+        card.className = 'game-card';
+        card.setAttribute('data-category', game.category);
+        
+        const badgeHTML = game.badge ? `<span class="game-badge badge-${game.badge}">${game.badge}</span>` : '';
+        const stars = '★'.repeat(Math.floor(game.rating)) + (game.rating % 1 >= 0.5 ? '½' : '');
+        
+        card.innerHTML = `
+            <div class="game-thumb">
+                <div class="game-thumb-placeholder">${game.icon}</div>
+                ${badgeHTML}
+                <div class="game-votes">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    ${game.votes}
+                </div>
+                <div class="game-play-overlay">
+                    <div class="game-play-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="game-card-body">
+                <h3 class="game-title">${game.title}</h3>
+                <span class="game-category-tag">${game.category}</span>
+                <div class="game-meta">
+                    <div class="game-rating">
+                        <span class="stars">${stars}</span>
+                        <span>${game.rating}</span>
+                    </div>
+                    <div class="game-plays">${game.plays} plays</div>
+                </div>
+            </div>
+        `;
+        
+        grid.appendChild(card);
     });
     
-    $('gamesGrid').innerHTML = html;
-}
-
-function filterGames(level) {
-    document.querySelectorAll('.level-btn').forEach(function(btn) {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-level') === level) {
-            btn.classList.add('active');
-        }
-    });
-    renderGames(level);
-}
-
-// ========== GAME MODAL ==========
-function openGameModal(gameId) {
-    currentGame = gamesData.find(function(g) { return g.id === gameId; });
-    if (!currentGame) return;
+    displayedGames += gamesToShow.length;
     
-    $('modalGameIcon').textContent = currentGame.icon;
-    $('modalGameTitle').textContent = currentGame.title;
-    $('modalGameDesc').textContent = currentGame.desc;
-    
-    var levelHtml = '';
-    currentGame.levels.forEach(function(lvl) {
-        var label = levelLabels[lvl];
-        levelHtml += '<div class="level-option" onclick="selectLevel(\'' + lvl + '\')" data-level="' + lvl + '">';
-        levelHtml += '<div class="level-option-icon">' + levelIcons[lvl] + '</div>';
-        levelHtml += '<div class="level-option-info">';
-        levelHtml += '<div class="level-option-name">' + label.name + '</div>';
-        levelHtml += '<div class="level-option-desc">' + label.desc + '</div>';
-        levelHtml += '</div>';
-        levelHtml += '<span class="level-option-badge ' + label.badge + '">' + lvl.toUpperCase() + '</span>';
-        levelHtml += '</div>';
-    });
-    $('levelSelectGrid').innerHTML = levelHtml;
-    
-    // Select first level by default
-    currentLevel = currentGame.levels[0];
-    document.querySelector('.level-option').classList.add('selected');
-    
-    $('gameModal').classList.add('show');
-}
-
-function closeGameModal() {
-    $('gameModal').classList.remove('show');
-}
-
-function selectLevel(level) {
-    currentLevel = level;
-    document.querySelectorAll('.level-option').forEach(function(opt) {
-        opt.classList.remove('selected');
-        if (opt.getAttribute('data-level') === level) {
-            opt.classList.add('selected');
-        }
-    });
-}
-
-function quickPlay(gameId, level) {
-    currentGame = gamesData.find(function(g) { return g.id === gameId; });
-    currentLevel = level;
-    startGame();
-}
-
-// ========== PLAY GAME ==========
-function startGame() {
-    closeGameModal();
-    
-    // Reset state
-    currentQuestion = 0;
-    score = 0;
-    streak = 0;
-    
-    // Get questions for this game and level
-    var gameQuestions = quizData[currentGame.id] && quizData[currentGame.id][currentLevel];
-    if (!gameQuestions || gameQuestions.length === 0) {
-        // Use default vocab quiz if no specific data
-        gameQuestions = quizData['vocab-quiz'][currentLevel] || quizData['vocab-quiz']['beginner'];
-    }
-    
-    // Shuffle and pick questions
-    questions = shuffleArray(gameQuestions.slice()).slice(0, totalQuestions);
-    
-    // Update UI
-    $('playGameTitle').textContent = currentGame.title;
-    $('playLevel').textContent = levelLabels[currentLevel].name;
-    $('playScore').textContent = '0';
-    $('playStreak').textContent = '0';
-    
-    $('playModal').classList.add('show');
-    showQuestion();
-}
-
-function closePlayModal() {
-    $('playModal').classList.remove('show');
-}
-
-function showQuestion() {
-    if (currentQuestion >= questions.length) {
-        showResult();
-        return;
-    }
-    
-    var q = questions[currentQuestion];
-    var progress = ((currentQuestion) / questions.length) * 100;
-    
-    $('progressFill').style.width = progress + '%';
-    $('questionCounter').textContent = 'Pertanyaan ' + (currentQuestion + 1) + ' dari ' + questions.length;
-    $('questionWord').textContent = q.word;
-    $('questionHint').textContent = q.hint || 'Pilih jawaban yang benar';
-    
-    // Shuffle options
-    var options = shuffleArray(q.options.slice());
-    
-    var optionsHtml = '';
-    options.forEach(function(opt) {
-        optionsHtml += '<button class="option-btn" onclick="checkAnswer(\'' + opt.replace(/'/g, "\\'") + '\', \'' + q.correct.replace(/'/g, "\\'") + '\', this)">' + opt + '</button>';
-    });
-    $('optionsGrid').innerHTML = optionsHtml;
-}
-
-function checkAnswer(selected, correct, btn) {
-    var buttons = document.querySelectorAll('.option-btn');
-    buttons.forEach(function(b) { b.disabled = true; });
-    
-    if (selected === correct) {
-        btn.classList.add('correct');
-        score += 10 + (streak * 2);
-        streak++;
-        $('playScore').textContent = score;
-        $('playStreak').textContent = streak;
+    // Hide load more if no more games
+    const loadMoreContainer = document.getElementById('loadMoreContainer');
+    if (displayedGames >= filteredGames.length) {
+        loadMoreContainer.style.display = 'none';
     } else {
-        btn.classList.add('wrong');
-        streak = 0;
-        $('playStreak').textContent = streak;
-        // Show correct answer
-        buttons.forEach(function(b) {
-            if (b.textContent === correct) {
-                b.classList.add('correct');
+        loadMoreContainer.style.display = 'block';
+    }
+    
+    // Update count
+    document.getElementById('categoryCount').textContent = `${filteredGames.length}+ games tersedia`;
+}
+
+// Filter Games
+function filterGames(level) {
+    currentFilter = level;
+    displayedGames = 0;
+    
+    // Update active button
+    document.querySelectorAll('.level-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-level') === level) btn.classList.add('active');
+    });
+    
+    // Clear grid and re-render
+    document.getElementById('gamesGrid').innerHTML = '';
+    renderGames();
+}
+
+// Load More
+function loadMore() {
+    renderGames();
+}
+
+// Lazy Load Images
+function initLazyLoad() {
+    const images = document.querySelectorAll('.game-thumb img');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.classList.add('loaded');
+                observer.unobserve(img);
             }
         });
-    }
+    });
     
-    currentQuestion++;
-    setTimeout(showQuestion, 1000);
+    images.forEach(img => imageObserver.observe(img));
 }
 
-function showResult() {
-    var percentage = Math.round((score / (questions.length * 20)) * 100);
-    var icon, title;
+// Search
+document.getElementById('headerSearch').addEventListener('input', function(e) {
+    const query = e.target.value.toLowerCase();
+    const cards = document.querySelectorAll('.game-card');
     
-    if (percentage >= 90) { icon = '🏆'; title = 'Luar Biasa!'; }
-    else if (percentage >= 70) { icon = '🌟'; title = 'Bagus Sekali!'; }
-    else if (percentage >= 50) { icon = '👍'; title = 'Cukup Bagus!'; }
-    else { icon = '💪'; title = 'Terus Berlatih!'; }
-    
-    var html = '<div class="result-card">';
-    html += '<div class="result-icon">' + icon + '</div>';
-    html += '<div class="result-title">' + title + '</div>';
-    html += '<div class="result-score">' + score + ' pts</div>';
-    html += '<div class="result-detail">' + currentQuestion + ' pertanyaan selesai</div>';
-    html += '<div class="result-actions">';
-    html += '<button class="btn-retry" onclick="startGame()">🔁 Main Lagi</button>';
-    html += '<button class="btn-home" onclick="closePlayModal()">🏠 Kembali</button>';
-    html += '</div>';
-    html += '</div>';
-    
-    $('playModalBody').innerHTML = html;
-}
-
-function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-    return array;
-}
-
-// ========== SHARE & TOAST ==========
-$('shareFab').addEventListener('click', function() {
-    var url = window.location.href;
-    if (navigator.share) {
-        navigator.share({ url: url }).catch(function() { copyToClipboard(url); });
-    } else {
-        copyToClipboard(url);
-    }
+    cards.forEach(card => {
+        const title = card.querySelector('.game-title').textContent.toLowerCase();
+        card.style.display = title.includes(query) ? 'block' : 'none';
+    });
 });
 
-function copyToClipboard(url) {
-    if (navigator.clipboard) {
-        navigator.clipboard.writeText(url).then(function() { showToast('Link disalin!'); }).catch(function() { showToast('Gagal menyalin link'); });
+// Share FAB
+document.getElementById('shareFab').addEventListener('click', function() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'MIBEnglish Games',
+            text: 'Mainkan game seru di MIBEnglish!',
+            url: window.location.href
+        });
     } else {
-        showToast('Gagal menyalin link');
+        navigator.clipboard.writeText(window.location.href);
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2000);
     }
-}
-
-function showToast(message) {
-    $('toast').textContent = message;
-    $('toast').classList.add('show');
-    setTimeout(function() { $('toast').classList.remove('show'); }, 2000);
-}
-
-// ========== INITIALIZE ==========
-(function() {
-    renderGames('all');
-})();
+});
 </script>
 </body>
 </html>
-
