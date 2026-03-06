@@ -122,7 +122,7 @@
             justify-content: center;
         }
         
-        /* Navigation Light - Auto height for larger fonts */
+        /* Navigation Light */
         .nav {
             position: fixed;
             top: 56px;
@@ -162,7 +162,7 @@
         
         .nav-link.active { background: #c9a227; color: #ffffff; }
         
-        /* Main Content Light - Dynamic padding based on nav height */
+        /* Main Content */
         .main {
             padding-top: 130px;
             padding-bottom: 24px;
@@ -987,24 +987,21 @@
         /* ========== RESPONSIVE ========== */
         @media (min-width: 480px) {
             .lang-grid { grid-template-columns: repeat(4, 1fr); }
+            .category-grid { grid-template-columns: repeat(2, 1fr); }
         }
         
         @media (min-width: 600px) {
             .main { padding-left: 20px; padding-right: 20px; }
-            .season-title { font-size: 1.375rem; }
-            .episode-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-            
-            /* Ad row for tablet */
-            .ad-row {
-                flex-direction: row;
-            }
-            .ad-row .ad-slot {
-                flex: 1;
-            }
+            .category-title { font-size: 1.375rem; }
+            .category-grid { grid-template-columns: repeat(3, 1fr); }
+            .dict-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .ad-row { flex-direction: row; }
+            .ad-row .ad-slot { flex: 1; }
         }
         
         @media (min-width: 800px) {
-            .episode-grid { grid-template-columns: repeat(3, 1fr); }
+            .category-grid { grid-template-columns: repeat(4, 1fr); }
+            .dict-grid { grid-template-columns: repeat(3, 1fr); }
             .footer { padding: 40px 24px 24px; }
             .footer-content { display: flex; gap: 40px; max-width: 900px; margin: 0 auto; }
             .footer-brand-section { flex: 1; }
