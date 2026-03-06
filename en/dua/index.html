@@ -15,6 +15,13 @@
     <link rel="alternate" hreflang="ar" href="https://mibenglish.com/ar/dua/">
     <link rel="alternate" hreflang="x-default" href="https://mibenglish.com/dua/">
     
+    <!-- Open Graph -->
+    <meta property="og:title" content="Prayer & Supplication for Goodness - MIBEnglish">
+    <meta property="og:description" content="Complete collection of prayers with Islamic etiquette for developers, families, and readers.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://mibenglish.com/dua/">
+    <meta property="og:site_name" content="MIBEnglish">
+    
     <!-- Amiri Font for Arabic -->
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
     
@@ -37,18 +44,50 @@
         [data-font-size="large"] { font-size: 18px; }
         [data-font-size="xlarge"] { font-size: 20px; }
         
+        /* ========== CSS Variables ========== */
+        :root {
+            --primary-dark: #0d1f0d;
+            --primary-green: #1a472a;
+            --secondary-green: #2d5a3d;
+            --accent-green: #3d7a4f;
+            --light-green: #5a9a6e;
+            --pale-green: #8bc49f;
+            --mint: #c8e6d0;
+            --cream: #f5f7f5;
+            --white: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-medium: #3a4a3a;
+            --gold-accent: #c9a227;
+            --gold-light: #e6c84a;
+            --shadow: rgba(10, 31, 10, 0.2);
+            --shadow-light: rgba(10, 31, 10, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        [data-theme="dark"] {
+            --primary-dark: #0a0f0a;
+            --primary-green: #1a3a2a;
+            --cream: #121212;
+            --white: #1e1e1e;
+            --text-dark: #e0e0e0;
+            --text-medium: #c8e6d0;
+            --mint: #98c6a0;
+            --pale-green: #4a6a4a;
+        }
+        
         /* ========== LIGHT THEME (DEFAULT) ========== */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #f5f7f5;
-            color: #1a1a1a;
-            line-height: 1.6;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.9;
             min-height: 100vh;
             overflow-x: hidden;
             transition: background-color 0.3s ease, color 0.3s ease;
+            padding-top: 104px;
         }
         
-        /* Header Light - EXACT DICTIONARY STYLE */
+        /* Header Light */
         .header {
             position: fixed;
             top: 0;
@@ -107,44 +146,7 @@
             justify-content: center;
         }
         
-        /* Voice Button - DICTIONARY STYLE */
-        .voice-btn {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.2);
-            color: #ffffff;
-            padding: 8px 12px;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            cursor: pointer;
-            font-family: inherit;
-            white-space: nowrap;
-            transition: all 0.3s ease;
-        }
-        
-        .voice-btn:hover { background: rgba(255,255,255,0.2); }
-        
-        .voice-btn.active {
-            background: #c9a227;
-            border-color: #c9a227;
-            color: #0d1f0d;
-        }
-        
-        .voice-btn.playing {
-            background: #c9a227;
-            border-color: #c9a227;
-            color: #0d1f0d;
-            animation: pulse 1.5s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.4); }
-            50% { box-shadow: 0 0 0 8px rgba(201, 162, 39, 0); }
-        }
-        
-        /* Navigation Light - EXACT DICTIONARY STYLE */
+        /* Navigation Light */
         .nav {
             position: fixed;
             top: 56px;
@@ -184,219 +186,421 @@
         
         .nav-link.active { background: #c9a227; color: #ffffff; }
         
-        /* Main Content - EXACT DICTIONARY STYLE */
+        /* Main Content */
         .main {
-            padding-top: 130px;
-            padding-bottom: 24px;
-            max-width: 900px;
+            max-width: 720px;
             margin: 0 auto;
-            padding-left: 12px;
-            padding-right: 12px;
+            padding: 0 16px 24px;
         }
         
-        /* Sentence Highlighting */
-        .sentence-reading {
-            background: linear-gradient(90deg, rgba(201, 162, 39, 0.3) 0%, rgba(201, 162, 39, 0.4) 50%, rgba(201, 162, 39, 0.3) 100%);
-            border-radius: 4px;
-            padding: 2px 4px;
-            margin: -2px -4px;
-            transition: background 0.3s ease;
-            box-shadow: 0 2px 8px rgba(201, 162, 39, 0.3);
-        }
-        
-        .sentence-read {
-            background: rgba(45, 90, 61, 0.15);
-            border-radius: 4px;
-            padding: 2px 4px;
-            margin: -2px -4px;
-        }
-        
-        /* Article Header - DICTIONARY CARD STYLE */
+        /* ========== ARTICLE HEADER ========== */
         .article-header {
             background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
             color: #ffffff;
-            padding: 20px 16px;
-            border-radius: 12px;
-            margin-bottom: 12px;
+            padding: 3rem 1.5rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin: 0 -16px 16px;
+            border-radius: 16px;
         }
         
         .article-header h1 {
-            font-size: 1.125rem;
-            font-weight: 700;
-            margin-bottom: 4px;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
             color: #ffffff;
+            line-height: 1.4;
+            font-weight: 600;
         }
         
         .article-header .subtitle {
-            font-size: 0.875rem;
-            opacity: 0.9;
+            font-size: 0.95rem;
+            color: var(--mint);
+            position: relative;
+            z-index: 1;
         }
         
         .bismillah {
             font-family: 'Amiri', serif;
-            font-size: 2rem;
-            color: #c9a227;
-            margin-bottom: 1rem;
+            font-size: 2.4rem;
+            color: var(--gold-accent);
+            margin-bottom: 1.5rem;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
-        /* Breadcrumb - DICTIONARY CARD STYLE */
+        /* ========== BREADCRUMB ========== */
         .breadcrumb {
-            background: #ffffff;
-            border: 2px solid #d4e5d4;
-            border-radius: 12px;
-            padding: 12px 16px;
-            margin-bottom: 12px;
-            font-size: 0.875rem;
+            background: var(--cream);
+            padding: 0.5rem 1rem;
+            margin: 0 -16px 0;
+            border-bottom: 1px solid var(--mint);
+            font-size: 0.85rem;
         }
         
+        .breadcrumb-container { max-width: 720px; margin: 0 auto; }
         .breadcrumb-list { list-style: none; display: flex; align-items: center; flex-wrap: wrap; gap: 0.3rem; }
         .breadcrumb-item { display: flex; align-items: center; gap: 0.3rem; }
-        .breadcrumb-item::after { content: '›'; color: #6b7b6b; margin-left: 0.3rem; }
+        .breadcrumb-item::after { content: '›'; color: var(--pale-green); margin-left: 0.3rem; }
         .breadcrumb-item:last-child::after { display: none; }
-        .breadcrumb-item a { color: #1a472a; text-decoration: none; }
-        .breadcrumb-item a:hover { color: #c9a227; }
-        .breadcrumb-item span { color: #1a1a1a; }
+        .breadcrumb-item a { color: var(--secondary-green); text-decoration: none; }
+        .breadcrumb-item a:hover { color: var(--gold-accent); }
+        .breadcrumb-item span { color: var(--text-medium); }
         
-        /* Table of Contents - DICTIONARY CARD STYLE */
+        /* ========== TABLE OF CONTENTS ========== */
         .toc-section {
-            background: #ffffff;
-            border: 2px solid #d4e5d4;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--mint) 100%);
+            padding: 1rem;
+            margin: 0 -16px 16px;
+            border-bottom: 1px solid var(--pale-green);
         }
         
-        .toc-title { font-size: 0.9rem; font-weight: 600; color: #1a472a; margin-bottom: 8px; display: flex; align-items: center; gap: 0.5rem; }
-        .toc-list { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; }
-        .toc-list a { display: inline-block; background: #e8f5e9; color: #1a472a; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; text-decoration: none; font-weight: 500; transition: all 0.2s ease; }
-        .toc-list a:hover { background: #c9a227; color: #ffffff; }
+        .toc-container { max-width: 720px; margin: 0 auto; }
+        .toc-title { font-size: 0.9rem; font-weight: 600; color: var(--primary-green); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .toc-list { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; }
+        .toc-list a { display: inline-block; background: #ffffff; color: var(--secondary-green); padding: 0.3rem 0.6rem; border-radius: 15px; font-size: 0.8rem; text-decoration: none; border: 1px solid var(--pale-green); transition: var(--transition); }
+        .toc-list a:hover { background: var(--gold-accent); color: #ffffff; border-color: var(--gold-accent); }
         
-        /* Prayer Card - DICTIONARY WORD CARD STYLE */
+        /* ========== PRAYER CARD ========== */
         .prayer-card {
-            background: #ffffff;
-            border: 2px solid #d4e5d4;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 12px;
-            transition: all 0.2s ease;
-        }
-        
-        .prayer-card:active {
-            border-color: #c9a227;
-            background: #f8faf8;
+            background: var(--white);
+            padding: 2rem 1.5rem;
+            margin-bottom: 16px;
+            border-radius: 16px;
+            border: 1px solid var(--mint);
+            box-shadow: 0 4px 20px var(--shadow-light);
         }
         
         .prayer-card h2 {
-            color: #1a472a;
-            font-size: 1.125rem;
-            font-weight: 700;
-            margin-bottom: 8px;
+            color: var(--primary-green);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 600;
         }
         
-        /* Doa Text */
+        /* ========== DOA TEXT ========== */
         .doa-text {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: #1a1a1a;
-            margin-bottom: 12px;
-            padding-left: 12px;
-            border-left: 3px solid #c9a227;
+            font-size: 1.05rem;
+            line-height: 2;
+            color: var(--text-medium);
+            margin-bottom: 1.5rem;
+            text-align: left;
         }
         
         .doa-text-center {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: #1a1a1a;
-            margin-bottom: 12px;
+            font-size: 1.05rem;
+            line-height: 2;
+            color: var(--text-medium);
+            margin-bottom: 1.5rem;
             text-align: center;
         }
         
-        /* Arabic Text Styling - DICTIONARY STYLE */
+        /* ========== ARABIC TEXT STYLING ========== */
         .arabic-main {
             font-family: 'Amiri', serif;
-            font-size: 1.8rem;
+            font-size: 2rem;
             text-align: center;
             direction: rtl;
-            color: #1a472a;
-            margin: 12px 0;
-            padding: 16px;
-            background: #e8f5e9;
-            border-radius: 12px;
-            line-height: 2.2;
+            color: var(--primary-green);
+            margin: 1.5rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--mint) 100%);
+            border-radius: 16px;
+            border: 2px solid var(--gold-accent);
+            line-height: 2.5;
         }
         
         .arabic-verse {
             font-family: 'Amiri', serif;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             text-align: center;
             direction: rtl;
-            color: #1a472a;
-            margin: 12px 0;
-            padding: 12px;
-            background: #e8f5e9;
+            color: var(--primary-green);
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--mint) 100%);
             border-radius: 12px;
-            line-height: 2;
+            border: 2px solid var(--gold-accent);
+            line-height: 2.3;
         }
         
         .arabic-translation {
-            color: #6b7b6b;
-            font-size: 0.875rem;
-            margin-top: 8px;
+            font-style: italic;
+            color: var(--text-medium);
+            margin-top: 1rem;
+            font-size: 0.95rem;
             text-align: center;
-            line-height: 1.6;
+            line-height: 1.8;
         }
         
-        /* Amiin */
+        /* ========== AMIIN ========== */
         .amiin-text {
             font-family: 'Amiri', serif;
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-align: center;
             direction: rtl;
-            color: #c9a227;
-            margin: 16px 0;
+            color: var(--gold-accent);
+            margin: 2rem 0 1rem;
             line-height: 2;
         }
         
-        /* CTA Section - DICTIONARY STYLE */
+        /* ========== CTA SECTION ========== */
         .cta-section {
-            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
-            color: #ffffff;
-            padding: 20px 16px;
-            border-radius: 12px;
-            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--gold-accent) 0%, var(--gold-light) 100%);
+            padding: 2rem 1rem;
             text-align: center;
+            margin: 0 -16px 16px;
+            border-radius: 16px;
         }
         
         .cta-section h2 {
-            color: #ffffff;
-            font-size: 1.125rem;
-            font-weight: 700;
-            margin-bottom: 4px;
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
         
-        .cta-section p { color: rgba(255,255,255,0.9); font-size: 0.875rem; margin-bottom: 12px; }
+        .cta-section p { color: var(--primary-dark); margin-bottom: 1rem; }
         
         .btn-cta {
             display: inline-block;
-            background: #c9a227;
+            background: var(--primary-green);
             color: #ffffff;
-            padding: 10px 24px;
-            border-radius: 20px;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
         }
         
         .btn-cta:hover {
-            background: #e6c84a;
+            background: var(--secondary-green);
             transform: translateY(-2px);
             color: #ffffff;
         }
         
-        /* Footer - EXACT DICTIONARY STYLE */
+        /* ========== MODAL OVERLAY ========== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+        
+        .modal-overlay.show { display: flex; }
+        
+        .modal {
+            background: #ffffff;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 400px;
+            max-height: 85vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .modal-header {
+            background: #1a472a;
+            color: #ffffff;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        
+        .modal-header h2 { font-size: 1.125rem; margin: 0; }
+        
+        .modal-close {
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 50%;
+            color: #ffffff;
+            font-size: 1.125rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-body { padding: 16px; }
+        
+        /* ========== LANGUAGE POPUP ========== */
+        .lang-popup { max-width: 500px; }
+        
+        .lang-popup-header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
+            padding: 20px;
+            text-align: center;
+            border-radius: 16px 16px 0 0;
+        }
+        
+        .lang-popup-header h2 { font-size: 1.125rem; margin-bottom: 4px; color: #ffffff; }
+        .lang-popup-header p { font-size: 0.875rem; opacity: 0.9; color: #ffffff; }
+        
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            padding: 16px;
+        }
+        
+        .lang-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 6px;
+            border: 2px solid #d4e5d4;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #1a1a1a;
+            background: #f8faf8;
+            min-height: 70px;
+            transition: all 0.2s ease;
+        }
+        
+        .lang-option:active { border-color: #c9a227; background: #e8f5e9; }
+        .lang-option.selected { border-color: #c9a227; background: #c9a227; color: #ffffff; }
+        
+        .lang-flag { font-size: 1.25rem; margin-bottom: 4px; }
+        .lang-name { font-size: 0.6875rem; font-weight: 600; text-align: center; }
+        
+        .lang-popup-footer {
+            padding: 12px 16px 16px;
+            text-align: center;
+        }
+        
+        .btn-confirm {
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            color: #ffffff;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        /* ========== SETTINGS SECTIONS ========== */
+        .settings-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .settings-section:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .settings-section h3 {
+            font-size: 0.9375rem;
+            color: #1a472a;
+            margin-bottom: 12px;
+        }
+        
+        .font-size-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+        
+        .font-size-btn {
+            padding: 10px 4px;
+            border: 2px solid #d4e5d4;
+            background: #f8faf8;
+            border-radius: 8px;
+            text-align: center;
+            font-family: inherit;
+            color: #1a1a1a;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .font-size-btn.active {
+            border-color: #c9a227;
+            background: #c9a227;
+            color: #ffffff;
+        }
+        
+        .font-size-btn span { display: block; }
+        .font-size-btn .size-label { font-size: 0.75rem; font-weight: 600; }
+        .font-size-btn .size-preview { font-size: 0.625rem; opacity: 0.7; }
+        
+        .dark-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            background: #f8faf8;
+            border-radius: 10px;
+            border: 1px solid #d4e5d4;
+            font-size: 0.9375rem;
+            color: #1a1a1a;
+        }
+        
+        .toggle-switch {
+            position: relative;
+            width: 50px;
+            height: 28px;
+        }
+        
+        .toggle-switch input { opacity: 0; width: 0; height: 0; position: absolute; }
+        
+        .toggle-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #b4b4b4;
+            border-radius: 28px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .toggle-slider:before {
+            content: "";
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            left: 3px;
+            bottom: 3px;
+            background: #ffffff;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        
+        .toggle-switch input:checked + .toggle-slider { background: #c9a227; }
+        .toggle-switch input:checked + .toggle-slider:before { transform: translateX(22px); }
+        
+        .btn-change-lang {
+            width: 100%;
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            border-radius: 25px;
+            font-size: 0.9375rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        /* ========== FOOTER ========== */
         .footer {
             background: #0d1f0d;
             color: #ffffff;
@@ -466,224 +670,6 @@
             color: rgba(255,255,255,0.5);
         }
         
-        /* Modal Base - DICTIONARY STYLE */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.6);
-            z-index: 2000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 16px;
-        }
-        
-        .modal-overlay.show { display: flex; }
-        
-        .modal {
-            background: #ffffff;
-            border-radius: 16px;
-            width: 100%;
-            max-width: 400px;
-            max-height: 85vh;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        .modal-header {
-            background: #1a472a;
-            color: #ffffff;
-            padding: 16px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1;
-        }
-        
-        .modal-header h2 { font-size: 1.125rem; }
-        
-        .modal-close {
-            width: 32px;
-            height: 32px;
-            background: rgba(255,255,255,0.2);
-            border: none;
-            border-radius: 50%;
-            color: #ffffff;
-            font-size: 1.125rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .modal-body { padding: 16px; }
-        
-        /* Language Popup - DICTIONARY STYLE */
-        .lang-popup { max-width: 500px; }
-        
-        .lang-popup-header {
-            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .lang-popup-header h2 { font-size: 1.125rem; margin-bottom: 4px; }
-        .lang-popup-header p { font-size: 0.875rem; opacity: 0.9; }
-        
-        .lang-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            padding: 16px;
-        }
-        
-        .lang-option {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px 6px;
-            border: 2px solid #d4e5d4;
-            border-radius: 10px;
-            text-decoration: none;
-            color: #1a1a1a;
-            background: #f8faf8;
-            min-height: 70px;
-            transition: all 0.2s ease;
-        }
-        
-        .lang-option:active { border-color: #c9a227; background: #e8f5e9; }
-        .lang-option.selected { border-color: #c9a227; background: #c9a227; color: #ffffff; }
-        
-        .lang-flag { font-size: 1.25rem; margin-bottom: 4px; }
-        .lang-name { font-size: 0.6875rem; font-weight: 600; text-align: center; }
-        
-        .lang-popup-footer {
-            padding: 12px 16px 16px;
-            text-align: center;
-        }
-        
-        .btn-confirm {
-            background: linear-gradient(135deg, #c9a227, #e6c84a);
-            color: #ffffff;
-            border: none;
-            padding: 14px 32px;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            font-family: inherit;
-        }
-        
-        /* Settings - DICTIONARY STYLE */
-        .settings-section {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e8e8e8;
-        }
-        .settings-section:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        .settings-section h3 {
-            font-size: 0.9375rem;
-            color: #1a472a;
-            margin-bottom: 12px;
-        }
-        
-        .font-size-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
-        }
-        
-        .font-size-btn {
-            padding: 10px 4px;
-            border: 2px solid #d4e5d4;
-            background: #f8faf8;
-            border-radius: 8px;
-            text-align: center;
-            font-family: inherit;
-            color: #1a1a1a;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        
-        .font-size-btn.active {
-            border-color: #c9a227;
-            background: #c9a227;
-            color: #ffffff;
-        }
-        
-        .font-size-btn span { display: block; }
-        .font-size-btn .size-label { font-size: 0.75rem; font-weight: 600; }
-        .font-size-btn .size-preview { font-size: 0.625rem; opacity: 0.7; }
-        
-        .dark-toggle {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px;
-            background: #f8faf8;
-            border-radius: 10px;
-            border: 1px solid #d4e5d4;
-            font-size: 0.9375rem;
-            color: #1a1a1a;
-        }
-        
-        .toggle-switch {
-            position: relative;
-            width: 50px;
-            height: 28px;
-        }
-        
-        .toggle-switch input { opacity: 0; width: 0; height: 0; }
-        
-        .toggle-slider {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #b4b4b4;
-            border-radius: 28px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        
-        .toggle-slider:before {
-            content: "";
-            position: absolute;
-            width: 22px;
-            height: 22px;
-            left: 3px;
-            bottom: 3px;
-            background: #ffffff;
-            border-radius: 50%;
-            transition: transform 0.3s ease;
-        }
-        
-        .toggle-switch input:checked + .toggle-slider { background: #c9a227; }
-        .toggle-switch input:checked + .toggle-slider:before { transform: translateX(22px); }
-        
-        .btn-change-lang {
-            width: 100%;
-            background: linear-gradient(135deg, #c9a227, #e6c84a);
-            color: #ffffff;
-            border: none;
-            padding: 14px;
-            border-radius: 25px;
-            font-size: 0.9375rem;
-            font-weight: 700;
-            cursor: pointer;
-            font-family: inherit;
-        }
-        
         /* ========== DARK THEME ========== */
         [data-theme="dark"] body {
             background-color: #121212;
@@ -700,53 +686,90 @@
         }
         
         [data-theme="dark"] .article-header {
-            background: linear-gradient(135deg, #1e3a1e 0%, #2d5a3d 50%, #3d7a4f 100%);
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1c2128 100%);
         }
         
-        [data-theme="dark"] .breadcrumb {
-            background: #1e1e1e;
-            border-color: #333333;
+        [data-theme="dark"] .article-header .subtitle {
+            color: #a8d5b8;
         }
-        
-        [data-theme="dark"] .breadcrumb-item a { color: #6ab060; }
-        [data-theme="dark"] .breadcrumb-item span { color: #e0e0e0; }
-        
-        [data-theme="dark"] .toc-section {
-            background: #1e1e1e;
-            border-color: #333333;
-        }
-        
-        [data-theme="dark"] .toc-title { color: #6ab060; }
-        [data-theme="dark"] .toc-list a { background: #2a3a2a; color: #6ab060; }
-        [data-theme="dark"] .toc-list a:hover { background: #c9a227; color: #ffffff; }
         
         [data-theme="dark"] .prayer-card {
             background: #1e1e1e;
             border-color: #333333;
         }
         
-        [data-theme="dark"] .prayer-card:active {
-            border-color: #c9a227;
-            background: #252525;
+        [data-theme="dark"] h2 {
+            color: #7cc87c;
         }
         
-        [data-theme="dark"] .prayer-card h2 { color: #6ab060; }
-        
         [data-theme="dark"] .doa-text,
-        [data-theme="dark"] .doa-text-center { color: #e0e0e0; border-left-color: #c9a227; }
+        [data-theme="dark"] .doa-text-center {
+            color: #c8e6d0;
+        }
         
         [data-theme="dark"] .arabic-main,
         [data-theme="dark"] .arabic-verse {
-            background: #2a3a2a;
-            color: #6ab060;
+            background: linear-gradient(135deg, #1a2a1a 0%, #2a3a2a 100%);
+            color: #a8d5b8;
+            border-color: #c9a227;
         }
         
-        [data-theme="dark"] .arabic-translation { color: #888888; }
+        [data-theme="dark"] .arabic-translation {
+            color: #a0a0a0;
+        }
         
-        [data-theme="dark"] .amiin-text { color: #c9a227; }
+        [data-theme="dark"] .amiin-text {
+            color: #c9a227;
+        }
+        
+        [data-theme="dark"] .breadcrumb {
+            background: #1a1a1a;
+            border-color: #333333;
+        }
+        
+        [data-theme="dark"] .breadcrumb-item a {
+            color: #7cc87c;
+        }
+        
+        [data-theme="dark"] .breadcrumb-item span {
+            color: #a0a0a0;
+        }
+        
+        [data-theme="dark"] .toc-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            border-color: #333333;
+        }
+        
+        [data-theme="dark"] .toc-title {
+            color: #7cc87c;
+        }
+        
+        [data-theme="dark"] .toc-list a {
+            background: #2a3a2a;
+            border-color: #4a6a4a;
+            color: #d4d4d4;
+        }
+        
+        [data-theme="dark"] .toc-list a:hover {
+            background: #c9a227;
+            color: #ffffff;
+            border-color: #c9a227;
+        }
         
         [data-theme="dark"] .cta-section {
-            background: linear-gradient(135deg, #1e3a1e 0%, #2d5a3d 50%, #3d7a4f 100%);
+            background: linear-gradient(135deg, #8b6914 0%, #a07d1a 100%);
+        }
+        
+        [data-theme="dark"] .cta-section h2 {
+            color: #ffffff;
+        }
+        
+        [data-theme="dark"] .cta-section p {
+            color: #ffffff;
+        }
+        
+        [data-theme="dark"] .btn-cta {
+            background: #2d5a3d;
         }
         
         [data-theme="dark"] .footer {
@@ -769,7 +792,7 @@
         
         [data-theme="dark"] .lang-option:active {
             border-color: #c9a227;
-            background: #2a2a2a;
+            background: #2a3a2a;
         }
         
         [data-theme="dark"] .lang-option.selected {
@@ -783,7 +806,7 @@
         }
         
         [data-theme="dark"] .settings-section h3 {
-            color: #6ab060;
+            color: #7cc87c;
         }
         
         [data-theme="dark"] .font-size-btn {
@@ -815,39 +838,24 @@
         }
         
         @media (min-width: 600px) {
-            .main { padding-left: 20px; padding-right: 20px; }
+            .nav-link { padding: 6px 12px; font-size: 0.85rem; }
         }
         
         @media (min-width: 800px) {
             .footer { padding: 40px 24px 24px; }
-            .footer-content { display: flex; gap: 40px; max-width: 900px; margin: 0 auto; }
+            .footer-content { display: flex; gap: 40px; max-width: 720px; margin: 0 auto; }
             .footer-brand-section { flex: 1; }
         }
         
-        /* ========== FONT SIZE ADJUSTMENTS FOR NAV ========== */
-        [data-font-size="large"] .header { height: 60px; }
-        [data-font-size="large"] .nav { top: 60px; min-height: 52px; }
-        [data-font-size="large"] .main { padding-top: 140px; }
-        [data-font-size="large"] .nav-link { padding: 6px 12px; font-size: 0.85rem; }
-        
-        [data-font-size="xlarge"] .header { height: 64px; }
-        [data-font-size="xlarge"] .nav { top: 64px; min-height: 56px; }
-        [data-font-size="xlarge"] .main { padding-top: 150px; }
-        [data-font-size="xlarge"] .nav-link { padding: 6px 10px; font-size: 0.8rem; }
-        [data-font-size="xlarge"] .lang-btn { padding: 6px 10px; font-size: 0.8rem; }
-        [data-font-size="xlarge"] .brand { font-size: 1rem; }
-        
         @media (max-width: 600px) {
-            .article-header h1 { font-size: 1rem; }
-            .bismillah { font-size: 1.8rem; }
-            .arabic-main { font-size: 1.5rem; padding: 12px; }
-            .arabic-verse { font-size: 1.3rem; padding: 10px; }
+            .article-header h1 { font-size: 1.3rem; }
+            .bismillah { font-size: 2rem; }
+            .arabic-main { font-size: 1.6rem; padding: 1.5rem; }
+            .arabic-verse { font-size: 1.4rem; padding: 1.2rem; }
             .nav-link { padding: 6px 12px; font-size: 0.85rem; }
             .header { padding: 0 12px; }
-            .voice-btn span { display: none; }
-            .voice-btn { padding: 8px; }
-            .prayer-card { padding: 12px; }
-            .amiin-text { font-size: 1.8rem; }
+            .prayer-card { padding: 1.5rem 1rem; }
+            .amiin-text { font-size: 2rem; }
         }
         
         @media (max-width: 400px) {
@@ -869,7 +877,7 @@
         <div class="modal lang-popup">
             <div class="lang-popup-header">
                 <h2>Select Your Language</h2>
-                <p>Choose your language for the best experience</p>
+                <p>Choose your language for the best learning experience</p>
             </div>
             <div class="lang-grid">
                 <a href="https://mibenglish.com/dua/" class="lang-option selected"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></a>
@@ -880,10 +888,13 @@
                 <a href="https://mibenglish.com/ko/dua/" class="lang-option"><span class="lang-flag">🇰🇷</span><span class="lang-name">Korean</span></a>
                 <a href="https://mibenglish.com/vi/dua/" class="lang-option"><span class="lang-flag">🇻🇳</span><span class="lang-name">Vietnamese</span></a>
                 <a href="https://mibenglish.com/th/dua/" class="lang-option"><span class="lang-flag">🇹🇭</span><span class="lang-name">Thai</span></a>
+                <a href="https://mibenglish.com/hi/dua/" class="lang-option"><span class="lang-flag">🇮🇳</span><span class="lang-name">Hindi</span></a>
                 <a href="https://mibenglish.com/es/dua/" class="lang-option"><span class="lang-flag">🇪🇸</span><span class="lang-name">Spanish</span></a>
                 <a href="https://mibenglish.com/pt/dua/" class="lang-option"><span class="lang-flag">🇵🇹</span><span class="lang-name">Portuguese</span></a>
                 <a href="https://mibenglish.com/fr/dua/" class="lang-option"><span class="lang-flag">🇫🇷</span><span class="lang-name">French</span></a>
                 <a href="https://mibenglish.com/de/dua/" class="lang-option"><span class="lang-flag">🇩🇪</span><span class="lang-name">German</span></a>
+                <a href="https://mibenglish.com/ru/dua/" class="lang-option"><span class="lang-flag">🇷🇺</span><span class="lang-name">Russian</span></a>
+                <a href="https://mibenglish.com/tr/dua/" class="lang-option"><span class="lang-flag">🇹🇷</span><span class="lang-name">Turkish</span></a>
             </div>
             <div class="lang-popup-footer">
                 <button class="btn-confirm" onclick="closeLangPopup()">Continue in English</button>
@@ -938,22 +949,24 @@
         </div>
     </div>
 
-    <!-- Header - EXACT DICTIONARY STYLE -->
+    <!-- Header -->
     <header class="header">
         <a href="https://mibenglish.com/" class="brand">MIBEnglish</a>
         <div class="header-actions">
-            <button class="voice-btn" id="voiceBtn" onclick="toggleVoice()" title="Auto Voice - Read article aloud">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-                <span>Voice</span>
+            <button class="lang-btn" onclick="openLangPopup()">
+                <span>🇬🇧</span>
+                <span>EN</span>
+                <span>▼</span>
             </button>
-            <button class="lang-btn" onclick="openLangPopup()"><span>🇬🇧</span><span>EN</span><span>▼</span></button>
             <button class="settings-btn" onclick="openSettings()">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.51,8.1,5.74,7.56,6.03L5.18,5.07c-0.22-0.08-0.47,0-0.59,0.22L2.67,8.61c-0.12,0.21-0.07,0.47,0.12,0.61l2.03,1.58c-0.05,0.3-0.07,0.61-0.07,0.94s0.02,0.64,0.07,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54c0.04,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.51,8.1,5.74,7.56,6.03L5.18,5.07c-0.22-0.08-0.47,0-0.59,0.22L2.67,8.61c-0.12,0.21-0.07,0.47,0.12,0.61l2.03,1.58c-0.05,0.3-0.07,0.61-0.07,0.94s0.02,0.64,0.07,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54c0.04,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+                </svg>
             </button>
         </div>
     </header>
     
-    <!-- Navigation - EXACT DICTIONARY STYLE -->
+    <!-- Nav -->
     <nav class="nav">
         <div class="nav-inner">
             <a href="https://mibenglish.com/en/dua" class="nav-link active">Dua</a>
@@ -964,7 +977,7 @@
         </div>
     </nav>
     
-    <!-- Main Content -->
+    <!-- Main -->
     <main class="main" id="main-content">
         <!-- Article Header -->
         <div class="article-header">
@@ -975,26 +988,30 @@
         
         <!-- Breadcrumb -->
         <div class="breadcrumb">
-            <ol class="breadcrumb-list">
-                <li class="breadcrumb-item"><a href="https://mibenglish.com/"><span>Home</span></a></li>
-                <li class="breadcrumb-item"><a href="https://mibenglish.com/dua/"><span>Dua</span></a></li>
-                <li class="breadcrumb-item"><span>Prayer & Supplication for Goodness</span></li>
-            </ol>
+            <div class="breadcrumb-container">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="https://mibenglish.com/"><span>Home</span></a></li>
+                    <li class="breadcrumb-item"><a href="https://mibenglish.com/dua/"><span>Dua</span></a></li>
+                    <li class="breadcrumb-item"><span>Prayer & Supplication for Goodness</span></li>
+                </ol>
+            </div>
         </div>
         
         <!-- Table of Contents -->
         <div class="toc-section">
-            <h2 class="toc-title">📑 Table of Contents</h2>
-            <ul class="toc-list">
-                <li><a href="#pembukaan">Opening</a></li>
-                <li><a href="#al-fatihah">Al-Fatihah</a></li>
-                <li><a href="#syahadat">Shahada</a></li>
-                <li><a href="#sholawat">Salawat</a></li>
-                <li><a href="#istighfar">Istighfar</a></li>
-                <li><a href="#doa-utama">Main Prayer</a></li>
-                <li><a href="#dzikir">Dhikr</a></li>
-                <li><a href="#penutup">Closing</a></li>
-            </ul>
+            <div class="toc-container">
+                <h2 class="toc-title">📑 Table of Contents</h2>
+                <ul class="toc-list">
+                    <li><a href="#pembukaan">Opening</a></li>
+                    <li><a href="#al-fatihah">Al-Fatihah</a></li>
+                    <li><a href="#syahadat">Shahada</a></li>
+                    <li><a href="#sholawat">Salawat</a></li>
+                    <li><a href="#istighfar">Istighfar</a></li>
+                    <li><a href="#doa-utama">Main Prayer</a></li>
+                    <li><a href="#dzikir">Dhikr</a></li>
+                    <li><a href="#penutup">Closing</a></li>
+                </ul>
+            </div>
         </div>
         
         <!-- ==================== OPENING ==================== -->
@@ -1084,14 +1101,14 @@
             <div class="arabic-verse">
                 أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ
             </div>
-            <p class="arabic-translation">I seek forgiveness from Allah the Almighty, besides Whom there is no deity, the Ever-Living, the Sustainer of existence, and I repent to Him.</p>
+            <p class="arabic-translation">I seek forgiveness from Allah the Almighty, there is no deity worthy of worship except Him, the Ever-Living, the Sustainer, and I repent to Him.</p>
         </div>
         
         <!-- ==================== MAIN PRAYER ==================== -->
         <div class="prayer-card" id="doa-utama">
             <h2>Main Prayer</h2>
             
-            <p class="doa-text">O Allah, we ask You for goodness in this world and goodness in the hereafter, and protection from the punishment of the Fire.</p>
+            <p class="doa-text">Our Lord, grant us goodness in this world and goodness in the hereafter, and protect us from the punishment of the Hellfire.</p>
             
             <div class="arabic-main">
                 رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ
@@ -1191,7 +1208,7 @@
             </div>
             <p class="arabic-translation">Ameen, O Lord of all the worlds.</p>
             
-            <div class="arabic-verse" style="margin-top: 16px;">
+            <div class="arabic-verse" style="margin-top: 2rem;">
                 وَالسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ
             </div>
             <p class="arabic-translation">May peace, mercy, and blessings of Allah be upon you all.</p>
@@ -1205,7 +1222,7 @@
         </div>
     </main>
     
-    <!-- Footer - EXACT DICTIONARY STYLE -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand-section">
@@ -1242,199 +1259,51 @@
             <p>&copy; 2025 MIBEnglish. All rights reserved.</p>
         </div>
     </footer>
+
+<script>
+// ========== SETTINGS FUNCTIONS ==========
+document.addEventListener('DOMContentLoaded', function() {
+    var savedFontSize = localStorage.getItem('mibFontSize') || 'normal';
+    var savedTheme = localStorage.getItem('mibTheme') || 'light';
     
-    <script>
-        // ========== AUTOVOICE SYSTEM ==========
-        let voiceIsPlaying = false;
-        let voiceIsPaused = false;
-        let currentUtterance = null;
-        let sentences = [];
-        let currentSentenceIndex = 0;
-        let maleVoice = null;
-        const voiceSynthesis = window.speechSynthesis;
-        
-        function initVoices() {
-            const voices = voiceSynthesis.getVoices();
-            maleVoice = voices.find(v => v.lang.includes('en') && v.name.toLowerCase().includes('male')) ||
-                         voices.find(v => v.lang.includes('en')) ||
-                         voices.find(v => v.name.toLowerCase().includes('male')) ||
-                         voices.find(v => !v.name.toLowerCase().includes('female')) ||
-                         voices[0];
+    document.documentElement.setAttribute('data-font-size', savedFontSize);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    var fontSizeBtns = document.querySelectorAll('.font-size-btn');
+    fontSizeBtns.forEach(function(btn) {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-size') === savedFontSize) {
+            btn.classList.add('active');
         }
-        
-        if (voiceSynthesis.onvoiceschanged !== undefined) {
-            voiceSynthesis.onvoiceschanged = initVoices;
-        }
-        initVoices();
-        
-        function extractSentences() {
-            sentences = [];
-            let articleContent = document.getElementById('main-content');
-            let textElements = articleContent.querySelectorAll('.doa-text, .doa-text-center');
-            
-            textElements.forEach(function(element) {
-                let text = element.textContent.trim();
-                if (text && text.length > 5) {
-                    if (element.closest('.cta-section') || 
-                        element.closest('.breadcrumb') ||
-                        element.closest('.toc-section') ||
-                        element.closest('.footer')) {
-                        return;
-                    }
-                    
-                    sentences.push({
-                        text: text,
-                        element: element
-                    });
-                }
-            });
-        }
-        
-        function highlightSentence(sentenceIndex) {
-            document.querySelectorAll('.sentence-reading, .sentence-read').forEach(function(el) {
-                el.classList.remove('sentence-reading', 'sentence-read');
-            });
-            
-            if (sentenceIndex >= 0 && sentenceIndex < sentences.length) {
-                let sentenceData = sentences[sentenceIndex];
-                let element = sentenceData.element;
-                element.classList.add('sentence-reading');
-                element.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center'
-                });
-            }
-        }
-        
-        function speakSentence(index) {
-            if (index >= sentences.length || !voiceIsPlaying) {
-                stopVoice();
-                return;
-            }
-            
-            currentSentenceIndex = index;
-            highlightSentence(index);
-            
-            let sentence = sentences[index].text;
-            currentUtterance = new SpeechSynthesisUtterance(sentence);
-            
-            if (maleVoice) {
-                currentUtterance.voice = maleVoice;
-            }
-            currentUtterance.lang = 'en-US';
-            currentUtterance.rate = 0.9;
-            currentUtterance.pitch = 1.0;
-            
-            currentUtterance.onend = function() {
-                if (voiceIsPlaying && currentSentenceIndex < sentences.length) {
-                    let prevElement = sentences[currentSentenceIndex].element;
-                    prevElement.classList.remove('sentence-reading');
-                    prevElement.classList.add('sentence-read');
-                    speakSentence(currentSentenceIndex + 1);
-                }
-            };
-            
-            currentUtterance.onerror = function() {
-                if (voiceIsPlaying) {
-                    speakSentence(currentSentenceIndex + 1);
-                }
-            };
-            
-            voiceSynthesis.speak(currentUtterance);
-        }
-        
-        function toggleVoice() {
-            let voiceBtn = document.getElementById('voiceBtn');
-            
-            if (voiceIsPlaying) {
-                stopVoice();
-            } else {
-                voiceIsPlaying = true;
-                voiceBtn.classList.add('playing');
-                voiceBtn.title = 'Click to stop voice';
-                
-                if (sentences.length === 0) {
-                    extractSentences();
-                }
-                
-                if (!voiceIsPaused) {
-                    currentSentenceIndex = 0;
-                }
-                voiceIsPaused = false;
-                
-                speakSentence(currentSentenceIndex);
-            }
-        }
-        
-        function stopVoice() {
-            voiceIsPlaying = false;
-            voiceIsPaused = false;
-            voiceSynthesis.cancel();
-            
-            let voiceBtn = document.getElementById('voiceBtn');
-            voiceBtn.classList.remove('playing');
-            voiceBtn.title = 'Auto Voice - Read article aloud';
-            
-            document.querySelectorAll('.sentence-reading, .sentence-read').forEach(function(el) {
-                el.classList.remove('sentence-reading', 'sentence-read');
-            });
-        }
-        
-        // ========== LANGUAGE POPUP ==========
-        function openLangPopup() {
-            document.getElementById('langPopup').classList.add('show');
-        }
-        
-        function closeLangPopup() {
-            document.getElementById('langPopup').classList.remove('show');
-        }
-        
-        // ========== SETTINGS MODAL ==========
-        function openSettings() {
-            document.getElementById('settingsOverlay').classList.add('show');
-        }
-        
-        function closeSettings() {
-            document.getElementById('settingsOverlay').classList.remove('show');
-        }
-        
-        // ========== FONT SIZE ==========
-        function setFontSize(size) {
-            document.documentElement.setAttribute('data-font-size', size);
-            localStorage.setItem('fontSize', size);
-            
-            document.querySelectorAll('.font-size-btn').forEach(function(btn) {
-                btn.classList.remove('active');
-            });
-            document.querySelector('.font-size-btn[data-size="' + size + '"]').classList.add('active');
-        }
-        
-        // ========== DARK MODE ==========
-        function toggleDarkMode() {
-            let isDark = document.getElementById('darkToggle').checked;
-            document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        }
-        
-        // ========== INITIALIZATION ==========
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load saved preferences
-            let savedFontSize = localStorage.getItem('fontSize') || 'normal';
-            setFontSize(savedFontSize);
-            
-            let savedTheme = localStorage.getItem('theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-            document.getElementById('darkToggle').checked = savedTheme === 'dark';
-            
-            // Close modals on overlay click
-            document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
-                overlay.addEventListener('click', function(e) {
-                    if (e.target === overlay) {
-                        overlay.classList.remove('show');
-                    }
-                });
-            });
-        });
-    </script>
+    });
+    
+    if (savedTheme === 'dark') {
+        document.getElementById('darkToggle').checked = true;
+    }
+});
+
+function openSettings() { document.getElementById('settingsOverlay').classList.add('show'); }
+function closeSettings() { document.getElementById('settingsOverlay').classList.remove('show'); }
+function openLangPopup() { document.getElementById('langPopup').classList.add('show'); }
+function closeLangPopup() { document.getElementById('langPopup').classList.remove('show'); localStorage.setItem('mibVisited', 'true'); }
+
+function setFontSize(size) {
+    document.documentElement.setAttribute('data-font-size', size);
+    localStorage.setItem('mibFontSize', size);
+    document.querySelectorAll('.font-size-btn').forEach(function(btn) {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-size') === size) btn.classList.add('active');
+    });
+}
+
+function toggleDarkMode() {
+    var isDark = document.getElementById('darkToggle').checked;
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    localStorage.setItem('mibTheme', isDark ? 'dark' : 'light');
+}
+
+document.getElementById('settingsOverlay').addEventListener('click', function(e) { if (e.target === this) closeSettings(); });
+document.getElementById('langPopup').addEventListener('click', function(e) { if (e.target === this) closeLangPopup(); });
+</script>
 </body>
 </html>
