@@ -1055,6 +1055,48 @@
         [data-theme="dark"] .cta-section {
             background: linear-gradient(135deg, #b8922a, #d4b840);
         }
+
+                /* ========== RESPONSIVE ========== */
+        @media (min-width: 480px) {
+            .lang-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        @media (min-width: 600px) {
+            .main { padding-left: 20px; padding-right: 20px; }
+            .article-header { margin-left: -20px; margin-right: -20px; }
+            .breadcrumb { margin-left: -20px; margin-right: -20px; }
+            .toc-section { margin-left: -20px; margin-right: -20px; }
+            .cta-section { margin-left: -20px; margin-right: -20px; }
+        }
+        
+        @media (min-width: 800px) {
+            .footer { padding: 40px 24px 24px; }
+            .footer-content {
+                display: flex;
+                gap: 40px;
+                max-width: 720px;
+                margin: 0 auto;
+            }
+            .footer-brand-section { flex: 1; }
+        }
+        
+        @media (max-width: 600px) {
+            .article-header h1 { font-size: 1.3rem; }
+            .bismillah { font-size: 2rem; }
+            .arabic-main { font-size: 1.6rem; padding: 1.5rem; }
+            .arabic-verse { font-size: 1.4rem; padding: 1.2rem; }
+            .nav-link { padding: 6px 12px; font-size: 0.85rem; }
+            .header { padding: 0 12px; }
+            .voice-btn span { display: none; }
+            .voice-btn { padding: 8px; }
+            .prayer-card { padding: 1.5rem 1rem; }
+            .amiin-text { font-size: 2rem; }
+        }
+        
+        @media (max-width: 400px) {
+            .nav-link { padding: 5px 10px; font-size: 0.8rem; }
+            .font-size-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         
         /* ========== RESPONSIVE ========== */
         @media (min-width: 480px) {
