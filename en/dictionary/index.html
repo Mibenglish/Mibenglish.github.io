@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="id" data-font-size="normal" data-theme="light">
+<html lang="en" data-font-size="normal" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MIBEnglish Dictionary - Kamus Bahasa Inggris-Indonesia dengan 10.000+ kosakata lengkap dengan arti, pengucapan, dan contoh kalimat.">
-    <meta name="keywords" content="kamus inggris indonesia, english dictionary, kosakata bahasa inggris, belajar bahasa inggris">
+    <meta name="description" content="MIBEnglish Dictionary - English-Indonesian Dictionary with 10,000+ vocabulary complete with meanings, pronunciation, and example sentences.">
+    <meta name="keywords" content="english indonesian dictionary, english dictionary, vocabulary, learn english">
     <meta name="author" content="MIBEnglish">
     <meta name="theme-color" content="#1a472a">
-    <title>Kamus Bahasa Inggris - MIBEnglish Dictionary</title>
+    <title>English Dictionary - MIBEnglish Dictionary</title>
     
-    <link rel="canonical" href="https://mibenglish.com/id/dictionary/">
+    <link rel="canonical" href="https://mibenglish.com/dictionary/">
     <link rel="alternate" hreflang="en" href="https://mibenglish.com/dictionary/">
     <link rel="alternate" hreflang="id" href="https://mibenglish.com/id/dictionary/">
     <link rel="alternate" hreflang="ar" href="https://mibenglish.com/ar/dictionary/">
@@ -172,54 +172,6 @@
             padding-right: 12px;
         }
         
-        /* Alphabet Navigation */
-        .alphabet-nav {
-            background: #ffffff;
-            border: 1px solid #d4e5d4;
-            border-radius: 10px;
-            padding: 10px 8px;
-            margin-bottom: 12px;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        .alphabet-nav::-webkit-scrollbar { display: none; }
-        
-        .alphabet-inner {
-            display: flex;
-            gap: 4px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .alpha-btn {
-            width: 32px;
-            height: 32px;
-            background: #f8faf8;
-            border: 2px solid #d4e5d4;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #1a472a;
-            cursor: pointer;
-            font-family: inherit;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-        }
-        
-        .alpha-btn.active {
-            background: #1a472a;
-            color: #ffffff;
-            border-color: #1a472a;
-        }
-        
-        .alpha-btn:active:not(.active) {
-            background: #e8f5e9;
-            border-color: #c9a227;
-        }
-        
         /* Category Header */
         .category-header {
             background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
@@ -251,6 +203,86 @@
             font-size: 2.5rem;
             font-weight: 700;
             opacity: 0.3;
+        }
+        
+        /* Category Grid */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        
+        .category-card {
+            background: #ffffff;
+            border: 2px solid #d4e5d4;
+            border-radius: 12px;
+            padding: 20px 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .category-card:hover {
+            border-color: #c9a227;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(26, 71, 42, 0.15);
+        }
+        
+        .category-card:active {
+            transform: translateY(0);
+            background: #f8faf8;
+        }
+        
+        .category-card-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+        }
+        
+        .category-card-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .category-card-name {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1a472a;
+            line-height: 1.3;
+        }
+        
+        /* Back Button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(26, 71, 42, 0.1);
+            color: #1a472a;
+            padding: 10px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            font-weight: 500;
+            margin-bottom: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .back-btn:hover {
+            background: rgba(26, 71, 42, 0.2);
         }
         
         /* Controls */
@@ -286,23 +318,6 @@
             width: 18px;
             height: 18px;
             color: #6b7b6b;
-        }
-        
-        .filter-row {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .filter-select {
-            flex: 1;
-            padding: 12px 16px;
-            border: 2px solid #d4e5d4;
-            border-radius: 10px;
-            font-size: 0.875rem;
-            background: #ffffff;
-            color: #1a1a1a;
-            font-family: inherit;
-            cursor: pointer;
         }
         
         /* Dictionary Grid */
@@ -443,17 +458,6 @@
             margin-top: 10px;
             font-size: 0.875rem;
             color: #6b7b6b;
-        }
-        
-        /* Empty State */
-        .empty-state {
-            text-align: center;
-            padding: 40px 20px;
-            color: #6b7b6b;
-            font-size: 0.9375rem;
-            background: #ffffff;
-            border-radius: 10px;
-            border: 2px dashed #d4e5d4;
         }
         
         /* Ad Slots */
@@ -875,6 +879,14 @@
         }
         .toast.show { opacity: 1; }
         
+        /* Page Container */
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        
         /* ========== DARK THEME ========== */
         [data-theme="dark"] body {
             background-color: #121212;
@@ -890,25 +902,30 @@
             background: #1e3a1e;
         }
         
-        [data-theme="dark"] .alphabet-nav {
+        [data-theme="dark"] .category-card {
             background: #1e1e1e;
             border-color: #333333;
         }
         
-        [data-theme="dark"] .alpha-btn {
+        [data-theme="dark"] .category-card:hover {
+            border-color: #c9a227;
             background: #252525;
-            border-color: #333333;
-            color: #a0d0a0;
         }
         
-        [data-theme="dark"] .alpha-btn.active {
-            background: #2d5a3d;
-            color: #ffffff;
-            border-color: #2d5a3d;
+        [data-theme="dark"] .category-card-icon {
+            background: linear-gradient(135deg, #2d5a3d 0%, #3d7a4f 100%);
         }
         
-        [data-theme="dark"] .search-input,
-        [data-theme="dark"] .filter-select {
+        [data-theme="dark"] .category-card-name {
+            color: #6ab060;
+        }
+        
+        [data-theme="dark"] .back-btn {
+            background: rgba(106, 176, 96, 0.2);
+            color: #6ab060;
+        }
+        
+        [data-theme="dark"] .search-input {
             background: #1e1e1e;
             border-color: #333333;
             color: #e0e0e0;
@@ -972,12 +989,6 @@
         
         [data-theme="dark"] .page-dots,
         [data-theme="dark"] .page-info { color: #888888; }
-        
-        [data-theme="dark"] .empty-state {
-            background: #1e1e1e;
-            border-color: #333333;
-            color: #888888;
-        }
         
         [data-theme="dark"] .ad-slot {
             background: #1a2a1a;
@@ -1069,17 +1080,20 @@
         /* ========== RESPONSIVE ========== */
         @media (min-width: 480px) {
             .lang-grid { grid-template-columns: repeat(4, 1fr); }
+            .category-grid { grid-template-columns: repeat(2, 1fr); }
         }
         
         @media (min-width: 600px) {
             .main { padding-left: 20px; padding-right: 20px; }
             .category-title { font-size: 1.375rem; }
+            .category-grid { grid-template-columns: repeat(3, 1fr); }
             .dict-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
             .ad-row { flex-direction: row; }
             .ad-row .ad-slot { flex: 1; }
         }
         
         @media (min-width: 800px) {
+            .category-grid { grid-template-columns: repeat(4, 1fr); }
             .dict-grid { grid-template-columns: repeat(3, 1fr); }
             .footer { padding: 40px 24px 24px; }
             .footer-content { display: flex; gap: 40px; max-width: 900px; margin: 0 auto; }
@@ -1105,12 +1119,12 @@
     <div class="modal-overlay" id="langPopup">
         <div class="modal lang-popup">
             <div class="lang-popup-header">
-                <h2>Pilih Bahasa Anda</h2>
-                <p>Pilih bahasa untuk pengalaman belajar terbaik</p>
+                <h2>Select Your Language</h2>
+                <p>Choose your language for the best learning experience</p>
             </div>
             <div class="lang-grid">
-                <a href="https://mibenglish.com/dictionary/" class="lang-option"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></a>
-                <a href="https://mibenglish.com/id/dictionary/" class="lang-option selected"><span class="lang-flag">🇮🇩</span><span class="lang-name">Indonesian</span></a>
+                <a href="https://mibenglish.com/dictionary/" class="lang-option selected"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></a>
+                <a href="https://mibenglish.com/id/dictionary/" class="lang-option"><span class="lang-flag">🇮🇩</span><span class="lang-name">Indonesian</span></a>
                 <a href="https://mibenglish.com/ar/dictionary/" class="lang-option"><span class="lang-flag">🇸🇦</span><span class="lang-name">Arabic</span></a>
                 <a href="https://mibenglish.com/zh/dictionary/" class="lang-option"><span class="lang-flag">🇨🇳</span><span class="lang-name">Chinese</span></a>
                 <a href="https://mibenglish.com/ja/dictionary/" class="lang-option"><span class="lang-flag">🇯🇵</span><span class="lang-name">Japanese</span></a>
@@ -1131,7 +1145,7 @@
                 <a href="https://mibenglish.com/tr/dictionary/" class="lang-option"><span class="lang-flag">🇹🇷</span><span class="lang-name">Turkish</span></a>
             </div>
             <div class="lang-popup-footer">
-                <button class="btn-confirm" onclick="closeLangPopup()">Lanjutkan dalam Bahasa Indonesia</button>
+                <button class="btn-confirm" onclick="closeLangPopup()">Continue in English</button>
             </div>
         </div>
     </div>
@@ -1140,15 +1154,15 @@
     <div class="modal-overlay" id="settingsOverlay">
         <div class="modal">
             <div class="modal-header">
-                <h2>Pengaturan</h2>
+                <h2>Settings</h2>
                 <button class="modal-close" onclick="closeSettings()">✕</button>
             </div>
             <div class="modal-body">
                 <div class="settings-section">
-                    <h3>Ukuran Font</h3>
+                    <h3>Font Size</h3>
                     <div class="font-size-grid">
                         <button class="font-size-btn" data-size="small" onclick="setFontSize('small')">
-                            <span class="size-label">Kecil</span>
+                            <span class="size-label">Small</span>
                             <span class="size-preview">Aa</span>
                         </button>
                         <button class="font-size-btn active" data-size="normal" onclick="setFontSize('normal')">
@@ -1156,19 +1170,19 @@
                             <span class="size-preview">Aa</span>
                         </button>
                         <button class="font-size-btn" data-size="large" onclick="setFontSize('large')">
-                            <span class="size-label">Besar</span>
+                            <span class="size-label">Large</span>
                             <span class="size-preview">Aa</span>
                         </button>
                         <button class="font-size-btn" data-size="xlarge" onclick="setFontSize('xlarge')">
-                            <span class="size-label">Sgt Besar</span>
+                            <span class="size-label">X-Large</span>
                             <span class="size-preview">Aa</span>
                         </button>
                     </div>
                 </div>
                 <div class="settings-section">
-                    <h3>Tampilan</h3>
+                    <h3>Appearance</h3>
                     <div class="dark-toggle">
-                        <span>Mode Gelap</span>
+                        <span>Dark Mode</span>
                         <label class="toggle-switch">
                             <input type="checkbox" id="darkToggle" onchange="toggleDarkMode()">
                             <span class="toggle-slider"></span>
@@ -1176,8 +1190,8 @@
                     </div>
                 </div>
                 <div class="settings-section">
-                    <h3>Bahasa</h3>
-                    <button class="btn-change-lang" onclick="openLangPopup()">Ganti Bahasa</button>
+                    <h3>Language</h3>
+                    <button class="btn-change-lang" onclick="openLangPopup()">Change Language</button>
                 </div>
             </div>
         </div>
@@ -1195,19 +1209,19 @@
             </div>
             <div class="modal-body word-modal-body">
                 <div class="meaning-section">
-                    <div class="meaning-label">Jenis Kata</div>
+                    <div class="meaning-label">Word Type</div>
                     <div class="meaning-text" id="modalType">n.</div>
                 </div>
                 <div class="meaning-section">
-                    <div class="meaning-label">Arti</div>
-                    <div class="meaning-text" id="modalMeaning">kata, ucapan</div>
+                    <div class="meaning-label">Meaning</div>
+                    <div class="meaning-text" id="modalMeaning">word, utterance</div>
                 </div>
                 <div class="meaning-section">
-                    <div class="meaning-label">Contoh Kalimat</div>
+                    <div class="meaning-label">Example Sentence</div>
                     <div class="meaning-text" id="modalExample" style="font-style: italic;">"What does this word mean?"</div>
                 </div>
                 <div class="synonyms-section" id="modalSynonymsSection">
-                    <div class="meaning-label" style="margin-bottom: 8px;">Sinonim</div>
+                    <div class="meaning-label" style="margin-bottom: 8px;">Synonyms</div>
                     <div id="modalSynonyms"></div>
                 </div>
             </div>
@@ -1219,8 +1233,8 @@
         <a href="https://mibenglish.com/" class="brand">MIBEnglish</a>
         <div class="header-actions">
             <button class="lang-btn" onclick="openLangPopup()">
-                <span>🇮🇩</span>
-                <span>ID</span>
+                <span>🇬🇧</span>
+                <span>EN</span>
                 <span>▼</span>
             </button>
             <button class="settings-btn" onclick="openSettings()">
@@ -1235,8 +1249,8 @@
     <nav class="nav">
         <div class="nav-inner">
             <a href="https://mibenglish.com/en/dua" class="nav-link">Dua</a>
-            <a href="https://mibenglish.com/en/learn/" class="nav-link active">Learn</a>
-            <a href="https://mibenglish.com/en/dictionary/" class="nav-link">Dictionary</a>
+            <a href="https://mibenglish.com/en/learn/" class="nav-link">Learn</a>
+            <a href="https://mibenglish.com/en/dictionary/" class="nav-link active">Dictionary</a>
             <a href="https://mibenglish.com/games/" class="nav-link">Games</a>
             <a href="https://mibenglish.com/en/market/" class="nav-link">Market</a>
         </div>
@@ -1245,64 +1259,191 @@
     <!-- Main -->
     <main class="main">
         <!-- AD 1: Top Banner -->
-        <div class="ad-slot ad-slot-banner">AdSense - Banner Atas</div>
+        <div class="ad-slot ad-slot-banner">AdSense - Top Banner</div>
         
-        <!-- Alphabet Navigation -->
-        <div class="alphabet-nav">
-            <div class="alphabet-inner" id="alphabetNav"></div>
+        <!-- HOME PAGE - Category List -->
+        <div id="page-home" class="page active">
+            <!-- Category Header -->
+            <div class="category-header">
+                <div class="category-info">
+                    <h1 class="category-title">Vocabulary Categories</h1>
+                    <p class="category-count">20 main categories</p>
+                </div>
+                <div class="category-letter">📚</div>
+            </div>
+            
+            <!-- AD 2: After Category Header -->
+            <div class="ad-slot ad-slot-inline">AdSense - Middle Banner 1</div>
+            
+            <!-- Category Grid -->
+            <div class="category-grid">
+                <a class="category-card" onclick="showPage('human')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/></svg>
+                    </div>
+                    <span class="category-card-name">Human</span>
+                </a>
+                <a class="category-card" onclick="showPage('family')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <span class="category-card-name">Family & Relationships</span>
+                </a>
+                <a class="category-card" onclick="showPage('society')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <span class="category-card-name">Society</span>
+                </a>
+                <a class="category-card" onclick="showPage('culture')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <span class="category-card-name">Culture</span>
+                </a>
+                <a class="category-card" onclick="showPage('language')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <span class="category-card-name">Language & Communication</span>
+                </a>
+                <a class="category-card" onclick="showPage('economy')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <span class="category-card-name">Economy & Work</span>
+                </a>
+                <a class="category-card" onclick="showPage('law')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <span class="category-card-name">Law & Government</span>
+                </a>
+                <a class="category-card" onclick="showPage('education')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    </div>
+                    <span class="category-card-name">Education & Knowledge</span>
+                </a>
+                <a class="category-card" onclick="showPage('science')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v11l4 7H5l4-7V3z"/><path d="M9 3h6"/></svg>
+                    </div>
+                    <span class="category-card-name">Science</span>
+                </a>
+                <a class="category-card" onclick="showPage('technology')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <span class="category-card-name">Technology</span>
+                </a>
+                <a class="category-card" onclick="showPage('nature')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-4 8-7.582 8-12a8 8 0 1 0-16 0c0 4.418 4 8 8 12z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <span class="category-card-name">Nature</span>
+                </a>
+                <a class="category-card" onclick="showPage('space')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <span class="category-card-name">Space & Universe</span>
+                </a>
+                <a class="category-card" onclick="showPage('place')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+                    </div>
+                    <span class="category-card-name">Place & Geography</span>
+                </a>
+                <a class="category-card" onclick="showPage('travel')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+                    </div>
+                    <span class="category-card-name">Travel & Transportation</span>
+                </a>
+                <a class="category-card" onclick="showPage('home-objects')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <span class="category-card-name">Home & Objects</span>
+                </a>
+                <a class="category-card" onclick="showPage('food')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                    </div>
+                    <span class="category-card-name">Food & Drink</span>
+                </a>
+                <a class="category-card" onclick="showPage('clothing')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+                    </div>
+                    <span class="category-card-name">Clothing & Appearance</span>
+                </a>
+                <a class="category-card" onclick="showPage('activities')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    </div>
+                    <span class="category-card-name">Activities & Entertainment</span>
+                </a>
+                <a class="category-card" onclick="showPage('health')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <span class="category-card-name">Health & Medicine</span>
+                </a>
+                <a class="category-card" onclick="showPage('basic')">
+                    <div class="category-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <span class="category-card-name">Basic Concepts</span>
+                </a>
+            </div>
+            
+            <!-- AD 3: After Dictionary Grid -->
+            <div class="ad-slot ad-slot-large">AdSense - Large Banner</div>
         </div>
         
-        <!-- Category Header -->
-        <div class="category-header">
-            <div class="category-info">
-                <h1 class="category-title" id="categoryTitle">Kamus A-Z</h1>
-                <p class="category-count" id="categoryCount">10.000+ kosakata</p>
+        <!-- CATEGORY PAGE - Template for all categories -->
+        <div id="page-category" class="page">
+            <button class="back-btn" onclick="showPage('home')">← Back to Categories</button>
+            
+            <!-- Category Header -->
+            <div class="category-header">
+                <div class="category-info">
+                    <h1 class="category-title" id="categoryTitle">Category Name</h1>
+                    <p class="category-count" id="categoryCount">0 vocabulary</p>
+                </div>
+                <div class="category-letter" id="categoryIcon">📖</div>
             </div>
-            <div class="category-letter" id="categoryLetter">📖</div>
-        </div>
-        
-        <!-- AD 2: After Category Header -->
-        <div class="ad-slot ad-slot-inline">AdSense - Banner Tengah 1</div>
-        
-        <!-- Controls -->
-        <div class="controls">
-            <div class="search-box">
-                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <circle cx="11" cy="11" r="8"/>
-                    <path d="m21 21-4.35-4.35"/>
-                </svg>
-                <input type="text" class="search-input" id="searchInput" placeholder="Cari kata bahasa Inggris..." autocomplete="off">
+            
+            <!-- AD 2: After Category Header -->
+            <div class="ad-slot ad-slot-inline">AdSense - Middle Banner 1</div>
+            
+            <!-- Controls -->
+            <div class="controls">
+                <div class="search-box">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search English words..." autocomplete="off">
+                </div>
             </div>
-            <div class="filter-row">
-                <select class="filter-select" id="typeFilter">
-                    <option value="all">Semua Jenis Kata</option>
-                    <option value="n">Kata Benda (Noun)</option>
-                    <option value="v">Kata Kerja (Verb)</option>
-                    <option value="adj">Kata Sifat (Adjective)</option>
-                    <option value="adv">Kata Keterangan (Adverb)</option>
-                    <option value="prep">Kata Depan (Preposition)</option>
-                </select>
-                <select class="filter-select" id="perPageSelect">
-                    <option value="30">30 per halaman</option>
-                    <option value="50" selected>50 per halaman</option>
-                    <option value="100">100 per halaman</option>
-                </select>
+            
+            <!-- Dictionary Grid -->
+            <div class="dict-grid" id="dictGrid"></div>
+            
+            <!-- AD 3: After Dictionary Grid -->
+            <div class="ad-slot ad-slot-large">AdSense - Large Banner</div>
+            
+            <div class="pagination" id="pagination"></div>
+            <div class="page-info" id="pageInfo"></div>
+            
+            <!-- AD 4 & 5: Side by Side -->
+            <div class="ad-row">
+                <div class="ad-slot">AdSense - Rectangle Left</div>
+                <div class="ad-slot">AdSense - Rectangle Right</div>
             </div>
-        </div>
-        
-        <!-- Dictionary Grid -->
-        <div class="dict-grid" id="dictGrid"></div>
-        
-        <!-- AD 3: After Dictionary Grid -->
-        <div class="ad-slot ad-slot-large">AdSense - Banner Besar</div>
-        
-        <div class="pagination" id="pagination"></div>
-        <div class="page-info" id="pageInfo"></div>
-        
-        <!-- AD 4 & 5: Side by Side -->
-        <div class="ad-row">
-            <div class="ad-slot">AdSense - Rectangle Kiri</div>
-            <div class="ad-slot">AdSense - Rectangle Kanan</div>
         </div>
     </main>
     
@@ -1311,7 +1452,7 @@
         <div class="footer-content">
             <div class="footer-brand-section">
                 <div class="footer-brand">MIBEnglish</div>
-                <p class="footer-desc">Kamus Bahasa Inggris-Indonesia lengkap dengan 10.000+ kosakata, pengucapan, dan contoh kalimat. Belajar kosakata dengan mudah dan menyenangkan.</p>
+                <p class="footer-desc">English-Indonesian Dictionary with 10,000+ vocabulary, pronunciation, and example sentences. Learn vocabulary easily and enjoyably.</p>
                 <div class="social-icons">
                     <a href="https://instagram.com/mibenglish" class="social-icon" target="_blank" rel="noopener">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -1330,11 +1471,11 @@
             <div>
                 <h4 class="footer-section-title">Support</h4>
                 <ul class="footer-links">
-                    <li><a href="https://mibenglish.com/id/about.html">Tentang</a></li>
-                    <li><a href="https://mibenglish.com/id/contact.html">Kontak</a></li>
-                    <li><a href="https://mibenglish.com/id/privacy.html">Kebijakan Privasi</a></li>
-                    <li><a href="https://mibenglish.com/id/terms.html">Syarat & Ketentuan</a></li>
-                    <li><a href="https://mibenglish.com/id/disclaimer.html">Disclaimer</a></li>
+                    <li><a href="https://mibenglish.com/en/about.html">About</a></li>
+                    <li><a href="https://mibenglish.com/en/contact.html">Contact</a></li>
+                    <li><a href="https://mibenglish.com/en/privacy.html">Privacy Policy</a></li>
+                    <li><a href="https://mibenglish.com/en/terms.html">Terms & Conditions</a></li>
+                    <li><a href="https://mibenglish.com/en/disclaimer.html">Disclaimer</a></li>
                 </ul>
             </div>
         </div>
@@ -1347,7 +1488,7 @@
     <button class="share-fab" id="shareFab">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
     </button>
-    <div class="toast" id="toast">Link disalin!</div>
+    <div class="toast" id="toast">Link copied!</div>
 
 <script>
 // ========== SETTINGS FUNCTIONS ==========
@@ -1422,163 +1563,225 @@ function closeWordModal() {
 
 document.getElementById('wordModal').addEventListener('click', function(e) { if (e.target === this) closeWordModal(); });
 
-// ========== DICTIONARY DATA ==========
-var typeLabels = {
-    'n': 'Kata Benda',
-    'v': 'Kata Kerja',
-    'adj': 'Kata Sifat',
-    'adv': 'Kata Keterangan',
-    'prep': 'Kata Depan',
-    'conj': 'Kata Sambung',
-    'pron': 'Kata Ganti',
-    'int': 'Kata Seru'
+// ========== CATEGORY DATA ==========
+var categories = {
+    human: { title: 'Human', words: [
+        { term: "body", pronunciation: "/ˈbɒdi/", type: "n", meaning: "tubuh (Indonesian)", example: "Exercise is good for your body.", synonyms: ["physique", "form"] },
+        { term: "head", pronunciation: "/hed/", type: "n", meaning: "kepala (Indonesian)", example: "She shook her head.", synonyms: ["skull"] },
+        { term: "face", pronunciation: "/feɪs/", type: "n", meaning: "wajah (Indonesian)", example: "He has a kind face.", synonyms: ["countenance"] },
+        { term: "hand", pronunciation: "/hænd/", type: "n", meaning: "tangan (Indonesian)", example: "Wash your hands before eating.", synonyms: ["palm"] },
+        { term: "heart", pronunciation: "/hɑːt/", type: "n", meaning: "jantung, hati (Indonesian)", example: "She has a kind heart.", synonyms: ["cardiac"] },
+        { term: "mind", pronunciation: "/maɪnd/", type: "n", meaning: "pikiran (Indonesian)", example: "Keep an open mind.", synonyms: ["brain"] },
+        { term: "soul", pronunciation: "/səʊl/", type: "n", meaning: "jiwa (Indonesian)", example: "Music feeds the soul.", synonyms: ["spirit"] },
+        { term: "brain", pronunciation: "/breɪn/", type: "n", meaning: "otak (Indonesian)", example: "Use your brain to solve this.", synonyms: ["intellect"] }
+    ]},
+    family: { title: 'Family & Relationships', words: [
+        { term: "father", pronunciation: "/ˈfɑːðə/", type: "n", meaning: "ayah (Indonesian)", example: "My father works as a teacher.", synonyms: ["dad"] },
+        { term: "mother", pronunciation: "/ˈmʌðə/", type: "n", meaning: "ibu (Indonesian)", example: "My mother is a great cook.", synonyms: ["mom"] },
+        { term: "brother", pronunciation: "/ˈbrʌðə/", type: "n", meaning: "saudara laki-laki (Indonesian)", example: "I have one older brother.", synonyms: ["sibling"] },
+        { term: "sister", pronunciation: "/ˈsɪstə/", type: "n", meaning: "saudara perempuan (Indonesian)", example: "My sister is studying at university.", synonyms: ["sibling"] },
+        { term: "parents", pronunciation: "/ˈpeərənts/", type: "n", meaning: "orang tua (Indonesian)", example: "My parents live in Jakarta.", synonyms: ["guardians"] },
+        { term: "children", pronunciation: "/ˈtʃɪldrən/", type: "n", meaning: "anak-anak (Indonesian)", example: "The children are playing in the park.", synonyms: ["kids"] }
+    ]},
+    society: { title: 'Society', words: [
+        { term: "community", pronunciation: "/kəˈmjuːnɪti/", type: "n", meaning: "komunitas (Indonesian)", example: "She is active in the community.", synonyms: ["society"] },
+        { term: "citizen", pronunciation: "/ˈsɪtɪzn/", type: "n", meaning: "warga negara (Indonesian)", example: "Every citizen has rights.", synonyms: ["resident"] },
+        { term: "society", pronunciation: "/səˈsaɪɪti/", type: "n", meaning: "masyarakat (Indonesian)", example: "Society has changed a lot.", synonyms: ["community"] },
+        { term: "culture", pronunciation: "/ˈkʌltʃə/", type: "n", meaning: "budaya (Indonesian)", example: "Each country has its own culture.", synonyms: ["tradition"] }
+    ]},
+    culture: { title: 'Culture', words: [
+        { term: "tradition", pronunciation: "/trəˈdɪʃn/", type: "n", meaning: "tradisi (Indonesian)", example: "We follow family traditions.", synonyms: ["custom"] },
+        { term: "festival", pronunciation: "/ˈfestɪvl/", type: "n", meaning: "festival (Indonesian)", example: "The festival is held annually.", synonyms: ["celebration"] },
+        { term: "art", pronunciation: "/ɑːt/", type: "n", meaning: "seni (Indonesian)", example: "She studies art at university.", synonyms: ["fine art"] },
+        { term: "music", pronunciation: "/ˈmjuːzɪk/", type: "n", meaning: "musik (Indonesian)", example: "I love listening to music.", synonyms: ["melody"] }
+    ]},
+    language: { title: 'Language & Communication', words: [
+        { term: "language", pronunciation: "/ˈlæŋɡwɪdʒ/", type: "n", meaning: "bahasa (Indonesian)", example: "She speaks three languages.", synonyms: ["tongue"] },
+        { term: "word", pronunciation: "/wɜːd/", type: "n", meaning: "kata (Indonesian)", example: "What does this word mean?", synonyms: ["term"] },
+        { term: "sentence", pronunciation: "/ˈsentəns/", type: "n", meaning: "kalimat (Indonesian)", example: "Write a complete sentence.", synonyms: ["phrase"] },
+        { term: "speak", pronunciation: "/spiːk/", type: "v", meaning: "berbicara (Indonesian)", example: "Can you speak English?", synonyms: ["talk"] }
+    ]},
+    economy: { title: 'Economy & Work', words: [
+        { term: "money", pronunciation: "/ˈmʌni/", type: "n", meaning: "uang (Indonesian)", example: "How much money do you have?", synonyms: ["cash"] },
+        { term: "job", pronunciation: "/dʒɒb/", type: "n", meaning: "pekerjaan (Indonesian)", example: "She found a new job.", synonyms: ["work"] },
+        { term: "business", pronunciation: "/ˈbɪznɪs/", type: "n", meaning: "bisnis (Indonesian)", example: "He runs a small business.", synonyms: ["company"] },
+        { term: "salary", pronunciation: "/ˈsæləri/", type: "n", meaning: "gaji (Indonesian)", example: "Her salary was increased.", synonyms: ["wage"] }
+    ]},
+    law: { title: 'Law & Government', words: [
+        { term: "law", pronunciation: "/lɔː/", type: "n", meaning: "hukum (Indonesian)", example: "Everyone must follow the law.", synonyms: ["legislation"] },
+        { term: "government", pronunciation: "/ˈɡʌvənmənt/", type: "n", meaning: "pemerintah (Indonesian)", example: "The government announced new policies.", synonyms: ["administration"] },
+        { term: "court", pronunciation: "/kɔːt/", type: "n", meaning: "pengadilan (Indonesian)", example: "The case went to court.", synonyms: ["tribunal"] },
+        { term: "judge", pronunciation: "/dʒʌdʒ/", type: "n", meaning: "hakim (Indonesian)", example: "The judge made a decision.", synonyms: ["magistrate"] }
+    ]},
+    education: { title: 'Education & Knowledge', words: [
+        { term: "school", pronunciation: "/skuːl/", type: "n", meaning: "sekolah (Indonesian)", example: "The children go to school.", synonyms: ["academy"] },
+        { term: "teacher", pronunciation: "/ˈtiːtʃə/", type: "n", meaning: "guru (Indonesian)", example: "The teacher explained the lesson.", synonyms: ["instructor"] },
+        { term: "student", pronunciation: "/ˈstjuːdnt/", type: "n", meaning: "siswa, mahasiswa (Indonesian)", example: "She is a university student.", synonyms: ["pupil"] },
+        { term: "book", pronunciation: "/bʊk/", type: "n", meaning: "buku (Indonesian)", example: "I am reading a good book.", synonyms: ["volume"] }
+    ]},
+    science: { title: 'Science', words: [
+        { term: "science", pronunciation: "/ˈsaɪəns/", type: "n", meaning: "ilmu pengetahuan (Indonesian)", example: "Science has made great progress.", synonyms: ["discipline"] },
+        { term: "experiment", pronunciation: "/ɪkˈsperɪmənt/", type: "n", meaning: "eksperimen (Indonesian)", example: "The experiment was successful.", synonyms: ["test"] },
+        { term: "research", pronunciation: "/rɪˈsɜːtʃ/", type: "n", meaning: "penelitian (Indonesian)", example: "She is doing research on cancer.", synonyms: ["study"] },
+        { term: "theory", pronunciation: "/ˈθɪəri/", type: "n", meaning: "teori (Indonesian)", example: "The theory was proven correct.", synonyms: ["hypothesis"] }
+    ]},
+    technology: { title: 'Technology', words: [
+        { term: "computer", pronunciation: "/kəmˈpjuːtə/", type: "n", meaning: "komputer (Indonesian)", example: "I use a computer for work.", synonyms: ["PC"] },
+        { term: "internet", pronunciation: "/ˈɪntənet/", type: "n", meaning: "internet (Indonesian)", example: "The internet has changed our lives.", synonyms: ["web"] },
+        { term: "software", pronunciation: "/ˈsɒftweə/", type: "n", meaning: "perangkat lunak (Indonesian)", example: "This software is easy to use.", synonyms: ["program"] },
+        { term: "device", pronunciation: "/dɪˈvaɪs/", type: "n", meaning: "perangkat (Indonesian)", example: "The device needs to be charged.", synonyms: ["gadget"] }
+    ]},
+    nature: { title: 'Nature', words: [
+        { term: "tree", pronunciation: "/triː/", type: "n", meaning: "pohon (Indonesian)", example: "The tree is very old.", synonyms: ["plant"] },
+        { term: "flower", pronunciation: "/ˈflaʊə/", type: "n", meaning: "bunga (Indonesian)", example: "The flower is beautiful.", synonyms: ["bloom"] },
+        { term: "animal", pronunciation: "/ˈænɪml/", type: "n", meaning: "hewan (Indonesian)", example: "The animal was injured.", synonyms: ["creature"] },
+        { term: "river", pronunciation: "/ˈrɪvə/", type: "n", meaning: "sungai (Indonesian)", example: "The river flows to the sea.", synonyms: ["stream"] }
+    ]},
+    space: { title: 'Space & Universe', words: [
+        { term: "star", pronunciation: "/stɑː/", type: "n", meaning: "bintang (Indonesian)", example: "The stars are bright tonight.", synonyms: ["celestial body"] },
+        { term: "planet", pronunciation: "/ˈplænɪt/", type: "n", meaning: "planet (Indonesian)", example: "Earth is our planet.", synonyms: ["world"] },
+        { term: "moon", pronunciation: "/muːn/", type: "n", meaning: "bulan (Indonesian)", example: "The moon is full tonight.", synonyms: ["satellite"] },
+        { term: "sun", pronunciation: "/sʌn/", type: "n", meaning: "matahari (Indonesian)", example: "The sun rises in the east.", synonyms: ["star"] }
+    ]},
+    place: { title: 'Place & Geography', words: [
+        { term: "country", pronunciation: "/ˈkʌntri/", type: "n", meaning: "negara (Indonesian)", example: "Indonesia is a beautiful country.", synonyms: ["nation"] },
+        { term: "city", pronunciation: "/ˈsɪti/", type: "n", meaning: "kota (Indonesian)", example: "Jakarta is a big city.", synonyms: ["town"] },
+        { term: "mountain", pronunciation: "/ˈmaʊntɪn/", type: "n", meaning: "gunung (Indonesian)", example: "The mountain is very high.", synonyms: ["peak"] },
+        { term: "ocean", pronunciation: "/ˈəʊʃn/", type: "n", meaning: "samudra (Indonesian)", example: "The ocean is vast.", synonyms: ["sea"] }
+    ]},
+    travel: { title: 'Travel & Transportation', words: [
+        { term: "car", pronunciation: "/kɑː/", type: "n", meaning: "mobil (Indonesian)", example: "I drive my car to work.", synonyms: ["automobile"] },
+        { term: "plane", pronunciation: "/pleɪn/", type: "n", meaning: "pesawat (Indonesian)", example: "The plane landed safely.", synonyms: ["aircraft"] },
+        { term: "train", pronunciation: "/treɪn/", type: "n", meaning: "kereta (Indonesian)", example: "The train is on time.", synonyms: ["railway"] },
+        { term: "journey", pronunciation: "/ˈdʒɜːni/", type: "n", meaning: "perjalanan (Indonesian)", example: "The journey took three hours.", synonyms: ["trip"] }
+    ]},
+    'home-objects': { title: 'Home & Objects', words: [
+        { term: "house", pronunciation: "/haʊs/", type: "n", meaning: "rumah (Indonesian)", example: "They bought a new house.", synonyms: ["home"] },
+        { term: "room", pronunciation: "/ruːm/", type: "n", meaning: "kamar (Indonesian)", example: "My room is small.", synonyms: ["chamber"] },
+        { term: "door", pronunciation: "/dɔː/", type: "n", meaning: "pintu (Indonesian)", example: "Please close the door.", synonyms: ["entrance"] },
+        { term: "window", pronunciation: "/ˈwɪndəʊ/", type: "n", meaning: "jendela (Indonesian)", example: "Open the window.", synonyms: ["opening"] }
+    ]},
+    food: { title: 'Food & Drink', words: [
+        { term: "food", pronunciation: "/fuːd/", type: "n", meaning: "makanan (Indonesian)", example: "The food is delicious.", synonyms: ["meal"] },
+        { term: "water", pronunciation: "/ˈwɔːtə/", type: "n", meaning: "air (Indonesian)", example: "Drink plenty of water.", synonyms: ["H2O"] },
+        { term: "rice", pronunciation: "/raɪs/", type: "n", meaning: "nasi (Indonesian)", example: "We eat rice every day.", synonyms: ["grain"] },
+        { term: "fruit", pronunciation: "/fruːt/", type: "n", meaning: "buah (Indonesian)", example: "Eating fruit is healthy.", synonyms: ["produce"] }
+    ]},
+    clothing: { title: 'Clothing & Appearance', words: [
+        { term: "shirt", pronunciation: "/ʃɜːt/", type: "n", meaning: "kemeja (Indonesian)", example: "He wore a white shirt.", synonyms: ["blouse"] },
+        { term: "dress", pronunciation: "/dres/", type: "n", meaning: "gaun (Indonesian)", example: "She wore a beautiful dress.", synonyms: ["gown"] },
+        { term: "shoes", pronunciation: "/ʃuːz/", type: "n", meaning: "sepatu (Indonesian)", example: "I need new shoes.", synonyms: ["footwear"] },
+        { term: "hat", pronunciation: "/hæt/", type: "n", meaning: "topi (Indonesian)", example: "She wore a hat.", synonyms: ["cap"] }
+    ]},
+    activities: { title: 'Activities & Entertainment', words: [
+        { term: "game", pronunciation: "/ɡeɪm/", type: "n", meaning: "permainan (Indonesian)", example: "Let's play a game.", synonyms: ["sport"] },
+        { term: "sport", pronunciation: "/spɔːt/", type: "n", meaning: "olahraga (Indonesian)", example: "What sport do you like?", synonyms: ["athletics"] },
+        { term: "movie", pronunciation: "/ˈmuːvi/", type: "n", meaning: "film (Indonesian)", example: "Let's watch a movie.", synonyms: ["film"] },
+        { term: "music", pronunciation: "/ˈmjuːzɪk/", type: "n", meaning: "musik (Indonesian)", example: "I love listening to music.", synonyms: ["melody"] }
+    ]},
+    health: { title: 'Health & Medicine', words: [
+        { term: "health", pronunciation: "/helθ/", type: "n", meaning: "kesehatan (Indonesian)", example: "Health is important.", synonyms: ["wellness"] },
+        { term: "hospital", pronunciation: "/ˈhɒspɪtl/", type: "n", meaning: "rumah sakit (Indonesian)", example: "She was taken to the hospital.", synonyms: ["clinic"] },
+        { term: "doctor", pronunciation: "/ˈdɒktə/", type: "n", meaning: "dokter (Indonesian)", example: "The doctor examined the patient.", synonyms: ["physician"] },
+        { term: "medicine", pronunciation: "/ˈmedsn/", type: "n", meaning: "obat (Indonesian)", example: "Take your medicine.", synonyms: ["medication"] }
+    ]},
+    basic: { title: 'Basic Concepts', words: [
+        { term: "time", pronunciation: "/taɪm/", type: "n", meaning: "waktu (Indonesian)", example: "What time is it?", synonyms: ["period"] },
+        { term: "number", pronunciation: "/ˈnʌmbə/", type: "n", meaning: "angka (Indonesian)", example: "What is your phone number?", synonyms: ["digit"] },
+        { term: "color", pronunciation: "/ˈkʌlə/", type: "n", meaning: "warna (Indonesian)", example: "What color do you like?", synonyms: ["shade"] },
+        { term: "size", pronunciation: "/saɪz/", type: "n", meaning: "ukuran (Indonesian)", example: "What size do you need?", synonyms: ["dimension"] }
+    ]}
 };
 
-var dictionaryData = [
-    { term: "abandon", pronunciation: "/əˈbændən/", type: "v", meaning: "meninggalkan, meninggalkan tanpa izin", example: "He abandoned his car in the middle of the road.", synonyms: ["leave", "desert", "forsake"] },
-    { term: "ability", pronunciation: "/əˈbɪlɪti/", type: "n", meaning: "kemampuan, kesanggupan", example: "She has the ability to solve complex problems.", synonyms: ["skill", "talent", "capacity"] },
-    { term: "able", pronunciation: "/ˈeɪbl/", type: "adj", meaning: "mampu, dapat", example: "Will you be able to finish the project on time?", synonyms: ["capable", "competent"] },
-    { term: "abroad", pronunciation: "/əˈbrɔːd/", type: "adv", meaning: "di luar negeri, ke luar negeri", example: "She is studying abroad this semester.", synonyms: ["overseas", "overseas"] },
-    { term: "absent", pronunciation: "/ˈæbsənt/", type: "adj", meaning: "tidak hadir, absen", example: "Three students were absent from class today.", synonyms: ["missing", "away"] },
-    { term: "accept", pronunciation: "/əkˈsept/", type: "v", meaning: "menerima, menyetujui", example: "She accepted the job offer immediately.", synonyms: ["receive", "take"] },
-    { term: "accident", pronunciation: "/ˈæksɪdənt/", type: "n", meaning: "kecelakaan, kejadian tak terduga", example: "There was a car accident on the highway.", synonyms: ["crash", "collision"] },
-    { term: "account", pronunciation: "/əˈkaʊnt/", type: "n", meaning: "akun, rekening, laporan", example: "I need to check my bank account.", synonyms: ["record", "report"] },
-    { term: "achieve", pronunciation: "/əˈtʃiːv/", type: "v", meaning: "mencapai, meraih", example: "He achieved his goal after years of hard work.", synonyms: ["accomplish", "attain"] },
-    { term: "action", pronunciation: "/ˈækʃn/", type: "n", meaning: "tindakan, aksi", example: "We need to take immediate action.", synonyms: ["deed", "act"] },
-    { term: "active", pronunciation: "/ˈæktɪv/", type: "adj", meaning: "aktif, giat", example: "She is very active in sports.", synonyms: ["energetic", "lively"] },
-    { term: "activity", pronunciation: "/ækˈtɪvɪti/", type: "n", meaning: "kegiatan, aktivitas", example: "What activities do you enjoy?", synonyms: ["pursuit", "hobby"] },
-    { term: "actual", pronunciation: "/ˈæktʃuəl/", type: "adj", meaning: "sebenarnya, nyata", example: "The actual cost was higher than expected.", synonyms: ["real", "genuine"] },
-    { term: "add", pronunciation: "/æd/", type: "v", meaning: "menambahkan", example: "Please add some sugar to my coffee.", synonyms: ["include", "insert"] },
-    { term: "address", pronunciation: "/əˈdres/", type: "n", meaning: "alamat", example: "What is your home address?", synonyms: ["location", "residence"] },
-    { term: "advantage", pronunciation: "/ədˈvɑːntɪdʒ/", type: "n", meaning: "keuntungan", example: "One advantage of living here is the low cost.", synonyms: ["benefit", "edge"] },
-    { term: "adventure", pronunciation: "/ədˈventʃə/", type: "n", meaning: "petualangan", example: "They went on an adventure to the mountains.", synonyms: ["journey", "expedition"] },
-    { term: "advertise", pronunciation: "/ˈædvətaɪz/", type: "v", meaning: "mengiklankan", example: "They advertise their products on TV.", synonyms: ["promote", "market"] },
-    { term: "advice", pronunciation: "/ədˈvaɪs/", type: "n", meaning: "nasihat, saran", example: "Can you give me some advice?", synonyms: ["guidance", "counsel"] },
-    { term: "afford", pronunciation: "/əˈfɔːd/", type: "v", meaning: "mampu membeli", example: "I can't afford a new car right now.", synonyms: ["manage", "bear"] },
-    { term: "afraid", pronunciation: "/əˈfreɪd/", type: "adj", meaning: "takut", example: "Don't be afraid to ask questions.", synonyms: ["scared", "frightened"] },
-    { term: "after", pronunciation: "/ˈɑːftə/", type: "prep", meaning: "setelah, sesudah", example: "We will meet after lunch.", synonyms: ["following", "subsequent to"] },
-    { term: "afternoon", pronunciation: "/ˌɑːftəˈnuːn/", type: "n", meaning: "sore hari", example: "I'll see you this afternoon.", synonyms: [] },
-    { term: "again", pronunciation: "/əˈɡen/", type: "adv", meaning: "lagi, sekali lagi", example: "Can you say that again?", synonyms: ["once more", "anew"] },
-    { term: "against", pronunciation: "/əˈɡeɪnst/", type: "prep", meaning: "melawan, terhadap", example: "He is against the new policy.", synonyms: ["opposed to", "versus"] },
-    { term: "age", pronunciation: "/eɪdʒ/", type: "n", meaning: "usia, umur", example: "What is your age?", synonyms: ["years", "time of life"] },
-    { term: "ago", pronunciation: "/əˈɡəʊ/", type: "adv", meaning: "yang lalu", example: "I graduated two years ago.", synonyms: ["back", "since"] },
-    { term: "agree", pronunciation: "/əˈɡriː/", type: "v", meaning: "setuju", example: "I agree with your opinion.", synonyms: ["concur", "approve"] },
-    { term: "ahead", pronunciation: "/əˈhed/", type: "adv", meaning: "di depan, ke depan", example: "The road ahead is blocked.", synonyms: ["forward", "onward"] },
-    { term: "air", pronunciation: "/eə/", type: "n", meaning: "udara", example: "The air is fresh this morning.", synonyms: ["atmosphere", "breeze"] },
-    { term: "airport", pronunciation: "/ˈeəpɔːt/", type: "n", meaning: "bandara", example: "We arrived at the airport early.", synonyms: ["airfield", "terminal"] },
-    { term: "alarm", pronunciation: "/əˈlɑːm/", type: "n", meaning: "alarm, tanda bahaya", example: "The fire alarm went off.", synonyms: ["warning", "alert"] },
-    { term: "album", pronunciation: "/ˈælbəm/", type: "n", meaning: "album", example: "She released a new album last month.", synonyms: ["record", "collection"] },
-    { term: "alien", pronunciation: "/ˈeɪliən/", type: "n", meaning: "alien, makhluk asing", example: "Do you believe in aliens?", synonyms: ["extraterrestrial", "foreigner"] },
-    { term: "allow", pronunciation: "/əˈlaʊ/", type: "v", meaning: "mengizinkan", example: "They don't allow smoking here.", synonyms: ["permit", "let"] },
-    { term: "almost", pronunciation: "/ˈɔːlməʊst/", type: "adv", meaning: "hampir", example: "I almost missed the bus.", synonyms: ["nearly", "virtually"] },
-    { term: "alone", pronunciation: "/əˈləʊn/", type: "adj", meaning: "sendiri", example: "She lives alone in that big house.", synonyms: ["solitary", "by oneself"] },
-    { term: "along", pronunciation: "/əˈlɒŋ/", type: "prep", meaning: "sepanjang", example: "We walked along the beach.", synonyms: ["beside", "by"] },
-    { term: "already", pronunciation: "/ɔːlˈredi/", type: "adv", meaning: "sudah", example: "I have already finished my homework.", synonyms: ["by now", "previously"] },
-    { term: "also", pronunciation: "/ˈɔːlsəʊ/", type: "adv", meaning: "juga", example: "She also speaks French.", synonyms: ["too", "as well"] },
-    { term: "always", pronunciation: "/ˈɔːlweɪz/", type: "adv", meaning: "selalu", example: "He always arrives on time.", synonyms: ["forever", "constantly"] },
-    { term: "amazing", pronunciation: "/əˈmeɪzɪŋ/", type: "adj", meaning: "menakjubkan", example: "What an amazing view!", synonyms: ["wonderful", "incredible"] },
-    { term: "ambition", pronunciation: "/æmˈbɪʃn/", type: "n", meaning: "ambisi, cita-cita", example: "His ambition is to become a doctor.", synonyms: ["goal", "aspiration"] },
-    { term: "among", pronunciation: "/əˈmʌŋ/", type: "prep", meaning: "di antara", example: "She is popular among her friends.", synonyms: ["amidst", "between"] },
-    { term: "amount", pronunciation: "/əˈmaʊnt/", type: "n", meaning: "jumlah", example: "What is the total amount?", synonyms: ["quantity", "sum"] },
-    { term: "ancient", pronunciation: "/ˈeɪnʃənt/", type: "adj", meaning: "kuno, purba", example: "They discovered an ancient temple.", synonyms: ["old", "antique"] },
-    { term: "angel", pronunciation: "/ˈeɪndʒl/", type: "n", meaning: "malaikat", example: "She is like an angel to me.", synonyms: ["spirit", "divine being"] },
-    { term: "anger", pronunciation: "/ˈæŋɡə/", type: "n", meaning: "amarah", example: "He couldn't control his anger.", synonyms: ["rage", "fury"] },
-    { term: "angle", pronunciation: "/ˈæŋɡl/", type: "n", meaning: "sudut", example: "A triangle has three angles.", synonyms: ["corner", "edge"] },
-    { term: "angry", pronunciation: "/ˈæŋɡri/", type: "adj", meaning: "marah", example: "Why are you so angry?", synonyms: ["mad", "upset"] }
-];
+var typeLabels = {
+    'n': 'Noun',
+    'v': 'Verb',
+    'adj': 'Adjective',
+    'adv': 'Adverb',
+    'prep': 'Preposition',
+    'conj': 'Conjunction',
+    'pron': 'Pronoun',
+    'int': 'Interjection'
+};
 
-var currentLetter = 'all';
+var currentCategory = null;
 var currentPage = 1;
 var perPage = 50;
 var searchQuery = '';
-var typeFilter = 'all';
-var filteredWords = [];
 var searchTimer = null;
 
 function $(id) { return document.getElementById(id); }
 
-// Initialize alphabet navigation
-function initAlphabetNav() {
-    var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-    var html = '<button class="alpha-btn active" onclick="selectLetter(\'all\')" data-letter="all">All</button>';
-    alphabet.forEach(function(letter) {
-        html += '<button class="alpha-btn" onclick="selectLetter(\'' + letter + '\')" data-letter="' + letter + '">' + letter + '</button>';
-    });
-    $('alphabetNav').innerHTML = html;
-}
-
-function selectLetter(letter) {
-    currentLetter = letter;
-    currentPage = 1;
-    
-    document.querySelectorAll('.alpha-btn').forEach(function(btn) {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-letter') === letter) {
-            btn.classList.add('active');
-        }
+// ========== PAGE NAVIGATION ==========
+function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(function(page) {
+        page.classList.remove('active');
     });
     
-    if (letter === 'all') {
-        $('categoryTitle').textContent = 'Kamus A-Z';
-        $('categoryCount').textContent = '10.000+ kosakata';
-        $('categoryLetter').textContent = '📖';
+    if (pageId === 'home') {
+        $('page-home').classList.add('active');
     } else {
-        $('categoryTitle').textContent = 'Kata Berawalan ' + letter;
-        $('categoryCount').textContent = filterWords().length + ' kosakata';
-        $('categoryLetter').textContent = letter;
+        // Show category page
+        currentCategory = pageId;
+        var cat = categories[pageId];
+        
+        if (cat) {
+            $('categoryTitle').textContent = cat.title;
+            $('categoryIcon').textContent = '📖';
+            $('categoryCount').textContent = cat.words.length + ' vocabulary';
+            
+            currentPage = 1;
+            searchQuery = '';
+            $('searchInput').value = '';
+            renderWords();
+        }
+        
+        $('page-category').classList.add('active');
     }
     
-    render();
+    window.scrollTo(0, 0);
 }
 
-function filterWords() {
-    var filtered = dictionaryData;
+function renderWords() {
+    var cat = categories[currentCategory];
+    if (!cat) return;
     
-    // Filter by letter
-    if (currentLetter !== 'all') {
-        filtered = filtered.filter(function(w) {
-            return w.term.charAt(0).toUpperCase() === currentLetter;
-        });
-    }
+    var words = cat.words;
     
     // Filter by search
     if (searchQuery) {
-        filtered = filtered.filter(function(w) {
+        words = words.filter(function(w) {
             return w.term.toLowerCase().indexOf(searchQuery) !== -1 || 
                    w.meaning.toLowerCase().indexOf(searchQuery) !== -1;
         });
     }
     
-    // Filter by type
-    if (typeFilter !== 'all') {
-        filtered = filtered.filter(function(w) {
-            return w.type === typeFilter;
-        });
-    }
-    
-    return filtered;
-}
-
-function render() {
-    filteredWords = filterWords();
-    var total = filteredWords.length;
+    var total = words.length;
     var totalPages = Math.ceil(total / perPage);
     
     if (currentPage > totalPages) currentPage = Math.max(1, totalPages);
     
     var start = (currentPage - 1) * perPage;
-    var pageWords = filteredWords.slice(start, start + perPage);
+    var pageWords = words.slice(start, start + perPage);
     
     if (pageWords.length === 0) {
-        $('dictGrid').innerHTML = '<div class="empty-state">Tidak ada kata yang ditemukan</div>';
+        $('dictGrid').innerHTML = '<div class="empty-state">No words found</div>';
     } else {
         var html = '';
         pageWords.forEach(function(w) {
-            html += '<div class="word-card" onclick="openWordModal(' + JSON.stringify(w).replace(/"/g, '&quot;') + ')">';
+            var wordObj = {
+                term: w.term,
+                pronunciation: w.pronunciation,
+                typeLabel: typeLabels[w.type] || w.type,
+                meaning: w.meaning,
+                example: w.example,
+                synonyms: w.synonyms || []
+            };
+            html += '<div class="word-card" onclick="openWordModal(' + JSON.stringify(wordObj).replace(/"/g, '&quot;') + ')">';
             html += '<div class="word-header">';
             html += '<div class="word-main">';
             html += '<span class="word-term">' + w.term + '</span>';
-            html += '<span class="word-type">' + typeLabels[w.type] + '</span>';
+            html += '<span class="word-type">' + (typeLabels[w.type] || w.type) + '</span>';
             html += '</div>';
             html += '<button class="word-speaker" onclick="event.stopPropagation(); speakWord(\'' + w.term + '\')">';
             html += '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>';
@@ -1586,14 +1789,13 @@ function render() {
             html += '</div>';
             html += '<div class="word-pronunciation">' + w.pronunciation + '</div>';
             html += '<div class="word-meaning">' + w.meaning + '</div>';
-            html += '<div class="word-example">"<strong>' + w.term + '</strong>' + w.example.replace(new RegExp(w.term, 'i'), '').slice(0, 50) + '..."</div>';
             html += '</div>';
         });
         $('dictGrid').innerHTML = html;
     }
     
     renderPagination(totalPages);
-    $('pageInfo').textContent = total > 0 ? (start + 1) + '-' + Math.min(start + perPage, total) + ' dari ' + total + ' kata' : '';
+    $('pageInfo').textContent = total > 0 ? (start + 1) + '-' + Math.min(start + perPage, total) + ' of ' + total + ' words' : '';
 }
 
 function renderPagination(totalPages) {
@@ -1624,7 +1826,7 @@ function renderPagination(totalPages) {
 
 function goPage(p) {
     currentPage = p;
-    render();
+    renderWords();
     window.scrollTo({ top: 200, behavior: 'smooth' });
 }
 
@@ -1648,9 +1850,9 @@ $('shareFab').addEventListener('click', function() {
 
 function copyToClipboard(url) {
     if (navigator.clipboard) {
-        navigator.clipboard.writeText(url).then(function() { showToast('Link disalin!'); }).catch(function() { showToast('Gagal menyalin link'); });
+        navigator.clipboard.writeText(url).then(function() { showToast('Link copied!'); }).catch(function() { showToast('Failed to copy link'); });
     } else {
-        showToast('Gagal menyalin link');
+        showToast('Failed to copy link');
     }
 }
 
@@ -1660,34 +1862,17 @@ function showToast(message) {
     setTimeout(function() { $('toast').classList.remove('show'); }, 2000);
 }
 
-// Initialize
+// Initialize search
 (function() {
-    initAlphabetNav();
-    
     $('searchInput').addEventListener('input', function(e) {
         clearTimeout(searchTimer);
         searchTimer = setTimeout(function() {
             searchQuery = e.target.value.toLowerCase().trim();
             currentPage = 1;
-            render();
+            renderWords();
         }, 250);
     });
-    
-    $('typeFilter').addEventListener('change', function(e) {
-        typeFilter = e.target.value;
-        currentPage = 1;
-        render();
-    });
-    
-    $('perPageSelect').addEventListener('change', function(e) {
-        perPage = parseInt(e.target.value, 10);
-        currentPage = 1;
-        render();
-    });
-    
-    render();
 })();
 </script>
 </body>
 </html>
-
