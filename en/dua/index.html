@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" data-font-size="normal" data-theme="light">
 <head>
@@ -24,7 +23,7 @@
     <!-- ===== Meta Description ===== -->
     <meta name="description" content="Prayer and Supplication for Goodness - Complete collection of prayers with Islamic etiquette: Al-Fatihah, Hamdalah, Syahadat, Sholawat, Istighfar, Dzikir, and prayers for developers, families, and readers.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="author" content="Mibenglish">
+    <meta name="author" content="MIBEnglish">
     
     <!-- ===== Meta Keywords ===== -->
     <meta name="keywords" content="prayer, dua, islamic, blessings, guidance, safety, islam, mibenglish, sholawat, syahadat, al-fatihah, istighfar">
@@ -32,21 +31,27 @@
     <!-- ===== Canonical URL ===== -->
     <link rel="canonical" href="https://mibenglish.com/en/dua/">
     
+    <!-- ===== Alternate Languages ===== -->
+    <link rel="alternate" hreflang="en" href="https://mibenglish.com/en/dua/">
+    <link rel="alternate" hreflang="id" href="https://mibenglish.com/id/dua/">
+    <link rel="alternate" hreflang="ar" href="https://mibenglish.com/ar/dua/">
+    <link rel="alternate" hreflang="x-default" href="https://mibenglish.com/dua/">
+    
     <!-- ===== Open Graph ===== -->
-    <meta property="og:title" content="Prayer & Supplication for Goodness - Mibenglish">
+    <meta property="og:title" content="Prayer & Supplication for Goodness - MIBEnglish">
     <meta property="og:description" content="Complete collection of prayers with Islamic etiquette for developers, families, and readers, may we receive blessings, guidance, and happiness in this world and the hereafter.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://mibenglish.com/dua/index.html">
-    <meta property="og:site_name" content="Mibenglish">
+    <meta property="og:url" content="https://mibenglish.com/en/dua/">
+    <meta property="og:site_name" content="MIBEnglish">
     <meta property="og:locale" content="en_US">
     
     <!-- ===== Twitter Card ===== -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Prayer & Supplication for Goodness - Mibenglish">
+    <meta name="twitter:title" content="Prayer & Supplication for Goodness - MIBEnglish">
     <meta name="twitter:site" content="@mibenglish">
     
     <!-- ===== Page Title ===== -->
-    <title>Prayer & Supplication for Goodness</title>
+    <title>Prayer & Supplication for Goodness - MIBEnglish</title>
     
     <!-- ===== JSON-LD Structured Data ===== -->
     <script type="application/ld+json">
@@ -55,7 +60,7 @@
         "@type": "Article",
         "headline": "Prayer & Supplication for Goodness",
         "author": {"@type": "Person", "name": "Mikdad"},
-        "publisher": {"@type": "Organization", "name": "Mibenglish"},
+        "publisher": {"@type": "Organization", "name": "MIBEnglish"},
         "datePublished": "2025-01-15",
         "dateModified": "2025-01-15"
     }
@@ -66,8 +71,16 @@
     
     <style>
         /* ========== BASE RESET ========== */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
         
         /* ========== FONT SIZE SETTINGS ========== */
         [data-font-size="small"] { font-size: 14px; }
@@ -75,49 +88,18 @@
         [data-font-size="large"] { font-size: 18px; }
         [data-font-size="xlarge"] { font-size: 20px; }
         
-        /* ========== CSS Variables ========== */
-        :root {
-            --primary-dark: #0d1f0d;
-            --primary-green: #1a472a;
-            --secondary-green: #2d5a3d;
-            --accent-green: #3d7a4f;
-            --light-green: #5a9a6e;
-            --pale-green: #8bc49f;
-            --mint: #c8e6d0;
-            --cream: #f8faf8;
-            --white: #ffffff;
-            --text-dark: #1a1a1a;
-            --text-medium: #3a4a3a;
-            --gold-accent: #c9a227;
-            --gold-light: #e6c84a;
-            --shadow: rgba(10, 31, 10, 0.2);
-            --shadow-light: rgba(10, 31, 10, 0.08);
-            --transition: all 0.3s ease;
-        }
-        
-        [data-theme="dark"] {
-            --primary-dark: #0a0f0a;
-            --primary-green: #1a3a2a;
-            --cream: #1a2a1a;
-            --white: #0f1a0f;
-            --text-dark: #e8f5e9;
-            --text-medium: #c8e6d0;
-            --mint: #98c6a0;
-            --pale-green: #4a6a4a;
-        }
-        
+        /* ========== LIGHT THEME (DEFAULT) ========== */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--cream);
-            color: var(--text-dark);
-            line-height: 1.9;
+            background-color: #f5f7f5;
+            color: #1a1a1a;
+            line-height: 1.6;
             min-height: 100vh;
             overflow-x: hidden;
             transition: background-color 0.3s ease, color 0.3s ease;
-            padding-top: 104px;
         }
         
-        /* ========== HEADER ========== */
+        /* Header Light */
         .header {
             position: fixed;
             top: 0;
@@ -133,8 +115,18 @@
             border-bottom: 2px solid #c9a227;
         }
         
-        .brand { font-size: 1.125rem; font-weight: 700; color: #ffffff; text-decoration: none; }
-        .header-actions { display: flex; align-items: center; gap: 8px; }
+        .brand {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
         
         .lang-btn {
             display: flex;
@@ -148,11 +140,14 @@
             font-size: 0.875rem;
             cursor: pointer;
             font-family: inherit;
+            white-space: nowrap;
         }
         
         .settings-btn {
             width: 40px;
             height: 40px;
+            min-width: 40px;
+            min-height: 40px;
             background: transparent;
             border: none;
             color: #ffffff;
@@ -177,27 +172,120 @@
             font-size: 0.875rem;
             cursor: pointer;
             font-family: inherit;
+            white-space: nowrap;
             transition: all 0.3s ease;
+            position: relative;
         }
         
         .voice-btn:hover { background: rgba(255,255,255,0.2); }
         
-        .voice-btn.active {
+        .voice-btn.active,
+        .voice-btn.playing {
             background: #c9a227;
             border-color: #c9a227;
             color: #0d1f0d;
         }
         
         .voice-btn.playing {
-            background: #c9a227;
-            border-color: #c9a227;
-            color: #0d1f0d;
             animation: pulse 1.5s infinite;
+        }
+        
+        /* Voice Status Indicator */
+        .voice-status {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid #0d1f0d;
+        }
+        
+        .voice-status.supported {
+            background: #4ade80;
+        }
+        
+        .voice-status.not-supported {
+            background: #ef4444;
+        }
+        
+        .voice-status.checking {
+            background: #fbbf24;
+            animation: blink 1s infinite;
+        }
+        
+        .voice-btn.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
         }
         
         @keyframes pulse {
             0%, 100% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.4); }
             50% { box-shadow: 0 0 0 8px rgba(201, 162, 39, 0); }
+        }
+        
+        /* Voice Info Tooltip */
+        .voice-info {
+            position: fixed;
+            top: 70px;
+            right: 16px;
+            background: #1a472a;
+            color: #ffffff;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            z-index: 1001;
+            max-width: 280px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: none;
+            animation: slideIn 0.3s ease;
+        }
+        
+        .voice-info.show {
+            display: block;
+        }
+        
+        .voice-info.error {
+            background: #7f1d1d;
+        }
+        
+        .voice-info.success {
+            background: #1a472a;
+        }
+        
+        .voice-info-title {
+            font-weight: 700;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .voice-info-close {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
         
         /* ========== SENTENCE HIGHLIGHTING ========== */
@@ -217,7 +305,7 @@
             margin: -2px -4px;
         }
         
-        /* ========== NAVIGATION ========== */
+        /* Navigation Light */
         .nav {
             position: fixed;
             top: 56px;
@@ -229,12 +317,19 @@
             justify-content: center;
             z-index: 999;
             overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
             padding: 8px 0;
             min-height: 48px;
         }
         
         .nav::-webkit-scrollbar { display: none; }
-        .nav-inner { display: flex; gap: 6px; padding: 0 12px; }
+        
+        .nav-inner {
+            display: flex;
+            gap: 6px;
+            padding: 0 12px;
+        }
         
         .nav-link {
             color: #ffffff;
@@ -245,12 +340,20 @@
             font-weight: 500;
             white-space: nowrap;
             transition: background 0.2s ease;
+            flex-shrink: 0;
         }
         
-        .nav-link:hover, .nav-link.active { background: #c9a227; color: #ffffff; }
+        .nav-link.active { background: #c9a227; color: #ffffff; }
         
-        /* ========== MAIN CONTENT ========== */
-        .main { max-width: 720px; margin: 0 auto; padding: 0 16px 24px; }
+        /* Main Content */
+        .main {
+            padding-top: 130px;
+            padding-bottom: 24px;
+            max-width: 720px;
+            margin: 0 auto;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
         
         /* ========== ARTICLE HEADER ========== */
         .article-header {
@@ -260,7 +363,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            margin: 0 -16px 16px;
+            margin: 0 -12px 16px;
             border-radius: 16px;
         }
         
@@ -276,7 +379,7 @@
         
         .article-header .subtitle {
             font-size: 0.95rem;
-            color: var(--mint);
+            color: #c8e6d0;
             position: relative;
             z-index: 1;
         }
@@ -284,66 +387,66 @@
         .bismillah {
             font-family: 'Amiri', serif;
             font-size: 2.4rem;
-            color: var(--gold-accent);
+            color: #c9a227;
             margin-bottom: 1.5rem;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
         /* ========== BREADCRUMB ========== */
         .breadcrumb {
-            background: var(--cream);
+            background: #f8faf8;
             padding: 0.5rem 1rem;
-            margin: 0 -16px 0;
-            border-bottom: 1px solid var(--mint);
+            margin: 0 -12px 0;
+            border-bottom: 1px solid #c8e6d0;
             font-size: 0.85rem;
         }
         
         .breadcrumb-container { max-width: 720px; margin: 0 auto; }
         .breadcrumb-list { list-style: none; display: flex; align-items: center; flex-wrap: wrap; gap: 0.3rem; }
         .breadcrumb-item { display: flex; align-items: center; gap: 0.3rem; }
-        .breadcrumb-item::after { content: '›'; color: var(--pale-green); margin-left: 0.3rem; }
+        .breadcrumb-item::after { content: '›'; color: #8bc49f; margin-left: 0.3rem; }
         .breadcrumb-item:last-child::after { display: none; }
-        .breadcrumb-item a { color: var(--secondary-green); text-decoration: none; }
-        .breadcrumb-item a:hover { color: var(--gold-accent); }
-        .breadcrumb-item span { color: var(--text-medium); }
+        .breadcrumb-item a { color: #2d5a3d; text-decoration: none; }
+        .breadcrumb-item a:hover { color: #c9a227; }
+        .breadcrumb-item span { color: #3a4a3a; }
         
         /* ========== TABLE OF CONTENTS ========== */
         .toc-section {
-            background: linear-gradient(135deg, var(--cream) 0%, var(--mint) 100%);
+            background: linear-gradient(135deg, #f8faf8 0%, #c8e6d0 100%);
             padding: 1rem;
-            margin: 0 -16px 16px;
-            border-bottom: 1px solid var(--pale-green);
+            margin: 0 -12px 16px;
+            border-bottom: 1px solid #8bc49f;
         }
         
         .toc-container { max-width: 720px; margin: 0 auto; }
-        .toc-title { font-size: 0.9rem; font-weight: 600; color: var(--primary-green); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        .toc-title { font-size: 0.9rem; font-weight: 600; color: #1a472a; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
         .toc-list { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; }
-        .toc-list a { display: inline-block; background: #ffffff; color: var(--secondary-green); padding: 0.3rem 0.6rem; border-radius: 15px; font-size: 0.8rem; text-decoration: none; border: 1px solid var(--pale-green); transition: var(--transition); }
-        .toc-list a:hover { background: var(--gold-accent); color: #ffffff; border-color: var(--gold-accent); }
+        .toc-list a { display: inline-block; background: #ffffff; color: #2d5a3d; padding: 0.3rem 0.6rem; border-radius: 15px; font-size: 0.8rem; text-decoration: none; border: 1px solid #8bc49f; transition: all 0.3s ease; }
+        .toc-list a:hover { background: #c9a227; color: #ffffff; border-color: #c9a227; }
         
         /* ========== PRAYER CARD ========== */
         .prayer-card {
-            background: var(--white);
+            background: #ffffff;
             padding: 2rem 1.5rem;
             margin-bottom: 16px;
             border-radius: 16px;
-            border: 1px solid var(--mint);
-            box-shadow: 0 4px 20px var(--shadow-light);
+            border: 2px solid #d4e5d4;
+            box-shadow: 0 4px 20px rgba(10, 31, 10, 0.08);
         }
         
         .prayer-card h2 {
-            color: var(--primary-green);
+            color: #1a472a;
             font-size: 1.2rem;
             margin-bottom: 1.5rem;
             text-align: center;
             font-weight: 600;
         }
         
-        /* ========== DOA TEXT - LARGER & MORE PERSONAL ========== */
+        /* ========== DOA TEXT ========== */
         .doa-text {
             font-size: 1.05rem;
             line-height: 2;
-            color: var(--text-medium);
+            color: #3a4a3a;
             margin-bottom: 1.5rem;
             text-align: left;
         }
@@ -351,7 +454,7 @@
         .doa-text-center {
             font-size: 1.05rem;
             line-height: 2;
-            color: var(--text-medium);
+            color: #3a4a3a;
             margin-bottom: 1.5rem;
             text-align: center;
         }
@@ -362,12 +465,12 @@
             font-size: 2rem;
             text-align: center;
             direction: rtl;
-            color: var(--primary-green);
+            color: #1a472a;
             margin: 1.5rem 0;
             padding: 2rem;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--mint) 100%);
+            background: linear-gradient(135deg, #f8faf8 0%, #c8e6d0 100%);
             border-radius: 16px;
-            border: 2px solid var(--gold-accent);
+            border: 2px solid #c9a227;
             line-height: 2.5;
         }
         
@@ -376,18 +479,18 @@
             font-size: 1.6rem;
             text-align: center;
             direction: rtl;
-            color: var(--primary-green);
+            color: #1a472a;
             margin: 1.5rem 0;
             padding: 1.5rem;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--mint) 100%);
+            background: linear-gradient(135deg, #f8faf8 0%, #c8e6d0 100%);
             border-radius: 12px;
-            border: 2px solid var(--gold-accent);
+            border: 2px solid #c9a227;
             line-height: 2.3;
         }
         
         .arabic-translation {
             font-style: italic;
-            color: var(--text-medium);
+            color: #3a4a3a;
             margin-top: 1rem;
             font-size: 0.95rem;
             text-align: center;
@@ -400,31 +503,31 @@
             font-size: 2.5rem;
             text-align: center;
             direction: rtl;
-            color: var(--gold-accent);
+            color: #c9a227;
             margin: 2rem 0 1rem;
             line-height: 2;
         }
         
         /* ========== CTA SECTION ========== */
         .cta-section {
-            background: linear-gradient(135deg, var(--gold-accent) 0%, var(--gold-light) 100%);
+            background: linear-gradient(135deg, #c9a227 0%, #e6c84a 100%);
             padding: 2rem 1rem;
             text-align: center;
-            margin: 0 -16px 16px;
+            margin: 0 -12px 16px;
             border-radius: 16px;
         }
         
         .cta-section h2 {
-            color: var(--primary-dark);
+            color: #0d1f0d;
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
         }
         
-        .cta-section p { color: var(--primary-dark); margin-bottom: 1rem; }
+        .cta-section p { color: #0d1f0d; margin-bottom: 1rem; }
         
         .btn-cta {
             display: inline-block;
-            background: var(--primary-green);
+            background: #1a472a;
             color: #ffffff;
             padding: 0.8rem 1.5rem;
             border-radius: 25px;
@@ -435,7 +538,7 @@
         }
         
         .btn-cta:hover {
-            background: var(--secondary-green);
+            background: #2d5a3d;
             transform: translateY(-2px);
             color: #ffffff;
         }
@@ -456,104 +559,446 @@
         }
         
         .modal-overlay.show { display: flex; }
-        .modal { background: #ffffff; border-radius: 16px; width: 100%; max-width: 400px; max-height: 85vh; overflow-y: auto; }
-        .modal-header { background: #1a472a; color: #ffffff; padding: 16px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1; }
+        
+        .modal {
+            background: #ffffff;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 400px;
+            max-height: 85vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .modal-header {
+            background: #1a472a;
+            color: #ffffff;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        
         .modal-header h2 { font-size: 1.125rem; margin: 0; border: none; padding: 0; }
-        .modal-close { width: 32px; height: 32px; background: rgba(255,255,255,0.2); border: none; border-radius: 50%; color: #ffffff; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        
+        .modal-close {
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 50%;
+            color: #ffffff;
+            font-size: 1.125rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
         .modal-body { padding: 16px; }
         
         /* ========== LANGUAGE POPUP ========== */
         .lang-popup { max-width: 500px; }
-        .lang-popup-header { background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%); padding: 20px; text-align: center; border-radius: 16px 16px 0 0; }
+        
+        .lang-popup-header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
+            padding: 20px;
+            text-align: center;
+        }
+        
         .lang-popup-header h2 { font-size: 1.125rem; margin-bottom: 4px; color: #ffffff; }
         .lang-popup-header p { font-size: 0.875rem; opacity: 0.9; color: #ffffff; }
-        .lang-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 16px; }
-        .lang-option { display: flex; flex-direction: column; align-items: center; padding: 10px 6px; border: 2px solid #d4e5d4; border-radius: 10px; text-decoration: none; color: #1a1a1a; background: #f8faf8; min-height: 70px; transition: all 0.2s ease; }
-        .lang-option:hover { border-color: #c9a227; background: #e8f5e9; }
+        
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            padding: 16px;
+        }
+        
+        .lang-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 6px;
+            border: 2px solid #d4e5d4;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #1a1a1a;
+            background: #f8faf8;
+            min-height: 70px;
+            transition: all 0.2s ease;
+        }
+        
+        .lang-option:active { border-color: #c9a227; background: #e8f5e9; }
         .lang-option.selected { border-color: #c9a227; background: #c9a227; color: #ffffff; }
+        
         .lang-flag { font-size: 1.25rem; margin-bottom: 4px; }
         .lang-name { font-size: 0.6875rem; font-weight: 600; text-align: center; }
-        .lang-popup-footer { padding: 12px 16px 16px; text-align: center; }
-        .btn-confirm { background: linear-gradient(135deg, #c9a227, #e6c84a); color: #ffffff; border: none; padding: 14px 32px; border-radius: 25px; font-size: 1rem; font-weight: 700; cursor: pointer; font-family: inherit; }
-        .btn-change-lang { width: 100%; background: linear-gradient(135deg, #c9a227, #e6c84a); color: #ffffff; border: none; padding: 14px; border-radius: 25px; font-size: 0.9375rem; font-weight: 700; cursor: pointer; font-family: inherit; }
+        
+        .lang-popup-footer {
+            padding: 12px 16px 16px;
+            text-align: center;
+        }
+        
+        .btn-confirm {
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            color: #ffffff;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        .btn-change-lang {
+            width: 100%;
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            border-radius: 25px;
+            font-size: 0.9375rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+        }
         
         /* ========== SETTINGS SECTIONS ========== */
-        .settings-section { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #e8e8e8; }
-        .settings-section:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-        .settings-section h3 { font-size: 0.9375rem; color: #1a472a; margin-bottom: 12px; }
+        .settings-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .settings-section:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .settings-section h3 {
+            font-size: 0.9375rem;
+            color: #1a472a;
+            margin-bottom: 12px;
+        }
         
-        .font-size-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-        .font-size-btn { padding: 10px 4px; border: 2px solid #d4e5d4; background: #f8faf8; border-radius: 8px; text-align: center; font-family: inherit; color: #1a1a1a; cursor: pointer; transition: all 0.2s ease; }
-        .font-size-btn.active { border-color: #c9a227; background: #c9a227; color: #ffffff; }
+        .font-size-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+        
+        .font-size-btn {
+            padding: 10px 4px;
+            border: 2px solid #d4e5d4;
+            background: #f8faf8;
+            border-radius: 8px;
+            text-align: center;
+            font-family: inherit;
+            color: #1a1a1a;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .font-size-btn.active {
+            border-color: #c9a227;
+            background: #c9a227;
+            color: #ffffff;
+        }
+        
         .font-size-btn span { display: block; }
         .font-size-btn .size-label { font-size: 0.75rem; font-weight: 600; }
         .font-size-btn .size-preview { font-size: 0.625rem; opacity: 0.7; }
         
-        .dark-toggle { display: flex; align-items: center; justify-content: space-between; padding: 12px; background: #f8faf8; border-radius: 10px; border: 1px solid #d4e5d4; font-size: 0.9375rem; color: #1a1a1a; }
-        .toggle-switch { position: relative; width: 50px; height: 28px; }
-        .toggle-switch input { opacity: 0; width: 0; height: 0; position: absolute; }
-        .toggle-slider { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #b4b4b4; border-radius: 28px; cursor: pointer; transition: background 0.3s ease; }
-        .toggle-slider:before { content: ""; position: absolute; width: 22px; height: 22px; left: 3px; bottom: 3px; background: #ffffff; border-radius: 50%; transition: transform 0.3s ease; }
+        .dark-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            background: #f8faf8;
+            border-radius: 10px;
+            border: 1px solid #d4e5d4;
+            font-size: 0.9375rem;
+            color: #1a1a1a;
+        }
+        
+        .toggle-switch {
+            position: relative;
+            width: 50px;
+            height: 28px;
+        }
+        
+        .toggle-switch input { opacity: 0; width: 0; height: 0; }
+        
+        .toggle-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #b4b4b4;
+            border-radius: 28px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .toggle-slider:before {
+            content: "";
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            left: 3px;
+            bottom: 3px;
+            background: #ffffff;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        
         .toggle-switch input:checked + .toggle-slider { background: #c9a227; }
         .toggle-switch input:checked + .toggle-slider:before { transform: translateX(22px); }
         
         /* ========== FOOTER ========== */
-        .footer { background: #0d1f0d; color: #ffffff; padding: 32px 16px 20px; margin-top: 32px; }
-        .footer-brand { font-size: 1.25rem; font-weight: 700; color: #c9a227; margin-bottom: 8px; }
-        .footer-desc { font-size: 0.875rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 16px; }
-        .social-icons { display: flex; gap: 10px; margin-bottom: 24px; }
-        .social-icon { width: 38px; height: 38px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffffff; text-decoration: none; transition: background 0.2s ease; }
-        .social-icon:hover { background: #c9a227; }
-        .footer-section-title { font-size: 1rem; margin-bottom: 12px; color: rgba(255,255,255,0.9); }
+        .footer {
+            background: #0d1f0d;
+            color: #ffffff;
+            padding: 32px 16px 20px;
+            margin-top: 32px;
+        }
+        
+        .footer-content {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        
+        .footer-brand-section {
+            margin-bottom: 24px;
+        }
+        
+        .footer-brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #c9a227;
+            margin-bottom: 8px;
+        }
+        
+        .footer-desc {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+        
+        .social-icon {
+            width: 38px;
+            height: 38px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+        
+        .social-icon:active { background: #c9a227; }
+        
+        .footer-section-title {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: rgba(255,255,255,0.9);
+        }
+        
         .footer-links { list-style: none; }
         .footer-links li { margin-bottom: 8px; }
-        .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.875rem; transition: color 0.2s ease; }
-        .footer-links a:hover { color: #c9a227; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px; margin-top: 20px; text-align: center; }
-        .footer-bottom p { font-size: 0.8125rem; color: rgba(255,255,255,0.5); }
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+        .footer-links a:active { color: #c9a227; }
         
-        @media (min-width: 800px) {
-            .footer { padding: 40px 24px 24px; }
-            .footer-content { display: flex; gap: 40px; max-width: 720px; margin: 0 auto; }
-            .footer-brand-section { flex: 1; }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 16px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer-bottom p {
+            font-size: 0.8125rem;
+            color: rgba(255,255,255,0.5);
         }
         
         /* ========== DARK THEME ========== */
-        [data-theme="dark"] body { background-color: #121212; color: #e0e0e0; }
-        [data-theme="dark"] .header { background: #1a1a1a; border-bottom-color: #c9a227; }
-        [data-theme="dark"] .nav { background: #1e3a1e; }
-        [data-theme="dark"] .article-header { background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1c2128 100%); }
+        [data-theme="dark"] body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .header {
+            background: #1a1a1a;
+            border-bottom-color: #c9a227;
+        }
+        
+        [data-theme="dark"] .nav {
+            background: #1e3a1e;
+        }
+        
+        [data-theme="dark"] .article-header {
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1c2128 100%);
+        }
+        
         [data-theme="dark"] .article-header .subtitle { color: #a8d5b8; }
-        [data-theme="dark"] .prayer-card { background: #1e1e1e; border-color: #333333; }
+        
+        [data-theme="dark"] .prayer-card {
+            background: #1e1e1e;
+            border-color: #333333;
+        }
+        
         [data-theme="dark"] h2 { color: #7cc87c; }
-        [data-theme="dark"] .doa-text, [data-theme="dark"] .doa-text-center { color: #c8e6d0; }
-        [data-theme="dark"] .arabic-main, [data-theme="dark"] .arabic-verse { background: linear-gradient(135deg, #1a2a1a 0%, #2a3a2a 100%); color: #a8d5b8; border-color: #c9a227; }
+        
+        [data-theme="dark"] .doa-text,
+        [data-theme="dark"] .doa-text-center { color: #c8e6d0; }
+        
+        [data-theme="dark"] .arabic-main,
+        [data-theme="dark"] .arabic-verse {
+            background: linear-gradient(135deg, #1a2a1a 0%, #2a3a2a 100%);
+            color: #a8d5b8;
+            border-color: #c9a227;
+        }
+        
         [data-theme="dark"] .arabic-translation { color: #a0a0a0; }
+        
         [data-theme="dark"] .amiin-text { color: #c9a227; }
-        [data-theme="dark"] .breadcrumb { background: #1a1a1a; border-color: #333333; }
+        
+        [data-theme="dark"] .breadcrumb {
+            background: #1a1a1a;
+            border-color: #333333;
+        }
+        
         [data-theme="dark"] .breadcrumb-item a { color: #7cc87c; }
         [data-theme="dark"] .breadcrumb-item span { color: #a0a0a0; }
-        [data-theme="dark"] .toc-section { background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%); border-color: #333333; }
+        
+        [data-theme="dark"] .toc-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            border-color: #333333;
+        }
+        
         [data-theme="dark"] .toc-title { color: #7cc87c; }
-        [data-theme="dark"] .toc-list a { background: #2a3a2a; border-color: #4a6a4a; color: #d4d4d4; }
-        [data-theme="dark"] .toc-list a:hover { background: #c9a227; color: #ffffff; border-color: #c9a227; }
-        [data-theme="dark"] .cta-section { background: linear-gradient(135deg, #8b6914 0%, #a07d1a 100%); }
+        
+        [data-theme="dark"] .toc-list a {
+            background: #2a3a2a;
+            border-color: #4a6a4a;
+            color: #d4d4d4;
+        }
+        
+        [data-theme="dark"] .toc-list a:hover {
+            background: #c9a227;
+            color: #ffffff;
+            border-color: #c9a227;
+        }
+        
+        [data-theme="dark"] .cta-section {
+            background: linear-gradient(135deg, #8b6914 0%, #a07d1a 100%);
+        }
+        
         [data-theme="dark"] .cta-section h2 { color: #ffffff; }
         [data-theme="dark"] .cta-section p { color: #ffffff; }
         [data-theme="dark"] .btn-cta { background: #2d5a3d; }
-        [data-theme="dark"] .footer { background: #1a1a1a; }
-        [data-theme="dark"] .modal { background: #1e1e1e; }
-        [data-theme="dark"] .modal-header { background: #2d5a3d; }
-        [data-theme="dark"] .lang-option { background: #252525; border-color: #444444; color: #e0e0e0; }
-        [data-theme="dark"] .lang-option:hover { border-color: #c9a227; background: #2a3a2a; }
-        [data-theme="dark"] .lang-option.selected { background: #c9a227; border-color: #c9a227; color: #ffffff; }
-        [data-theme="dark"] .settings-section { border-bottom-color: #333333; }
-        [data-theme="dark"] .settings-section h3 { color: #7cc87c; }
-        [data-theme="dark"] .font-size-btn { background: #252525; border-color: #444444; color: #e0e0e0; }
-        [data-theme="dark"] .font-size-btn.active { background: #c9a227; border-color: #c9a227; color: #ffffff; }
-        [data-theme="dark"] .dark-toggle { background: #252525; border-color: #444444; color: #e0e0e0; }
+        
+        [data-theme="dark"] .footer {
+            background: #1a1a1a;
+        }
+        
+        [data-theme="dark"] .modal {
+            background: #1e1e1e;
+        }
+        
+        [data-theme="dark"] .modal-header {
+            background: #2d5a3d;
+        }
+        
+        [data-theme="dark"] .lang-option {
+            background: #252525;
+            border-color: #333333;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .lang-option:active {
+            border-color: #c9a227;
+            background: #2a3a2a;
+        }
+        
+        [data-theme="dark"] .lang-option.selected {
+            background: #c9a227;
+            border-color: #c9a227;
+            color: #ffffff;
+        }
+        
+        [data-theme="dark"] .settings-section {
+            border-bottom-color: #333333;
+        }
+        
+        [data-theme="dark"] .settings-section h3 { color: #6ab060; }
+        
+        [data-theme="dark"] .font-size-btn {
+            background: #252525;
+            border-color: #333333;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .font-size-btn.active {
+            background: #c9a227;
+            border-color: #c9a227;
+            color: #ffffff;
+        }
+        
+        [data-theme="dark"] .dark-toggle {
+            background: #252525;
+            border-color: #333333;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .btn-confirm,
+        [data-theme="dark"] .btn-change-lang {
+            background: linear-gradient(135deg, #b8922a, #d4b840);
+        }
         
         /* ========== RESPONSIVE ========== */
+        @media (min-width: 480px) {
+            .lang-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        @media (min-width: 600px) {
+            .main { padding-left: 20px; padding-right: 20px; }
+            .article-header { margin-left: -20px; margin-right: -20px; }
+            .breadcrumb { margin-left: -20px; margin-right: -20px; }
+            .toc-section { margin-left: -20px; margin-right: -20px; }
+            .cta-section { margin-left: -20px; margin-right: -20px; }
+        }
+        
+        @media (min-width: 800px) {
+            .footer { padding: 40px 24px 24px; }
+            .footer-content {
+                display: flex;
+                gap: 40px;
+                max-width: 720px;
+                margin: 0 auto;
+            }
+            .footer-brand-section { flex: 1; }
+        }
+        
         @media (max-width: 600px) {
             .article-header h1 { font-size: 1.3rem; }
             .bismillah { font-size: 2rem; }
@@ -572,6 +1017,19 @@
             .font-size-grid { grid-template-columns: repeat(2, 1fr); }
         }
         
+        /* ========== FONT SIZE ADJUSTMENTS FOR NAV ========== */
+        [data-font-size="large"] .header { height: 60px; }
+        [data-font-size="large"] .nav { top: 60px; min-height: 52px; }
+        [data-font-size="large"] .main { padding-top: 140px; }
+        [data-font-size="large"] .nav-link { padding: 6px 12px; font-size: 0.85rem; }
+        
+        [data-font-size="xlarge"] .header { height: 64px; }
+        [data-font-size="xlarge"] .nav { top: 64px; min-height: 56px; }
+        [data-font-size="xlarge"] .main { padding-top: 150px; }
+        [data-font-size="xlarge"] .nav-link { padding: 6px 10px; font-size: 0.8rem; }
+        [data-font-size="xlarge"] .lang-btn { padding: 6px 10px; font-size: 0.8rem; }
+        [data-font-size="xlarge"] .brand { font-size: 1rem; }
+        
         /* ========== PRINT STYLES ========== */
         @media print {
             .header, .nav, .modal-overlay, .footer, .cta-section { display: none !important; }
@@ -585,19 +1043,22 @@
     <div class="modal-overlay" id="langPopup">
         <div class="modal lang-popup">
             <div class="lang-popup-header">
-                <h2>Select Language</h2>
-                <p>Choose your preferred language</p>
+                <h2>Select Your Language</h2>
+                <p>Choose your language for the best experience</p>
             </div>
             <div class="lang-grid">
-                <a href="https://mibenglish.com/dua/" class="lang-option selected"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></a>
-                <a href="https://mibenglish.com/dua/" class="lang-option"><span class="lang-flag">🇮🇩</span><span class="lang-name">Indonesian</span></a>
-                <a href="https://mibenglish.com/dua/" class="lang-option"><span class="lang-flag">🇸🇦</span><span class="lang-name">Arabic</span></a>
-                <a href="https://mibenglish.com/dua/" class="lang-option"><span class="lang-flag">🇨🇳</span><span class="lang-name">Chinese</span></a>
-                <a href="https://mibenglish.com/dua/" class="lang-option"><span class="lang-flag">🇯🇵</span><span class="lang-name">Japanese</span></a>
-                <a href="https://mibenglish.com/dua/" class="lang-option"><span class="lang-flag">🇰🇷</span><span class="lang-name">Korean</span></a>
-                <a href="https://mibenglish.com/dua/" class="lang-option"><span class="lang-flag">🇪🇸</span><span class="lang-name">Spanish</span></a>
-                <a href="https://mibenglish.com/dua/" class="lang-option"><span class="lang-flag">🇫🇷</span><span class="lang-name">French</span></a>
-                <a href="https://mibenglish.com/dua/" class="lang-option"><span class="lang-flag">🇩🇪</span><span class="lang-name">German</span></a>
+                <a href="https://mibenglish.com/en/dua/" class="lang-option selected"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></a>
+                <a href="https://mibenglish.com/id/dua/" class="lang-option"><span class="lang-flag">🇮🇩</span><span class="lang-name">Indonesian</span></a>
+                <a href="https://mibenglish.com/ar/dua/" class="lang-option"><span class="lang-flag">🇸🇦</span><span class="lang-name">Arabic</span></a>
+                <a href="https://mibenglish.com/zh/dua/" class="lang-option"><span class="lang-flag">🇨🇳</span><span class="lang-name">Chinese</span></a>
+                <a href="https://mibenglish.com/ja/dua/" class="lang-option"><span class="lang-flag">🇯🇵</span><span class="lang-name">Japanese</span></a>
+                <a href="https://mibenglish.com/ko/dua/" class="lang-option"><span class="lang-flag">🇰🇷</span><span class="lang-name">Korean</span></a>
+                <a href="https://mibenglish.com/vi/dua/" class="lang-option"><span class="lang-flag">🇻🇳</span><span class="lang-name">Vietnamese</span></a>
+                <a href="https://mibenglish.com/th/dua/" class="lang-option"><span class="lang-flag">🇹🇭</span><span class="lang-name">Thai</span></a>
+                <a href="https://mibenglish.com/es/dua/" class="lang-option"><span class="lang-flag">🇪🇸</span><span class="lang-name">Spanish</span></a>
+                <a href="https://mibenglish.com/pt/dua/" class="lang-option"><span class="lang-flag">🇵🇹</span><span class="lang-name">Portuguese</span></a>
+                <a href="https://mibenglish.com/fr/dua/" class="lang-option"><span class="lang-flag">🇫🇷</span><span class="lang-name">French</span></a>
+                <a href="https://mibenglish.com/de/dua/" class="lang-option"><span class="lang-flag">🇩🇪</span><span class="lang-name">German</span></a>
             </div>
             <div class="lang-popup-footer">
                 <button class="btn-confirm" onclick="closeLangPopup()">Continue in English</button>
@@ -616,22 +1077,37 @@
                 <div class="settings-section">
                     <h3>Font Size</h3>
                     <div class="font-size-grid">
-                        <button class="font-size-btn" data-size="small" onclick="setFontSize('small')"><span class="size-label">Small</span><span class="size-preview">Aa</span></button>
-                        <button class="font-size-btn active" data-size="normal" onclick="setFontSize('normal')"><span class="size-label">Normal</span><span class="size-preview">Aa</span></button>
-                        <button class="font-size-btn" data-size="large" onclick="setFontSize('large')"><span class="size-label">Large</span><span class="size-preview">Aa</span></button>
-                        <button class="font-size-btn" data-size="xlarge" onclick="setFontSize('xlarge')"><span class="size-label">X-Large</span><span class="size-preview">Aa</span></button>
+                        <button class="font-size-btn" data-size="small" onclick="setFontSize('small')">
+                            <span class="size-label">Small</span>
+                            <span class="size-preview">Aa</span>
+                        </button>
+                        <button class="font-size-btn active" data-size="normal" onclick="setFontSize('normal')">
+                            <span class="size-label">Normal</span>
+                            <span class="size-preview">Aa</span>
+                        </button>
+                        <button class="font-size-btn" data-size="large" onclick="setFontSize('large')">
+                            <span class="size-label">Large</span>
+                            <span class="size-preview">Aa</span>
+                        </button>
+                        <button class="font-size-btn" data-size="xlarge" onclick="setFontSize('xlarge')">
+                            <span class="size-label">X-Large</span>
+                            <span class="size-preview">Aa</span>
+                        </button>
                     </div>
                 </div>
                 <div class="settings-section">
                     <h3>Appearance</h3>
                     <div class="dark-toggle">
                         <span>Dark Mode</span>
-                        <label class="toggle-switch"><input type="checkbox" id="darkToggle" onchange="toggleDarkMode()"><span class="toggle-slider"></span></label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="darkToggle" onchange="toggleDarkMode()">
+                            <span class="toggle-slider"></span>
+                        </label>
                     </div>
                 </div>
                 <div class="settings-section">
                     <h3>Language</h3>
-                    <button class="btn-change-lang" onclick="closeSettings(); setTimeout(openLangPopup, 100);">Change Language</button>
+                    <button class="btn-change-lang" onclick="openLangPopup()">Change Language</button>
                 </div>
             </div>
         </div>
@@ -641,7 +1117,8 @@
     <header class="header">
         <a href="https://mibenglish.com/" class="brand">MIBEnglish</a>
         <div class="header-actions">
-            <button class="voice-btn" id="voiceBtn" onclick="toggleVoice()" title="Auto Voice - Read article aloud">
+            <button class="voice-btn" id="voiceBtn" onclick="toggleVoice()" title="Checking voice support...">
+                <span class="voice-status checking" id="voiceStatus"></span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
                 <span>Voice</span>
             </button>
@@ -655,7 +1132,7 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="https://mibenglish.com/en//dua" class="nav-link active">Dua</a>
+            <a href="https://mibenglish.com/en/dua/" class="nav-link active">Dua</a>
             <a href="https://mibenglish.com/en/learn/" class="nav-link">Learn</a>
             <a href="https://mibenglish.com/en/dictionary/" class="nav-link">Dictionary</a>
             <a href="https://mibenglish.com/games/" class="nav-link">Games</a>
@@ -787,124 +1264,87 @@
             <div class="arabic-verse">
                 أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ
             </div>
-            <p class="arabic-translation">I seek forgiveness from Allah the Almighty, there is no deity worthy of worship except Him, the Ever-Living, the Sustainer, and I repent to Him.</p>
+            <p class="arabic-translation">I seek forgiveness from Allah the Almighty, the Ever-Living, the Sustainer of existence, and I repent to Him.</p>
         </div>
         
         <!-- ==================== MAIN PRAYER ==================== -->
         <div class="prayer-card" id="doa-utama">
             <h2>Main Prayer</h2>
             
-            <p class="doa-text">Our Lord, grant us goodness in this world and goodness in the hereafter, and protect us from the punishment of the Hellfire.</p>
+            <p class="doa-text">O Allah, we ask You for goodness in this world and the hereafter. We ask for Your guidance, protection, and blessings upon us, our families, our fellow developers, and all readers of this prayer.</p>
             
             <div class="arabic-main">
                 رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ
             </div>
-            <p class="arabic-translation">Our Lord, grant us goodness in this world and goodness in the hereafter, and protect us from the punishment of the Fire.</p>
+            <p class="arabic-translation">Our Lord, give us in this world that which is good and in the Hereafter that which is good, and protect us from the punishment of the Fire.</p>
             
-            <p class="doa-text">O Allah, bestow blessings, guidance, goodness, safety, health, lawful and blessed sustenance, and happiness in this world and the hereafter upon the developer of this website, upon their parents, upon their family, upon their ancestors, upon us who are reading this prayer, upon our families, upon our parents, and upon our ancestors.</p>
-            
-            <p class="doa-text">O Allah, protect us all from all diseases, disasters, and calamities. Keep us away from the punishment of the Hellfire and admit us into Your Paradise. Grant us guidance to always remain on the right path.</p>
+            <p class="doa-text">O Allah, grant us beneficial knowledge, provisions that are halal and blessed, a righteous family, a comfortable home, and sustenance that brings happiness. Grant us health in body and soul, tranquility in heart, and success in all our endeavors.</p>
             
             <div class="arabic-verse">
-                رَبِّ اغْفِرْ لِي وَلِوَالِدَيَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ الْحِسَابُ
+                اَللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى
             </div>
-            <p class="arabic-translation">My Lord, forgive me, my parents, and all believers on the Day when the reckoning takes place.</p>
+            <p class="arabic-translation">O Allah, I ask You for guidance, piety, chastity, and self-sufficiency.</p>
             
-            <p class="doa-text">O Allah, forgive all our sins, the sins of our parents, and the sins of our ancestors. Make our families filled with peace, love, and Your mercy. Accept every good deed from us and make easy all our affairs.</p>
+            <p class="doa-text">O Allah, protect us from all forms of harm, illness, and calamity. Protect our families from all dangers. Grant safety to all developers who work with dedication, and protect all readers from misguidance.</p>
             
             <div class="arabic-verse">
-                رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً ۚ إِنَّكَ أَنتَ الْوَهَّابُ
+                اَللَّهُمَّ اهْدِنَا وَسَدِّدْنَا وَوَفِّقْنَا لِمَا تُحِبُّ وَتَرْضَى
             </div>
-            <p class="arabic-translation">Our Lord, let not our hearts deviate after You have guided us, and grant us mercy from Yourself. Indeed, You are the Bestower.</p>
+            <p class="arabic-translation">O Allah, guide us, make us steadfast, and grant us success in that which You love and are pleased with.</p>
         </div>
         
         <!-- ==================== DHIKR ==================== -->
         <div class="prayer-card" id="dzikir">
             <h2>Dhikr</h2>
             
-            <p class="doa-text-center">Glory be to Allah.</p>
-            <div class="arabic-verse">
-                سُبْحَانَ اللَّهِ
-            </div>
+            <p class="doa-text">We remember Allah with beautiful remembrance, glorifying Him, praising Him, and declaring His greatness.</p>
             
-            <p class="doa-text-center">All praise is due to Allah.</p>
-            <div class="arabic-verse">
-                اَلْحَمْدُ لِلَّهِ
-            </div>
-            
-            <p class="doa-text-center">Allah is the Greatest.</p>
-            <div class="arabic-verse">
-                اَللَّهُ أَكْبَرُ
-            </div>
-            
-            <p class="doa-text-center">There is no deity worthy of worship except Allah alone.</p>
             <div class="arabic-main">
-                لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ
-                لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ
-                وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+                سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ
             </div>
-            <p class="arabic-translation">There is no deity worthy of worship except Allah alone, with no partner. To Him belongs the dominion and to Him belongs all praise, and He is All-Powerful over all things.</p>
+            <p class="arabic-translation">Glory be to Allah and praise be to Him, glory be to Allah the Almighty.</p>
             
-            <p class="doa-text-center">Ayatul Kursi</p>
-            <div class="arabic-main">
-                اَللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ
-                لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ
-                لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ
-                مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ
-                يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ
-                وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ
-                وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ
-                وَلَا يَئُودُهُ حِفْظُهُمَا
-                وَهُوَ الْعَلِيُّ الْعَظِيمُ
+            <div class="arabic-verse">
+                لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ
             </div>
-            <p class="arabic-translation">Allah, there is no deity worthy of worship except Him, the Ever-Living, the Sustainer of existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on earth. Who is it that can intercede with Him except by His permission? He knows what is before them and what is behind them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.</p>
+            <p class="arabic-translation">There is no power and no strength except with Allah.</p>
+            
+            <div class="arabic-verse">
+                سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ
+            </div>
+            <p class="arabic-translation">Glory be to Allah, all praise is due to Allah, there is no deity worthy of worship except Allah, and Allah is the Greatest.</p>
         </div>
         
         <!-- ==================== CLOSING ==================== -->
         <div class="prayer-card" id="penutup">
             <h2>Closing</h2>
             
-            <p class="doa-text">O Allah, accept this prayer from Your servants. Make every letter uttered a reward, every word a good deed, and every supplication a cause for the acceptance of prayers.</p>
+            <p class="doa-text">O Allah, we conclude this prayer with praise to You, gratitude for all Your blessings, and hope for Your mercy and forgiveness. Accept all our prayers and supplications.</p>
             
             <div class="arabic-main">
-                اللَّهُمَّ اغْفِرْ لِلْمُسْلِمِينَ وَالْمُسْلِمَاتِ
-                وَالْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ
-                الْأَحْيَاءِ مِنْهُمْ وَالْأَمْوَاتِ
+                اَلْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ
             </div>
-            <p class="arabic-translation">O Allah, forgive the Muslim men and women, the believing men and women, those who are living and those who have passed away.</p>
+            <p class="arabic-translation">All praise is due to Allah, Lord of all the worlds.</p>
             
-            <p class="doa-text">O Allah, send blessings and peace upon Prophet Muhammad, his family, and his companions.</p>
+            <p class="doa-text">May Allah accept all our prayers, forgive all our sins, and grant us Paradise. May peace and blessings be upon our Prophet Muhammad, his family, and his companions.</p>
             
-            <div class="arabic-main">
-                اَللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ
-                كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ
-                إِنَّكَ حَمِيدٌ مَجِيدٌ
-                اَللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ
-                كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ
-                إِنَّكَ حَمِيدٌ مَجِيدٌ
-            </div>
-            
-            <p class="doa-text-center">And all praise is due to Allah, Lord of all the worlds.</p>
             <div class="arabic-verse">
                 وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ
+                وَصَلَّى اللَّهُ وَسَلَّمَ عَلَى نَبِيِّنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ أَجْمَعِينَ
             </div>
+            <p class="arabic-translation">And all praise is due to Allah, Lord of all the worlds. May Allah send blessings and peace upon our Prophet Muhammad, his family, and all his companions.</p>
             
             <div class="amiin-text">
                 آمِينَ يَا رَبَّ الْعَالَمِينَ
             </div>
-            <p class="arabic-translation">Ameen, O Lord of all the worlds.</p>
-            
-            <div class="arabic-verse" style="margin-top: 2rem;">
-                وَالسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ
-            </div>
-            <p class="arabic-translation">May peace, mercy, and blessings of Allah be upon you all.</p>
+            <p class="arabic-translation" style="color: #c9a227; font-weight: 600;">Ameen, O Lord of all the worlds.</p>
         </div>
         
         <!-- CTA Section -->
         <div class="cta-section">
-            <h2>Return to Homepage</h2>
-            <p>Visit our English learning platform.</p>
-            <a href="https://mibenglish.com/" class="btn-cta">Visit MIBEnglish</a>
+            <h2>Share This Prayer</h2>
+            <p>May this prayer bring benefits to all who read it. Share with your loved ones.</p>
+            <a href="https://mibenglish.com/en/dua/" class="btn-cta" onclick="sharePrayer()">Share Now</a>
         </div>
     </main>
     
@@ -913,15 +1353,15 @@
         <div class="footer-content">
             <div class="footer-brand-section">
                 <div class="footer-brand">MIBEnglish</div>
-                <p class="footer-desc">English learning, thoughtfully crafted for diverse minds. Available in 20 languages.</p>
+                <p class="footer-desc">Prayer and Supplication for Goodness - Complete collection of prayers with Islamic etiquette for developers, families, and readers. May we receive blessings, guidance, and happiness in this world and the hereafter.</p>
                 <div class="social-icons">
                     <a href="https://instagram.com/mibenglish" class="social-icon" target="_blank" rel="noopener">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.44-.645 1.44-1.44-.645-1.44-1.44-1.44z"/></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     </a>
                     <a href="https://youtube.com/@mibenglish" class="social-icon" target="_blank" rel="noopener">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
                     </a>
-                    <a href="https://tiktok.com/@mibenglish" class="social-icon" target="_blank" rel="noopener">
+                    <a href="https://www.tiktok.com/@mibenglish" class="social-icon" target="_blank" rel="noopener">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
                     </a>
                     <a href="https://facebook.com/mibenglish" class="social-icon" target="_blank" rel="noopener">
@@ -932,7 +1372,6 @@
             <div>
                 <h4 class="footer-section-title">Support</h4>
                 <ul class="footer-links">
-                    <li><a href="https://mibenglish.com">Home</a></li>
                     <li><a href="https://mibenglish.com/en/about.html">About</a></li>
                     <li><a href="https://mibenglish.com/en/contact.html">Contact</a></li>
                     <li><a href="https://mibenglish.com/en/privacy.html">Privacy Policy</a></li>
@@ -947,6 +1386,124 @@
     </footer>
     
     <script>
+        // ========== VOICE SUPPORT CHECKER ==========
+        let voiceSupported = null;
+        let voiceChecking = true;
+        let voiceInfoTimer = null;
+        
+        function checkVoiceSupport() {
+            const voiceBtn = document.getElementById('voiceBtn');
+            const voiceStatus = document.getElementById('voiceStatus');
+            
+            // Check if Speech Synthesis API exists
+            if (!('speechSynthesis' in window)) {
+                voiceSupported = false;
+                voiceChecking = false;
+                voiceStatus.className = 'voice-status not-supported';
+                voiceBtn.classList.add('disabled');
+                voiceBtn.title = 'Voice not supported in this browser';
+                showVoiceInfo('error', 'Voice Not Supported', 'Your browser does not support Text-to-Speech. Try Chrome, Edge, Safari, or Firefox.');
+                return false;
+            }
+            
+            const synthesis = window.speechSynthesis;
+            
+            // Check if synthesis is available
+            if (!synthesis) {
+                voiceSupported = false;
+                voiceChecking = false;
+                voiceStatus.className = 'voice-status not-supported';
+                voiceBtn.classList.add('disabled');
+                voiceBtn.title = 'Speech synthesis not available';
+                showVoiceInfo('error', 'Voice Not Available', 'Speech synthesis is disabled or not available on this device.');
+                return false;
+            }
+            
+            // Wait for voices to load
+            const checkVoices = () => {
+                const voices = synthesis.getVoices();
+                
+                if (voices.length > 0) {
+                    voiceSupported = true;
+                    voiceChecking = false;
+                    voiceStatus.className = 'voice-status supported';
+                    voiceBtn.title = 'Voice ready - Click to read aloud';
+                    showVoiceInfo('success', 'Voice Ready', `Found ${voices.length} voice(s). Click the Voice button to start reading.`);
+                    return true;
+                } else {
+                    // Some browsers need more time to load voices
+                    return false;
+                }
+            };
+            
+            // Initial check
+            if (checkVoices()) {
+                return true;
+            }
+            
+            // Wait for voices to load (with timeout)
+            let attempts = 0;
+            const maxAttempts = 10;
+            
+            const intervalId = setInterval(() => {
+                attempts++;
+                
+                if (checkVoices()) {
+                    clearInterval(intervalId);
+                } else if (attempts >= maxAttempts) {
+                    clearInterval(intervalId);
+                    // Even without voices, synthesis might work
+                    voiceSupported = true;
+                    voiceChecking = false;
+                    voiceStatus.className = 'voice-status supported';
+                    voiceBtn.title = 'Voice ready (default voice)';
+                    showVoiceInfo('success', 'Voice Ready', 'Text-to-Speech is available. Click to start reading.');
+                }
+            }, 200);
+            
+            // Also listen for voiceschanged event
+            if (synthesis.onvoiceschanged !== undefined) {
+                synthesis.onvoiceschanged = () => {
+                    checkVoices();
+                };
+            }
+            
+            return true;
+        }
+        
+        function showVoiceInfo(type, title, message) {
+            // Remove existing info
+            const existingInfo = document.querySelector('.voice-info');
+            if (existingInfo) {
+                existingInfo.remove();
+            }
+            
+            // Clear any existing timer
+            if (voiceInfoTimer) {
+                clearTimeout(voiceInfoTimer);
+            }
+            
+            // Create info element
+            const info = document.createElement('div');
+            info.className = `voice-info show ${type}`;
+            info.innerHTML = `
+                <button class="voice-info-close" onclick="this.parentElement.remove()">✕</button>
+                <div class="voice-info-title">
+                    ${type === 'success' ? '✅' : '⚠️'} ${title}
+                </div>
+                <div>${message}</div>
+            `;
+            
+            document.body.appendChild(info);
+            
+            // Auto-hide after 5 seconds for success, 8 seconds for error
+            const timeout = type === 'success' ? 5000 : 8000;
+            voiceInfoTimer = setTimeout(() => {
+                info.classList.remove('show');
+                setTimeout(() => info.remove(), 300);
+            }, timeout);
+        }
+        
         // ========== AUTOVOICE SYSTEM ==========
         let voiceIsPlaying = false;
         let voiceIsPaused = false;
@@ -1047,6 +1604,17 @@
         }
         
         function toggleVoice() {
+            // Check if voice is supported
+            if (voiceSupported === false) {
+                showVoiceInfo('error', 'Voice Not Supported', 'Your browser does not support Text-to-Speech. Please try Chrome, Edge, Safari, or Firefox.');
+                return;
+            }
+            
+            if (voiceChecking) {
+                showVoiceInfo('success', 'Checking...', 'Please wait while we check voice support.');
+                return;
+            }
+            
             let voiceBtn = document.getElementById('voiceBtn');
             
             if (voiceIsPlaying) {
@@ -1060,11 +1628,18 @@
                     extractSentences();
                 }
                 
+                if (sentences.length === 0) {
+                    showVoiceInfo('error', 'No Content', 'No readable content found on this page.');
+                    stopVoice();
+                    return;
+                }
+                
                 if (!voiceIsPaused) {
                     currentSentenceIndex = 0;
                 }
                 voiceIsPaused = false;
                 
+                showVoiceInfo('success', 'Reading...', `Reading ${sentences.length} paragraphs. Click Voice button to stop.`);
                 speakSentence(currentSentenceIndex);
             }
         }
@@ -1090,6 +1665,7 @@
         
         function closeLangPopup() {
             document.getElementById('langPopup').classList.remove('show');
+            localStorage.setItem('mibVisited', 'true');
         }
         
         // ========== SETTINGS MODAL ==========
@@ -1104,7 +1680,7 @@
         // ========== FONT SIZE ==========
         function setFontSize(size) {
             document.documentElement.setAttribute('data-font-size', size);
-            localStorage.setItem('fontSize', size);
+            localStorage.setItem('mibFontSize', size);
             
             document.querySelectorAll('.font-size-btn').forEach(function(btn) {
                 btn.classList.remove('active');
@@ -1116,18 +1692,36 @@
         function toggleDarkMode() {
             let isDark = document.getElementById('darkToggle').checked;
             document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            localStorage.setItem('mibTheme', isDark ? 'dark' : 'light');
+        }
+        
+        // ========== SHARE PRAYER ==========
+        function sharePrayer() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Prayer & Supplication for Goodness',
+                    text: 'Complete collection of prayers with Islamic etiquette for goodness in this world and the hereafter.',
+                    url: window.location.href
+                });
+            } else {
+                // Fallback: copy to clipboard
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link copied to clipboard!');
+            }
         }
         
         // ========== INITIALIZATION ==========
         document.addEventListener('DOMContentLoaded', function() {
             // Load saved preferences
-            let savedFontSize = localStorage.getItem('fontSize') || 'normal';
+            let savedFontSize = localStorage.getItem('mibFontSize') || 'normal';
             setFontSize(savedFontSize);
             
-            let savedTheme = localStorage.getItem('theme') || 'light';
+            let savedTheme = localStorage.getItem('mibTheme') || 'light';
             document.documentElement.setAttribute('data-theme', savedTheme);
             document.getElementById('darkToggle').checked = savedTheme === 'dark';
+            
+            // Check voice support immediately
+            checkVoiceSupport();
             
             // Close modals on overlay click
             document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
