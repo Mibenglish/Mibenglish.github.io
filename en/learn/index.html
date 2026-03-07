@@ -12,33 +12,13 @@
     <link rel="canonical" href="https://mibenglish.com/id/learn/">
     <link rel="alternate" hreflang="en" href="https://mibenglish.com/learn/">
     <link rel="alternate" hreflang="id" href="https://mibenglish.com/id/learn/">
-    <link rel="alternate" hreflang="ar" href="https://mibenglish.com/ar/learn/">
-    <link rel="alternate" hreflang="zh" href="https://mibenglish.com/zh/learn/">
-    <link rel="alternate" hreflang="ja" href="https://mibenglish.com/ja/learn/">
-    <link rel="alternate" hreflang="ko" href="https://mibenglish.com/ko/learn/">
-    <link rel="alternate" hreflang="vi" href="https://mibenglish.com/vi/learn/">
-    <link rel="alternate" hreflang="th" href="https://mibenglish.com/th/learn/">
-    <link rel="alternate" hreflang="hi" href="https://mibenglish.com/hi/learn/">
-    <link rel="alternate" hreflang="bn" href="https://mibenglish.com/bn/learn/">
-    <link rel="alternate" hreflang="ur" href="https://mibenglish.com/ur/learn/">
-    <link rel="alternate" hreflang="sw" href="https://mibenglish.com/sw/learn/">
-    <link rel="alternate" hreflang="es" href="https://mibenglish.com/es/learn/">
-    <link rel="alternate" hreflang="pt" href="https://mibenglish.com/pt/learn/">
-    <link rel="alternate" hreflang="fr" href="https://mibenglish.com/fr/learn/">
-    <link rel="alternate" hreflang="de" href="https://mibenglish.com/de/learn/">
-    <link rel="alternate" hreflang="it" href="https://mibenglish.com/it/learn/">
-    <link rel="alternate" hreflang="ru" href="https://mibenglish.com/ru/learn/">
-    <link rel="alternate" hreflang="pl" href="https://mibenglish.com/pl/learn/">
-    <link rel="alternate" hreflang="tr" href="https://mibenglish.com/tr/learn/">
-    <link rel="alternate" hreflang="el" href="https://mibenglish.com/el/learn/">
-    <link rel="alternate" hreflang="x-default" href="https://mibenglish.com/learn/">
     
     <style>
         /* ========== BASE RESET ========== */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
         
-        /* ========== FONT SIZE SETTINGS - SAMA DENGAN TEMPLATE GAMES ========== */
+        /* ========== FONT SIZE SETTINGS - SAMA DENGAN TEMPLATE ========== */
         [data-font-size="small"] { font-size: 14px; }
         [data-font-size="normal"] { font-size: 15px; }
         [data-font-size="large"] { font-size: 18px; }
@@ -56,7 +36,7 @@
             padding-top: 104px;
         }
         
-        /* ========== HEADER ========== */
+        /* ========== HEADER - SAMA DENGAN TEMPLATE ========== */
         .header {
             position: fixed;
             top: 0;
@@ -93,8 +73,6 @@
         .settings-btn {
             width: 40px;
             height: 40px;
-            min-width: 40px;
-            min-height: 40px;
             background: transparent;
             border: none;
             color: #ffffff;
@@ -105,7 +83,7 @@
             justify-content: center;
         }
         
-        /* ========== NAVIGATION ========== */
+        /* ========== NAVIGATION - SAMA PERSIS DENGAN TEMPLATE ========== */
         .nav {
             position: fixed;
             top: 56px;
@@ -193,12 +171,11 @@
         .season-title {
             font-size: 1.125rem;
             font-weight: 700;
-            margin-bottom: 6px;
-            line-height: 1.3;
+            margin-bottom: 4px;
         }
         
         .season-desc {
-            font-size: 0.9375rem;
+            font-size: 0.875rem;
             opacity: 0.9;
             margin-bottom: 10px;
         }
@@ -267,14 +244,14 @@
             font-family: inherit;
         }
         
-        /* Episode Grid - Using Game Card Style */
+        /* Games Grid */
         .games-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 12px;
         }
         
-        /* Episode Card - Game Card Style */
+        /* Game Card */
         .game-card {
             background: #ffffff;
             border: 2px solid #d4e5d4;
@@ -294,7 +271,7 @@
         
         .game-card:active { transform: scale(0.98); }
         
-        /* Episode Thumbnail */
+        /* Game Thumbnail */
         .game-thumb {
             position: relative;
             aspect-ratio: 16/10;
@@ -311,13 +288,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 700;
             color: #ffffff;
             background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
         }
         
-        /* Episode Badge */
+        /* Badge */
         .game-badge {
             position: absolute;
             top: 6px;
@@ -331,10 +308,9 @@
         }
         
         .badge-new { background: #4caf50; }
-        .badge-milestone { background: #ff9800; }
         .badge-special { background: #9c27b0; }
         
-        /* Episode Number */
+        /* Season Badge */
         .game-votes {
             position: absolute;
             top: 6px;
@@ -383,7 +359,7 @@
         
         .game-card:hover .game-play-btn { transform: scale(1); }
         
-        /* Episode Card Body */
+        /* Game Card Body */
         .game-card-body { padding: 10px; }
         
         .game-title {
@@ -816,26 +792,6 @@
         [data-theme="dark"] .btn-confirm, [data-theme="dark"] .btn-change-lang { background: linear-gradient(135deg, #b8922a, #d4b840); }
         [data-theme="dark"] .toast { background: #2d5a3d; }
         [data-theme="dark"] .share-fab { background: linear-gradient(135deg, #b8922a, #d4b840); }
-
-                /* ========== RESPONSIVE ========== */
-        @media (min-width: 480px) {
-            .games-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        
-        @media (min-width: 600px) {
-            .main { padding-left: 20px; padding-right: 20px; }
-            .category-title { font-size: 1.375rem; }
-            .games-grid { grid-template-columns: repeat(4, 1fr); }
-            .ad-row { flex-direction: row; }
-            .ad-row .ad-slot { flex: 1; }
-        }
-        
-        @media (min-width: 800px) {
-            .games-grid { grid-template-columns: repeat(5, 1fr); }
-            .footer { padding: 40px 24px 24px; }
-            .footer-content { display: flex; gap: 40px; max-width: 900px; margin: 0 auto; }
-            .footer-brand-section { flex: 1; }
-        }
         
         /* ========== RESPONSIVE ========== */
         @media (min-width: 480px) {
@@ -888,7 +844,6 @@
                 <a href="https://mibenglish.com/ru/learn/" class="lang-option"><span class="lang-flag">🇷🇺</span><span class="lang-name">Russian</span></a>
                 <a href="https://mibenglish.com/pl/learn/" class="lang-option"><span class="lang-flag">🇵🇱</span><span class="lang-name">Polish</span></a>
                 <a href="https://mibenglish.com/tr/learn/" class="lang-option"><span class="lang-flag">🇹🇷</span><span class="lang-name">Turkish</span></a>
-                <a href="https://mibenglish.com/el/learn/" class="lang-option"><span class="lang-flag">🇬🇷</span><span class="lang-name">Greek</span></a>
             </div>
             <div class="lang-popup-footer">
                 <button class="btn-confirm" onclick="closeLangPopup()">Lanjutkan dalam Bahasa Indonesia</button>
@@ -945,7 +900,7 @@
 
     <!-- Header -->
     <header class="header">
-        <a href="https://mibenglish.com/" class="brand">📚 MIBEnglish</a>
+        <a href="#" class="brand">📚 MIBEnglish</a>
         <div class="header-actions">
             <button class="lang-btn" onclick="openLangPopup()">
                 <span>🇮🇩</span>
@@ -960,7 +915,7 @@
         </div>
     </header>
     
-    <!-- Nav - SAMA PERSIS DENGAN TEMPLATE GAMES -->
+    <!-- Nav - SAMA PERSIS DENGAN TEMPLATE -->
     <nav class="nav">
         <div class="nav-inner">
             <a href="https://mibenglish.com/id/dua" class="nav-link">Dua</a>
@@ -1010,7 +965,7 @@
             </div>
         </div>
         
-        <!-- Episode Grid (Games Grid Style) -->
+        <!-- Games Grid -->
         <div class="games-grid" id="gamesGrid"></div>
         
         <!-- Pagination -->
@@ -1034,16 +989,16 @@
                 <div class="footer-brand">📚 MIBEnglish Learn</div>
                 <p class="footer-desc">English learning, thoughtfully crafted for diverse minds. Available in 20 languages — because fluency isn't one-size-fits-all.</p>
                 <div class="social-icons">
-                    <a href="https://instagram.com/mibenglish" class="social-icon" target="_blank" rel="noopener">
+                    <a href="https://instagram.com/mibenglish" class="social-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     </a>
-                    <a href="https://youtube.com/@mibenglish" class="social-icon" target="_blank" rel="noopener">
+                    <a href="https://youtube.com/@mibenglish" class="social-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
                     </a>
-                    <a href="https://www.tiktok.com/@mibenglish" class="social-icon" target="_blank" rel="noopener">
+                    <a href="https://www.tiktok.com/@mibenglish" class="social-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
                     </a>
-                    <a href="https://facebook.com/mibenglish" class="social-icon" target="_blank" rel="noopener">
+                    <a href="https://facebook.com/mibenglish" class="social-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     </a>
                 </div>
@@ -1090,12 +1045,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (savedTheme === 'dark') {
         document.getElementById('darkToggle').checked = true;
     }
+    
+    // Initialize
+    selectSeason(0);
 });
 
 function openSettings() { document.getElementById('settingsOverlay').classList.add('show'); }
 function closeSettings() { document.getElementById('settingsOverlay').classList.remove('show'); }
 function openLangPopup() { document.getElementById('langPopup').classList.add('show'); }
-function closeLangPopup() { document.getElementById('langPopup').classList.remove('show'); localStorage.setItem('mibVisited', 'true'); }
+function closeLangPopup() { document.getElementById('langPopup').classList.remove('show'); }
 
 function setFontSize(size) {
     document.documentElement.setAttribute('data-font-size', size);
@@ -1120,7 +1078,7 @@ var BASE_URL = "https://mibenglish.com/en/learn";
 var seasons = [
     { title: "Musim 1: Akar Pengetahuan", desc: "Fondasi otak dan kosakata dasar.", themes: [{ n: "Cognitive Reset", c: 10 }, { n: "Survival Kit", c: 20 }, { n: "Present Reality", c: 30 }, { n: "Functional Comms", c: 40 }] },
     { title: "Musim 2: Rangka Bahasa", desc: "Struktur kalimat dan tenses.", themes: [{ n: "Time Continuum", c: 20 }, { n: "Syntax", c: 30 }, { n: "Descriptive", c: 30 }, { n: "Practical", c: 20 }] },
-    { title: "Musim 3: Merangkai Makna ", desc: "Kalimat kompleks dan nuansa.", themes: [{ n: "Perfect Tenses", c: 30 }, { n: "Linkers", c: 30 }, { n: "Modals", c: 20 }, { n: "Social", c: 20 }] },
+    { title: "Musim 3: Merangkai Makna", desc: "Kalimat kompleks dan nuansa.", themes: [{ n: "Perfect Tenses", c: 30 }, { n: "Linkers", c: 30 }, { n: "Modals", c: 20 }, { n: "Social", c: 20 }] },
     { title: "Musim 4: Komunikasi Profesional", desc: "Analisa dan komunikasi profesional.", themes: [{ n: "Passive", c: 30 }, { n: "Conditionals", c: 30 }, { n: "Reported", c: 20 }, { n: "Professional", c: 20 }] },
     { title: "Musim 5: Komunikasi Strategis", desc: "Soft skills dan idiomatik.", themes: [{ n: "Corporate", c: 30 }, { n: "Idioms", c: 30 }, { n: "Listening", c: 20 }, { n: "Persuasion", c: 20 }] },
     { title: "Musim 6: Bahasa Akademik", desc: "Akademik: esai dan debat.", themes: [{ n: "Adv Grammar", c: 30 }, { n: "Writing", c: 30 }, { n: "Reading", c: 20 }, { n: "Debate", c: 20 }] },
@@ -1168,6 +1126,17 @@ function selectSeason(idx) {
     currentPage = 1;
     searchQuery = '';
     $('searchInput').value = '';
+    
+    // Build tabs if not exists
+    if ($('navTabs').children.length === 0) {
+        for (var i = 0; i < seasons.length; i++) {
+            var btn = document.createElement('button');
+            btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
+            btn.textContent = seasons[i].title.split(':')[0];
+            btn.onclick = (function(seasonIdx) { return function() { selectSeason(seasonIdx); }; })(i);
+            $('navTabs').appendChild(btn);
+        }
+    }
     
     var tabBtns = document.querySelectorAll('.tab-btn');
     tabBtns.forEach(function(btn, i) {
@@ -1223,9 +1192,6 @@ function render() {
             if (specialEpisodes[e.num]) {
                 badgeClass = 'badge-special';
                 badgeText = 'special';
-            } else if (e.num === 1) {
-                badgeClass = 'badge-new';
-                badgeText = 'new';
             }
             
             html += '<a href="' + BASE_URL + '/season' + e.sNum + '/eps' + e.num + '.html" class="game-card">';
@@ -1286,6 +1252,23 @@ function goPage(p) {
     window.scrollTo({ top: 200, behavior: 'smooth' });
 }
 
+// Search
+$('searchInput').addEventListener('input', function(e) {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(function() {
+        searchQuery = e.target.value.toLowerCase().trim();
+        currentPage = 1;
+        render();
+    }, 250);
+});
+
+// Per page
+$('perPageSelect').addEventListener('change', function(e) {
+    perPage = parseInt(e.target.value, 10);
+    currentPage = 1;
+    render();
+});
+
 // Share FAB
 $('shareFab').addEventListener('click', function() {
     var url = window.location.href;
@@ -1315,34 +1298,6 @@ function showToast(message) {
     $('toast').classList.add('show');
     setTimeout(function() { $('toast').classList.remove('show'); }, 2000);
 }
-
-// Initialize
-(function() {
-    for (var i = 0; i < seasons.length; i++) {
-        var btn = document.createElement('button');
-        btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
-        btn.textContent = seasons[i].title.split(':')[0];
-        btn.onclick = (function(idx) { return function() { selectSeason(idx); }; })(i);
-        $('navTabs').appendChild(btn);
-    }
-    
-    $('searchInput').addEventListener('input', function(e) {
-        clearTimeout(searchTimer);
-        searchTimer = setTimeout(function() {
-            searchQuery = e.target.value.toLowerCase().trim();
-            currentPage = 1;
-            render();
-        }, 250);
-    });
-    
-    $('perPageSelect').addEventListener('change', function(e) {
-        perPage = parseInt(e.target.value, 10);
-        currentPage = 1;
-        render();
-    });
-    
-    selectSeason(0);
-})();
 </script>
 </body>
 </html>
