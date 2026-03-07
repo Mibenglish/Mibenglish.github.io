@@ -1,24 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-font-size="small" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Navigation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#1a472a">
+    <title>Main Navigation - MIBEnglish</title>
+    
     <style>
         /* ========== BASE RESET ========== */
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        
+        /* ========== FONT SIZE SETTINGS ========== */
+        [data-font-size="small"] { font-size: 14px; }
+        [data-font-size="normal"] { font-size: 16px; }
+        [data-font-size="large"] { font-size: 18px; }
+        [data-font-size="xlarge"] { font-size: 20px; }
         
         /* ========== CSS Variables ========== */
         :root {
             --primary-dark: #0d1f0d;
             --primary-green: #1a472a;
+            --secondary-green: #2d5a3d;
+            --accent-green: #3d7a4f;
+            --light-green: #5a9a6e;
+            --pale-green: #8bc49f;
+            --mint: #c8e6d0;
+            --cream: #f8faf8;
+            --white: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-medium: #3a4a3a;
             --gold-accent: #c9a227;
+            --gold-light: #e6c84a;
+            --shadow: rgba(10, 31, 10, 0.2);
+            --shadow-light: rgba(10, 31, 10, 0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        [data-theme="dark"] {
+            --primary-dark: #0a0f0a;
+            --primary-green: #1a3a2a;
+            --cream: #1a2a1a;
+            --white: #0f1a0f;
+            --text-dark: #e8f5e9;
+            --text-medium: #c8e6d0;
+            --mint: #98c6a0;
+            --pale-green: #4a6a4a;
         }
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: #f8faf8;
+            background-color: var(--cream);
+            color: var(--text-dark);
+            line-height: 1.9;
+            min-height: 100vh;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
             padding-top: 104px;
         }
         
@@ -78,6 +115,45 @@
             justify-content: center;
         }
         
+        /* ========== AUTOVOICE BUTTON ========== */
+        .voice-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .voice-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .voice-btn.active {
+            background: #c9a227;
+            border-color: #c9a227;
+            color: #0d1f0d;
+        }
+        
+        .voice-btn.playing {
+            background: #c9a227;
+            border-color: #c9a227;
+            color: #0d1f0d;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.4); }
+            50% { box-shadow: 0 0 0 8px rgba(201, 162, 39, 0); }
+        }
+        
         /* ========== NAVIGATION ========== */
         .nav {
             position: fixed;
@@ -94,7 +170,9 @@
             min-height: 48px;
         }
         
-        .nav::-webkit-scrollbar { display: none; }
+        .nav::-webkit-scrollbar {
+            display: none;
+        }
         
         .nav-inner {
             display: flex;
@@ -118,14 +196,38 @@
             color: #ffffff;
         }
         
+        /* ========== DARK THEME ========== */
+        [data-theme="dark"] body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        
+        [data-theme="dark"] .header {
+            background: #1a1a1a;
+            border-bottom-color: #c9a227;
+        }
+        
+        [data-theme="dark"] .nav {
+            background: #1e3a1e;
+        }
+        
         /* ========== RESPONSIVE ========== */
         @media (max-width: 600px) {
             .nav-link {
                 padding: 6px 12px;
                 font-size: 0.85rem;
             }
+            
             .header {
                 padding: 0 12px;
+            }
+            
+            .voice-btn span {
+                display: none;
+            }
+            
+            .voice-btn {
+                padding: 8px;
             }
         }
         
@@ -135,6 +237,17 @@
                 font-size: 0.8rem;
             }
         }
+        
+        /* ========== PRINT STYLES ========== */
+        @media print {
+            .header, .nav {
+                display: none !important;
+            }
+            body {
+                padding-top: 0 !important;
+                background: #ffffff !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -142,9 +255,21 @@
     <header class="header">
         <a href="https://mibenglish.com/" class="brand">MIBEnglish</a>
         <div class="header-actions">
-            <button class="lang-btn"><span>🇬🇧</span><span>EN</span><span>▼</span></button>
+            <button class="voice-btn" id="voiceBtn" title="Auto Voice - Read article aloud">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+                <span>Voice</span>
+            </button>
+            <button class="lang-btn">
+                <span>🇬🇧</span>
+                <span>EN</span>
+                <span>▼</span>
+            </button>
             <button class="settings-btn">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.51,8.1,5.74,7.56,6.03L5.18,5.07c-0.22-0.08-0.47,0-0.59,0.22L2.67,8.61c-0.12,0.21-0.07,0.47,0.12,0.61l2.03,1.58c-0.05,0.3-0.07,0.61-0.07,0.94s0.02,0.64,0.07,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54c0.04,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.51,8.1,5.74,7.56,6.03L5.18,5.07c-0.22-0.08-0.47,0-0.59,0.22L2.67,8.61c-0.12,0.21-0.07,0.47,0.12,0.61l2.03,1.58c-0.05,0.3-0.07,0.61-0.07,0.94s0.02,0.64,0.07,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54c0.04,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+                </svg>
             </button>
         </div>
     </header>
@@ -152,7 +277,7 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="https://mibenglish.com/en//dua" class="nav-link active">Dua</a>
+            <a href="https://mibenglish.com/en/dua" class="nav-link active">Dua</a>
             <a href="https://mibenglish.com/en/learn/" class="nav-link">Learn</a>
             <a href="https://mibenglish.com/en/dictionary/" class="nav-link">Dictionary</a>
             <a href="https://mibenglish.com/games/" class="nav-link">Games</a>
