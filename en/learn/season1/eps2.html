@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Navigation</title>
+    <style>
+        /* ========== BASE RESET ========== */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        
+        /* ========== CSS Variables ========== */
+        :root {
+            --primary-dark: #0d1f0d;
+            --primary-green: #1a472a;
+            --gold-accent: #c9a227;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8faf8;
+            padding-top: 104px;
+        }
+        
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            background: #0d1f0d;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            z-index: 1000;
+            border-bottom: 2px solid #c9a227;
+        }
+        
+        .brand {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        .settings-btn {
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* ========== NAVIGATION ========== */
+        .nav {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            right: 0;
+            background: #1a472a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            overflow-x: auto;
+            padding: 8px 0;
+            min-height: 48px;
+        }
+        
+        .nav::-webkit-scrollbar { display: none; }
+        
+        .nav-inner {
+            display: flex;
+            gap: 6px;
+            padding: 0 12px;
+        }
+        
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: background 0.2s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background: #c9a227;
+            color: #ffffff;
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 600px) {
+            .nav-link {
+                padding: 6px 12px;
+                font-size: 0.85rem;
+            }
+            .header {
+                padding: 0 12px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .nav-link {
+                padding: 5px 10px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="https://mibenglish.com/" class="brand">MIBEnglish</a>
+        <div class="header-actions">
+            <button class="lang-btn"><span>🇬🇧</span><span>EN</span><span>▼</span></button>
+            <button class="settings-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.51,8.1,5.74,7.56,6.03L5.18,5.07c-0.22-0.08-0.47,0-0.59,0.22L2.67,8.61c-0.12,0.21-0.07,0.47,0.12,0.61l2.03,1.58c-0.05,0.3-0.07,0.61-0.07,0.94s0.02,0.64,0.07,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54c0.04,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/></svg>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="https://mibenglish.com/en//dua" class="nav-link active">Dua</a>
+            <a href="https://mibenglish.com/en/learn/" class="nav-link">Learn</a>
+            <a href="https://mibenglish.com/en/dictionary/" class="nav-link">Dictionary</a>
+            <a href="https://mibenglish.com/games/" class="nav-link">Games</a>
+            <a href="https://mibenglish.com/en/market/" class="nav-link">Market</a>
+        </div>
+    </nav>
+</body>
+</html>
