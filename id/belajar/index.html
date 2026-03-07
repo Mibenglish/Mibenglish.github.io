@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="id" data-font-size="normal" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MIBEnglish - Metode pembelajaran yang menyenangkan dan menarik dengan materi lengkap dan terstruktur, dari pemula hingga mahir.">
+    <meta name="keywords" content="belajar bahasa inggris, mibenglish, kursus bahasa inggris online, penguasaan bahasa inggris">
+    <meta name="author" content="MIBEnglish">
+    <meta name="theme-color" content="#1a472a">
+    <title>MIBEnglish - Program Penguasaan Bahasa Inggris untuk Semua Orang</title>
+    
+    <link rel="canonical" href="https://mibenglish.com/id/learn/">
+    <link rel="alternate" hreflang="en" href="https://mibenglish.com/learn/">
+    <link rel="alternate" hreflang="id" href="https://mibenglish.com/id/learn/">
+    
+    <style>
+        /* ========== BASE RESET ========== */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        
+        /* ========== FONT SIZE SETTINGS - SAMA DENGAN TEMPLATE ========== */
+        [data-font-size="small"] { font-size: 14px; }
+        [data-font-size="normal"] { font-size: 16px; }
+        [data-font-size="large"] { font-size: 18px; }
+        [data-font-size="xlarge"] { font-size: 20px; }
+        
+        /* ========== LIGHT THEME (DEFAULT) ========== */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f7f5;
+            color: #1a1a1a;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding-top: 104px;
+        }
+        
+        /* ========== HEADER - SAMA DENGAN TEMPLATE ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            background: #0d1f0d;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            z-index: 1000;
+            border-bottom: 2px solid #c9a227;
+        }
+        
+        .brand { font-size: 1.125rem; font-weight: 700; color: #ffffff; text-decoration: none; }
+        .header-actions { display: flex; align-items: center; gap: 8px; }
+        
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            font-family: inherit;
+            white-space: nowrap;
+        }
+        
+        .settings-btn {
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* ========== NAVIGATION - SAMA PERSIS DENGAN TEMPLATE ========== */
+        .nav {
+            position: fixed;
+            top: 56px;
+            left: 0;
+            right: 0;
+            background: #1a472a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            overflow-x: auto;
+            padding: 8px 0;
+            min-height: 48px;
+        }
+        
+        .nav::-webkit-scrollbar { display: none; }
+        .nav-inner { display: flex; gap: 6px; padding: 0 12px; }
+        
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+            transition: background 0.2s ease;
+        }
+        
+        .nav-link:hover, .nav-link.active { background: #c9a227; color: #ffffff; }
+        
+        /* ========== MAIN CONTENT ========== */
+        .main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 12px 24px;
+        }
+        
+        /* Season Tabs */
+        .season-tabs {
+            background: #ffffff;
+            border: 1px solid #d4e5d4;
+            border-radius: 10px;
+            padding: 8px;
+            margin-bottom: 12px;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .season-tabs::-webkit-scrollbar { display: none; }
+        .tabs-inner { display: flex; gap: 6px; }
+        
+        .tab-btn {
+            padding: 10px 16px;
+            background: #f8faf8;
+            border: 2px solid #d4e5d4;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #2d5a3d;
+            cursor: pointer;
+            white-space: nowrap;
+            font-family: inherit;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+        }
+        
+        .tab-btn.active {
+            background: #1a472a;
+            color: #ffffff;
+            border-color: #1a472a;
+        }
+        
+        .tab-btn:active:not(.active) { background: #e8f5e9; }
+        
+        /* Season Header */
+        .season-header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
+            color: #ffffff;
+            padding: 20px 16px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .season-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .season-desc {
+            font-size: 0.875rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .season-meta {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 6px 14px;
+            border-radius: 15px;
+            font-size: 0.8125rem;
+        }
+        
+        /* Controls */
+        .controls { margin-bottom: 12px; }
+        
+        .search-box {
+            position: relative;
+            margin-bottom: 10px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 14px 16px 14px 44px;
+            border: 2px solid #d4e5d4;
+            border-radius: 25px;
+            font-size: 1rem;
+            background: #ffffff;
+            color: #1a1a1a;
+            font-family: inherit;
+            transition: border-color 0.2s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #c9a227;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            color: #6b7b6b;
+        }
+        
+        .per-page {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 2px solid #d4e5d4;
+            font-size: 0.875rem;
+            color: #1a1a1a;
+        }
+        
+        .per-page select {
+            border: none;
+            background: transparent;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a472a;
+            font-family: inherit;
+        }
+        
+        /* Games Grid */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px;
+        }
+        
+        /* Game Card */
+        .game-card {
+            background: #ffffff;
+            border: 2px solid #d4e5d4;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .game-card:hover {
+            border-color: #c9a227;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .game-card:active { transform: scale(0.98); }
+        
+        /* Game Thumbnail */
+        .game-thumb {
+            position: relative;
+            aspect-ratio: 16/10;
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+            overflow: hidden;
+        }
+        
+        .game-thumb-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
+        }
+        
+        /* Badge */
+        .game-badge {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        
+        .badge-new { background: #4caf50; }
+        .badge-special { background: #9c27b0; }
+        
+        /* Season Badge */
+        .game-votes {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(4px);
+            padding: 3px 8px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        
+        /* Play Overlay */
+        .game-play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        
+        .game-card:hover .game-play-overlay { opacity: 1; }
+        
+        .game-play-btn {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            transform: scale(0.8);
+            transition: transform 0.2s ease;
+        }
+        
+        .game-card:hover .game-play-btn { transform: scale(1); }
+        
+        /* Game Card Body */
+        .game-card-body { padding: 10px; }
+        
+        .game-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #1a472a;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .game-category-tag {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #1a472a;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+        
+        .game-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            color: #6b7b6b;
+        }
+        
+        .game-rating { display: flex; align-items: center; gap: 3px; }
+        .game-rating .stars { color: #c9a227; font-size: 0.65rem; }
+        .game-plays { display: flex; align-items: center; gap: 3px; }
+        
+        /* Ad Slots */
+        .ad-slot {
+            background: #e8f5e9;
+            border: 2px dashed #b4d4b4;
+            border-radius: 10px;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a5a4a;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+            padding: 12px;
+            margin: 16px 0;
+        }
+        
+        .ad-slot-large { min-height: 100px; margin: 24px 0; }
+        
+        .ad-row {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 16px 0;
+        }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .page-btn {
+            min-width: 38px;
+            height: 38px;
+            background: #ffffff;
+            border: 2px solid #d4e5d4;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: #1a1a1a;
+            cursor: pointer;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+        
+        .page-btn.active {
+            background: #1a472a;
+            color: #ffffff;
+            border-color: #1a472a;
+        }
+        
+        .page-btn:disabled { opacity: 0.4; cursor: default; }
+        
+        .page-dots {
+            padding: 0 6px;
+            color: #6b7b6b;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .page-info {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.875rem;
+            color: #6b7b6b;
+        }
+        
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #6b7b6b;
+            font-size: 0.9375rem;
+            background: #ffffff;
+            border-radius: 10px;
+            border: 2px dashed #d4e5d4;
+        }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            background: #0d1f0d;
+            color: #ffffff;
+            padding: 32px 16px 20px;
+            margin-top: 32px;
+        }
+        
+        .footer-brand { font-size: 1.25rem; font-weight: 700; color: #c9a227; margin-bottom: 8px; }
+        .footer-desc { font-size: 0.875rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 16px; }
+        .social-icons { display: flex; gap: 10px; margin-bottom: 24px; }
+        
+        .social-icon {
+            width: 38px;
+            height: 38px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            transition: background 0.2s ease;
+        }
+        
+        .social-icon:hover { background: #c9a227; }
+        
+        .footer-section-title { font-size: 1rem; margin-bottom: 12px; color: rgba(255,255,255,0.9); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 8px; }
+        .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.875rem; transition: color 0.2s ease; }
+        .footer-links a:hover { color: #c9a227; }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 16px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer-bottom p { font-size: 0.8125rem; color: rgba(255,255,255,0.5); }
+        
+        /* ========== MODAL ========== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+        
+        .modal-overlay.show { display: flex; }
+        
+        .modal {
+            background: #ffffff;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 400px;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            background: #1a472a;
+            color: #ffffff;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        
+        .modal-header h2 { font-size: 1.125rem; }
+        
+        .modal-close {
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 50%;
+            color: #ffffff;
+            font-size: 1.125rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-body { padding: 16px; }
+        
+        .settings-section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .settings-section:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .settings-section h3 { font-size: 0.9375rem; color: #1a472a; margin-bottom: 12px; }
+        
+        .font-size-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+        
+        .font-size-btn {
+            padding: 10px 4px;
+            border: 2px solid #d4e5d4;
+            background: #f8faf8;
+            border-radius: 8px;
+            text-align: center;
+            font-family: inherit;
+            color: #1a1a1a;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .font-size-btn.active { border-color: #c9a227; background: #c9a227; color: #ffffff; }
+        .font-size-btn span { display: block; }
+        .font-size-btn .size-label { font-size: 0.75rem; font-weight: 600; }
+        .font-size-btn .size-preview { font-size: 0.625rem; opacity: 0.7; }
+        
+        .dark-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            background: #f8faf8;
+            border-radius: 10px;
+            border: 1px solid #d4e5d4;
+            font-size: 0.9375rem;
+            color: #1a1a1a;
+        }
+        
+        .toggle-switch { position: relative; width: 50px; height: 28px; }
+        .toggle-switch input { opacity: 0; width: 0; height: 0; }
+        
+        .toggle-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #b4b4b4;
+            border-radius: 28px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .toggle-slider:before {
+            content: "";
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            left: 3px;
+            bottom: 3px;
+            background: #ffffff;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        
+        .toggle-switch input:checked + .toggle-slider { background: #c9a227; }
+        .toggle-switch input:checked + .toggle-slider:before { transform: translateX(22px); }
+        
+        .btn-change-lang {
+            width: 100%;
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            border-radius: 25px;
+            font-size: 0.9375rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        /* Language Popup */
+        .lang-popup { max-width: 500px; }
+        
+        .lang-popup-header {
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .lang-popup-header h2 { font-size: 1.125rem; margin-bottom: 4px; }
+        .lang-popup-header p { font-size: 0.875rem; opacity: 0.9; }
+        
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            padding: 16px;
+        }
+        
+        .lang-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 6px;
+            border: 2px solid #d4e5d4;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #1a1a1a;
+            background: #f8faf8;
+            min-height: 70px;
+            transition: all 0.2s ease;
+        }
+        
+        .lang-option:hover { border-color: #c9a227; background: #e8f5e9; }
+        .lang-option.selected { border-color: #c9a227; background: #c9a227; color: #ffffff; }
+        
+        .lang-flag { font-size: 1.25rem; margin-bottom: 4px; }
+        .lang-name { font-size: 0.6875rem; font-weight: 600; text-align: center; }
+        
+        .lang-popup-footer {
+            padding: 12px 16px 16px;
+            text-align: center;
+        }
+        
+        .btn-confirm {
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            color: #ffffff;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        /* FAB */
+        .share-fab {
+            position: fixed;
+            bottom: 20px;
+            right: 16px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #c9a227, #e6c84a);
+            border: none;
+            border-radius: 50%;
+            color: #ffffff;
+            cursor: pointer;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(201,162,39,0.4);
+        }
+        
+        .toast {
+            position: fixed;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a472a;
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.875rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 101;
+            text-align: center;
+            pointer-events: none;
+        }
+        .toast.show { opacity: 1; }
+        
+        /* ========== DARK THEME ========== */
+        [data-theme="dark"] body { background-color: #121212; color: #e0e0e0; }
+        [data-theme="dark"] .header { background: #1a1a1a; border-bottom-color: #c9a227; }
+        [data-theme="dark"] .nav { background: #1e3a1e; }
+        [data-theme="dark"] .season-tabs { background: #1e1e1e; border-color: #333333; }
+        [data-theme="dark"] .tab-btn { background: #252525; border-color: #333333; color: #a0d0a0; }
+        [data-theme="dark"] .tab-btn.active { background: #2d5a3d; color: #ffffff; border-color: #2d5a3d; }
+        [data-theme="dark"] .search-input { background: #1e1e1e; border-color: #333333; color: #e0e0e0; }
+        [data-theme="dark"] .search-icon { color: #888888; }
+        [data-theme="dark"] .per-page { background: #1e1e1e; border-color: #333333; color: #e0e0e0; }
+        [data-theme="dark"] .per-page select { color: #6ab060; }
+        [data-theme="dark"] .game-card { background: #1e1e1e; border-color: #333333; }
+        [data-theme="dark"] .game-title { color: #a0d0a0; }
+        [data-theme="dark"] .game-category-tag { background: #1e3a1e; color: #a0d0a0; }
+        [data-theme="dark"] .game-meta { color: #888888; }
+        [data-theme="dark"] .pagination .page-btn { background: #1e1e1e; border-color: #333333; color: #e0e0e0; }
+        [data-theme="dark"] .pagination .page-btn.active { background: #2d5a3d; border-color: #2d5a3d; }
+        [data-theme="dark"] .page-dots { color: #888888; }
+        [data-theme="dark"] .page-info { color: #888888; }
+        [data-theme="dark"] .empty-state { background: #1e1e1e; border-color: #333333; color: #888888; }
+        [data-theme="dark"] .ad-slot { background: #1a2a1a; border-color: #2a4a2a; color: #6a8a6a; }
+        [data-theme="dark"] .footer { background: #1a1a1a; }
+        [data-theme="dark"] .modal { background: #1e1e1e; }
+        [data-theme="dark"] .modal-header { background: #2d5a3d; }
+        [data-theme="dark"] .lang-option { background: #252525; border-color: #333333; color: #e0e0e0; }
+        [data-theme="dark"] .lang-option:hover { border-color: #c9a227; background: #2a2a2a; }
+        [data-theme="dark"] .lang-option.selected { background: #c9a227; border-color: #c9a227; color: #ffffff; }
+        [data-theme="dark"] .settings-section { border-bottom-color: #333333; }
+        [data-theme="dark"] .settings-section h3 { color: #6ab060; }
+        [data-theme="dark"] .font-size-btn { background: #252525; border-color: #333333; color: #e0e0e0; }
+        [data-theme="dark"] .font-size-btn.active { background: #c9a227; border-color: #c9a227; color: #ffffff; }
+        [data-theme="dark"] .dark-toggle { background: #252525; border-color: #333333; color: #e0e0e0; }
+        [data-theme="dark"] .btn-confirm, [data-theme="dark"] .btn-change-lang { background: linear-gradient(135deg, #b8922a, #d4b840); }
+        [data-theme="dark"] .toast { background: #2d5a3d; }
+        [data-theme="dark"] .share-fab { background: linear-gradient(135deg, #b8922a, #d4b840); }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (min-width: 480px) {
+            .games-grid { grid-template-columns: repeat(3, 1fr); }
+            .lang-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        @media (min-width: 600px) {
+            .main { padding-left: 20px; padding-right: 20px; }
+            .season-title { font-size: 1.375rem; }
+            .games-grid { grid-template-columns: repeat(4, 1fr); }
+            .ad-row { flex-direction: row; }
+            .ad-row .ad-slot { flex: 1; }
+        }
+        
+        @media (min-width: 800px) {
+            .games-grid { grid-template-columns: repeat(5, 1fr); }
+            .footer { padding: 40px 24px 24px; }
+            .footer-content { display: flex; gap: 40px; max-width: 900px; margin: 0 auto; }
+            .footer-brand-section { flex: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Popup -->
+    <div class="modal-overlay" id="langPopup">
+        <div class="modal lang-popup">
+            <div class="lang-popup-header">
+                <h2>Pilih Bahasa Anda</h2>
+                <p>Pilih bahasa untuk pengalaman belajar terbaik</p>
+            </div>
+            <div class="lang-grid">
+                <a href="https://mibenglish.com/learn/" class="lang-option"><span class="lang-flag">🇬🇧</span><span class="lang-name">English</span></a>
+                <a href="https://mibenglish.com/id/learn/" class="lang-option selected"><span class="lang-flag">🇮🇩</span><span class="lang-name">Indonesia</span></a>
+                <a href="https://mibenglish.com/ar/learn/" class="lang-option"><span class="lang-flag">🇸🇦</span><span class="lang-name">Arab</span></a>
+                <a href="https://mibenglish.com/zh/learn/" class="lang-option"><span class="lang-flag">🇨🇳</span><span class="lang-name">Mandarin</span></a>
+                <a href="https://mibenglish.com/ja/learn/" class="lang-option"><span class="lang-flag">🇯🇵</span><span class="lang-name">Jepang</span></a>
+                <a href="https://mibenglish.com/ko/learn/" class="lang-option"><span class="lang-flag">🇰🇷</span><span class="lang-name">Korea</span></a>
+                <a href="https://mibenglish.com/vi/learn/" class="lang-option"><span class="lang-flag">🇻🇳</span><span class="lang-name">Vietnam</span></a>
+                <a href="https://mibenglish.com/th/learn/" class="lang-option"><span class="lang-flag">🇹🇭</span><span class="lang-name">Thai</span></a>
+                <a href="https://mibenglish.com/hi/learn/" class="lang-option"><span class="lang-flag">🇮🇳</span><span class="lang-name">Hindi</span></a>
+                <a href="https://mibenglish.com/bn/learn/" class="lang-option"><span class="lang-flag">🇧🇩</span><span class="lang-name">Bengali</span></a>
+                <a href="https://mibenglish.com/ur/learn/" class="lang-option"><span class="lang-flag">🇵🇰</span><span class="lang-name">Urdu</span></a>
+                <a href="https://mibenglish.com/sw/learn/" class="lang-option"><span class="lang-flag">🇰🇪</span><span class="lang-name">Swahili</span></a>
+                <a href="https://mibenglish.com/es/learn/" class="lang-option"><span class="lang-flag">🇪🇸</span><span class="lang-name">Spanyol</span></a>
+                <a href="https://mibenglish.com/pt/learn/" class="lang-option"><span class="lang-flag">🇵🇹</span><span class="lang-name">Portugis</span></a>
+                <a href="https://mibenglish.com/fr/learn/" class="lang-option"><span class="lang-flag">🇫🇷</span><span class="lang-name">Prancis</span></a>
+                <a href="https://mibenglish.com/de/learn/" class="lang-option"><span class="lang-flag">🇩🇪</span><span class="lang-name">Jerman</span></a>
+                <a href="https://mibenglish.com/it/learn/" class="lang-option"><span class="lang-flag">🇮🇹</span><span class="lang-name">Italia</span></a>
+                <a href="https://mibenglish.com/ru/learn/" class="lang-option"><span class="lang-flag">🇷🇺</span><span class="lang-name">Rusia</span></a>
+                <a href="https://mibenglish.com/pl/learn/" class="lang-option"><span class="lang-flag">🇵🇱</span><span class="lang-name">Polandia</span></a>
+                <a href="https://mibenglish.com/tr/learn/" class="lang-option"><span class="lang-flag">🇹🇷</span><span class="lang-name">Turki</span></a>
+            </div>
+            <div class="lang-popup-footer">
+                <button class="btn-confirm" onclick="closeLangPopup()">Lanjutkan dalam Bahasa Indonesia</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Settings Modal -->
+    <div class="modal-overlay" id="settingsOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Pengaturan</h2>
+                <button class="modal-close" onclick="closeSettings()">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h3>Ukuran Font</h3>
+                    <div class="font-size-grid">
+                        <button class="font-size-btn" data-size="small" onclick="setFontSize('small')">
+                            <span class="size-label">Kecil</span>
+                            <span class="size-preview">Aa</span>
+                        </button>
+                        <button class="font-size-btn active" data-size="normal" onclick="setFontSize('normal')">
+                            <span class="size-label">Normal</span>
+                            <span class="size-preview">Aa</span>
+                        </button>
+                        <button class="font-size-btn" data-size="large" onclick="setFontSize('large')">
+                            <span class="size-label">Besar</span>
+                            <span class="size-preview">Aa</span>
+                        </button>
+                        <button class="font-size-btn" data-size="xlarge" onclick="setFontSize('xlarge')">
+                            <span class="size-label">Sangat Besar</span>
+                            <span class="size-preview">Aa</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h3>Tampilan</h3>
+                    <div class="dark-toggle">
+                        <span>Mode Gelap</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="darkToggle" onchange="toggleDarkMode()">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h3>Bahasa</h3>
+                    <button class="btn-change-lang" onclick="openLangPopup()">Ganti Bahasa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="brand">📚 MIBEnglish</a>
+        <div class="header-actions">
+            <button class="lang-btn" onclick="openLangPopup()">
+                <span>🇮🇩</span>
+                <span>ID</span>
+                <span>▼</span>
+            </button>
+            <button class="settings-btn" onclick="openSettings()">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.51,8.1,5.74,7.56,6.03L5.18,5.07c-0.22-0.08-0.47,0-0.59,0.22L2.67,8.61c-0.12,0.21-0.07,0.47,0.12,0.61l2.03,1.58c-0.05,0.3-0.07,0.61-0.07,0.94s0.02,0.64,0.07,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54c0.04,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Nav - SAMA PERSIS DENGAN TEMPLATE -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="https://mibenglish.com/dua" class="nav-link">Doa</a>
+            <a href="https://mibenglish.com/id/learn/" class="nav-link active">Belajar</a>
+            <a href="https://mibenglish.com/dictionary/" class="nav-link">Kamus</a>
+            <a href="https://mibenglish.com/games/" class="nav-link">Permainan</a>
+            <a href="https://mibenglish.com/market/" class="nav-link">Pasar</a>
+        </div>
+    </nav>
+    
+    <!-- Main -->
+    <main class="main">
+        <!-- AD 1: Top Banner -->
+        <div class="ad-slot">AdSense - Banner Atas</div>
+        
+        <!-- Season Tabs -->
+        <div class="season-tabs">
+            <div class="tabs-inner" id="navTabs"></div>
+        </div>
+        
+        <!-- Season Header -->
+        <div class="season-header">
+            <h1 class="season-title" id="seasonTitle">Memuat...</h1>
+            <p class="season-desc" id="seasonDesc">Silakan pilih musim.</p>
+            <span class="season-meta" id="episodeRange">-</span>
+        </div>
+        
+        <!-- AD 2 -->
+        <div class="ad-slot">AdSense - Banner Tengah 1</div>
+        
+        <!-- Controls -->
+        <div class="controls">
+            <div class="search-box">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+                <input type="text" class="search-input" id="searchInput" placeholder="Cari episode...">
+            </div>
+            <div class="per-page">
+                <span>Tampilkan:</span>
+                <select id="perPageSelect">
+                    <option value="25">25</option>
+                    <option value="50" selected>50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Games Grid -->
+        <div class="games-grid" id="gamesGrid"></div>
+        
+        <!-- Pagination -->
+        <div class="pagination" id="pagination"></div>
+        <div class="page-info" id="pageInfo"></div>
+        
+        <!-- AD 3 -->
+        <div class="ad-slot ad-slot-large">AdSense - Banner Besar</div>
+        
+        <!-- AD 4 & 5 -->
+        <div class="ad-row">
+            <div class="ad-slot">AdSense - Persegi Kiri</div>
+            <div class="ad-slot">AdSense - Persegi Kanan</div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand-section">
+                <div class="footer-brand">📚 MIBEnglish Belajar</div>
+                <p class="footer-desc">Pembelajaran bahasa Inggris, dirancang dengan penuh perhatian untuk berbagai pikiran. Tersedia dalam 20 bahasa — karena kelancaran bukan satu ukuran untuk semua.</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/mibenglish" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://youtube.com/@mibenglish" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@mibenglish" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                    </a>
+                    <a href="https://facebook.com/mibenglish" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-section-title">Dukungan</h4>
+                <ul class="footer-links">
+                    <li><a href="https://mibenglish.com/about.html">Tentang</a></li>
+                    <li><a href="https://mibenglish.com/contact.html">Kontak</a></li>
+                    <li><a href="https://mibenglish.com/privacy.html">Kebijakan Privasi</a></li>
+                    <li><a href="https://mibenglish.com/terms.html">Syarat & Ketentuan</a></li>
+                    <li><a href="https://mibenglish.com/disclaimer.html">Penafian</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MIBEnglish. Hak cipta dilindungi.</p>
+        </div>
+    </footer>
+    
+    <!-- FAB -->
+    <button class="share-fab" id="shareFab">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+    </button>
+    <div class="toast" id="toast">Tautan disalin!</div>
+
+<script>
+// ========== SETTINGS FUNCTIONS ==========
+document.addEventListener('DOMContentLoaded', function() {
+    var savedFontSize = localStorage.getItem('mibFontSize') || 'normal';
+    var savedTheme = localStorage.getItem('mibTheme') || 'light';
+    
+    document.documentElement.setAttribute('data-font-size', savedFontSize);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    var fontSizeBtns = document.querySelectorAll('.font-size-btn');
+    fontSizeBtns.forEach(function(btn) {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-size') === savedFontSize) {
+            btn.classList.add('active');
+        }
+    });
+    
+    if (savedTheme === 'dark') {
+        document.getElementById('darkToggle').checked = true;
+    }
+    
+    // Initialize
+    selectSeason(0);
+});
+
+function openSettings() { document.getElementById('settingsOverlay').classList.add('show'); }
+function closeSettings() { document.getElementById('settingsOverlay').classList.remove('show'); }
+function openLangPopup() { document.getElementById('langPopup').classList.add('show'); }
+function closeLangPopup() { document.getElementById('langPopup').classList.remove('show'); }
+
+function setFontSize(size) {
+    document.documentElement.setAttribute('data-font-size', size);
+    localStorage.setItem('mibFontSize', size);
+    document.querySelectorAll('.font-size-btn').forEach(function(btn) {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-size') === size) btn.classList.add('active');
+    });
+}
+
+function toggleDarkMode() {
+    var isDark = document.getElementById('darkToggle').checked;
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    localStorage.setItem('mibTheme', isDark ? 'dark' : 'light');
+}
+
+document.getElementById('settingsOverlay').addEventListener('click', function(e) { if (e.target === this) closeSettings(); });
+document.getElementById('langPopup').addEventListener('click', function(e) { if (e.target === this) closeLangPopup(); });
+
+// ========== EPISODE DATA ==========
+var BASE_URL = "https://mibenglish.com/id/learn";
+var seasons = [
+    { title: "Musim 1: Fondasi Pengetahuan", desc: "Dasar otak dan kosakata dasar.", themes: [{ n: "Reset Kognitif", c: 10 }, { n: "Perlengkapan Dasar", c: 20 }, { n: "Realitas Saat Ini", c: 30 }, { n: "Komunikasi Fungsional", c: 40 }] },
+    { title: "Musim 2: Kerangka Bahasa", desc: "Struktur kalimat dan tenses.", themes: [{ n: "Kontinum Waktu", c: 20 }, { n: "Sintaksis", c: 30 }, { n: "Deskriptif", c: 30 }, { n: "Praktis", c: 20 }] },
+    { title: "Musim 3: Menenun Makna", desc: "Kalimat kompleks dan nuansa.", themes: [{ n: "Perfect Tenses", c: 30 }, { n: "Penghubung", c: 30 }, { n: "Modal", c: 20 }, { n: "Sosial", c: 20 }] },
+    { title: "Musim 4: Komunikasi Profesional", desc: "Analisis dan komunikasi profesional.", themes: [{ n: "Pasif", c: 30 }, { n: "Kondisional", c: 30 }, { n: "Laporan", c: 20 }, { n: "Profesional", c: 20 }] },
+    { title: "Musim 5: Komunikasi Strategis", desc: "Soft skill dan ekspresi idiomatik.", themes: [{ n: "Korporat", c: 30 }, { n: "Idiom", c: 30 }, { n: "Mendengar", c: 20 }, { n: "Persuasi", c: 20 }] },
+    { title: "Musim 6: Bahasa Akademis", desc: "Akademis: esai dan debat.", themes: [{ n: "Tata Bahasa Lanjutan", c: 30 }, { n: "Penulisan", c: 30 }, { n: "Membaca", c: 20 }, { n: "Debat", c: 20 }] },
+    { title: "Musim 7: Titik Kendali", desc: "Kepemimpinan dan strategi.", themes: [{ n: "Kepemimpinan", c: 30 }, { n: "Strategi", c: 30 }, { n: "Krisis", c: 20 }, { n: "Kehadiran", c: 20 }] },
+    { title: "Musim 8: Jejak Keahlian", desc: "Bahasa teknis khusus industri.", themes: [{ n: "STEM", c: 20 }, { n: "Medis", c: 20 }, { n: "Teknologi", c: 20 }, { n: "Kreatif", c: 40 }] },
+    { title: "Musim 9: Jembatan Global", desc: "Budaya global dan jaringan.", themes: [{ n: "Budaya", c: 30 }, { n: "Sastra", c: 30 }, { n: "Jaringan", c: 20 }, { n: "Bercerita", c: 20 }] },
+    { title: "Musim 10: Puncak Integrasi", desc: "Kesempurnaan akhir.", themes: [{ n: "Kesempurnaan", c: 30 }, { n: "Linguistik", c: 30 }, { n: "Pemikiran", c: 20 }, { n: "Akhir", c: 20 }] }
+];
+
+var specialEpisodes = {
+    1: "Pengantar: Bagaimana Otak Belajar Bahasa",
+    100: "Pencapaian: Tinjauan 100 Episode Pertama",
+    500: "Tengah Kurikulum: Dari Dasar ke Menengah",
+    1000: "Grand Finale: Dari Pembelajar ke Ahli"
+};
+
+var currentSeason = 0;
+var currentPage = 1;
+var perPage = 50;
+var searchQuery = '';
+var episodes = [];
+var searchTimer = null;
+
+function $(id) { return document.getElementById(id); }
+
+function buildEpisodes(seasonIdx) {
+    var eps = [];
+    var num = 1;
+    for (var s = 0; s < seasons.length; s++) {
+        for (var t = 0; t < seasons[s].themes.length; t++) {
+            var theme = seasons[s].themes[t];
+            for (var i = 0; i < theme.c; i++) {
+                if (s === seasonIdx) {
+                    eps.push({ num: num, sNum: s + 1, title: specialEpisodes[num] || "Episode " + num, theme: theme.n });
+                }
+                num++;
+            }
+        }
+    }
+    return eps;
+}
+
+function selectSeason(idx) {
+    currentSeason = idx;
+    currentPage = 1;
+    searchQuery = '';
+    $('searchInput').value = '';
+    
+    // Build tabs if not exists
+    if ($('navTabs').children.length === 0) {
+        for (var i = 0; i < seasons.length; i++) {
+            var btn = document.createElement('button');
+            btn.className = 'tab-btn' + (i === 0 ? ' active' : '');
+            btn.textContent = seasons[i].title.split(':')[0];
+            btn.onclick = (function(seasonIdx) { return function() { selectSeason(seasonIdx); }; })(i);
+            $('navTabs').appendChild(btn);
+        }
+    }
+    
+    var tabBtns = document.querySelectorAll('.tab-btn');
+    tabBtns.forEach(function(btn, i) {
+        btn.classList.toggle('active', i === idx);
+    });
+    
+    var s = seasons[idx];
+    $('seasonTitle').textContent = s.title;
+    $('seasonDesc').textContent = s.desc;
+    
+    var start = 1;
+    for (var i = 0; i < idx; i++) {
+        for (var t = 0; t < seasons[i].themes.length; t++) {
+            start += seasons[i].themes[t].c;
+        }
+    }
+    
+    episodes = buildEpisodes(idx);
+    $('episodeRange').textContent = "Episode " + start + " - " + (start + episodes.length - 1);
+    render();
+}
+
+function render() {
+    var filtered = [];
+    if (searchQuery) {
+        for (var i = 0; i < episodes.length; i++) {
+            var e = episodes[i];
+            if (e.title.toLowerCase().indexOf(searchQuery) !== -1 || 
+                String(e.num).indexOf(searchQuery) !== -1 || 
+                e.theme.toLowerCase().indexOf(searchQuery) !== -1) {
+                filtered.push(e);
+            }
+        }
+    } else {
+        filtered = episodes;
+    }
+    
+    var total = filtered.length;
+    var totalPages = Math.ceil(total / perPage);
+    if (currentPage > totalPages) currentPage = Math.max(1, totalPages);
+    
+    var start = (currentPage - 1) * perPage;
+    var pageEps = filtered.slice(start, start + perPage);
+    
+    if (pageEps.length === 0) {
+        $('gamesGrid').innerHTML = '<div class="empty-state">Tidak ada hasil untuk "' + searchQuery + '"</div>';
+    } else {
+        var html = '';
+        for (var i = 0; i < pageEps.length; i++) {
+            var e = pageEps[i];
+            var badgeClass = '';
+            var badgeText = '';
+            if (specialEpisodes[e.num]) {
+                badgeClass = 'badge-special';
+                badgeText = 'spesial';
+            }
+            
+            html += '<a href="' + BASE_URL + '/season' + e.sNum + '/eps' + e.num + '.html" class="game-card">';
+            html += '<div class="game-thumb">';
+            html += '<div class="game-thumb-placeholder">Ep.' + e.num + '</div>';
+            if (badgeText) {
+                html += '<span class="game-badge ' + badgeClass + '">' + badgeText + '</span>';
+            }
+            html += '<div class="game-votes">M' + e.sNum + '</div>';
+            html += '<div class="game-play-overlay"><div class="game-play-btn">';
+            html += '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+            html += '</div></div></div>';
+            html += '<div class="game-card-body">';
+            html += '<h3 class="game-title">' + e.title + '</h3>';
+            html += '<span class="game-category-tag">' + e.theme + '</span>';
+            html += '<div class="game-meta">';
+            html += '<div class="game-rating"><span class="stars">★</span><span>4.8</span></div>';
+            html += '<div class="game-plays">📚 Ep.' + e.num + '</div>';
+            html += '</div></div></a>';
+        }
+        $('gamesGrid').innerHTML = html;
+    }
+    
+    renderPagination(totalPages);
+    $('pageInfo').textContent = total > 0 ? (start + 1) + "-" + Math.min(start + perPage, total) + " dari " + total + " episode" : '';
+}
+
+function renderPagination(totalPages) {
+    if (totalPages <= 1) { $('pagination').innerHTML = ''; return; }
+    
+    var pages = [];
+    if (totalPages <= 5) {
+        for (var i = 1; i <= totalPages; i++) pages.push(i);
+    } else if (currentPage <= 3) {
+        pages = [1, 2, 3, 4, '...', totalPages];
+    } else if (currentPage >= totalPages - 2) {
+        pages = [1, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages];
+    } else {
+        pages = [1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages];
+    }
+    
+    var html = '<button class="page-btn" onclick="goPage(' + (currentPage - 1) + ')"' + (currentPage === 1 ? ' disabled' : '') + '>←</button>';
+    for (var i = 0; i < pages.length; i++) {
+        var p = pages[i];
+        if (p === '...') {
+            html += '<span class="page-dots">...</span>';
+        } else {
+            html += '<button class="page-btn' + (p === currentPage ? ' active' : '') + '" onclick="goPage(' + p + ')">' + p + '</button>';
+        }
+    }
+    html += '<button class="page-btn" onclick="goPage(' + (currentPage + 1) + ')"' + (currentPage === totalPages ? ' disabled' : '') + '>→</button>';
+    $('pagination').innerHTML = html;
+}
+
+function goPage(p) {
+    currentPage = p;
+    render();
+    window.scrollTo({ top: 200, behavior: 'smooth' });
+}
+
+// Search
+$('searchInput').addEventListener('input', function(e) {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(function() {
+        searchQuery = e.target.value.toLowerCase().trim();
+        currentPage = 1;
+        render();
+    }, 250);
+});
+
+// Per page
+$('perPageSelect').addEventListener('change', function(e) {
+    perPage = parseInt(e.target.value, 10);
+    currentPage = 1;
+    render();
+});
+
+// Share FAB
+$('shareFab').addEventListener('click', function() {
+    var url = window.location.href;
+    if (navigator.share) {
+        navigator.share({ url: url }).catch(function() {
+            copyToClipboard(url);
+        });
+    } else {
+        copyToClipboard(url);
+    }
+});
+
+function copyToClipboard(url) {
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(function() {
+            showToast('Tautan disalin!');
+        }).catch(function() {
+            showToast('Gagal menyalin tautan');
+        });
+    } else {
+        showToast('Gagal menyalin tautan');
+    }
+}
+
+function showToast(message) {
+    $('toast').textContent = message;
+    $('toast').classList.add('show');
+    setTimeout(function() { $('toast').classList.remove('show'); }, 2000);
+}
+</script>
+</body>
+</html>
