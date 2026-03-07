@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="id" data-font-size="normal" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Tentang MIBEnglish - Pelajari misi kami untuk membuat pembelajaran bahasa Inggris dapat diakses oleh semua orang dalam 20 bahasa.">
+    <meta name="keywords" content="MIBEnglish tentang, platform belajar bahasa inggris, tentang kami">
+    <meta name="author" content="MIBEnglish">
+    <meta name="theme-color" content="#1a472a">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Tentang Kami - MIBEnglish">
+    <meta property="og:description" content="Pelajari misi kami untuk membuat pembelajaran bahasa Inggris dapat diakses oleh semua orang.">
+    <meta property="og:type" content="website">
+    <title>Tentang Kami - MIBEnglish</title>
+    
+    <link rel="canonical" href="https://mibenglish.com/id/about.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========================================
+           LIGHT MODE (DEFAULT)
+        ======================================== */
+        :root {
+            --bg-primary: #f8faf8;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #e8f5e9;
+            --bg-card: #ffffff;
+            --bg-input: #f8faf8;
+            
+            --text-primary: #0a1a0a;
+            --text-secondary: #1a2f1a;
+            --text-muted: #4a5a4a;
+            --text-inverse: #ffffff;
+            
+            --accent-primary: #1a472a;
+            --accent-secondary: #2d5a3d;
+            --accent-tertiary: #3d7a4f;
+            --accent-light: #c8e6d0;
+            
+            --gold-primary: #c9a227;
+            --gold-secondary: #e6c84a;
+            --gold-bg: #fef9e7;
+            
+            --border-light: #c8e6d0;
+            --border-medium: #8bc49f;
+            
+            --shadow-sm: rgba(10, 31, 10, 0.08);
+            --shadow-md: rgba(10, 31, 10, 0.15);
+            --shadow-lg: rgba(10, 31, 10, 0.25);
+            
+            --overlay-bg: rgba(0, 0, 0, 0.7);
+            
+            --transition: all 0.3s ease;
+            --font-size-base: 16px;
+            --font-size-multiplier: 1;
+            
+            --header-bg: #0a1f0a;
+            --nav-bg: #1a472a;
+            --footer-bg: #0a1f0a;
+            --hero-gradient: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
+        }
+        
+        /* ========================================
+           DARK MODE
+        ======================================== */
+        [data-theme="dark"] {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --bg-card: #1c2128;
+            --bg-input: #21262d;
+            
+            --text-primary: #e6edf3;
+            --text-secondary: #b1bac4;
+            --text-muted: #8b949e;
+            --text-inverse: #0d1117;
+            
+            --accent-primary: #238636;
+            --accent-secondary: #2ea043;
+            --accent-tertiary: #3fb950;
+            --accent-light: #388b61;
+            
+            --gold-primary: #d4a72c;
+            --gold-secondary: #e3b341;
+            --gold-bg: #2d2418;
+            
+            --border-light: #30363d;
+            --border-medium: #484f58;
+            
+            --shadow-sm: rgba(0, 0, 0, 0.3);
+            --shadow-md: rgba(0, 0, 0, 0.4);
+            --shadow-lg: rgba(0, 0, 0, 0.6);
+            
+            --overlay-bg: rgba(0, 0, 0, 0.85);
+            
+            --header-bg: #010409;
+            --nav-bg: #0d1117;
+            --footer-bg: #010409;
+            --hero-gradient: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1c2128 100%);
+        }
+        
+        [data-font-size="small"] { --font-size-multiplier: 0.875; }
+        [data-font-size="normal"] { --font-size-multiplier: 1; }
+        [data-font-size="large"] { --font-size-multiplier: 1.125; }
+        [data-font-size="xlarge"] { --font-size-multiplier: 1.25; }
+        
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        html { scroll-behavior: smooth; font-size: calc(var(--font-size-base) * var(--font-size-multiplier)); }
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        
+        
+        /* ===== Header ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--header-bg);
+            color: #ffffff;
+            padding: 0.75rem 1rem;
+            z-index: 1000;
+            box-shadow: 0 2px 15px var(--shadow-md);
+            border-bottom: 2px solid var(--gold-primary);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .brand:hover { color: var(--gold-primary); }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .settings-btn {
+            background: none;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .settings-btn:hover {
+            background: rgba(255,255,255,0.1);
+            color: var(--gold-primary);
+        }
+        
+        /* ===== Navigation ===== */
+        nav {
+            position: fixed;
+            top: 3.75rem;
+            left: 0;
+            right: 0;
+            background: var(--nav-bg);
+            padding: 0.75rem 1rem;
+            z-index: 999;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 0.25rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.5rem 0.7rem;
+            border-radius: 25px;
+            transition: var(--transition);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            background: var(--gold-primary);
+            color: var(--text-inverse);
+        }
+        
+        /* ===== Main Content ===== */
+        main {
+            margin-top: 8.125rem;
+        }
+        
+        /* ===== Page Header ===== */
+        .page-header {
+            background: var(--hero-gradient);
+            color: #ffffff;
+            padding: 4rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(201,162,39,0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 30%, rgba(201,162,39,0.1) 0%, transparent 40%);
+            pointer-events: none;
+        }
+        
+        .page-header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+            color: #ffffff;
+        }
+        
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        /* ===== Content Section ===== */
+        .content-section {
+            background: var(--bg-primary);
+            padding: 3rem 1rem;
+        }
+        
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .content-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 2px solid var(--border-light);
+            box-shadow: 0 4px 15px var(--shadow-sm);
+        }
+        
+        .content-card h2 {
+            color: var(--accent-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border-light);
+        }
+        
+        .content-card h3 {
+            color: var(--accent-secondary);
+            font-size: 1.15rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        .content-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .content-card ul {
+            color: var(--text-secondary);
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .content-card ul li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+        
+        .content-card a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .content-card a:hover {
+            color: var(--gold-primary);
+            text-decoration: underline;
+        }
+        
+        .highlight-box {
+            background: var(--gold-bg);
+            border-left: 4px solid var(--gold-primary);
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+        
+        /* ===== Features Grid ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature-item {
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            border-color: var(--gold-primary);
+            transform: translateY(-3px);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .feature-item h3 {
+            color: var(--accent-primary);
+            font-size: 1.1rem;
+            margin: 0 0 0.5rem;
+        }
+        
+        .feature-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* ===== Timeline ===== */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-light);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+        
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--gold-primary);
+            border-radius: 50%;
+            transform: translateX(-5px);
+        }
+        
+        .timeline-year {
+            font-weight: 700;
+            color: var(--gold-primary);
+            font-size: 0.9rem;
+        }
+        
+        .timeline-content h3 {
+            margin: 0.25rem 0;
+            font-size: 1rem;
+        }
+        
+        .timeline-content p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* ===== Values Grid ===== */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .value-item {
+            background: var(--bg-tertiary);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+            border: 1px solid var(--border-light);
+        }
+        
+        .value-item h4 {
+            color: var(--accent-primary);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .value-item p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+        
+        /* ===== CTA Section ===== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 100%);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 1.75rem;
+            color: var(--text-inverse);
+            margin-bottom: 0.75rem;
+        }
+        
+        .cta-content p {
+            color: var(--text-inverse);
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-cta {
+            display: inline-block;
+            background: var(--accent-primary);
+            color: #ffffff;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-cta:hover {
+            background: var(--accent-secondary);
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+        
+        /* ===== Footer ===== */
+        footer {
+            background: var(--footer-bg);
+            color: #ffffff;
+            padding: 3rem 1rem 1.5rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--gold-primary);
+        }
+        
+        .footer-brand p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .footer-section h4 {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold-primary);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .social-icon:hover {
+            background: var(--gold-primary);
+            color: var(--text-inverse);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            opacity: 0.6;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+        }
+        
+        /* ===== Settings Modal ===== */
+        .settings-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--overlay-bg);
+            z-index: 2000;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .settings-overlay.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .settings-modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.9);
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 85vh;
+            overflow-y: auto;
+            z-index: 2001;
+            display: none;
+            opacity: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 20px 60px var(--shadow-lg);
+            border: 1px solid var(--border-light);
+        }
+        
+        .settings-modal.show {
+            display: block;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        .settings-header {
+            background: var(--accent-primary);
+            color: #ffffff;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 16px 16px 0 0;
+        }
+        
+        .settings-header h2 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        
+        .settings-close {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: #ffffff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .settings-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .settings-body {
+            padding: 1.5rem;
+        }
+        
+        .settings-section {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+        
+        .settings-section:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .settings-section h3 {
+            color: var(--accent-primary);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .font-size-options {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .font-size-btn {
+            flex: 1;
+            padding: 0.8rem;
+            border: 2px solid var(--border-light);
+            background: var(--bg-card);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            font-family: inherit;
+            color: var(--text-primary);
+        }
+        
+        .font-size-btn:hover {
+            border-color: var(--gold-primary);
+        }
+        
+        .font-size-btn.active {
+            border-color: var(--gold-primary);
+            background: var(--gold-primary);
+            color: var(--text-inverse);
+        }
+        
+        .font-size-btn .size-label {
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: block;
+        }
+        
+        .font-size-btn .size-preview {
+            font-size: 0.7rem;
+            opacity: 0.7;
+        }
+        
+        .dark-mode-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            background: var(--bg-card);
+            border-radius: 10px;
+            color: var(--text-primary);
+        }
+        
+        .toggle-switch {
+            position: relative;
+            width: 56px;
+            height: 30px;
+        }
+        
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--border-medium);
+            transition: 0.3s;
+            border-radius: 30px;
+        }
+        
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.3s;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .toggle-switch input:checked + .toggle-slider {
+            background-color: var(--gold-primary);
+        }
+        
+        .toggle-switch input:checked + .toggle-slider:before {
+            transform: translateX(26px);
+        }
+        
+        /* ===== Responsive ===== */
+        @media (max-width: 1024px) {
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2rem; }
+            .features-grid { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr; }
+            .stats-row { gap: 1.5rem; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .social-icons { justify-content: center; }
+            .content-card { padding: 1.5rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .header-container { gap: 0.5rem; }
+            .brand { font-size: 1.2rem; }
+            .page-header { padding: 3rem 1rem; }
+            .page-header h1 { font-size: 1.75rem; }
+            .font-size-options { flex-wrap: wrap; }
+            .font-size-btn { min-width: calc(50% - 0.25rem); }
+        }
+        
+        /* ===== Accessibility ===== */
+        :focus { outline: 2px solid var(--gold-primary); outline-offset: 2px; }
+        
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation: none !important; transition: none !important; }
+        }
+        
+        @media print {
+            header, nav, .settings-overlay, .settings-modal, footer { display: none !important; }
+            main { margin-top: 0 !important; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="https://mibenglish.com/" class="brand">MIBEnglish</a>
+            <div class="header-actions">
+                <button class="settings-btn" onclick="openSettings()" aria-label="Pengaturan">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="https://mibenglish.com/" class="nav-link">Beranda</a>
+            <a href="https://mibenglish.com/id/about.html" class="nav-link active">Tentang</a>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>Tentang MIBEnglish</h1>
+                <p>Memberi kesempatan bagi siapa saja di dunia untuk belajar bahasa Inggris dengan nyaman dalam bahasa ibu mereka.</p>
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Bahasa</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Brain Boosts</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">Gratis</div>
+                        <div class="stat-label">Selamanya</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Content Section -->
+        <section class="content-section">
+            <div class="content-container">
+                <!-- Mission -->
+                <div class="content-card">
+                    <h2>Misi Kami</h2>
+                    <p>Di MIBEnglish, kami percaya bahwa bahasa tidak boleh menjadi penghalang untuk mempelajari bahasa lain. Misi kami adalah membuat pendidikan bahasa Inggris berkualitas dapat diakses oleh semua orang, terlepas dari bahasa ibu mereka. Kami menyediakan sumber belajar bahasa Inggris yang komprehensif yang telah diterjemahkan ke dalam 20 bahasa berbeda, memastikan bahwa pelajar dari berbagai latar belakang dapat memahami dan menguasai bahasa Inggris secara efektif.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Visi Kami:</strong> Sebuah dunia di mana setiap orang memiliki kesempatan untuk belajar bahasa Inggris dan membuka kemungkinan baru dalam pendidikan, karir, dan pengembangan diri.</p>
+                    </div>
+                </div>
+                
+                <!-- What We Offer -->
+                <div class="content-card">
+                    <h2>Yang Kami Tawarkan</h2>
+                    <p>MIBEnglish menyediakan rangkaian lengkap sumber belajar bahasa Inggris yang dirancang untuk membawa Anda dari tingkat pemula hingga mahir:</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">📚</div>
+                            <h3>Pelajaran Terstruktur</h3>
+                            <p>Kurikulum progresif dari dasar hingga mahir</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🌍</div>
+                            <h3>20 Bahasa</h3>
+                            <p>Belajar dalam bahasa ibu Anda</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📝</div>
+                            <h3>Latihan Praktik</h3>
+                            <p>Latihan interaktif untuk memperkuat pembelajaran</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎯</div>
+                            <h3>Fokus Praktis</h3>
+                            <p>Bahasa Inggris untuk penggunaan sehari-hari</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Our Approach -->
+                <div class="content-card">
+                    <h2>Pendekatan Kami</h2>
+                    <p>Kami telah mengembangkan metodologi pengajaran yang mengutamakan aplikasi praktis dan perkembangan bertahap. Konten kami dirancang untuk menarik, relevan, dan dapat langsung diterapkan dalam situasi nyata. Berikut adalah pendekatan kami dalam pendidikan bahasa Inggris:</p>
+                    
+                    <ul>
+                        <li><strong>Dukungan Bahasa Ibu:</strong> Semua pelajaran tersedia dalam bahasa ibu Anda, membuat konsep kompleks lebih mudah dipahami dan diingat.</li>
+                        <li><strong>Pembelajaran Progresif:</strong> Kurikulum kami dimulai dengan dasar-dasar dan secara bertahap melanjutkan ke topik yang lebih kompleks, memastikan fondasi yang kuat.</li>
+                        <li><strong>Aplikasi Praktis:</strong> Setiap pelajaran mencakup contoh dan skenario dunia nyata yang benar-benar akan Anda temui dalam kehidupan sehari-hari.</li>
+                        <li><strong>Pembelajaran Mandiri:</strong> Belajar dengan kecepatan Anda sendiri, mengulang pelajaran sesuai kebutuhan tanpa tekanan atau batas waktu.</li>
+                        <li><strong>Pengembangan Multi-Keterampilan:</strong> Materi kami mencakup keterampilan membaca, menulis, mendengarkan, dan berbicara untuk penguasaan bahasa yang komprehensif.</li>
+                    </ul>
+                </div>
+                
+                <!-- Our Values -->
+                <div class="content-card">
+                    <h2>Nilai-Nilai Kami</h2>
+                    <p>Nilai-nilai inti ini menjadi pedoman dalam segala hal yang kami lakukan di MIBEnglish:</p>
+                    
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <h4>Aksesibilitas</h4>
+                            <p>Pendidikan gratis untuk semua orang, di mana saja</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Kualitas</h4>
+                            <p>Konten akurat dan well-researched</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Inklusivitas</h4>
+                            <p>Mendukung pelajar dari semua latar belakang</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Kesederhanaan</h4>
+                            <p>Pelajaran yang jelas dan mudah dipahami</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Pertumbuhan</h4>
+                            <p>Terus meningkatkan platform kami</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>Komunitas</h4>
+                            <p>Membangun komunitas belajar global</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Our Story -->
+                <div class="content-card">
+                    <h2>Perjalanan Kami</h2>
+                    <p>MIBEnglish dimulai dengan ide sederhana: pembelajaran bahasa Inggris tidak boleh dibatasi oleh hambatan bahasa. Apa yang dimulai sebagai proyek kecil telah berkembang menjadi platform yang melayani pelajar dari seluruh dunia.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">Awal Mula</div>
+                            <div class="timeline-content">
+                                <h3>Proyek Dimulai</h3>
+                                <p>MIBEnglish didirikan dengan tujuan membuat bahasa Inggris dapat diakses oleh penutur non-Inggris di seluruh dunia.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">Pertumbuhan</div>
+                            <div class="timeline-content">
+                                <h3>Ekspansi Bahasa</h3>
+                                <p>Berkembang untuk mendukung berbagai bahasa, menjangkau pelajar di berbagai wilayah dan budaya.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">Saat Ini</div>
+                            <div class="timeline-content">
+                                <h3>20 Bahasa & Terus Berkembang</h3>
+                                <p>Saat ini mendukung 20 bahasa dengan pelajaran komprehensif dan terus memperluas penawaran kami.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Supported Languages -->
+                <div class="content-card">
+                    <h2>Bahasa yang Kami Dukung</h2>
+                    <p>MIBEnglish tersedia dalam bahasa-bahasa berikut, memastikan pelajar dari berbagai latar belakang dapat belajar bahasa Inggris secara efektif:</p>
+                    
+                    <ul>
+                        <li>🇬🇧 English (untuk latihan lanjutan)</li>
+                        <li>🇮🇩 Bahasa Indonesia</li>
+                        <li>🇸🇦 العربية (Arab)</li>
+                        <li>🇨🇳 中文 (Mandarin)</li>
+                        <li>🇯🇵 日本語 (Jepang)</li>
+                        <li>🇰🇷 한국어 (Korea)</li>
+                        <li>🇻🇳 Tiếng Việt (Vietnam)</li>
+                        <li>🇹🇭 ไทย (Thai)</li>
+                        <li>🇮🇳 हिन्दी (Hindi)</li>
+                        <li>🇧🇩 বাংলা (Bengali)</li>
+                        <li>🇵🇰 اردو (Urdu)</li>
+                        <li>🇿🇦 Kiswahili (Swahili)</li>
+                        <li>🇪🇸 Español (Spanyol)</li>
+                        <li>🇧🇷 Português (Portugis)</li>
+                        <li>🇫🇷 Français (Prancis)</li>
+                        <li>🇩🇪 Deutsch (Jerman)</li>
+                        <li>🇮🇹 Italiano (Italia)</li>
+                        <li>🇷🇺 Русский (Rusia)</li>
+                        <li>🇵🇱 Polski (Polandia)</li>
+                        <li>🇹🇷 Türkçe (Turki)</li>
+                        <li>🇬🇷 Ελληνικά (Yunani)</li>
+                    </ul>
+                </div>
+                
+                <!-- Connect -->
+                <div class="content-card">
+                    <h2>Hubungi Kami</h2>
+                    <p>Kami senang mendengar dari pelajar kami! Ikuti kami di media sosial untuk tips, pembaruan, dan interaksi komunitas:</p>
+                    
+                    <ul>
+                        <li><strong>YouTube:</strong> <a href="https://youtube.com/@mibenglish" target="_blank" rel="noopener">@mibenglish</a> - Pelajaran video dan tutorial</li>
+                        <li><strong>TikTok:</strong> <a href="https://tiktok.com/@mibenglish" target="_blank" rel="noopener">@mibenglish</a> - Tips cepat dan konten seru</li>
+                        <li><strong>Instagram:</strong> <a href="https://instagram.com/mibenglish" target="_blank" rel="noopener">@mibenglish</a> - Inspirasi belajar harian</li>
+                        <li><strong>Facebook:</strong> <a href="https://facebook.com/mibenglish" target="_blank" rel="noopener">@mibenglish</a> - Diskusi komunitas</li>
+                    </ul>
+                    
+                    <p>Punya pertanyaan atau masukan? <a href="https://mibenglish.com/id/contact.html">Hubungi kami di sini</a>.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Mulai Belajar Hari Ini</h2>
+                <p>Bergabunglah dengan ribuan pelajar di seluruh dunia dan mulailah perjalanan bahasa Inggris Anda bersama MIBEnglish.</p>
+                <a href="https://mibenglish.com/" class="btn-cta">Jelajahi Pelajaran Kami</a>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>MIBEnglish</h3>
+                    <p>Pembelajaran bahasa Inggris, dirancang dengan cermat mudah dipahami.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/mibenglish" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://youtube.com/@mibenglish" class="social-icon" aria-label="YouTube" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 6.291 9.169 6.291 8.684 0 9.139-.105 9.169-6.291-.029-6.196-.484-6.55-3.723-6.816zm-6.115 10.816l-5.5-3.5 5.5-3.5v7z"/></svg>
+                        </a>
+                        <a href="https://tiktok.com/@mibenglish" class="social-icon" aria-label="TikTok" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                        </a>
+                        <a href="https://facebook.com/mibenglish" class="social-icon" aria-label="Facebook" target="_blank" rel="noopener">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                <h4 class="footer-section-title">Dukungan</h4>
+                <ul class="footer-links">
+                    <li><a href="https://mibenglish.com/id/about.html">Tentang Kami</a></li>
+                    <li><a href="https://mibenglish.com/id/contact.html">Kontak</a></li>
+                    <li><a href="https://mibenglish.com/id/privacy.html">Kebijakan Privasi</a></li>
+                    <li><a href="https://mibenglish.com/id/terms.html">Syarat & Ketentuan</a></li>
+                    <li><a href="https://mibenglish.com/id/disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;MIBEnglish. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Settings Modal -->
+    <div class="settings-overlay" id="settingsOverlay"></div>
+    <div class="settings-modal" id="settingsModal">
+        <div class="settings-header">
+            <h2>Pengaturan</h2>
+            <button class="settings-close" onclick="closeSettings()">✕</button>
+        </div>
+        <div class="settings-body">
+            <div class="settings-section">
+                <h3>Ukuran Font</h3>
+                <div class="font-size-options">
+                    <button class="font-size-btn" data-size="small" onclick="setFontSize('small')">
+                        <span class="size-label">Kecil</span>
+                        <span class="size-preview">Aa</span>
+                    </button>
+                    <button class="font-size-btn active" data-size="normal" onclick="setFontSize('normal')">
+                        <span class="size-label">Normal</span>
+                        <span class="size-preview">Aa</span>
+                    </button>
+                    <button class="font-size-btn" data-size="large" onclick="setFontSize('large')">
+                        <span class="size-label">Besar</span>
+                        <span class="size-preview">Aa</span>
+                    </button>
+                    <button class="font-size-btn" data-size="xlarge" onclick="setFontSize('xlarge')">
+                        <span class="size-label">Sangat Besar</span>
+                        <span class="size-preview">Aa</span>
+                    </button>
+                </div>
+            </div>
+            <div class="settings-section">
+                <h3>Tampilan</h3>
+                <div class="dark-mode-toggle">
+                    <span>Mode Gelap</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedFontSize = localStorage.getItem('mibFontSize') || 'normal';
+            const savedTheme = localStorage.getItem('mibTheme') || 'light';
+            
+            document.documentElement.setAttribute('data-font-size', savedFontSize);
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            
+            document.querySelectorAll('.font-size-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.size === savedFontSize) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            if (savedTheme === 'dark') {
+                document.getElementById('darkModeToggle').checked = true;
+            }
+        });
+        
+        function openSettings() {
+            document.getElementById('settingsOverlay').classList.add('show');
+            document.getElementById('settingsModal').classList.add('show');
+        }
+        
+        function closeSettings() {
+            document.getElementById('settingsOverlay').classList.remove('show');
+            document.getElementById('settingsModal').classList.remove('show');
+        }
+        
+        document.getElementById('settingsOverlay').addEventListener('click', closeSettings);
+        
+        function setFontSize(size) {
+            document.documentElement.setAttribute('data-font-size', size);
+            localStorage.setItem('mibFontSize', size);
+            
+            document.querySelectorAll('.font-size-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.size === size) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+        
+        function toggleDarkMode() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('mibTheme', newTheme);
+        }
+    </script>
+</body>
+</html>
