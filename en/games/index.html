@@ -10,7 +10,7 @@
     <title>Games Database - MIBEnglish</title>
     
     <style>
-        /* ========== BASE RESET ========== */
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -22,13 +22,13 @@
             -webkit-text-size-adjust: 100%;
         }
         
-        /* ========== FONT SIZE SETTINGS ========== */
+
         [data-font-size="small"] { font-size: 14px; }
         [data-font-size="normal"] { font-size: 15px; }
         [data-font-size="large"] { font-size: 18px; }
         [data-font-size="xlarge"] { font-size: 20px; }
         
-        /* ========== LIGHT THEME (DEFAULT) ========== */
+    
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: #f5f7f5;
@@ -39,7 +39,7 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
         
-        /* Header Light */
+
         .header {
             position: fixed;
             top: 0;
@@ -112,7 +112,7 @@
             justify-content: center;
         }
         
-        /* Navigation - SAMA DENGAN TEMPLATE */
+
         .nav {
             position: fixed;
             top: 56px;
@@ -149,7 +149,7 @@
         
         .nav-link:hover, .nav-link.active { background: #c9a227; color: #ffffff; }
         
-        /* Main Content */
+
         .main {
             padding-top: 130px;
             padding-bottom: 24px;
@@ -159,7 +159,7 @@
             padding-right: 12px;
         }
         
-        /* Category Header */
+
         .category-header {
             background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 50%, #3d7a4f 100%);
             color: #ffffff;
@@ -189,7 +189,7 @@
             opacity: 0.3;
         }
         
-        /* Level Filter */
+
         .level-filter {
             background: #ffffff;
             border: 1px solid #d4e5d4;
@@ -229,7 +229,7 @@
             border-color: #c9a227;
         }
         
-        /* Stats Bar */
+
         .stats-bar {
             background: #ffffff;
             border: 1px solid #d4e5d4;
@@ -257,7 +257,7 @@
             letter-spacing: 0.5px;
         }
         
-        /* Games Grid - ROBLOX STYLE */
+
         .games-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -286,7 +286,7 @@
             transform: scale(0.98);
         }
         
-        /* Game Thumbnail */
+
         .game-thumb {
             position: relative;
             aspect-ratio: 16/10;
@@ -319,7 +319,7 @@
             background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 100%);
         }
         
-        /* Badge */
+
         .game-badge {
             position: absolute;
             top: 6px;
@@ -337,7 +337,7 @@
         .badge-featured { background: #ff9800; }
         .badge-top { background: #9c27b0; }
         
-        /* Votes */
+
         .game-votes {
             position: absolute;
             top: 6px;
@@ -360,7 +360,7 @@
             color: #c9a227;
         }
         
-        /* Play Overlay */
+
         .game-play-overlay {
             position: absolute;
             top: 0;
@@ -396,7 +396,7 @@
             transform: scale(1);
         }
         
-        /* Game Card Body */
+
         .game-card-body {
             padding: 10px;
         }
@@ -478,7 +478,7 @@
             margin: 16px 0;
         }
         
-        /* Load More */
+
         .load-more {
             text-align: center;
             padding: 20px 0;
@@ -496,7 +496,7 @@
             font-family: inherit;
         }
         
-        /* Footer */
+
         .footer {
             background: #0d1f0d;
             color: #ffffff;
@@ -566,7 +566,7 @@
             color: rgba(255,255,255,0.5);
         }
         
-        /* Modal Base */
+
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -715,7 +715,7 @@
         .toggle-switch input:checked + .toggle-slider { background: #c9a227; }
         .toggle-switch input:checked + .toggle-slider:before { transform: translateX(22px); }
         
-        /* FAB */
+
         .share-fab {
             position: fixed;
             bottom: 20px;
@@ -752,7 +752,7 @@
         }
         .toast.show { opacity: 1; }
         
-        /* ========== DARK THEME ========== */
+
         [data-theme="dark"] body {
             background-color: #121212;
             color: #e0e0e0;
@@ -871,7 +871,7 @@
             background: linear-gradient(135deg, #b8922a, #d4b840);
         }
         
-        /* ========== RESPONSIVE ========== */
+
         @media (min-width: 480px) {
             .games-grid { grid-template-columns: repeat(3, 1fr); }
         }
@@ -893,7 +893,7 @@
     </style>
 </head>
 <body>
-    <!-- Settings Modal -->
+
     <div class="modal-overlay" id="settingsOverlay">
         <div class="modal">
             <div class="modal-header">
@@ -936,7 +936,7 @@
         </div>
     </div>
 
-    <!-- Header -->
+
     <header class="header">
         <a href="#" class="brand">🎮 MIBEnglish</a>
         <div class="header-actions">
@@ -955,7 +955,7 @@
         </div>
     </header>
     
-    <!-- Nav - SAMA DENGAN TEMPLATE -->
+
     <nav class="nav">
         <div class="nav-inner">
             <a href="https://mibenglish.com/en/dua/" class="nav-link">Dua</a>
@@ -966,12 +966,12 @@
         </div>
     </nav>
     
-    <!-- Main -->
+
     <main class="main">
-        <!-- AD 1: Top Banner -->
+
         <div class="ad-slot ad-slot-banner">AdSense - Banner Atas</div>
         
-        <!-- Category Header -->
+
         <div class="category-header">
             <div class="category-info">
                 <h1 class="category-title">🎮 MIBENGLISH GAMES</h1>
@@ -980,10 +980,10 @@
             <div class="category-icon">🎯</div>
         </div>
         
-        <!-- AD 2: After Category Header -->
+
         <div class="ad-slot ad-slot-inline">AdSense - Banner Tengah 1</div>
         
-        <!-- Level Filter -->
+
         <div class="level-filter">
             <button class="level-btn active" data-level="all" onclick="filterGames('all')">🎯 Semua</button>
             <button class="level-btn" data-level="action" onclick="filterGames('action')">⚔️ Action</button>
@@ -992,33 +992,32 @@
             <button class="level-btn" data-level="sports" onclick="filterGames('sports')">⚽ Sports</button>
             <button class="level-btn" data-level="adventure" onclick="filterGames('adventure')">🗺️ Adventure</button>
             <button class="level-btn" data-level="strategy" onclick="filterGames('strategy')">🧠 Strategy</button>
-            <button class="level-btn" data-level="multiplayer" onclick="filterGames('multiplayer')">👥 Multiplayer</button>
         </div>
         
-        <!-- Games Grid -->
+
         <div class="games-grid" id="gamesGrid"></div>
         
-        <!-- Load More -->
+
         <div class="load-more" id="loadMoreContainer">
             <button class="btn-load-more" id="loadMoreBtn" onclick="loadMore()">Load More Games</button>
         </div>
         
-        <!-- AD 3: After Games Grid -->
+
         <div class="ad-slot ad-slot-large">AdSense - Banner Besar</div>
         
-        <!-- AD 4 & 5: Side by Side -->
+ 
         <div class="ad-row">
             <div class="ad-slot">AdSense - Rectangle Kiri</div>
             <div class="ad-slot">AdSense - Rectangle Kanan</div>
         </div>
     </main>
     
-    <!-- Footer -->
+
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-brand-section">
                 <div class="footer-brand">🎮 MIBEnglish Games</div>
-                <p class="footer-desc">Koleksi ribuan game seru! Mainkan sekarang, gratis tanpa download. Game baru ditambahkan setiap hari!</p>
+                <p class="footer-desc">Koleksi game game seru! Mainkan sekarang, dan upgrade kemampuan bahasamu!</p>
                 <div class="social-icons">
                     <a href="https://instagram.com/mibenglish" class="social-icon">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -1050,14 +1049,14 @@
         </div>
     </footer>
     
-    <!-- FAB -->
+
     <button class="share-fab" id="shareFab">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
     </button>
     <div class="toast" id="toast">Link disalin!</div>
 
 <script>
-// ========== SETTINGS FUNCTIONS ==========
+
 document.addEventListener('DOMContentLoaded', function() {
     var savedFontSize = localStorage.getItem('mibFontSize') || 'normal';
     var savedTheme = localStorage.getItem('mibTheme') || 'light';
@@ -1077,7 +1076,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('darkToggle').checked = true;
     }
     
-    // Initialize
+
     renderGames();
     initLazyLoad();
 });
@@ -1102,9 +1101,7 @@ function toggleDarkMode() {
 
 document.getElementById('settingsOverlay').addEventListener('click', function(e) { if (e.target === this) closeSettings(); });
 
-// ========== GAMES DATA ==========
-// Format: id, title, category, rating, plays, votes%, badge, icon, image (optional)
-// image path: games/images/{id}.jpg atau URL lengkap
+
 const gamesData = [
     { id: 1, title: "Space Invaders", category: "action", rating: 4.8, plays: "1.2M", votes: "98%", badge: "hot", icon: "🚀", image: "" },
     { id: 2, title: "2048 Puzzle", category: "puzzle", rating: 4.9, plays: "2.5M", votes: "96%", badge: "featured", icon: "🔢", image: "" },
@@ -1132,12 +1129,12 @@ const gamesData = [
     { id: 24, title: "MotoGP Racing", category: "racing", rating: 4.7, plays: "1.2M", votes: "94%", badge: "hot", icon: "🏍️", image: "" }
 ];
 
-// State
+
 let displayedGames = 0;
 const GAMES_PER_PAGE = 12;
 let currentFilter = 'all';
 
-// Render Games
+
 function renderGames() {
     const grid = document.getElementById('gamesGrid');
     const filteredGames = currentFilter === 'all' 
@@ -1187,7 +1184,7 @@ function renderGames() {
     
     displayedGames += gamesToShow.length;
     
-    // Hide load more if no more games
+
     const loadMoreContainer = document.getElementById('loadMoreContainer');
     if (displayedGames >= filteredGames.length) {
         loadMoreContainer.style.display = 'none';
@@ -1195,32 +1192,32 @@ function renderGames() {
         loadMoreContainer.style.display = 'block';
     }
     
-    // Update count
+
     document.getElementById('categoryCount').textContent = `${filteredGames.length}+ games tersedia`;
 }
 
-// Filter Games
+
 function filterGames(level) {
     currentFilter = level;
     displayedGames = 0;
     
-    // Update active button
+
     document.querySelectorAll('.level-btn').forEach(btn => {
         btn.classList.remove('active');
         if (btn.getAttribute('data-level') === level) btn.classList.add('active');
     });
     
-    // Clear grid and re-render
+    
     document.getElementById('gamesGrid').innerHTML = '';
     renderGames();
 }
 
-// Load More
+
 function loadMore() {
     renderGames();
 }
 
-// Lazy Load Images
+
 function initLazyLoad() {
     const images = document.querySelectorAll('.game-thumb img');
     const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -1236,7 +1233,7 @@ function initLazyLoad() {
     images.forEach(img => imageObserver.observe(img));
 }
 
-// Search
+
 document.getElementById('headerSearch').addEventListener('input', function(e) {
     const query = e.target.value.toLowerCase();
     const cards = document.querySelectorAll('.game-card');
@@ -1247,7 +1244,7 @@ document.getElementById('headerSearch').addEventListener('input', function(e) {
     });
 });
 
-// Share FAB
+
 document.getElementById('shareFab').addEventListener('click', function() {
     if (navigator.share) {
         navigator.share({
