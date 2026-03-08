@@ -1523,9 +1523,13 @@
             document.getElementById('settingsOverlay').classList.remove('show');
         }
         
-        function openLangPopup() {
-            document.getElementById('langPopup').classList.add('show');
+       function openLangPopup() { 
+        closeSettings();  // Tutup settings dulu
+        setTimeout(function() {
+        document.getElementById('langPopup').classList.add('show'); 
+        }, 100);  // Buka language popup setelah 100ms
         }
+
         
         function closeLangPopup() {
             document.getElementById('langPopup').classList.remove('show');
